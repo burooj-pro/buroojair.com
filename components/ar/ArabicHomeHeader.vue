@@ -1,0 +1,133 @@
+<template>
+    <header>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="navigation">
+                            <nav class="navbar navbar-expand-md">
+                                <NuxtLink class="navbar-brand" to="/ar"><img src="~assets/images/logo.png" alt="" class="img-fluid" /></NuxtLink>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                    <ul class="navbar-nav me-auto">
+                                        <li class="nav-item">
+                                            <NuxtLink class="nav-link active" to="/ar">بيت</NuxtLink>
+                                        </li>
+                                        <li class="nav-item">
+                                            <NuxtLink class="nav-link" to="/ar/services">خدمات</NuxtLink>
+                                        </li>
+                                        <li class="nav-item">
+                                            <NuxtLink class="nav-link" to="/ar/location">المواقع</NuxtLink>
+                                        </li>
+                                        <li class="nav-item">
+                                            <NuxtLink class="nav-link" to="/ar/gallery">صالة عرض</NuxtLink>
+                                        </li>
+                                        <li class="nav-item">
+                                            <NuxtLink class="nav-link" to="/ar/news">أخبار</NuxtLink>
+                                        </li>
+                                        <li class="nav-item">
+                                            <NuxtLink class="nav-link" to="/ar/about-us">معلومات عنا</NuxtLink>
+                                        </li>
+                                        <li class="nav-item">
+                                            <NuxtLink class="nav-link" to="/ar/contact">اتصال</NuxtLink>
+                                        </li>
+                                        <li class="nav-item">
+                                            <NuxtLink class="nav-link pertner-btn" to="/ar/partner">انضم إلينا كشريك؟</NuxtLink>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-shape">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+                    <path class="elementor-shape-fill" d="M761.9,44.1L643.1,27.2L333.8,98L0,3.8V0l1000,0v3.9"
+                        fill="#285852"></path>
+                </svg>
+            </div>
+        </header>
+</template>
+<script>
+export default {
+
+}
+</script>
+<style lang="scss" scoped>
+
+header {
+background-color: $primary;
+padding: 21px 0;
+position: relative;
+z-index: 999;
+.navigation {
+max-width: 1230px;
+width: 100%;
+margin: 0 auto;
+
+.navbar {
+    padding: 0;
+    width: 100%;
+
+    .navbar-brand {
+        padding: 0;
+        margin: 0;
+        img {
+            height: 74px;
+        }
+    }
+    .navbar-nav {
+        .nav-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 10px;
+            .nav-link {
+                color: $white;
+                text-transform: uppercase;
+                font-size: $font16;
+                @include Red_Hat_Display(500);
+                padding: 0 15px;
+                &.pertner-btn {
+                    @include border_radius(8px);
+                    height: 44px;
+                    width: 194px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0;
+                    background-color: $orange;
+                    @include Red_Hat_Display(700);
+                }
+            }
+            &:last-child {
+                margin-left: 21px;
+            }
+        }
+    }
+}
+}
+}
+
+.header-shape {
+position: absolute;
+left: 0;
+width: 100%;
+bottom: -49px;
+z-index: 100;
+svg {
+height: 49px;
+transform: translateX(0) rotateY(183deg);
+width: calc(100% + 1.3px);
+display: block;
+}
+}
+
+ // responsive
+
+ @import '~assets/scss/pages.scss/responsive_ar.scss';
+</style>
