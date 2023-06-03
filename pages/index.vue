@@ -18,10 +18,9 @@
                                 <div class="col-md-6">
                                     <div class="text-box">
                                         <h3>WINDOW CLEANING</h3>
-                                        <p>High rise commercial window cleaning can be very time consuming. KTV Working Drone has developed a new more efficient and safer way of providing high rise window cleaning which is also considered faster hence reducing
-                                            costs.
+                                        <p>Commercial window cleaning in tall buildings can take a lot of time. Burooj Air Drones has created a novel, more effective, and secure method of cleaning high rise windows that is also thought to be quicker and less expensive.
                                         </p>
-                                        <NuxtLink to="/window-cleaning" class="btn btn-secondary"> 
+                                        <NuxtLink to="/window-cleaning" class="btn btn-secondary">
                                             <span><!--?xml version="1.0" encoding="utf-8"?--><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
                                     <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -35,8 +34,7 @@
                                 <div class="col-md-6">
                                     <div class="text-box">
                                         <h3>FACADE CLEANING</h3>
-                                        <p>Many multi-storey buildings create challenges and become demanding for many professional cleaners which must adhere to strict safety protocols making such services complex. Facades come in all sorts of different
-                                            materials e.g. glass, stone, copper, composite aluminium sheets, stainless steel which require different methods and requirements to have them cleaned.
+                                        <p>Many multi-story structures provide difficulties and become demanding for several expert cleaners, who are required to follow stringent safety procedures, making such services complicated.
                                         </p>
                                         <NuxtLink to="/facade-cleaning" class="btn btn-secondary">
                                             <span><!--?xml version="1.0" encoding="utf-8"?--><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
@@ -63,7 +61,7 @@
                         <div class="text-box">
                             <div class="media">
                                 <img src="~assets/images/info-icon.png" alt="" class="img-fluid" />
-                                <h4>VACANT POSITION <span>AS A DRONE PILOT</span> </h4>
+                                <h4>A DRONE PILOT POSITION<span> IS AVAILABLE</span> </h4>
                             </div>
                             <a href="#" class="btn btn-secondary">APPLY NOW</a>
                         </div>
@@ -90,10 +88,8 @@
                     </div>
                     <div class="col-md-6">
                         <div class="text-box">
-                            <h4>THE EVOLUTION OF HIGH RISE WINDOW & FACADE CLEANING HAS ARRIVED</h4>
-                            <p>Up until now high rise window and facade cleaning has only been done by professional cleaning companies who specialise in abseiling, skylifts, and for smaller buildings have expensive scaffolding implemented or the use of boom
-                                and/or other lifting equipment. It has been said that high rise window cleaning is one of the six most dangerous professions. Furthermore due to the expense these tasks are done less frequently leaving windows becoming
-                                dirty for longer periods of time.</p>
+                            <h4>THE HIGH-RISE WINDOW & FACADE CLEANING EVOLUTION HAS ARRIVED</h4>
+                            <p>To date, only specialized cleaning businesses with experience in abseiling, sky lifts, and for smaller structures, the use of expensive scaffolding or the use of boomand/or other lifting equipment, have cleaned high rise windows and facades.</p>
                             <NuxtLink to="/facade-cleaning" class="btn btn-secondary">
                                 <span><!--?xml version="1.0" encoding="utf-8"?--><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
                                     <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none"
@@ -124,9 +120,9 @@
                     </div>
                     <div class="col-md-6">
                         <div class="text-box">
-                            <h4>THIS METHOD DOES NOT HARM THE PANEL SURFACE</h4>
-                            <p>Our method developed for window cleaning is perfect for cleaning solar cell panels and this method will not harm the surface.</p>
-                            <p class="m-0">A major advantage of this method is that the surfaces will stay clean longer than from traditional cleaning and there is no risk of streaks.</p>
+                            <h4>THE PANEL SURFACE IS NOT HURT BY THIS PROCEDURE.</h4>
+                            <p>Our window cleaning technique is ideal for cleaning solar cell panels, and it won't damage the surface.</p>
+                            <p class="m-0">The fact that there is no chance of stains and the surfaces stay clean longer than with conventional cleaning is a significant benefit of this technique.</p>
                         </div>
                     </div>
                 </div>
@@ -151,7 +147,7 @@
                     </div>
                     <div class="col-md-5">
                         <div class="let-talk-right">
-                            <p>Become involved in the most innovative business idea that hasn’t been seen in the cleaning industry in more than 100 years.</p>
+                            <p>Participate in the most creative business concept to hit the cleaning industry in more than a century.</p>
                             <a href="#" class="btn btn-secondary btn-white">
                                 <span><!--?xml version="1.0" encoding="utf-8"?--><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
                                     <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none"
@@ -178,23 +174,23 @@
                     </div>
                     <div class="col-md-6">
                         <div class="intention-right">
-                            <h4>Our main intention is to do good and improve people’s everyday working life.</h4>
-                            <p>We aim to contribute to a safer work day for people who work at great heights with lifts, scaffolding and for facade climbers.</p>
-                            <p>These are physically demanding jobs that cause stress injuries and involve danger every day. KTV Working Drone works specifically to help this group.</p>
+                            <h4>Our main goal is to help others and make working life better for everyone.</h4>
+                            <p>We want to help make workdays safer for those who use lifts, scaffolding, and people who scale buildings.</p>
+                            <p>These are physically demanding jobs that frequently include hazard and stress injuries. Burooj Air Drones specializes on assisting this group.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        
+
         <!-- ABOUT US SEC -->
         <section class="about-us-sec">
             <div class="container-fluid p-0">
                 <div class="row g-0">
                     <div class="col-md-6">
                         <div class="about-us-left">
-                            <h4>FOUNDED BY KENNET NILSEN</h4>
-                            <p>KTV Working Drone evolved out of the KTV Group which was founded in 1992 by Kennet Nilsen. The focus of the KTV group was high-pressure cleaning.</p>
+                            <h4>MOHAMMED ALOTAIBI  FOUNDED THE BUROOJ </h4>
+                            <p>GROUP IN 2018, WHICH GREW INTO BUROOJ AIR DRONES. THE BUROOJ GROUP'S PRIORITY WAS HIGH-PRESSURE CLEANING.</p>
                             <a href="#" class="btn btn-secondary">
                                 <span><!--?xml version="1.0" encoding="utf-8"?--><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
                                     <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none"
@@ -250,15 +246,13 @@
                     <div class="col-md-6">
                         <div class="text-left">
                             <h3>GLOBAL REACH</h3>
-                            <p>KTV Working Drone has country branches all the world and many more are being added each month; all sharing the same philosophy, safety policies and the same strict controls and procedures in accordance with international quality
-                                standards ISO 9001, ISO 14001 and OHSAS 18001.</p>
+                            <p>In compliance with the international quality standards ISO 9001, ISO 14001, and OHSAS 1800, Burooj Air Droness have the same concept, safety regulations, and stringent controls and processes.</p>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="text-right">
-                            <p>No matter which country you live in, we have approved operating licenses from the relevant civil and aviation authorities, for operating drones for the purpose of cleaning buildings. All our franchisee drone operators are fully
-                                trained and comply with local civil and aviation laws.</p>
-                            <p>We have a strong focus on HSE and public safety in our work areas. Using drones makes for a safer working environment not only for workers but also for the public.</p>
+                            <p>No matter where you are in the world, you can use drones to clean buildings because we have authorized operating permissions from the necessary civil and aviation authorities. All our franchisee drone operators have received thorough training and abide by regional civil and aviation regulations.</p>
+                            <p>Throughout our job sectors, HSE and public safety are highly prioritized. Drone use creates a workplace that is safer for both employees and the general public.</p>
                             <a href="#" class="btn btn-secondary">
                                 <span><!--?xml version="1.0" encoding="utf-8"?--><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
                                     <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none"
@@ -272,7 +266,7 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- WORKING GROWTH SEC -->
         <section class="working-growth-sec">
             <div class="container">
@@ -285,13 +279,9 @@
                     </div>
                     <div class="col-md-6">
                         <div class="text-box">
-                            <h4>In many countries more and more drones are being deployed for different industries and innovation is continuing in many industries. Drones regardless of purpose are being brought into everyday lives regardless they if are flown
-                                for fun, military or commercial reasons, the drone market globally is continually growing year in year out.</h4>
-                            <p>Utilising a number of solutions, KTV Working Drone is part of this growth commercialising the use of drones for the cleaning industry. By utilising a pure water cleaning system which is not only environmentally friendly but
-                                has no residue left behind or has mineral deposits that remain after evaporation. The other benefits of utilising drones for cleaning services is they limit the damages that at times is caused from walking on infrastructure
-                                and roofs where at times specialist equipment and scaffolding may be required causing additional expenses, delays and can further increase the need for safety protocols to be put in place.</p>
-                            <p>KTV Working Drone provide a complete contactless solution mitigating the risks from traditional methods. Having a contactless solution can also improve the long jeopardy of building structures where small accidents are at times
-                                caused without notice and can lead to repairs in some cases many years on.</p>
+                            <h4>Drone use is increasing worldwide for a variety of purposes, and many industries are still seeing rapid innovation. No matter if they are flown for recreational, military, or commercial purposes, drones are becoming more and more common. The worldwide drone business is expanding year after year.</h4>
+                            <p>Burooj Air Drones is a part of this expansion commercializing the usage of drones for the cleaning business by utilizing several solutions.</p>
+                            <p>Burooj Air Drones offers a comprehensive contactless solution that reduces the hazards associated with conventional techniques. A contactless solution might also lessen the long-term risk to building structures, where minor mishaps can occasionally occur without warning and necessitate repairs years later.</p>
                         </div>
                     </div>
                 </div>
@@ -311,27 +301,26 @@
                     <div class="col-md-7">
                         <div class="statement-left">
                             <h3>OUR SAFETY STATEMENT</h3>
-                            <p>For the management of KTV Working Drone safety is of the utmost importance. The primary goal foremost is to ensure that all staff, partners, and franchises comply with KTV Working Drone safety policy at all times to assure
-                                safe operations whilst keeping focus on the safety of all involved and around the operations.
+                            <p>Safety is of the utmost importance to Burooj Air Drones’ management. The main objective is to guarantee that all employees, partners, and franchises adhere to the KTV Working Drone Safety Policy at all times in order to ensure safe operations while maintaining the attention on everyone involved and around.
                             </p>
                         </div>
                     </div>
                     <div class="col-md-5">
                         <div class="text-box">
-                            <p>KTV Working Drone implements the necessary safety procedures / precautions according the safety standards that have been implemented and outlined in the company’s global safety policy that includes but not limited to the following;</p>
+                            <p>In accordance with the safety standards established and defined in the business's global safety policy, Burooj Air Drones conducts the essential safety measures and safeguards, including but not limited to the following:</p>
                             <ul>
-                                <li>To minimize our impact on the environment</li>
-                                <li>Not to harm or disturb uninvolved persons</li>
-                                <li>Not to inflict damage to property, buildings, vehicles and other assets</li>
-                                <li>To always operate according to the European GDPR and other global privacy policies to treat information with respect and care and to conform to such policies.</li>
+                                <li>To reduce our negative effects on the environment</li>
+                                <li>Not to damage or annoy others who are not involved.</li>
+                                <li>Not to cause harm to property, structures, cars, or other assets</li>
+                                <li>To always abide by the General Authority of Civil Aviation (GACA) and other international privacy laws, to treat information respectfully and carefully, and to do everything possible to comply with them.</li>
                             </ul>
-                            <p>KTV Working Drone will operate according to the well established culture in aviation. By learning, developing and adapting our service we will strive for positive growth for the brand and the industry.</p>
+                            <p>Burooj Air Drones will conduct its operations in accordance with the established aviation culture. We will work to ensure the brand and the sector experience good growth by learning, developing, and modifying our service.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        
+
         <!-- POPULATED SEC -->
         <section class="populated-sec">
             <img src="~assets/images/populated-img.jpg" alt="" class="img-fluid w-100" />
@@ -412,7 +401,7 @@
                 </div>
             </div>
         </section>
-    
+
     <!-- Contact Section -->
     <ContactSection/>
     <Footer/>
@@ -423,7 +412,7 @@
 <script>
 export default {
 
-    
+
 }
 </script>
 <style lang="scss">

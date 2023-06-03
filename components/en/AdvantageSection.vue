@@ -4,7 +4,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="text-box">
-                            <h3>ADVANTAGES USING KTV WORKING DRONE</h3>
+                            <h3>ADVANTAGES USING BUROOJ AIR DRONES</h3>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -34,7 +34,7 @@
 </template>
 <script>
 export default {
-    
+
 }
 </script>
 <style lang="scss" scoped>

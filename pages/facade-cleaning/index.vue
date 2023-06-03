@@ -97,12 +97,9 @@
                         <div class="text-box">
                             <h3>ENQUIRE TODAY</h3>
 
-                            <p>If you’re a <b>building owner, developer, building management company,</b> <b>cleaning
-                                    company</b> with high rise window cleaning contracts or needs&nbsp; and you’re looking at lowering the costs and creating a safer and more secure way of having this service done then KTV Working Drone has a solution
+                            <p>Burooj Air Drones provides a solution for you whether you're a <b>building owner, developer, building management business, or cleaning firm </b> with high rise window cleaning contracts or needs and you're trying to reduce expenses and create a safer and more secure way to get this service done.&nbsp; and you’re looking at lowering the costs and creating a safer and more secure way of having this service done then KTV Working Drone has a solution
                                 for you.&nbsp;</p>
-                            <p><b>KTV Working Drone</b> has many ways that we can provide this service directly and indirectly and we work with many different companies to contract this service. Whether you’re a direct client&nbsp; looking for a once off
-                                service, a building company looking for longer term fixed term contracts, a developer and building owner looking at reducing costs or are just curious and want to explore this technology to see how it can better work for
-                                you.&nbsp; Reach out , get in touch and one of our team will assist you to find the best cost effective and safer solution to your high rise cleaning needs</p>
+                            <p><b>Burooj Air Drones</b> offers a variety of direct and indirect means to offer this service, and we collaborate with a wide range of businesses to secure contracts for it. If you're a direct client&nbsp; searching for a one-time service, a building firm looking for longer-term fixed-term contracts, a developer or building owner looking to cut expenses, or if you're just curious and want to study this technology to see if it can work better for you, this article is for you.&nbsp; Get in contact with us, and a member of our team will help you identify the most cost-effective and secure high rise cleaning solution.</p>
 
 
                         </div>
@@ -164,7 +161,7 @@
 </template>
 <script>
 export default {
-    
+
 }
 </script>
 <style lang="scss">
