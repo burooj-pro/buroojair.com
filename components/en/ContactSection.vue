@@ -6,14 +6,14 @@
                         <div class="contact-left">
                             <div class="text-box">
                                 <h3>CONTACT US</h3>
-                                <p>Please send us a message if you have any questions or want more info. We will respond or get in touch as soon as possible.</p>
+                                <p>Send your inquiry and we will get in touch as soon as possible.</p>
                             </div>
                             <ul>
                                 <li>
-                                    <p><strong>KTV Working Drone</strong></p>
-                                    <p>Hanøytangen 111</p>
-                                    <p>5310 Hauglandshella</p>
-                                    <p>Norway</p>
+                                    <p><strong>Burooj Air Drones</strong></p>
+                                    <p>Efficiency Center – Office 01</p>
+                                    <p>6919 Prince Turki St - Khobar</p>
+                                    <p>Saudi Arabia </p>
                                 </li>
                                 <li>
                                     <p>E-mail: post@ktvworkingdrone.com</p>
@@ -46,7 +46,7 @@
 </template>
 <script>
 export default {
-    
+
 }
 </script>
 <style lang="scss" scoped>
