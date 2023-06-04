@@ -10,9 +10,9 @@
                         <div class="col-12">
                             <div class="banner-form">
                                 <div class="text-box">
-                                    <h3>GET A QUOTE ON DRONE CLEANING NOW</h3>
-                                    <p>Interested in having your building’s facades or windows cleaned with a drone?</p>
-                                    <p>Send us a non – binding price inquiry from anywhere in the world.</p>
+                                    <h3>NOW REQUEST A QUOTE FOR DRONE CLEANING</h3>
+                                    <p>Are you interested in having a drone clean the windows or the facade of your building?</p>
+                                    <p>You can contact us anywhere in the world for a non-binding price quote.</p>
                                 </div>
                                 <form>
                                     <div class="row">
@@ -75,7 +75,7 @@
 </template>
 <script>
 export default {
-    
+
 }
 </script>
 <style lang="scss" scoped>
