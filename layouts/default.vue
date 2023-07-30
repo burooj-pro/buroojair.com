@@ -1,6 +1,9 @@
 <template>
-    <div>
-        <Nuxt />
-    </div>
+  <div :dir="$i18n.dir">
+    <Nuxt />
+  </div>
 </template>
 
+<script>
+export default {};
+</script>
