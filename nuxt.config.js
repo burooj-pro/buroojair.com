@@ -1,75 +1,61 @@
+import i18n from "./i18n";
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
-  target: 'static',
-  ssr:false,
-
+  target: "static",
+  ssr: false,
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'burooj-drones',
+    title: "burooj-drones",
     htmlAttrs: {
-      lang: 'en'
+      lang: "en",
     },
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
-    ]
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { hid: "description", name: "description", content: "" },
+      { name: "format-detection", content: "telephone=no" },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    '~/assets/scss/main.scss',
-    
-    
-    
-  ],
+  css: ["~/assets/scss/main.scss"],
   styleResources: {
     scss: [
-      
-           'bootstrap/scss/bootstrap.scss', 
-           '~assets/scss/abstracts.scss/_mixin.scss',
-           '~assets/scss/abstracts.scss/_variables.scss',
-           '~assets/scss/base.scss/_reset.scss',
-           '~assets/scss/base.scss/_typography.scss', 
-          
-           
-    ]
+      "bootstrap/scss/bootstrap.scss",
+      "~assets/scss/abstracts.scss/_mixin.scss",
+      "~assets/scss/abstracts.scss/_variables.scss",
+      "~assets/scss/base.scss/_reset.scss",
+      "~assets/scss/base.scss/_typography.scss",
+    ],
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-    {src: '~/plugins/bootstrap.js', mode: 'client'}
-  ],
+  plugins: [{ src: "~/plugins/bootstrap.js", mode: "client" }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: {
-    dirs: [
-      '~/components',
-      '~/components/en',
-      '~/components/ar',
-    ]
+    dirs: ["~/components", "~/components/en", "~/components/ar"],
   },
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-  ],
+  buildModules: [],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxtjs/style-resources',
+    "@nuxtjs/style-resources",
     // https://go.nuxtjs.dev/axios
     //'@nuxtjs/axios',
     // https://go.nuxtjs.dev/content
     //'@nuxt/content',
-  
+    "@nuxtjs/i18n",
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: '/',
+    baseURL: "/",
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
@@ -81,8 +67,9 @@ export default {
     splitChunks: {
       layouts: true,
       pages: true,
-      commons: true
-    }
+      commons: true,
+    },
   },
 
-}
+  i18n,
+};
