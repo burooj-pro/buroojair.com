@@ -5,148 +5,84 @@
     <section class="contactMap">
       <iframe
         loading="lazy"
-        src="https://maps.google.com/maps?q=Han%C3%B8ytangen%20111&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near"
-        title="Hanøytangen 111"
-        aria-label="Hanøytangen 111"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d265.8312530146434!2d50.22431416573115!3d26.307557957450317!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49e72624c069cf%3A0x476e625d6d9bfa10!2zUHJvbW90aW9uIEVmZmljaWVuY3kgQWR2ZXJ0aXNpbmcgfCDZg9mB2KfYodipINin2YTYudix2LYg2YTZhNiv2LnYp9mK2Kkg2YjYp9mE2KXYudmE2KfZhg!5e0!3m2!1sen!2ssa!4v1690806487768!5m2!1sen!2ssa"
+        title="Prince Turki St. - Khobar - Saudi Arabia"
+        aria-label="Prince Turki St. - Khobar - Saudi Arabia"
       ></iframe>
     </section>
     <!-- Contact Location Sec -->
     <section class="contact-location">
       <div class="container">
         <div class="titleText">
-          <h3>HEADQUARTERS BUROOJ AIR WORKING DRONE</h3>
-          <p>BERGEN, NORWAY</p>
+          <h3>{{ $t("BUROOJ_AIR_HEADQUARTERS") }}</h3>
+          <p>{{ $t("KHOBAR_SAUDI_ARABIA") }}</p>
         </div>
         <div class="row">
           <div class="col-md-4 col-sm-6">
             <div class="text-box">
               <p>
-                <strong>General inquiry:</strong><br />post@ktvworkingdrone.com
+                <strong>{{ $t("GENERAL_INQUIRY") }}:</strong>
+                <br />
+                info@buroojair.com
               </p>
               <p>
-                <strong>Franchise/partner inquiries:</strong
-                ><br />partner@ktvworkingdrone.com
+                <strong>{{ $t("FRANCHISE_PARTNER_INQUIRIES") }}:</strong>
+                <br />
+                info@buroojair.com
               </p>
               <p>
-                <strong>Media inquiries:</strong><br />kn@ktvworkingdrone.com
+                <strong>{{ $t("MEDIA_INQUIRIES") }}:</strong>
+                <br />
+                info@buroojair.com
               </p>
-              <p><strong>Distribution:</strong><br />em@ktvworkingdrone.com</p>
+              <p>
+                <strong>{{ $t("DISTRIBUTION") }}:</strong>
+                <br />
+                info@buroojair.com
+              </p>
               <div title="Page 9">
                 <div>
                   <div>
                     <div>
                       <p>
-                        <strong>Operating permits:</strong
-                        ><br />jw@ktvworkingdrone.com
-                      </p>
-                      <p>
-                        <strong>Drone ordering and equipment:</strong
-                        ><br />em@ktvworkingdrone.com
+                        <strong>{{ $t("OPERATING_PERMITS") }}:</strong>
+                        <br />
+                        info@buroojair.com
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
               <p>
-                <strong>Bluetag support and training:</strong
-                ><br />bluetag@ktvworkingdrone.com
+                <strong>{{ $t("MARKETING") }}:</strong>
+                <br />
+                info@buroojair.com
               </p>
-              <p><strong>Marketing:</strong><br />ta@ktvworkingdrone.com</p>
             </div>
           </div>
           <div class="col-md-8 col-sm-6">
             <div class="text-box">
               <p>
-                <strong>Office Hours:</strong><br />Monday to Friday, 08:00 to
-                16:00<br />(Oslo time GMT +02:00)
+                <strong>{{ $t("OFFICE_HOURS") }}:</strong>
+                <br />
+                {{ $t("SUNDAY_TO_THURSDAY_08_00_AM_TO_5_00_PM") }}
               </p>
               <p>
-                <strong>Address:</strong><br /><strong
-                  >BUROOJ AIR Working Drone AS</strong
-                ><br />Hanøytangen 111 <br />5310 Hauglandshella <br />Bergen,
-                Norway
+                <strong>{{ $t("ADDRESS") }}:</strong>
+                <br />
+                <strong>{{ $t("BUROOJ_AIR") }}</strong>
+                <br />
+                {{ $t("KHOBAR_SAUDI_ARABIA") }}
               </p>
-              <p><strong>Phone:</strong><br />+47 56 15 66 00</p>
+              <p>
+                <strong>{{ $t("PHONE") }}:</strong>
+                <br />
+                966500000001
+              </p>
             </div>
-            <a href="#" class="btn btn-secondary">Make an inquiry today</a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-7">
-            <form action="" class="enquireForm">
-              <h3>ENQUIRE TODAY</h3>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Name"
-                    />
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Company"
-                    />
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="E-mail"
-                    />
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <select class="form-control">
-                      <option>WHICH COUNTRY?</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <textarea
-                      class="form-control"
-                      rows="4"
-                      placeholder="BUILDING ADDRESS AND INFO"
-                    ></textarea>
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="PHONE (REMEMBER COUNTRY CODE)"
-                    />
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <textarea
-                      class="form-control info-field"
-                      placeholder="OTHER INFO"
-                    ></textarea>
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="form-group mb-0">
-                    <input
-                      type="submit"
-                      class="btn btn-secondary"
-                      value="SEND INQUIRY"
-                    />
-                  </div>
-                </div>
-              </div>
-            </form>
+            <a href="#inquiry" class="btn btn-secondary">{{
+              $t("MAKE_AN_INQUIRY_TODAY")
+            }}</a>
           </div>
         </div>
       </div>
