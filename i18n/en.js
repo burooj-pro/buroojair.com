@@ -7,7 +7,7 @@ export default {
   ABOUT_US: "About Us",
   CONTACT: "Contact",
   CONTACT_US: "Contact Us",
-  BECOME_A_PARTNER: "Become a Partner?",
+  BECOME_A_PARTNER: "Become a Partner",
   EMAIL: "Email",
   PHONE: "Phone",
   COPY_RIGHT: "Copyright © All rights reserved",
@@ -90,4 +90,6 @@ export default {
   BUROOJ_WORKING_DRONE: "BUROOJ WORKING DRONE",
   OUR_HISTORY_AND_THE_EVOLUTION_OF_CLEANING:
     "OUR HISTORY AND THE EVOLUTION OF CLEANING",
+  IMAGES: "Images",
+  VIDEOS: "Videos",
 };

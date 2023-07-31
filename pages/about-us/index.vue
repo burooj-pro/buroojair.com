@@ -7,8 +7,10 @@
         <div class="col-lg-7">
           <div class="heroFlag">
             <div class="titleText">
-              <h2>ABOUT US</h2>
-              <p>OUR HISTORY AND THE EVOLUTION OF CLEANING</p>
+              <h2>{{ $t("ABOUT_US") }}</h2>
+              <p>
+                {{ $t("OUR_HISTORY_AND_THE_EVOLUTION_OF_CLEANING") }}
+              </p>
             </div>
           </div>
         </div>
@@ -65,7 +67,9 @@
         <div class="row align-items-center">
           <div class="col-lg-6">
             <div class="text-box">
-              <h3>OUR INTENTION</h3>
+              <h3>
+                {{ $t("OUR_INTENTION") }}
+              </h3>
             </div>
           </div>
           <div class="col-lg-6">
@@ -106,7 +110,9 @@
         <div class="row">
           <div class="col-lg-7">
             <div class="text-box">
-              <h3>SETTING THE STANDARD FOR WORKING DRONES</h3>
+              <h3>
+                {{ $t("SETTING_THE_STANDARD_FOR_WORKING_DRONES") }}
+              </h3>
             </div>
           </div>
           <div class="col-lg-5">
@@ -167,8 +173,12 @@
         <div class="row">
           <div class="col-lg-7">
             <div class="text-box">
-              <h3>FUTURE DEVELOPMENT</h3>
-              <h4>WHAT'S NEXT</h4>
+              <h3>
+                {{ $t("FUTURE_DEVELOPMENT") }}
+              </h3>
+              <h4>
+                {{ $t("WHATS_NEXT") }}
+              </h4>
             </div>
           </div>
           <div class="col-lg-5">
@@ -216,9 +226,26 @@
     <Footer />
   </div>
 </template>
+
 <script>
-export default {};
+export default {
+  name: "ABOUT_US",
+  head() {
+    return {
+      title: `Burooj Air | ${this.$t("ABOUT_US")}`,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "We aim to contribute to a safer work day for people who work at great heights with lifts, scaffolding and for facade climbers.",
+        },
+      ],
+    };
+  },
+};
 </script>
+
 <style lang="scss">
 h3 {
   color: $mainly_blue;

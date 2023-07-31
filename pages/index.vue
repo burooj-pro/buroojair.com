@@ -95,7 +95,7 @@
                   alt=""
                   class="img-fluid"
                 />
-                <h4>
+                <h4 class="mx-2">
                   {{ $t("A_DRONE_PILOT_POSITION")
                   }}<span> {{ $t("IS_AVAILABLE") }}</span>
                 </h4>
@@ -116,7 +116,7 @@
           <path
             class="elementor-shape-fill"
             d="M761.9,44.1L643.1,27.2L333.8,98L0,3.8V0l1000,0v3.9"
-            fill="#285852"
+            fill="#212121"
           ></path>
         </svg>
       </div>
@@ -247,9 +247,8 @@
               <p>
                 {{ $t("PARTICIPATE_IN_THE_MOST_CREATIVE") }}
               </p>
-              <a href="#" class="btn btn-secondary btn-white">
-                <span
-                  ><!--?xml version="1.0" encoding="utf-8"?--><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+              <a href="#" class="btn btn-secondary btn-blue">
+                <span>
                   <svg
                     width="800px"
                     height="800px"
@@ -261,7 +260,7 @@
                       fill-rule="evenodd"
                       clip-rule="evenodd"
                       d="M12.2929 4.29289C12.6834 3.90237 13.3166 3.90237 13.7071 4.29289L20.7071 11.2929C21.0976 11.6834 21.0976 12.3166 20.7071 12.7071L13.7071 19.7071C13.3166 20.0976 12.6834 20.0976 12.2929 19.7071C11.9024 19.3166 11.9024 18.6834 12.2929 18.2929L17.5858 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H17.5858L12.2929 5.70711C11.9024 5.31658 11.9024 4.68342 12.2929 4.29289Z"
-                      fill="#000"
+                      fill="#fff"
                     ></path>
                   </svg>
                 </span>
@@ -384,7 +383,7 @@
           <path
             class="elementor-shape-fill"
             d="M761.9,44.1L643.1,27.2L333.8,98L0,3.8V0l1000,0v3.9"
-            fill="#6B6B77"
+            fill="#542FFB"
           ></path>
         </svg>
       </div>
@@ -636,7 +635,7 @@
           </div>
           <div class="col-md-6">
             <div class="text-box">
-              <ul>
+              <ul :dir="dir">
                 <li>
                   <p>
                     <strong>Spray painting</strong> With continued development,
@@ -692,7 +691,27 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "HOME",
+  head() {
+    return {
+      title: `Burooj Air`,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "We aim to contribute to a safer work day for people who work at great heights with lifts, scaffolding and for facade climbers.",
+        },
+      ],
+    };
+  },
+  computed: {
+    dir() {
+      return this.language === "ar" ? "rtl" : "ltr";
+    },
+  },
+};
 </script>
 <style lang="scss">
 h3 {
@@ -737,6 +756,12 @@ p {
 .btn-white {
   background-color: $white;
   color: $black;
+}
+
+.btn-blue {
+  background-color: $secondary !important;
+  color: $white !important;
+  border: 1px solid $secondary !important;
 }
 
 /****** SERVICES SEC ******/
@@ -809,7 +834,7 @@ p {
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-right: 20px;
+      margin: 0 20px;
       h4 {
         color: $white;
         @include Red_Hat_Display(700);
@@ -944,13 +969,13 @@ p {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba($orange, 0.88);
+    background-color: rgba($gray10, 0.88);
   }
   .let-talk-left {
     position: relative;
     z-index: 10;
     h4 {
-      color: $white;
+      color: $black;
       font-size: $font62;
       text-transform: uppercase;
       line-height: 68px;
@@ -958,7 +983,7 @@ p {
       margin: 0 0 24px 0;
     }
     p {
-      color: $white;
+      color: $black;
       font-size: $font42;
       text-transform: uppercase;
       line-height: 52px;
@@ -969,7 +994,7 @@ p {
     position: relative;
     z-index: 10;
     p {
-      color: $white;
+      color: $black;
       @include Red_Hat_Display(500);
       font-size: $font20;
       margin: 0 0 36px 0;

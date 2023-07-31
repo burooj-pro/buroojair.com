@@ -310,14 +310,14 @@ p {
 }
 
 .banner {
-  background-image: url(~assets/images/ktvdroneflag.jpg);
+  background-image: url(~assets/images/burooj_air_drone.jpg);
   background-position: 50%;
   background-repeat: no-repeat;
   min-width: 100%;
   min-height: 100%;
   background-size: cover;
   .overlay {
-    background-color: rgba($overlay, 0.78);
+    background-color: rgba($overlay, 0.35);
     height: 330px;
   }
 }

@@ -4,16 +4,17 @@
       <div class="row">
         <div class="col-md-6">
           <div class="footer-left">
-            <span
-              ><img
+            <span>
+              <img
                 src="~assets/images/footer-logo.png"
                 alt=""
-                class="img-fluid"
-            /></span>
+                class="img-fluid mx-2"
+              />
+            </span>
             <p>
-              Burooj Air® <br />{{
-                $t("FOR_INQUIRIES_PLEASE_USE_OUR_LISTED_CONTACT_INFO")
-              }}
+              Burooj Air®
+              <br />
+              {{ $t("FOR_INQUIRIES_PLEASE_USE_OUR_LISTED_CONTACT_INFO") }}
             </p>
           </div>
         </div>
@@ -26,9 +27,11 @@
     </div>
   </footer>
 </template>
+
 <script>
 export default {};
 </script>
+
 <style lang="scss" scoped>
 footer {
   background-color: $blue;

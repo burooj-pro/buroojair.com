@@ -7,7 +7,7 @@ export default {
   ABOUT_US: "من نحن",
   CONTACT: "التواصل",
   CONTACT_US: "تواصل معنا",
-  BECOME_A_PARTNER: "كن شريكا؟",
+  BECOME_A_PARTNER: "كن شريكا",
   EMAIL: "البريد الإلكتروني",
   PHONE: "الهاتف",
   COPY_RIGHT: "جميع الحقوق محفوظة",
@@ -88,4 +88,6 @@ export default {
   OUR_SAFETY_STATEMENT: "بيان سلامتنا",
   BUROOJ_WORKING_DRONE: "طائرة بروج بدون طيار",
   OUR_HISTORY_AND_THE_EVOLUTION_OF_CLEANING: "تاريخنا وتطور التنظيف",
+  IMAGES: "صور",
+  VIDEOS: "فيديو",
 };

@@ -304,8 +304,24 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "BECOME_A_PARTNER",
+  head() {
+    return {
+      title: `Burooj Air | ${this.$t("BECOME_A_PARTNER")}`,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "We aim to contribute to a safer work day for people who work at great heights with lifts, scaffolding and for facade climbers.",
+        },
+      ],
+    };
+  },
+};
 </script>
+
 <style lang="scss">
 h3 {
   color: $mainly_blue;
