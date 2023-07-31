@@ -63,13 +63,13 @@
                       $t("CONTACT")
                     }}</NuxtLink>
                   </li>
+                  <li class="nav-item" @click="onChangeLanguage()">
+                    <p class="nav-link link">{{ $t("LANGUAGE") }}</p>
+                  </li>
                   <li class="nav-item">
                     <NuxtLink class="nav-link pertner-btn" to="/partner">{{
                       $t("BECOME_A_PARTNER")
                     }}</NuxtLink>
-                  </li>
-                  <li class="nav-item" @click="onChangeLanguage()">
-                    <p class="nav-link link">{{ $t("LANGUAGE") }}</p>
                   </li>
                 </ul>
               </div>
@@ -113,8 +113,6 @@ export default {
         this.language = lan;
         window.localStorage.setItem("language", lan);
         this.$i18n.setLocale(lan);
-        // * Reload page:
-        // window.location.reload();
       }
     },
   },

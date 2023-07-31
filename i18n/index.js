@@ -2,6 +2,7 @@ import en from "./en";
 import ar from "./ar";
 
 export default {
+  baseUrl: "https://buroojair.com",
   locales: [
     {
       code: "ar",
