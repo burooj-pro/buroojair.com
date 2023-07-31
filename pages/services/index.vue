@@ -365,7 +365,22 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "SERVICES",
+  head() {
+    return {
+      title: `Burooj Air | ${this.$t("SERVICES")}`,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "We aim to contribute to a safer work day for people who work at great heights with lifts, scaffolding and for facade climbers.",
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style lang="scss">
@@ -419,7 +434,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(~assets/images/ktvdroneflag.jpg);
+    background-image: url(~assets/images/burooj_air_drone.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
