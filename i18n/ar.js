@@ -91,4 +91,18 @@ export default {
   OUR_HISTORY_AND_THE_EVOLUTION_OF_CLEANING: "تاريخنا وتطور التنظيف",
   IMAGES: "صور",
   VIDEOS: "فيديو",
+  BUROOJ_AIR: "بوروج إير",
+  BUROOJ_AIR_HEADQUARTERS: "مقر بوروج إير",
+  KHOBAR_SAUDI_ARABIA: "شارع الأمير تركي، الخبر، المملكة العربية السعودية",
+  GENERAL_INQUIRY: "استفسار عام",
+  FRANCHISE_PARTNER_INQUIRIES: "استفسارات شريك الامتياز",
+  MEDIA_INQUIRIES: "استفسارات الإعلام",
+  DISTRIBUTION: "توزيع",
+  OPERATING_PERMITS: "تصاريح التشغيل",
+  MARKETING: "تسويق",
+  OFFICE_HOURS: "ساعات العمل",
+  SUNDAY_TO_THURSDAY_08_00_AM_TO_5_00_PM:
+    "الأحد إلى الخميس 8:00 صباحًا إلى 5:00 مساءً",
+  ADDRESS: "عنوان",
+  MAKE_AN_INQUIRY_TODAY: "استفسر الآن",
 };

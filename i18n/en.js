@@ -93,4 +93,18 @@ export default {
     "OUR HISTORY AND THE EVOLUTION OF CLEANING",
   IMAGES: "Images",
   VIDEOS: "Videos",
+  BUROOJ_AIR: "BUROOJ AIR",
+  BUROOJ_AIR_HEADQUARTERS: "BUROOJ AIR HEADQUARTERS",
+  KHOBAR_SAUDI_ARABIA: "Prince Turki St, Khobar, Saudi Arabia",
+  GENERAL_INQUIRY: "General inquiry",
+  FRANCHISE_PARTNER_INQUIRIES: "Franchise/partner inquiries",
+  MEDIA_INQUIRIES: "Media inquiries",
+  DISTRIBUTION: "Distribution",
+  OPERATING_PERMITS: "Operating permits",
+  MARKETING: "Marketing",
+  OFFICE_HOURS: "Office Hours",
+  SUNDAY_TO_THURSDAY_08_00_AM_TO_5_00_PM:
+    "Sunday to Thursday, 08:00 AM to 5:00 PM (GMT+03)",
+  ADDRESS: "Address",
+  MAKE_AN_INQUIRY_TODAY: "Make an inquiry today",
 };
