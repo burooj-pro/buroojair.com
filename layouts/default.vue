@@ -1,9 +1,15 @@
 <template>
-  <div :dir="$i18n.dir">
+  <div :dir="dir">
     <Nuxt />
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  computed: {
+    dir() {
+      return this.$i18n.locale === "ar" ? "rtl" : "ltr";
+    },
+  },
+};
 </script>

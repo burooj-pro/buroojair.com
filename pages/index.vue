@@ -10,23 +10,25 @@
         <div class="row">
           <div class="col-12">
             <div class="title">
-              <h2>DRONE SERVICES</h2>
-              <p>HIGH RISE WINDOW AND FACADE CLEANING</p>
+              <h2>
+                {{ $t("DRONE_SERVICES") }}
+              </h2>
+              <p>
+                {{ $t("HIGH_RISE_WINDOW_AND_FACADE_CLEANING") }}
+              </p>
             </div>
             <div class="servics-inner">
               <div class="row">
                 <div class="col-md-6">
                   <div class="text-box">
-                    <h3>WINDOW CLEANING</h3>
+                    <h3>
+                      {{ $t("WINDOW_CLEANING") }}
+                    </h3>
                     <p>
-                      Commercial window cleaning in tall buildings can take a
-                      lot of time. Burooj Air Drones has created a novel, more
-                      effective, and secure method of cleaning high rise windows
-                      that is also thought to be quicker and less expensive.
+                      {{ $t("WINDOW_CLEANING_DESC") }}
                     </p>
                     <NuxtLink to="/window-cleaning" class="btn btn-secondary">
-                      <span
-                        ><!--?xml version="1.0" encoding="utf-8"?--><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                      <span>
                         <svg
                           width="800px"
                           height="800px"
@@ -39,24 +41,23 @@
                             clip-rule="evenodd"
                             d="M12.2929 4.29289C12.6834 3.90237 13.3166 3.90237 13.7071 4.29289L20.7071 11.2929C21.0976 11.6834 21.0976 12.3166 20.7071 12.7071L13.7071 19.7071C13.3166 20.0976 12.6834 20.0976 12.2929 19.7071C11.9024 19.3166 11.9024 18.6834 12.2929 18.2929L17.5858 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H17.5858L12.2929 5.70711C11.9024 5.31658 11.9024 4.68342 12.2929 4.29289Z"
                             fill="#fff"
-                          ></path></svg
-                      ></span>
-                      READ MORE</NuxtLink
-                    >
+                          ></path>
+                        </svg>
+                      </span>
+                      {{ $t("READ_MORE") }}
+                    </NuxtLink>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="text-box">
-                    <h3>FACADE CLEANING</h3>
+                    <h3>
+                      {{ $t("FACADE_CLEANING") }}
+                    </h3>
                     <p>
-                      Many multi-story structures provide difficulties and
-                      become demanding for several expert cleaners, who are
-                      required to follow stringent safety procedures, making
-                      such services complicated.
+                      {{ $t("FACADE_CLEANING_DESC") }}
                     </p>
                     <NuxtLink to="/facade-cleaning" class="btn btn-secondary">
-                      <span
-                        ><!--?xml version="1.0" encoding="utf-8"?--><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                      <span>
                         <svg
                           width="800px"
                           height="800px"
@@ -69,10 +70,11 @@
                             clip-rule="evenodd"
                             d="M12.2929 4.29289C12.6834 3.90237 13.3166 3.90237 13.7071 4.29289L20.7071 11.2929C21.0976 11.6834 21.0976 12.3166 20.7071 12.7071L13.7071 19.7071C13.3166 20.0976 12.6834 20.0976 12.2929 19.7071C11.9024 19.3166 11.9024 18.6834 12.2929 18.2929L17.5858 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H17.5858L12.2929 5.70711C11.9024 5.31658 11.9024 4.68342 12.2929 4.29289Z"
                             fill="#fff"
-                          ></path></svg
-                      ></span>
-                      READ MORE</NuxtLink
-                    >
+                          ></path>
+                        </svg>
+                      </span>
+                      {{ $t("READ_MORE") }}
+                    </NuxtLink>
                   </div>
                 </div>
               </div>
@@ -93,9 +95,14 @@
                   alt=""
                   class="img-fluid"
                 />
-                <h4>A DRONE PILOT POSITION<span> IS AVAILABLE</span></h4>
+                <h4>
+                  {{ $t("A_DRONE_PILOT_POSITION")
+                  }}<span> {{ $t("IS_AVAILABLE") }}</span>
+                </h4>
               </div>
-              <a href="#" class="btn btn-secondary">APPLY NOW</a>
+              <a href="#" class="btn btn-secondary">
+                {{ $t("APPLY_NOW") }}
+              </a>
             </div>
           </div>
         </div>
@@ -127,21 +134,26 @@
                 class="img-fluid"
               />
               <h4>
-                WINDOW & FACADE <br />
-                CLEANING WITH DRONE
+                {{ $t("WINDOW_AND_FACADE") }} <br />
+                {{ $t("CLEANING_WITH_DRONE") }}
               </h4>
             </div>
           </div>
           <div class="col-md-6">
             <div class="text-box">
               <h4>
-                THE HIGH-RISE WINDOW & FACADE CLEANING EVOLUTION HAS ARRIVED
+                {{
+                  $t(
+                    "THE_HIGH_RISE_WINDOW_AND_FACADE_CLEANING_EVOLUTION_HAS_ARRIVED"
+                  )
+                }}
               </h4>
               <p>
-                To date, only specialized cleaning businesses with experience in
-                abseiling, sky lifts, and for smaller structures, the use of
-                expensive scaffolding or the use of boomand/or other lifting
-                equipment, have cleaned high rise windows and facades.
+                {{
+                  $t(
+                    "TO_DATE_ONLY_SPECIALIZED_CLEANING_BUSINESSES_WITH_EXPERIENCE_IN_ABSEILING"
+                  )
+                }}
               </p>
               <NuxtLink to="/facade-cleaning" class="btn btn-secondary">
                 <span
@@ -158,10 +170,11 @@
                       clip-rule="evenodd"
                       d="M12.2929 4.29289C12.6834 3.90237 13.3166 3.90237 13.7071 4.29289L20.7071 11.2929C21.0976 11.6834 21.0976 12.3166 20.7071 12.7071L13.7071 19.7071C13.3166 20.0976 12.6834 20.0976 12.2929 19.7071C11.9024 19.3166 11.9024 18.6834 12.2929 18.2929L17.5858 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H17.5858L12.2929 5.70711C11.9024 5.31658 11.9024 4.68342 12.2929 4.29289Z"
                       fill="#fff"
-                    ></path></svg
-                ></span>
-                READ MORE</NuxtLink
-              >
+                    ></path>
+                  </svg>
+                </span>
+                {{ $t("READ_MORE") }}
+              </NuxtLink>
             </div>
           </div>
         </div>
@@ -225,15 +238,14 @@
         <div class="row">
           <div class="col-md-7">
             <div class="let-talk-left">
-              <h4>FRANCHISE</h4>
-              <p>OPPORTUNITIES AVAILABLE</p>
+              <h4>{{ $t("FRANCHISE") }}</h4>
+              <p>{{ $t("OPPORTUNITIES_AVAILABLE") }}</p>
             </div>
           </div>
           <div class="col-md-5">
             <div class="let-talk-right">
               <p>
-                Participate in the most creative business concept to hit the
-                cleaning industry in more than a century.
+                {{ $t("PARTICIPATE_IN_THE_MOST_CREATIVE") }}
               </p>
               <a href="#" class="btn btn-secondary btn-white">
                 <span
@@ -250,10 +262,11 @@
                       clip-rule="evenodd"
                       d="M12.2929 4.29289C12.6834 3.90237 13.3166 3.90237 13.7071 4.29289L20.7071 11.2929C21.0976 11.6834 21.0976 12.3166 20.7071 12.7071L13.7071 19.7071C13.3166 20.0976 12.6834 20.0976 12.2929 19.7071C11.9024 19.3166 11.9024 18.6834 12.2929 18.2929L17.5858 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H17.5858L12.2929 5.70711C11.9024 5.31658 11.9024 4.68342 12.2929 4.29289Z"
                       fill="#000"
-                    ></path></svg
-                ></span>
-                LET'S TALK</a
-              >
+                    ></path>
+                  </svg>
+                </span>
+                {{ $t("LET_S_TALK") }}
+              </a>
             </div>
           </div>
         </div>
@@ -266,23 +279,25 @@
         <div class="row">
           <div class="col-md-6">
             <div class="intention-left">
-              <h3>OUR INTENTION</h3>
+              <h3>
+                {{ $t("OUR_INTENTION") }}
+              </h3>
             </div>
           </div>
           <div class="col-md-6">
             <div class="intention-right">
               <h4>
-                Our main goal is to help others and make working life better for
-                everyone.
+                {{
+                  $t(
+                    "OUR_MAIN_GOAL_IS_TO_HELP_OTHERS_AND_MAKE_WORKING_LIFE_BETTER_FOR_EVERYONE"
+                  )
+                }}
               </h4>
               <p>
-                We want to help make workdays safer for those who use lifts,
-                scaffolding, and people who scale buildings.
+                {{ $t("WE_WANT_TO_HELP_MAKE_WORKDAYS") }}
               </p>
               <p>
-                These are physically demanding jobs that frequently include
-                hazard and stress injuries. Burooj Air Drones specializes on
-                assisting this group.
+                {{ $t("THESE_ARE_PHYSICALLY_DEMANDING_JOBS") }}
               </p>
             </div>
           </div>
@@ -296,14 +311,16 @@
         <div class="row g-0">
           <div class="col-md-6">
             <div class="about-us-left">
-              <h4>MOHAMMED ALOTAIBI FOUNDED THE BUROOJ</h4>
+              <h4>{{ $t("MOHAMMED_ALOTAIBI_FOUNDED_THE_BUROOJ") }}</h4>
               <p>
-                GROUP IN 2018, WHICH GREW INTO BUROOJ AIR DRONES. THE BUROOJ
-                GROUP'S PRIORITY WAS HIGH-PRESSURE CLEANING.
+                {{
+                  $t(
+                    "GROUP_IN_2018_WHICH_GREW_INTO_BUROOJ_AIR_DRONES_THE_BUROOJ_GROUPS_PRIORITY_WAS_HIGH_PRESSURE_CLEANING"
+                  )
+                }}
               </p>
               <a href="#" class="btn btn-secondary">
-                <span
-                  ><!--?xml version="1.0" encoding="utf-8"?--><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                <span>
                   <svg
                     width="800px"
                     height="800px"
@@ -316,17 +333,18 @@
                       clip-rule="evenodd"
                       d="M12.2929 4.29289C12.6834 3.90237 13.3166 3.90237 13.7071 4.29289L20.7071 11.2929C21.0976 11.6834 21.0976 12.3166 20.7071 12.7071L13.7071 19.7071C13.3166 20.0976 12.6834 20.0976 12.2929 19.7071C11.9024 19.3166 11.9024 18.6834 12.2929 18.2929L17.5858 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H17.5858L12.2929 5.70711C11.9024 5.31658 11.9024 4.68342 12.2929 4.29289Z"
                       fill="#fff"
-                    ></path></svg
-                ></span>
-                READ MORE</a
-              >
+                    ></path>
+                  </svg>
+                </span>
+                {{ $t("READ_MORE") }}
+              </a>
             </div>
           </div>
           <div class="col-md-6">
             <div class="about-us-right">
               <div class="text-box">
-                <h3>ABOUT US</h3>
-                <h4>OUR HISTORY AND THE EVOLUTION OF CLEANING</h4>
+                <h3>{{ $t("ABOUT_US") }}</h3>
+                <h4>{{ $t("OUR_HISTORY_AND_THE_EVOLUTION_OF_CLEANING") }}</h4>
               </div>
             </div>
           </div>
@@ -341,15 +359,18 @@
           <div class="col-md-6">
             <div class="estimated-future-left">
               <p>
-                THE ESTIMATED NEED FOR FUTURE DRONE CLEANING SERVICES IS
-                APPROXIMATELY
+                {{
+                  $t(
+                    "THE_ESTIMATED_NEED_FOR_FUTURE_DRONE_CLEANING_SERVICES_IS_APPROXIMATELY"
+                  )
+                }}
               </p>
             </div>
           </div>
           <div class="col-md-6">
             <div class="estimated-future-right">
-              <h3>2 500 000</h3>
-              <p>DRONES INTERNATIONALLY</p>
+              <h3>2,500,000</h3>
+              <p>{{ $t("DRONES_INTERNATIONALLY") }}</p>
             </div>
           </div>
         </div>
@@ -375,32 +396,22 @@
         <div class="row">
           <div class="col-md-6">
             <div class="text-left">
-              <h3>GLOBAL REACH</h3>
+              <h3>{{ $t("GLOBAL_REACH") }}</h3>
               <p>
-                In compliance with the international quality standards ISO 9001,
-                ISO 14001, and OHSAS 1800, Burooj Air Droness have the same
-                concept, safety regulations, and stringent controls and
-                processes.
+                {{ $t("GLOBAL_REACH_DESC") }}
               </p>
             </div>
           </div>
           <div class="col-md-6">
             <div class="text-right">
               <p>
-                No matter where you are in the world, you can use drones to
-                clean buildings because we have authorized operating permissions
-                from the necessary civil and aviation authorities. All our
-                franchisee drone operators have received thorough training and
-                abide by regional civil and aviation regulations.
+                {{ $t("NO_MATTER_WHERE_YOU_ARE_IN_THE_WORLD") }}
               </p>
               <p>
-                Throughout our job sectors, HSE and public safety are highly
-                prioritized. Drone use creates a workplace that is safer for
-                both employees and the general public.
+                {{ $t("THROUGHOUT_OUR_JOB_SECTORS") }}
               </p>
               <a href="#" class="btn btn-secondary">
-                <span
-                  ><!--?xml version="1.0" encoding="utf-8"?--><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                <span>
                   <svg
                     width="800px"
                     height="800px"
@@ -413,10 +424,11 @@
                       clip-rule="evenodd"
                       d="M12.2929 4.29289C12.6834 3.90237 13.3166 3.90237 13.7071 4.29289L20.7071 11.2929C21.0976 11.6834 21.0976 12.3166 20.7071 12.7071L13.7071 19.7071C13.3166 20.0976 12.6834 20.0976 12.2929 19.7071C11.9024 19.3166 11.9024 18.6834 12.2929 18.2929L17.5858 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H17.5858L12.2929 5.70711C11.9024 5.31658 11.9024 4.68342 12.2929 4.29289Z"
                       fill="#fff"
-                    ></path></svg
-                ></span>
-                READ MORE</a
-              >
+                    ></path>
+                  </svg>
+                </span>
+                {{ $t("READ_MORE") }}
+              </a>
             </div>
           </div>
         </div>
@@ -424,12 +436,12 @@
     </section>
 
     <!-- WORKING GROWTH SEC -->
-    <section class="working-growth-sec">
+    <!-- <section class="working-growth-sec">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
             <div class="text-left">
-              <h3>KTV WORKING DRONE GROWTH</h3>
+              <h3>BUROOJ AIR WORKING DRONE GROWTH</h3>
               <img
                 src="~assets/images/graph-img.png"
                 alt=""
@@ -476,10 +488,10 @@
           ></path>
         </svg>
       </div>
-    </section>
+    </section> -->
 
     <!-- SAFETY STATEMENT SEC -->
-    <section class="safety-statement-sec">
+    <!-- <section class="safety-statement-sec">
       <div class="container">
         <div class="row">
           <div class="col-md-7">
@@ -488,7 +500,7 @@
               <p>
                 Safety is of the utmost importance to Burooj Air Drones’
                 management. The main objective is to guarantee that all
-                employees, partners, and franchises adhere to the KTV Working
+                employees, partners, and franchises adhere to the BUROOJ AIR Working
                 Drone Safety Policy at all times in order to ensure safe
                 operations while maintaining the attention on everyone involved
                 and around.
@@ -527,7 +539,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- POPULATED SEC -->
     <section class="populated-sec">
@@ -539,7 +551,7 @@
     </section>
 
     <!-- WORK STAND SEC -->
-    <section class="work-stand-sec">
+    <!-- <section class="work-stand-sec">
       <div class="vacant-shape work-vacant-shape" data-negative="false">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -562,14 +574,14 @@
             <div class="text-box">
               <p>
                 <strong
-                  >KTV Working Drone evolved out of KTV Group. KTV Group was
-                  founded in 1992 by Kennet Nilsen. KTV Group have more than 30
+                  >BUROOJ AIR Working Drone evolved out of BUROOJ AIR Group. BUROOJ AIR Group was
+                  founded in 1992 by Kennet Nilsen. BUROOJ AIR Group have more than 30
                   years experience with facade and window cleaning and are
                   experts in their field.</strong
                 >
               </p>
               <p>
-                KTV Working Drone originated from an idea to find an innovative
+                BUROOJ AIR Working Drone originated from an idea to find an innovative
                 and efficient way to clean facades and windows. This was back in
                 2015. A lot of mods were needed to make the drone work properly
                 for cleaning, also commercial. Fast forward the result is a
@@ -581,15 +593,15 @@
               <p>
                 The drone has been extensively tested and commercialised for use
                 with window and facade cleaning and has been used operationally
-                since 2020 by the KTV Group in Norway.
+                since 2020 by the BUROOJ AIR Group in Norway.
               </p>
               <p>
-                In 2022, KTV Working Drone was ready and the commercialising
-                process started. Today KTV Working Drone is established almost
+                In 2022, BUROOJ AIR Working Drone was ready and the commercialising
+                process started. Today BUROOJ AIR Working Drone is established almost
                 all over the world, and the partner network is growing rapidly.
               </p>
               <p>
-                The future holds many opportunities for development for KTV
+                The future holds many opportunities for development for BUROOJ AIR
                 Working Drone. We think our drones soon will be able to do small
                 repairs, special inspections and even surface treatment.
               </p>
@@ -610,7 +622,7 @@
           ></path>
         </svg>
       </div>
-    </section>
+    </section> -->
 
     <!-- DEVELOPMENT SEC -->
     <section class="development-sec">
@@ -618,8 +630,8 @@
         <div class="row">
           <div class="col-md-6">
             <div class="development-left">
-              <h3>FUTURE DEVELOPMENT</h3>
-              <p>WHAT'S NEXT</p>
+              <h3>{{ $t("FUTURE_DEVELOPMENT") }}</h3>
+              <p>{{ $t("WHATS_NEXT") }}</p>
             </div>
           </div>
           <div class="col-md-6">
@@ -653,11 +665,12 @@
                 <li>
                   <p class="mb-4">
                     <strong>Remote Control rooms</strong> Looking beyond 2023,
-                    KTV Working Drones is planning to create special control
-                    rooms where drone pilots can operate drones all over the
-                    world via the internet. Drone Pilots will be able to provide
-                    support, provide remote tasks, work safer and be able to
-                    provide specialist service to anywhere there is service.
+                    BUROOJ AIR Working Drones is planning to create special
+                    control rooms where drone pilots can operate drones all over
+                    the world via the internet. Drone Pilots will be able to
+                    provide support, provide remote tasks, work safer and be
+                    able to provide specialist service to anywhere there is
+                    service.
                   </p>
                   <p>
                     Remote control rooms would be a great advantage in areas

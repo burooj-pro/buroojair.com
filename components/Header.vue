@@ -22,7 +22,12 @@
                 <span></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto">
+                <ul
+                  class="navbar-nav"
+                  :style="`margin-${
+                    dir === 'ltr' ? 'left' : 'right'
+                  }: auto !important;`"
+                >
                   <li class="nav-item">
                     <NuxtLink class="nav-link active" to="/">{{
                       $t("HOME")
@@ -33,21 +38,21 @@
                       $t("SERVICES")
                     }}</NuxtLink>
                   </li>
-                  <li class="nav-item">
+                  <!-- <li class="nav-item">
                     <NuxtLink class="nav-link" to="/location">{{
                       $t("LOCATIONS")
                     }}</NuxtLink>
-                  </li>
+                  </li> -->
                   <li class="nav-item">
                     <NuxtLink class="nav-link" to="/gallery">{{
                       $t("GALLERY")
                     }}</NuxtLink>
                   </li>
-                  <li class="nav-item">
+                  <!-- <li class="nav-item">
                     <NuxtLink class="nav-link" to="/news">{{
                       $t("NEWS")
                     }}</NuxtLink>
-                  </li>
+                  </li> -->
                   <li class="nav-item">
                     <NuxtLink class="nav-link" to="/about-us">{{
                       $t("ABOUT_US")
@@ -111,6 +116,11 @@ export default {
         // * Reload page:
         // window.location.reload();
       }
+    },
+  },
+  computed: {
+    dir() {
+      return this.language === "ar" ? "rtl" : "ltr";
     },
   },
 };
