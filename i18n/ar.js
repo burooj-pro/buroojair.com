@@ -10,6 +10,7 @@ export default {
   BECOME_A_PARTNER: "كن شريكا",
   EMAIL: "البريد الإلكتروني",
   PHONE: "الهاتف",
+  LANGUAGE: "En",
   COPY_RIGHT: "جميع الحقوق محفوظة",
   FOR_INQUIRIES_PLEASE_USE_OUR_LISTED_CONTACT_INFO:
     "للاستفسارات يرجى استخدام معلومات الاتصال المدرجة.",
