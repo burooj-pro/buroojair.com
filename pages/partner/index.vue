@@ -9,7 +9,7 @@
         height="240"
         frameborder="0"
         allow="autoplay; fullscreen; picture-in-picture"
-        title="KTV Working Drone"
+        title="BUROOJ AIR Working Drone"
         data-ready="true"
         class="elementor-background-video-embed d-none d-md-block"
         style="width: 1903px; height: 1072.11px"
@@ -21,7 +21,7 @@
         height="240"
         frameborder="0"
         allow="autoplay; fullscreen; picture-in-picture"
-        title="KTV Working Drone"
+        title="BUROOJ AIR Working Drone"
         data-ready="true"
         class="elementor-background-video-embed d-block d-md-none"
         style="width: 1903px; height: 1072.11px"
@@ -29,8 +29,8 @@
 
       <div class="container">
         <div class="titleText">
-          <h2>Drone for facade and window cleaning​</h2>
-          <p>KTV WORKING DRONE</p>
+          <h2>{{ $t("WINDOW_CLEANING") }}​</h2>
+          <p>{{ $t("BUROOJ_WORKING_DRONE") }}</p>
         </div>
       </div>
     </section>
@@ -38,8 +38,12 @@
     <section class="cleaning">
       <div class="container">
         <div class="text-box">
-          <h2>Facade and window cleaning with drone</h2>
-          <p>5-10 times faster than traditional cleaning</p>
+          <h2>{{ $t("FACADE_CLEANING") }}​</h2>
+          <p>
+            {{
+              $t("FAST_AND_EFFECTIVE_N_TIMES_FASTER_THAN_TRADITIONAL_METHODS")
+            }}
+          </p>
         </div>
       </div>
     </section>
@@ -59,8 +63,10 @@
       <div class="row g-0">
         <div class="col-lg-6">
           <div class="opertunityBox">
-            <h2>FRANCHISE OPPORTUNITIES AVAILABLE</h2>
-            <p>OUR HISTORY AND THE EVOLUTION OF CLEANING</p>
+            <h2>{{ $t("FRANCHISE") + " " + $t("OPPORTUNITIES_AVAILABLE") }}</h2>
+            <p>
+              {{ $t("OUR_HISTORY_AND_THE_EVOLUTION_OF_CLEANING") }}
+            </p>
           </div>
         </div>
         <div class="col-lg-6">
@@ -70,23 +76,24 @@
               CLEANING INDUSTRY HAS SEEN IN MORE THAN 100 YEARS.
             </h2>
             <h4>
-              Our philosophy at KTV Working Drone is simple – provide innovative
-              solutions that are safe and efficient and develop new and emerging
-              technology utilising drones.
+              Our philosophy at BUROOJ AIR Working Drone is simple – provide
+              innovative solutions that are safe and efficient and develop new
+              and emerging technology utilising drones.
             </h4>
             <p>
-              KTV Working Drone is creating a family around the globe where our
-              values are based on working with good people to achieve mutual
-              goals. Every day we strive to evolve with new ideas and we work
-              with our hearts. Not being afraid of our curiosity we are always
-              looking at ways that we can become better.
+              BUROOJ AIR Working Drone is creating a family around the globe
+              where our values are based on working with good people to achieve
+              mutual goals. Every day we strive to evolve with new ideas and we
+              work with our hearts. Not being afraid of our curiosity we are
+              always looking at ways that we can become better.
             </p>
             <p>
-              KTV Working Drone aims to make a difference in the world utlising
-              drones in our everyday working lives to bring more efficient
-              solutions to the cleaning and other emerging industries that could
-              have benefits from drones. So if you're ready to explore a new
-              innovative solution and become part of the family we are
+              BUROOJ AIR Working Drone aims to make a difference in the world
+              utlising drones in our everyday working lives to bring more
+              efficient solutions to the cleaning and other emerging industries
+              that could have benefits from drones. So if you're ready to
+              explore a new innovative solution and become part of the family we
+              are
             </p>
             <a href="#" class="btn btn-secondary">
               <i>
@@ -102,8 +109,8 @@
                   />
                 </svg>
               </i>
-              READ MORE</a
-            >
+              {{ $t("READ_MORE") }}
+            </a>
           </div>
         </div>
       </div>
@@ -115,15 +122,18 @@
           <div class="col-lg-6">
             <div class="text-box">
               <p>
-                THE ESTIMATED NEED FOR FUTURE DRONE CLEANING SERVICES IS
-                APPROXIMATELY
+                {{
+                  $t(
+                    "THE_ESTIMATED_NEED_FOR_FUTURE_DRONE_CLEANING_SERVICES_IS_APPROXIMATELY"
+                  )
+                }}
               </p>
             </div>
           </div>
           <div class="col-lg-6">
             <div class="text-box">
-              <h2>2 500 000</h2>
-              <h4>DRONES INTERNATIONALLY</h4>
+              <h2>2,500,000</h2>
+              <h4>{{ $t("DRONES_INTERNATIONALLY") }}</h4>
             </div>
           </div>
         </div>
@@ -138,7 +148,7 @@
           frameborder="0"
           allow="autoplay; fullscreen; picture-in-picture"
           allowfullscreen=""
-          title="KTV Working Drone"
+          title="BUROOJ AIR Working Drone"
           data-ready="true"
           class="elementor-background-video-embed"
           style="width: 1903px; height: 1072.11px"
@@ -149,13 +159,19 @@
           <div class="col-lg-8">
             <div class="text-box">
               <h3>
-                ADVANTAGES OF GLASS AND FACADE CLEANING WITH KTV WORKING DRONE
+                {{
+                  $t(
+                    "ADVANTAGES_OF_GLASS_AND_FACADE_CLEANING_WITH_BUROOJ_AIR_DRONE"
+                  )
+                }}
               </h3>
             </div>
           </div>
           <div class="col-lg-4">
             <div class="text-box">
-              <h4>Important key facts</h4>
+              <h4>
+                {{ $t("IMPORTANT_KEY_FACTS") }}
+              </h4>
               <p>
                 <strong>1000 sqm/hour</strong><br />Capacity facade cleaning
               </p>
@@ -198,19 +214,20 @@
         </div>
       </div>
     </section>
-    <!-- HOW KTV SEC -->
+    <!-- HOW BUROOJ AIR SEC -->
     <section class="how-ktv">
       <div class="row g-0">
         <div class="col-lg-5">
           <div class="text-box">
-            <h3>HOW DID KTV WORKING DRONE DEVELOPE?</h3>
+            <h3>HOW DID BUROOJ AIR WORKING DRONE DEVELOPE?</h3>
             <p>
-              <strong>How did KTV Working Drone develope?</strong> <br />
-              KTV Working Drone was founded by the entrepreneur Kennet Nilsen
-              where he Established KTV Group some 30 years ago. Kennet built a
-              very successful facilities management and cleaning business that
-              was the first to secure 20 year contacts for the maintenance and
-              management of many buildings in a number of countries.
+              <strong>How did BUROOJ AIR Working Drone develope?</strong> <br />
+              BUROOJ AIR Working Drone was founded by the entrepreneur Kennet
+              Nilsen where he Established BUROOJ AIR Group some 30 years ago.
+              Kennet built a very successful facilities management and cleaning
+              business that was the first to secure 20 year contacts for the
+              maintenance and management of many buildings in a number of
+              countries.
             </p>
 
             <p>
@@ -235,8 +252,8 @@
                   />
                 </svg>
               </i>
-              READ MORE</a
-            >
+              {{ $t("READ_MORE") }}
+            </a>
           </div>
         </div>
         <div class="col-lg-7">
@@ -247,7 +264,7 @@
       </div>
     </section>
     <!-- FAMILY SEC -->
-    <section class="family">
+    <!-- <section class="family">
       <div class="container-fluid">
         <div class="row align-items-center">
           <div class="col-lg-6">
@@ -263,7 +280,7 @@
                 better together.
               </h4>
               <p>
-                The KTV Working Drone is just one of the concepts and
+                The BUROOJ AIR Working Drone is just one of the concepts and
                 possibilities we are working on, and for the next few years
                 there will be new concepts with just as much potential. All in
                 which we want to offer our partners around the world.
@@ -277,60 +294,77 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
+
     <!-- ADVANTAGE SEC -->
-   <AdvantageSection />
+    <AdvantageSection />
     <!-- Advantages SEC -->
     <Footer />
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  name: "BECOME_A_PARTNER",
+  head() {
+    return {
+      title: `Burooj Air | ${this.$t("BECOME_A_PARTNER")}`,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "We aim to contribute to a safer work day for people who work at great heights with lifts, scaffolding and for facade climbers.",
+        },
+      ],
+    };
+  },
+};
 </script>
+
 <style lang="scss">
 h3 {
-    color: $mainly_blue;
-    font-size: $font62;
-    text-transform: uppercase;
-    line-height: 68px;
-    @include Red_Hat_Display(900);
+  color: $mainly_blue;
+  font-size: $font62;
+  text-transform: uppercase;
+  line-height: 68px;
+  @include Red_Hat_Display(900);
 }
 
 p {
-    font-size: $font16;
-    line-height: 24px;
-    @include Red_Hat_Display(400);
-    color: $charcoal;
+  font-size: $font16;
+  line-height: 24px;
+  @include Red_Hat_Display(400);
+  color: $charcoal;
 }
 
 .btn-secondary {
-    background-color: $orange;
-    padding: 0;
-    border: 1px solid $orange;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: $white;
-    text-transform: uppercase;
-    @include Red_Hat_Display(800);
-    @include border_radius(4px);
-    height: 54px;
-    padding: 0 29px;
-    span {
-        display: block;
-        margin-right: 10px;
-        svg {
-            width: 20px;
-            height: 20px;
-            display: block;
-        }
+  background-color: $orange;
+  padding: 0;
+  border: 1px solid $orange;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  text-transform: uppercase;
+  @include Red_Hat_Display(800);
+  @include border_radius(4px);
+  height: 54px;
+  padding: 0 29px;
+  span {
+    display: block;
+    margin-right: 10px;
+    svg {
+      width: 20px;
+      height: 20px;
+      display: block;
     }
+  }
 }
 
 .btn-white {
-    background-color: $white;
-    color: $black;
+  background-color: $white;
+  color: $black;
 }
 
 .banner-sec {
@@ -525,41 +559,41 @@ p {
 }
 
 .advantages {
-    padding: 240px 0 110px;
-    background-image: url(~assets/images/ktv_5505.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  padding: 240px 0 110px;
+  background-image: url(~assets/images/ktv_5505.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: $black;
+    opacity: 0.71;
+    z-index: 10;
+  }
+  .container {
     position: relative;
-    &:before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background-color: $black;
-        opacity: 0.71;
-        z-index: 10;
+    z-index: 55;
+  }
+  .text-box {
+    h4,
+    h3,
+    p {
+      color: $white;
     }
-    .container {
-        position: relative;
-        z-index: 55;
+    h4 {
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      font-weight: bold;
+      line-height: 1.2;
+      font-size: $font32;
     }
-    .text-box {
-        h4,
-        h3,
-        p {
-            color: $white;
-        }
-        h4 {
-            margin-top: 0.5rem;
-            margin-bottom: 1rem;
-            font-weight: bold;
-            line-height: 1.2;
-            font-size: $font32;
-        }
-        p {
-            margin-bottom: 0.9rem;
-        }
+    p {
+      margin-bottom: 0.9rem;
     }
+  }
 }
 
 .partnerAdvantage {
