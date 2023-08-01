@@ -1,8 +1,8 @@
 <template>
   <section class="contact-sec">
     <div class="container">
-      <div class="row">
-        <div class="col-md-6">
+      <div class="d-flex flex-column flex-md-row">
+        <div>
           <div class="contact-left">
             <div class="text-box">
               <h3>{{ $t("CONTACT_US") }}</h3>
@@ -28,6 +28,7 @@
             </ul>
           </div>
         </div>
+        <div style="display: flex; flex: 1"></div>
         <div id="inquiry">
           <div
             class="pipedriveWebForms"
