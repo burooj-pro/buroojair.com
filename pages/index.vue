@@ -788,7 +788,6 @@ p {
 }
 
 .title {
-  text-align: left;
   h2 {
     color: $dark_gray;
     font-size: $font62;
