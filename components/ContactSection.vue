@@ -16,47 +16,35 @@
             </div>
             <ul>
               <li>
-                <p><strong>Burooj Air Drones</strong></p>
-                <p>Efficiency Center – Office 01</p>
-                <p>6919 Prince Turki St - Khobar</p>
-                <p>Saudi Arabia</p>
+                <p>
+                  <strong>{{ $t("BUROOJ_AIR") }}</strong>
+                </p>
+                <p>{{ $t("KHOBAR_SAUDI_ARABIA") }}</p>
               </li>
               <li>
-                <p>{{ $t("EMAIL") }}:</p>
-                <p>{{ $t("PHONE") }}:</p>
+                <p>{{ $t("EMAIL") }}: info@buroojair.com</p>
+                <p>{{ $t("PHONE") }}: 966500000001</p>
               </li>
             </ul>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="contact-right">
-            <form>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="name" />
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="E-mail" />
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="message" />
-              </div>
-              <div class="form-group">
-                <input
-                  type="submit"
-                  class="btn btn-secondary"
-                  value="SEND MESSAGE"
-                />
-              </div>
-            </form>
+        <div id="inquiry">
+          <div
+            class="pipedriveWebForms"
+            data-pd-webforms="https://webforms.pipedrive.com/f/6coemjWsjuoqlhJqDxw5vARg9RKtlXs9Rk7xeP0SZJLEXlmO9hyO7YDdWfq6IcrYLV"
+          >
+            <script src="https://webforms.pipedrive.com/f/loader"></script>
           </div>
         </div>
       </div>
     </div>
   </section>
 </template>
+
 <script>
 export default {};
 </script>
+
 <style lang="scss" scoped>
 h3 {
   color: $mainly_blue;
