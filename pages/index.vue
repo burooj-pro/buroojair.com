@@ -14,7 +14,7 @@
                 {{ $t("DRONE_SERVICES") }}
               </h2>
               <p>
-                {{ $t("HIGH_RISE_WINDOW_AND_FACADE_CLEANING") }}
+                {{ $t("CLEANING_BUILDINGS_AND_HEAVY_LIFTING") }}
               </p>
             </div>
             <div class="servics-inner">
@@ -22,10 +22,10 @@
                 <div class="col-md-6">
                   <div class="text-box">
                     <h3>
-                      {{ $t("WINDOW_CLEANING") }}
+                      {{ $t("CLEANING_BUILDINGS") }}
                     </h3>
                     <p>
-                      {{ $t("WINDOW_CLEANING_DESC") }}
+                      {{ $t("CLEANING_BUILDINGS_DESC") }}
                     </p>
                     <NuxtLink to="/window-cleaning" class="btn btn-secondary">
                       <span>
@@ -51,10 +51,10 @@
                 <div class="col-md-6">
                   <div class="text-box">
                     <h3>
-                      {{ $t("FACADE_CLEANING") }}
+                      {{ $t("HEAVY_LIFTING") }}
                     </h3>
                     <p>
-                      {{ $t("FACADE_CLEANING_DESC") }}
+                      {{ $t("HEAVY_LIFTING_DESC") }}
                     </p>
                     <NuxtLink to="/facade-cleaning" class="btn btn-secondary">
                       <span>
@@ -96,8 +96,9 @@
                   class="img-fluid"
                 />
                 <h4 class="mx-2">
-                  {{ $t("A_DRONE_PILOT_POSITION")
-                  }}<span> {{ $t("IS_AVAILABLE") }}</span>
+                  {{ $t("GACA_PART_107_DRONE_PILOT")
+                  }}
+                  <span> {{ $t("IS_REQUIRED") }}</span>
                 </h4>
               </div>
               <a href="#" class="btn btn-secondary">
@@ -134,8 +135,8 @@
                 class="img-fluid"
               />
               <h4>
-                {{ $t("WINDOW_AND_FACADE") }} <br />
-                {{ $t("CLEANING_WITH_DRONE") }}
+                {{ $t("BUILDINGS_CLEANING") }} <br />
+                {{ $t("AND_HEAVYLIFTING_USING_DRONE") }}
               </h4>
             </div>
           </div>
@@ -144,14 +145,14 @@
               <h4>
                 {{
                   $t(
-                    "THE_HIGH_RISE_WINDOW_AND_FACADE_CLEANING_EVOLUTION_HAS_ARRIVED"
+                    "THE_BEST_SOLUTION_TO_CLEAN_BUILDINGS_AND_LIFT_HEAVY_WEIGHTS_IN_A_FASTER_WAY_IS_AVAILABLE_NOW"
                   )
                 }}
               </h4>
               <p>
                 {{
                   $t(
-                    "TO_DATE_ONLY_SPECIALIZED_CLEANING_BUSINESSES_WITH_EXPERIENCE_IN_ABSEILING"
+                    "UNTIL_NOW_CLEANING_OF_TALL_BUILDINGS_HAS_BEEN_A_COMPLEX_AND_DANGEROUS_UNDERTAKING"
                   )
                 }}
               </p>
@@ -203,15 +204,15 @@
           </div>
           <div class="col-md-6">
             <div class="text-box">
-              <h4>THE PANEL SURFACE IS NOT HURT BY THIS PROCEDURE.</h4>
+              <h4>THIS PROCEDURE KEEPS THE PANEL SURFACE WITH NO HARM OR DAMAGE.</h4>
               <p>
-                Our window cleaning technique is ideal for cleaning solar cell
-                panels, and it won't damage the surface.
+                Our window cleaning method is perfect for cleaning solar panels,
+                 And it is completely safe for the panel's surface. 
               </p>
               <p class="m-0">
-                The fact that there is no chance of stains and the surfaces stay
-                clean longer than with conventional cleaning is a significant
-                benefit of this technique.
+                Additionally, this technique offers a notable advantage of preventing
+                stains and keeping the surfaces cleaner for a longer period compared
+                to traditional cleaning methods.
               </p>
             </div>
           </div>
@@ -245,7 +246,7 @@
           <div class="col-md-5">
             <div class="let-talk-right">
               <p>
-                {{ $t("PARTICIPATE_IN_THE_MOST_CREATIVE") }}
+                {{ $t("TAKE_PART_IN_THE_MOST_INNOVATIVE_BUSINESS_IDEA") }}
               </p>
               <a href="#" class="btn btn-secondary btn-blue">
                 <span>
@@ -395,9 +396,9 @@
         <div class="row">
           <div class="col-md-6">
             <div class="text-left">
-              <h3>{{ $t("GLOBAL_REACH") }}</h3>
+              <h3>{{ $t("REACH_WORLDWIDE") }}</h3>
               <p>
-                {{ $t("GLOBAL_REACH_DESC") }}
+                {{ $t("REACH_WORLDWIDE_DESC") }}
               </p>
             </div>
           </div>
@@ -407,7 +408,7 @@
                 {{ $t("NO_MATTER_WHERE_YOU_ARE_IN_THE_WORLD") }}
               </p>
               <p>
-                {{ $t("THROUGHOUT_OUR_JOB_SECTORS") }}
+                {{ $t("AT_OUR_COMPANY_WE_PRIORITIZE") }}
               </p>
               <a href="#" class="btn btn-secondary">
                 <span>
@@ -629,7 +630,7 @@
         <div class="row">
           <div class="col-md-6">
             <div class="development-left">
-              <h3>{{ $t("FUTURE_DEVELOPMENT") }}</h3>
+              <h3>{{ $t("A_LOOK_TOWARDS_FUTURE_INVENTIONS") }}</h3>
               <p>{{ $t("WHATS_NEXT") }}</p>
             </div>
           </div>
@@ -638,7 +639,7 @@
               <ul :dir="dir">
                 <li>
                   <p>
-                    <strong>Spray painting</strong> With continued development,
+                    <strong>SPRAYING PAINT </strong> With continued development,
                     extended testing and new partnerships with paint
                     manufacturers, we are moving closer to the final testing
                     fase.
@@ -646,7 +647,7 @@
                 </li>
                 <li>
                   <p>
-                    <strong>Higher altitudes </strong> We have solved the
+                    <strong>REACH HIGHER ALTITUDES AND MORE NON-REACHABLE AREAS </strong> We have solved the
                     operating height restriction with our patent pending roof
                     safety system. There are no longer limitations on operation
                     height, and we will continue the testing to be able to
@@ -656,14 +657,14 @@
                 </li>
                 <li>
                   <p>
-                    <strong>Goggles</strong> As a result of operating in higher
+                    <strong>USE LATEST DRONE CONTROL TECHNOLOGIES </strong> As a result of operating in higher
                     altitudes, the use of special flight goggles is being
                     considered and tested.
                   </p>
                 </li>
                 <li>
                   <p class="mb-4">
-                    <strong>Remote Control rooms</strong> Looking beyond 2023,
+                    <strong>CONTROLLING THE DRONE ANYWHERE AT ANYTIME WITH THE MOST EFFECTIVE WAYS </strong> Looking beyond 2023,
                     BUROOJ AIR Working Drones is planning to create special
                     control rooms where drone pilots can operate drones all over
                     the world via the internet. Drone Pilots will be able to

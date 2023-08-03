@@ -15,13 +15,13 @@ export default {
   FOR_INQUIRIES_PLEASE_USE_OUR_LISTED_CONTACT_INFO:
     "For inquiries please use our listed contact info.",
   ADVANTAGES_USING_BUROOJ_AIR_DRONES: "Advantages using Burooj Air Drones",
-  FAST_AND_EFFECTIVE_N_TIMES_FASTER_THAN_TRADITIONAL_METHODS:
-    "Fast and effective 5-10 times faster than traditional methods",
-  EASIER_ACCESS_TO_HARD_TO_REACH_AREAS: "Easier access to hard-to-reach areas",
-  SAFER_AND_MORE_SECURE: "Safer and more secure",
-  NO_HEIGHT_EQUIPMENT_REQUIRED_FOR_ACCESS:
-    "No height equipment required for access",
-  CONTACTLESS_SOLUTION: "Contactless solution",
+  HIGH_SPEED_AND_EFFECTIVE_SURPASSING_TRADITIONAL_METHODS:
+    "High-speed and effective, surpassing traditional methods by a factor of 5-10 in terms of results.",
+    SIMPLIFIED_ACCESS_TO_REMOTE_OR_HARD_TO_GET_TO_PLACES: "Simplified access to remote or hard-to-get-to places.",
+  REINFORCED_SAFETY_AND_SECURITY: "Reinforced safety and security.",
+  ACCESSING_ELEVATED_AREAS_WITHOUT_REQUIRING_HEIGHT_SPECIFIC_TOOLS:
+    "Accessing elevated areas without requiring height-specific tools.",
+    ZERO_CONTACT_ALTERNATIVE: "Zero-contact alternative.",
   NOW_REQUEST_A_QUOTE_FOR_DRONE_CLEANING:
     "Now request a quote for drone cleaning",
   ARE_YOU_INTERESTED_IN_HAVING_A_DRONE_CLEAN_THE_WINDOWS_OR_THE_FACADE_OF_YOUR_BUILDING:
@@ -31,27 +31,31 @@ export default {
   SEND_YOUR_INQUIRY_AND_WE_WILL_GET_IN_TOUCH_AS_SOON_AS_POSSIBLE:
     "Send your inquiry and we will get in touch as soon as possible",
   DRONE_SERVICES: "Drone Services",
-  HIGH_RISE_WINDOW_AND_FACADE_CLEANING: "High Rise Window and Facade Cleaning",
-  WINDOW_CLEANING: "Window Cleaning",
-  WINDOW_CLEANING_DESC:
-    "Commercial window cleaning in tall buildings can take a lot of time. Burooj Air Drones has created a novel, more effective, and secure method of cleaning high rise windows that is also thought to be quicker and less expensive.",
+  CLEANING_BUILDINGS_AND_HEAVY_LIFTING: "CLEANING BUILDINGS and HEAVY LIFTING",
+  CLEANING_BUILDINGS : "CLEANING BUILDINGS ",
+  CLEANING_BUILDINGS_DESC:
+    "Burooj Air's drones can clean buildings much faster, safer to use than traditional methods, and they can cover large areas in a short amount of time and with great precision. and cheaper than traditional methods, such as scaffolding and manual labor.",
   READ_MORE: "Read More",
-  FACADE_CLEANING: "Facade Cleaning",
-  FACADE_CLEANING_DESC:
-    "Many multi-story structures provide difficulties and become demanding for several expert cleaners, who are required to follow stringent safety procedures, making such services complicated.",
-  A_DRONE_PILOT_POSITION: "A Drone Pilot Position",
+  HEAVY_LIFTING: "HEAVY LIFTING",
+  HEAVY_LIFTING_DESC:
+    "Burooj Air’s drones can be used to lift and transport heavy objects up to 50 kg, such as construction materials or medical supplies. This can be a valuable tool for businesses and organizations that need to move heavy objects quickly and efficiently.",
+  GACA_PART_107_DRONE_PILOT : "GACA PART 107 DRONE PILOT",
   IS_AVAILABLE: "Is Available",
+  IS_REQUIRED: "IS REQUIRED ",
   APPLY_NOW: "APPLY NOW",
   WINDOW_AND_FACADE: "Window & Facade",
+  BUILDINGS_CLEANING:"BUILDINGS CLEANING", 
+  AND_HEAVYLIFTING_USING_DRONE:"and HEAVYLIFTING USING DRONE",
   CLEANING_WITH_DRONE: "Cleaning with Drone",
-  THE_HIGH_RISE_WINDOW_AND_FACADE_CLEANING_EVOLUTION_HAS_ARRIVED:
-    "The High-Rise Window & Facade Cleaning Evolution Has Arrived",
-  TO_DATE_ONLY_SPECIALIZED_CLEANING_BUSINESSES_WITH_EXPERIENCE_IN_ABSEILING:
-    "To date, only specialized cleaning businesses with experience in abseiling, sky lifts, and for smaller structures, the use of expensive scaffolding or the use of boomand/or other lifting equipment, have cleaned high rise windows and facades.",
+  THE_BEST_SOLUTION_TO_CLEAN_BUILDINGS_AND_LIFT_HEAVY_WEIGHTS_IN_A_FASTER_WAY_IS_AVAILABLE_NOW:
+    "THE BEST SOLUTION TO CLEAN BUILDINGS AND LIFT HEAVY WEIGHTS IN A FASTER WAY IS AVAILABLE NOW",
+    UNTIL_NOW_CLEANING_OF_TALL_BUILDINGS_HAS_BEEN_A_COMPLEX_AND_DANGEROUS_UNDERTAKING:
+    "Until now, cleaning of tall buildings has been a complex and dangerous undertaking, requiring the expertise of specialized cleaning companies with experience in abseiling, sky lifts, scaffolding, or the use of other lifting equipment. Also, heavyweight lifting for quick response requires time and personnel.",
   FRANCHISE: "FRANCHISE",
   OPPORTUNITIES_AVAILABLE: "Opportunities Available",
   PARTICIPATE_IN_THE_MOST_CREATIVE:
     "Participate in the most creative business concept to hit the cleaning industry in more than a century.",
+  TAKE_PART_IN_THE_MOST_INNOVATIVE_BUSINESS_IDEA: "Take part in the most innovative business idea that has revolutionized the cleaning industry in over a century.",  
   LET_S_TALK: "Let's Talk",
   OUR_INTENTION: "Our Intention",
   OUR_MAIN_GOAL_IS_TO_HELP_OTHERS_AND_MAKE_WORKING_LIFE_BETTER_FOR_EVERYONE:
@@ -69,14 +73,19 @@ export default {
     "THE ESTIMATED NEED FOR FUTURE DRONE CLEANING SERVICES IS APPROXIMATELY",
   DRONES_INTERNATIONALLY: "DRONES INTERNATIONALLY",
   GLOBAL_REACH: "GLOBAL REACH",
+  REACH_WORLDWIDE :"REACH WORLDWIDE",
   GLOBAL_REACH_DESC:
     "In compliance with the international quality standards ISO 9001, ISO 14001, and OHSAS 1800, Burooj Air Droness have the same concept, safety regulations, and stringent controls and processes.",
+  REACH_WORLDWIDE_DESC:"Burooj Air Drones adhere to the same concept, safety regulations, and rigorous controls and procedures in accordance with the international quality standards of ISO 9001, ISO 14001, and OHSAS 18001.",
   NO_MATTER_WHERE_YOU_ARE_IN_THE_WORLD:
-    "No matter where you are in the world, you can use drones to clean buildings because we have authorized operating permissions from the necessary civil and aviation authorities. All our franchisee drone operators have received thorough training and abide by regional civil and aviation regulations.",
+    "No matter where you are located, you can utilize our drone cleaning services as we possess authorized operating permissions from the required civil and aviation authorities. Additionally, all our franchisee drone operators have undergone extensive training and strictly adhere to the regional civil and aviation regulations.",
+    AT_OUR_COMPANY_WE_PRIORITIZE:"At our company, we prioritize health, safety, and the environment in all our job aspects. We aim create a safer workplace for both our employees and the public, promoting HSE and public safety standards in the best way possible.",
   THROUGHOUT_OUR_JOB_SECTORS:
     "Throughout our job sectors, HSE and public safety are highly prioritized. Drone use creates a workplace that is safer for both employees and the general public.",
   FUTURE_DEVELOPMENT: "FUTURE DEVELOPMENT",
+  A_LOOK_TOWARDS_FUTURE_INVENTIONS: "A LOOK TOWARDS FUTURE INVENTIONS",
   WHATS_NEXT: "What's Next",
+  UPCOMING: "UPCOMING",
   ADVANTAGES_OF_GLASS_AND_FACADE_CLEANING_WITH_BUROOJ_AIR_DRONE:
     "ADVANTAGES OF GLASS AND FACADE CLEANING WITH BUROOJ AIR DRONE",
   IMPORTANT_KEY_FACTS: "Important key facts",

@@ -15,7 +15,7 @@
                 <p class="mx-2">
                   {{
                     $t(
-                      "FAST_AND_EFFECTIVE_N_TIMES_FASTER_THAN_TRADITIONAL_METHODS"
+                      "HIGH_SPEED_AND_EFFECTIVE_SURPASSING_TRADITIONAL_METHODS"
                     )
                   }}
                 </p>
@@ -23,25 +23,25 @@
               <li>
                 <span><img src="~assets/images/check-icon.png" alt="" /></span>
                 <p class="mx-2">
-                  {{ $t("EASIER_ACCESS_TO_HARD_TO_REACH_AREAS") }}
+                  {{ $t("SIMPLIFIED_ACCESS_TO_REMOTE_OR_HARD_TO_GET_TO_PLACES") }}
                 </p>
               </li>
               <li>
                 <span><img src="~assets/images/check-icon.png" alt="" /></span>
                 <p class="mx-2">
-                  {{ $t("SAFER_AND_MORE_SECURE") }}
+                  {{ $t("REINFORCED_SAFETY_AND_SECURITY") }}
                 </p>
               </li>
               <li>
                 <span><img src="~assets/images/check-icon.png" alt="" /></span>
                 <p class="mx-2">
-                  {{ $t("NO_HEIGHT_EQUIPMENT_REQUIRED_FOR_ACCESS") }}
+                  {{ $t("ACCESSING_ELEVATED_AREAS_WITHOUT_REQUIRING_HEIGHT_SPECIFIC_TOOLS") }}
                 </p>
               </li>
               <li>
                 <span><img src="~assets/images/check-icon.png" alt="" /></span>
                 <p class="mx-2">
-                  {{ $t("CONTACTLESS_SOLUTION") }}
+                  {{ $t("ZERO_CONTACT_ALTERNATIVE") }}
                 </p>
               </li>
             </ul>
