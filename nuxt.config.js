@@ -22,7 +22,8 @@ export default {
       { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
       { hid: 'twitter:title', name: 'twitter:title', content: 'Burooj Air - Drone Company in Saudi Arabia' },
       { hid: 'twitter:description', name: 'twitter:description', content: 'Burooj Air is a drone company based in Saudi Arabia, specializing in industrial and commercial drone solutions.' },
-      { hid: 'twitter:image', name: 'twitter:image', content: '/images/Twitter.png' },
+      { hid: 'twitter:image', name: 'twitter:image', content: 'https://i.postimg.cc/4yPRD3db/Twitter.png' },
+
       { name: "format-detection", content: "telephone=no" },
 
     ],
