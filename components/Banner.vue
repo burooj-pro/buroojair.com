@@ -25,7 +25,7 @@
      <video autoplay muted loop playsinline  class="elementor-background-video-embed d-none d-md-block"
       style="width: 1903px; height: 1072.11px">
       <source :src="videoSrc" type="video/mp4">
-      Your browser does not support the video tag.
+     
     </video>
     <div class="banner-inner">
       <div class="container-fluid">
@@ -81,7 +81,7 @@
 export default {
   data() {
     return {
-      videoSrc: "/videos/C9844_1.mp4", // Update with the correct path
+      videoSrc: "/videos/C9844_1.mp4",
     };
   },
 };
