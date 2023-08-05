@@ -74,7 +74,8 @@ p {
   color: $charcoal;
 }
 .advantage-sec {
-  background-color: rgba($secondary, 0.1);
+  // background-color: rgba($secondary, 0.1);
+  background-color:#E4E7ED;
   padding: 130px 0;
   .text-box {
     height: 100%;
