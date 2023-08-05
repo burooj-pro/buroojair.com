@@ -207,7 +207,7 @@
               <h4>THIS PROCEDURE KEEPS THE PANEL SURFACE WITH NO HARM OR DAMAGE.</h4>
               <p>
                 Our window cleaning method is perfect for cleaning solar panels,
-                 And it is completely safe for the panel's surface. 
+                 And it is completely safe for the panel's surface.
               </p>
               <p class="m-0">
                 Additionally, this technique offers a notable advantage of preventing
@@ -227,7 +227,7 @@
           <path
             class="elementor-shape-fill"
             d="M761.9,44.1L643.1,27.2L333.8,98L0,3.8V0l1000,0v3.9"
-            fill="#EEEAFF"
+            fill="#E4E7ED"
           ></path>
         </svg>
       </div>
@@ -768,7 +768,8 @@ p {
 /****** SERVICES SEC ******/
 
 .servics-sec {
-  background-color: rgba($secondary, 0.1);
+  // background-color: rgba($secondary, 0.1);
+  background-color: #E4E7ED;
   padding: 158px 0 152px;
 }
 

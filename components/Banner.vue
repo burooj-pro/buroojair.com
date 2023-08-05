@@ -1,6 +1,6 @@
 <template>
   <section class="banner-sec">
-    <iframe
+    <!-- <iframe
       src="https://player.vimeo.com/video/713580406?h=6988e72af6&amp;muted=1&amp;autoplay=1&amp;loop=1&amp;transparent=0&amp;background=1&amp;app_id=122963"
       frameborder="0"
       allowfullscreen
@@ -21,7 +21,12 @@
       data-ready="true"
       class="elementor-background-video-embed d-block d-md-none"
       style="width: 1903px; height: 1072.11px"
-    ></iframe>
+    ></iframe> -->
+     <video autoplay muted loop playsinline  class="elementor-background-video-embed d-none d-md-block"
+      style="width: 1903px; height: 1072.11px">
+      <source :src="videoSrc" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
     <div class="banner-inner">
       <div class="container-fluid">
         <div class="row">
@@ -65,7 +70,7 @@
         <path
           class="elementor-shape-fill"
           d="M761.9,44.1L643.1,27.2L333.8,98L0,3.8V0l1000,0v3.9"
-          fill="#EEEAFF"
+          fill="#E4E7ED"
         ></path>
       </svg>
     </div>
@@ -73,7 +78,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      videoSrc: "/videos/C9844_1.mp4", // Update with the correct path
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
