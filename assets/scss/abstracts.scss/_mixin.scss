@@ -25,10 +25,56 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Helvetica';
+    src: url('~assets/font/Helvetica.ttf');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
 
+
+// font created by Sebastian "Seb" Lester
+@font-face {
+    font-family: 'NeoSans';
+    src: url('~assets/font/NeoSansW23-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeoSans';
+    src: url('~assets/font/NeoSansW23-Light.ttf');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+// font made from http://www.onlinewebfonts.com "Web Fonts"
+@font-face {
+    font-family: 'NeoSans';
+    src: url('~assets/font/NeoSansW23Medium.ttf');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeoSans';
+    src: url('~assets/font/NeoSansW23-Black.ttf');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
 
 @mixin Red_Hat_Display($font-weight) {
     font-family: 'Red Hat Display', sans-serif;
+    font-weight: $font-weight;
+}
+
+@mixin NeoSans($font-weight) {
+    font-family: 'NeoSans';
     font-weight: $font-weight;
 }
 

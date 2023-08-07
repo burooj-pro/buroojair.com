@@ -122,7 +122,7 @@ export default {
           font-size: $font13;
           line-height: 15px;
           margin-bottom: 14.4px;
-          @include Red_Hat_Display(600);
+          @include NeoSans(600);
         }
       }
       form {
@@ -134,7 +134,7 @@ export default {
             box-shadow: none;
             height: 40px;
             font-size: $font12;
-            @include Red_Hat_Display(400);
+            @include NeoSans(400);
             text-transform: uppercase;
             border: none;
             &:focus {
