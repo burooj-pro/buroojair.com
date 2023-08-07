@@ -18,30 +18,43 @@
           <div class="text-box">
             <p>
               <strong>
-             Burooj Air is a drone company based in the Kingdom of Saudi Arabia that specializes in developing and deploying drones for a variety of industrial and commercial applications. The company’s drones can perform a wide range of tasks, including:
+                Burooj Air is a drone company based in the Kingdom of Saudi
+                Arabia that specializes in developing and deploying drones for a
+                variety of industrial and commercial applications. The company’s
+                drones can perform a wide range of tasks, including:
               </strong>
             </p>
             <p>
-         Cleaning Buildings: Burooj Air’s drones can be used to clean the exterior of buildings, removing dirt, and dust. This can save businesses and organizations a significant amount of time and money, as it eliminates the need for traditional methods of cleaning, such as scaffolding and manual labor.
+              Cleaning Buildings: Burooj Air’s drones can be used to clean the
+              exterior of buildings, removing dirt, and dust. This can save
+              businesses and organizations a significant amount of time and
+              money, as it eliminates the need for traditional methods of
+              cleaning, such as scaffolding and manual labor.
             </p>
 
             <p>
-            Weightlifting: Burooj Air’s drones can be used to lift and transport heavy objects up to 50 kg, such as construction materials or medical supplies. This can be a valuable tool for businesses and organizations that need to move heavy objects quickly and efficiently.
+              Weightlifting: Burooj Air’s drones can be used to lift and
+              transport heavy objects up to 50 kg, such as construction
+              materials or medical supplies. This can be a valuable tool for
+              businesses and organizations that need to move heavy objects
+              quickly and efficiently.
             </p>
 
             <p>
-             Heat Measurement & Fire Fighting: Drones from Burooj Air can measure heat signatures, identify potential fire hazards, or monitor industrial equipment temperatures. As a result, accidents can be prevented. Furthermore, it can be equipped with fire suppression systems to reach hard-to-reach places. Firefighters can use it to fight fires more effectively & safely.
+              Heat Measurement & Fire Fighting: Drones from Burooj Air can
+              measure heat signatures, identify potential fire hazards, or
+              monitor industrial equipment temperatures. As a result, accidents
+              can be prevented. Furthermore, it can be equipped with fire
+              suppression systems to reach hard-to-reach places. Firefighters
+              can use it to fight fires more effectively & safely.
             </p>
 
             <p>
-           Camera Filming: Burooj Air’s drones can be equipped with cameras, which can be used to film events or to capture aerial footage. This can be a valuable tool for businesses and organizations that need to record footage from a bird’s-eye view.
+              Camera Filming: Burooj Air’s drones can be equipped with cameras,
+              which can be used to film events or to capture aerial footage.
+              This can be a valuable tool for businesses and organizations that
+              need to record footage from a bird’s-eye view.
             </p>
-
-            <!-- <p>
-              All partners get the opportunity to participate in the continued
-              development of BUROOJ AIR Working Drone and the future
-              opportunities this brings.
-            </p> -->
           </div>
         </div>
       </div>
@@ -60,10 +73,10 @@
           </div>
           <div class="col-lg-6">
             <div class="text-box">
-              <h4>
+              <p>
                 Our main intention is to do good and improve people’s everyday
                 working life.
-              </h4>
+              </p>
               <p>
                 We aim to contribute to a safer work day for people who work at
                 great heights with lifts, scaffolding and for facade climbers.
@@ -103,22 +116,23 @@
           </div>
           <div class="col-lg-5">
             <div class="text-box">
-              <!-- <p>
+              <p>
                 <strong
                   >BUROOJ AIR Working Drone evolved out of the BUROOJ AIR Group
                   which was founded in 1992 by Kennet Nilsen. BUROOJ AIR Group
                   have more than 30 years experience with facade and window
                   cleaning and are experts in their field.</strong
                 >
-              </p> -->
+              </p>
               <p>
                 BUROOJ AIR Working Drone originated from an idea to find an
-                innovative and efficient way to clean facades and windows. A lot of mods were needed to make the drone
-                work properly for cleaning, also commercial. Fast forward the
-                result is a unique drone with tailor-made and uniquely adapted
-                mounting equipment with specially designed cleaning equipment. A
-                patent pending safety solution to prevent the drone from falling
-                down during operation is also developed.
+                innovative and efficient way to clean facades and windows. A lot
+                of mods were needed to make the drone work properly for
+                cleaning, also commercial. Fast forward the result is a unique
+                drone with tailor-made and uniquely adapted mounting equipment
+                with specially designed cleaning equipment. A patent pending
+                safety solution to prevent the drone from falling down during
+                operation is also developed.
               </p>
               <p>
                 The drone has been extensively tested and commercialized for
@@ -157,8 +171,8 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-7">
-            <div class="text-box">
-              <h3>
+            <div class="text-box titleText">
+              <h3 class="">
                 {{ $t("FUTURE_DEVELOPMENT") }}
               </h3>
               <h4>
@@ -264,32 +278,34 @@ p {
       background-color: $black;
       opacity: 0.4;
     }
-    .titleText {
-      position: relative;
-      z-index: 5;
-      h2 {
-        font-size: $font62;
-        color: $white;
-        margin-bottom: 20px;
-        text-transform: uppercase;
-      }
-      p {
-        font-size: $font42;
-        text-transform: uppercase;
-        color: $white;
-        line-height: 52px;
-      }
-    }
   }
   .text-box {
     padding: 100px;
-    background-color: red;
+    background: #e4e7ed !important;
     p {
-      color: $white;
+      color: $primary !important;
       margin-bottom: 20px;
     }
   }
 }
+
+.titleText {
+  position: relative;
+  z-index: 5;
+  h2 {
+    font-size: $font62;
+    color: $white;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  p {
+    font-size: $font42;
+    text-transform: uppercase;
+    color: $white;
+    line-height: 52px;
+  }
+}
+
 .method {
   background: $primary;
   color: $white;
@@ -357,7 +373,7 @@ p {
 
 .futureDevelopment {
   position: relative;
-  background: $whiteSecondary;
+  background: $whiteSecondary !important;
 
   .shape {
     fill: $blue;
@@ -371,20 +387,23 @@ p {
 
   .text-box {
     h3 {
-      color: $black;
+      color: $primary !important;
     }
 
     h4 {
       font-weight: normal;
       text-transform: uppercase;
       font-size: $font42;
+      color: $primary !important;
     }
 
     ul {
       padding-left: 20px;
+      color: $primary !important;
 
       li {
         list-style: disc;
+        font-size: $font16;
       }
     }
   }
