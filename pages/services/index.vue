@@ -83,7 +83,7 @@
                 If the facade is traditionally dirty the drone applies a
                 solution SelfCleaner by foaming it onto the facade with low
                 pressure. The SelfCleaner agent is a special formulated cleaner
-                that was developed and used since 2015 by our parent company
+                that was developed and used by our parent company
                 BUROOJ AIR Group. If the buildings haven’t been cleaned and/or
                 are extremely dirty the process is to clean the facade and
                 windows with the clean-watern method.<br /><br />
@@ -155,16 +155,14 @@
             <div class="text-box">
               <p>
                 <strong
-                  >BUROOJ AIR Working Drone evolved out of the BUROOJ AIR Group
-                  which was founded in 1992 by Kennet Nilsen. BUROOJ AIR Group
-                  have more than 30 years experience with facade and window
+                  >BUROOJ AIR Working Drone evolved out of the BUROOJ Group. BUROOJ AIR Group
+                  have experience with facade and window
                   cleaning and are experts in their field.</strong
                 >
               </p>
               <p>
                 BUROOJ AIR Working Drone originated from an idea to find an
-                innovative and efficient way to clean facades and windows. This
-                was back in 2015. A lot of mods were needed to make the drone
+                innovative and efficient way to clean facades and windows. A lot of mods were needed to make the drone
                 work properly for cleaning, also commercial. Fast forward the
                 result is a unique drone with tailor-made and uniquely adapted
                 mounting equipment with specially designed cleaning equipment. A
@@ -210,7 +208,7 @@
                 creating a safer and more secure way of having this service done
                 then BUROOJ AIR Working Drone has a solution for you.&nbsp;
               </p>
-              <p>
+              <!-- <p>
                 <b>BUROOJ AIR Working Drone</b> has many ways that we can
                 provide this service directly and indirectly and we work with
                 many different companies to contract this service. Whether
@@ -221,7 +219,7 @@
                 can better work for you.&nbsp; Reach out , get in touch and one
                 of our team will assist you to find the best cost effective and
                 safer solution to your high rise cleaning needs
-              </p>
+              </p> -->
             </div>
           </div>
           <div class="col-lg-6">

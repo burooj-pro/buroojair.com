@@ -23,24 +23,24 @@
               <p>
                 <strong>{{ $t("GENERAL_INQUIRY") }}:</strong>
                 <br />
-                info@buroojair.com
+                contact@buroojair.com
               </p>
-              <p>
+              <!-- <p>
                 <strong>{{ $t("FRANCHISE_PARTNER_INQUIRIES") }}:</strong>
                 <br />
-                info@buroojair.com
-              </p>
-              <p>
+                contact@buroojair.com
+              </p> -->
+              <!-- <p>
                 <strong>{{ $t("MEDIA_INQUIRIES") }}:</strong>
                 <br />
                 info@buroojair.com
-              </p>
-              <p>
+              </p> -->
+              <!-- <p>
                 <strong>{{ $t("DISTRIBUTION") }}:</strong>
                 <br />
                 info@buroojair.com
-              </p>
-              <div title="Page 9">
+              </p> -->
+              <!-- <div title="Page 9">
                 <div>
                   <div>
                     <div>
@@ -52,12 +52,12 @@
                     </div>
                   </div>
                 </div>
-              </div>
-              <p>
+              </div> -->
+              <!-- <p>
                 <strong>{{ $t("MARKETING") }}:</strong>
                 <br />
                 info@buroojair.com
-              </p>
+              </p> -->
             </div>
           </div>
           <div class="col-md-8 col-sm-6">

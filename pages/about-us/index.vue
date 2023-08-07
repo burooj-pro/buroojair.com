@@ -18,44 +18,30 @@
           <div class="text-box">
             <p>
               <strong>
-                BUROOJ AIR Working Drone evolved out of BUROOJ AIR Group, which
-                was founded in Norway in 1992 by Kennet Nilsen. BUROOJ AIR Group
-                have more than 30 years experience with facade and window
-                cleaning and are experts in their field.
+             Burooj Air is a drone company based in the Kingdom of Saudi Arabia that specializes in developing and deploying drones for a variety of industrial and commercial applications. The company’s drones can perform a wide range of tasks, including:
               </strong>
             </p>
             <p>
-              BUROOJ AIR Group developed fast and became a service partner
-              offering service operations for the offshore- and land based
-              industry and real estate, focusing on professional cleaning and
-              surface treatment.
+         Cleaning Buildings: Burooj Air’s drones can be used to clean the exterior of buildings, removing dirt, and dust. This can save businesses and organizations a significant amount of time and money, as it eliminates the need for traditional methods of cleaning, such as scaffolding and manual labor.
             </p>
 
             <p>
-              With the founding of the new brand BUROOJ AIR Working Drone in
-              2022; BUROOJ AIR Working Drone is the first company to properly
-              commercialise the use of drones in a variety of industries.
+            Weightlifting: Burooj Air’s drones can be used to lift and transport heavy objects up to 50 kg, such as construction materials or medical supplies. This can be a valuable tool for businesses and organizations that need to move heavy objects quickly and efficiently.
             </p>
 
             <p>
-              Several years have been spent developing equipment, systems and
-              procedures to better be able to service customers in countries all
-              over the world with a unified safer approach.
+             Heat Measurement & Fire Fighting: Drones from Burooj Air can measure heat signatures, identify potential fire hazards, or monitor industrial equipment temperatures. As a result, accidents can be prevented. Furthermore, it can be equipped with fire suppression systems to reach hard-to-reach places. Firefighters can use it to fight fires more effectively & safely.
             </p>
 
             <p>
-              R & D has always been a central part of the company, and the R & D
-              work will continue together with our partners. Our partners are
-              important for the further development of BUROOJ AIR Working Drone,
-              and through transfer of experience we’ll all learn from each
-              other.
+           Camera Filming: Burooj Air’s drones can be equipped with cameras, which can be used to film events or to capture aerial footage. This can be a valuable tool for businesses and organizations that need to record footage from a bird’s-eye view.
             </p>
 
-            <p>
+            <!-- <p>
               All partners get the opportunity to participate in the continued
               development of BUROOJ AIR Working Drone and the future
               opportunities this brings.
-            </p>
+            </p> -->
           </div>
         </div>
       </div>
@@ -117,18 +103,17 @@
           </div>
           <div class="col-lg-5">
             <div class="text-box">
-              <p>
+              <!-- <p>
                 <strong
                   >BUROOJ AIR Working Drone evolved out of the BUROOJ AIR Group
                   which was founded in 1992 by Kennet Nilsen. BUROOJ AIR Group
                   have more than 30 years experience with facade and window
                   cleaning and are experts in their field.</strong
                 >
-              </p>
+              </p> -->
               <p>
                 BUROOJ AIR Working Drone originated from an idea to find an
-                innovative and efficient way to clean facades and windows. This
-                was back in 2015. A lot of mods were needed to make the drone
+                innovative and efficient way to clean facades and windows. A lot of mods were needed to make the drone
                 work properly for cleaning, also commercial. Fast forward the
                 result is a unique drone with tailor-made and uniquely adapted
                 mounting equipment with specially designed cleaning equipment. A
@@ -298,7 +283,7 @@ p {
   }
   .text-box {
     padding: 100px;
-    background: $dark_gray;
+    background-color: red;
     p {
       color: $white;
       margin-bottom: 20px;
