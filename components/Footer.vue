@@ -5,11 +5,11 @@
         <div class="col-md-6">
           <div class="footer-left">
             <span>
-              <img
+              <!-- <img
                 src="~assets/images/footer-logo.png"
                 alt=""
                 class="img-fluid mx-2"
-              />
+              /> -->
             </span>
             <p>
               Burooj Air®
@@ -34,7 +34,7 @@ export default {};
 
 <style lang="scss" scoped>
 footer {
-  background-color: $blue;
+  background-color: #3437FF;
   padding: 22px 0;
   .footer-left {
     display: flex;

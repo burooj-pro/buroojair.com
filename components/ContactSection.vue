@@ -22,7 +22,7 @@
                 <p>{{ $t("KHOBAR_SAUDI_ARABIA") }}</p>
               </li>
               <li>
-                <p>{{ $t("EMAIL") }}: info@buroojair.com</p>
+                <p>{{ $t("EMAIL") }}: Contact@buroojair.com</p>
                 <p>{{ $t("PHONE") }}: 966500000001</p>
               </li>
             </ul>

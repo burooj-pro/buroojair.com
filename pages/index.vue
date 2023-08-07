@@ -130,7 +130,7 @@
           <div class="col-md-6">
             <div class="image-holder">
               <img
-                src="~assets/images/arrived-drone-img.jpg"
+                src="~assets/images/arrived-drone-img.png"
                 alt=""
                 class="img-fluid"
               />
@@ -156,7 +156,7 @@
                   )
                 }}
               </p>
-              <NuxtLink to="/facade-cleaning" class="btn btn-secondary">
+              <NuxtLink to="/facade-cleaning" class="btn btn-white ">
                 <span
                   ><!--?xml version="1.0" encoding="utf-8"?--><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
                   <svg
@@ -170,7 +170,7 @@
                       fill-rule="evenodd"
                       clip-rule="evenodd"
                       d="M12.2929 4.29289C12.6834 3.90237 13.3166 3.90237 13.7071 4.29289L20.7071 11.2929C21.0976 11.6834 21.0976 12.3166 20.7071 12.7071L13.7071 19.7071C13.3166 20.0976 12.6834 20.0976 12.2929 19.7071C11.9024 19.3166 11.9024 18.6834 12.2929 18.2929L17.5858 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H17.5858L12.2929 5.70711C11.9024 5.31658 11.9024 4.68342 12.2929 4.29289Z"
-                      fill="#fff"
+                      fill="#212121"
                     ></path>
                   </svg>
                 </span>
@@ -192,7 +192,7 @@
           <div class="col-md-6">
             <div class="image-holder">
               <img
-                src="~assets/images/solar-cell-img.jpg"
+                src="~assets/images/solar-cell-img.png"
                 alt=""
                 class="img-fluid"
               />
@@ -384,7 +384,7 @@
           <path
             class="elementor-shape-fill"
             d="M761.9,44.1L643.1,27.2L333.8,98L0,3.8V0l1000,0v3.9"
-            fill="#542FFB"
+            fill="#1F1F1F"
           ></path>
         </svg>
       </div>
@@ -544,7 +544,7 @@
     <!-- POPULATED SEC -->
     <section class="populated-sec">
       <img
-        src="~assets/images/populated-img.jpg"
+        src="~assets/images/BuroojAir_4.jpg"
         alt=""
         class="img-fluid w-100"
       />
@@ -754,9 +754,30 @@ p {
   }
 }
 
+
 .btn-white {
-  background-color: $white;
-  color: $black;
+  color: #1F1A1C;
+   background-color: white;
+  padding: 0;
+  border: 1px solid $orange;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  // color: $white;
+  text-transform: uppercase;
+  @include Red_Hat_Display(800);
+  @include border_radius(4px);
+  height: 54px;
+  padding: 0 29px;
+  span {
+    display: block;
+    margin-right: 10px;
+    svg {
+      width: 20px;
+      height: 20px;
+      display: block;
+    }
+  }
 }
 
 .btn-blue {
@@ -872,7 +893,8 @@ p {
 /***** ARRIVED DRONE *****/
 
 .arrived-drone-sec {
-  background-color: $secondary;
+  // background-color: $secondary;
+  background: linear-gradient(206deg, #1F1A1C 0%, #212121 38.25%, #3437FF 100%);;
   .image-holder {
     position: relative;
     height: 800px;
@@ -1102,7 +1124,7 @@ p {
 /***** ESTIMATES FUTURE SEC ******/
 
 .estimated-future-sec {
-  background-color: $secondary;
+   background-color: #1F1F1F;
   padding: 228px 0;
   position: relative;
   .estimated-future-left {
@@ -1288,15 +1310,15 @@ p {
 /***** DEVELOPMENT SEC *****/
 
 .development-sec {
-  background-color: $dark_green;
+  background-color: #E4E7ED;
   padding: 235px 0 150px;
   .development-left {
     h3 {
-      color: $white;
+      color: #212121;
       margin: 0 0 30px 0;
     }
     p {
-      color: $white;
+      color: #1F1F1F;
       @include Red_Hat_Display(400);
       font-size: $font42;
       text-transform: uppercase;
@@ -1311,7 +1333,7 @@ p {
         position: relative;
         padding-left: 18px;
         p {
-          color: $white;
+          color: #1F1F1F;
           strong {
             display: block;
           }
