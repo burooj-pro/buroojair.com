@@ -64,13 +64,13 @@ h3 {
   font-size: $font62;
   text-transform: uppercase;
   line-height: 68px;
-  @include Red_Hat_Display(900);
+  @include NeoSans(900);
 }
 
 p {
   font-size: $font16;
   line-height: 24px;
-  @include Red_Hat_Display(400);
+  @include NeoSans(400);
   color: $charcoal;
 }
 .advantage-sec {
@@ -101,7 +101,7 @@ p {
         }
         p {
           flex: 1;
-          @include Red_Hat_Display(600);
+          @include NeoSans(600);
           font-size: $font20;
           line-height: 24px;
         }

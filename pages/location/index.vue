@@ -288,13 +288,13 @@ h3 {
   font-size: $font62;
   text-transform: uppercase;
   line-height: 68px;
-  @include Red_Hat_Display(900);
+  @include NeoSans(900);
 }
 
 p {
   font-size: $font16;
   line-height: 24px;
-  @include Red_Hat_Display(400);
+  @include NeoSans(400);
   color: $charcoal;
 }
 
@@ -343,12 +343,12 @@ p {
   .caption {
     h3 {
       font-size: $font42;
-      @include Red_Hat_Display(400);
+      @include NeoSans(400);
       line-height: 1.4;
       margin-bottom: 20px;
     }
     p {
-      @include Red_Hat_Display(400);
+      @include NeoSans(400);
       text-transform: uppercase;
       margin-bottom: 20px;
     }
@@ -403,7 +403,7 @@ p {
       line-height: 52px;
     }
     p {
-      @include Red_Hat_Display(600);
+      @include NeoSans(600);
       font-size: 1.5rem;
     }
   }

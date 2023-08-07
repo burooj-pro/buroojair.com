@@ -190,13 +190,13 @@ h3 {
   font-size: $font62;
   text-transform: uppercase;
   line-height: 68px;
-  @include Red_Hat_Display(900);
+  @include NeoSans(900);
 }
 
 p {
   font-size: $font16;
   line-height: 24px;
-  @include Red_Hat_Display(400);
+  @include NeoSans(400);
   color: $charcoal;
 }
 
@@ -234,7 +234,7 @@ p {
 
   .news-inner {
     h4 {
-      @include Red_Hat_Display(400);
+      @include NeoSans(400);
       font-size: $font38;
       text-transform: uppercase;
       line-height: 1;
@@ -262,7 +262,7 @@ p {
     span {
       display: block;
       color: $gray53;
-      @include Red_Hat_Display(400);
+      @include NeoSans(400);
       font-size: $font14;
       text-transform: uppercase;
       line-height: 16px;
@@ -270,7 +270,7 @@ p {
 
     p {
       color: $matterhorn;
-      @include Red_Hat_Display(400);
+      @include NeoSans(400);
       font-size: $font14;
       line-height: 16px;
       margin: 17px 0 13px 0;

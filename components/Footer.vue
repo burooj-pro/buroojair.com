@@ -41,7 +41,7 @@ footer {
     align-items: center;
     p {
       color: $white;
-      @include Red_Hat_Display(600);
+      @include NeoSans(600);
       font-size: $font16;
       line-height: 1;
       padding-left: 10px;
@@ -54,7 +54,7 @@ footer {
     justify-content: center;
     p {
       color: $white;
-      @include Red_Hat_Display(500);
+      @include NeoSans(500);
       font-size: $font15;
     }
   }

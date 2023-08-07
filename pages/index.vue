@@ -96,8 +96,7 @@
                   class="img-fluid"
                 />
                 <h4 class="mx-2">
-                  {{ $t("GACA_PART_107_DRONE_PILOT")
-                  }}
+                  {{ $t("GACA_PART_107_DRONE_PILOT") }}
                   <span> {{ $t("IS_REQUIRED") }}</span>
                 </h4>
               </div>
@@ -156,7 +155,7 @@
                   )
                 }}
               </p>
-              <NuxtLink to="/facade-cleaning" class="btn btn-white ">
+              <NuxtLink to="/facade-cleaning" class="btn btn-white">
                 <span
                   ><!--?xml version="1.0" encoding="utf-8"?--><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
                   <svg
@@ -204,15 +203,17 @@
           </div>
           <div class="col-md-6">
             <div class="text-box">
-              <h4>THIS PROCEDURE KEEPS THE PANEL SURFACE WITH NO HARM OR DAMAGE.</h4>
+              <h4>
+                THIS PROCEDURE KEEPS THE PANEL SURFACE WITH NO HARM OR DAMAGE.
+              </h4>
               <p>
                 Our window cleaning method is perfect for cleaning solar panels,
-                 And it is completely safe for the panel's surface.
+                And it is completely safe for the panel's surface.
               </p>
               <p class="m-0">
-                Additionally, this technique offers a notable advantage of preventing
-                stains and keeping the surfaces cleaner for a longer period compared
-                to traditional cleaning methods.
+                Additionally, this technique offers a notable advantage of
+                preventing stains and keeping the surfaces cleaner for a longer
+                period compared to traditional cleaning methods.
               </p>
             </div>
           </div>
@@ -647,30 +648,35 @@
                 </li>
                 <li>
                   <p>
-                    <strong>REACH HIGHER ALTITUDES AND MORE NON-REACHABLE AREAS </strong> We have solved the
-                    operating height restriction with our patent pending roof
-                    safety system. There are no longer limitations on operation
-                    height, and we will continue the testing to be able to
-                    operate safely in heights and altitudes up to 600 meters and
-                    above.
+                    <strong
+                      >REACH HIGHER ALTITUDES AND MORE NON-REACHABLE AREAS
+                    </strong>
+                    We have solved the operating height restriction with our
+                    patent pending roof safety system. There are no longer
+                    limitations on operation height, and we will continue the
+                    testing to be able to operate safely in heights and
+                    altitudes up to 600 meters and above.
                   </p>
                 </li>
                 <li>
                   <p>
-                    <strong>USE LATEST DRONE CONTROL TECHNOLOGIES </strong> As a result of operating in higher
-                    altitudes, the use of special flight goggles is being
-                    considered and tested.
+                    <strong>USE LATEST DRONE CONTROL TECHNOLOGIES </strong> As a
+                    result of operating in higher altitudes, the use of special
+                    flight goggles is being considered and tested.
                   </p>
                 </li>
                 <li>
                   <p class="mb-4">
-                    <strong>CONTROLLING THE DRONE ANYWHERE AT ANYTIME WITH THE MOST EFFECTIVE WAYS </strong> Looking beyond 2023,
-                    BUROOJ AIR Working Drones is planning to create special
-                    control rooms where drone pilots can operate drones all over
-                    the world via the internet. Drone Pilots will be able to
-                    provide support, provide remote tasks, work safer and be
-                    able to provide specialist service to anywhere there is
-                    service.
+                    <strong
+                      >CONTROLLING THE DRONE ANYWHERE AT ANYTIME WITH THE MOST
+                      EFFECTIVE WAYS
+                    </strong>
+                    Looking beyond 2023, BUROOJ AIR Working Drones is planning
+                    to create special control rooms where drone pilots can
+                    operate drones all over the world via the internet. Drone
+                    Pilots will be able to provide support, provide remote
+                    tasks, work safer and be able to provide specialist service
+                    to anywhere there is service.
                   </p>
                   <p>
                     Remote control rooms would be a great advantage in areas
@@ -720,13 +726,13 @@ h3 {
   font-size: $font62;
   text-transform: uppercase;
   line-height: 68px;
-  @include Red_Hat_Display(900);
+  @include NeoSans(900);
 }
 
 p {
   font-size: $font16;
   line-height: 24px;
-  @include Red_Hat_Display(400);
+  @include NeoSans(400);
   color: $charcoal;
 }
 
@@ -739,7 +745,7 @@ p {
   justify-content: center;
   color: $white;
   text-transform: uppercase;
-  @include Red_Hat_Display(800);
+  @include NeoSans(900);
   @include border_radius(4px);
   height: 54px;
   padding: 0 29px;
@@ -754,10 +760,9 @@ p {
   }
 }
 
-
 .btn-white {
-  color: #1F1A1C;
-   background-color: white;
+  color: #1f1a1c;
+  background-color: white;
   padding: 0;
   border: 1px solid $orange;
   display: inline-flex;
@@ -765,7 +770,7 @@ p {
   justify-content: center;
   // color: $white;
   text-transform: uppercase;
-  @include Red_Hat_Display(800);
+  @include NeoSans(900);
   @include border_radius(4px);
   height: 54px;
   padding: 0 29px;
@@ -790,7 +795,7 @@ p {
 
 .servics-sec {
   // background-color: rgba($secondary, 0.1);
-  background-color: #E4E7ED;
+  background-color: #e4e7ed;
   padding: 158px 0 152px;
 }
 
@@ -824,7 +829,7 @@ p {
     font-size: $font42;
     text-transform: uppercase;
     line-height: 52px;
-    @include Red_Hat_Display(400);
+    @include NeoSans(400);
   }
 }
 
@@ -894,7 +899,7 @@ p {
 
 .arrived-drone-sec {
   // background-color: $secondary;
-  background: linear-gradient(206deg, #1F1A1C 0%, #212121 38.25%, #3437FF 100%);;
+  background: linear-gradient(206deg, #1f1a1c 0%, #212121 38.25%, #3437ff 100%);
   .image-holder {
     position: relative;
     height: 800px;
@@ -944,7 +949,7 @@ p {
       color: $white;
       text-transform: uppercase;
       line-height: 52px;
-      @include Red_Hat_Display(600);
+      @include NeoSans(600);
     }
     p {
       color: $white;
@@ -1002,7 +1007,7 @@ p {
       font-size: $font62;
       text-transform: uppercase;
       line-height: 68px;
-      @include Red_Hat_Display(900);
+      @include NeoSans(900);
       margin: 0 0 24px 0;
     }
     p {
@@ -1010,7 +1015,7 @@ p {
       font-size: $font42;
       text-transform: uppercase;
       line-height: 52px;
-      @include Red_Hat_Display(400);
+      @include NeoSans(400);
     }
   }
   .let-talk-right {
@@ -1071,7 +1076,7 @@ p {
     align-items: flex-start;
     h4 {
       color: $gray;
-      @include Red_Hat_Display(400);
+      @include NeoSans(400);
       font-size: $font42;
       text-transform: uppercase;
       line-height: 52px;
@@ -1124,14 +1129,14 @@ p {
 /***** ESTIMATES FUTURE SEC ******/
 
 .estimated-future-sec {
-   background-color: #1F1F1F;
+  background-color: #1f1f1f;
   padding: 228px 0;
   position: relative;
   .estimated-future-left {
     padding: 0 15px;
     p {
       color: $white;
-      @include Red_Hat_Display(400);
+      @include NeoSans(400);
       font-size: $font42;
       text-transform: uppercase;
       line-height: 52px;
@@ -1240,7 +1245,7 @@ p {
   .text-box {
     p {
       color: $white;
-      @include Red_Hat_Display(400);
+      @include NeoSans(400);
       font-size: $font16;
       line-height: 24px;
     }
@@ -1310,7 +1315,7 @@ p {
 /***** DEVELOPMENT SEC *****/
 
 .development-sec {
-  background-color: #E4E7ED;
+  background-color: #e4e7ed;
   padding: 235px 0 150px;
   .development-left {
     h3 {
@@ -1318,8 +1323,8 @@ p {
       margin: 0 0 30px 0;
     }
     p {
-      color: #1F1F1F;
-      @include Red_Hat_Display(400);
+      color: #1f1f1f;
+      @include NeoSans(400);
       font-size: $font42;
       text-transform: uppercase;
       line-height: 52px;
@@ -1333,7 +1338,7 @@ p {
         position: relative;
         padding-left: 18px;
         p {
-          color: #1F1F1F;
+          color: #1f1f1f;
           strong {
             display: block;
           }

@@ -52,13 +52,13 @@ h3 {
   font-size: $font50;
   text-transform: uppercase;
   line-height: 68px;
-  @include Red_Hat_Display(900);
+  @include NeoSans(900);
 }
 
 p {
   font-size: $font16;
   line-height: 24px;
-  @include Red_Hat_Display(400);
+  @include NeoSans(400);
   color: $charcoal;
 }
 
@@ -71,7 +71,7 @@ p {
   justify-content: center;
   color: $white;
   text-transform: uppercase;
-  @include Red_Hat_Display(800);
+  @include NeoSans(900);
   @include border_radius(4px);
   height: 54px;
   padding: 0 29px;
@@ -135,7 +135,7 @@ p {
         .form-control {
           border: none;
           background-color: $white;
-          @include Red_Hat_Display(300);
+          @include NeoSans(400);
           font-size: $font14;
           text-transform: uppercase;
           height: 59px;

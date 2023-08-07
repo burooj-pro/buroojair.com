@@ -387,13 +387,13 @@ h3 {
   font-size: $font62;
   text-transform: uppercase;
   line-height: 68px;
-  @include Red_Hat_Display(900);
+  @include NeoSans(900);
 }
 
 p {
   font-size: $font16;
   line-height: 24px;
-  @include Red_Hat_Display(400);
+  @include NeoSans(400);
   color: $charcoal;
 }
 
@@ -609,7 +609,7 @@ p {
         list-style-type: disc;
         color: $white;
         font-size: 1rem;
-        @include Red_Hat_Display(400);
+        @include NeoSans(400);
       }
     }
     p {

@@ -30,7 +30,7 @@ export default {
 
      .news-inner {
          h4 {
-             @include Red_Hat_Display(400);
+             @include NeoSans(400);
              font-size: $font38;
              text-transform: uppercase;
              line-height: 1;
@@ -58,7 +58,7 @@ export default {
          span {
              display: block;
              color: $gray53;
-             @include Red_Hat_Display(400);
+             @include NeoSans(400);
              font-size: $font14;
              text-transform: uppercase;
              line-height: 16px;
@@ -66,7 +66,7 @@ export default {
 
          p {
              color: $matterhorn;
-             @include Red_Hat_Display(400);
+             @include NeoSans(400);
              font-size: $font14;
              line-height: 16px;
              margin: 17px 0 13px 0;
