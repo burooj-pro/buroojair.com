@@ -23,7 +23,7 @@ export default {
     "Accessing elevated areas without requiring height-specific tools.",
     ZERO_CONTACT_ALTERNATIVE: "Zero-contact alternative.",
   NOW_REQUEST_A_QUOTE_FOR_DRONE_CLEANING:
-    "Now request a quote for drone cleaning",
+    "Request a Quote",
   ARE_YOU_INTERESTED_IN_HAVING_A_DRONE_CLEAN_THE_WINDOWS_OR_THE_FACADE_OF_YOUR_BUILDING:
     "Are you interested in having a drone clean the windows or the facade of your building?",
   YOU_CAN_CONTACT_US_ANYWHERE_IN_THE_WORLD_FOR_A_NON_BINDING_PRICE_QUOTE:
@@ -34,17 +34,17 @@ export default {
   CLEANING_BUILDINGS_AND_HEAVY_LIFTING: "CLEANING BUILDINGS and HEAVY LIFTING",
   CLEANING_BUILDINGS : "CLEANING BUILDINGS ",
   CLEANING_BUILDINGS_DESC:
-    "Burooj Air's drones can clean buildings much faster, safer to use than traditional methods, and they can cover large areas in a short amount of time and with great precision. and cheaper than traditional methods, such as scaffolding and manual labor.",
+    "Offering aerial drone cleaning and sanitization, a safer, faster and less expensive alternation to traditional cleaning methods.",
   READ_MORE: "Read More",
   HEAVY_LIFTING: "HEAVY LIFTING",
   HEAVY_LIFTING_DESC:
-    "Burooj Air’s drones can be used to lift and transport heavy objects up to 50 kg, such as construction materials or medical supplies. This can be a valuable tool for businesses and organizations that need to move heavy objects quickly and efficiently.",
+    "Lifting and transporting heavy objects up to 50 kg, such as construction materials or medical supplies. This can be a valuable tool for orgnizations that needs to move heavy objects quickly and efficiently.",
   GACA_PART_107_DRONE_PILOT : "GACA PART 107 DRONE PILOT",
   IS_AVAILABLE: "Is Available",
   IS_REQUIRED: "IS REQUIRED ",
   APPLY_NOW: "APPLY NOW",
   WINDOW_AND_FACADE: "Window & Facade",
-  BUILDINGS_CLEANING:"BUILDINGS CLEANING", 
+  BUILDINGS_CLEANING:"BUILDINGS CLEANING",
   AND_HEAVYLIFTING_USING_DRONE:"and HEAVYLIFTING USING DRONE",
   CLEANING_WITH_DRONE: "Cleaning with Drone",
   THE_BEST_SOLUTION_TO_CLEAN_BUILDINGS_AND_LIFT_HEAVY_WEIGHTS_IN_A_FASTER_WAY_IS_AVAILABLE_NOW:
@@ -55,7 +55,7 @@ export default {
   OPPORTUNITIES_AVAILABLE: "Opportunities Available",
   PARTICIPATE_IN_THE_MOST_CREATIVE:
     "Participate in the most creative business concept to hit the cleaning industry in more than a century.",
-  TAKE_PART_IN_THE_MOST_INNOVATIVE_BUSINESS_IDEA: "Take part in the most innovative business idea that has revolutionized the cleaning industry in over a century.",  
+  TAKE_PART_IN_THE_MOST_INNOVATIVE_BUSINESS_IDEA: "Take part in the most innovative business idea that has revolutionized the cleaning industry in over a century.",
   LET_S_TALK: "Let's Talk",
   OUR_INTENTION: "Our Intention",
   OUR_MAIN_GOAL_IS_TO_HELP_OTHERS_AND_MAKE_WORKING_LIFE_BETTER_FOR_EVERYONE:
@@ -117,10 +117,10 @@ export default {
   ADDRESS: "Address",
   MAKE_AN_INQUIRY_TODAY: "Make an inquiry today",
 
-  
 
 
-  //about us page 
+
+  //about us page
   BUROOJ_AIR_IS_A_DRONE_COMPANY_BASED_IN_THE_KINGDOM_OF_SAUDI_ARABIA:`Burooj Air is a drone company based in the Kingdom of Saudi
   Arabia that specializes in developing and deploying drones for a
   variety of industrial and commercial applications. The company’s
@@ -129,7 +129,7 @@ export default {
   exterior of buildings, removing dirt, and dust. This can save
   businesses and organizations a significant amount of time and
   money, as it eliminates the need for traditional methods of
-  cleaning, such as scaffolding and manual labor.`, 
+  cleaning, such as scaffolding and manual labor.`,
 
   WEIGHTLIFTING_BUROOJ_AIR_DRONES_CAN_BE_USED:`Weightlifting: Burooj Air’s drones can be used to lift and
   transport heavy objects up to 50 kg, such as construction
@@ -147,9 +147,9 @@ export default {
   CAMERA_FILMING:`Camera Filming: Burooj Air’s drones can be equipped with cameras,
   which can be used to film events or to capture aerial footage.
   This can be a valuable tool for businesses and organizations that
-  need to record footage from a bird’s-eye view.`, 
+  need to record footage from a bird’s-eye view.`,
   OUR_MAIN_INTENTION_IS_TO_DO_GOOD:`Our main intention is to do good and improve people’s everyday
-  working life.`, 
+  working life.`,
   WE_AIM_TO_CONTRIBUTE_TO_A_SAFER_WORK:`We aim to contribute to a safer work day for people who work at
   great heights with lifts, scaffolding and for facade climbers.`,
 
@@ -218,7 +218,7 @@ export default {
 
 
 
-  //services page  
+  //services page
 
   UP_UNTIL_NOW_HIGH_RISE_WINDOW_AND_FACADE_CLEANING:`Up until now high rise window and facade cleaning has only been
   done by professional cleaning companies who specialice in
@@ -269,18 +269,18 @@ export default {
   cleaning methods.`,
   SOLAR_CELL_PANEL:`Solar Cell panel`,
   CLEANING:`Cleaning`,
-  //new 
+  //new
   THIS_PROCEDURE_KEEPS:`THIS PROCEDURE KEEPS THE PANEL SURFACE WITH NO HARM OR DAMAGE.`,
   OUR_WINDOW_CLEANING_METHOD:`Our window cleaning method is perfect for cleaning solar panels,
                 And it is completely safe for the panel's surface.`,
 
 ADDITIONALLY_THIS_TECNHIQUE:`Additionally, this technique offers a notable advantage of
 preventing stains and keeping the surfaces cleaner for a longer
-period compared to traditional cleaning methods.` ,               
+period compared to traditional cleaning methods.` ,
 //endnew
 
 
-//new2 
+//new2
 WE_HAVE_SOLVED_THE_OPERATING_HEIGHT_RESTRICTION:`We have solved the operating height restriction with our
 patent pending roof safety system. There are no longer
 limitations on operation height, and we will continue the
@@ -325,7 +325,7 @@ altitudes up to 600 meters and above.`,//endnew2
   BUROOJ_AIR_WORKING_DRONE_EVOLVED_OUT:`BUROOJ AIR Working Drone evolved out of the BUROOJ Group. BUROOJ AIR Group
   have experience with facade and window
   cleaning and are experts in their field.`,
-  
+
   // BUROOJ_AIR_WORKING_DRONE_ORIGINATED_FROM:`` reapted,
   IF_YOU_ARE:`If you’re a`,
   BUILDING_OWNER_DEVELOPER:`building owner, developer, building management company,`,

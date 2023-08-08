@@ -25,7 +25,7 @@
      <video autoplay muted loop playsinline  class="elementor-background-video-embed d-none d-md-block"
       style="width: 1903px; height: 1072.11px">
       <source :src="videoSrc" type="video/mp4">
-     
+
     </video>
     <div class="banner-inner">
       <div class="container-fluid">
@@ -34,20 +34,20 @@
             <div class="banner-form">
               <div class="text-box">
                 <h3>{{ $t("NOW_REQUEST_A_QUOTE_FOR_DRONE_CLEANING") }}</h3>
-                <p>
+                <!-- <p>
                   {{
                     $t(
                       "ARE_YOU_INTERESTED_IN_HAVING_A_DRONE_CLEAN_THE_WINDOWS_OR_THE_FACADE_OF_YOUR_BUILDING"
                     )
                   }}
-                </p>
-                <p>
+                </p> -->
+                <!-- <p>
                   {{
                     $t(
                       "YOU_CAN_CONTACT_US_ANYWHERE_IN_THE_WORLD_FOR_A_NON_BINDING_PRICE_QUOTE"
                     )
                   }}
-                </p>
+                </p> -->
               </div>
 
               <div
