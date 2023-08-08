@@ -177,7 +177,7 @@
       </div>
     </section>
     <!-- INQUIRY SEC -->
-    <section class="inquiry">
+    <!-- <section class="inquiry">
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
@@ -192,7 +192,7 @@
                 <b> {{ $t("BUILDING_OWNER_DEVELOPER") }}</b>
                 <b>{{ $t("CLEANING_COMPANY") }}</b> {{ $t("WITH_HIGH_RISE_WINDOW_CLEANING") }}
               </p>
-              <!-- <p>
+               <p>
                 <b>BUROOJ AIR Working Drone</b> has many ways that we can
                 provide this service directly and indirectly and we work with
                 many different companies to contract this service. Whether
@@ -203,7 +203,7 @@
                 can better work for you.&nbsp; Reach out , get in touch and one
                 of our team will assist you to find the best cost effective and
                 safer solution to your high rise cleaning needs
-              </p> -->
+              </p> 
             </div>
           </div>
           <div class="col-lg-6">
@@ -283,7 +283,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- SAFETY SEC -->
     <section class="safetyStand">
       <div class="container">
