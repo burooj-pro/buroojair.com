@@ -22,41 +22,28 @@
           <div class="text-box">
             <p>
               <strong
-                >Up until now high rise window and facade cleaning has only been
-                done by professional cleaning companies who specialice in
-                abseiling, skylifts, and for smaller buildings have expensive
-                scaffolding implemented or the use of boom and/or other lifting
-                equipment. It has been said that high rise window cleaning is
-                one of the six most dangerous professions. Furthermore due to
-                the expense these tasks are done less frequently leaving windows
-                becoming dirty for longer periods of time.</strong
+
+              
+                >
+                
+                {{ $t("UP_UNTIL_NOW_HIGH_RISE_WINDOW_AND_FACADE_CLEANING") }}</strong
               >
             </p>
             <p>
-              With the innovation of BUROOJ AIR Working Drone and the
-              development of this solution using drones eliminates the need for
-              abseilers with rope access and skylifts making it a safer, more
-              efficient and cost effective solution than the tradition methods
+              {{ $t("WITH_THE_INNOVATION_OF_BUROOJ_AIR_WORKING_DRONE") }}
             </p>
-            <p><b>A MORE EFFICIENT, SAFER AND COST EFFECTIVE SOLUTION</b></p>
+            <p><b>{{ $t("A_MORE_EFFICIENT_SAFER_AND") }}</b></p>
             <p>
-              BUROOJ AIR Working Drone are now being implemented commercially
-              globally&nbsp; for window and facade cleaning and currently are in
-              development to evolve the solutions to painting with drones in the
-              coming months.
+
+              {{ $t("BUROOJ_AIR_WORKING_DRONE_ARE_NOW_BEING") }}
+            
             </p>
             <p>
-              For now we have commercialised the use for&nbsp; window cleaning
-              where&nbsp; it can achieve up to 1500 square meters per hour
-              utilising the BUROOJ AIR Working Drone eco friendly (when mixed
-              with 75% water) solution SelfCleaner. It can also be used with a
-              full eco-friendly solution of pure water of up to 500square meters
-              per hour.
+              {{ $t("FOR_NOW_WE_HAVE_COMMERCIALISED_THE_USE_FOR") }}
             </p>
             <p>
-              BUROOJ AIR Working Drone is in further development to achieve
-              heights of beyond 100m+ and give capacity to massive 600 meters in
-              elevation&nbsp;
+              {{ $t("BUROOJ_AIR_WORKING_DRONE_IS_IN_FURTHER_DEVELOPMENT") }}
+              
             </p>
           </div>
         </div>
@@ -80,23 +67,23 @@
           <div class="col-lg-6">
             <ol>
               <li aria-level="1">
-                If the facade is traditionally dirty the drone applies a
-                solution SelfCleaner by foaming it onto the facade with low
-                pressure. The SelfCleaner agent is a special formulated cleaner
-                that was developed and used by our parent company
-                BUROOJ AIR Group. If the buildings haven’t been cleaned and/or
-                are extremely dirty the process is to clean the facade and
-                windows with the clean-watern method.<br /><br />
+                {{
+                  $t("IF_THE_FACADE_IS_TRADITIONALLY_DIRTY_THE_DRONE")
+                }}<br /><br />
               </li>
               <li aria-level="1">
-                &nbsp;The clean-water method is in short, purified water with
-                reverse osmosis, heated to 70 degrees, and applied with high
-                pressure by the&nbsp; BUROOJ AIR Working Drone. This means the
-                cleaning of windows is eco-friendly being <b><i>cleaned</i></b>
-                <b><i>without chemicals </i></b>and windows stay cleaner over
-                time. It also eliminates the risk of surface wear such as
-                streaks caused by the more traditional , more dangerous manual
-                cleaning methods.
+                {{
+                  $t("THE_CLEAN_WATER_METHOD_IS_IN_SHORT")
+                }}
+                
+                <b><i> {{
+                  $t("CLEANED")
+                }}</i></b>
+                <b><i>{{
+                  $t("WITHOUT_CHEMICALS")
+                }} </i></b>{{
+                  $t("WINDOWS_STAY_CLEANER")
+                }}
               </li>
             </ol>
           </div>
@@ -120,21 +107,26 @@
         <div class="col-lg-6">
           <div class="solarBox">
             <div class="text-box">
-              <h3>Solar Cell panel<br />Cleaning</h3>
+              <h3>
+                {{
+                  $t("SOLAR_CELL_PANEL")
+                }}
+                <br />{{
+                  $t("CLEANING")
+                }}</h3>
             </div>
           </div>
         </div>
         <div class="col-lg-6">
           <div class="caption">
-            <h2>This method Does not harm the Panel surface</h2>
+            <h2>
+              {{$t("THIS_METHOD_DOES_NOT_HARM_THE_PANEL_SURFACE")}}
+           </h2>
             <p>
-              Our method developed for window cleaning is perfect for cleaning
-              solar cell panels and this method will not harm the surface.
+              {{$t("OUR_METHOD_DEVELOPED_FOR_WINDOW_CLEANING_IS_PERFECT")}}
             </p>
             <p>
-              A major advantage of this method is that the surfaces will stay
-              clean longer than from traditional cleaning and there is no risk
-              of streaks.
+              {{$t("A_MAJOR_ADVANTAGE_OF_THIS_METHOD_IS_THAT_THE_SURFACES")}}
             </p>
           </div>
         </div>
@@ -155,35 +147,29 @@
             <div class="text-box">
               <p>
                 <strong
-                  >BUROOJ AIR Working Drone evolved out of the BUROOJ Group. BUROOJ AIR Group
-                  have experience with facade and window
-                  cleaning and are experts in their field.</strong
+                  > {{ $t("BUROOJ_AIR_WORKING_DRONE_EVOLVED") }}</strong
                 >
               </p>
               <p>
-                BUROOJ AIR Working Drone originated from an idea to find an
-                innovative and efficient way to clean facades and windows. A lot of mods were needed to make the drone
-                work properly for cleaning, also commercial. Fast forward the
-                result is a unique drone with tailor-made and uniquely adapted
-                mounting equipment with specially designed cleaning equipment. A
-                patent pending safety solution to prevent the drone from falling
-                down during operation is also developed.
+
+                {{ $t("BUROOJ_AIR_WORKING_DRONE_ORIGINATED") }}
+              
+                
               </p>
               <p>
-                The drone has been extensively tested and commercialized for
-                window and facade cleaning, and has been used operationally
-                since 2020 by the BUROOJ AIR Group in Norway.
+                {{ $t("THE_DRONE_HAS_BEEN_EXTENSIVELY_TESTED") }}
+                
+               
               </p>
               <p>
-                In 2022, BUROOJ AIR Working Drone was ready and the
-                commercialising process started. Today BUROOJ AIR Working Drone
-                is established almost all over the world, and the partner
-                network is growing rapidly.
+                {{ $t("BUROOJ_AIR_WORKING_DRONE_WAS_READY_AND_THE_COMMERCIALISING") }}
+              
+               
               </p>
               <p>
-                The future holds many opportunities for development for BUROOJ
-                AIR Working Drone. We think our drones soon will be able to do
-                small repairs, special inspections and even surface treatment.
+                {{ $t("THE_FUTURE_HOLDS_MANY_OPPORTUNITIES_FOR_DEVELOPMENT") }}
+                
+              
               </p>
             </div>
           </div>
@@ -201,12 +187,10 @@
               </h3>
 
               <p>
-                If you’re a
-                <b>building owner, developer, building management company,</b>
-                <b>cleaning company</b> with high rise window cleaning contracts
-                or needs&nbsp; and you’re looking at lowering the costs and
-                creating a safer and more secure way of having this service done
-                then BUROOJ AIR Working Drone has a solution for you.&nbsp;
+               
+                {{ $t("IF_YOU_ARE") }}
+                <b> {{ $t("BUILDING_OWNER_DEVELOPER") }}</b>
+                <b>{{ $t("CLEANING_COMPANY") }}</b> {{ $t("WITH_HIGH_RISE_WINDOW_CLEANING") }}
               </p>
               <!-- <p>
                 <b>BUROOJ AIR Working Drone</b> has many ways that we can
@@ -255,7 +239,7 @@
                 <div class="col-md-12">
                   <div class="form-group">
                     <select class="form-control">
-                      <option>WHICH COUNTRY?</option>
+                      <option>{{ $t("WHICH_COUNTRY") }}</option>
                     </select>
                   </div>
                 </div>
@@ -309,12 +293,8 @@
               <h3>{{ $t("OUR_SAFETY_STATEMENT") }}</h3>
               <p>
                 <strong
-                  >For the management of BUROOJ AIR Working Drone safety is of
-                  the utmost importance. The primary goal foremost is to ensure
-                  that all staff, partners, and franchises comply with BUROOJ
-                  AIR Working Drones safety policy at all times to assure safe
-                  operations all the time mitigating risks to bringing the brand
-                  into disrepute or litigation.</strong
+                  >
+                  {{ $t("FOR_THE_MANAGEMENT_OF_BUROOJ_AIR_WORKING") }}</strong
                 >
               </p>
             </div>
@@ -322,34 +302,26 @@
           <div class="col-lg-5">
             <div class="text-box">
               <p>
-                BUROOJ AIR Working Drone implements the necessary safety
-                procedures / precautions according to the safety standards that
-                have been implemented and outlined&nbsp; in the company’s&nbsp;
-                global safety policy that includes but not limited to the
-                following;
+                {{ $t("BUROOJ_AIR_WORKING_DRONE_IMPLEMENTS") }}
               </p>
               <ul>
                 <li aria-level="1">
-                  To minimise our impact on the environment
+                  {{ $t("TO_MINIMISE_OUR_IMPACT") }}
                 </li>
                 <li aria-level="1">
-                  Not to harm or disturb uninvolved persons
+                  {{ $t("NOT_TO_HARM_OR_DISTURB") }}
                 </li>
                 <li aria-level="1">
-                  Not to inflict damage to property, buildings, vehicles and
-                  other assets
+                 
+                  {{ $t("NOT_TO_INFLICT_DAMAGE_TO_PROPERTY") }}
+                  
                 </li>
                 <li aria-level="1">
-                  To always operate according to the european GDPR and other
-                  global privacy policies to treat information with respect and
-                  care and to conform to such policies.<br /><br />
+                  {{ $t("TO_ALWAYS_OPERATE_ACCORDING_EUROPEAN_GDPR") }}<br /><br />
                 </li>
               </ul>
               <p>
-                BUROOJ AIR Working Drone will operate according to the well
-                established culture in aviation. By learning, developing and
-                adapting our service we will strive for positive growth for the
-                brand and the industry.
+                {{ $t("BUROOJ_AIR_WORKING_DRONE_WILL_OPERATE") }}
               </p>
             </div>
           </div>

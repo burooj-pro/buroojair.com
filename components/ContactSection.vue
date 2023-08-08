@@ -1,5 +1,5 @@
 <template>
-  <section class="contact-sec">
+  <section class="contact-sec" id="contact-sec">
     <div class="container">
       <div class="d-flex flex-column flex-md-row">
         <div>
