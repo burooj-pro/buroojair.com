@@ -23,9 +23,9 @@
             <p>
               <strong
 
-              
+
                 >
-                
+
                 {{ $t("UP_UNTIL_NOW_HIGH_RISE_WINDOW_AND_FACADE_CLEANING") }}</strong
               >
             </p>
@@ -36,14 +36,14 @@
             <p>
 
               {{ $t("BUROOJ_AIR_WORKING_DRONE_ARE_NOW_BEING") }}
-            
+
             </p>
             <p>
               {{ $t("FOR_NOW_WE_HAVE_COMMERCIALISED_THE_USE_FOR") }}
             </p>
             <p>
               {{ $t("BUROOJ_AIR_WORKING_DRONE_IS_IN_FURTHER_DEVELOPMENT") }}
-              
+
             </p>
           </div>
         </div>
@@ -75,7 +75,7 @@
                 {{
                   $t("THE_CLEAN_WATER_METHOD_IS_IN_SHORT")
                 }}
-                
+
                 <b><i> {{
                   $t("CLEANED")
                 }}</i></b>
@@ -153,23 +153,23 @@
               <p>
 
                 {{ $t("BUROOJ_AIR_WORKING_DRONE_ORIGINATED") }}
-              
-                
+
+
               </p>
               <p>
                 {{ $t("THE_DRONE_HAS_BEEN_EXTENSIVELY_TESTED") }}
-                
-               
+
+
               </p>
               <p>
                 {{ $t("BUROOJ_AIR_WORKING_DRONE_WAS_READY_AND_THE_COMMERCIALISING") }}
-              
-               
+
+
               </p>
               <p>
                 {{ $t("THE_FUTURE_HOLDS_MANY_OPPORTUNITIES_FOR_DEVELOPMENT") }}
-                
-              
+
+
               </p>
             </div>
           </div>
@@ -187,7 +187,7 @@
               </h3>
 
               <p>
-               
+
                 {{ $t("IF_YOU_ARE") }}
                 <b> {{ $t("BUILDING_OWNER_DEVELOPER") }}</b>
                 <b>{{ $t("CLEANING_COMPANY") }}</b> {{ $t("WITH_HIGH_RISE_WINDOW_CLEANING") }}
@@ -203,7 +203,7 @@
                 can better work for you.&nbsp; Reach out , get in touch and one
                 of our team will assist you to find the best cost effective and
                 safer solution to your high rise cleaning needs
-              </p> 
+              </p>
             </div>
           </div>
           <div class="col-lg-6">
@@ -312,9 +312,9 @@
                   {{ $t("NOT_TO_HARM_OR_DISTURB") }}
                 </li>
                 <li aria-level="1">
-                 
+
                   {{ $t("NOT_TO_INFLICT_DAMAGE_TO_PROPERTY") }}
-                  
+
                 </li>
                 <li aria-level="1">
                   {{ $t("TO_ALWAYS_OPERATE_ACCORDING_EUROPEAN_GDPR") }}<br /><br />
@@ -378,7 +378,7 @@ p {
   justify-content: center;
   color: $white;
   text-transform: uppercase;
-  @include Red_Hat_Display(800);
+  @include NeoSans(900);
   @include border_radius(4px);
   height: 54px;
   padding: 0 29px;
@@ -408,32 +408,38 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    @include NeoSans(400);
     &:after {
       content: "";
       position: absolute;
       inset: 0;
       background-color: $black;
       opacity: 0.4;
+      @include NeoSans(400);
     }
     .titleText {
       position: relative;
       z-index: 5;
+      @include NeoSans(400);
       h2 {
         font-size: $font62;
         color: $white;
         margin-bottom: 20px;
         text-transform: uppercase;
+        @include NeoSans(900);
       }
       p {
         font-size: $font42;
         text-transform: uppercase;
         color: $white;
         line-height: 52px;
+        @include NeoSans(400);
       }
     }
   }
   .text-box {
     padding: 100px;
+    @include NeoSans(400);
     background: $dark_gray;
     p {
       color: $white;
@@ -445,16 +451,20 @@ p {
 .inquiry {
   background: $whiteSecondary;
   padding: 100px 0;
+  @include NeoSans(400);
   h3 {
     margin-bottom: 20px;
+    @include NeoSans(900);
   }
   p {
     margin-bottom: 20px;
+    @include NeoSans(400);
   }
   .row {
     align-items: center;
   }
   form {
+  @include NeoSans(400);
     max-width: 504px;
     .form-group {
       margin-bottom: 14px;
@@ -462,6 +472,7 @@ p {
     .form-control {
       background-color: $white;
       border-width: 0px 0px 0px 0px;
+      @include NeoSans(400);
       @include border_radius(8px);
       height: 59px;
     }
@@ -478,10 +489,14 @@ p {
   padding: 240px 0 100px 0;
   ol {
     li {
+      @include NeoSans(400);
       margin-bottom: 20px;
     }
   }
   .text-box {
+
+  @include NeoSans(400);
+
     h3 {
       color: $white;
     }
@@ -494,12 +509,15 @@ p {
   }
   p {
     color: $white;
+    @include NeoSans(400);
     margin-bottom: 0.9rem;
   }
 }
 
 .solarPanel {
   position: relative;
+  @include NeoSans(400);
+
   .shape {
     position: absolute;
     top: 0;
@@ -508,6 +526,7 @@ p {
     fill: $primary;
     z-index: 555;
     width: 100%;
+    @include NeoSans(400);
     height: 60px;
   }
   .solarBox {
@@ -519,6 +538,7 @@ p {
     position: relative;
     display: flex;
     align-items: center;
+    @include NeoSans(400);
     justify-content: flex-end;
     z-index: 1;
     &:after {
@@ -531,6 +551,7 @@ p {
     .text-box {
       position: relative;
       z-index: 5;
+      @include NeoSans(400);
       h3 {
         color: $white;
         text-align: right;
@@ -549,6 +570,7 @@ p {
     flex-direction: column;
     position: relative;
     z-index: 5;
+    @include NeoSans(400);
     h2 {
       margin-bottom: 20px;
     }
@@ -562,6 +584,7 @@ p {
 .standardSolar {
   background: $primary;
   padding: 240px 0px 100px 0px;
+  @include NeoSans(400);
   .text-box {
     p,
     h3 {
@@ -574,6 +597,7 @@ p {
 .safetyStand {
   padding: 240px 0px 100px 0px;
   background: $blue;
+  @include NeoSans(400);
   .text-box {
     ul {
       padding-left: 20px;
@@ -587,6 +611,7 @@ p {
     p {
       color: $white;
       margin-bottom: 20px;
+      @include NeoSans(400);
       &:last-child {
         margin: 0;
       }
