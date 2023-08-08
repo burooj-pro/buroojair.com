@@ -18,42 +18,23 @@
           <div class="text-box">
             <p>
               <strong>
-                Burooj Air is a drone company based in the Kingdom of Saudi
-                Arabia that specializes in developing and deploying drones for a
-                variety of industrial and commercial applications. The company’s
-                drones can perform a wide range of tasks, including:
+                {{ $t("BUROOJ_AIR_IS_A_DRONE_COMPANY_BASED_IN_THE_KINGDOM_OF_SAUDI_ARABIA") }}
               </strong>
             </p>
             <p>
-              Cleaning Buildings: Burooj Air’s drones can be used to clean the
-              exterior of buildings, removing dirt, and dust. This can save
-              businesses and organizations a significant amount of time and
-              money, as it eliminates the need for traditional methods of
-              cleaning, such as scaffolding and manual labor.
+              {{ $t("CLEANING_BUILDINGS_BUROOJ_AIR_DRONES_CAN_BE_USED") }}
             </p>
 
             <p>
-              Weightlifting: Burooj Air’s drones can be used to lift and
-              transport heavy objects up to 50 kg, such as construction
-              materials or medical supplies. This can be a valuable tool for
-              businesses and organizations that need to move heavy objects
-              quickly and efficiently.
+              {{ $t("WEIGHTLIFTING_BUROOJ_AIR_DRONES_CAN_BE_USED") }}
             </p>
 
             <p>
-              Heat Measurement & Fire Fighting: Drones from Burooj Air can
-              measure heat signatures, identify potential fire hazards, or
-              monitor industrial equipment temperatures. As a result, accidents
-              can be prevented. Furthermore, it can be equipped with fire
-              suppression systems to reach hard-to-reach places. Firefighters
-              can use it to fight fires more effectively & safely.
+              {{ $t("HEAT_MEASUREMENT_AND_FIRE_FIGHTING") }}
             </p>
 
             <p>
-              Camera Filming: Burooj Air’s drones can be equipped with cameras,
-              which can be used to film events or to capture aerial footage.
-              This can be a valuable tool for businesses and organizations that
-              need to record footage from a bird’s-eye view.
+              {{ $t("CAMERA_FILMING") }}
             </p>
           </div>
         </div>
@@ -74,17 +55,15 @@
           <div class="col-lg-6">
             <div class="text-box">
               <p>
-                Our main intention is to do good and improve people’s everyday
-                working life.
+                {{ $t("OUR_MAIN_INTENTION_IS_TO_DO_GOOD") }}
               </p>
               <p>
-                We aim to contribute to a safer work day for people who work at
-                great heights with lifts, scaffolding and for facade climbers.
+                {{ $t("WE_AIM_TO_CONTRIBUTE_TO_A_SAFER_WORK") }}
+                
               </p>
               <p>
-                These are physically demanding jobs that cause stress injuries
-                and involve danger every day. BUROOJ AIR Working Drone works
-                specifically to help this group.
+                {{ $t("THESE_ARE_PHYSICALLY_DEMANDING_JOBS") }}
+                
               </p>
             </div>
           </div>
@@ -118,37 +97,25 @@
             <div class="text-box">
               <p>
                 <strong
-                  >BUROOJ AIR Working Drone evolved out of the BUROOJ AIR Group
-                  which was founded in 1992 by Kennet Nilsen. BUROOJ AIR Group
-                  have more than 30 years experience with facade and window
-                  cleaning and are experts in their field.</strong
+                  >
+                  {{ $t("BUROOJ_AIR_WORKING_DRONE_EVOLVED_OUT") }} </strong
                 >
               </p>
               <p>
-                BUROOJ AIR Working Drone originated from an idea to find an
-                innovative and efficient way to clean facades and windows. A lot
-                of mods were needed to make the drone work properly for
-                cleaning, also commercial. Fast forward the result is a unique
-                drone with tailor-made and uniquely adapted mounting equipment
-                with specially designed cleaning equipment. A patent pending
-                safety solution to prevent the drone from falling down during
-                operation is also developed.
+                {{ $t("BUROOJ_AIR_WORKING_DRONE_ORIGINATED") }}
+               
               </p>
               <p>
-                The drone has been extensively tested and commercialized for
-                window and facade cleaning, and has been used operationally
-                since 2020 by the BUROOJ AIR Group in Norway.
+                {{ $t("THE_DRONE_HAS_BEEN_EXTENSIVELY_TESTED") }}
+               
               </p>
               <p>
-                In 2022, BUROOJ AIR Working Drone was ready and the
-                commercialising process started. Today BUROOJ AIR Working Drone
-                is established almost all over the world, and the partner
-                network is growing rapidly.
+                {{ $t("BUROOJ_AIR_WORKING_DRONE_WAS_READY_AND_THE_COMMERCIALISING") }}
+               
               </p>
               <p>
-                The future holds many opportunities for development for BUROOJ
-                AIR Working Drone. We think our drones soon will be able to do
-                small repairs, special inspections and even surface treatment.
+                {{ $t("THE_FUTURE_HOLDS_MANY_OPPORTUNITIES_FOR_DEVELOPMENT") }}
+              
               </p>
             </div>
           </div>
@@ -184,36 +151,28 @@
             <div class="text-box">
               <ul>
                 <li>
-                  <b>Spray painting</b><br />With continued development,
-                  extended testing and new partnerships with paint
-                  manufacturers, we are moving closer to the final testing
-                  fase.<br /><br />
+                  <b>{{ $t("SPRAY_PAINTING") }}</b><br />
+                  {{ $t("WITH_CONTINUED_DEVELOPMENT") }}
+                  <br /><br />
                 </li>
                 <li>
-                  <b>Higher altitudes<br /></b>We have solved the operating
-                  height restriction with our patent pending roof safety system.
-                  There are no longer limitations on operation height, and we
-                  will continue the testing to be able to operate safely in
-                  heights and altitudes up to 600 meters and above.<br /><br />
+                  <b>  {{ $t("HIGHER_ALTITUDES") }}<br /></b>
+                  
+                  {{ $t("WE_HAVE_SOLVED_THE_OPERATING_HEIGHT_RESTRICTION") }}
+                  <br /><br />
                 </li>
               </ul>
               <ul>
                 <li>
-                  <b>Goggles</b><br />As a result of operating in higher
-                  altitudes, the use of special flight goggles is being
-                  considered and tested.<br /><br />
+                  <b>{{ $t("GOGGLES") }}</b><br />
+                  
+                  {{ $t("AS_A_RESULT_OF_OPERATING_IN_HIGHER_ALTITUDES") }}
+                  <br /><br />
                 </li>
                 <li>
-                  <b>Remote Control rooms</b><br />Looking further, we are&nbsp;
-                  planning to create special control rooms where drone pilots
-                  can operate drones all over the world, via the internet. Drone
-                  pilots will be able to provide support, provide remote tasks,
-                  work safer and be able to provide specialist services anywhere
-                  in the world. <br /><b
+                  <b> {{ $t("REMOTE_CONTROL_ROOMS") }}</b><br />{{ $t("LOOKING_FURTHER_WE_ARE_PLANNING") }} <br /><b
                     ><i><br /></i></b
-                  >Remote control rooms would be a great advantage in areas with
-                  a lot of noise, high/low temperatures, and other problem
-                  areas.
+                  >{{ $t("REMOTE_CONTROL_ROOMS_WOULD_BE_A_GREAT_ADVANTAGE") }}
                 </li>
               </ul>
             </div>

@@ -27,7 +27,7 @@
                     <p>
                       {{ $t("CLEANING_BUILDINGS_DESC") }}
                     </p>
-                    <NuxtLink to="/window-cleaning" class="btn btn-secondary">
+                    <!-- <NuxtLink to="/window-cleaning" class="btn btn-secondary">
                       <span>
                         <svg
                           width="800px"
@@ -45,7 +45,7 @@
                         </svg>
                       </span>
                       {{ $t("READ_MORE") }}
-                    </NuxtLink>
+                    </NuxtLink> -->
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -56,7 +56,7 @@
                     <p>
                       {{ $t("HEAVY_LIFTING_DESC") }}
                     </p>
-                    <NuxtLink to="/facade-cleaning" class="btn btn-secondary">
+                    <!-- <NuxtLink to="/facade-cleaning" class="btn btn-secondary">
                       <span>
                         <svg
                           width="800px"
@@ -74,7 +74,7 @@
                         </svg>
                       </span>
                       {{ $t("READ_MORE") }}
-                    </NuxtLink>
+                    </NuxtLink> -->
                   </div>
                 </div>
               </div>
@@ -100,9 +100,9 @@
                   <span> {{ $t("IS_REQUIRED") }}</span>
                 </h4>
               </div>
-              <a href="#" class="btn btn-secondary">
+              <!-- <a href="#" class="btn btn-secondary">
                 {{ $t("APPLY_NOW") }}
-              </a>
+              </a> -->
             </div>
           </div>
         </div>
@@ -155,9 +155,9 @@
                   )
                 }}
               </p>
-              <NuxtLink to="/facade-cleaning" class="btn btn-white">
+              <!-- <NuxtLink to="/facade-cleaning" class="btn btn-white">
                 <span
-                  ><!--?xml version="1.0" encoding="utf-8"?--><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                  >
                   <svg
                     width="800px"
                     height="800px"
@@ -174,7 +174,7 @@
                   </svg>
                 </span>
                 {{ $t("READ_MORE") }}
-              </NuxtLink>
+              </NuxtLink> -->
             </div>
           </div>
         </div>
@@ -196,25 +196,23 @@
                 class="img-fluid"
               />
               <h4>
-                SOLAR CELL PANEL <br />
-                CLEANING
+                {{ $t("SOLAR_CELL_PANEL") }}
+                 <br />
+                 {{ $t("CLEANING") }}
               </h4>
             </div>
           </div>
           <div class="col-md-6">
             <div class="text-box">
               <h4>
-                THIS PROCEDURE KEEPS THE PANEL SURFACE WITH NO HARM OR DAMAGE.
+                {{ $t("THIS_PROCEDURE_KEEPS") }}
               </h4>
               <p>
-                Our window cleaning method is perfect for cleaning solar panels,
-                And it is completely safe for the panel's surface.
+                {{ $t("OUR_WINDOW_CLEANING_METHOD") }}
               </p>
-              <p class="m-0">
-                Additionally, this technique offers a notable advantage of
-                preventing stains and keeping the surfaces cleaner for a longer
-                period compared to traditional cleaning methods.
-              </p>
+              <!-- <p class="m-0">
+                {{ $t("ADDITIONALLY_THIS_TECNHIQUE") }}
+              </p> -->
             </div>
           </div>
         </div>
@@ -320,7 +318,7 @@
                   )
                 }}
               </p>
-              <a href="#" class="btn btn-secondary">
+              <!-- <a href="#" class="btn btn-secondary">
                 <span>
                   <svg
                     width="800px"
@@ -338,7 +336,7 @@
                   </svg>
                 </span>
                 {{ $t("READ_MORE") }}
-              </a>
+              </a> -->
             </div>
           </div>
           <div class="col-md-6">
@@ -411,7 +409,7 @@
               <p>
                 {{ $t("AT_OUR_COMPANY_WE_PRIORITIZE") }}
               </p>
-              <a href="#" class="btn btn-secondary">
+              <!-- <a href="#" class="btn btn-secondary">
                 <span>
                   <svg
                     width="800px"
@@ -429,7 +427,7 @@
                   </svg>
                 </span>
                 {{ $t("READ_MORE") }}
-              </a>
+              </a> -->
             </div>
           </div>
         </div>
@@ -640,48 +638,39 @@
               <ul :dir="dir">
                 <li>
                   <p>
-                    <strong>SPRAYING PAINT </strong> With continued development,
-                    extended testing and new partnerships with paint
-                    manufacturers, we are moving closer to the final testing
-                    fase.
+                    <strong>{{ $t("SPRAY_PAINTING") }} </strong> 
+                    
+                    {{ $t("WITH_CONTINUED_DEVELOPMENT") }}
+                   
+                    
                   </p>
                 </li>
                 <li>
                   <p>
                     <strong
-                      >REACH HIGHER ALTITUDES AND MORE NON-REACHABLE AREAS
+                      >{{ $t("HIGHER_ALTITUDES") }}
                     </strong>
-                    We have solved the operating height restriction with our
-                    patent pending roof safety system. There are no longer
-                    limitations on operation height, and we will continue the
-                    testing to be able to operate safely in heights and
-                    altitudes up to 600 meters and above.
+                    {{ $t("WE_HAVE_SOLVED_THE_OPERATING_HEIGHT") }}
                   </p>
                 </li>
                 <li>
                   <p>
-                    <strong>USE LATEST DRONE CONTROL TECHNOLOGIES </strong> As a
-                    result of operating in higher altitudes, the use of special
-                    flight goggles is being considered and tested.
+                    <strong>{{ $t("USE_LATEST_DRONE_CONTROL_TECHNOLOGIES") }} </strong> As a
+                    {{ $t("RESULT_OPERATING_IN_HIGHER_ALTITUDES") }}
+                   
                   </p>
                 </li>
                 <li>
                   <p class="mb-4">
                     <strong
-                      >CONTROLLING THE DRONE ANYWHERE AT ANYTIME WITH THE MOST
-                      EFFECTIVE WAYS
+                      > {{ $t("CONTROLLING_THE_DRONE_ANYWHERE") }}
+                      > 
                     </strong>
-                    Looking beyond 2023, BUROOJ AIR Working Drones is planning
-                    to create special control rooms where drone pilots can
-                    operate drones all over the world via the internet. Drone
-                    Pilots will be able to provide support, provide remote
-                    tasks, work safer and be able to provide specialist service
-                    to anywhere there is service.
+                    {{ $t("LOOKING_BEYOND_2023") }}
+                 
                   </p>
                   <p>
-                    Remote control rooms would be a great advantage in areas
-                    with a lot of noise, high/low temperatures, and other
-                    ‘problem’ areas.
+                    {{ $t("REMOTE_CONTROL_ROOMS_WOULD_BE") }}
                   </p>
                 </li>
               </ul>
@@ -762,10 +751,11 @@ p {
 
 .btn-white {
   color: #1f1a1c;
+  
   background-color: white;
   padding: 0;
   border: 1px solid $orange;
-  display: inline-flex;
+  display: flex !important;
   align-items: center;
   justify-content: center;
   // color: $white;
@@ -784,7 +774,9 @@ p {
     }
   }
 }
-
+.btn-white:hover {
+  background-color: white !important;
+}
 .btn-blue {
   background-color: $secondary !important;
   color: $white !important;
@@ -1089,7 +1081,7 @@ p {
     }
   }
   .about-us-right {
-    background: url(~assets/images/about-img.jpg) no-repeat;
+    background: url(~assets/images/ktv_dronepilot.jpg) no-repeat;
     background-position: center center;
     background-size: cover;
     position: relative;

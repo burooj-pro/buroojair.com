@@ -15,7 +15,7 @@
       <div class="container">
         <div class="titleText">
           <h3>{{ $t("BUROOJ_AIR_HEADQUARTERS") }}</h3>
-          <p>{{ $t("KHOBAR_SAUDI_ARABIA") }}</p>
+          <p style="color: black;">{{ $t("KHOBAR_SAUDI_ARABIA") }}</p>
         </div>
         <div class="row">
           <div class="col-md-4 col-sm-6">
