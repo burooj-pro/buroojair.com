@@ -156,8 +156,7 @@
                 }}
               </p>
               <NuxtLink to="/facade-cleaning" class="btn btn-white">
-                <span
-                  >
+                <span>
                   <svg
                     width="800px"
                     height="800px"
@@ -197,8 +196,8 @@
               />
               <h4>
                 {{ $t("SOLAR_CELL_PANEL") }}
-                 <br />
-                 {{ $t("CLEANING") }}
+                <br />
+                {{ $t("CLEANING") }}
               </h4>
             </div>
           </div>
@@ -638,36 +637,32 @@
               <ul :dir="dir">
                 <li>
                   <p>
-                    <strong>{{ $t("SPRAY_PAINTING") }} </strong> 
-                    
+                    <strong>{{ $t("SPRAY_PAINTING") }} </strong>
+
                     {{ $t("WITH_CONTINUED_DEVELOPMENT") }}
-                   
-                    
                   </p>
                 </li>
                 <li>
                   <p>
-                    <strong
-                      >{{ $t("HIGHER_ALTITUDES") }}
-                    </strong>
+                    <strong>{{ $t("HIGHER_ALTITUDES") }} </strong>
                     {{ $t("WE_HAVE_SOLVED_THE_OPERATING_HEIGHT") }}
                   </p>
                 </li>
                 <li>
                   <p>
-                    <strong>{{ $t("USE_LATEST_DRONE_CONTROL_TECHNOLOGIES") }} </strong> 
+                    <strong
+                      >{{ $t("USE_LATEST_DRONE_CONTROL_TECHNOLOGIES") }}
+                    </strong>
                     {{ $t("RESULT_OPERATING_IN_HIGHER_ALTITUDES") }}
-                   
                   </p>
                 </li>
                 <li>
                   <p class="mb-4">
-                    <strong
-                      > {{ $t("CONTROLLING_THE_DRONE_ANYWHERE") }}
-                      > 
+                    <strong>
+                      {{ $t("CONTROLLING_THE_DRONE_ANYWHERE") }}
+                      >
                     </strong>
                     {{ $t("LOOKING_BEYOND_2023") }}
-                 
                   </p>
                   <p>
                     {{ $t("REMOTE_CONTROL_ROOMS_WOULD_BE") }}
@@ -751,7 +746,7 @@ p {
 
 .btn-white {
   color: #1f1a1c;
-  
+
   background-color: white;
   padding: 0;
   border: 1px solid $orange;
@@ -856,12 +851,12 @@ p {
       margin: 0 20px;
       h4 {
         color: $white;
-        @include Red_Hat_Display(700);
+        @include NeoSans(600);
         font-size: $font40;
         text-transform: uppercase;
         margin-left: 16px;
         span {
-          @include Red_Hat_Display(400);
+          @include NeoSans(400);
         }
       }
     }
@@ -910,7 +905,7 @@ p {
       object-fit: cover;
     }
     h4 {
-      @include Red_Hat_Display(700);
+      @include NeoSans(700);
       font-size: $font62;
       text-align: right;
       text-transform: uppercase;
@@ -1015,7 +1010,7 @@ p {
     z-index: 10;
     p {
       color: $black;
-      @include Red_Hat_Display(500);
+      @include NeoSans(400);
       font-size: $font20;
       margin: 0 0 36px 0;
       line-height: 24px;
@@ -1043,7 +1038,7 @@ p {
       color: $white;
       font-size: $font20;
       line-height: 24px;
-      @include Red_Hat_Display(700);
+      @include NeoSans(600);
       margin: 0 0 20px 0;
     }
     p {
@@ -1109,7 +1104,7 @@ p {
       }
       h4 {
         color: $white;
-        @include Red_Hat_Display(700);
+        @include NeoSans(600);
         font-size: $font42;
         text-transform: uppercase;
         line-height: 52px;
@@ -1150,7 +1145,7 @@ p {
     }
     p {
       color: $white;
-      @include Red_Hat_Display(800);
+      @include NeoSans(900);
       font-size: $font41;
       line-height: 40px;
     }
@@ -1203,7 +1198,7 @@ p {
     padding: 8px 0 0 0;
     h4 {
       color: $eclipse;
-      @include Red_Hat_Display(700);
+      @include NeoSans(600);
       font-size: $font16;
       margin-bottom: 14px;
       line-height: 24px;
@@ -1245,7 +1240,7 @@ p {
       padding: 14px 0 23px 23px;
       li {
         color: $white;
-        @include Red_Hat_Display(600);
+        @include NeoSans(600);
         font-size: $font16;
         margin-bottom: 0px;
         line-height: 24px;

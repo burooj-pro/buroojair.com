@@ -22,10 +22,15 @@
       class="elementor-background-video-embed d-block d-md-none"
       style="width: 1903px; height: 1072.11px"
     ></iframe> -->
-     <video autoplay muted loop playsinline  class="elementor-background-video-embed d-none d-md-block"
-      style="width: 1903px; height: 1072.11px">
-      <source :src="videoSrc" type="video/mp4">
-
+    <video
+      autoplay
+      muted
+      loop
+      playsinline
+      class="elementor-background-video-embed d-none d-md-block"
+      style="width: 1903px; height: 1072.11px"
+    >
+      <source :src="videoSrc" type="video/mp4" />
     </video>
     <div class="banner-inner">
       <div class="container-fluid">
@@ -114,7 +119,7 @@ export default {
           font-size: $font28;
           text-transform: uppercase;
           line-height: 32px;
-          @include Al_Qabas(bold);
+          @include NeoSans(900);
           margin: 0 0 24px 0;
         }
         p {
@@ -161,7 +166,7 @@ export default {
             width: 100%;
             color: #fff;
             text-transform: uppercase;
-            @include Al_Qabas(bold);
+            @include NeoSans(900);
             letter-spacing: 0.5px;
             background-color: $orange;
           }
