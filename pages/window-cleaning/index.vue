@@ -15,8 +15,8 @@
               <h3>{{ $t("SERVICES") }}</h3>
               <h4>{{ $t("HIGH_RISE_WINDOW_AND_FACADE_CLEANING") }}</h4>
               <div class="video-holder">
-                <img src="~assets/images/ktv_5414.jpg" alt="#" class="w-100" />
-                <i class="iconPlay">
+                <img src="~assets/images/BuroojAir_1.jpg" alt="#" class="w-100" />
+                <!-- <i class="iconPlay">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="256"
@@ -28,7 +28,7 @@
                       d="M128 26a102 102 0 1 0 102 102A102.12 102.12 0 0 0 128 26Zm0 192a90 90 0 1 1 90-90a90.1 90.1 0 0 1-90 90Zm35.33-95l-48-32a6 6 0 0 0-9.33 5v64a6 6 0 0 0 9.33 5l48-32a6 6 0 0 0 0-10ZM118 148.79v-41.58L149.18 128Z"
                     />
                   </svg>
-                </i>
+                </i> -->
               </div>
             </div>
           </div>
@@ -38,45 +38,26 @@
 
               <p>
                 <strong
-                  >High rise commercial window cleaning can be very time
-                  consuming. BUROOJ AIR Working Drone has developed a new more
-                  efficient and safer way of providing high rise window cleaning
-                  which is also considered faster hence reducing costs.</strong
+                  >{{ $t("HIGH_RISE_COMMERICAL_WINDOW_CLEANING") }}</strong
                 >
               </p>
               <p>
-                Modern day buildings including apartment blocks, office
-                developments and commercial properties in general have large
-                areas of glazing. Due to the height, design and location of
-                these buildings, it can be time consuming and expensive to keep
-                on top of regular maintenance. Very often these buildings
-                require work to be done at height which is both expensive and
-                brings with it inherent risk.&nbsp;
+                {{ $t("MODERN_DAY_BUILDINGS_INCLUDING") }}
               </p>
               <p>
-                Therefore up until now only professional
-                <b>commercial window cleaners</b> with height accreditation,
-                scaffolding or, for smaller buildings, boom lifts were the only
-                and best option.&nbsp;
+                {{ $t("UP_UNTIL_NOW_ONLY_PRO") }}
+                <b> {{ $t("COMMERCIAL_WINDOW_CLEANERS") }}</b> {{ $t("HEIGHT_ACCREDITATION") }}
               </p>
               <p>
-                BUROOJ AIR Working Drone is the first company in the world to
-                properly commercialise the use of drones to provide an alternate
-                solution for this type of <b>window cleaning</b> service. This
-                makes the process safer, faster and can also provide the service
-                more frequently.
+                {{ $t("BUROOJ_AIR_WORKING_DRONE_IS_THE_FIRST") }} <b>{{ $t("WINDOW_CLEANING") }}</b> {{ $t("SERVICE_PROCESS_SAFER") }}
               </p>
               <p>
-                BUROOJ AIR Working Drone is also considered to be worksafe.
-                Working from dangerous heights can be hazardous and utilising
-                this drone technology eliminates the requirements for workers to
-                physically access these heights and the dangerous environments.
-                This makes the fundamentals of this technology being considered
-                to be much safer when working in what is normally a&nbsp;
-                dangerous environment.
+                
+                {{ $t("BUROOJ_AIR_WORKING_DRONE_IS_ALSO_CONSIDERED_TO_BE_WORKSAFE") }}
+               
               </p>
 
-              <a href="#" class="btn btn-secondary">Enquire Today</a>
+              <!-- <a href="#" class="btn btn-secondary"> {{ $t("ENQUIRE_TODAY") }}</a> -->
             </div>
           </div>
         </div>
@@ -104,6 +85,37 @@
             <div class="text-box">
               <h4>{{ $t("IMPORTANT_KEY_FACTS") }}</h4>
               <p>
+                <strong>1000 {{ $t("SQM_HOUR") }}</strong><br />{{ $t("CAPACITY_FACADE_CLEANING") }}
+              </p>
+              <p>
+                <strong>1500 {{ $t("SQM_HOUR") }}</strong><br />{{ $t("CAPACIY_WINDOW_CLEANING") }}
+              </p>
+              <p>
+                <strong>{{ $t("HEIGHT") }} 100+ {{ $t("METER") }}</strong><br />{{ $t("DRONE_FULLY_OPERATIONAL") }}
+              </p>
+              <p>
+                <strong>{{ $t("FLYTIME") }} 24 {{ $t("HOUR") }}</strong><br />{{ $t("BATTERY_CASE_BATTERIES") }}
+              </p>
+              <p>
+                <strong>7 {{ $t("M_SEC") }}</strong><br />{{ $t("WORKS_IN_MAXIMUM_WINDS") }} 7 {{ $t("M_SEC") }}.
+                {{ $t("UP_TO") }} 15 {{ $t("M_SEC") }} {{ $t("WITHOUT_EQUIPMENT") }}
+              </p>
+              <p>
+                <strong>{{ $t("UP_TO") }} 180 {{ $t("BAR_PRESSURE") }}</strong><br />{{ $t("CAPACITY_WATER_PRESSURE") }}
+              </p>
+              <p>
+                <strong>{{ $t("AIRSENSE_ADS") }}</strong><br />{{ $t("ADVANCED_FLIGHT_COLLISION") }}
+              </p>
+              <p>
+                <strong>{{ $t("SELF_HEATING_BATTERY") }}</strong><br />{{ $t("EFFICIENT_BATTERY_USE") }}
+              </p>
+              <p>
+                <strong>-20°C {{ $t("TO") }} 50°C</strong><br />{{ $t("WORKING_TEMPERATURE_RANGE") }}
+              </p>
+              <p>
+                <strong>{{ $t("IP_45") }}</strong><br />{{ $t("PROTECTED_AGAINST_PRESSURE") }}
+              </p>
+              <!-- <p>
                 <strong>1000 sqm/hour</strong><br />Capacity facade cleaning
               </p>
               <p>
@@ -139,7 +151,7 @@
               <p>
                 <strong>IP 45</strong><br />Protected against low pressure water
                 jets
-              </p>
+              </p> -->
             </div>
           </div>
         </div>
@@ -156,24 +168,19 @@
               </h3>
 
               <p>
-                If you’re a
-                <b>building owner, developer, building management company,</b>
-                <b>cleaning company</b> with high rise window cleaning contracts
-                or needs&nbsp; and you’re looking at lowering the costs and
-                creating a safer and more secure way of having this service done
-                then BUROOJ AIR Working Drone has a solution for you.&nbsp;
+                {{ $t("IF_YOU_ARE") }}
+               
+                <b>{{ $t("BUILDING_OWNER_DEVELOPER") }}</b>
+                <b>{{ $t("CLEANING_COMPANY") }}</b> 
+                {{ $t("WITH_HIGH_RISE_WINDOW_CLEANING") }}
+                
+                
               </p>
               <p>
-                <b>BUROOJ AIR Working Drone</b> has many ways that we can
-                provide this service directly and indirectly and we work with
-                many different companies to contract this service. Whether
-                you’re a direct client&nbsp; looking for a once off service, a
-                building company looking for longer term fixed term contracts, a
-                developer and building owner looking at reducing costs or are
-                just curious and want to explore this technology to see how it
-                can better work for you.&nbsp; Reach out , get in touch and one
-                of our team will assist you to find the best cost effective and
-                safer solution to your high rise cleaning needs
+                <b>{{ $t("BUROOJ_AIR_WORKING_DRONE") }}</b> 
+
+                {{ $t("HAS_MANY_WAYS_THAT_CAN_PROVIDE") }}
+               
               </p>
             </div>
           </div>
@@ -210,7 +217,7 @@
                 <div class="col-md-12">
                   <div class="form-group">
                     <select class="form-control">
-                      <option>WHICH COUNTRY?</option>
+                      <option>{{ $t("WHICH_COUNTRY") }}</option>
                     </select>
                   </div>
                 </div>
@@ -368,7 +375,7 @@ p {
 
 .advantages {
   padding: 240px 0 110px;
-  background-image: url(~assets/images/ktv_5505.jpg);
+  background-image: url(~assets/images/BuroojAir_3.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

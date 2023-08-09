@@ -12,11 +12,11 @@
         <div class="row">
           <div class="col-lg-7">
             <div class="text-box">
-              <h3>SERVICES</h3>
-              <h4>High rise facade cleaning</h4>
+              <h3>{{ $t("SERVICES") }}</h3>
+              <h4>{{ $t("HIGH_RISE_FACADE_CLEANING") }}</h4>
               <div class="video-holder">
-                <img src="~assets/images/ktv_5414.jpg" alt="#" class="w-100" />
-                <i class="iconPlay">
+                <img src="~assets/images/BuroojAir_1.jpg" alt="#" class="w-100" />
+                <!-- <i class="iconPlay">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="256"
@@ -28,72 +28,45 @@
                       d="M128 26a102 102 0 1 0 102 102A102.12 102.12 0 0 0 128 26Zm0 192a90 90 0 1 1 90-90a90.1 90.1 0 0 1-90 90Zm35.33-95l-48-32a6 6 0 0 0-9.33 5v64a6 6 0 0 0 9.33 5l48-32a6 6 0 0 0 0-10ZM118 148.79v-41.58L149.18 128Z"
                     />
                   </svg>
-                </i>
+                </i> -->
               </div>
-              <h5>SelfCleaner Method</h5>
+              <h5>{{ $t("SELFCLEANER_METHOD") }}</h5>
               <p>
                 <strong
-                  >The SelfCleaner method was developed in 2015, and are used on
-                  all facades where humidity, pollution, algae, micro-organisms,
-                  greenery are issues.</strong
+                  >{{ $t("THE_SELFCLEANER_METHOD_WAS_DEVELOPED") }}</strong
                 >
               </p>
               <p>
-                The method enables facade cleaning without the use of
-                high-pressure flushing. The special agent SelfCleaner is foamed
-                on the facades with low pressure, and then it’s the weather and
-                wind that cleans the surfaces over a period of 3-4 weeks.
+                {{ $t("THE_METHOD_ENABLES_FACADE_CLEANING") }}
               </p>
               <p>
-                Already after 1-2 weeks you will see clearly visible results,
-                but SelfCleaner continues to work for about 3 months. With this
-                method, high pressure is not used, and this avoids unnecessary
-                wear and tear and does not damage the facades.
+                {{ $t("ALREADY_AFTER_1_2_WEEKS_YOU_WILL") }}
               </p>
             </div>
           </div>
           <div class="col-lg-5">
             <div class="text-box">
-              <h5>Facade cleaning</h5>
+              <h5>{{ $t("FACADE_CLEANING") }}</h5>
               <p>
                 <strong
-                  >Many multi-storey buildings create challenges and become
-                  demanding for many professional cleaners which must adhere to
-                  strict safety protocols making such services complex. Facades
-                  come in all sorts of different materials e.g. glass, stone,
-                  copper, composite&nbsp; aluminium sheets, stainless steel
-                  which require different methods and requirements&nbsp; to have
-                  them cleaned.&nbsp;</strong
+                  >
+                  {{ $t("MANY_MULTI_STOREY_BUILDINGS_CREATE") }}
+                  </strong
                 >
               </p>
               <p>
-                Environmental friendly solutions are now being sought by many
-                organisations, developers and strata companies&nbsp; and new
-                government regulations alike and this is why BUROOJ AIR Working
-                Drone solutions are not only safer but can provide many
-                advantages to traditional cleaning methods and is also more
-                efficient and becomes a&nbsp; quicker task to complete.
+                {{ $t("ENVIRONMENTAL_FRIENDLY_SOLUTIONS") }}
               </p>
               <p>
-                Having a clean facade is one of the most important tasks to
-                provide&nbsp; companies and buildings with a clean environment
-                that meets many of the requirements needed.
+                {{ $t("HAVING_A_CLEAN_FACADE_IS_ONE") }}
               </p>
               <p>
-                BUROOJ AIR Working Drone is now able to provide an alternative
-                to a problem that hasn’t had too many other options other than
-                the more traditional methods to date.
+                {{ $t("BUROOJ_AIR_WORKING_DRONE_IS_NOW_ABLE_TO_PROVIDE") }}
               </p>
               <p>
-                BUROOJ AIR Working Drone is also considered to be worksafe.
-                Working from dangerous heights can be hazardous and utilising
-                this drone technology eliminates the requirements for workers to
-                physically access these heights and the dangerous environments.
-                This makes the fundamentals of this technology being considered
-                to be much safer when working in what is normally a&nbsp;
-                dangerous environment.
+                {{ $t("BUROOJ_AIR_WORKING_DRONE_IS_ALSO_CONSIDERED_TO_BE_WORKSAFE") }}
               </p>
-              <a href="#" class="btn btn-secondary">Enquire Today</a>
+              <!-- <a href="#" class="btn btn-secondary"> {{ $t("ENQUIRE_TODAY") }}</a> -->
             </div>
           </div>
         </div>
@@ -109,50 +82,43 @@
           <div class="col-lg-8">
             <div class="text-box">
               <h3>
-                ADVANTAGES OF GLASS AND FACADE CLEANING WITH BUROOJ AIR WORKING
-                DRONE
+                {{ $t("ADVANTAGES_OF_GLASS_AND_FACADE_CLEANING_WITH_BUROOJ_AIR_DRONE") }}
               </h3>
             </div>
           </div>
           <div class="col-lg-4">
             <div class="text-box">
-              <h4>Important key facts</h4>
+              <h4>{{ $t("IMPORTANT_KEY_FACTS") }}</h4>
               <p>
-                <strong>1000 sqm/hour</strong><br />Capacity facade cleaning
+                <strong>1000 {{ $t("SQM_HOUR") }}</strong><br />{{ $t("CAPACITY_FACADE_CLEANING") }}
               </p>
               <p>
-                <strong>1500 sqm/hour</strong><br />Capacity window cleaning
+                <strong>1500 {{ $t("SQM_HOUR") }}</strong><br />{{ $t("CAPACIY_WINDOW_CLEANING") }}
               </p>
               <p>
-                <strong>Height 100+ meter</strong><br />When the drone is fully
-                operational
+                <strong>{{ $t("HEIGHT") }} 100+ {{ $t("METER") }}</strong><br />{{ $t("DRONE_FULLY_OPERATIONAL") }}
               </p>
               <p>
-                <strong>Flytime 24 hour</strong><br />With battery case with 8
-                batteries
+                <strong>{{ $t("FLYTIME") }} 24 {{ $t("HOUR") }}</strong><br />{{ $t("BATTERY_CASE_BATTERIES") }}
               </p>
               <p>
-                <strong>7 m/sec</strong><br />Works in maximum winds of 7 m/s.
-                Up to 15 m/s without equipment
+                <strong>7 {{ $t("M_SEC") }}</strong><br />{{ $t("WORKS_IN_MAXIMUM_WINDS") }} 7 {{ $t("M_SEC") }}.
+                {{ $t("UP_TO") }} 15 {{ $t("M_SEC") }} {{ $t("WITHOUT_EQUIPMENT") }}
               </p>
               <p>
-                <strong>Up to 180 bar pressure</strong><br />Capacity water
-                pressure
+                <strong>{{ $t("UP_TO") }} 180 {{ $t("BAR_PRESSURE") }}</strong><br />{{ $t("CAPACITY_WATER_PRESSURE") }}
               </p>
               <p>
-                <strong>AirSense ADS-B</strong><br />Advanced flight / collision
-                warning system
+                <strong>{{ $t("AIRSENSE_ADS") }}</strong><br />{{ $t("ADVANCED_FLIGHT_COLLISION") }}
               </p>
               <p>
-                <strong>Self-heating battery</strong><br />Provides efficient
-                battery use
+                <strong>{{ $t("SELF_HEATING_BATTERY") }}</strong><br />{{ $t("EFFICIENT_BATTERY_USE") }}
               </p>
               <p>
-                <strong>-20°C to 50°C</strong><br />Working temperature range
+                <strong>-20°C {{ $t("TO") }} 50°C</strong><br />{{ $t("WORKING_TEMPERATURE_RANGE") }}
               </p>
               <p>
-                <strong>IP 45</strong><br />Protected against low pressure water
-                jets
+                <strong>{{ $t("IP_45") }}</strong><br />{{ $t("PROTECTED_AGAINST_PRESSURE") }}
               </p>
             </div>
           </div>
@@ -165,32 +131,20 @@
         <div class="row">
           <div class="col-lg-6">
             <div class="text-box">
-              <h3>ENQUIRE TODAY</h3>
+              
+              <h3>{{ $t("ENQUIRE_TODAY") }}</h3>
 
               <p>
-                Burooj Air Drones provides a solution for you whether you're a
+                {{ $t("BUROOJ_AIR_DRONES_PROVIDES_A_SOLUTION") }}
                 <b
-                  >building owner, developer, building management business, or
-                  cleaning firm
+                  >{{ $t("BUILDING_OWNER_DEVELOPER_BUILDING_MANAGEMENT_BUSINESS_OR") }}
                 </b>
-                with high rise window cleaning contracts or needs and you're
-                trying to reduce expenses and create a safer and more secure way
-                to get this service done.&nbsp; and you’re looking at lowering
-                the costs and creating a safer and more secure way of having
-                this service done then BUROOJ AIR Working Drone has a solution
-                for you.&nbsp;
+                {{ $t("WITH_HIGH_RISE_WINDOW_CLEANING") }}
+               
               </p>
               <p>
-                <b>Burooj Air Drones</b> offers a variety of direct and indirect
-                means to offer this service, and we collaborate with a wide
-                range of businesses to secure contracts for it. If you're a
-                direct client&nbsp; searching for a one-time service, a building
-                firm looking for longer-term fixed-term contracts, a developer
-                or building owner looking to cut expenses, or if you're just
-                curious and want to study this technology to see if it can work
-                better for you, this article is for you.&nbsp; Get in contact
-                with us, and a member of our team will help you identify the
-                most cost-effective and secure high rise cleaning solution.
+                <b>{{ $t("BUROOJ_AIR_DRONES") }}</b> {{ $t("OFFERS_VARIETY_OF_DIRECT_INDIRECT") }}
+                
               </p>
             </div>
           </div>
@@ -227,7 +181,7 @@
                 <div class="col-md-12">
                   <div class="form-group">
                     <select class="form-control">
-                      <option>WHICH COUNTRY?</option>
+                      <option>{{ $t("WHICH_COUNTRY") }}</option>
                     </select>
                   </div>
                 </div>
@@ -382,7 +336,7 @@ p {
 
 .advantages {
   padding: 240px 0 110px;
-  background-image: url(~assets/images/ktv_5505.jpg);
+  background-image: url(~assets/images/BuroojAir_3.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

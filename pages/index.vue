@@ -27,7 +27,7 @@
                     <p>
                       {{ $t("CLEANING_BUILDINGS_DESC") }}
                     </p>
-                    <!-- <NuxtLink to="/window-cleaning" class="btn btn-secondary">
+                    <NuxtLink to="/window-cleaning" class="btn btn-secondary">
                       <span>
                         <svg
                           width="800px"
@@ -45,7 +45,7 @@
                         </svg>
                       </span>
                       {{ $t("READ_MORE") }}
-                    </NuxtLink> -->
+                    </NuxtLink>
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -56,7 +56,7 @@
                     <p>
                       {{ $t("HEAVY_LIFTING_DESC") }}
                     </p>
-                    <!-- <NuxtLink to="/facade-cleaning" class="btn btn-secondary">
+                    <NuxtLink to="/facade-cleaning" class="btn btn-secondary">
                       <span>
                         <svg
                           width="800px"
@@ -74,7 +74,7 @@
                         </svg>
                       </span>
                       {{ $t("READ_MORE") }}
-                    </NuxtLink> -->
+                    </NuxtLink>
                   </div>
                 </div>
               </div>
@@ -155,7 +155,7 @@
                   )
                 }}
               </p>
-              <!-- <NuxtLink to="/facade-cleaning" class="btn btn-white">
+              <NuxtLink to="/facade-cleaning" class="btn btn-white">
                 <span
                   >
                   <svg
@@ -174,7 +174,7 @@
                   </svg>
                 </span>
                 {{ $t("READ_MORE") }}
-              </NuxtLink> -->
+              </NuxtLink>
             </div>
           </div>
         </div>
@@ -655,7 +655,7 @@
                 </li>
                 <li>
                   <p>
-                    <strong>{{ $t("USE_LATEST_DRONE_CONTROL_TECHNOLOGIES") }} </strong> As a
+                    <strong>{{ $t("USE_LATEST_DRONE_CONTROL_TECHNOLOGIES") }} </strong> 
                     {{ $t("RESULT_OPERATING_IN_HIGHER_ALTITUDES") }}
                    
                   </p>
