@@ -23,7 +23,7 @@ export default {
     "Accessing elevated areas without requiring height-specific tools.",
     ZERO_CONTACT_ALTERNATIVE: "Zero-contact alternative.",
   NOW_REQUEST_A_QUOTE_FOR_DRONE_CLEANING:
-    "Now request a quote for drone cleaning",
+  "Request a Quote",
   ARE_YOU_INTERESTED_IN_HAVING_A_DRONE_CLEAN_THE_WINDOWS_OR_THE_FACADE_OF_YOUR_BUILDING:
     "Are you interested in having a drone clean the windows or the facade of your building?",
   YOU_CAN_CONTACT_US_ANYWHERE_IN_THE_WORLD_FOR_A_NON_BINDING_PRICE_QUOTE:
@@ -34,17 +34,17 @@ export default {
   CLEANING_BUILDINGS_AND_HEAVY_LIFTING: "CLEANING BUILDINGS and HEAVY LIFTING",
   CLEANING_BUILDINGS : "CLEANING BUILDINGS ",
   CLEANING_BUILDINGS_DESC:
-    "Burooj Air's drones can clean buildings much faster, safer to use than traditional methods, and they can cover large areas in a short amount of time and with great precision. and cheaper than traditional methods, such as scaffolding and manual labor.",
+  "Offering aerial drone cleaning and sanitization, a safer, faster and less expensive alternation to traditional cleaning methods.",
   READ_MORE: "Read More",
   HEAVY_LIFTING: "HEAVY LIFTING",
   HEAVY_LIFTING_DESC:
-    "Burooj Air’s drones can be used to lift and transport heavy objects up to 50 kg, such as construction materials or medical supplies. This can be a valuable tool for businesses and organizations that need to move heavy objects quickly and efficiently.",
+  "Lifting and transporting heavy objects up to 50 kg, such as construction materials or medical supplies. This can be a valuable tool for orgnizations that needs to move heavy objects quickly and efficiently.",
   GACA_PART_107_DRONE_PILOT : "GACA PART 107 DRONE PILOT",
   IS_AVAILABLE: "Is Available",
   IS_REQUIRED: "IS REQUIRED ",
   APPLY_NOW: "APPLY NOW",
   WINDOW_AND_FACADE: "Window & Facade",
-  BUILDINGS_CLEANING:"BUILDINGS CLEANING", 
+  BUILDINGS_CLEANING:"BUILDINGS CLEANING",
   AND_HEAVYLIFTING_USING_DRONE:"and HEAVYLIFTING USING DRONE",
   CLEANING_WITH_DRONE: "Cleaning with Drone",
   THE_BEST_SOLUTION_TO_CLEAN_BUILDINGS_AND_LIFT_HEAVY_WEIGHTS_IN_A_FASTER_WAY_IS_AVAILABLE_NOW:
@@ -55,7 +55,7 @@ export default {
   OPPORTUNITIES_AVAILABLE: "Opportunities Available",
   PARTICIPATE_IN_THE_MOST_CREATIVE:
     "Participate in the most creative business concept to hit the cleaning industry in more than a century.",
-  TAKE_PART_IN_THE_MOST_INNOVATIVE_BUSINESS_IDEA: "Take part in the most innovative business idea that has revolutionized the cleaning industry in over a century.",  
+  TAKE_PART_IN_THE_MOST_INNOVATIVE_BUSINESS_IDEA: "Take part in the most innovative business idea that has revolutionized the cleaning industry in over a century.",
   LET_S_TALK: "Let's Talk",
   OUR_INTENTION: "Our Intention",
   OUR_MAIN_GOAL_IS_TO_HELP_OTHERS_AND_MAKE_WORKING_LIFE_BETTER_FOR_EVERYONE:
@@ -87,7 +87,7 @@ export default {
   WHATS_NEXT: "What's Next",
   UPCOMING: "UPCOMING",
   ADVANTAGES_OF_GLASS_AND_FACADE_CLEANING_WITH_BUROOJ_AIR_DRONE:
-    "ADVANTAGES OF GLASS AND FACADE CLEANING WITH BUROOJ AIR DRONE",
+    "ADVANTAGES OF GLASS AND FACADE CLEANING WITH BUROOJ AIR WORKING DRONE",
   IMPORTANT_KEY_FACTS: "Important key facts",
   ENQUIRE_TODAY: "ENQUIRE TODAY",
   THE_EVOLUTION_OF_HIGH_RISE_WINDOW_AND_FACADE_CLEANING_HAS_ARRIVED:
@@ -120,7 +120,7 @@ export default {
   
 
 
-  //about us page 
+  //about us page
   BUROOJ_AIR_IS_A_DRONE_COMPANY_BASED_IN_THE_KINGDOM_OF_SAUDI_ARABIA:`Burooj Air is a drone company based in the Kingdom of Saudi
   Arabia that specializes in developing and deploying drones for a
   variety of industrial and commercial applications. The company’s
@@ -129,7 +129,7 @@ export default {
   exterior of buildings, removing dirt, and dust. This can save
   businesses and organizations a significant amount of time and
   money, as it eliminates the need for traditional methods of
-  cleaning, such as scaffolding and manual labor.`, 
+  cleaning, such as scaffolding and manual labor.`,
 
   WEIGHTLIFTING_BUROOJ_AIR_DRONES_CAN_BE_USED:`Weightlifting: Burooj Air’s drones can be used to lift and
   transport heavy objects up to 50 kg, such as construction
@@ -147,9 +147,9 @@ export default {
   CAMERA_FILMING:`Camera Filming: Burooj Air’s drones can be equipped with cameras,
   which can be used to film events or to capture aerial footage.
   This can be a valuable tool for businesses and organizations that
-  need to record footage from a bird’s-eye view.`, 
+  need to record footage from a bird’s-eye view.`,
   OUR_MAIN_INTENTION_IS_TO_DO_GOOD:`Our main intention is to do good and improve people’s everyday
-  working life.`, 
+  working life.`,
   WE_AIM_TO_CONTRIBUTE_TO_A_SAFER_WORK:`We aim to contribute to a safer work day for people who work at
   great heights with lifts, scaffolding and for facade climbers.`,
 
@@ -218,7 +218,7 @@ export default {
 
 
 
-  //services page  
+  //services page
 
   UP_UNTIL_NOW_HIGH_RISE_WINDOW_AND_FACADE_CLEANING:`Up until now high rise window and facade cleaning has only been
   done by professional cleaning companies who specialice in
@@ -269,18 +269,18 @@ export default {
   cleaning methods.`,
   SOLAR_CELL_PANEL:`Solar Cell panel`,
   CLEANING:`Cleaning`,
-  //new 
+  //new
   THIS_PROCEDURE_KEEPS:`THIS PROCEDURE KEEPS THE PANEL SURFACE WITH NO HARM OR DAMAGE.`,
   OUR_WINDOW_CLEANING_METHOD:`Our window cleaning method is perfect for cleaning solar panels,
                 And it is completely safe for the panel's surface.`,
 
 ADDITIONALLY_THIS_TECNHIQUE:`Additionally, this technique offers a notable advantage of
 preventing stains and keeping the surfaces cleaner for a longer
-period compared to traditional cleaning methods.` ,               
+period compared to traditional cleaning methods.` ,         
 //endnew
 
 
-//new2 
+//new2
 WE_HAVE_SOLVED_THE_OPERATING_HEIGHT_RESTRICTION:`We have solved the operating height restriction with our
 patent pending roof safety system. There are no longer
 limitations on operation height, and we will continue the
@@ -307,7 +307,7 @@ REMOTE_CONTROL_ROOMS_WOULD_BE:`Remote control rooms would be a great advantage i
 with a lot of noise, high/low temperatures, and other
 ‘problem’ areas.`,
 
-RESULT_OPERATING_IN_HIGHER_ALTITUDES :` result of operating in higher altitudes, the use of special
+RESULT_OPERATING_IN_HIGHER_ALTITUDES :` As a result of operating in higher altitudes, the use of special
 flight goggles is being considered and tested.`,
 
 
@@ -360,6 +360,144 @@ altitudes up to 600 meters and above.`,//endnew2
 
 
 
+//facade cleaning page 
+HIGH_RISE_FACADE_CLEANING:`High rise facade cleaning`,
+SELFCLEANER_METHOD:`SelfCleaner Method`,
+THE_SELFCLEANER_METHOD_WAS_DEVELOPED:`The SelfCleaner method was developed in 2015, and are used on
+                  all facades where humidity, pollution, algae, micro-organisms,
+                  greenery are issues.`,
+
+THE_METHOD_ENABLES_FACADE_CLEANING:`The method enables facade cleaning without the use of
+                high-pressure flushing. The special agent SelfCleaner is foamed
+                on the facades with low pressure, and then it’s the weather and
+                wind that cleans the surfaces over a period of 3-4 weeks.`,                  
+ALREADY_AFTER_1_2_WEEKS_YOU_WILL:`Already after 1-2 weeks you will see clearly visible results,
+                but SelfCleaner continues to work for about 3 months. With this
+                method, high pressure is not used, and this avoids unnecessary
+                wear and tear and does not damage the facades.`,
+FACADE_CLEANING:`Facade cleaning`,
+MANY_MULTI_STOREY_BUILDINGS_CREATE:`Many multi-storey buildings create challenges and become
+demanding for many professional cleaners which must adhere to
+strict safety protocols making such services complex. Facades
+come in all sorts of different materials e.g. glass, stone,
+copper, composite\n aluminium sheets, stainless steel
+which require different methods and requirements\n to have
+them cleaned.\n`,
+ENVIRONMENTAL_FRIENDLY_SOLUTIONS:`Environmental friendly solutions are now being sought by many
+organisations, developers and strata companies\n and new
+government regulations alike and this is why BUROOJ AIR Working
+Drone solutions are not only safer but can provide many
+advantages to traditional cleaning methods and is also more
+efficient and becomes a\n quicker task to complete.`,
+HAVING_A_CLEAN_FACADE_IS_ONE:`Having a clean facade is one of the most important tasks to
+provide\n companies and buildings with a clean environment
+that meets many of the requirements needed.`,
+
+BUROOJ_AIR_WORKING_DRONE_IS_NOW_ABLE_TO_PROVIDE:`BUROOJ AIR Working Drone is now able to provide an alternative
+to a problem that hasn’t had too many other options other than
+the more traditional methods to date.`,
+BUROOJ_AIR_WORKING_DRONE_IS_ALSO_CONSIDERED_TO_BE_WORKSAFE:`BUROOJ AIR Working Drone is also considered to be worksafe.
+Working from dangerous heights can be hazardous and utilising
+this drone technology eliminates the requirements for workers to
+physically access these heights and the dangerous environments.
+This makes the fundamentals of this technology being considered
+to be much safer when working in what is normally a\n
+dangerous environment.`,
+
+SQM_HOUR:`sqm/hour`,
+M_SEC:`m/sec`,
+CAPACITY_FACADE_CLEANING:`Capacity facade cleaning`,
+CAPACIY_WINDOW_CLEANING:`Capacity window cleaning`,
+HEIGHT:`Height`,
+METER:`meter`,
+HOUR:`hour`,
+DRONE_FULLY_OPERATIONAL:`When the drone is fully
+operational`,
+FLYTIME:`Flytime`,
+BATTERY_CASE_BATTERIES:'With battery case with 8 batteries',
+WORKS_IN_MAXIMUM_WINDS:`Works in maximum winds of`,
+UP_TO:`Up to`,
+WITHOUT_EQUIPMENT:`without equipment`,
+BAR_PRESSURE:`bar pressure`,
+CAPACITY_WATER_PRESSURE:`Capacity water pressure`,
+AIRSENSE_ADS:`AirSense ADS-B`,
+ADVANCED_FLIGHT_COLLISION:`Advanced flight / collision
+warning system`,
+SELF_HEATING_BATTERY:`Self-heating battery`,
+EFFICIENT_BATTERY_USE:`Provides efficient
+battery use`,
+TO:`to`,
+WORKING_TEMPERATURE_RANGE:`Working temperature range`,
+IP_45:`IP 45`,
+PROTECTED_AGAINST_PRESSURE:`Protected against low pressure water
+jets`,
+BUROOJ_AIR_DRONES_PROVIDES_A_SOLUTION:`Burooj Air Drones provides a solution for you whether you're a`,
+BUILDING_OWNER_DEVELOPER_BUILDING_MANAGEMENT_BUSINESS_OR:`building owner, developer, building management business, or
+cleaning firm`,
+BUROOJ_AIR_DRONES:`Burooj Air Drones`,
+OFFERS_VARIETY_OF_DIRECT_INDIRECT:`offers a variety of direct and indirect
+means to offer this service, and we collaborate with a wide
+range of businesses to secure contracts for it. If you're a
+direct client\n searching for a one-time service, a building
+firm looking for longer-term fixed-term contracts, a developer
+or building owner looking to cut expenses, or if you're just
+curious and want to study this technology to see if it can work
+better for you, this article is for you.\n Get in contact
+with us, and a member of our team will help you identify the
+most cost-effective and secure high rise cleaning solution.`,
+
+//end facade cleaning
+
+
+
+//window cleaning page 
+
+
+HIGH_RISE_COMMERICAL_WINDOW_CLEANING:`High rise commercial window cleaning can be very time
+consuming. BUROOJ AIR Working Drone has developed a new more
+efficient and safer way of providing high rise window cleaning
+which is also considered faster hence reducing costs.`,
+
+
+MODERN_DAY_BUILDINGS_INCLUDING:`Modern day buildings including apartment blocks, office
+developments and commercial properties in general have large
+areas of glazing. Due to the height, design and location of
+these buildings, it can be time consuming and expensive to keep
+on top of regular maintenance. Very often these buildings
+require work to be done at height which is both expensive and
+brings with it inherent risk.\n`,
+
+UP_UNTIL_NOW_ONLY_PRO:`Therefore up until now only professional`,
+COMMERCIAL_WINDOW_CLEANERS:`commercial window cleaners`,
+HEIGHT_ACCREDITATION:`with height accreditation,
+scaffolding or, for smaller buildings, boom lifts were the only
+and best option.\n`,
+
+BUROOJ_AIR_WORKING_DRONE_IS_THE_FIRST:`BUROOJ AIR Working Drone is the first company in the world to
+properly commercialise the use of drones to provide an alternate
+solution for this type of`,
+
+WINDOW_CLEANING:`window cleaning`,
+
+
+SERVICE_PROCESS_SAFER:`service. This
+makes the process safer, faster and can also provide the service
+more frequently.`,
+
+BUROOJ_AIR_WORKING_DRONE:`BUROOJ AIR Working Drone`,
+
+HAS_MANY_WAYS_THAT_CAN_PROVIDE:`has many ways that we can
+provide this service directly and indirectly and we work with
+many different companies to contract this service. Whether
+you’re a direct client&nbsp; looking for a once off service, a
+building company looking for longer term fixed term contracts, a
+developer and building owner looking at reducing costs or are
+just curious and want to explore this technology to see how it
+can better work for you.&nbsp; Reach out , get in touch and one
+of our team will assist you to find the best cost effective and
+safer solution to your high rise cleaning needs`,
+
+//end window cleaning 
 
 
 
