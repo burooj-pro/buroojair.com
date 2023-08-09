@@ -9,7 +9,7 @@
     <!-- GALLERY SEC -->
     <section class="gallery-main">
       <div class="container">
-        <div class="row g-0">
+        <div class="row">
           <div class="col-lg-5 order-lg-1 order-2">
             <div class="inner">
               <h3 class="mb-4">{{ $t("IMAGES") }}</h3>
@@ -157,7 +157,7 @@
               <div class="row">
                 <div class="col-12">
                   <div class="ratio ratio-16x9">
-                 <video autoplay muted loop playsinline  class="elementor-background-video-embed d-none d-md-block"
+                 <video autoplay muted loop playsinline preload="auto" class="elementor-background-video-embed d-none d-md-block"
      >
       <source :src="videoSrc1" type="video/mp4">
 

@@ -33,6 +33,30 @@
     font-display: swap;
 }
 
+@font-face {
+  font-family: 'Helvetica';
+  src: url('~assets/font/helvetica-light.ttf');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('~assets/font/helvetica-bold.ttf');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('~assets/font/helvetica-medium.otf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 // font created by Sebastian "Seb" Lester
 @font-face {
@@ -80,6 +104,11 @@
 
 @mixin Al_Qabas($font-weight) {
     font-family: 'Al Qabas';
+    font-weight: $font-weight;
+}
+
+@mixin Helvetica($font-weight) {
+    font-family: 'Helvetica';
     font-weight: $font-weight;
 }
 
