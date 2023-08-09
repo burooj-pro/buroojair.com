@@ -307,7 +307,7 @@ p {
   justify-content: center;
   color: $white;
   text-transform: uppercase;
-  @include Red_Hat_Display(800);
+  @include NeoSans(900);
   @include border_radius(4px);
   height: 54px;
   padding: 0 29px;
