@@ -209,7 +209,7 @@ p {
   justify-content: center;
   color: $white;
   text-transform: uppercase;
-  @include Red_Hat_Display(800);
+  @include NeoSans(900);
   @include border_radius(4px);
   height: 54px;
   padding: 0 29px;
@@ -251,7 +251,7 @@ p {
     margin: 16px 0 0 0;
 
     h5 {
-      @include Red_Hat_Display(700);
+      @include NeoSans(600);
       font-size: $font20;
       text-transform: uppercase;
       line-height: 1;
@@ -278,7 +278,7 @@ p {
 
     a {
       font-size: $font13;
-      @include Red_Hat_Display(700);
+      @include NeoSans(600);
       color: $black;
       display: block;
     }

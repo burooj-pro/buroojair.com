@@ -15,7 +15,11 @@
               <h3>{{ $t("SERVICES") }}</h3>
               <h4>{{ $t("HIGH_RISE_WINDOW_AND_FACADE_CLEANING") }}</h4>
               <div class="video-holder">
-                <img src="~assets/images/BuroojAir_1.jpg" alt="#" class="w-100" />
+                <img
+                  src="~assets/images/BuroojAir_1.jpg"
+                  alt="#"
+                  class="w-100"
+                />
                 <!-- <i class="iconPlay">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -37,24 +41,29 @@
               <h5>{{ $t("WINDOW_CLEANING") }}</h5>
 
               <p>
-                <strong
-                  >{{ $t("HIGH_RISE_COMMERICAL_WINDOW_CLEANING") }}</strong
-                >
+                <strong>{{
+                  $t("HIGH_RISE_COMMERICAL_WINDOW_CLEANING")
+                }}</strong>
               </p>
               <p>
                 {{ $t("MODERN_DAY_BUILDINGS_INCLUDING") }}
               </p>
               <p>
                 {{ $t("UP_UNTIL_NOW_ONLY_PRO") }}
-                <b> {{ $t("COMMERCIAL_WINDOW_CLEANERS") }}</b> {{ $t("HEIGHT_ACCREDITATION") }}
+                <b> {{ $t("COMMERCIAL_WINDOW_CLEANERS") }}</b>
+                {{ $t("HEIGHT_ACCREDITATION") }}
               </p>
               <p>
-                {{ $t("BUROOJ_AIR_WORKING_DRONE_IS_THE_FIRST") }} <b>{{ $t("WINDOW_CLEANING") }}</b> {{ $t("SERVICE_PROCESS_SAFER") }}
+                {{ $t("BUROOJ_AIR_WORKING_DRONE_IS_THE_FIRST") }}
+                <b>{{ $t("WINDOW_CLEANING") }}</b>
+                {{ $t("SERVICE_PROCESS_SAFER") }}
               </p>
               <p>
-                
-                {{ $t("BUROOJ_AIR_WORKING_DRONE_IS_ALSO_CONSIDERED_TO_BE_WORKSAFE") }}
-               
+                {{
+                  $t(
+                    "BUROOJ_AIR_WORKING_DRONE_IS_ALSO_CONSIDERED_TO_BE_WORKSAFE"
+                  )
+                }}
               </p>
 
               <!-- <a href="#" class="btn btn-secondary"> {{ $t("ENQUIRE_TODAY") }}</a> -->
@@ -85,35 +94,47 @@
             <div class="text-box">
               <h4>{{ $t("IMPORTANT_KEY_FACTS") }}</h4>
               <p>
-                <strong>1000 {{ $t("SQM_HOUR") }}</strong><br />{{ $t("CAPACITY_FACADE_CLEANING") }}
+                <strong>1000 {{ $t("SQM_HOUR") }}</strong
+                ><br />{{ $t("CAPACITY_FACADE_CLEANING") }}
               </p>
               <p>
-                <strong>1500 {{ $t("SQM_HOUR") }}</strong><br />{{ $t("CAPACIY_WINDOW_CLEANING") }}
+                <strong>1500 {{ $t("SQM_HOUR") }}</strong
+                ><br />{{ $t("CAPACIY_WINDOW_CLEANING") }}
               </p>
               <p>
-                <strong>{{ $t("HEIGHT") }} 100+ {{ $t("METER") }}</strong><br />{{ $t("DRONE_FULLY_OPERATIONAL") }}
+                <strong>{{ $t("HEIGHT") }} 100+ {{ $t("METER") }}</strong
+                ><br />{{ $t("DRONE_FULLY_OPERATIONAL") }}
               </p>
               <p>
-                <strong>{{ $t("FLYTIME") }} 24 {{ $t("HOUR") }}</strong><br />{{ $t("BATTERY_CASE_BATTERIES") }}
+                <strong>{{ $t("FLYTIME") }} 24 {{ $t("HOUR") }}</strong
+                ><br />{{ $t("BATTERY_CASE_BATTERIES") }}
               </p>
               <p>
-                <strong>7 {{ $t("M_SEC") }}</strong><br />{{ $t("WORKS_IN_MAXIMUM_WINDS") }} 7 {{ $t("M_SEC") }}.
-                {{ $t("UP_TO") }} 15 {{ $t("M_SEC") }} {{ $t("WITHOUT_EQUIPMENT") }}
+                <strong>7 {{ $t("M_SEC") }}</strong
+                ><br />{{ $t("WORKS_IN_MAXIMUM_WINDS") }} 7 {{ $t("M_SEC") }}.
+                {{ $t("UP_TO") }} 15 {{ $t("M_SEC") }}
+                {{ $t("WITHOUT_EQUIPMENT") }}
               </p>
               <p>
-                <strong>{{ $t("UP_TO") }} 180 {{ $t("BAR_PRESSURE") }}</strong><br />{{ $t("CAPACITY_WATER_PRESSURE") }}
+                <strong>{{ $t("UP_TO") }} 180 {{ $t("BAR_PRESSURE") }}</strong
+                ><br />{{ $t("CAPACITY_WATER_PRESSURE") }}
               </p>
               <p>
-                <strong>{{ $t("AIRSENSE_ADS") }}</strong><br />{{ $t("ADVANCED_FLIGHT_COLLISION") }}
+                <strong>{{ $t("AIRSENSE_ADS") }}</strong
+                ><br />{{ $t("ADVANCED_FLIGHT_COLLISION") }}
               </p>
               <p>
-                <strong>{{ $t("SELF_HEATING_BATTERY") }}</strong><br />{{ $t("EFFICIENT_BATTERY_USE") }}
+                <strong>{{ $t("SELF_HEATING_BATTERY") }}</strong
+                ><br />{{ $t("EFFICIENT_BATTERY_USE") }}
               </p>
               <p>
-                <strong>-20°C {{ $t("TO") }} 50°C</strong><br />{{ $t("WORKING_TEMPERATURE_RANGE") }}
+                <strong>-20°C {{ $t("TO") }} 50°C</strong><br />{{
+                  $t("WORKING_TEMPERATURE_RANGE")
+                }}
               </p>
               <p>
-                <strong>{{ $t("IP_45") }}</strong><br />{{ $t("PROTECTED_AGAINST_PRESSURE") }}
+                <strong>{{ $t("IP_45") }}</strong
+                ><br />{{ $t("PROTECTED_AGAINST_PRESSURE") }}
               </p>
               <!-- <p>
                 <strong>1000 sqm/hour</strong><br />Capacity facade cleaning
@@ -169,18 +190,15 @@
 
               <p>
                 {{ $t("IF_YOU_ARE") }}
-               
+
                 <b>{{ $t("BUILDING_OWNER_DEVELOPER") }}</b>
-                <b>{{ $t("CLEANING_COMPANY") }}</b> 
+                <b>{{ $t("CLEANING_COMPANY") }}</b>
                 {{ $t("WITH_HIGH_RISE_WINDOW_CLEANING") }}
-                
-                
               </p>
               <p>
-                <b>{{ $t("BUROOJ_AIR_WORKING_DRONE") }}</b> 
+                <b>{{ $t("BUROOJ_AIR_WORKING_DRONE") }}</b>
 
                 {{ $t("HAS_MANY_WAYS_THAT_CAN_PROVIDE") }}
-               
               </p>
             </div>
           </div>
@@ -296,7 +314,7 @@ p {
   justify-content: center;
   color: $white;
   text-transform: uppercase;
-  @include Red_Hat_Display(800);
+  @include NeoSans(900);
   @include border_radius(4px);
   height: 54px;
   padding: 0 29px;
