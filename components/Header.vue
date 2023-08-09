@@ -154,7 +154,7 @@ header {
             color: $white;
             text-transform: uppercase;
             font-size: $font16;
-            @include Red_Hat_Display(500);
+            @include NeoSans(400);
             padding: 0 15px;
             &.pertner-btn {
               @include border_radius(8px);
@@ -165,7 +165,7 @@ header {
               justify-content: center;
               padding: 0;
               background-color: $orange;
-              @include Red_Hat_Display(700);
+              @include NeoSans(600);
             }
           }
           &:last-child {
