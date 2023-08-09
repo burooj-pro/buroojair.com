@@ -73,6 +73,6 @@ ul {
 
     p {
         font-size: $font16;
-        @include Red_Hat_Display(600)
+        @include NeoSans(600)
     }
 }
