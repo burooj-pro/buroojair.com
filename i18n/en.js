@@ -23,7 +23,7 @@ export default {
     "Accessing elevated areas without requiring height-specific tools.",
     ZERO_CONTACT_ALTERNATIVE: "Zero-contact alternative.",
   NOW_REQUEST_A_QUOTE_FOR_DRONE_CLEANING:
-  "Request a Quote",
+    "Request a Quote",
   ARE_YOU_INTERESTED_IN_HAVING_A_DRONE_CLEAN_THE_WINDOWS_OR_THE_FACADE_OF_YOUR_BUILDING:
     "Are you interested in having a drone clean the windows or the facade of your building?",
   YOU_CAN_CONTACT_US_ANYWHERE_IN_THE_WORLD_FOR_A_NON_BINDING_PRICE_QUOTE:
@@ -34,11 +34,11 @@ export default {
   CLEANING_BUILDINGS_AND_HEAVY_LIFTING: "CLEANING BUILDINGS and HEAVY LIFTING",
   CLEANING_BUILDINGS : "CLEANING BUILDINGS ",
   CLEANING_BUILDINGS_DESC:
-  "Offering aerial drone cleaning and sanitization, a safer, faster and less expensive alternation to traditional cleaning methods.",
+    "Offering aerial drone cleaning and sanitization, a safer, faster and less expensive alternation to traditional cleaning methods.",
   READ_MORE: "Read More",
   HEAVY_LIFTING: "HEAVY LIFTING",
   HEAVY_LIFTING_DESC:
-  "Lifting and transporting heavy objects up to 50 kg, such as construction materials or medical supplies. This can be a valuable tool for orgnizations that needs to move heavy objects quickly and efficiently.",
+    "Lifting and transporting heavy objects up to 50 kg, such as construction materials or medical supplies. This can be a valuable tool for orgnizations that needs to move heavy objects quickly and efficiently.",
   GACA_PART_107_DRONE_PILOT : "GACA PART 107 DRONE PILOT",
   IS_AVAILABLE: "Is Available",
   IS_REQUIRED: "IS REQUIRED ",
@@ -117,7 +117,7 @@ export default {
   ADDRESS: "Address",
   MAKE_AN_INQUIRY_TODAY: "Make an inquiry today",
 
-  
+
 
 
   //about us page
@@ -276,7 +276,7 @@ export default {
 
 ADDITIONALLY_THIS_TECNHIQUE:`Additionally, this technique offers a notable advantage of
 preventing stains and keeping the surfaces cleaner for a longer
-period compared to traditional cleaning methods.` ,         
+period compared to traditional cleaning methods.` ,
 //endnew
 
 
@@ -325,7 +325,7 @@ altitudes up to 600 meters and above.`,//endnew2
   BUROOJ_AIR_WORKING_DRONE_EVOLVED_OUT:`BUROOJ AIR Working Drone evolved out of the BUROOJ Group. BUROOJ AIR Group
   have experience with facade and window
   cleaning and are experts in their field.`,
-  
+
   // BUROOJ_AIR_WORKING_DRONE_ORIGINATED_FROM:`` reapted,
   IF_YOU_ARE:`If you’re a`,
   BUILDING_OWNER_DEVELOPER:`building owner, developer, building management company,`,
