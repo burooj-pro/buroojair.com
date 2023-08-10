@@ -1,31 +1,8 @@
 <template>
   <section class="banner-sec">
-    <!-- <iframe
-      src="https://player.vimeo.com/video/713580406?h=6988e72af6&amp;muted=1&amp;autoplay=1&amp;loop=1&amp;transparent=0&amp;background=1&amp;app_id=122963"
-      frameborder="0"
-      allowfullscreen
-      allow="autoplay; fullscreen; picture-in-picture"
-      title="BUROOJ AIR Working Drone"
-      data-ready="true"
-      class="elementor-background-video-embed d-none d-md-block"
-      style="width: 1903px; height: 1072.11px"
-    ></iframe>
-    <iframe
-      src="https://player.vimeo.com/video/713580406?h=6988e72af6&amp;app_id=122963"
-      width="426"
-      height="240"
-      frameborder="0"
-      allow="autoplay; fullscreen; picture-in-picture"
-      allowfullscreen=""
-      title="BUROOJ AIR Working Drone"
-      data-ready="true"
-      class="elementor-background-video-embed d-block d-md-none"
-      style="width: 1903px; height: 1072.11px"
-    ></iframe> -->
     <video
-      autoplay
+      ref="videoPlayer"
       muted
-      loop
       playsinline
       class="elementor-background-video-embed d-none d-md-block"
       style="width: 1903px; height: 1072.11px"
@@ -39,22 +16,7 @@
             <div class="banner-form">
               <div class="text-box">
                 <h3>{{ $t("NOW_REQUEST_A_QUOTE_FOR_DRONE_CLEANING") }}</h3>
-                <!-- <p>
-                  {{
-                    $t(
-                      "ARE_YOU_INTERESTED_IN_HAVING_A_DRONE_CLEAN_THE_WINDOWS_OR_THE_FACADE_OF_YOUR_BUILDING"
-                    )
-                  }}
-                </p> -->
-                <!-- <p>
-                  {{
-                    $t(
-                      "YOU_CAN_CONTACT_US_ANYWHERE_IN_THE_WORLD_FOR_A_NON_BINDING_PRICE_QUOTE"
-                    )
-                  }}
-                </p> -->
               </div>
-
               <div
                 class="pipedriveWebForms"
                 data-pd-webforms="https://webforms.pipedrive.com/f/6coemjWsjuoqlhJqDxw5vARg9RKtlXs9Rk7xeP0SZJLEXlmO9hyO7YDdWfq6IcrYLV"
@@ -86,8 +48,36 @@
 export default {
   data() {
     return {
-      videoSrc: "/videos/C9844_1.mp4",
+      videoPlaylist: [
+        "/videos/C9844_1.mp4",
+        "/videos/C9844_7.mp4",
+        "/videos/C9844_6.mp4",
+        "/videos/C9844_3.mp4",
+        "/videos/C9844_5.mp4",
+        "/videos/C9844_4.mp4",
+      ],
+      currentVideoIndex: 0,
     };
+  },
+  computed: {
+    videoSrc() {
+      return this.videoPlaylist[this.currentVideoIndex];
+    },
+  },
+  methods: {
+    playNextVideo() {
+      this.currentVideoIndex = (this.currentVideoIndex + 1) % this.videoPlaylist.length;
+      this.$refs.videoPlayer.load();
+      this.$refs.videoPlayer.play();
+    },
+  },
+  mounted() {
+    this.$refs.videoPlayer.addEventListener('ended', this.playNextVideo);
+    this.$refs.videoPlayer.load();
+    this.$refs.videoPlayer.play();
+  },
+  beforeDestroy() {
+    this.$refs.videoPlayer.removeEventListener('ended', this.playNextVideo);
   },
 };
 </script>
