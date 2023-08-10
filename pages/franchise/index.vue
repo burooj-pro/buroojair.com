@@ -19,7 +19,7 @@
         <div class="row">
           <p>
             <b>Franchise model Burooj AIR</b>
-            <br/>
+            <br />
             <b>NON-DISCLOSURE AGREEMENT</b>
           </p>
           <!-- First Section -->
@@ -101,10 +101,11 @@
               negotiations regarding the Collaboration and for 12 months after
               the termination of such negotiations if the negotiations are not
               successful.
-              
-              <p>
-                4.4 The Recipient shall not solicit or entice or
-              endeavour to solicit or entice any directors, employees or other
+            </p>
+
+            <p>
+              4.4 The Recipient shall not solicit or entice or endeavour to
+              solicit or entice any directors, employees or other
               representatives of the Company, or consultants delivering services
               to the Company, to leave their current employment. This clause
               shall remain in force during the negotiations regarding the
@@ -116,22 +117,28 @@
               entering into this agreement. The Recipient will ensure that the
               Recipients directors, employees and agents will make the same
               acknowledgement.
-              </p>
-              <p>
-                4.7 The Recipient agrees and acknowledges that
-              should the Recipient take over or acquire any client from the
-              Company during its term of engagement or within (12) twelve months
-              after the termination of its engagement with the Company the
-              Recipient will be required to pay compensation to the Company in
-              respect of those clients. The calculation for the compensation
-              shall be equal to one dollar ($1.00) for every dollar of gross
-              fees charged to that client for the previous twelve months. At the
-              Company’s discretion allowances may be made in respect of clients
-              introduced to the Company by the Recipient. This clause shall not
-              merge on completion of this Agreement. had direct dealings in the
-              course of, or in connection with, the duration of the NDA.
-              </p>
             </p>
+
+            <p>
+              4.7 The Recipient agrees and acknowledges that should the
+              Recipient take over or acquire any client from the Company during
+              its term of engagement or within (12) twelve months after the
+              termination of its engagement with the Company the Recipient will
+              be required to pay compensation to the Company in respect of those
+              clients. The calculation for the compensation shall be equal to
+              one dollar ($1.00) for every dollar of gross fees charged to that
+              client for the previous twelve months. At the Company’s discretion
+              allowances may be made in respect of clients introduced to the
+              Company by the Recipient. This clause shall not merge on
+              completion of this Agreement. had direct dealings in the course
+              of, or in connection with, the duration of the NDA.
+            </p>
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="col-4">
+            <div class="pipedriveWebForms" data-pd-webforms="https://webforms.pipedrive.com/f/bXCZRhnEATSSg8AiaLHNw1Fkti3HRSJNU7pWyVOxhoYkm92ZdiQQcGzHw83hVqKg5J"><script src="https://webforms.pipedrive.com/f/loader"></script></div>
           </div>
         </div>
       </div>
