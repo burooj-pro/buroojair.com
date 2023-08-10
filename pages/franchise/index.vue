@@ -16,7 +16,7 @@
 
     <section class="content">
       <div class="container">
-        <div class="row">
+        <div class="row pt-3">
           <p>
             <b>Franchise model Burooj AIR</b>
             <br />
@@ -136,7 +136,7 @@
           </div>
         </div>
 
-        <div class="row mt-3">
+        <div class="row pt-3">
           <div class="col-4">
             <div class="pipedriveWebForms" data-pd-webforms="https://webforms.pipedrive.com/f/bXCZRhnEATSSg8AiaLHNw1Fkti3HRSJNU7pWyVOxhoYkm92ZdiQQcGzHw83hVqKg5J"><script src="https://webforms.pipedrive.com/f/loader"></script></div>
           </div>
