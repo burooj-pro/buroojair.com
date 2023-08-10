@@ -67,7 +67,7 @@
                     <p class="nav-link link">{{ $t("LANGUAGE") }}</p>
                   </li>
                   <li class="nav-item">
-                    <NuxtLink class="nav-link pertner-btn" to="#contact-sec">{{
+                    <NuxtLink class="nav-link pertner-btn" to="/franchise">{{
                       $t("BECOME_A_PARTNER")
                     }}</NuxtLink>
                   </li>
