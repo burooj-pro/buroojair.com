@@ -14,7 +14,7 @@ export default {
   COPY_RIGHT: "Copyright © All rights reserved",
   FOR_INQUIRIES_PLEASE_USE_OUR_LISTED_CONTACT_INFO:
     "For inquiries please use our listed contact info.",
-  ADVANTAGES_USING_BUROOJ_AIR_DRONES: "Advantages using Burooj Air Drones",
+  ADVANTAGES_USING_BUROOJ_AIR_DRONES: "Benefits of Utilizing Our Cleaning Drones",
   HIGH_SPEED_AND_EFFECTIVE_SURPASSING_TRADITIONAL_METHODS:
     "High-speed and effective, surpassing traditional methods by a factor of 5-10 in terms of results.",
     SIMPLIFIED_ACCESS_TO_REMOTE_OR_HARD_TO_GET_TO_PLACES: "Simplified access to remote or hard-to-get-to places.",
@@ -31,10 +31,10 @@ export default {
   SEND_YOUR_INQUIRY_AND_WE_WILL_GET_IN_TOUCH_AS_SOON_AS_POSSIBLE:
     "Send your inquiry and we will get in touch as soon as possible",
   DRONE_SERVICES: "Drone Services",
-  CLEANING_BUILDINGS_AND_HEAVY_LIFTING: "CLEANING BUILDINGS and HEAVY LIFTING",
+  CLEANING_BUILDINGS_AND_HEAVY_LIFTING: "Utilizing aerial technologies to digitize traditional services",
   CLEANING_BUILDINGS : "CLEANING BUILDINGS ",
   CLEANING_BUILDINGS_DESC:
-    "Offering aerial drone cleaning and sanitization, a safer, faster and less expensive alternation to traditional cleaning methods.",
+    "Offering aerial drone cleaning and sanitization, a safer, faster and less expensive alternation to traditional cleaning methods. Burooj Air's technology and team provide unpresedented solutions to cleaning buildings utlizing drones.",
   READ_MORE: "Read More",
   HEAVY_LIFTING: "HEAVY LIFTING",
   HEAVY_LIFTING_DESC:
@@ -48,9 +48,9 @@ export default {
   AND_HEAVYLIFTING_USING_DRONE:"and HEAVYLIFTING USING DRONE",
   CLEANING_WITH_DRONE: "Cleaning with Drone",
   THE_BEST_SOLUTION_TO_CLEAN_BUILDINGS_AND_LIFT_HEAVY_WEIGHTS_IN_A_FASTER_WAY_IS_AVAILABLE_NOW:
-    "THE BEST SOLUTION TO CLEAN BUILDINGS AND LIFT HEAVY WEIGHTS IN A FASTER WAY IS AVAILABLE NOW",
+    "We are currently offering buildings cleaning, solar panels cleaning and heavy material lifting by our drones.",
     UNTIL_NOW_CLEANING_OF_TALL_BUILDINGS_HAS_BEEN_A_COMPLEX_AND_DANGEROUS_UNDERTAKING:
-    "Until now, cleaning of tall buildings has been a complex and dangerous undertaking, requiring the expertise of specialized cleaning companies with experience in abseiling, sky lifts, scaffolding, or the use of other lifting equipment. Also, heavyweight lifting for quick response requires time and personnel.",
+    "Until now, cleaning buildings or external assets has been a complex and dangerous undertaking requiring the expertise of specialized cleaning companies with experience in abseiling, sky lifts, scaffolding, or other risky means. We currntly offer the market a solution that is safer, faster and cost effictive saving not only our client's budget, but also personnel from risky tasks.",
   FRANCHISE: "FRANCHISE",
   OPPORTUNITIES_AVAILABLE: "Opportunities Available",
   PARTICIPATE_IN_THE_MOST_CREATIVE:
@@ -270,7 +270,7 @@ export default {
   SOLAR_CELL_PANEL:`Solar Cell panel`,
   CLEANING:`Cleaning`,
   //new
-  THIS_PROCEDURE_KEEPS:`THIS PROCEDURE KEEPS THE PANEL SURFACE WITH NO HARM OR DAMAGE.`,
+  THIS_PROCEDURE_KEEPS:`Reducing the risk of damaging the solar panels with traditional cleaning methods.`,
   OUR_WINDOW_CLEANING_METHOD:`Our window cleaning method is perfect for cleaning solar panels,
                 And it is completely safe for the panel's surface.`,
 
@@ -360,7 +360,7 @@ altitudes up to 600 meters and above.`,//endnew2
 
 
 
-//facade cleaning page 
+//facade cleaning page
 HIGH_RISE_FACADE_CLEANING:`High rise facade cleaning`,
 SELFCLEANER_METHOD:`SelfCleaner Method`,
 THE_SELFCLEANER_METHOD_WAS_DEVELOPED:`The SelfCleaner method was developed in 2015, and are used on
@@ -370,7 +370,7 @@ THE_SELFCLEANER_METHOD_WAS_DEVELOPED:`The SelfCleaner method was developed in 20
 THE_METHOD_ENABLES_FACADE_CLEANING:`The method enables facade cleaning without the use of
                 high-pressure flushing. The special agent SelfCleaner is foamed
                 on the facades with low pressure, and then it’s the weather and
-                wind that cleans the surfaces over a period of 3-4 weeks.`,                  
+                wind that cleans the surfaces over a period of 3-4 weeks.`,
 ALREADY_AFTER_1_2_WEEKS_YOU_WILL:`Already after 1-2 weeks you will see clearly visible results,
                 but SelfCleaner continues to work for about 3 months. With this
                 method, high pressure is not used, and this avoids unnecessary
@@ -450,7 +450,7 @@ most cost-effective and secure high rise cleaning solution.`,
 
 
 
-//window cleaning page 
+//window cleaning page
 
 
 HIGH_RISE_COMMERICAL_WINDOW_CLEANING:`High rise commercial window cleaning can be very time
@@ -497,7 +497,7 @@ can better work for you.&nbsp; Reach out , get in touch and one
 of our team will assist you to find the best cost effective and
 safer solution to your high rise cleaning needs`,
 
-//end window cleaning 
+//end window cleaning
 
 
 
