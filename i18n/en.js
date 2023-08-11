@@ -91,6 +91,7 @@ export default {
   ENQUIRE_TODAY: "ENQUIRE TODAY",
   THE_EVOLUTION_OF_HIGH_RISE_WINDOW_AND_FACADE_CLEANING_HAS_ARRIVED:
     "The Evolution of High Rise Window & Facade cleaning has Arrived",
+  HIGH_RISE_WINDOW_AND_FACADE_CLEANING: "Cleaning windows and facades",
   FOR_FACADE_AND_WINDOW_CLEANING_WE_USE_MULTIPLE_METHODS:
     "For Facade and window cleaning we use multiple methods",
   SETTING_THE_STANDARD_FOR_WORKING_DRONES:
