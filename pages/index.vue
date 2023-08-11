@@ -309,14 +309,54 @@
         <div class="row g-0">
           <div class="col-md-6">
             <div class="about-us-left">
-              <h4>{{ $t("MOHAMMED_ALOTAIBI_FOUNDED_THE_BUROOJ") }}</h4>
-              <p>
+              <p>{{ $t("MOHAMMED_ALOTAIBI_FOUNDED_THE_BUROOJ") }}</p>
+              <h4>
                 {{
                   $t(
                     "GROUP_IN_2018_WHICH_GREW_INTO_BUROOJ_AIR_DRONES_THE_BUROOJ_GROUPS_PRIORITY_WAS_HIGH_PRESSURE_CLEANING"
                   )
                 }}
-              </p>
+              </h4>
+
+                 <ul >
+                <li>
+                  <p>
+            {{ $t("MOHAMMED_CEO") }}
+                  </p>
+                </li>
+                <li>
+                  <p>
+               {{ $t("MOHANNAD_CTO") }}
+                  </p>
+                </li>
+                <li>
+                  <p>
+                   {{ $t("OSAMAH_MD") }}
+
+                  </p>
+                </li>
+                   <li>
+                  <p>
+               {{ $t("FAISAL_PM") }}
+
+                  </p>
+                </li>
+                      <li>
+                  <p>
+                   {{ $t("HATIM_DOM") }}
+
+                  </p>
+                </li>
+                      <li>
+                  <p>
+                   {{ $t("MOHAMMED_DMS") }}
+
+                  </p>
+                </li>
+
+              </ul>
+
+
               <!-- <a href="#" class="btn btn-secondary">
                 <span>
                   <svg
@@ -351,7 +391,7 @@
     </section>
 
     <!-- ESTIMATED FUTURE SEC -->
-    <section class="estimated-future-sec">
+    <!-- <section class="estimated-future-sec">
       <div class="container-fluid p-0">
         <div class="row g-0">
           <div class="col-md-6">
@@ -386,7 +426,7 @@
           ></path>
         </svg>
       </div>
-    </section>
+    </section> -->
 
     <!-- GLOBAL REACH SEC -->
     <section class="global-reach-sec">
@@ -634,7 +674,7 @@
           </div>
           <div class="col-md-6">
             <div class="text-box">
-              <ul :dir="dir">
+              <ul >
                 <li>
                   <p>
                     <strong>{{ $t("SPRAY_PAINTING") }} </strong>
@@ -656,11 +696,21 @@
                     {{ $t("RESULT_OPERATING_IN_HIGHER_ALTITUDES") }}
                   </p>
                 </li>
+                   <li>
+                  <p>
+                    <strong
+                      >{{ $t("LONG_DISTANCE_DRONE_CONTROL") }}
+                    </strong>
+                    {{ $t("AFTER_EVALUATION") }}
+                  </p>
+                </li>
                 <li>
+
+
                   <p class="mb-4">
                     <strong>
                       {{ $t("CONTROLLING_THE_DRONE_ANYWHERE") }}
-                      >
+
                     </strong>
                     {{ $t("LOOKING_BEYOND_2023") }}
                   </p>
@@ -1054,13 +1104,17 @@ p {
 /******** ABOUT US *****/
 
 .about-us-sec {
+  li{
+margin: 0%;
+  }
   .about-us-left {
     padding: 120px;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    // justify-content: center;
     align-items: flex-start;
+    margin-top: 0%;
     h4 {
       color: $gray;
       @include NeoSans(400);
@@ -1070,7 +1124,7 @@ p {
     }
     p {
       color: $gray;
-      text-transform: uppercase;
+      // text-transform: uppercase;
       line-height: 24px;
       margin: 24px 0 32px;
     }
@@ -1330,16 +1384,16 @@ p {
             display: block;
           }
         }
-        &::after {
-          position: absolute;
-          content: "";
-          left: 0;
-          top: 8px;
-          background-color: $white;
-          width: 6px;
-          height: 6px;
-          border-radius: 50%;
-        }
+        // &::after {
+        //   position: absolute;
+        //   content: "";
+        //   left: 0;
+        //   top: 8px;
+        //   background-color: $white;
+        //   width: 6px;
+        //   height: 6px;
+        //   border-radius: 50%;
+        // }
         &:last-child {
           margin: 0;
         }

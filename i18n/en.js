@@ -64,9 +64,8 @@ export default {
     "We want to help make workdays safer for those who use lifts, scaffolding, and people who scale buildings.",
   THESE_ARE_PHYSICALLY_DEMANDING_JOBS:
     "These are physically demanding jobs that frequently include hazard and stress injuries. Burooj Air Drones specializes on assisting this group.",
-  GROUP_IN_2018_WHICH_GREW_INTO_BUROOJ_AIR_DRONES_THE_BUROOJ_GROUPS_PRIORITY_WAS_HIGH_PRESSURE_CLEANING:
-    "Group in 2023, which grew into Burooj Air Drones. The Burooj Group's priority was high-pressure cleaning.",
-  MOHAMMED_ALOTAIBI_FOUNDED_THE_BUROOJ: "MOHAMMED ALOTAIBI FOUNDED THE BUROOJ",
+  GROUP_IN_2018_WHICH_GREW_INTO_BUROOJ_AIR_DRONES_THE_BUROOJ_GROUPS_PRIORITY_WAS_HIGH_PRESSURE_CLEANING: "OUR TEAM",
+  MOHAMMED_ALOTAIBI_FOUNDED_THE_BUROOJ: "In early 2020, our team started developing and enhancing drone technology to serve cleaning and heavy lifting tasks in the Kingdom of Saudi Arabia. We gladly announced in 2023, after three years of research and development, that our solution not only works but also might be considered the safest solution worldwide. We currently are partners with the most prominent Chinese drone Manufacturer, 'TT Aviation,' utilizing their drones and adding our developmental parts, programming, and devices to serve our intended needs.",
   OUR_HISTORY_AND_THE_EVOLUTION_OF_CLEANING:
     "Our History and the Evolution of Cleaning",
   THE_ESTIMATED_NEED_FOR_FUTURE_DRONE_CLEANING_SERVICES_IS_APPROXIMATELY:
@@ -76,10 +75,10 @@ export default {
   REACH_WORLDWIDE :"REACH WORLDWIDE",
   GLOBAL_REACH_DESC:
     "In compliance with the international quality standards ISO 9001, ISO 14001, and OHSAS 1800, Burooj Air Droness have the same concept, safety regulations, and stringent controls and processes.",
-  REACH_WORLDWIDE_DESC:"Burooj Air Drones adhere to the same concept, safety regulations, and rigorous controls and procedures in accordance with the international quality standards of ISO 9001, ISO 14001, and OHSAS 18001.",
+  REACH_WORLDWIDE_DESC:"Burooj Air drones adhere to all safety regulations, and rigorous controls and procedures in accordance with the Saudi General Authority of Civil Aviation",
   NO_MATTER_WHERE_YOU_ARE_IN_THE_WORLD:
-    "No matter where you are located, you can utilize our drone cleaning services as we possess authorized operating permissions from the required civil and aviation authorities. Additionally, all our franchisee drone operators have undergone extensive training and strictly adhere to the regional civil and aviation regulations.",
-    AT_OUR_COMPANY_WE_PRIORITIZE:"At our company, we prioritize health, safety, and the environment in all our job aspects. We aim create a safer workplace for both our employees and the public, promoting HSE and public safety standards in the best way possible.",
+    "No matter where you are located, you can utilize our drone cleaning services as we possess authorized operating permissions from the required civil and aviation authorities. Additionally, we offer our franchisee extensive operation training which strictly adhere to the regional civil and aviation regulations.",
+    AT_OUR_COMPANY_WE_PRIORITIZE:"At Burooj Air, we prioritize health and safety in all our job aspects. We aim to create a safer workplace for both our employees and the public, promoting HSE and public safety standards in the best way possible.",
   THROUGHOUT_OUR_JOB_SECTORS:
     "Throughout our job sectors, HSE and public safety are highly prioritized. Drone use creates a workplace that is safer for both employees and the general public.",
   FUTURE_DEVELOPMENT: "FUTURE DEVELOPMENT",
@@ -182,19 +181,12 @@ export default {
   small repairs, special inspections and even surface treatment.`,
 
 
-  SPRAY_PAINTING:'Spray painting',
-  WITH_CONTINUED_DEVELOPMENT:`With continued development,
-  extended testing and new partnerships with paint
-  manufacturers, we are moving closer to the final testing
-  phase.`,
+  SPRAY_PAINTING:'Date Palms Pollination',
+  WITH_CONTINUED_DEVELOPMENT:`With our partners, our team is currently developing an automated date palms pollination drone to help digitize this area after evaluating the market needs..`,
 
-  HIGHER_ALTITUDES :'REACH HIGHER ALTITUDES AND MORE NON-REACHABLE AREAS',
+  HIGHER_ALTITUDES :'Reaching Higher Altitudes to Serve Highrise Buildings',
 
-  WE_HAVE_SOLVED_THE_OPERATING_HEIGHT_RESTRICTION:`We have solved the operating
-  height restriction with our patent pending roof safety system.
-  There are no longer limitations on operation height, and we
-  will continue the testing to be able to operate safely in
-  heights and altitudes up to 600 meters and above.`,
+  WE_HAVE_SOLVED_THE_OPERATING_HEIGHT_RESTRICTION:`We have solved the operating height restriction with our patent pending roof safety system. There are no longer limitations on operation height, and we will continue the testing to be able to operate safely in heights and altitudes up to 600 meters and above.`,
 
   GOGGLES:'Goggles',
 
@@ -214,6 +206,12 @@ export default {
   a lot of noise, high/low temperatures, and other problem
   areas.`,
 
+  MOHAMMED_CEO:'Mohammed bin Faihan - Founder & Chief Executive Officer',
+  MOHANNAD_CTO:'Mohannad F. Alotaibi - Chief Technology Officer',
+  OSAMAH_MD:'Osamah Abdullah Algrainees - Managing Director',
+  FAISAL_PM:'Faisal Ghazi Awadh - Projects Manager',
+  HATIM_DOM:'Hatim Hussin Shuwaikan - Drone Operations Manager',
+  MOHAMMED_DMS:'Mohammed Fathi Ali Alabrahim - Drone Maintenance Supervisor',
 
 
 
@@ -287,25 +285,20 @@ limitations on operation height, and we will continue the
 testing to be able to operate safely in heights and
 altitudes up to 600 meters and above.`,
 
-USE_LATEST_DRONE_CONTROL_TECHNOLOGIES:`USE LATEST DRONE CONTROL TECHNOLOGIES`,
+USE_LATEST_DRONE_CONTROL_TECHNOLOGIES:`Spray Painting`,
 
-AS_A_RESULT_OF_OPERATING_IN_HIGHER_ALTITUDES:`As a
-result of operating in higher altitudes, the use of special
-flight goggles is being considered and tested.`,
-CONTROLLING_THE_DRONE_ANYWHERE:`CONTROLLING THE DRONE ANYWHERE AT ANYTIME WITH THE MOST
-EFFECTIVE WAYS`,
+AS_A_RESULT_OF_OPERATING_IN_HIGHER_ALTITUDES:`The current operating cleaning drone we use can be utilized after some development to do painting work for buildings. It is a milestone we will mark in the coming future.`,
 
-LOOKING_BEYOND_2023:`Looking beyond 2023, BUROOJ AIR Working Drones is planning
-to create special control rooms where drone pilots can
-operate drones all over the world via the internet. Drone
-Pilots will be able to provide support, provide remote
-tasks, work safer and be able to provide specialist service
-to anywhere there is service.`,
+LONG_DISTANCE_DRONE_CONTROL:'Long Distance Drone Control (Inspection Drones)',
+
+AFTER_EVALUATION:'After evaluating current market needs, we are developing with our partners drones that could be operated from long distances via internet. This drone models will serve industries where frequent inspection is required in long distance areas or areas with harsh whether conditions.',
+
+CONTROLLING_THE_DRONE_ANYWHERE:`Using Latest Drone Controls Accessories`,
+
+LOOKING_BEYOND_2023:`We aim to raise efficiency in operations by offering our drone operators goggles to better visualize their operations.`,
 
 
-REMOTE_CONTROL_ROOMS_WOULD_BE:`Remote control rooms would be a great advantage in areas
-with a lot of noise, high/low temperatures, and other
-‘problem’ areas.`,
+REMOTE_CONTROL_ROOMS_WOULD_BE:`And much more!`,
 
 RESULT_OPERATING_IN_HIGHER_ALTITUDES :` As a result of operating in higher altitudes, the use of special
 flight goggles is being considered and tested.`,
