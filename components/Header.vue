@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="fixed-header">
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
@@ -125,17 +125,29 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.fixed-header {
+  position: fixed;
+  // top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
 header {
   background-color: $primary;
-  padding: 21px 0;
-  position: relative;
-  z-index: 999;
+  // padding: 21px 0;
+  padding-top: 21px;
+  padding-bottom: 0;
+
+  // position: relative;
+  // z-index: 999;
   .navigation {
     max-width: 1230px;
     width: 100%;
     margin: 0 auto;
     .navbar {
       padding: 0;
+      padding-left: 10px;
+      padding-right: 10px;
       width: 100%;
       .navbar-brand {
         padding: 0;
