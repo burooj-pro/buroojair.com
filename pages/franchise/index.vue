@@ -18,7 +18,8 @@
       <div class="container">
         <div class="row pt-3">
           <p>
-            <b>Franchise model Burooj AIR</b>
+            <h3>Franchise model Burooj AIR</h3>
+          
             <br />
             <b>NON-DISCLOSURE AGREEMENT</b>
           </p>
@@ -26,15 +27,14 @@
           <div class="col-6">
             <p><b>THIS AGREEMENT (the NDA) is entered into between:</b></p>
             <p>
-              (1) KTV Group AS, a private limited company incorporated under the
-              laws of Norway (registered no. 985 994 641) whose registered
-              office is at Hanøytangen 111, 5310 Hauglandshella, Askøy kommune
-              (Company); and (2) The visitor to this page and recipient of
-              information of the KTV Working Drone (the Recipient). together
+              (1) Burooj Air, a private limited company incorporated under the
+              laws of Saudi Arabia whose registered office is at PRINCE TURKI ST, KHOBAR, SAUDI ARABIA; and <br> <br>(2) The visitor to this page and recipient of
+              information of the Burooj Air (the Recipient). together
               referred to as the Parties and each as a Party to this NDA.
             </p>
             <p>
-              <b>BACKGROUND</b>
+              <br>
+              <b>BACKGROUND</b> <br><br>
               (A) The Company has developed a technology for utilizing drones in
               the cleaning industry and is contemplating a collaboration (the
               Collaboration) with the Recipient. The Company has therefore
@@ -43,16 +43,23 @@
               connection with such discussions be invited to a demonstration of
               the drone technology. Furthermore, the Recipient will be provided
               with certain Confidential Information (as defined in clause 1.1).
+              <br> <br>
               (B) This NDA sets out the terms and conditions agreed between the
               Parties in relation to the provision of such Confidential
-              Information by the Company to the Recipient. (C) The Confidential
+              Information by the Company to the Recipient.
+              <br><br>
+              (C) The Confidential
               Information provided from the Company to the Recipient will be
               provided on a non-exclusive basis, and this NDA does not restrict
               the Company to give the same Confidential Information to any other
               entities.
             </p>
             <p>
-              AGREED TERMS 1 Confidentiality 1.1 For the purpose of this NDA,
+               <br>
+              <b>   AGREED TERMS</b> <br><br>
+
+             <b> 1 Confidentiality </b> <br> <br>
+              1.1 For the purpose of this NDA,
               Confidential Information shall mean all information (however
               recorded or preserved) which is or has been, either directly or
               indirectly, disclosed or made available to the Recipient (in any
@@ -61,15 +68,18 @@
               also include any and all information regarding the existence,
               nature or progress of any discussions between the Parties relating
               to the possible Collaboration, including the demonstration of the
-              drone technology. 1.2 The Recipient shall keep all Confidential
+              drone technology.<br> <br>
+              1.2 The Recipient shall keep all Confidential
               Information strictly confidential and shall not disclose any
-              Confidential Information to any third party. 1.3 The Recipient may
+              Confidential Information to any third party. <br> <br>
+              1.3 The Recipient may
               disclose Confidential Information only when so required by law or
               any court of competent jurisdiction, provided that the Company is
-              given due notice prior to such disclosure. 1.4 The Recipient may
+              given due notice prior to such disclosure. <br> <br>
+              1.4 The Recipient may
               disclose such Confidential Information as may be necessary to such
-              of its directors, officers, employees, and advisors (the
-              Representatives) when strictly necessary to enable the Recipient
+              of its directors, officers, employees, and advisors<b> (the
+              Representatives)</b> when strictly necessary to enable the Recipient
               to evaluate, prepare for, negotiate and carry out the
               Collaboration. Prior to any such disclosure of Confidential
               Information, the Recipient shall ensure that each such
@@ -81,19 +91,24 @@
           </div>
           <div class="col-6">
             <p>
-              4 Non-competition, non-solicitation and non-recruitment 4.1 During
+               <b>  4 Non-competition, non-solicitation and non-recruitment  </b> <br> <br>
+             4.1 During
               the duration of this Agreement, the Recipient will not, and will
               ensure that the Recipient do not, without the prior written
               consent of the Company, either directly or indirectly become
               involved or participate in any capacity in any business,
               activities, decisions, operations, undertakings or concerns which,
-              in the reasonable opinion of the Company: (a) conflict, or appear
-              to conflict, with the interests of the Company; and (b) are in
+              in the reasonable opinion of the Company:<br> <br>
+              (a) conflict, or appear
+              to conflict, with the interests of the Company; and<br> <br>
+              (b) are in
               competition with, or are of a similar nature to, the activities of
-              the Company 4.2 In connection with the Recipient considering the
+              the Company <br> <br>
+              4.2 In connection with the Recipient considering the
               Collaboration, the Recipient and its Representatives shall not
               contact any of the Company’s employees, suppliers or customers
-              without the Company’s prior written consent. 4.3 The Recipient
+              without the Company’s prior written consent.<br> <br>
+               4.3 The Recipient
               shall not solicit or entice or endeavour to solicit or entice any
               existing supplier, customer or other contract or trading party of
               the Company to terminate or alter their business relationship with
@@ -104,13 +119,15 @@
             </p>
 
             <p>
+              <br> <br>
               4.4 The Recipient shall not solicit or entice or endeavour to
               solicit or entice any directors, employees or other
               representatives of the Company, or consultants delivering services
               to the Company, to leave their current employment. This clause
               shall remain in force during the negotiations regarding the
               Collaboration and for 12 months after the termination of such
-              negotiations if the negotiations are not successful. 4.6 The
+              negotiations if the negotiations are not successful.<br> <br>
+              4.5 The
               Recipient acknowledges that the covenants in respect of
               non-competition contained in this clause are fair and reasonable
               and that the Company is relying upon this acknowledgement in
@@ -119,8 +136,8 @@
               acknowledgement.
             </p>
 
-            <p>
-              4.7 The Recipient agrees and acknowledges that should the
+            <p><br> <br>
+              4.6 The Recipient agrees and acknowledges that should the
               Recipient take over or acquire any client from the Company during
               its term of engagement or within (12) twelve months after the
               termination of its engagement with the Company the Recipient will
@@ -135,7 +152,7 @@
             </p>
           </div>
         </div>
-
+<hr>
         <div class="row pt-3">
           <div class="col-4">
             <div class="pipedriveWebForms" data-pd-webforms="https://webforms.pipedrive.com/f/bXCZRhnEATSSg8AiaLHNw1Fkti3HRSJNU7pWyVOxhoYkm92ZdiQQcGzHw83hVqKg5J"><script src="https://webforms.pipedrive.com/f/loader"></script></div>
