@@ -45,13 +45,3 @@
     </div>
   </section>
 </template>
-
-<script>
-export default {};
-</script>
-
-<style lang="scss" scoped>
-/***** ADVANTAGE DRONE *****/
-
-
-</style>
