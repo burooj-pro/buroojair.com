@@ -694,6 +694,87 @@ section#globalReachSection{
 	}
 }
 
+section#workingGrowthSection{
+	&.working-growth-section {
+		background-color: rgba($secondary, 0.1);
+		position: relative;
+		padding: 240px 0;
+		.text-left {
+			h3 {
+				color: $black;
+				margin: 0 0 28px 0;
+			}
+		}
+		.text-box {
+			padding: 8px 0 0 0;
+			h4 {
+				color: $eclipse;
+				@include NeoSans(600);
+				font-size: $font16;
+				margin-bottom: 14px;
+				line-height: 24px;
+			}
+			p {
+				color: $eclipse;
+				margin-bottom: 14px;
+				max-width: 540px;
+				width: 100%;
+			}
+		}
+	}
+}
+
+section#safetyStatementSection{
+	&.safety-statement-section {
+		background-color: $primary;
+		padding: 250px 0 170px;
+		.statement-left {
+			h3 {
+				color: $white;
+				margin: 0 0 23px 0;
+			}
+			p {
+				color: $white;
+				margin-bottom: 14px;
+				max-width: 639px;
+				width: 100%;
+			}
+		}
+		.text-box {
+			p {
+				color: $white;
+				@include NeoSans(400);
+				font-size: $font16;
+				line-height: 24px;
+			}
+			ul {
+				padding: 14px 0 23px 23px;
+				li {
+					color: $white;
+					@include NeoSans(600);
+					font-size: $font16;
+					margin-bottom: 0px;
+					line-height: 24px;
+					position: relative;
+					padding-left: 18px;
+					&::after {
+						position: absolute;
+						content: "";
+						left: 0;
+						top: 8px;
+						background-color: $white;
+						width: 6px;
+						height: 6px;
+						border-radius: 50%;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
 article#newsArticle{
 	p {
 		font-size: $font16;
@@ -1208,84 +1289,7 @@ article#newsArticle{
 		}
 	}
 	
-	/****** WORKING GROWTH SEc *****/
 	
-	.working-growth-sec {
-		background-color: rgba($secondary, 0.1);
-		position: relative;
-		padding: 240px 0;
-		.text-left {
-			h3 {
-				color: $black;
-				margin: 0 0 28px 0;
-			}
-		}
-		.text-box {
-			padding: 8px 0 0 0;
-			h4 {
-				color: $eclipse;
-				@include NeoSans(600);
-				font-size: $font16;
-				margin-bottom: 14px;
-				line-height: 24px;
-			}
-			p {
-				color: $eclipse;
-				margin-bottom: 14px;
-				max-width: 540px;
-				width: 100%;
-			}
-		}
-	}
-	
-	/***** SAFETY STATEMENT SEC *****/
-	
-	.safety-statement-sec {
-		background-color: $primary;
-		padding: 250px 0 170px;
-		.statement-left {
-			h3 {
-				color: $white;
-				margin: 0 0 23px 0;
-			}
-			p {
-				color: $white;
-				margin-bottom: 14px;
-				max-width: 639px;
-				width: 100%;
-			}
-		}
-		.text-box {
-			p {
-				color: $white;
-				@include NeoSans(400);
-				font-size: $font16;
-				line-height: 24px;
-			}
-			ul {
-				padding: 14px 0 23px 23px;
-				li {
-					color: $white;
-					@include NeoSans(600);
-					font-size: $font16;
-					margin-bottom: 0px;
-					line-height: 24px;
-					position: relative;
-					padding-left: 18px;
-					&::after {
-						position: absolute;
-						content: "";
-						left: 0;
-						top: 8px;
-						background-color: $white;
-						width: 6px;
-						height: 6px;
-						border-radius: 50%;
-					}
-				}
-			}
-		}
-	}
 	
 	/***** POPULATED SEC *****/
 	

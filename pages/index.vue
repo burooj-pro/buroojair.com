@@ -153,7 +153,7 @@
 		</section>
 
 		<!-- ABOUT US SEC -->
-    <SectionsAboutUsSection />
+		<SectionsAboutUsSection />
 		
 
 		<!-- ESTIMATED FUTURE SEC -->
@@ -198,110 +198,13 @@
 		<SectionsGlobalReachSection />
 
 		<!-- WORKING GROWTH SEC -->
-		<!-- <section class="working-growth-sec">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="text-left">
-              <h3>BUROOJ AIR WORKING DRONE GROWTH</h3>
-              <img
-                src="~assets/images/graph-img.png"
-                alt=""
-                class="img-fluid"
-              />
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="text-box">
-              <h4>
-                Drone use is increasing worldwide for a variety of purposes, and
-                many industries are still seeing rapid innovation. No matter if
-                they are flown for recreational, military, or commercial
-                purposes, drones are becoming more and more common. The
-                worldwide drone business is expanding year after year.
-              </h4>
-              <p>
-                Burooj Air Drones is a part of this expansion commercializing
-                the usage of drones for the cleaning business by utilizing
-                several solutions.
-              </p>
-              <p>
-                Burooj Air Drones offers a comprehensive contactless solution
-                that reduces the hazards associated with conventional
-                techniques. A contactless solution might also lessen the
-                long-term risk to building structures, where minor mishaps can
-                occasionally occur without warning and necessitate repairs years
-                later.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="vacant-shape vacant-shape2">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1000 100"
-          preserveAspectRatio="none"
-        >
-          <path
-            class="elementor-shape-fill"
-            d="M761.9,44.1L643.1,27.2L333.8,98L0,3.8V0l1000,0v3.9"
-            fill="#f0f0f1"
-          ></path>
-        </svg>
-      </div>
-    </section> -->
+		<SectionsworkingGrowthSection />
+		
 
 		<!-- SAFETY STATEMENT SEC -->
-		<!-- <section class="safety-statement-sec">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-7">
-            <div class="statement-left">
-              <h3>OUR SAFETY STATEMENT</h3>
-              <p>
-                Safety is of the utmost importance to Burooj Air Drones’
-                management. The main objective is to guarantee that all
-                employees, partners, and franchises adhere to the BUROOJ AIR Working
-                Drone Safety Policy at all times in order to ensure safe
-                operations while maintaining the attention on everyone involved
-                and around.
-              </p>
-            </div>
-          </div>
-          <div class="col-md-5">
-            <div class="text-box">
-              <p>
-                In accordance with the safety standards established and defined
-                in the business's global safety policy, Burooj Air Drones
-                conducts the essential safety measures and safeguards, including
-                but not limited to the following:
-              </p>
-              <ul>
-                <li>To reduce our negative effects on the environment</li>
-                <li>Not to damage or annoy others who are not involved.</li>
-                <li>
-                  Not to cause harm to property, structures, cars, or other
-                  assets
-                </li>
-                <li>
-                  To always abide by the General Authority of Civil Aviation
-                  (GACA) and other international privacy laws, to treat
-                  information respectfully and carefully, and to do everything
-                  possible to comply with them.
-                </li>
-              </ul>
-              <p>
-                Burooj Air Drones will conduct its operations in accordance with
-                the established aviation culture. We will work to ensure the
-                brand and the sector experience good growth by learning,
-                developing, and modifying our service.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
+		<SectionsSafetyStatementSection />
+
+		
 
 		<!-- POPULATED SEC -->
 		<section class="populated-sec">
