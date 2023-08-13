@@ -1,6 +1,6 @@
 <template>
 	<header class="fixed-top z-3" style="">
-		<div class="mb-4 bg-info" style="height: 10px; --bs-bg-opacity: .1;"></div>
+		<div class="mb-4 bg-info" style="height: 10px; --bs-bg-opacity: 0.1"></div>
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12">
