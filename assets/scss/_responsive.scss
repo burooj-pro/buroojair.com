@@ -763,22 +763,26 @@
     }
     .work-stand-sec {
         padding: 50px 10px;
+        .work-vacant-shape {
+            top: -40px;
+            svg {
+                height: 40px;
+            }
+        }
     }
-    .work-stand-sec .work-vacant-shape svg {
-        height: 40px;
-    }
-    .work-stand-sec .work-vacant-shape {
-        top: -40px;
-    }
+
+
     .development-sec {
         padding: 70px 10px 50px;
-    }
-    .development-sec .development-left h3 {
-        margin: 0 0 5px 0;
-    }
-    .development-sec .development-left p {
-        font-size: 26px;
-        margin: 0 0 15px 0;
+        .development-left {
+            h3 {
+                margin: 0 0 5px 0;
+            }
+            p {
+                font-size: 26px;
+                margin: 0 0 15px 0;
+            }
+        }
     }
     .contact-section {
         background-color: #212121;
@@ -787,75 +791,81 @@
     footer {
         background-color: #3e7299;
         padding: 50px 10px;
+        .footer-left {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            span {
+                display: flex;
+                text-align: center;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                margin: 0 0 30px 0;
+                img {
+                    height: auto;
+                }
+                p {
+                    font-size: 16px;
+                    padding-left: 0;
+                    line-height: 20px;
+                }
+            }
+        }
+        .footer-right p {
+            font-size: 16px;
+            width: 100%;
+            margin: 10px 0 0 0;
+        }
     }
-    footer .footer-left {
-        display: flex;
-        align-items: flex-start;
-        flex-direction: column;
+
+    .heroServices {
+        .heroFlag {
+            padding: 50px 30px;
+            .titleText {
+                h2 {
+                    font-size: 44px;
+                    margin-bottom: 10px;
+                }
+                p {
+                    font-size: 24px;
+                    line-height: 30px;
+                }
+            }
+        }
     }
-    .footer-left span {
-        display: flex;
-        text-align: center;
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-        margin: 0 0 30px 0;
-    }
-    .footer-left span img {
-        height: auto;
-    }
-    footer .footer-left p {
-        font-size: 16px;
-        padding-left: 0;
-        line-height: 20px;
-    }
-    footer .footer-right p {
-        font-size: 16px;
-        width: 100%;
-        margin: 10px 0 0 0;
-    }
-    .heroServices .heroFlag {
-        padding: 50px 30px;
-    }
-    .heroServices .heroFlag .titleText h2 {
-        font-size: 44px;
-        margin-bottom: 10px;
-    }
-    .heroServices .heroFlag .titleText p {
-        font-size: 24px;
-        line-height: 30px;
-    }
+
     .contact-location {
         padding: 50px 0;
     }
     .enquireForm {
         margin-top: 50px;
     }
+    
     .service {
         padding: 50px 10px;
+        .text-box {
+            margin-bottom: 20px;
+            h3, h4, p{
+                color: #fff;
+                margin-bottom: 5px;
+            }
+            h4 {
+                font-size: 24px;
+                line-height: 30px;
+                margin: 5px 0 15px;
+            }
+            h5 {
+                font-size: 20px;
+                line-height: 24px;
+                margin-bottom: 15px;
+            }
+        }
+        .btn-secondary {
+            margin-top: 30px20px;
+        }
     }
-    .service .text-box {
-        margin-bottom: 20px;
-    }
-    .service .text-box h3,
-    .service .text-box h4,
-    .service .text-box p {
-        color: #fff;
-        margin-bottom: 5px;
-    }
-    .service .text-box h4 {
-        font-size: 24px;
-        line-height: 30px;
-        margin: 5px 0 15px;
-    }
-    .service .text-box h5 {
-        font-size: 20px;
-        line-height: 24px;
-        margin-bottom: 15px;
-    }
-    .service .btn-secondary {
-        margin-top: 30px20px;
-    }
+
     .advantages {
         padding: 50px 10px;
     }
