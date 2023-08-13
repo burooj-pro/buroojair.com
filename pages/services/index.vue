@@ -329,7 +329,7 @@
       </div>
     </section>
 
-    <ContactSection />
+    <SectionsContactSection />
     <Footer />
   </div>
 </template>
@@ -625,5 +625,4 @@ p {
 
 // responsive
 
-@import "~assets/scss/pages.scss/responsive.scss";
 </style>

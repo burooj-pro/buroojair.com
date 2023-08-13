@@ -1,39 +1,10 @@
 <template>
   <div>
     <Header />
-    <!-- BANNER SEC -->
-    <section class="banner-sec partner mt-5 pt-4">
-      <iframe
-        src="https://player.vimeo.com/video/713580406?h=6988e72af6&amp;muted=1&amp;autoplay=1&amp;loop=1&amp;transparent=0&amp;background=1&amp;app_id=122963"
-        width="426"
-        height="240"
-        frameborder="0"
-        allow="autoplay; fullscreen; picture-in-picture"
-        title="BUROOJ AIR Working Drone"
-        data-ready="true"
-        class="elementor-background-video-embed d-none d-md-block"
-        style="width: 1903px; height: 1072.11px"
-      ></iframe>
-
-      <iframe
-        src="https://player.vimeo.com/video/713580406?h=6988e72af6&amp;app_id=122963"
-        width="426"
-        height="240"
-        frameborder="0"
-        allow="autoplay; fullscreen; picture-in-picture"
-        title="BUROOJ AIR Working Drone"
-        data-ready="true"
-        class="elementor-background-video-embed d-block d-md-none"
-        style="width: 1903px; height: 1072.11px"
-      ></iframe>
-
-      <div class="container">
-        <div class="titleText">
-          <h2>{{ $t("WINDOW_CLEANING") }}​</h2>
-          <p>{{ $t("BUROOJ_WORKING_DRONE") }}</p>
-        </div>
-      </div>
-    </section>
+    <!-- Hero -->
+    <SectionsHeroPartnerSection />
+    
+    
     <!-- CLEANING SEC -->
     <section class="cleaning">
       <div class="container">
@@ -263,38 +234,8 @@
         </div>
       </div>
     </section>
-    <!-- FAMILY SEC -->
-    <!-- <section class="family">
-      <div class="container-fluid">
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <div class="text-box">
-              <h3>WE ARE FAMILY</h3>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="text-box">
-              <h4>
-                We think of our partners as family. Everyone supports and backs
-                each other up like a family, and in this way we grow and get
-                better together.
-              </h4>
-              <p>
-                The BUROOJ AIR Working Drone is just one of the concepts and
-                possibilities we are working on, and for the next few years
-                there will be new concepts with just as much potential. All in
-                which we want to offer our partners around the world.
-              </p>
-              <p>
-                We believe the key to all innovations is that it is something
-                new, really usable and makes a direct or indirect improvement
-                for people.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
+    
+    
 
     <!-- ADVANTAGE SEC -->
     <AdvantageSection />
@@ -367,53 +308,7 @@ p {
   color: $black;
 }
 
-.banner-sec {
-  position: relative;
 
-  &.partner {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-
-    iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-    }
-  }
-
-  .container {
-    position: relative;
-    z-index: 99;
-
-    .titleText {
-      p,
-      h2 {
-        color: $white;
-      }
-
-      h2 {
-        color: $white;
-        font-size: 68px;
-        font-weight: 700;
-        text-transform: none;
-        line-height: 68px;
-        word-spacing: 0px;
-        text-shadow: 0px 0px 24px rgba(0, 0, 0, 0.3);
-        max-width: 360px;
-        margin-bottom: 20px;
-      }
-
-      p {
-        font-size: $font16;
-        font-weight: 600;
-      }
-    }
-  }
-}
 
 .cleaning {
   background-color: $mainly_blue;
@@ -656,31 +551,8 @@ p {
   }
 }
 
-.family {
-  background: $primary;
 
-  .text-box {
-    padding: 200px 100px;
-
-    h3 {
-      color: $white;
-      text-align: center;
-    }
-
-    h4 {
-      color: $white;
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
-
-    p {
-      color: $white;
-      margin-bottom: 20px;
-    }
-  }
-}
 
 // responsive
 
-@import "~assets/scss/pages.scss/responsive.scss";
 </style>
