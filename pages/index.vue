@@ -18,7 +18,7 @@
 					<div class="col-md-6">
 						<div class="image-holder">
 							<img src="~assets/images/arrived-drone-img.png" alt="" class="img-fluid" />
-							<h4>
+							<h4 class="z-2">
 								{{ $t("BUILDINGS_CLEANING") }} <br />
 								{{ $t("AND_HEAVYLIFTING_USING_DRONE") }}
 							</h4>
@@ -26,7 +26,7 @@
 					</div>
 					<div class="col-md-6">
 						<div class="text-box">
-							<h4>
+							<h4 class="z-2">
 								{{ $t("THE_BEST_SOLUTION_TO_CLEAN_BUILDINGS_AND_LIFT_HEAVY_WEIGHTS_IN_A_FASTER_WAY_IS_AVAILABLE_NOW") }}
 							</h4>
 							<p>
@@ -84,13 +84,13 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-7">
-						<div class="let-talk-left">
+						<div class="let-talk-left z-2">
 							<h4>{{ $t("FRANCHISE") }}</h4>
 							<p>{{ $t("OPPORTUNITIES_AVAILABLE") }}</p>
 						</div>
 					</div>
 					<div class="col-md-5">
-						<div class="let-talk-right">
+						<div class="let-talk-right z-2">
 							<p>
 								{{ $t("TAKE_PART_IN_THE_MOST_INNOVATIVE_BUSINESS_IDEA") }}
 							</p>
