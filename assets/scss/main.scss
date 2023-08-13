@@ -207,14 +207,18 @@ section#heroPartnerSection{
 	  }
 }
 
+h3 {
+	color: $mainly_blue;
+	font-size: $font62;
+	text-transform: uppercase;
+	line-height: 68px;
+	@include NeoSans(900);
+}
+
 section#contactSection{
 
 	h3 {
-		color: $mainly_blue;
 		font-size: $font50;
-		text-transform: uppercase;
-		line-height: 68px;
-		@include NeoSans(900);
 	  }
 	  
 	  p {
@@ -319,11 +323,13 @@ section#aboutUsSection{
 		.about-us-right {
 			background: url(~assets/images/ktv_dronepilot.jpg) no-repeat;
 			background-position: center center;
-			
 			background-size: cover;
 			position: relative;
 			object-fit: cover;
 			height: 800px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			&::after {
 				position: absolute;
 				content: "";
@@ -333,7 +339,15 @@ section#aboutUsSection{
 				height: 100%;
 				background-color: rgba($black, 0.4);
 			}
-
+			.text-box {
+				z-index:10;
+				h3 {
+				}
+				h4 {
+					@include NeoSans(600);
+					text-transform: uppercase;
+				}
+			}
 		}
 	}
 }
@@ -675,6 +689,181 @@ section#globalReachSection{
 			}
 			.btn-secondary {
 				margin-top: 24px;
+			}
+		}
+	}
+}
+
+article#newsArticle{
+	p {
+		font-size: $font16;
+		line-height: 24px;
+		@include NeoSans(400);
+		color: $charcoal;
+	}
+	
+	.btn-secondary {
+		background-color: $orange;
+		padding: 0;
+		border: 1px solid $orange;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		color: $white;
+		text-transform: uppercase;
+		@include NeoSans(900);
+		@include border_radius(4px);
+		height: 54px;
+		padding: 0 29px;
+		span {
+			display: block;
+			margin-right: 10px;
+			svg {
+				width: 20px;
+				height: 20px;
+				display: block;
+			}
+		}
+	}
+	
+	.btn-white {
+		background-color: $white;
+		color: $black;
+	}
+	
+	.news-sec {
+		padding: 65px 0;
+	
+		.news-inner {
+			h4 {
+				@include NeoSans(400);
+				font-size: $font38;
+				text-transform: uppercase;
+				line-height: 1;
+				color: $dark_gray2;
+				margin: 0 0 50px 0;
+			}
+		}
+	}
+	
+	.news-box {
+		margin: 20px 0;
+	
+		.text-box {
+			margin: 16px 0 0 0;
+	
+			h5 {
+				@include NeoSans(600);
+				font-size: $font20;
+				text-transform: uppercase;
+				line-height: 1;
+				color: $bright_gray;
+				margin: 0 0 5px 0;
+			}
+	
+			span {
+				display: block;
+				color: $gray53;
+				@include NeoSans(400);
+				font-size: $font14;
+				text-transform: uppercase;
+				line-height: 16px;
+			}
+	
+			p {
+				color: $matterhorn;
+				@include NeoSans(400);
+				font-size: $font14;
+				line-height: 16px;
+				margin: 17px 0 13px 0;
+			}
+	
+			a {
+				font-size: $font13;
+				@include NeoSans(600);
+				color: $black;
+				display: block;
+			}
+		}
+	}
+	
+	.detail-card {
+		h3 {
+			font-size: $font32;
+			line-height: 1;
+			margin-bottom: 0.9rem;
+		}
+	
+		.date {
+			margin-bottom: 0.9rem;
+		}
+	
+		.titleImg {
+			margin-bottom: 0.9rem;
+		}
+	
+		.text-box {
+			p {
+				margin-bottom: 0.9rem;
+			}
+		}
+	
+		.like {
+			display: flex;
+			align-items: center;
+			margin: 0 -8px 0.9rem;
+	
+			li {
+				padding: 0 8px;
+	
+				a {
+					display: inline-flex;
+					align-items: center;
+	
+					i {
+						margin-right: 8px;
+						line-height: 0;
+	
+						svg {
+							width: 16px;
+							height: 16px;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	.navigation {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin: 20px 0;
+	
+		a {
+			display: flex;
+			align-items: center;
+	
+			i {
+				margin-right: 10px;
+			}
+	
+			span {
+				flex: 1;
+				font-size: 14px;
+				text-transform: uppercase;
+				color: $gray53;
+	
+				&.media {
+					display: flex;
+					flex-direction: column;
+	
+					strong {
+						font-weight: bold;
+						color: $black;
+						font-weight: 700;
+					}
+				}
 			}
 		}
 	}
