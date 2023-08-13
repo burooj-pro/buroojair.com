@@ -738,14 +738,14 @@
         }
     }
     
-    .global-reach-sec {
+    .global-reach-section {
         padding: 120px 10px 50px;
-    }
-    .global-reach-sec .text-left h3 {
-        margin: 0 0 9px 0;
-    }
-    .global-reach-sec .text-right .btn-secondary {
-        margin-top: 0;
+        .text-left h3 {
+            margin: 0 0 9px 0;
+        }
+        .text-right .btn-secondary {
+            margin-top: 0;
+        }
     }
     .working-growth-sec .text-left h3 {
         margin: 0 0 20px 0;
@@ -999,7 +999,7 @@
         font-size: 26px;
         line-height: 36px;
     }
-    .global-reach-sec {
+    .global-reach-section {
         padding: 90px 10px 50px;
     }
     .estimated-future-sec .estimated-future-left p {
