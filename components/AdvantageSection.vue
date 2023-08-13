@@ -38,12 +38,6 @@
                   {{ $t("ACCESSING_ELEVATED_AREAS_WITHOUT_REQUIRING_HEIGHT_SPECIFIC_TOOLS") }}
                 </p>
               </li>
-              <li>
-                <span><img src="~assets/images/check-icon.png" alt="" /></span>
-                <p class="mx-2">
-                  {{ $t("ZERO_CONTACT_ALTERNATIVE") }}
-                </p>
-              </li>
             </ul>
           </div>
         </div>

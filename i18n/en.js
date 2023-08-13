@@ -16,11 +16,11 @@ export default {
     "For inquiries please use our listed contact info.",
   ADVANTAGES_USING_BUROOJ_AIR_DRONES: "Benefits of Utilizing Our Cleaning Drones",
   HIGH_SPEED_AND_EFFECTIVE_SURPASSING_TRADITIONAL_METHODS:
-    "High-speed and effective, surpassing traditional methods by a factor of 5-10 in terms of results.",
+    "Faster solution saving you time by a factor of 5-10 in terms of results.",
     SIMPLIFIED_ACCESS_TO_REMOTE_OR_HARD_TO_GET_TO_PLACES: "Simplified access to remote or hard-to-get-to places.",
-  REINFORCED_SAFETY_AND_SECURITY: "Reinforced safety and security.",
+  REINFORCED_SAFETY_AND_SECURITY: "Safer than all other traditional methods",
   ACCESSING_ELEVATED_AREAS_WITHOUT_REQUIRING_HEIGHT_SPECIFIC_TOOLS:
-    "Accessing elevated areas without requiring height-specific tools.",
+    "Competitive price compared to other solutions",
     ZERO_CONTACT_ALTERNATIVE: "Zero-contact alternative.",
   NOW_REQUEST_A_QUOTE_FOR_DRONE_CLEANING:
     "Request a Quote",
@@ -34,7 +34,7 @@ export default {
   CLEANING_BUILDINGS_AND_HEAVY_LIFTING: "Utilizing aerial technologies to digitize traditional services",
   CLEANING_BUILDINGS : "CLEANING BUILDINGS ",
   CLEANING_BUILDINGS_DESC:
-    "Offering aerial drone cleaning and sanitization, a safer, faster and less expensive alternation to traditional cleaning methods. Burooj Air's technology and team provide unpresedented solutions to cleaning buildings utlizing drones.",
+    "Offering aerial drone cleaning and sanitization, a safer, faster and less expensive alternation to traditional cleaning methods. Burooj Air's technology and team provide unpresedented solutions to cleaning buildings utlizing drones. Burooj Air's technology and team provide unpresedented solutions to cleaning buildings utlizing drones.",
   READ_MORE: "Read More",
   HEAVY_LIFTING: "HEAVY LIFTING",
   HEAVY_LIFTING_DESC:
@@ -44,8 +44,8 @@ export default {
   IS_REQUIRED: "IS REQUIRED ",
   APPLY_NOW: "APPLY NOW",
   WINDOW_AND_FACADE: "Window & Facade",
-  BUILDINGS_CLEANING:"BUILDINGS CLEANING",
-  AND_HEAVYLIFTING_USING_DRONE:"and HEAVYLIFTING USING DRONE",
+  BUILDINGS_CLEANING:"Utilizing Drones to Offer a ",
+  AND_HEAVYLIFTING_USING_DRONE:"More Safer and Efficient Solution",
   CLEANING_WITH_DRONE: "Cleaning with Drone",
   THE_BEST_SOLUTION_TO_CLEAN_BUILDINGS_AND_LIFT_HEAVY_WEIGHTS_IN_A_FASTER_WAY_IS_AVAILABLE_NOW:
     "We are currently offering buildings cleaning, solar panels cleaning and heavy material lifting by our drones.",
@@ -131,11 +131,7 @@ export default {
   money, as it eliminates the need for traditional methods of
   cleaning, such as scaffolding and manual labor.`,
 
-  WEIGHTLIFTING_BUROOJ_AIR_DRONES_CAN_BE_USED:`Weightlifting: Burooj Air’s drones can be used to lift and
-  transport heavy objects up to 50 kg, such as construction
-  materials or medical supplies. This can be a valuable tool for
-  businesses and organizations that need to move heavy objects
-  quickly and efficiently.`,
+  WEIGHTLIFTING_BUROOJ_AIR_DRONES_CAN_BE_USED:`Weightlifting: Lifting and transporting heavy objects up to 50 kg, such as construction materials or medical supplies. This can be a valuable tool for orgnizations that needs to move heavy objects quickly and efficiently.`,
 
   HEAT_MEASUREMENT_AND_FIRE_FIGHTING:`Heat Measurement & Fire Fighting: Drones from Burooj Air can
   measure heat signatures, identify potential fire hazards, or
@@ -266,12 +262,11 @@ export default {
   time. It also eliminates the risk of surface wear such as
   streaks caused by the more traditional , more dangerous manual
   cleaning methods.`,
-  SOLAR_CELL_PANEL:`Solar Cell panel`,
+  SOLAR_CELL_PANEL:`Solar Panels`,
   CLEANING:`Cleaning`,
   //new
   THIS_PROCEDURE_KEEPS:`Reducing the risk of damaging the solar panels with traditional cleaning methods.`,
-  OUR_WINDOW_CLEANING_METHOD:`Our window cleaning method is perfect for cleaning solar panels,
-                And it is completely safe for the panel's surface.`,
+  OUR_WINDOW_CLEANING_METHOD:`Our cleaning drones are perfect for the task of cleaning solar panels, and due to its price, frequent cleaning is possible. Knowing our weather in Saudi Arabia and how often sand-storms reduce the efficiency of solar panels, We made it possible with our competitive prices and safer solution to clean them more often.`,
 
 ADDITIONALLY_THIS_TECNHIQUE:`Additionally, this technique offers a notable advantage of
 preventing stains and keeping the surfaces cleaner for a longer
