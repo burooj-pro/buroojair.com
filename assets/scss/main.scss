@@ -869,6 +869,463 @@ article#newsArticle{
 	}
 }
 
+#indexPage{
+	h3 {
+		color: $mainly_blue;
+		font-size: $font62;
+		text-transform: uppercase;
+		line-height: 68px;
+		@include NeoSans(900);
+	}
+	
+	p {
+		font-size: $font16;
+		line-height: 24px;
+		@include NeoSans(400);
+		color: $charcoal;
+	}
+	
+	.btn-secondary {
+		background-color: $orange;
+		padding: 0;
+		border: 1px solid $orange;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		color: $white;
+		text-transform: uppercase;
+		@include NeoSans(900);
+		@include border_radius(4px);
+		height: 54px;
+		padding: 0 29px;
+		span {
+			display: block;
+			margin-right: 10px;
+			svg {
+				width: 20px;
+				height: 20px;
+				display: block;
+			}
+		}
+	}
+	
+	.btn-white {
+		color: #1f1a1c;
+	
+		background-color: white;
+		padding: 0;
+		border: 1px solid $orange;
+		display: flex !important;
+		align-items: center;
+		justify-content: center;
+		// color: $white;
+		text-transform: uppercase;
+		@include NeoSans(900);
+		@include border_radius(4px);
+		height: 54px;
+		padding: 0 29px;
+		span {
+			display: block;
+			margin-right: 10px;
+			svg {
+				width: 20px;
+				height: 20px;
+				display: block;
+			}
+		}
+	}
+	
+	.btn-white:hover {
+		background-color: white !important;
+	}
+	
+	.btn-blue {
+		background-color: $secondary !important;
+		color: $white !important;
+		border: 1px solid $secondary !important;
+	}
+	
+	.title {
+		h2 {
+			color: $dark_gray;
+			font-size: $font62;
+			text-transform: uppercase;
+			line-height: 1;
+			@include Helvetica(bold);
+			margin: 0 0 25px 0;
+		}
+		p {
+			color: $dark_gray;
+			font-size: $font42;
+			text-transform: uppercase;
+			line-height: 52px;
+			@include NeoSans(400);
+		}
+	}
+	
+	.shape-bottom {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		transform: rotateX(180deg);
+		svg {
+			height: 42px;
+			width: 100%;
+			display: block;
+		}
+	}
+	
+	.vacant-shape {
+		position: absolute;
+		bottom: -42px;
+		left: 0;
+		width: 100%;
+		z-index: 10;
+		svg {
+			height: 42px;
+			width: 100%;
+			display: block;
+		}
+		&.vacant-shape2 {
+			bottom: -60px;
+			svg {
+				height: 60px;
+			}
+		}
+	}
+	
+	/***** ARRIVED DRONE *****/
+	
+	.arrived-drone-sec {
+		// background-color: $secondary;
+		background: linear-gradient(206deg, #1f1a1c 0%, #212121 38.25%, #3437ff 100%);
+		.image-holder {
+			position: relative;
+			height: 800px;
+			&::after {
+				position: absolute;
+				content: "";
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba($black, 0.4);
+			}
+			img {
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+			}
+			h4 {
+				@include NeoSans(700);
+				font-size: $font62;
+				text-align: right;
+				text-transform: uppercase;
+				line-height: 68px;
+				position: absolute;
+				top: 50%;
+				transform: translate(0, -50%);
+				color: $white;
+				right: 0;
+				width: 100%;
+				padding: 100px;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: flex-end;
+				z-index: 10;
+			}
+		}
+		.text-box {
+			padding: 140px 140px 140px 140px;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+			h4 {
+				font-size: $font42;
+				color: $white;
+				text-transform: uppercase;
+				line-height: 52px;
+				@include NeoSans(600);
+			}
+			p {
+				color: $white;
+				margin: 30px 0 34px;
+			}
+		}
+	}
+	
+	/***** SOLAR SELL SEC ******/
+	
+	.solar-cell-sec {
+		background-color: $blue;
+		position: relative;
+		.image-holder {
+			&::after {
+				background-color: rgba($black, 0.2);
+			}
+		}
+		.text-box {
+			p {
+				margin-bottom: 15px;
+			}
+		}
+		.vacant-shape {
+			bottom: auto;
+			top: 0;
+			svg {
+				height: 60px;
+			}
+		}
+	}
+	
+	/***** LET TALK AEC ******/
+	
+	.let-talk-sec {
+		background: url(~assets/images/map_grey.png) no-repeat;
+		background-position: center center;
+		background-size: cover;
+		position: relative;
+		padding: 340px 0 290px;
+		&::after {
+			position: absolute;
+			content: "";
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba($gray10, 0.88);
+		}
+		.let-talk-left {
+			position: relative;
+			z-index: 10;
+			h4 {
+				color: $black;
+				font-size: $font62;
+				text-transform: uppercase;
+				line-height: 68px;
+				@include NeoSans(900);
+				margin: 0 0 24px 0;
+			}
+			p {
+				color: $black;
+				font-size: $font42;
+				text-transform: uppercase;
+				line-height: 52px;
+				@include NeoSans(400);
+			}
+		}
+		.let-talk-right {
+			position: relative;
+			z-index: 10;
+			p {
+				color: $black;
+				@include NeoSans(400);
+				font-size: $font20;
+				margin: 0 0 36px 0;
+				line-height: 24px;
+			}
+		}
+	}
+	
+	/***** INTENTION SEC ******/
+	
+	.intention-sec {
+		padding: 220px 0 226px;
+		background-color: $primary;
+		.intention-left {
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			h3 {
+				color: $white;
+			}
+		}
+		.intention-right {
+			padding: 0 0 0 31px;
+			h4 {
+				color: $white;
+				font-size: $font20;
+				line-height: 24px;
+				@include NeoSans(600);
+				margin: 0 0 20px 0;
+			}
+			p {
+				color: $white;
+				margin: 0 0 16px 0;
+				&:last-child {
+					margin: 0;
+				}
+			}
+		}
+	}
+	/***** ESTIMATES FUTURE SEC ******/
+	
+	.estimated-future-sec {
+		background-color: #1f1f1f;
+		padding: 228px 0;
+		position: relative;
+		.estimated-future-left {
+			padding: 0 15px;
+			p {
+				color: $white;
+				@include NeoSans(400);
+				font-size: $font42;
+				text-transform: uppercase;
+				line-height: 52px;
+				max-width: 730px;
+				width: 100%;
+				text-align: center;
+				margin: 0 auto;
+			}
+		}
+		.estimated-future-right {
+			text-align: center;
+			height: 100%;
+			padding: 0 15px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			h3 {
+				color: $white;
+			}
+			p {
+				color: $white;
+				@include NeoSans(900);
+				font-size: $font41;
+				line-height: 40px;
+			}
+		}
+		.vacant-shape {
+			bottom: -70px;
+			SVG {
+				height: 70px;
+			}
+		}
+	}
+	
+	/****** WORKING GROWTH SEc *****/
+	
+	.working-growth-sec {
+		background-color: rgba($secondary, 0.1);
+		position: relative;
+		padding: 240px 0;
+		.text-left {
+			h3 {
+				color: $black;
+				margin: 0 0 28px 0;
+			}
+		}
+		.text-box {
+			padding: 8px 0 0 0;
+			h4 {
+				color: $eclipse;
+				@include NeoSans(600);
+				font-size: $font16;
+				margin-bottom: 14px;
+				line-height: 24px;
+			}
+			p {
+				color: $eclipse;
+				margin-bottom: 14px;
+				max-width: 540px;
+				width: 100%;
+			}
+		}
+	}
+	
+	/***** SAFETY STATEMENT SEC *****/
+	
+	.safety-statement-sec {
+		background-color: $primary;
+		padding: 250px 0 170px;
+		.statement-left {
+			h3 {
+				color: $white;
+				margin: 0 0 23px 0;
+			}
+			p {
+				color: $white;
+				margin-bottom: 14px;
+				max-width: 639px;
+				width: 100%;
+			}
+		}
+		.text-box {
+			p {
+				color: $white;
+				@include NeoSans(400);
+				font-size: $font16;
+				line-height: 24px;
+			}
+			ul {
+				padding: 14px 0 23px 23px;
+				li {
+					color: $white;
+					@include NeoSans(600);
+					font-size: $font16;
+					margin-bottom: 0px;
+					line-height: 24px;
+					position: relative;
+					padding-left: 18px;
+					&::after {
+						position: absolute;
+						content: "";
+						left: 0;
+						top: 8px;
+						background-color: $white;
+						width: 6px;
+						height: 6px;
+						border-radius: 50%;
+					}
+				}
+			}
+		}
+	}
+	
+	/***** POPULATED SEC *****/
+	
+	.populated-sec {
+		display: flex;
+		align-items: center;
+		img {
+			height: 530px;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+	
+	/***** WORK STAND SEC *****/
+	
+	.work-stand-sec {
+		background-color: $secondary;
+		position: relative;
+		padding: 140px 0;
+		h3 {
+			color: $white;
+		}
+		.text-box {
+			p {
+				color: $white;
+				margin-top: 23px;
+			}
+		}
+		.work-vacant-shape {
+			bottom: auto;
+			top: -66px;
+			transform: rotatex(180deg) rotatey(180deg);
+			width: 100%;
+			svg {
+				height: 66px;
+			}
+		}
+	}
+}
+
 #servicesPage{
 	p {
 		font-size: $font16;
@@ -1573,6 +2030,1027 @@ p {
 		  height: auto;
 		}
 	  }
+	}
+  }
+}
+
+#locationPage{
+	
+
+p {
+	font-size: $font16;
+	line-height: 24px;
+	@include NeoSans(400);
+	color: $charcoal;
+  }
+  
+  .btn-secondary {
+	background-color: $orange;
+	padding: 0;
+	border: 1px solid $orange;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	color: $white;
+	text-transform: uppercase;
+	@include NeoSans(900);
+	@include border_radius(4px);
+	height: 54px;
+	padding: 0 29px;
+	span {
+	  display: block;
+	  margin-right: 10px;
+	  svg {
+		width: 20px;
+		height: 20px;
+		display: block;
+	  }
+	}
+  }
+  
+  .btn-white {
+	background-color: $white;
+	color: $black;
+  }
+  .globalReach {
+	background: $primary;
+	padding: 140px 0 100px;
+	.text-box {
+	  h3,
+	  p {
+		color: $white;
+		margin-bottom: 20px;
+	  }
+	}
+  }
+  
+  .locationContent {
+	padding: 180px;
+	.caption {
+	  h3 {
+		font-size: $font42;
+		@include NeoSans(400);
+		line-height: 1.4;
+		margin-bottom: 20px;
+	  }
+	  p {
+		@include NeoSans(400);
+		text-transform: uppercase;
+		margin-bottom: 20px;
+	  }
+	}
+	.text-box {
+	  p {
+		margin-bottom: 0.9rem;
+	  }
+	}
+  }
+  
+  .map-holder {
+	height: 100%;
+	img {
+	  height: 100%;
+	  width: 100%;
+	  object-fit: cover;
+	  background-position: center center;
+	}
+  }
+  
+  .franchise {
+	position: relative;
+	background-color: $black;
+	background-image: url(~assets/images/kart_bluesss.png);
+	min-height: 800px;
+	padding: 120px 0;
+	display: flex;
+	align-items: center;
+	&:before {
+	  content: "";
+	  position: absolute;
+	  inset: 0;
+	  background-color: $black;
+	  opacity: 0.31;
+	}
+	.container {
+	  position: relative;
+	  z-index: 5;
+	}
+	.text-box {
+	  h3,
+	  p,
+	  h4 {
+		color: $white;
+		margin-bottom: 20px;
+	  }
+	  h4 {
+		font-size: $font42;
+		font-weight: 400;
+		text-transform: uppercase;
+		line-height: 52px;
+	  }
+	  p {
+		@include NeoSans(600);
+		font-size: 1.5rem;
+	  }
+	}
+  }
+  
+  .working-growth {
+	padding: 240px 0 70px 0;
+	background-color: $whiteSecondary;
+	img {
+	  max-width: 100%;
+	}
+	.text-box {
+	  h3,
+	  p {
+		margin-bottom: 0.9rem;
+	  }
+	}
+  }
+  
+}
+
+#facadeCleaningPage{
+	
+p {
+	font-size: $font16;
+	line-height: 24px;
+	@include NeoSans(400);
+	color: $charcoal;
+  }
+  
+  .btn-secondary {
+	background-color: $orange;
+	padding: 0;
+	border: 1px solid $orange;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	color: $white;
+	text-transform: uppercase;
+	@include NeoSans(900);
+	@include border_radius(4px);
+	height: 54px;
+	padding: 0 29px;
+	span {
+	  display: block;
+	  margin-right: 10px;
+	  svg {
+		width: 20px;
+		height: 20px;
+		display: block;
+	  }
+	}
+  }
+  
+  .btn-white {
+	background-color: $white;
+	color: $black;
+  }
+  
+  .banner {
+	background-image: url(~assets/images/burooj_air_drone.jpg);
+	background-position: 50%;
+	background-repeat: no-repeat;
+	min-width: 100%;
+	min-height: 100%;
+	background-size: cover;
+	.overlay {
+	  background-color: rgba($overlay, 0.35);
+	  height: 330px;
+	}
+  }
+  
+  .service {
+	padding: 180px 0 40px 0;
+	background: $primary;
+	.text-box {
+	  color: $white;
+	  h3,
+	  h4,
+	  p {
+		color: $white;
+		margin-bottom: 20px;
+	  }
+	  h4 {
+		font-size: $font42;
+		line-height: 52px;
+		text-transform: uppercase;
+		font-weight: normal;
+		margin: 10px 0 20px;
+	  }
+	  h5 {
+		font-size: $font26;
+		font-weight: 800;
+		line-height: 26px;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+	  }
+	  .video-holder {
+		margin-bottom: 20px;
+		position: relative;
+		.iconPlay {
+		  position: absolute;
+		  left: 50%;
+		  top: 50%;
+		  @include translate(-50%, -50%);
+		  svg {
+			width: 212px;
+			height: 212px;
+			display: block;
+		  }
+		}
+	  }
+	}
+  }
+  
+  .advantages {
+	padding: 240px 0 110px;
+	background-image: url(~assets/images/BuroojAir_3.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	&:before {
+	  content: "";
+	  position: absolute;
+	  inset: 0;
+	  background-color: $black;
+	  opacity: 0.71;
+	  z-index: 10;
+	}
+	.container {
+	  position: relative;
+	  z-index: 55;
+	}
+	.text-box {
+	  h4,
+	  h3,
+	  p {
+		color: $white;
+	  }
+	  h4 {
+		margin-top: 0.5rem;
+		margin-bottom: 1rem;
+		font-weight: bold;
+		line-height: 1.2;
+		font-size: $font32;
+	  }
+	  p {
+		margin-bottom: 0.9rem;
+	  }
+	}
+  }
+  
+  .inquiry {
+	background: $whiteSecondary;
+	padding: 100px 0;
+	h3 {
+	  margin-bottom: 20px;
+	}
+	p {
+	  margin-bottom: 20px;
+	}
+	.row {
+	  align-items: center;
+	}
+	form {
+	  max-width: 504px;
+	  .form-group {
+		margin-bottom: 14px;
+	  }
+	  .form-control {
+		background-color: $white;
+		border-width: 0px 0px 0px 0px;
+		@include border_radius(8px);
+		height: 59px;
+	  }
+	  textarea {
+		&.form-control {
+		  height: auto;
+		}
+	  }
+	}
+  }
+}
+
+#contactPage{
+	
+p {
+	font-size: $font16;
+	line-height: 24px;
+	@include NeoSans(400);
+	color: $charcoal;
+  }
+  
+  .btn-secondary {
+	background-color: $orange;
+	padding: 0;
+	border: 1px solid $orange;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	color: $white;
+	text-transform: uppercase;
+	@include NeoSans(900);
+	@include border_radius(4px);
+	height: 54px;
+	padding: 0 29px;
+	span {
+	  display: block;
+	  margin-right: 10px;
+	  svg {
+		width: 20px;
+		height: 20px;
+		display: block;
+	  }
+	}
+  }
+  
+  .btn-white {
+	background-color: $white;
+	color: $black;
+  }
+  
+  .contactMap {
+	iframe {
+	  height: 511px;
+	  width: 100%;
+	}
+  }
+  
+  .contact-location {
+	padding: 100px 0;
+	background: $whiteSecondary;
+  
+	.titleText {
+	  h3 {
+		font-size: $font24;
+		text-transform: uppercase;
+		color: $black;
+		line-height: 1.4;
+		margin: 0;
+	  }
+  
+	  p {
+		text-transform: uppercase;
+		margin-bottom: 20px;
+	  }
+	}
+  
+	.text-box {
+	  p {
+		margin-bottom: 0.9rem;
+	  }
+	}
+  }
+  
+  .enquireForm {
+	margin-top: 100px;
+  
+	h3 {
+	  font-size: $font24;
+	  text-transform: uppercase;
+	  color: $black;
+	  line-height: 1.4;
+	  margin-bottom: 20px;
+	}
+  
+	.form-group {
+	  margin-bottom: 14px;
+	}
+  
+	.form-control {
+	  background-color: $white;
+	  border-width: 0px 0px 0px 0px;
+	  @include border_radius(8px);
+	  height: 59px;
+	}
+  
+	textarea {
+	  &.form-control {
+		height: auto;
+	  }
+	}
+  }
+}
+
+#aboutUsPage{
+	
+p {
+	font-size: $font16;
+	line-height: 24px;
+	@include NeoSans(400);
+	color: $charcoal;
+  }
+  .heroServices {
+	.heroFlag {
+	  padding: 100px;
+	  height: 100%;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  background-image: url(~assets/images/ktv_dronepilot.jpg);
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	  position: relative;
+	  &:after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background-color: $black;
+		opacity: 0.4;
+	  }
+	}
+	.text-box {
+	  padding: 100px;
+	  background: #e4e7ed !important;
+	  p {
+		color: $primary !important;
+		margin-bottom: 20px;
+	  }
+	}
+  }
+  
+  .titleText {
+	position: relative;
+	z-index: 5;
+	h2 {
+	  font-size: $font62;
+	  color: $white;
+	  margin-bottom: 20px;
+	  text-transform: uppercase;
+	}
+	p {
+	  font-size: $font42;
+	  text-transform: uppercase;
+	  color: $white;
+	  line-height: 52px;
+	}
+  }
+  
+  .method {
+	background: $primary;
+	color: $white;
+	padding: 240px 0 100px 0;
+	ol {
+	  li {
+		margin-bottom: 20px;
+	  }
+	}
+	.text-box {
+	  h3 {
+		color: $white;
+	  }
+	}
+	h4 {
+	  font-size: 1.25rem;
+	  color: $white;
+	  line-height: 1.4;
+	  margin-bottom: 0.9rem;
+	}
+	p {
+	  color: $white;
+	  margin-bottom: 0.9rem;
+	}
+  }
+  .standardSolar {
+	background: $primary;
+	padding: 240px 0px 100px 0px;
+	.text-box {
+	  p,
+	  h3 {
+		color: $white;
+		margin-bottom: 20px;
+	  }
+	}
+  }
+  .standardSolar {
+	&.aboutSetting {
+	  position: relative;
+	  background: $blue;
+  
+	  .shape {
+		fill: $primary;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 46px;
+		width: 100%;
+	  }
+  
+	  .settingStabdardBox {
+		height: 100%;
+	  }
+  
+	  .text-box {
+		h3,
+		p {
+		  color: $white;
+		  margin-bottom: 0.9rem;
+		}
+	  }
+	}
+  }
+  
+  .futureDevelopment {
+	position: relative;
+	background: $whiteSecondary !important;
+  
+	.shape {
+	  fill: $blue;
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  height: 46px;
+	  width: 100%;
+	}
+  
+	.text-box {
+	  h3 {
+		color: $primary !important;
+	  }
+  
+	  h4 {
+		font-weight: normal;
+		text-transform: uppercase;
+		font-size: $font42;
+		color: $primary !important;
+	  }
+  
+	  ul {
+		padding-left: 20px;
+		color: $primary !important;
+  
+		li {
+		  list-style: disc;
+		  font-size: $font16;
+		}
+	  }
+	}
+  }
+}
+
+#franchisePage{
+	
+p {
+	font-size: $font16;
+	line-height: 24px;
+	@include NeoSans(400);
+	color: $charcoal;
+  }
+  .heroServices {
+	.heroFlag {
+	  padding: 100px;
+	  height: 100%;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  background-image: url(~assets/images/ktv_dronepilot.jpg);
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	  position: relative;
+	  &:after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background-color: $black;
+		opacity: 0.4;
+	  }
+	}
+	.text-box {
+	  padding: 100px;
+	  background: #e4e7ed !important;
+	  p {
+		color: $primary !important;
+		margin-bottom: 20px;
+	  }
+	}
+  }
+  
+  .titleText {
+	position: relative;
+	z-index: 5;
+	h2 {
+	  font-size: $font62;
+	  color: $white;
+	  margin-bottom: 20px;
+	  text-transform: uppercase;
+	}
+	p {
+	  font-size: $font42;
+	  text-transform: uppercase;
+	  color: $white;
+	  line-height: 52px;
+	}
+  }
+  
+  .method {
+	background: $primary;
+	color: $white;
+	padding: 240px 0 100px 0;
+	ol {
+	  li {
+		margin-bottom: 20px;
+	  }
+	}
+	.text-box {
+	  h3 {
+		color: $white;
+	  }
+	}
+	h4 {
+	  font-size: 1.25rem;
+	  color: $white;
+	  line-height: 1.4;
+	  margin-bottom: 0.9rem;
+	}
+	p {
+	  color: $white;
+	  margin-bottom: 0.9rem;
+	}
+  }
+  .standardSolar {
+	background: $primary;
+	padding: 240px 0px 100px 0px;
+	.text-box {
+	  p,
+	  h3 {
+		color: $white;
+		margin-bottom: 20px;
+	  }
+	}
+  }
+  .standardSolar {
+	&.aboutSetting {
+	  position: relative;
+	  background: $blue;
+  
+	  .shape {
+		fill: $primary;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 46px;
+		width: 100%;
+	  }
+  
+	  .settingStabdardBox {
+		height: 100%;
+	  }
+  
+	  .text-box {
+		h3,
+		p {
+		  color: $white;
+		  margin-bottom: 0.9rem;
+		}
+	  }
+	}
+  }
+  
+  .futureDevelopment {
+	position: relative;
+	background: $whiteSecondary !important;
+  
+	.shape {
+	  fill: $blue;
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  height: 46px;
+	  width: 100%;
+	}
+  
+	.text-box {
+	  h3 {
+		color: $primary !important;
+	  }
+  
+	  h4 {
+		font-weight: normal;
+		text-transform: uppercase;
+		font-size: $font42;
+		color: $primary !important;
+	  }
+  
+	  ul {
+		padding-left: 20px;
+		color: $primary !important;
+  
+		li {
+		  list-style: disc;
+		  font-size: $font16;
+		}
+	  }
+	}
+  }
+  
+  .text-list {
+	ul {
+	  li {
+		display: flex;
+		align-items: center;
+		margin: 0 0 24px 0;
+		&:last-child {
+		  margin: 0;
+		}
+		span {
+		  max-width: 46px;
+		  width: 100%;
+		  margin: 0 16px 0 0px;
+		}
+		p {
+		  flex: 1;
+		  @include NeoSans(600);
+		  font-size: $font20;
+		  line-height: 24px;
+		}
+	  }
+	}
+  }
+  
+}
+
+#franchiseIndexPage{
+	.content {
+		background-color: #d7d7d7;
+	  }
+	  
+	  
+	  p {
+		font-size: $font16;
+		line-height: 24px;
+		@include NeoSans(400);
+		color: $charcoal;
+	  }
+	  .heroServices {
+		.heroFlag {
+		  padding: 100px;
+		  height: 100%;
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+		  background-image: url(~assets/images/ktv_dronepilot.jpg);
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		  position: relative;
+		  &:after {
+			content: "";
+			position: absolute;
+			inset: 0;
+			background-color: $black;
+			opacity: 0.4;
+		  }
+		}
+		.text-box {
+		  padding: 100px;
+		  background: #e4e7ed !important;
+		  p {
+			color: $primary !important;
+			margin-bottom: 20px;
+		  }
+		}
+	  }
+	  
+	  .titleText {
+		position: relative;
+		z-index: 5;
+		h2 {
+		  font-size: $font62;
+		  color: $white;
+		  margin-bottom: 20px;
+		  text-transform: uppercase;
+		}
+		p {
+		  font-size: $font42;
+		  text-transform: uppercase;
+		  color: $white;
+		  line-height: 52px;
+		}
+	  }
+	  
+	  .method {
+		background: $primary;
+		color: $white;
+		padding: 240px 0 100px 0;
+		ol {
+		  li {
+			margin-bottom: 20px;
+		  }
+		}
+		.text-box {
+		  h3 {
+			color: $white;
+		  }
+		}
+		h4 {
+		  font-size: 1.25rem;
+		  color: $white;
+		  line-height: 1.4;
+		  margin-bottom: 0.9rem;
+		}
+		p {
+		  color: $white;
+		  margin-bottom: 0.9rem;
+		}
+	  }
+	  .standardSolar {
+		background: $primary;
+		padding: 100px 0px 100px 0px;
+		.text-box {
+		  p,
+		  h3 {
+			color: #e4e7ed;
+			margin-bottom: 20px;
+		  }
+		}
+	  }
+	  .standardSolar {
+		&.aboutSetting {
+		  position: relative;
+		  background: $blue;
+	  
+		  .shape {
+			fill: $primary;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			right: 0;
+			height: 100px;
+			width: 100%;
+		  }
+	  
+		  .settingStabdardBox {
+			height: 100%;
+		  }
+	  
+		  .text-box {
+			h3,
+			p {
+			  color: $white;
+			  margin-bottom: 0.9rem;
+			}
+		  }
+		}
+	  }
+	  
+	  .futureDevelopment {
+		position: relative;
+		background: $whiteSecondary !important;
+	  
+		.shape {
+		  fill: $blue;
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  right: 0;
+		  height: 46px;
+		  width: 100%;
+		}
+	  
+		.text-box {
+		  h3 {
+			color: $primary !important;
+		  }
+	  
+		  h4 {
+			font-weight: normal;
+			text-transform: uppercase;
+			font-size: $font42;
+			color: $primary !important;
+		  }
+	  
+		  ul {
+			padding-left: 20px;
+			color: $primary !important;
+	  
+			li {
+			  list-style: disc;
+			  font-size: $font16;
+			}
+		  }
+		}
+	  }
+}
+
+#galleryPage{
+	
+p {
+	font-size: $font16;
+	line-height: 24px;
+	@include NeoSans(400);
+	color: $charcoal;
+  }
+  
+  .btn-secondary {
+	background-color: $orange;
+	padding: 0;
+	border: 1px solid $orange;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	color: $white;
+	text-transform: uppercase;
+	@include NeoSans(900);
+	@include border_radius(4px);
+	height: 54px;
+	padding: 0 29px;
+	span {
+	  display: block;
+	  margin-right: 10px;
+	  svg {
+		width: 20px;
+		height: 20px;
+		display: block;
+	  }
+	}
+  }
+  
+  .btn-white {
+	background-color: $white;
+	color: $black;
+  }
+  
+  .banner {
+	background-image: url(~assets/images/burooj_air_drone.jpg);
+	background-position: 50%;
+	background-repeat: no-repeat;
+	min-width: 100%;
+	min-height: 100%;
+	background-size: cover;
+	.overlay {
+	  background-color: rgba($overlay, 0.35);
+	  height: 330px;
+	}
+  }
+  
+  .gallery-main {
+	background-color: $gray10;
+	padding: 100px 0;
+  
+	.inner {
+	  background: $whiteSecondary;
+	  padding: 20px;
+	  height: 100%;
+	}
+  
+	h3 {
+	  text-transform: uppercase;
+	  font-size: $font42;
+	  font-weight: 400;
+	}
+  
+	.gallery-container {
+	  display: block;
+	  margin: 0 -5px;
+  
+	  li {
+		float: left;
+		padding: 2.5px 5px;
+  
+		&.large {
+		  width: 70%;
+		}
+  
+		&.small {
+		  width: 30%;
+  
+		  img {
+			height: 90px;
+			object-fit: cover;
+		  }
+		}
+  
+		&.medium {
+		  width: 70%;
+  
+		  img {
+			height: 90px;
+			object-fit: cover;
+			width: 100%;
+		  }
+		}
+	  }
+	}
+  
+	a {
+	  display: block;
+	}
+  }
+  
+  .video-wrapper { 
+	background: #fff;
+	padding: 20px;
+	height: 100%;
+  
+	.ratio {
+	  margin-bottom: 15px;
 	}
   }
 }
