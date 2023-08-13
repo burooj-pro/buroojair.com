@@ -487,7 +487,26 @@ safer solution to your high rise cleaning needs`,
 //end window cleaning
 
 
+// Franchise page
+FRANCHISE_OPPORTUNITIES_AVAILABLE: `Franchise opportunities available`,
+BECOME_INVOLVED_IN_THE_MOST_INNOVATIVE: `BECOME INVOLVED IN THE MOST INNOVATIVE BUSINESS IDEA THAT THE
+CLEANING INDUSTRY`,
+OUR_PHILOSOPHY_AT_BUROOJ:`Our philosophy at Burooj Air Working Drone is simple – provide innovative solutions that are safe and efficient and develop new and emerging technology utilising drones.`,
+BUROOJ_AIR_CREATING_A_FAMILY: `Burooj Air is creating a family of franchisees that are passionate about the industry and are looking to be part of a new and exciting business opportunity.`,
+WE_ARE_FAMILY: `WE ARE FAMILY`,
+WE_THINK_OF_OUR_PARTNERS_AS_FAMILY: `We think of our partners as family. Everyone supports and backs each other up like a family, and in this way, we grow and get better together.`,
+GET_INVOLVED_AND_BECOME_PARTNER: `GET INVOLVED AND BECOME PARTNER`,
+WE_ARE_SEEKING_INTERSET_FOR_COUNTRY_PARTNERS: 'We are seeking interest for country partners and franchise operators in existing countries. With new enquiries coming in every day, we are keen to be able to provide the services required. Once a commercial agreement has been executed we provide the following :',
+The_drone_and_all_the_fitting_required_to_operate_the_drone_for_cleaning_at_heights: `The drone and all the fitting required to operate the drone for cleaning at heights`,
+The_required_equipment_list_necessary_to_operate: `The required equipment list necessary to operate`,
+Assistance_and_application_directly_to_the_countries_civil_aviation_authority_for_licensing: `Assistance and application directly to the countries' Civil aviation authority for licensing (country partner ONLY)`,
+Full_UAV_operators_manual: `Full UAV operators manual`,
+COST: `The Costs`,
+If_like_to_find_out_more_and_get_involved_regardless: 'If you’d like to find out more and get involved regardless if you are looking to be a country partner or drone operator or would like to explore opportunities for how this can work for you, read further down and click the link/button on the bottom of the page.',
+Our_partnership_and_exclusive_master_license: `Our partnership and exclusive master license/franchise are assigned the rights for a country where they will become engaged to develop the country for Burooj Air and build a network of operators within local areas and territories within the given country.`,
+Our_aim_is_to_work_with_our_partners_to_expand: `Our aim is to work with our partners to expand the use of drones. We don’t aim simply to sell drones to be used by anyone, but to continue the brand name building on the knowledge and expertise gained to date. With this approach, both the Burooj Air brand and our business partners will continue to grow in the market as a service leader.`,
 
 
+NDA_BUTTON: `Click here to go to the NDA for Burooj Air`,
 
 };
