@@ -1,5 +1,5 @@
 <template>
-    <section id="globalReachSection" class="global-reach-section py-5">
+    <section id="globalReachSection" class="global-reach-section py-5 border-top border-bottom">
 			<div class="container py-5">
 				<div class="row">
 					<div class="col-md-6">
