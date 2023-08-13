@@ -1,5 +1,5 @@
 <template>
-  <section class="advantage-sec">
+  <section id="advantageSection" class="advantage-sec">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
@@ -53,56 +53,5 @@ export default {};
 <style lang="scss" scoped>
 /***** ADVANTAGE DRONE *****/
 
-h3 {
-  color: $mainly_blue;
-  font-size: $font62;
-  text-transform: uppercase;
-  line-height: 68px;
-  @include NeoSans(900);
-}
 
-p {
-  font-size: $font16;
-  line-height: 24px;
-  @include NeoSans(400);
-  color: $charcoal;
-}
-.advantage-sec {
-  // background-color: rgba($secondary, 0.1);
-  background-color:#E4E7ED;
-  padding: 130px 0;
-  .text-box {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    h3 {
-      max-width: 432px;
-    }
-  }
-  .text-list {
-    ul {
-      li {
-        display: flex;
-        align-items: center;
-        margin: 0 0 24px 0;
-        &:last-child {
-          margin: 0;
-        }
-        span {
-          max-width: 46px;
-          width: 100%;
-          margin: 0 16px 0 0px;
-        }
-        p {
-          flex: 1;
-          @include NeoSans(600);
-          font-size: $font20;
-          line-height: 24px;
-        }
-      }
-    }
-  }
-}
-
-@import "~assets/scss/pages.scss/responsive.scss";
 </style>

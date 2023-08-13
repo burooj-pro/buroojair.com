@@ -491,5 +491,4 @@ p {
 
 // responsive
 
-@import "~assets/scss/pages.scss/responsive.scss";
 </style>

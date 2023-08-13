@@ -36,14 +36,14 @@
     .arrived-drone-sec .image-holder {
         height: 650px;
     }
-    .about-us-sec .about-us-right {
+    .about-us-section .about-us-right {
         padding: 40px;
         height: 560px;
     }
-    .about-us-sec .about-us-right .text-box h3 {
+    .about-us-section .about-us-right .text-box h3 {
         margin: 0 0 15px 0;
     }
-    .about-us-sec .about-us-right .text-box h4 {
+    .about-us-section .about-us-right .text-box h4 {
         font-size: 34px;
         line-height: 44px;
     }
@@ -111,11 +111,11 @@
     header .navigation .navbar .navbar-brand img {
         height: 60px;
     }
-    .banner-sec .banner-inner .banner-form {
+    .hero-section .banner-inner .banner-form {
         padding: 30px;
         max-width: 425px;
     }
-    .vacant-pilot-sec .text-box .media h4 {
+    .vacant-pilot-section .text-box .media h4 {
         font-size: 30px;
     }
     .let-talk-sec {
@@ -130,10 +130,10 @@
         line-height: 54px;
         margin: 0 0 10px 0;
     }
-    .about-us-sec .about-us-left {
+    .about-us-section .about-us-left {
         padding: 30px;
     }
-    .about-us-sec .about-us-right {
+    .about-us-section .about-us-right {
         padding: 30px;
         height: 500px;
     }
@@ -141,7 +141,7 @@
         font-size: 24px;
         line-height: 34px;
     }
-    .banner-sec {
+    .hero-section {
         height: 810px;
         overflow: hidden;
     }
@@ -250,23 +250,23 @@
         height: 40px;
         width: 160px;
     }
-    .banner-sec {
+    .hero-section {
         height: 740px;
     }
-    .banner-sec .banner-inner .banner-form {
+    .hero-section .banner-inner .banner-form {
         padding: 30px;
         max-width: 380px;
         border-radius: 15px 50px;
     }
-    .banner-sec .banner-inner .banner-form .text-box {
+    .hero-section .banner-inner .banner-form .text-box {
         margin: 0 0 15px 0;
     }
-    .banner-sec .banner-inner .banner-form .text-box h3 {
+    .hero-section .banner-inner .banner-form .text-box h3 {
         font-size: 20px;
         line-height: 24px;
         margin: 0 0 10px 0;
     }
-    .banner-sec .banner-inner .banner-form .text-box p {
+    .hero-section .banner-inner .banner-form .text-box p {
         margin-bottom: 8px;
     }
     .title h2 {
@@ -277,13 +277,13 @@
         font-size: 28px;
         line-height: 36px;
     }
-    .servics-sec {
+    .services-section {
         padding: 90px 0;
     }
-    .vacant-pilot-sec .text-box .media img {
+    .vacant-pilot-section .text-box .media img {
         height: 45px;
     }
-    .vacant-pilot-sec .text-box .media h4 {
+    .vacant-pilot-section .text-box .media h4 {
         font-size: 22px;
     }
     .btn-secondary {
@@ -349,7 +349,7 @@
     .intention-sec .intention-right {
         padding: 0;
     }
-    .about-us-sec .about-us-left h4 {
+    .about-us-section .about-us-left h4 {
         font-size: 30px;
         line-height: 36px;
     }
@@ -357,18 +357,18 @@
         font-size: 14px;
         line-height: 22px;
     }
-    .about-us-sec .about-us-left {
+    .about-us-section .about-us-left {
         padding: 20px;
     }
-    .about-us-sec .about-us-left p {
+    .about-us-section .about-us-left p {
         line-height: 22px;
         margin: 20px 0;
     }
-    .about-us-sec .about-us-right {
+    .about-us-section .about-us-right {
         padding: 20px;
         height: 440px;
     }
-    .about-us-sec .about-us-right .text-box h4 {
+    .about-us-section .about-us-right .text-box h4 {
         font-size: 28px;
         line-height: 36px;
     }
@@ -463,10 +463,10 @@
     .safetyStand {
         padding: 100px 0;
     }
-    .banner-sec.partner {
+    .hero-section.partner {
         height: 440px;
     }
-    .banner-sec .container .titleText h2 {
+    .hero-section .container .titleText h2 {
         font-size: 50px;
         line-height: 53px;
         max-width: 460px;
@@ -586,43 +586,52 @@
     .shape-bottom {
         display: none;
     }
-    .banner-sec {
+    .hero-section {
         height: auto;
     }
-    .banner-sec .container-fluid {
+    .hero-section .container-fluid {
         padding: 0;
     }
-    .banner-sec .banner-inner {
+    .hero-section .banner-inner {
         position: static;
         transform: translate(0, 0);
     }
-    .banner-sec .banner-inner .banner-form {
+    .hero-section .banner-inner .banner-form {
         padding: 50px;
         max-width: 100%;
         border-radius: 0;
         margin: -6px 0 0 0;
     }
-    .banner-sec .banner-inner .banner-form .text-box {
+    .hero-section .banner-inner .banner-form .text-box {
         margin: 0 0 30px 0;
     }
-    .banner-sec .banner-inner .banner-form .text-box h3 {
+    .hero-section .banner-inner .banner-form .text-box h3 {
         font-size: 28px;
         line-height: 38px;
         margin: 0 0 15px 0;
     }
-    .banner-sec .banner-inner .banner-form .text-box p {
+    .hero-section .banner-inner .banner-form .text-box p {
         margin-bottom: 15px;
         font-size: 16px;
         line-height: 20px;
     }
-    .banner-sec iframe {
+    .hero-section iframe {
         width: 100% !important;
         height: 330px !important;
         object-fit: cover;
         object-position: center;
     }
-    .servics-sec {
+    .services-section {
         padding: 50px 10px;
+        .services-inner {
+            margin: 15px 0 0 0;
+            .text-box {
+                margin: 0 0 30px 0;
+                p {
+                    margin: 10px 0 20px 0;
+                }
+            }
+        }
     }
     .title h2 {
         font-size: 38px;
@@ -632,28 +641,20 @@
         font-size: 20px;
         line-height: 24px;
     }
-    .servics-inner {
-        margin: 15px 0 0 0;
-    }
-    .servics-inner .text-box p {
-        margin: 10px 0 20px 0;
-    }
-    .servics-inner .text-box {
-        margin: 0 0 30px 0;
-    }
-    .vacant-pilot-sec {
+    
+    .vacant-pilot-section {
         padding: 50px 0;
     }
-    .vacant-pilot-sec .text-box,
-    .vacant-pilot-sec .text-box .media {
+    .vacant-pilot-section .text-box,
+    .vacant-pilot-section .text-box .media {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .vacant-pilot-sec .text-box .media img {
+    .vacant-pilot-section .text-box .media img {
         height: 60px;
     }
-    .vacant-pilot-sec .text-box .media h4 {
+    .vacant-pilot-section .text-box .media h4 {
         font-size: 26px;
         margin: 20px 0;
     }
@@ -693,40 +694,50 @@
     .intention-sec .intention-left h3 {
         margin: 0 0 20px 0;
     }
-    .about-us-sec .about-us-left h4 {
-        font-size: 25px;
-        line-height: 30px;
+
+    
+    .about-us-section{
+        .about-us-left {
+            padding: 50px 20px;
+            h4 {
+                font-size: 25px;
+                line-height: 30px;
+            }
+            p {
+                line-height: 22px;
+                margin: 15px 0;
+            }
+        }
+
+        .about-us-right {
+            padding: 80px 20px;
+            height: auto;
+        }
     }
-    .about-us-sec .about-us-left p {
-        line-height: 22px;
-        margin: 15px 0;
-    }
-    .about-us-sec .about-us-left {
-        padding: 50px 20px;
-    }
-    .about-us-sec .about-us-right {
-        padding: 80px 20px;
-        height: auto;
-    }
+
+
+
+    
     .estimated-future-sec {
         padding: 50px 0;
+        .estimated-future-left {
+            padding: 0 15px 30px;
+            p {
+                font-size: 26px;
+                line-height: 36px;
+            }
+        }
+        .estimated-future-right p {
+            font-size: 26px;
+        }
+        .vacant-shape {
+            bottom: -40px;
+            SVG {
+                height: 40px;
+            }
+        }
     }
-    .estimated-future-sec .estimated-future-left {
-        padding: 0 15px 30px;
-    }
-    .estimated-future-sec .estimated-future-left p {
-        font-size: 26px;
-        line-height: 36px;
-    }
-    .estimated-future-sec .estimated-future-right p {
-        font-size: 26px;
-    }
-    .estimated-future-sec .vacant-shape SVG {
-        height: 40px;
-    }
-    .estimated-future-sec .vacant-shape {
-        bottom: -40px;
-    }
+    
     .global-reach-sec {
         padding: 120px 10px 50px;
     }
@@ -927,21 +938,21 @@
     .safetyStand {
         padding: 50px 10px;
     }
-    .banner-sec.partner {
+    .hero-section.partner {
         height: auto;
         flex-direction: column;
         background-color: rgba(107, 107, 119, 0.1);
     }
-    .banner-sec.partner iframe {
+    .hero-section.partner iframe {
         position: static;
     }
-    .banner-sec .container .titleText h2 {
+    .hero-section .container .titleText h2 {
         font-size: 38px;
         line-height: 40px;
         max-width: 100%;
         margin-bottom: 10px;
     }
-    .banner-sec .container .titleText {
+    .hero-section .container .titleText {
         display: none;
     }
     .cleaning {
@@ -983,11 +994,11 @@
 }
 
 @media (max-width: 575px) {
-    .banner-sec iframe {
+    .hero-section iframe {
         height: 220px !important;
         margin: 0;
     }
-    .banner-sec .banner-inner .banner-form {
+    .hero-section .banner-inner .banner-form {
         padding: 30px;
     }
     .arrived-drone-sec .image-holder h4 {
@@ -1160,10 +1171,10 @@
 }
 
 @media (max-width: 374px) {
-    .banner-sec iframe {
+    .hero-section iframe {
         height: 185px !important;
     }
-    .banner-sec .banner-inner .banner-form {
+    .hero-section .banner-inner .banner-form {
         padding: 20px;
     }
     .title h2 {
@@ -1174,7 +1185,7 @@
         font-size: 16px;
         line-height: 26px;
     }
-    .vacant-pilot-sec .text-box .media h4 {
+    .vacant-pilot-section .text-box .media h4 {
         font-size: 22px;
         margin: 20px 0;
     }

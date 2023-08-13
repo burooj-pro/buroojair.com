@@ -26,26 +26,20 @@ export default {
     ],
   },
 
-  css: ["~/assets/scss/main.scss"],
+  css: [],
   styleResources: {
     scss: [
-      "bootstrap/scss/bootstrap.scss",
-      "~assets/scss/abstracts.scss/_mixin.scss",
-      "~assets/scss/abstracts.scss/_variables.scss",
-      "~assets/scss/base.scss/_reset.scss",
-      "~assets/scss/base.scss/_typography.scss",
+      "~/assets/scss/main.scss",
     ],
   },
 
-  plugins: [{ src: "~/plugins/bootstrap.js", mode: "client" }],
+  plugins: [{ src: "~/plugins/bootstrap.client.js" }],
 
   components: {
     dirs: [
       "~/components",
     ],
   },
-
-  buildModules: [],
 
   modules: [
     "@nuxtjs/style-resources",
