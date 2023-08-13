@@ -3,6 +3,8 @@
     <video
     ref="videoPlayer"
     muted
+    autoplay
+    loop
     playsinline
     class="elementor-background-video-embed d-none d-md-block"
     style="width: 1903px; height: 1072.11px"
@@ -46,20 +48,6 @@
 
 <script>
 export default {
-  mounted() {
-    this.loadAndPlay();
-  },
-  methods: {
-    async loadAndPlay() {
-      
-      try {
-        await this.$refs.videoPlayer.load();
-        await this.$refs.videoPlayer.play();
-      } catch (error) {
-        console.error("Error playing video:", error);
-      }
-    }
-  },
 };
 </script>
 
