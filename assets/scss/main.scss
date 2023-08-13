@@ -1,5 +1,6 @@
 @import "_fonts.scss";
 @import "~bootstrap/scss/bootstrap";
+@import "bootstrap-icons/font/bootstrap-icons.css"; 
 @import "_mixin.scss";
 @import "_variables.scss";
 //@import '_reset.scss';
@@ -230,32 +231,9 @@ section#contactSection{
 	  
 	  .btn-secondary {
 		background-color: $orange;
-		padding: 0;
 		border: 1px solid $orange;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		color: $white;
-		text-transform: uppercase;
-		@include NeoSans(900);
-		@include border_radius(4px);
-		height: 54px;
-		padding: 0 29px;
-		span {
-		  display: block;
-		  margin-right: 10px;
-		  svg {
-			width: 20px;
-			height: 20px;
-			display: block;
-		  }
-		}
 	  }
-	  
-	  .btn-white {
-		background-color: $white;
-		color: $black;
-	  }
+
 	  
 	  /***** CONTACT SEC ******/
 
@@ -275,8 +253,7 @@ section#contactSection{
 		  ul {
 			border-top: 1px dotted $white;
 			li {
-			  &:last-child {
-			  }
+
 			  p {
 				color: $white;
 			  }
@@ -341,8 +318,7 @@ section#aboutUsSection{
 			}
 			.text-box {
 				z-index:10;
-				h3 {
-				}
+
 				h4 {
 					@include NeoSans(600);
 					text-transform: uppercase;
@@ -773,8 +749,6 @@ section#safetyStatementSection{
 	}
 }
 
-
-
 article#newsArticle{
 	p {
 		font-size: $font16;
@@ -785,32 +759,10 @@ article#newsArticle{
 	
 	.btn-secondary {
 		background-color: $orange;
-		padding: 0;
 		border: 1px solid $orange;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		color: $white;
-		text-transform: uppercase;
-		@include NeoSans(900);
-		@include border_radius(4px);
-		height: 54px;
-		padding: 0 29px;
-		span {
-			display: block;
-			margin-right: 10px;
-			svg {
-				width: 20px;
-				height: 20px;
-				display: block;
-			}
-		}
 	}
 	
-	.btn-white {
-		background-color: $white;
-		color: $black;
-	}
+
 	
 	.news-sec {
 		padding: 65px 0;
@@ -950,6 +902,39 @@ article#newsArticle{
 	}
 }
 
+.flip-horizontal{
+	transform: scaleX(-1);
+}
+
+.btn-white {
+	color: #1f1a1c;
+
+	background-color: white;
+	padding: 0;
+	border: 1px solid $orange;
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+	// color: $white;
+	text-transform: uppercase;
+	@include NeoSans(600);
+	@include border_radius(4px);
+	height: 54px;
+	padding: 0 29px;
+	span {
+		display: block;
+		margin-right: 10px;
+		svg {
+			width: 20px;
+			height: 20px;
+			display: block;
+		}
+	}
+	&:hover {
+		background-color: white !important;
+	}
+}
+
 #indexPage{
 	h3 {
 		color: $mainly_blue;
@@ -966,59 +951,9 @@ article#newsArticle{
 		color: $charcoal;
 	}
 	
-	.btn-secondary {
-		background-color: $orange;
-		padding: 0;
-		border: 1px solid $orange;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		color: $white;
-		text-transform: uppercase;
-		@include NeoSans(900);
-		@include border_radius(4px);
-		height: 54px;
-		padding: 0 29px;
-		span {
-			display: block;
-			margin-right: 10px;
-			svg {
-				width: 20px;
-				height: 20px;
-				display: block;
-			}
-		}
-	}
 	
-	.btn-white {
-		color: #1f1a1c;
 	
-		background-color: white;
-		padding: 0;
-		border: 1px solid $orange;
-		display: flex !important;
-		align-items: center;
-		justify-content: center;
-		// color: $white;
-		text-transform: uppercase;
-		@include NeoSans(900);
-		@include border_radius(4px);
-		height: 54px;
-		padding: 0 29px;
-		span {
-			display: block;
-			margin-right: 10px;
-			svg {
-				width: 20px;
-				height: 20px;
-				display: block;
-			}
-		}
-	}
 	
-	.btn-white:hover {
-		background-color: white !important;
-	}
 	
 	.btn-blue {
 		background-color: $secondary !important;
@@ -1338,34 +1273,7 @@ article#newsArticle{
 		color: $charcoal;
 	}
 	
-	.btn-secondary {
-		background-color: $orange;
-		padding: 0;
-		border: 1px solid $orange;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		color: $white;
-		text-transform: uppercase;
-		@include NeoSans(900);
-		@include border_radius(4px);
-		height: 54px;
-		padding: 0 29px;
-		span {
-			display: block;
-			margin-right: 10px;
-			svg {
-				width: 20px;
-				height: 20px;
-				display: block;
-			}
-		}
-	}
-	
-	.btn-white {
-		background-color: $white;
-		color: $black;
-	}
+
 	.heroServices {
 		.heroFlag {
 			padding: 100px;
@@ -1592,16 +1500,7 @@ article#newsArticle{
 	}
 }
 
-#partnerPage{
-	
-p {
-	font-size: $font16;
-	line-height: 24px;
-	@include NeoSans(400);
-	color: $charcoal;
-  }
-  
-  .btn-secondary {
+.btn-secondary {
 	background-color: $orange;
 	padding: 0;
 	border: 1px solid $orange;
@@ -1610,7 +1509,7 @@ p {
 	justify-content: center;
 	color: $white;
 	text-transform: uppercase;
-	@include NeoSans(900);
+	@include NeoSans(200);
 	@include border_radius(4px);
 	height: 54px;
 	padding: 0 29px;
@@ -1624,11 +1523,17 @@ p {
 	  }
 	}
   }
-  
-  .btn-white {
-	background-color: $white;
-	color: $black;
+
+#partnerPage{
+	
+p {
+	font-size: $font16;
+	line-height: 24px;
+	@include NeoSans(400);
+	color: $charcoal;
   }
+  
+
   
   
   
@@ -1883,34 +1788,8 @@ p {
 	color: $charcoal;
   }
   
-  .btn-secondary {
-	background-color: $orange;
-	padding: 0;
-	border: 1px solid $orange;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	color: $white;
-	text-transform: uppercase;
-	@include NeoSans(900);
-	@include border_radius(4px);
-	height: 54px;
-	padding: 0 29px;
-	span {
-	  display: block;
-	  margin-right: 10px;
-	  svg {
-		width: 20px;
-		height: 20px;
-		display: block;
-	  }
-	}
-  }
   
-  .btn-white {
-	background-color: $white;
-	color: $black;
-  }
+
   
   .banner {
 	background-image: url(~assets/images/burooj_air_drone.jpg);
@@ -2048,34 +1927,7 @@ p {
 	color: $charcoal;
   }
   
-  .btn-secondary {
-	background-color: $orange;
-	padding: 0;
-	border: 1px solid $orange;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	color: $white;
-	text-transform: uppercase;
-	@include NeoSans(900);
-	@include border_radius(4px);
-	height: 54px;
-	padding: 0 29px;
-	span {
-	  display: block;
-	  margin-right: 10px;
-	  svg {
-		width: 20px;
-		height: 20px;
-		display: block;
-	  }
-	}
-  }
-  
-  .btn-white {
-	background-color: $white;
-	color: $black;
-  }
+
   .globalReach {
 	background: $primary;
 	padding: 140px 0 100px;
@@ -2184,34 +2036,7 @@ p {
 	color: $charcoal;
   }
   
-  .btn-secondary {
-	background-color: $orange;
-	padding: 0;
-	border: 1px solid $orange;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	color: $white;
-	text-transform: uppercase;
-	@include NeoSans(900);
-	@include border_radius(4px);
-	height: 54px;
-	padding: 0 29px;
-	span {
-	  display: block;
-	  margin-right: 10px;
-	  svg {
-		width: 20px;
-		height: 20px;
-		display: block;
-	  }
-	}
-  }
-  
-  .btn-white {
-	background-color: $white;
-	color: $black;
-  }
+
   
   .banner {
 	background-image: url(~assets/images/burooj_air_drone.jpg);
@@ -2348,34 +2173,7 @@ p {
 	color: $charcoal;
   }
   
-  .btn-secondary {
-	background-color: $orange;
-	padding: 0;
-	border: 1px solid $orange;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	color: $white;
-	text-transform: uppercase;
-	@include NeoSans(900);
-	@include border_radius(4px);
-	height: 54px;
-	padding: 0 29px;
-	span {
-	  display: block;
-	  margin-right: 10px;
-	  svg {
-		width: 20px;
-		height: 20px;
-		display: block;
-	  }
-	}
-  }
-  
-  .btn-white {
-	background-color: $white;
-	color: $black;
-  }
+
   
   .contactMap {
 	iframe {
@@ -2952,34 +2750,8 @@ p {
 	color: $charcoal;
   }
   
-  .btn-secondary {
-	background-color: $orange;
-	padding: 0;
-	border: 1px solid $orange;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	color: $white;
-	text-transform: uppercase;
-	@include NeoSans(900);
-	@include border_radius(4px);
-	height: 54px;
-	padding: 0 29px;
-	span {
-	  display: block;
-	  margin-right: 10px;
-	  svg {
-		width: 20px;
-		height: 20px;
-		display: block;
-	  }
-	}
-  }
   
-  .btn-white {
-	background-color: $white;
-	color: $black;
-  }
+
   
   .banner {
 	background-image: url(~assets/images/burooj_air_drone.jpg);

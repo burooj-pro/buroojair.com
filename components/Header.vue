@@ -1,9 +1,9 @@
 <template>
 	<header class="fixed-top z-3" style="">
-		<div class="mb-4" style="background:#3437ff; height: 10px; opacity: 0.4;"></div>
+		<div class="mb-4" style="background: #3437ff; height: 10px; opacity: 0.4"></div>
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-12">
+				<div class="col-12 py-3">
 					<div class="navigation">
 						<nav class="navbar navbar-expand-md">
 							<NuxtLink class="navbar-brand" to="/"><img src="~assets/images/logo.png" alt="" class="img-fluid" /></NuxtLink>
@@ -48,12 +48,12 @@
 										<NuxtLink class="nav-link" to="/contact">{{ $t("CONTACT") }}</NuxtLink>
 									</li>
 									<li class="nav-item" @click="onChangeLanguage()">
-										<p class="nav-link link">
+										<p class="nav-link link text-white" role='button'>
 											{{ $t("LANGUAGE") }}
 										</p>
 									</li>
 									<li class="nav-item">
-										<NuxtLink class="nav-link pertner-btn" to="/franchise/franchise">{{ $t("BECOME_A_PARTNER") }}</NuxtLink>
+										<NuxtLink class="nav-link pertner-btn lh-1" to="/franchise/franchise">{{ $t("BECOME_A_PARTNER") }}</NuxtLink>
 									</li>
 								</ul>
 							</div>
@@ -62,7 +62,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="header-shape z-2">
+		
+		<div class="header-shape z-2"  :class="{ 'flip-horizontal': language === 'ar' }">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
 				<path class="elementor-shape-fill" d="M761.9,44.1L643.1,27.2L333.8,98L0,3.8V0l1000,0v3.9" fill="#212121"></path>
 			</svg>

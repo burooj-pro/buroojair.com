@@ -26,10 +26,10 @@ export default {
     ],
   },
 
-  css: [],
+  css: ["~/assets/scss/main.scss",],
   styleResources: {
     scss: [
-      "~/assets/scss/main.scss",
+      
     ],
   },
 

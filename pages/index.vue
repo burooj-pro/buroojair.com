@@ -33,16 +33,7 @@
 								{{ $t("UNTIL_NOW_CLEANING_OF_TALL_BUILDINGS_HAS_BEEN_A_COMPLEX_AND_DANGEROUS_UNDERTAKING") }}
 							</p>
 							<NuxtLink to="/facade-cleaning" class="btn btn-white">
-								<span>
-									<svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path
-											fill-rule="evenodd"
-											clip-rule="evenodd"
-											d="M12.2929 4.29289C12.6834 3.90237 13.3166 3.90237 13.7071 4.29289L20.7071 11.2929C21.0976 11.6834 21.0976 12.3166 20.7071 12.7071L13.7071 19.7071C13.3166 20.0976 12.6834 20.0976 12.2929 19.7071C11.9024 19.3166 11.9024 18.6834 12.2929 18.2929L17.5858 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H17.5858L12.2929 5.70711C11.9024 5.31658 11.9024 4.68342 12.2929 4.29289Z"
-											fill="#212121"
-										></path>
-									</svg>
-								</span>
+								<i class="bi bi-arrow-right fs-5 me-2"></i>
 								{{ $t("READ_MORE") }}
 							</NuxtLink>
 						</div>
@@ -76,9 +67,6 @@
 							<p>
 								{{ $t("OUR_WINDOW_CLEANING_METHOD") }}
 							</p>
-							<!-- <p class="m-0">
-                {{ $t("ADDITIONALLY_THIS_TECNHIQUE") }}
-              </p> -->
 						</div>
 					</div>
 				</div>
@@ -88,6 +76,7 @@
 					<path class="elementor-shape-fill" d="M761.9,44.1L643.1,27.2L333.8,98L0,3.8V0l1000,0v3.9" fill="#E4E7ED"></path>
 				</svg>
 			</div>
+
 		</section>
 
 		<!-- LET TALK SEC -->
@@ -106,16 +95,7 @@
 								{{ $t("TAKE_PART_IN_THE_MOST_INNOVATIVE_BUSINESS_IDEA") }}
 							</p>
 							<a href="#" class="btn btn-secondary btn-blue">
-								<span>
-									<svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path
-											fill-rule="evenodd"
-											clip-rule="evenodd"
-											d="M12.2929 4.29289C12.6834 3.90237 13.3166 3.90237 13.7071 4.29289L20.7071 11.2929C21.0976 11.6834 21.0976 12.3166 20.7071 12.7071L13.7071 19.7071C13.3166 20.0976 12.6834 20.0976 12.2929 19.7071C11.9024 19.3166 11.9024 18.6834 12.2929 18.2929L17.5858 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H17.5858L12.2929 5.70711C11.9024 5.31658 11.9024 4.68342 12.2929 4.29289Z"
-											fill="#fff"
-										></path>
-									</svg>
-								</span>
+								<i class="bi bi-arrow-right fs-5 me-2"></i>
 								{{ $t("LET_S_TALK") }}
 							</a>
 						</div>
@@ -155,7 +135,6 @@
 		<!-- ABOUT US SEC -->
 		<SectionsAboutUsSection />
 		
-
 		<!-- ESTIMATED FUTURE SEC -->
 		<!-- <section class="estimated-future-sec">
       <div class="container-fluid p-0">
@@ -198,7 +177,7 @@
 		<SectionsGlobalReachSection />
 
 		<!-- WORKING GROWTH SEC -->
-		<SectionsworkingGrowthSection />
+		<SectionsWorkingGrowthSection />
 		
 
 		<!-- SAFETY STATEMENT SEC -->
