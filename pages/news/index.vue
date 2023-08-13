@@ -2,7 +2,7 @@
   <div class="wrapper">
     <Header />
     <!-- NEWS SEC -->
-    <section class="news-sec">
+    <section class="news-sec mt-5 pt-4">
       <div class="container">
         <div class="row">
           <div class="col-12">

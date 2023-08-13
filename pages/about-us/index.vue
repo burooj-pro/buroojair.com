@@ -2,7 +2,7 @@
   <div class="wrapper">
     <Header />
     <!-- Service Hero Sec -->
-    <section class="heroServices">
+    <section class="heroServices mt-5 pt-4">
       <div class="row g-0">
         <div class="col-lg-7">
           <div class="heroFlag">
@@ -59,11 +59,11 @@
               </p>
               <p>
                 {{ $t("WE_AIM_TO_CONTRIBUTE_TO_A_SAFER_WORK") }}
-                
+
               </p>
               <p>
                 {{ $t("THESE_ARE_PHYSICALLY_DEMANDING_JOBS") }}
-                
+
               </p>
             </div>
           </div>
@@ -103,19 +103,19 @@
               </p>
               <p>
                 {{ $t("BUROOJ_AIR_WORKING_DRONE_ORIGINATED") }}
-               
+
               </p>
               <p>
                 {{ $t("THE_DRONE_HAS_BEEN_EXTENSIVELY_TESTED") }}
-               
+
               </p>
               <p>
                 {{ $t("BUROOJ_AIR_WORKING_DRONE_WAS_READY_AND_THE_COMMERCIALISING") }}
-               
+
               </p>
               <p>
                 {{ $t("THE_FUTURE_HOLDS_MANY_OPPORTUNITIES_FOR_DEVELOPMENT") }}
-              
+
               </p>
             </div>
           </div>
@@ -157,7 +157,7 @@
                 </li>
                 <li>
                   <b>  {{ $t("HIGHER_ALTITUDES") }}<br /></b>
-                  
+
                   {{ $t("WE_HAVE_SOLVED_THE_OPERATING_HEIGHT_RESTRICTION") }}
                   <br /><br />
                 </li>
@@ -165,7 +165,7 @@
               <ul>
                 <li>
                   <b>{{ $t("GOGGLES") }}</b><br />
-                  
+
                   {{ $t("AS_A_RESULT_OF_OPERATING_IN_HIGHER_ALTITUDES") }}
                   <br /><br />
                 </li>

@@ -2,7 +2,7 @@
   <div class="wrapper">
     <Header />
     <!-- Banner Start -->
-    <section class="banner">
+    <section class="banner mt-5 pt-4">
       <div class="overlay"></div>
     </section>
     <!-- Banner End -->

@@ -149,9 +149,7 @@ export default {
   WE_AIM_TO_CONTRIBUTE_TO_A_SAFER_WORK:`We aim to contribute to a safer work day for people who work at
   great heights with lifts, scaffolding and for facade climbers.`,
 
-  THESE_ARE_PHYSICALLY_DEMANDING_JOBS:`These are physically demanding jobs that cause stress injuries
-  and involve danger every day. BUROOJ AIR Working Drone works
-  specifically to help this group.`,
+  THESE_ARE_PHYSICALLY_DEMANDING_JOBS:`These are physically demanding jobs that cause stress injuries and involve danger every day. Burooj Air's Drones works specifically to help this group.`,
 
   BUROOJ_AIR_WORKING_DRONE_EVOLVED:`BUROOJ AIR Working Drone evolved out of the BUROOJ AIR Group
   which was founded in 1992 by Kennet Nilsen. BUROOJ AIR Group
