@@ -1,5 +1,5 @@
 <template>
-	<div class="wrapper">
+	<div class="overflow-hidden">
 		<Header />
 
 		<!-- Hero SEC -->
@@ -478,9 +478,11 @@ p {
 		}
 	}
 }
+
 .btn-white:hover {
 	background-color: white !important;
 }
+
 .btn-blue {
 	background-color: $secondary !important;
 	color: $white !important;

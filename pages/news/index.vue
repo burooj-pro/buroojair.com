@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="overflow-hidden">
     <Header />
     <!-- NEWS SEC -->
     <SectionsNewsSection />

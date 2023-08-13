@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="overflow-hidden">
     <Header />
     <!-- Banner Start -->
     <section class="banner mt-5 pt-4">
@@ -368,13 +368,7 @@ export default {
 };
 </script>
 <style lang="scss">
-h3 {
-  color: $mainly_blue;
-  font-size: $font62;
-  text-transform: uppercase;
-  line-height: 68px;
-  @include NeoSans(900);
-}
+
 
 p {
   font-size: $font16;
