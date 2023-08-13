@@ -7,7 +7,7 @@
       class="elementor-background-video-embed d-none d-md-block"
       style="width: 1903px; height: 1072.11px"
     >
-      <source :src="videoSrc" type="video/mp4" />
+      <source src="https://res.cloudinary.com/dshekyqdl/video/upload/v1691936569/Website_video1_1_vcyojc.mp4" type="video/mp4" />
     </video>
     <div class="banner-inner">
       <div class="container-fluid">
