@@ -869,6 +869,714 @@ article#newsArticle{
 	}
 }
 
+#servicesPage{
+	p {
+		font-size: $font16;
+		line-height: 24px;
+		@include NeoSans(400);
+		color: $charcoal;
+	}
+	
+	.btn-secondary {
+		background-color: $orange;
+		padding: 0;
+		border: 1px solid $orange;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		color: $white;
+		text-transform: uppercase;
+		@include NeoSans(900);
+		@include border_radius(4px);
+		height: 54px;
+		padding: 0 29px;
+		span {
+			display: block;
+			margin-right: 10px;
+			svg {
+				width: 20px;
+				height: 20px;
+				display: block;
+			}
+		}
+	}
+	
+	.btn-white {
+		background-color: $white;
+		color: $black;
+	}
+	.heroServices {
+		.heroFlag {
+			padding: 100px;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-image: url(~assets/images/burooj_air_drone.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: relative;
+			@include NeoSans(400);
+			&:after {
+				content: "";
+				position: absolute;
+				inset: 0;
+				background-color: $black;
+				opacity: 0.4;
+				@include NeoSans(400);
+			}
+			.titleText {
+				position: relative;
+				z-index: 5;
+				@include NeoSans(400);
+				h2 {
+					font-size: $font62;
+					color: $white;
+					margin-bottom: 20px;
+					text-transform: uppercase;
+					@include NeoSans(900);
+				}
+				p {
+					font-size: $font42;
+					text-transform: uppercase;
+					color: $white;
+					line-height: 52px;
+					@include NeoSans(400);
+				}
+			}
+		}
+		.text-box {
+			padding: 100px;
+			@include NeoSans(400);
+			background: $dark_gray;
+			p {
+				color: $white;
+				margin-bottom: 20px;
+			}
+		}
+	}
+	
+	.inquiry {
+		background: $whiteSecondary;
+		padding: 100px 0;
+		@include NeoSans(400);
+		h3 {
+			margin-bottom: 20px;
+			@include NeoSans(900);
+		}
+		p {
+			margin-bottom: 20px;
+			@include NeoSans(400);
+		}
+		.row {
+			align-items: center;
+		}
+		form {
+			@include NeoSans(400);
+			max-width: 504px;
+			.form-group {
+				margin-bottom: 14px;
+			}
+			.form-control {
+				background-color: $white;
+				border-width: 0px 0px 0px 0px;
+				@include NeoSans(400);
+				@include border_radius(8px);
+				height: 59px;
+			}
+			textarea {
+				&.form-control {
+					height: auto;
+				}
+			}
+		}
+	}
+	.method {
+		background: $primary;
+		color: $white;
+		padding: 240px 0 100px 0;
+		ol {
+			li {
+				@include NeoSans(400);
+				margin-bottom: 20px;
+			}
+		}
+		.text-box {
+			@include NeoSans(400);
+	
+			h3 {
+				color: $white;
+			}
+		}
+		h4 {
+			font-size: 1.25rem;
+			color: $white;
+			line-height: 1.4;
+			margin-bottom: 0.9rem;
+		}
+		p {
+			color: $white;
+			@include NeoSans(400);
+			margin-bottom: 0.9rem;
+		}
+	}
+	
+	.solarPanel {
+		position: relative;
+		@include NeoSans(400);
+	
+		.shape {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			fill: $primary;
+			z-index: 555;
+			width: 100%;
+			@include NeoSans(400);
+			height: 60px;
+		}
+		.solarBox {
+			padding: 100px;
+			height: 100%;
+			background-image: url(~assets/images/solarpanelcleaning_ktv.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: relative;
+			display: flex;
+			align-items: center;
+			@include NeoSans(400);
+			justify-content: flex-end;
+			z-index: 1;
+			&:after {
+				content: "";
+				position: absolute;
+				inset: 0;
+				background-color: $black;
+				opacity: 0.4;
+			}
+			.text-box {
+				position: relative;
+				z-index: 5;
+				@include NeoSans(400);
+				h3 {
+					color: $white;
+					text-align: right;
+				}
+			}
+		}
+		.caption {
+			padding: 100px;
+			height: 100%;
+			min-height: 800px;
+			background: $blue;
+			color: $white;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			position: relative;
+			z-index: 5;
+			@include NeoSans(400);
+			h2 {
+				margin-bottom: 20px;
+			}
+			p {
+				color: $white;
+				margin-bottom: 20px;
+			}
+		}
+	}
+	
+	.standardSolar {
+		background: $primary;
+		padding: 240px 0px 100px 0px;
+		@include NeoSans(400);
+		.text-box {
+			p,
+			h3 {
+				color: $white;
+				margin-bottom: 20px;
+			}
+		}
+	}
+	
+	.safetyStand {
+		padding: 240px 0px 100px 0px;
+		background: $blue;
+		@include NeoSans(400);
+		.text-box {
+			ul {
+				padding-left: 20px;
+				li {
+					list-style-type: disc;
+					color: $white;
+					font-size: 1rem;
+					@include NeoSans(400);
+				}
+			}
+			p {
+				color: $white;
+				margin-bottom: 20px;
+				@include NeoSans(400);
+				&:last-child {
+					margin: 0;
+				}
+			}
+			h3 {
+				color: $white;
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+
+#partnerPage{
+	
+p {
+	font-size: $font16;
+	line-height: 24px;
+	@include NeoSans(400);
+	color: $charcoal;
+  }
+  
+  .btn-secondary {
+	background-color: $orange;
+	padding: 0;
+	border: 1px solid $orange;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	color: $white;
+	text-transform: uppercase;
+	@include NeoSans(900);
+	@include border_radius(4px);
+	height: 54px;
+	padding: 0 29px;
+	span {
+	  display: block;
+	  margin-right: 10px;
+	  svg {
+		width: 20px;
+		height: 20px;
+		display: block;
+	  }
+	}
+  }
+  
+  .btn-white {
+	background-color: $white;
+	color: $black;
+  }
+  
+  
+  
+  .cleaning {
+	background-color: $mainly_blue;
+	padding: 40px 0;
+  
+	h2 {
+	  color: $white;
+	  font-size: $font54;
+	  font-weight: 800;
+	  text-transform: none;
+	  line-height: 58px;
+	  margin-bottom: 10px;
+	}
+  
+	p {
+	  color: $white;
+	  font-size: $font40;
+	  font-weight: 300;
+	  text-transform: none;
+	  line-height: 52px;
+	}
+  }
+  
+  .partner-franchise {
+	position: relative;
+  
+	.text-box {
+	  padding: 20% 20%;
+  
+	  .btn {
+		display: inline-flex;
+		align-items: center;
+  
+		i {
+		  margin-right: 10px;
+		}
+	  }
+	}
+  
+	.opertunityBox {
+	  padding: 20% 20%;
+	  background: url(~assets/images/ktv_5461.jpg);
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	  position: relative;
+	  height: 100%;
+  
+	  &:after {
+		content: "";
+		inset: 0;
+		background: rgba(0, 0, 0, 0.5);
+		position: absolute;
+	  }
+  
+	  h2 {
+		color: $white;
+		font-size: 66px;
+		font-weight: 700;
+		text-transform: uppercase;
+		line-height: 72px;
+		margin-bottom: 20px;
+		position: relative;
+		z-index: 1;
+	  }
+  
+	  p {
+		color: $white;
+		font-size: 42px;
+		font-weight: 400;
+		text-transform: uppercase;
+		line-height: 52px;
+		position: relative;
+		z-index: 1;
+	  }
+	}
+  
+	.text-box {
+	  background: $bright_gray;
+  
+	  h2 {
+		font-size: 26px;
+		font-weight: 600;
+		line-height: 30px;
+		margin-bottom: 15px;
+		color: $white;
+	  }
+  
+	  h4 {
+		font-size: 1.25rem;
+		margin-bottom: 15px;
+		color: $white;
+	  }
+  
+	  p {
+		margin-bottom: 15px;
+		color: $white;
+	  }
+	}
+  
+	.shape {
+	  height: 60px;
+	  position: absolute;
+	  left: 0;
+	  top: 0;
+	  right: 0;
+	  width: 100%;
+	  z-index: 6;
+  
+	  path {
+		fill: $mainly_blue;
+	  }
+	}
+  }
+  
+  .estimate {
+	text-align: center;
+  
+	.text-box {
+	  padding: 200px 40px;
+  
+	  p {
+		font-size: 54px;
+		font-weight: 500;
+		text-transform: uppercase;
+		line-height: 58px;
+		max-width: 770px;
+		margin: 0 auto;
+	  }
+  
+	  h2 {
+		font-size: 90px;
+		font-weight: 800;
+		text-transform: uppercase;
+		line-height: 90px;
+	  }
+  
+	  h4 {
+		font-size: 41px;
+		font-weight: 800;
+		line-height: 40px;
+	  }
+	}
+  }
+  
+  .advantages {
+	padding: 240px 0 110px;
+	background-image: url(~assets/images/ktv_5505.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	&:before {
+	  content: "";
+	  position: absolute;
+	  inset: 0;
+	  background-color: $black;
+	  opacity: 0.71;
+	  z-index: 10;
+	}
+	.container {
+	  position: relative;
+	  z-index: 55;
+	}
+	.text-box {
+	  h4,
+	  h3,
+	  p {
+		color: $white;
+	  }
+	  h4 {
+		margin-top: 0.5rem;
+		margin-bottom: 1rem;
+		font-weight: bold;
+		line-height: 1.2;
+		font-size: $font32;
+	  }
+	  p {
+		margin-bottom: 0.9rem;
+	  }
+	}
+  }
+  
+  .partnerAdvantage {
+	overflow: hidden;
+  
+	.container {
+	  position: relative;
+	  z-index: 55;
+	}
+  
+	.video {
+	  position: absolute;
+	  inset: 0;
+  
+	  iframe {
+		width: 100%;
+		height: 100%;
+	  }
+	}
+  }
+  
+  .how-ktv {
+	.text-box {
+	  padding: 200px;
+  
+	  h3 {
+		font-size: 42px;
+		text-transform: uppercase;
+		font-weight: 400;
+		margin-bottom: 20px;
+		line-height: 52px;
+	  }
+  
+	  p {
+		margin-bottom: 20px;
+	  }
+  
+	  a {
+		i {
+		  margin-right: 10px;
+		}
+	  }
+	}
+  
+	.img-holder {
+	  height: 100%;
+	  position: relative;
+  
+	  &:after {
+		content: "";
+		inset: 0;
+		background: rgba(0, 0, 0, 0.5);
+		position: absolute;
+	  }
+  
+	  img {
+		height: 100%;
+		object-fit: cover;
+	  }
+	}
+  }
+}
+
+#windowCleaningPage{
+	
+p {
+	font-size: $font16;
+	line-height: 24px;
+	@include NeoSans(400);
+	color: $charcoal;
+  }
+  
+  .btn-secondary {
+	background-color: $orange;
+	padding: 0;
+	border: 1px solid $orange;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	color: $white;
+	text-transform: uppercase;
+	@include NeoSans(900);
+	@include border_radius(4px);
+	height: 54px;
+	padding: 0 29px;
+	span {
+	  display: block;
+	  margin-right: 10px;
+	  svg {
+		width: 20px;
+		height: 20px;
+		display: block;
+	  }
+	}
+  }
+  
+  .btn-white {
+	background-color: $white;
+	color: $black;
+  }
+  
+  .banner {
+	background-image: url(~assets/images/burooj_air_drone.jpg);
+	background-position: 50%;
+	background-repeat: no-repeat;
+	min-width: 100%;
+	min-height: 100%;
+	background-size: cover;
+	.overlay {
+	  background-color: rgba($overlay, 0.35);
+	  height: 330px;
+	}
+  }
+  .service {
+	padding: 180px 0 40px 0;
+	background: $primary;
+	.text-box {
+	  color: $white;
+	  h3,
+	  h4,
+	  p {
+		color: $white;
+		margin-bottom: 20px;
+	  }
+	  h4 {
+		font-size: $font42;
+		line-height: 52px;
+		text-transform: uppercase;
+		font-weight: normal;
+		margin: 10px 0 20px;
+	  }
+	  h5 {
+		font-size: $font26;
+		font-weight: 800;
+		line-height: 26px;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+	  }
+	  .video-holder {
+		margin-bottom: 20px;
+		position: relative;
+		.iconPlay {
+		  position: absolute;
+		  left: 50%;
+		  top: 50%;
+		  @include translate(-50%, -50%);
+		  svg {
+			width: 212px;
+			height: 212px;
+			display: block;
+		  }
+		}
+	  }
+	}
+  }
+  
+  /***** ADVANTAGE DRONE *****/
+  
+  .advantages {
+	padding: 240px 0 110px;
+	background-image: url(~assets/images/BuroojAir_3.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	&:before {
+	  content: "";
+	  position: absolute;
+	  inset: 0;
+	  background-color: $black;
+	  opacity: 0.71;
+	  z-index: 10;
+	}
+	.container {
+	  position: relative;
+	  z-index: 55;
+	}
+	.text-box {
+	  h4,
+	  h3,
+	  p {
+		color: $white;
+	  }
+	  h4 {
+		margin-top: 0.5rem;
+		margin-bottom: 1rem;
+		font-weight: bold;
+		line-height: 1.2;
+		font-size: $font32;
+	  }
+	  p {
+		margin-bottom: 0.9rem;
+	  }
+	}
+  }
+  .inquiry {
+	background: $whiteSecondary;
+	padding: 100px 0;
+	h3 {
+	  margin-bottom: 20px;
+	}
+	p {
+	  margin-bottom: 20px;
+	}
+	.row {
+	  align-items: center;
+	}
+	form {
+	  max-width: 504px;
+	  .form-group {
+		margin-bottom: 14px;
+	  }
+	  .form-control {
+		background-color: $white;
+		border-width: 0px 0px 0px 0px;
+		@include border_radius(8px);
+		height: 59px;
+	  }
+	  textarea {
+		&.form-control {
+		  height: auto;
+		}
+	  }
+	}
+  }
+}
+
 footer {
 	background-color: #3437ff;
 	//@include NeoSans(600);
