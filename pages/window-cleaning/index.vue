@@ -7,7 +7,7 @@
     </section>
     <!-- Banner End -->
     <!-- Service Start -->
-    <section class="service">
+    <section class="service mt-5 pt-4">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-7">

@@ -2,7 +2,7 @@
   <div>
     <Header />
     <!-- BANNER SEC -->
-    <section class="banner-sec partner">
+    <section class="banner-sec partner mt-5 pt-4">
       <iframe
         src="https://player.vimeo.com/video/713580406?h=6988e72af6&amp;muted=1&amp;autoplay=1&amp;loop=1&amp;transparent=0&amp;background=1&amp;app_id=122963"
         width="426"

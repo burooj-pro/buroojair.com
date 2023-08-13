@@ -2,7 +2,7 @@
   <div class="wrapper">
     <Header />
     <!-- Global Reach Sec -->
-    <section class="globalReach">
+    <section class="globalReach mt-5 pt-4">
       <div class="container">
         <div class="text-box">
           <h3>GLOBAL REACH</h3>
