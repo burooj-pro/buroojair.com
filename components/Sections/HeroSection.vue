@@ -1,14 +1,14 @@
 <template>
   <section id="heroSection" class="hero-section">
     <video
-      ref="videoPlayer"
-      muted
-      playsinline
-      class="elementor-background-video-embed d-none d-md-block"
-      style="width: 1903px; height: 1072.11px"
-    >
-      <source src="https://res.cloudinary.com/dshekyqdl/video/upload/v1691936569/Website_video1_1_vcyojc.mp4" type="video/mp4" />
-    </video>
+    ref="videoPlayer"
+    muted
+    playsinline
+    class="elementor-background-video-embed d-none d-md-block"
+    style="width: 1903px; height: 1072.11px"
+  >
+    <source src="https://res.cloudinary.com/dshekyqdl/video/upload/v1691936569/Website_video1_1_vcyojc.mp4" type="video/mp4" />
+  </video>
     <div class="banner-inner">
       <div class="container-fluid">
         <div class="row">
@@ -46,33 +46,20 @@
 
 <script>
 export default {
-  data() {
-    return {
-      videoPlaylist: [
-        "/videos/long_video.mp4",
-      ],
-      currentVideoIndex: 0,
-    };
-  },
-  computed: {
-    videoSrc() {
-      return this.videoPlaylist[this.currentVideoIndex];
-    },
+  mounted() {
+    this.loadAndPlay();
   },
   methods: {
-    playNextVideo() {
-      this.currentVideoIndex = (this.currentVideoIndex + 1) % this.videoPlaylist.length;
-      this.$refs.videoPlayer.load();
-      this.$refs.videoPlayer.play();
-    },
-  },
-  mounted() {
-    this.$refs.videoPlayer.addEventListener('ended', this.playNextVideo);
-    this.$refs.videoPlayer.load();
-    this.$refs.videoPlayer.play();
-  },
-  beforeDestroy() {
-    this.$refs.videoPlayer.removeEventListener('ended', this.playNextVideo);
+    async loadAndPlay() {
+      
+      try {
+        await this.$refs.videoPlayer.load();
+        await this.$refs.videoPlayer.play();
+      } catch (error) {
+        console.error("Error playing video:", error);
+      }
+    }
   },
 };
 </script>
+
