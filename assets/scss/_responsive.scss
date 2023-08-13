@@ -118,17 +118,20 @@
     .vacant-pilot-section .text-box .media h4 {
         font-size: 30px;
     }
+
     .let-talk-sec {
         padding: 200px 0px;
-    }
-    .let-talk-sec .let-talk-left p {
-        font-size: 34px;
-        line-height: 42px;
-    }
-    .let-talk-sec .let-talk-left h4 {
-        font-size: 50px;
-        line-height: 54px;
-        margin: 0 0 10px 0;
+        .let-talk-left {
+            p {
+                font-size: 34px;
+                line-height: 42px;
+            }
+            h4 {
+                font-size: 50px;
+                line-height: 54px;
+                margin: 0 0 10px 0;
+            }
+        }
     }
     .about-us-section .about-us-left {
         padding: 30px;
@@ -315,73 +318,86 @@
     }
     .advantage-sec {
         padding: 90px 0;
-    }
-    .advantage-sec .text-list ul li span {
-        max-width: 32px;
-        width: 100%;
-        margin: 0 10px 0 0px;
-    }
-    .advantage-sec .text-list ul li span img {
-        height: 30px;
-    }
-    .advantage-sec .text-list ul li p {
-        font-size: 16px;
-        line-height: 20px;
+        .text-list {
+            ul {
+                li {
+                    span {
+                        max-width: 32px;
+                        width: 100%;
+                        margin: 0 10px 0 0px;
+                        img {
+                            height: 30px;
+                        }
+                    }
+                    p {
+                        font-size: 16px;
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
     }
     .arrived-drone-sec .image-holder {
         height: 480px;
     }
     .let-talk-sec {
         padding: 130px 0px;
+        .let-talk-left p {
+            font-size: 26px;
+            line-height: 40px;
+        }
+        .let-talk-right p {
+            font-size: 16px;
+            margin: 0 0 24px 0;
+            line-height: 24px;
+        }
     }
-    .let-talk-sec .let-talk-left p {
-        font-size: 26px;
-        line-height: 40px;
-    }
-    .let-talk-sec .let-talk-right p {
-        font-size: 16px;
-        margin: 0 0 24px 0;
-        line-height: 24px;
-    }
+
     .intention-sec {
         padding: 100px 0;
+        .intention-right {
+            padding: 0;
+        }
     }
-    .intention-sec .intention-right {
-        padding: 0;
-    }
-    .about-us-section .about-us-left h4 {
-        font-size: 30px;
-        line-height: 36px;
-    }
+
     p {
         font-size: 14px;
         line-height: 22px;
     }
-    .about-us-section .about-us-left {
-        padding: 20px;
+
+    .about-us-section {
+        .about-us-left {
+            padding: 20px;
+            p {
+                line-height: 22px;
+                margin: 20px 0;
+            }
+            h4 {
+                font-size: 30px;
+                line-height: 36px;
+            }
+        }
+        .about-us-right {
+            padding: 20px;
+            height: 440px;
+            .text-box h4 {
+                font-size: 28px;
+                line-height: 36px;
+            }
+        }
     }
-    .about-us-section .about-us-left p {
-        line-height: 22px;
-        margin: 20px 0;
-    }
-    .about-us-section .about-us-right {
-        padding: 20px;
-        height: 440px;
-    }
-    .about-us-section .about-us-right .text-box h4 {
-        font-size: 28px;
-        line-height: 36px;
-    }
+
     .estimated-future-sec {
         padding: 100px 0;
+        .estimated-future-left p {
+            font-size: 20px;
+            line-height: 30px;
+        }
+        .estimated-future-right p {
+            font-size: 22px;
+        }
     }
-    .estimated-future-sec .estimated-future-left p {
-        font-size: 20px;
-        line-height: 30px;
-    }
-    .estimated-future-sec .estimated-future-right p {
-        font-size: 22px;
-    }
+
     .working-growth-section {
         padding: 100px 0;
         .text-box h4 {

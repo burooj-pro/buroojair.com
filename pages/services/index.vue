@@ -1,39 +1,25 @@
 <template>
-	<div id="servicesPage" class="overflow-hidden">
+	<div id="servicesPage" class="overflow-hidden  py-5">
 		<Header />
 		<!-- Service Hero Sec -->
-		<section class="heroServices mt-5 pt-4">
+		<section class="heroServices mt-5 pt-5">
 			<div class="row g-0">
 				<div class="col-lg-7">
 					<div class="heroFlag">
 						<div class="titleText">
 							<h2>{{ $t("SERVICES") }}</h2>
-							<p>
-								{{ $t("THE_EVOLUTION_OF_HIGH_RISE_WINDOW_AND_FACADE_CLEANING_HAS_ARRIVED") }}
-							</p>
+							<p>{{ $t("THE_EVOLUTION_OF_HIGH_RISE_WINDOW_AND_FACADE_CLEANING_HAS_ARRIVED") }}</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-5">
 					<div class="text-box">
-						<p>
-							<strong> {{ $t("UP_UNTIL_NOW_HIGH_RISE_WINDOW_AND_FACADE_CLEANING") }}</strong>
-						</p>
-						<p>
-							{{ $t("WITH_THE_INNOVATION_OF_BUROOJ_AIR_WORKING_DRONE") }}
-						</p>
-						<p>
-							<b>{{ $t("A_MORE_EFFICIENT_SAFER_AND") }}</b>
-						</p>
-						<p>
-							{{ $t("BUROOJ_AIR_WORKING_DRONE_ARE_NOW_BEING") }}
-						</p>
-						<p>
-							{{ $t("FOR_NOW_WE_HAVE_COMMERCIALISED_THE_USE_FOR") }}
-						</p>
-						<p>
-							{{ $t("BUROOJ_AIR_WORKING_DRONE_IS_IN_FURTHER_DEVELOPMENT") }}
-						</p>
+						<p><strong> {{ $t("UP_UNTIL_NOW_HIGH_RISE_WINDOW_AND_FACADE_CLEANING") }}</strong></p>
+						<p>{{ $t("WITH_THE_INNOVATION_OF_BUROOJ_AIR_WORKING_DRONE") }}</p>
+						<p><b>{{ $t("A_MORE_EFFICIENT_SAFER_AND") }}</b></p>
+						<p>{{ $t("BUROOJ_AIR_WORKING_DRONE_ARE_NOW_BEING") }}</p>
+						<p>{{ $t("FOR_NOW_WE_HAVE_COMMERCIALISED_THE_USE_FOR") }}</p>
+						<p>{{ $t("BUROOJ_AIR_WORKING_DRONE_IS_IN_FURTHER_DEVELOPMENT") }}</p>
 					</div>
 				</div>
 			</div>
@@ -46,9 +32,7 @@
 				<div class="row">
 					<div class="col-lg-6">
 						<div class="caption">
-							<h2>
-								{{ $t("FOR_FACADE_AND_WINDOW_CLEANING_WE_USE_MULTIPLE_METHODS") }}
-							</h2>
+							<h2>{{ $t("FOR_FACADE_AND_WINDOW_CLEANING_WE_USE_MULTIPLE_METHODS") }}</h2>
 						</div>
 					</div>
 					<div class="col-lg-6">
@@ -56,13 +40,9 @@
 							<li aria-level="1">{{ $t("IF_THE_FACADE_IS_TRADITIONALLY_DIRTY_THE_DRONE") }}<br /><br /></li>
 							<li aria-level="1">
 								{{ $t("THE_CLEAN_WATER_METHOD_IS_IN_SHORT") }}
-
-								<b
-									><i> {{ $t("CLEANED") }}</i></b
-								>
-								<b
-									><i>{{ $t("WITHOUT_CHEMICALS") }} </i></b
-								>{{ $t("WINDOWS_STAY_CLEANER") }}
+								<b><i> {{ $t("CLEANED") }}</i></b>
+								<b><i>{{ $t("WITHOUT_CHEMICALS") }} </i></b>
+								{{ $t("WINDOWS_STAY_CLEANER") }}
 							</li>
 						</ol>
 					</div>
@@ -87,9 +67,7 @@
 				</div>
 				<div class="col-lg-6">
 					<div class="caption">
-						<h2>
-							{{ $t("THIS_METHOD_DOES_NOT_HARM_THE_PANEL_SURFACE") }}
-						</h2>
+						<h2>{{ $t("THIS_METHOD_DOES_NOT_HARM_THE_PANEL_SURFACE") }}</h2>
 						<p>
 							{{ $t("OUR_METHOD_DEVELOPED_FOR_WINDOW_CLEANING_IS_PERFECT") }}
 						</p>

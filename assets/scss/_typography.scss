@@ -6,15 +6,6 @@ body {
     line-height: 154.4%;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {}
-
-h2 {}
-
 a:focus {
     outline: none;
     outline-offset: inherit;
@@ -52,8 +43,6 @@ ul {
     display: block;
     margin: 0 auto;
 }
-
-
 
 .cta-links {
     text-decoration: underline;
