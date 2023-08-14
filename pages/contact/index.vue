@@ -77,7 +77,7 @@
               <p>
                 <strong>{{ $t("PHONE") }}:</strong>
                 <br />
-                966500000001
+                +966566639994
               </p>
             </div>
             <a href="#inquiry" class="btn btn-secondary">{{
