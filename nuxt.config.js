@@ -26,7 +26,7 @@ export default {
     ],
   },
 
-  css: ["~/assets/scss/main.scss",
+  css: ["@/assets/scss/main.scss",
   'animate.css/animate.min.css'],
   styleResources: {
     scss: [
@@ -34,11 +34,11 @@ export default {
     ],
   },
 
-  plugins: [{ src: "~/plugins/bootstrap.client.js" }],
+  plugins: [{ src: "@/plugins/bootstrap.client.js" }],
 
   components: {
     dirs: [
-      "~/components",
+      "@/components",
     ],
   },
 
@@ -53,6 +53,15 @@ export default {
 
 
   build: {
+    postcss: {
+      postcssOptions: {
+        plugins: {
+          tailwindcss: {},
+          autoprefixer: {},
+        },
+      },
+    },
+
     hardSource: false,
     splitChunks: {
       layouts: true,

@@ -1,6 +1,6 @@
 <template>
-	<header class="fixed-top z-3" style="">
-		<div class="mb-4" style="background: #3437ff; height: 10px; opacity: 0.4"></div>
+	<header class="fixed-top" style="">
+		<div class="mb-4 bg-indigo-700 h-5" style=""></div>
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12 py-3">
@@ -28,19 +28,9 @@
 									<li class="nav-item">
 										<NuxtLink class="nav-link" to="/services">{{ $t("SERVICES") }}</NuxtLink>
 									</li>
-									<!-- <li class="nav-item">
-                    <NuxtLink class="nav-link" to="/location">{{
-                      $t("LOCATIONS")
-                    }}</NuxtLink>
-                  </li> -->
 									<li class="nav-item">
 										<NuxtLink class="nav-link" to="/gallery">{{ $t("GALLERY") }}</NuxtLink>
 									</li>
-									<!-- <li class="nav-item">
-                    <NuxtLink class="nav-link" to="/news">{{
-                      $t("NEWS")
-                    }}</NuxtLink>
-                  </li> -->
 									<li class="nav-item">
 										<NuxtLink class="nav-link" to="/about-us">{{ $t("ABOUT_US") }}</NuxtLink>
 									</li>
@@ -62,8 +52,7 @@
 				</div>
 			</div>
 		</div>
-		
-		<div class="header-shape z-2"  :class="{ 'flip-horizontal': language === 'ar' }">
+		<div class="header-shape"  :class="{ 'flip-horizontal': language === 'ar' }">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
 				<path class="elementor-shape-fill" d="M761.9,44.1L643.1,27.2L333.8,98L0,3.8V0l1000,0v3.9" fill="#212121"></path>
 			</svg>

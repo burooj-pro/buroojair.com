@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import "_fonts.scss";
 @import "~bootstrap/scss/bootstrap";
 @import "bootstrap-icons/font/bootstrap-icons.css";
@@ -63,7 +67,6 @@ header {
 		left: 0;
 		width: 100%;
 		bottom: -49px;
-		z-index: 100;
 		svg {
 			height: 49px;
 			transform: translateX(0) rotateY(183deg);
@@ -307,7 +310,6 @@ section#aboutUsSection {
 				background-color: rgba($black, 0.4);
 			}
 			.text-box {
-				z-index: 10;
 
 				h4 {
 					@include NeoSans(600);
@@ -319,33 +321,7 @@ section#aboutUsSection {
 }
 
 section#vacantPilotPositionSection {
-	&.vacant-pilot-section {
-		background-color: $primary;
-		padding: 66px 0;
-		position: relative;
-		.text-box {
-			text-align: center;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			.media {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				margin: 0 20px;
-				h4 {
-					color: $white;
-					@include NeoSans(600);
-					font-size: $font40;
-					text-transform: uppercase;
-					margin-left: 16px;
-					span {
-						@include NeoSans(400);
-					}
-				}
-			}
-		}
-	}
+	background-color: $primary;
 }
 
 section#familySection {
@@ -981,7 +957,6 @@ article#newsArticle {
 		bottom: -42px;
 		left: 0;
 		width: 100%;
-		z-index: 10;
 		svg {
 			height: 42px;
 			width: 100%;
@@ -1274,7 +1249,6 @@ article#newsArticle {
 			}
 			.titleText {
 				position: relative;
-				z-index: 5;
 				@include NeoSans(400);
 				h2 {
 					font-size: $font62;
@@ -1378,7 +1352,6 @@ article#newsArticle {
 			left: 0;
 			right: 0;
 			fill: $primary;
-			z-index: 555;
 			width: 100%;
 			@include NeoSans(400);
 			height: 60px;
@@ -1394,7 +1367,6 @@ article#newsArticle {
 			align-items: center;
 			@include NeoSans(400);
 			justify-content: flex-end;
-			z-index: 1;
 			&:after {
 				content: "";
 				position: absolute;
@@ -1404,7 +1376,6 @@ article#newsArticle {
 			}
 			.text-box {
 				position: relative;
-				z-index: 5;
 				@include NeoSans(400);
 				h3 {
 					color: $white;
@@ -1423,7 +1394,6 @@ article#newsArticle {
 			justify-content: center;
 			flex-direction: column;
 			position: relative;
-			z-index: 5;
 			@include NeoSans(400);
 			h2 {
 				margin-bottom: 20px;
@@ -1571,7 +1541,6 @@ article#newsArticle {
 				line-height: 72px;
 				margin-bottom: 20px;
 				position: relative;
-				z-index: 1;
 			}
 
 			p {
@@ -1581,7 +1550,6 @@ article#newsArticle {
 				text-transform: uppercase;
 				line-height: 52px;
 				position: relative;
-				z-index: 1;
 			}
 		}
 
@@ -1615,7 +1583,6 @@ article#newsArticle {
 			top: 0;
 			right: 0;
 			width: 100%;
-			z-index: 6;
 
 			path {
 				fill: $mainly_blue;
@@ -1666,7 +1633,6 @@ article#newsArticle {
 			inset: 0;
 			background-color: $black;
 			opacity: 0.71;
-			z-index: 10;
 		}
 	
 		.text-box {
@@ -1825,7 +1791,6 @@ article#newsArticle {
 			inset: 0;
 			background-color: $black;
 			opacity: 0.71;
-			z-index: 10;
 		}
 	
 		.text-box {
@@ -1880,7 +1845,6 @@ article#newsArticle {
 
 .container {
 	position: relative;
-	z-index: 5;
 }
 
 #locationPage {
@@ -2051,7 +2015,6 @@ article#newsArticle {
 			inset: 0;
 			background-color: $black;
 			opacity: 0.71;
-			z-index: 10;
 		}
 		
 		.text-box {
@@ -2214,7 +2177,6 @@ article#newsArticle {
 
 	.titleText {
 		position: relative;
-		z-index: 5;
 		h2 {
 			font-size: $font62;
 			color: $white;
@@ -2371,7 +2333,6 @@ article#newsArticle {
 
 	.titleText {
 		position: relative;
-		z-index: 5;
 		h2 {
 			font-size: $font62;
 			color: $white;
@@ -2556,7 +2517,6 @@ article#newsArticle {
 
 	.titleText {
 		position: relative;
-		z-index: 5;
 		h2 {
 			font-size: $font62;
 			color: $white;

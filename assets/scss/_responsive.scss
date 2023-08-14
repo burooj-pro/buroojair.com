@@ -485,7 +485,7 @@
     .hero-section.partner {
         height: 440px;
     }
-    .hero-section .container .titleText h2 {
+    .hero-section .titleText h2 {
         font-size: 50px;
         line-height: 53px;
         max-width: 460px;
@@ -495,41 +495,47 @@
         font-size: 30px;
         line-height: 40px;
     }
-    .partner-franchise .opertunityBox h2 {
-        font-size: 42px;
-        line-height: 48px;
-    }
-    .partner-franchise .opertunityBox p {
-        font-size: 26px;
-        line-height: 36px;
-    }
-    .partner-franchise .opertunityBox {
-        padding: 140px 20px;
-    }
-    .partner-franchise .text-box {
-        padding: 50px 20px;
+
+    .partner-franchise {
+        .text-box {
+            padding: 50px 20px;
+        }
+        .opertunityBox {
+            padding: 140px 20px;
+            h2 {
+                font-size: 42px;
+                line-height: 48px;
+            }
+            p {
+                font-size: 26px;
+                line-height: 36px;
+            }
+        }
     }
     .estimate {
         padding: 30px 0;
+        .text-box {
+            padding: 20px 10px;
+        }
     }
-    .estimate .text-box {
-        padding: 20px 10px;
-    }
+
     .advantages {
         padding: 50px 0;
     }
+
     .how-ktv .text-box {
         padding: 50px 20px;
     }
+
     .family {
         background: #212121;
         padding: 50px 10px;
-    }
-    .family .text-box {
-        padding: 0;
-    }
-    .family .text-box h3 {
-        margin-bottom: 30px;
+        .text-box {
+            padding: 0;
+            h3 {
+                margin-bottom: 30px;
+            }
+        }
     }
 }
 
@@ -579,59 +585,59 @@
         margin-left: 0px;
         width: 100%;
         justify-content: flex-start;
+        .nav-link {
+            font-size: 16px;
+            padding: 15px 20px;
+            width: 100%;
+            &.pertner-btn {
+                height: 50px;
+                width: auto;
+                padding: 0px 20px;
+            }
+        }
+        .nav-item:last-child {
+            margin-left: 20px;
+        }
     }
-    header .navigation .navbar .navbar-nav .nav-item .nav-link {
-        font-size: 16px;
-        padding: 15px 20px;
-        width: 100%;
-    }
-    header .navigation .navbar .navbar-nav .nav-item .nav-link.pertner-btn {
-        height: 50px;
-        width: auto;
-        padding: 0px 20px;
-    }
-    header .navigation .navbar .navbar-nav .nav-item:last-child {
-        margin-left: 20px;
-    }
+
     .header-shape,
     .shape-bottom {
         display: none;
     }
+
     .hero-section {
         height: auto;
+        .banner-inner {
+            position: static;
+            transform: translate(0, 0);
+            .banner-form {
+                padding: 50px;
+                max-width: 100%;
+                border-radius: 0;
+                margin: -6px 0 0 0;
+                .text-box {
+                    margin: 0 0 30px 0;
+                    h3 {
+                        font-size: 28px;
+                        line-height: 38px;
+                        margin: 0 0 15px 0;
+                    }
+                    p {
+                        margin-bottom: 15px;
+                        font-size: 16px;
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+        iframe {
+            width: 100% !important;
+            height: 330px !important;
+            object-fit: cover;
+            object-position: center;
+        }
     }
-    .hero-section .container-fluid {
-        padding: 0;
-    }
-    .hero-section .banner-inner {
-        position: static;
-        transform: translate(0, 0);
-    }
-    .hero-section .banner-inner .banner-form {
-        padding: 50px;
-        max-width: 100%;
-        border-radius: 0;
-        margin: -6px 0 0 0;
-    }
-    .hero-section .banner-inner .banner-form .text-box {
-        margin: 0 0 30px 0;
-    }
-    .hero-section .banner-inner .banner-form .text-box h3 {
-        font-size: 28px;
-        line-height: 38px;
-        margin: 0 0 15px 0;
-    }
-    .hero-section .banner-inner .banner-form .text-box p {
-        margin-bottom: 15px;
-        font-size: 16px;
-        line-height: 20px;
-    }
-    .hero-section iframe {
-        width: 100% !important;
-        height: 330px !important;
-        object-fit: cover;
-        object-position: center;
-    }
+
     .services-section {
         padding: 50px 10px;
         .services-inner {
@@ -899,23 +905,7 @@
         height: 90px;
         display: block;
     }
-    .gallery-main {
-        background-color: #fff;
-        margin: 0 -10.5px;
-        padding: 0;
-    }
-    .video-wrapper {
-        padding: 50px 20px;
-        height: 100%;
-    }
-    .gallery-main h3 {
-        font-size: 36px;
-        margin: 0 0 20px 0;
-    }
-    .gallery-main .inner {
-        padding: 50px 20px;
-        height: auto;
-    }
+
     .globalReach {
         padding: 50px 10px;
     }
@@ -954,13 +944,13 @@
     .hero-section.partner iframe {
         position: static;
     }
-    .hero-section .container .titleText h2 {
+    .hero-section .titleText h2 {
         font-size: 38px;
         line-height: 40px;
         max-width: 100%;
         margin-bottom: 10px;
     }
-    .hero-section .container .titleText {
+    .hero-section .titleText {
         display: none;
     }
     .cleaning {
