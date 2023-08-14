@@ -1,8 +1,8 @@
 <template>
-	<section id="servicesSection" class="services-section bg-purple-50 py-32 font-neo-sans">
+	<section id="servicesSection" class="services-section bg-purple-50 py-16 md:py-32 font-neo-sans">
 		<div class="container">
-			<div class="grid md:grid-cols-2 gap-12 text-lg">
-				<div class="col-span-2 leading-relaxed uppercase text-gray-600">
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-lg">
+				<div class="md:col-span-2 leading-relaxed uppercase text-gray-600">
 					<h2 class="text-7xl font-semibold">{{ $t("DRONE_SERVICES") }}</h2>
 					<p class="text-5xl font-medium">{{ $t("CLEANING_BUILDINGS_AND_HEAVY_LIFTING") }}</p>
 				</div>

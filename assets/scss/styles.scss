@@ -127,41 +127,7 @@ section#familySection {
 	}
 }
 
-section#advantageSection {
 
-	&.advantage-sec {
-		background-color: #e4e7ed;
-		padding: 130px 0;
-		.text-box {
-			height: 100%;
-			display: flex;
-			align-items: center;
-		}
-		.text-list {
-			ul {
-				li {
-					display: flex;
-					align-items: center;
-					margin: 0 0 24px 0;
-					&:last-child {
-						margin: 0;
-					}
-					span {
-						max-width: 46px;
-						width: 100%;
-						margin: 0 16px 0 0px;
-					}
-					p {
-						flex: 1;
-						@include NeoSans(600);
-						font-size: $font20;
-						line-height: 24px;
-					}
-				}
-			}
-		}
-	}
-}
 
 
 section#newsSection {
@@ -562,38 +528,6 @@ article#newsArticle {
 		}
 	}
 
-	/***** INTENTION SEC ******/
-
-	.intention-section {
-		padding: 220px 0 226px;
-		background-color: $primary;
-		.intention-left {
-			height: 100%;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			h3 {
-				color: white;
-			}
-		}
-		.intention-right {
-			padding: 0 0 0 31px;
-			h4 {
-				color: white;
-				font-size: $font20;
-				line-height: 24px;
-				@include NeoSans(600);
-				margin: 0 0 20px 0;
-			}
-			p {
-				color: white;
-				margin: 0 0 16px 0;
-				&:last-child {
-					margin: 0;
-				}
-			}
-		}
-	}
 	/***** ESTIMATES FUTURE SEC ******/
 
 	.estimated-future-section {
