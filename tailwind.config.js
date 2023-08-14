@@ -20,7 +20,7 @@ module.exports = {
       },
 
       fontFamily: {
-        'neo-sans': ['NeoSans', 'sans-serif'],
+        'neo-sans': ['NeoSans', 'Helvetica', 'sans-serif'],
       },
     },
   },

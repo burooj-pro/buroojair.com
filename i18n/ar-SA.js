@@ -100,7 +100,7 @@ ACCESSING_ELEVATED_AREAS_WITHOUT_REQUIRING_HEIGHT_SPECIFIC_TOOLS:
   OSAMAH_MD:'أسامة بن عبدالله القرينيس - مدير عام',
   FAISAL_PM:'فيصل غازي عوض - مدير المشاريع',
   HATIM_DOM:'حاتم حسين شويخان - مدير عمليات الطائرات بدون طيار',
-  MOHAMMED_DMS:'+ 25 من أعضاء الفريق القيمين الآخرين',
+  MOHAMMED_DMS:'+25 من أعضاء الفريق القيمين الآخرين',
   THE_ESTIMATED_NEED_FOR_FUTURE_DRONE_CLEANING_SERVICES_IS_APPROXIMATELY:
     "الحاجة المقدر لخدمات تنظيف الطائرات بدون طيار في المستقبل هي تقريبًا",
   DRONES_INTERNATIONALLY: "طائرات درونز عالميا",

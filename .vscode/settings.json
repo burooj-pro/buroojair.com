@@ -1,4 +1,5 @@
 {
     "nuxt.isNuxtApp": true,
-    "nuxt.portNumber": 3000
+    "nuxt.portNumber": 3000,
+    "css.lint.unknownAtRules": "ignore"
 }
