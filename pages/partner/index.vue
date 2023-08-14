@@ -121,7 +121,7 @@
           allowfullscreen=""
           title="BUROOJ AIR Working Drone"
           data-ready="true"
-          class="elementor-background-video-embed"
+          class=""
           style="width: 1903px; height: 1072.11px"
         ></iframe>
       </div>

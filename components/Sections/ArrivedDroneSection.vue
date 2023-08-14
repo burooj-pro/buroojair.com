@@ -19,7 +19,7 @@
 							<p>
 								{{ $t("UNTIL_NOW_CLEANING_OF_TALL_BUILDINGS_HAS_BEEN_A_COMPLEX_AND_DANGEROUS_UNDERTAKING") }}
 							</p>
-							<NuxtLink to="/facade-cleaning" class="btn btn-white">
+							<NuxtLink to="/services/facade-cleaning" class="btn btn-white">
 								<i class="bi bi-arrow-right fs-5 me-2"></i>
 								{{ $t("READ_MORE") }}
 							</NuxtLink>

@@ -5,7 +5,7 @@
     <section class="banner">
       <div class="overlay"></div>
     </section>
-    <!-- Banner End -->
+
     <!-- Service Start -->
     <section class="service">
       <div class="container">

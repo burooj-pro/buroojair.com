@@ -1,8 +1,3 @@
-@media (min-width: 1400px) {
-    .container {
-        max-width: 1150px;
-    }
-}
 
 @media (max-width: 1600px) {
     .locationContent {
@@ -539,19 +534,11 @@
 }
 
 @media (max-width: 767px) {
-    .container,
-    .container-sm {
-        max-width: 100%;
-    }
-    header {
-        padding: 20px 0;
-    }
-    header .container-fluid {
-        padding: 0;
-    }
+
     header .navigation .navbar .navbar-brand {
         margin-left: 20px;
     }
+
     .navbar-toggler {
         padding: 5px;
         border: none;
@@ -562,22 +549,22 @@
         background-color: rgba(0, 0, 0, 0.2);
         align-items: center;
         margin-right: 20px;
-    }
-    .navbar-toggler span {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        width: 20px;
-        height: 3px;
-        margin: 0 0 3px 0;
-        background-color: #fff;
-    }
-    .navbar-toggler span:last-child {
-        margin: 0;
-    }
-    .navbar-toggler:focus {
-        box-shadow: none;
+        span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 20px;
+            height: 3px;
+            margin: 0 0 3px 0;
+            background-color: #fff;
+            &:last-child {
+                margin: 0;
+            }
+            &:focus {
+                box-shadow: none;
+            }
+        }
     }
     .navbar-collapse {
         position: absolute;
@@ -1105,29 +1092,7 @@
     .advantages .text-box h4 {
         font-size: 18px;
     }
-    .gallery-main .gallery-container {
-        margin: 0;
-    }
-    .gallery-main .gallery-container li {
-        float: none;
-        padding: 5px 0;
-    }
-    .gallery-main .gallery-container li.large,
-    .gallery-main .gallery-container li.medium,
-    .gallery-main .gallery-container li.small {
-        width: 100%;
-    }
-    .gallery-main .gallery-container li.small img {
-        height: auto;
-        object-fit: cover;
-        width: 100%;
-    }
-    .gallery-main .gallery-container li.medium img {
-        height: auto;
-        object-fit: cover;
-        width: 100%;
-        width: 100%;
-    }
+
     .locationContent .caption h3 {
         font-size: 22px;
     }

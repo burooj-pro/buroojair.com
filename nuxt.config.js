@@ -26,7 +26,8 @@ export default {
     ],
   },
 
-  css: ["~/assets/scss/main.scss",],
+  css: ["~/assets/scss/main.scss",
+  'animate.css/animate.min.css'],
   styleResources: {
     scss: [
       

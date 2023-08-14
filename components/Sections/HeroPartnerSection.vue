@@ -8,7 +8,7 @@
         allow="autoplay; fullscreen; picture-in-picture"
         title="BUROOJ AIR Working Drone"
         data-ready="true"
-        class="elementor-background-video-embed d-none d-md-block"
+        class="d-none d-md-block"
         style="width: 1903px; height: 1072.11px"
       ></iframe>
 
@@ -20,7 +20,7 @@
         allow="autoplay; fullscreen; picture-in-picture"
         title="BUROOJ AIR Working Drone"
         data-ready="true"
-        class="elementor-background-video-embed d-block d-md-none"
+        class="d-block d-md-none"
         style="width: 1903px; height: 1072.11px"
       ></iframe>
 
