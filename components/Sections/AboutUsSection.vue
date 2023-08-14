@@ -20,7 +20,7 @@
 				</div>
 				<div class="col-md-6">
 					<div class="about-us-right p-5">
-						<div class="text-box text-white p-5 text-uppercase">
+						<div class="text-box text-white p-5 text-uppercase z-50">
 							<h3 class="text-white mb-5">{{ $t("ABOUT_US") }}</h3>
 							<h4 class="fs-1">{{ $t("OUR_HISTORY_AND_THE_EVOLUTION_OF_CLEANING") }}</h4>
 						</div>

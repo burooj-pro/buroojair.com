@@ -1,5 +1,5 @@
 <template>
-    <section id="servicesSection" class="services-section">
+    <section id="servicesSection" class="services-section bg-purple-50 py-32">
       <div class="container">
         <div class="row">
           <div class="col-12">

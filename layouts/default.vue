@@ -1,15 +1,41 @@
 <template>
-  <div :dir="dir">
+  <div :dir="dir" class="relative">
     <Nuxt />
   </div>
 </template>
 
 <script>
+import {     initCollapses,  } from 'flowbite'
 export default {
-  computed: {
-    dir() {
-      return this.$i18n.locale === "ar" ? "rtl" : "ltr";
-    },
+  mounted() {
+    initCollapses();
+
+
   },
+
+  head() {
+    let i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true })
+		return {
+			title: `Burooj Air`,
+      htmlAttrs: {
+                lang: 'en',
+                ...i18nHead.htmlAttrs
+            },
+			meta: [
+				{
+					hid: "description",
+					name: "description",
+					content: "We aim to contribute to a safer work day for people who work at great heights with lifts, scaffolding and for facade climbers.",
+				},
+			],
+		};
+	},
+	computed: {
+		dir() {
+			return this.$i18n.locale === "ar" ? "rtl" : "ltr";
+		},
+	},
 };
+
+
 </script>

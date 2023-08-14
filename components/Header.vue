@@ -1,60 +1,51 @@
 <template>
-	<header class="fixed-top" style="">
-		<div class="mb-4 bg-indigo-700 h-5" style=""></div>
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-12 py-3">
-					<div class="navigation">
-						<nav class="navbar navbar-expand-md">
-							<NuxtLink class="navbar-brand" to="/"><img src="~assets/images/logo.png" alt="" class="img-fluid" /></NuxtLink>
-							<button
-								class="navbar-toggler"
-								type="button"
-								data-bs-toggle="collapse"
-								data-bs-target="#navbarSupportedContent"
-								aria-controls="navbarSupportedContent"
-								aria-expanded="false"
-								aria-label="Toggle navigation"
-							>
-								<span></span>
-								<span></span>
-								<span></span>
-							</button>
-							<div class="collapse navbar-collapse" id="navbarSupportedContent">
-								<ul class="navbar-nav" :style="`margin-${dir === 'ltr' ? 'left' : 'right'}: auto !important;`">
-									<li class="nav-item">
-										<NuxtLink class="nav-link active" to="/">{{ $t("HOME") }}</NuxtLink>
-									</li>
-									<li class="nav-item">
-										<NuxtLink class="nav-link" to="/services">{{ $t("SERVICES") }}</NuxtLink>
-									</li>
-									<li class="nav-item">
-										<NuxtLink class="nav-link" to="/gallery">{{ $t("GALLERY") }}</NuxtLink>
-									</li>
-									<li class="nav-item">
-										<NuxtLink class="nav-link" to="/about-us">{{ $t("ABOUT_US") }}</NuxtLink>
-									</li>
-									<li class="nav-item">
-										<NuxtLink class="nav-link" to="/contact">{{ $t("CONTACT") }}</NuxtLink>
-									</li>
-									<li class="nav-item" @click="onChangeLanguage()">
-										<p class="nav-link link text-white" role='button'>
-											{{ $t("LANGUAGE") }}
-										</p>
-									</li>
-									<li class="nav-item">
-										<NuxtLink class="nav-link pertner-btn lh-1" to="/franchise/franchise">{{ $t("BECOME_A_PARTNER") }}</NuxtLink>
-									</li>
-								</ul>
-							</div>
-						</nav>
+	<header class="md:fixed md:top-0 md:w-full md:z-50">
+		<div class="bg-brand-second h-3"></div>
+		<div class="bg-opacity-90 bg-gray-900">
+			<div class="container mx-auto py-4 md:py-0">
+			<nav class="">
+				<div class="flex flex-wrap items-center justify-between mx-auto font-neo-sans text-lg">
+					<NuxtLink class="flex items-start" to="/"><img src="~assets/images/logo.png" alt="" class="h-12 md:h-20 mr-3" /></NuxtLink>
+					<button data-collapse-toggle="navbar-default" type="button" class="
+					inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden focus:bg-violet-400 hover:bg-violet-400 focus:outline-none" aria-controls="navbar-default" aria-expanded="false">
+						<span class="sr-only">Open main menu</span>
+						<svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+							<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+						</svg>
+					</button>
+					<div class="hidden w-full md:block md:w-auto" id="navbar-default">
+						<ul class="font-medium text-center flex gap-3 md:gap-3 flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
+							<li>
+								<NuxtLink aria-current="page" class="block no-underline  text-white " to="/">{{ $t("HOME") }}</NuxtLink>
+							</li>
+							<li>
+								<NuxtLink  class="block no-underline text-white " to="/">{{ $t("SERVICES") }}</NuxtLink>
+							</li>
+							<li>
+								<NuxtLink  class="block no-underline  text-white " to="/">{{ $t("GALLERY") }}</NuxtLink>
+							</li>
+							<li>
+								<NuxtLink class="block no-underline text-white " to="/">{{ $t("ABOUT_US") }}</NuxtLink>
+							</li>
+							<li>
+								<NuxtLink  class="block no-underline text-white " to="/">{{ $t("CONTACT") }}</NuxtLink>
+							</li>
+							<li @click="onChangeLanguage()">
+								<span role="button" class="block no-underline  text-white hover:text-violet-500">{{ $t("LANGUAGE") }}</span>
+							</li>
+							<li>
+								<NuxtLink class="py-3 px-4 bg-brand-second rounded-md hover:bg-brand-first text-white no-underline" to="/franchise/franchise">{{ $t("BECOME_A_PARTNER") }}</NuxtLink>
+							</li>
+						</ul>
 					</div>
 				</div>
-			</div>
+			</nav>
 		</div>
-		<div class="header-shape"  :class="{ 'flip-horizontal': language === 'ar' }">
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
-				<path class="elementor-shape-fill" d="M761.9,44.1L643.1,27.2L333.8,98L0,3.8V0l1000,0v3.9" fill="#212121"></path>
+		</div>
+		
+		<div class="relative w-full hidden md:block" :class="{ 'flip-horizontal': language === 'ar' }">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" class="h-12 block translate-x-0 w-full">
+				<path class="fill-gray-900 opacity-90" d="M761.9,44.1L643.1,27.2L333.8,98L0,3.8V0l1000,0v3.9" fill="#212121"></path>
 			</svg>
 		</div>
 	</header>
