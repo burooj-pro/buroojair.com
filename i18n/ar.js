@@ -97,10 +97,10 @@ ACCESSING_ELEVATED_AREAS_WITHOUT_REQUIRING_HEIGHT_SPECIFIC_TOOLS:
 
   MOHAMMED_CEO:'محمد بن فيحان - المؤسس والرئيس التنفيذي',
   MOHANNAD_CTO:'مهند فيحان العتيبي - رئيس قسم التكنولوجيا',
-  OSAMAH_MD:'أسامة عبد الله الجرينيش - مدير عام',
+  OSAMAH_MD:'أسامة بن عبدالله القرينيس - مدير عام',
   FAISAL_PM:'فيصل غازي عوض - مدير المشاريع',
   HATIM_DOM:'حاتم حسين شويخان - مدير عمليات الطائرات بدون طيار',
-  MOHAMMED_DMS:'محمد فتحي علي الابراهيم - مشرف صيانة الطائرات بدون طيار',
+  MOHAMMED_DMS:'+ 25 من أعضاء الفريق القيمين الآخرين',
   THE_ESTIMATED_NEED_FOR_FUTURE_DRONE_CLEANING_SERVICES_IS_APPROXIMATELY:
     "الحاجة المقدر لخدمات تنظيف الطائرات بدون طيار في المستقبل هي تقريبًا",
   DRONES_INTERNATIONALLY: "طائرات درونز عالميا",
