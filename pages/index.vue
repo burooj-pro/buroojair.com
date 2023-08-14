@@ -11,132 +11,27 @@
 		<!-- VACANT PILOT SEC -->
 		<SectionsVacantPilotPositionSection />
 
-		<!-- VACANT PILOT SEC -->
-		<section class="arrived-drone-sec">
-			<div class="container-fluid p-0">
-				<div class="row g-0">
-					<div class="col-md-6">
-						<div class="image-holder">
-							<img src="~assets/images/arrived-drone-img.png" alt="" class="img-fluid" />
-							<h4 class="z-2">
-								{{ $t("BUILDINGS_CLEANING") }} <br />
-								{{ $t("AND_HEAVYLIFTING_USING_DRONE") }}
-							</h4>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="text-box">
-							<h4 class="z-2">
-								{{ $t("THE_BEST_SOLUTION_TO_CLEAN_BUILDINGS_AND_LIFT_HEAVY_WEIGHTS_IN_A_FASTER_WAY_IS_AVAILABLE_NOW") }}
-							</h4>
-							<p>
-								{{ $t("UNTIL_NOW_CLEANING_OF_TALL_BUILDINGS_HAS_BEEN_A_COMPLEX_AND_DANGEROUS_UNDERTAKING") }}
-							</p>
-							<NuxtLink to="/facade-cleaning" class="btn btn-white">
-								<i class="bi bi-arrow-right fs-5 me-2"></i>
-								{{ $t("READ_MORE") }}
-							</NuxtLink>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+		<!-- ARRIVED DRONE SEC -->
+		<SectionsArrivedDroneSection />
 
 		<!-- ADVANTAGE SEC -->
 		<SectionsAdvantageSection />
 
 		<!-- SOLAR CELL SEC -->
-		<section class="arrived-drone-sec solar-cell-sec">
-			<div class="container-fluid p-0">
-				<div class="row g-0">
-					<div class="col-md-6">
-						<div class="image-holder">
-							<img src="~assets/images/solar-cell-img.png" alt="" class="img-fluid" />
-							<h4>
-								{{ $t("SOLAR_CELL_PANEL") }}
-								<br />
-								{{ $t("CLEANING") }}
-							</h4>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="text-box">
-							<h4>
-								{{ $t("THIS_PROCEDURE_KEEPS") }}
-							</h4>
-							<p>
-								{{ $t("OUR_WINDOW_CLEANING_METHOD") }}
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="vacant-shape">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
-					<path class="elementor-shape-fill" d="M761.9,44.1L643.1,27.2L333.8,98L0,3.8V0l1000,0v3.9" fill="#E4E7ED"></path>
-				</svg>
-			</div>
-
-		</section>
+		<SectionsSolarCellsSection />
 
 		<!-- LET TALK SEC -->
-		<section class="let-talk-sec">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-7">
-						<div class="let-talk-left z-2">
-							<h4>{{ $t("FRANCHISE") }}</h4>
-							<p>{{ $t("OPPORTUNITIES_AVAILABLE") }}</p>
-						</div>
-					</div>
-					<div class="col-md-5">
-						<div class="let-talk-right z-2">
-							<p>
-								{{ $t("TAKE_PART_IN_THE_MOST_INNOVATIVE_BUSINESS_IDEA") }}
-							</p>
-							<a href="#" class="btn btn-secondary btn-blue">
-								<i class="bi bi-arrow-right fs-5 me-2"></i>
-								{{ $t("LET_S_TALK") }}
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+		<SectionsLetsTalkSection />
+		
 
 		<!-- INTENTION SEC -->
-		<section class="intention-sec">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6">
-						<div class="intention-left">
-							<h3>
-								{{ $t("OUR_INTENTION") }}
-							</h3>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="intention-right">
-							<h4>
-								{{ $t("OUR_MAIN_GOAL_IS_TO_HELP_OTHERS_AND_MAKE_WORKING_LIFE_BETTER_FOR_EVERYONE") }}
-							</h4>
-							<p>
-								{{ $t("WE_WANT_TO_HELP_MAKE_WORKDAYS") }}
-							</p>
-							<p>
-								{{ $t("THESE_ARE_PHYSICALLY_DEMANDING_JOBS") }}
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+		<SectionsIntentionSection />
 
 		<!-- ABOUT US SEC -->
 		<SectionsAboutUsSection />
 		
 		<!-- ESTIMATED FUTURE SEC -->
-		<!-- <section class="estimated-future-sec">
+		<!-- <section class="estimated-future-section">
       <div class="container-fluid p-0">
         <div class="row g-0">
           <div class="col-md-6">
@@ -186,12 +81,12 @@
 		
 
 		<!-- POPULATED SEC -->
-		<section class="populated-sec">
+		<section class="populated-section">
 			<img src="~assets/images/BuroojAir_4.jpg" alt="" class="img-fluid w-100" />
 		</section>
 
 		<!-- WORK STAND SEC -->
-		<!-- <section class="work-stand-sec">
+		<!-- <section class="work-stand-section">
       <div class="vacant-shape work-vacant-shape" data-negative="false">
         <svg
           xmlns="http://www.w3.org/2000/svg"
