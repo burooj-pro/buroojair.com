@@ -1,7 +1,7 @@
 <template>
   <div class="overflow-hidden">
     <Header />
-    <!-- NEWS SEC -->
+    <!-- NEWS SECTION -->
     <SectionsNewsSection />
 
     <SectionsContactSection />

@@ -5,7 +5,7 @@
     <SectionsHeroPartnerSection />
     
     
-    <!-- CLEANING SEC -->
+    <!-- CLEANING SECTION -->
     <section class="cleaning">
       <div class="container">
         <div class="text-box">
@@ -18,7 +18,7 @@
         </div>
       </div>
     </section>
-    <!-- FRANCHISE SEC -->
+    <!-- FRANCHISE SECTION -->
     <section class="partner-franchise">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -185,7 +185,7 @@
         </div>
       </div>
     </section>
-    <!-- HOW BUROOJ AIR SEC -->
+    <!-- HOW BUROOJ AIR SECTION -->
     <section class="how-ktv">
       <div class="row g-0">
         <div class="col-lg-5">
@@ -237,9 +237,9 @@
     
     
 
-    <!-- ADVANTAGE SEC -->
+    <!-- ADVANTAGE SECTION -->
     <AdvantageSection />
-    <!-- Advantages SEC -->
+    <!-- Advantages SECTION -->
     <Footer />
   </div>
 </template>

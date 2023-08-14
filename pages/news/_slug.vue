@@ -2,7 +2,7 @@
 	<article id="newsArticle" class="overflow-hidden">
 		<Header />
 		
-    <!-- NEWS SEC -->
+    <!-- NEWS SECTION -->
 		<section class="news-sec">
 			<div class="container">
 				<div class="row">

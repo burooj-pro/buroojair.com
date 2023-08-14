@@ -1,5 +1,5 @@
 <template>
-    <!-- FAMILY SEC -->
+    <!-- FAMILY SECTION -->
     <!-- <section id="familySection" class="family">
       <div class="container-fluid">
         <div class="row align-items-center">

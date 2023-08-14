@@ -73,9 +73,9 @@
       </div>
     </section>
     <!-- Service End -->
-    <!-- ADVANTAGE SEC -->
+    <!-- ADVANTAGE SECTION -->
     <AdvantageSection />
-    <!-- Advantages SEC -->
+    <!-- Advantages SECTION -->
     <section class="advantages">
       <div class="container">
         <div class="row align-items-center">
@@ -125,7 +125,7 @@
         </div>
       </div>
     </section>
-    <!-- INQUIRY SEC -->
+    <!-- INQUIRY SECTION -->
     <section class="inquiry">
       <div class="container">
         <div class="row">

@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "@nuxtjs/style-resources": "^1.2.1",
+    "@types/babel__core": "^7.20.1",
     "sass": "^1.60.0",
     "sass-loader": "^10.4.1"
   }
