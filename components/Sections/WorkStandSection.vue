@@ -7,7 +7,7 @@
           preserveAspectRatio="none"
         >
           <path
-            class="elementor-shape-fill"
+            
             d="M761.9,44.1L643.1,27.2L333.8,98L0,3.8V0l1000,0v3.9"
             fill="#6B6B77"
           ></path>
@@ -64,7 +64,7 @@
           preserveAspectRatio="none"
         >
           <path
-            class="elementor-shape-fill"
+            
             d="M761.9,44.1L643.1,27.2L333.8,98L0,3.8V0l1000,0v3.9"
             fill="#6B6B77"
           ></path>

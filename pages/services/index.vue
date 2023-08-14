@@ -52,7 +52,7 @@
 		<!-- Solar Panel Sec  -->
 		<section class="solarPanel">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" class="shape" preserveAspectRatio="none">
-				<path class="elementor-shape-fill" d="M761.9,44.1L643.1,27.2L333.8,98L0,3.8V0l1000,0v3.9"></path>
+				<path  d="M761.9,44.1L643.1,27.2L333.8,98L0,3.8V0l1000,0v3.9"></path>
 			</svg>
 			<div class="row g-0">
 				<div class="col-lg-6">
