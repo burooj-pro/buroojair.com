@@ -21,7 +21,7 @@
                     <p>
                       {{ $t("CLEANING_BUILDINGS_DESC") }}
                     </p>
-                    <NuxtLink to="/window-cleaning" class="btn btn-secondary">
+                    <NuxtLink to="/services/-cleaning" class="btn btn-secondary">
                       <i class="bi bi-arrow-right fs-5 me-2"></i>
                       {{ $t("READ_MORE") }}
                     </NuxtLink>
@@ -35,7 +35,7 @@
                     <p>
                       {{ $t("HEAVY_LIFTING_DESC") }}
                     </p>
-                    <NuxtLink to="/facade-cleaning" class="btn btn-secondary rounded-3">
+                    <NuxtLink to="/services/facade-cleaning" class="btn btn-secondary rounded-3">
                       <i class="bi bi-arrow-right fs-5 me-2"></i>
                       {{ $t("READ_MORE") }}
                     </NuxtLink>
