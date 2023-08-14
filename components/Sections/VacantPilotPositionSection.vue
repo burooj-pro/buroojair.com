@@ -1,20 +1,34 @@
 <template>
-    <section id="vacantPilotPositionSection" class="vacant-pilot-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
+    <section id="vacantPilotPositionSection" class="vacant-pilot-section ">
+      <div class="container ">
+        <div class="row justify-content-center">
+          <div class="col-12 justify-content-center">
+
             <div class="text-box">
+							   <NuxtLink to="/PilotePosition" class="btn btn-secondary btn-blue text-center ">
+              <span>
+              {{ $t("APPLY_NOW") }}
+              </span>
+            </NuxtLink>
+		
+
+
               <div class="media">
                 <img
                   src="~assets/images/info-icon.png"
                   alt=""
                   class="img-fluid"
                 />
-                <h4 class="mx-2">
+                <h1 class="mx-2">
                   {{ $t("GACA_PART_107_DRONE_PILOT") }}
                   <span> {{ $t("IS_REQUIRED") }}</span>
-                </h4>
+                </h1>
               </div>
+			   <!-- <NuxtLink to="/PilotePosition" class="btn btn-secondary btn-blue text-center">
+              <span>
+              {{ $t("APPLY_NOW") }}
+              </span>
+            </NuxtLink> -->
               <!-- <a href="#" class="btn btn-secondary">
                 {{ $t("APPLY_NOW") }}
               </a> -->

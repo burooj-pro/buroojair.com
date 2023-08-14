@@ -62,7 +62,7 @@ ACCESSING_ELEVATED_AREAS_WITHOUT_REQUIRING_HEIGHT_SPECIFIC_TOOLS:
   GACA_PART_107_DRONE_PILOT : "GACA PART 107 DRONE PILOT",
   IS_AVAILABLE: "متاح",
   IS_REQUIRED: "مطلوب",
-  APPLY_NOW: "قدم الآن",
+  APPLY_NOW: "كن طيارا",
   WINDOW_AND_FACADE: "النوافذ والواجهات",
   BUILDINGS_CLEANING:"تنظيف المباني",
   AND_HEAVYLIFTING_USING_DRONE:"والرفع الثقيل باستخدام الدرونز ",
@@ -504,5 +504,10 @@ Our_aim_is_to_work_with_our_partners_to_expand: `هدفنا هو العمل مع
 
 
 NDA_BUTTON: `أضغط هنا للحصول على إتفاقية عدم الافصاح الخاصة ببروج أير`,
+
+
+GACA_PILOTE:"كن طيارًا للطائرة بدون طيار الجزء 107 من GACA",
+GACA_PILOTE_DESC:"ارفع من طموحاتك وكن طيارًا معتمدًا من GACA الجزء 107 من الطائرات بدون طيار مع Burooj Air. يقدم خبراؤنا المتمرسون تدريبًا شخصيًا ومساعدة لرحلة اعتماد سلسة.",
+
 
 };
