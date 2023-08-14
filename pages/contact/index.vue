@@ -10,7 +10,7 @@
         aria-label="Prince Turki St. - Khobar - Saudi Arabia"
       ></iframe>
     </section>
-    <!-- Contact Location Sec -->
+    <!-- Contact Location SECTION -->
     <section class="contact-location">
       <div class="container">
         <div class="titleText">

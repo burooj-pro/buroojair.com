@@ -1,7 +1,7 @@
 <template>
   <div id="aboutUsPage" class="overflow-hidden">
     <Header />
-    <!-- Service Hero Sec -->
+    <!-- Service Hero SECTION -->
     <section class="heroServices mt-5 pt-4">
       <div class="row g-0">
         <div class="col-lg-7">
@@ -41,7 +41,7 @@
       </div>
     </section>
 
-    <!-- METHOD SEC -->
+    <!-- METHOD SECTION -->
     <section class="method">
       <div class="container">
         <div class="row align-items-center">
@@ -71,7 +71,7 @@
       </div>
     </section>
 
-    <!-- SETTING STANDARD SEC -->
+    <!-- SETTING STANDARD SECTION -->
     <section class="standardSolar aboutSetting">
       <svg
         xmlns="http://www.w3.org/2000/svg"

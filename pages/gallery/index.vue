@@ -6,7 +6,7 @@
       <div class="overlay"></div>
     </section>
     <!-- Banner End -->
-    <!-- GALLERY SEC -->
+    <!-- GALLERY SECTION -->
     <section class="gallery-main">
       <div class="container">
         <div class="row">

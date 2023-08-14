@@ -1,7 +1,7 @@
 <template>
 	<div id="servicesPage" class="overflow-hidden  py-5">
 		<Header />
-		<!-- Service Hero Sec -->
+		<!-- Service Hero SECTION -->
 		<section class="heroServices mt-5 pt-5">
 			<div class="row g-0">
 				<div class="col-lg-7">
@@ -24,9 +24,9 @@
 				</div>
 			</div>
 		</section>
-		<!-- ADVANTAGE SEC -->
+		<!-- ADVANTAGE SECTION -->
 		<AdvantageSection />
-		<!-- METHOD SEC -->
+		<!-- METHOD SECTION -->
 		<section class="method">
 			<div class="container">
 				<div class="row">
@@ -78,7 +78,7 @@
 				</div>
 			</div>
 		</section>
-		<!-- SETTING STANDARD SEC -->
+		<!-- SETTING STANDARD SECTION -->
 		<section class="standardSolar">
 			<div class="container">
 				<div class="row">
@@ -111,7 +111,7 @@
 				</div>
 			</div>
 		</section>
-		<!-- INQUIRY SEC -->
+		<!-- INQUIRY SECTION -->
 		<!-- <section class="inquiry">
       <div class="container">
         <div class="row">
@@ -219,7 +219,7 @@
         </div>
       </div>
     </section> -->
-		<!-- SAFETY SEC -->
+		<!-- SAFETY SECTION -->
 		<section class="safetyStand">
 			<div class="container">
 				<div class="row">

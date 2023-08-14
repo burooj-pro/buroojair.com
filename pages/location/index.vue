@@ -1,7 +1,7 @@
 <template>
   <div id="locationPage" class="overflow-hidden">
     <Header />
-    <!-- Global Reach Sec -->
+    <!-- Global Reach SECTION -->
     <section class="globalReach mt-5 pt-4">
       <div class="container">
         <div class="text-box">
@@ -203,7 +203,7 @@
         </div>
       </div>
     </section>
-    <!-- Franchise Sec -->
+    <!-- Franchise SECTION -->
     <section class="franchise">
       <div class="container">
         <div class="row">
