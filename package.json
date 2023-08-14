@@ -25,6 +25,11 @@
     "vue-template-compiler": "^2.6.14",
     "webpack": "^4.46.0"
   },
+  "overrides": {
+    "chokidar": "3.5.3",
+    "glob-parent": "6.0.2"
+  },
+
   "devDependencies": {
     "@nuxtjs/style-resources": "^1.2.1",
     "@types/babel__core": "^7.20.1",
