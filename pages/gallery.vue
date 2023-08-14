@@ -1,10 +1,8 @@
 <template>
-  <div id="galleryPage" class="overflow-hidden">
+  <div id="galleryPage" class="overflow-hidden font-neo-sans">
     <Header />
-    <!-- Banner Start -->
-    <section class="banner mt-5 pt-4">
-      <div class="overlay "></div>
-    </section>
+
+    <SectionsHeadingSection :title="$t('GALLERY')" image="~assets/images/burooj_air_drone.jpg" />
 
     <!-- GALLERY SECTION -->
     <SectionsGallerySection :videos="videos" :images="images" />

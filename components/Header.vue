@@ -19,22 +19,22 @@
 								<NuxtLink aria-current="page" class="block no-underline  text-white " to="/">{{ $t("HOME") }}</NuxtLink>
 							</li>
 							<li>
-								<NuxtLink  class="block no-underline text-white " to="/">{{ $t("SERVICES") }}</NuxtLink>
+								<NuxtLink  class="block no-underline text-white " to="/services">{{ $t("SERVICES") }}</NuxtLink>
 							</li>
 							<li>
-								<NuxtLink  class="block no-underline  text-white " to="/">{{ $t("GALLERY") }}</NuxtLink>
+								<NuxtLink  class="block no-underline  text-white " to="/gallery">{{ $t("GALLERY") }}</NuxtLink>
 							</li>
 							<li>
-								<NuxtLink class="block no-underline text-white " to="/">{{ $t("ABOUT_US") }}</NuxtLink>
+								<NuxtLink class="block no-underline text-white " to="/about-us">{{ $t("ABOUT_US") }}</NuxtLink>
 							</li>
 							<li>
-								<NuxtLink  class="block no-underline text-white " to="/">{{ $t("CONTACT") }}</NuxtLink>
+								<NuxtLink  class="block no-underline text-white " to="/contact">{{ $t("CONTACT") }}</NuxtLink>
 							</li>
 							<li @click="onChangeLanguage()">
 								<span role="button" class="block no-underline  text-white hover:text-violet-500">{{ $t("LANGUAGE") }}</span>
 							</li>
 							<li>
-								<NuxtLink class="py-3 px-4 bg-brand-second rounded-md hover:bg-brand-first text-white no-underline" to="/franchise/franchise">{{ $t("BECOME_A_PARTNER") }}</NuxtLink>
+								<NuxtLink class="py-3 px-4 bg-brand-second rounded-lg hover:bg-brand-first text-white no-underline" to="/franchise/franchise">{{ $t("BECOME_A_PARTNER") }}</NuxtLink>
 							</li>
 						</ul>
 					</div>

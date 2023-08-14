@@ -25,14 +25,12 @@ export default {
   },
 
   css: ["@/assets/scss/main.scss",
-  'animate.css/animate.min.css'],
-  styleResources: {
-    scss: [
-      
-    ],
-  },
+    'animate.css/animate.min.css'],
 
-  plugins: [{ src: "@/plugins/bootstrap.client.js" }],
+  plugins: [
+    { src: "@/plugins/bootstrap.client.js" },
+    { src: "@/plugins/light-gallery.client.js", ssr: false }
+  ],
 
   components: {
     dirs: [
@@ -69,30 +67,30 @@ export default {
   },
 
   i18n: {
-		strategy: 'no_prefix',
+    strategy: 'no_prefix',
 
-		locales: [{
-				code: 'en',
-				iso: 'en-US',
-        file: 'en-US.js',
-				dir: 'ltr',
-        name: "English",
-			},
-			{
-				code: 'ar',
-				iso: 'ar-SA',
-        file: 'ar-SA.js',
-				dir: 'rtl',
-        name: "Arabic",
-			}
-		],
-		lazy: true,
-		langDir: 'i18n/',
-		defaultLocale: 'en',
-		baseUrl: "https://buroojair.com" || 'http://localhost:3000',
+    locales: [{
+      code: 'en',
+      iso: 'en-US',
+      file: 'en-US.js',
+      dir: 'ltr',
+      name: "English",
+    },
+    {
+      code: 'ar',
+      iso: 'ar-SA',
+      file: 'ar-SA.js',
+      dir: 'rtl',
+      name: "Arabic",
+    }
+    ],
+    lazy: true,
+    langDir: 'i18n/',
+    defaultLocale: 'en',
+    baseUrl: "https://buroojair.com" || 'http://localhost:3000',
 
-		vueI18n: {
-			fallbackLocale: 'en',
-		}
-	},
+    vueI18n: {
+      fallbackLocale: 'en',
+    }
+  },
 };

@@ -1,61 +1,37 @@
 <template>
-    <section id="developmentSection" class="development-sec">
+    <section id="developmentSection" class="font-neo-sans development-sec py-20 md:py-60 bg-blue-100">
       <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="development-left">
-              <h3>{{ $t("A_LOOK_TOWARDS_FUTURE_INVENTIONS") }}</h3>
-              <p>{{ $t("WHATS_NEXT") }}</p>
-            </div>
+        <div class="grid md:grid-cols-2">
+          <div class="p-4 md:p-8">
+            <h3 class="text-7xl font-bold mb-2">{{ $t("A_LOOK_TOWARDS_FUTURE_INVENTIONS") }}</h3>
+            <p class="text-5xl text-slate-800">{{ $t("WHATS_NEXT") }}</p>
           </div>
-          <div class="col-md-6">
-            <div class="text-box">
-              <ul >
+          <div class="p-4 md:p-8">
+            <ul class="md:ps-14 text-lg space-y-5">
                 <li>
-                  <p>
-                    <strong>{{ $t("SPRAY_PAINTING") }} </strong>
-
+                    <h3 class="uppercase block text-2xl font-bold">{{ $t("SPRAY_PAINTING") }} </h3>
                     {{ $t("WITH_CONTINUED_DEVELOPMENT") }}
-                  </p>
                 </li>
                 <li>
-                  <p>
-                    <strong>{{ $t("HIGHER_ALTITUDES") }} </strong>
+                    <h3 class="uppercase block text-2xl font-bold">{{ $t("HIGHER_ALTITUDES") }}</h3>
                     {{ $t("WE_HAVE_SOLVED_THE_OPERATING_HEIGHT") }}
-                  </p>
                 </li>
                 <li>
-                  <p>
-                    <strong
-                      >{{ $t("USE_LATEST_DRONE_CONTROL_TECHNOLOGIES") }}
-                    </strong>
+                    <h3 class="uppercase block text-2xl font-bold">{{ $t("USE_LATEST_DRONE_CONTROL_TECHNOLOGIES") }}</h3>
                     {{ $t("RESULT_OPERATING_IN_HIGHER_ALTITUDES") }}
-                  </p>
                 </li>
                    <li>
-                  <p>
-                    <strong
-                      >{{ $t("LONG_DISTANCE_DRONE_CONTROL") }}
-                    </strong>
+                    <h3 class="uppercase block text-2xl font-bold">{{ $t("LONG_DISTANCE_DRONE_CONTROL") }}</h3>
                     {{ $t("AFTER_EVALUATION") }}
-                  </p>
                 </li>
                 <li>
-
-
-                  <p class="mb-4">
-                    <strong>
-                      {{ $t("CONTROLLING_THE_DRONE_ANYWHERE") }}
-
-                    </strong>
+                    <h3 class="uppercase block text-2xl font-bold">{{ $t("CONTROLLING_THE_DRONE_ANYWHERE") }}</h3>
                     {{ $t("LOOKING_BEYOND_2023") }}
-                  </p>
-                  <p>
-                    {{ $t("REMOTE_CONTROL_ROOMS_WOULD_BE") }}
-                  </p>
+                </li>
+                <li class="mt-3 text-4xl font-bold">
+                  {{ $t("REMOTE_CONTROL_ROOMS_WOULD_BE") }}
                 </li>
               </ul>
-            </div>
           </div>
         </div>
       </div>

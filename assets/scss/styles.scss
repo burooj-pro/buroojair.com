@@ -1,5 +1,9 @@
-// Header
-
+html,
+body {
+    background-color: white;
+    font-size: 1rem;
+    line-height: 1.5;
+}
 
 
 .pipedriveWebForms form {
@@ -89,123 +93,27 @@ section#heroPartnerSection {
 	}
 }
 
-h3 {
-	color: $mainly_blue;
-	font-size: $font62;
-	text-transform: uppercase;
-	line-height: 68px;
-	@include NeoSans(900);
-}
-
 section#contactSection {
-	h3 {
-		font-size: $font50;
-	}
-
-	p {
-		font-size: $font16;
-		line-height: 24px;
-		@include NeoSans(400);
-		color: $charcoal;
-	}
-
-	.btn-secondary {
-		background-color: $orange;
-		border: 1px solid $orange;
-	}
-
-	/***** CONTACT SEC ******/
-
-	&.contact-section {
-		background-color: $primary;
-		padding: 130px 0;
-		.contact-left {
-			.text-box {
-				h3 {
-					color: white;
-				}
-				p {
-					color: white;
-				}
-			}
-			ul {
-				border-top: 1px dotted white;
-				li {
-					p {
-						color: white;
-					}
-				}
-			}
-		}
-		.contact-right {
-			form {
-				.form-group {
-					.form-control {
-						border: none;
-						background-color: white;
-						@include NeoSans(400);
-						font-size: $font14;
-						text-transform: uppercase;
-						height: 59px;
-						color: black;
-						padding: 7px 20px;
-						&::placeholder {
-							color: black;
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
-section#aboutUsSection {
-	&.about-us-section {
-		.about-us-left {
-			h4 {
-				color: $gray;
+	form {
+		.form-group {
+			.form-control {
+				border: none;
+				background-color: white;
 				@include NeoSans(400);
-				font-size: $font42;
+				font-size: $font14;
 				text-transform: uppercase;
-			}
-			p {
-				color: $gray;
-				// text-transform: uppercase;
-			}
-		}
-		.about-us-right {
-			background: url(~assets/images/ktv_dronepilot.jpg) no-repeat;
-			background-position: center center;
-			background-size: cover;
-			position: relative;
-			object-fit: cover;
-			height: 800px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			&::after {
-				position: absolute;
-				content: "";
-				left: 0;
-				top: 0;
-				width: 100%;
-				height: 100%;
-				background-color: rgba(black, 0.4);
-			}
-			.text-box {
-
-				h4 {
-					@include NeoSans(600);
-					text-transform: uppercase;
+				height: 59px;
+				color: black;
+				padding: 7px 20px;
+				&::placeholder {
+					color: black;
 				}
 			}
 		}
 	}
 }
 
-section#vacantPilotPositionSection {
-	background-color: $primary;
-}
+
 
 section#familySection {
 	&.family {
@@ -214,40 +122,13 @@ section#familySection {
 		.text-box {
 			padding: 200px 100px;
 
-			h3 {
-				color: white;
-				text-align: center;
-			}
 
-			h4 {
-				color: white;
-				font-size: 18px;
-				margin-bottom: 20px;
-			}
-
-			p {
-				color: white;
-				margin-bottom: 20px;
-			}
 		}
 	}
 }
 
 section#advantageSection {
-	h3 {
-		color: $mainly_blue;
-		font-size: $font62;
-		text-transform: uppercase;
-		line-height: 68px;
-		@include NeoSans(900);
-	}
 
-	p {
-		font-size: $font16;
-		line-height: 24px;
-		@include NeoSans(400);
-		color: $charcoal;
-	}
 	&.advantage-sec {
 		background-color: #e4e7ed;
 		padding: 130px 0;
@@ -255,9 +136,6 @@ section#advantageSection {
 			height: 100%;
 			display: flex;
 			align-items: center;
-			h3 {
-				max-width: 432px;
-			}
 		}
 		.text-list {
 			ul {
@@ -285,73 +163,6 @@ section#advantageSection {
 	}
 }
 
-section#developmentSection {
-	&.development-sec {
-		background-color: #e4e7ed;
-		padding: 235px 0 150px;
-		.development-left {
-			h3 {
-				color: #212121;
-				margin: 0 0 30px 0;
-			}
-			p {
-				color: #1f1f1f;
-				@include NeoSans(400);
-				font-size: $font42;
-				text-transform: uppercase;
-				line-height: 52px;
-			}
-		}
-		.text-box {
-			padding: 0 0 0 50px;
-			ul {
-				li {
-					margin-bottom: 24px;
-					position: relative;
-					padding-left: 18px;
-					p {
-						color: #1f1f1f;
-						strong {
-							display: block;
-						}
-					}
-					// &::after {
-					//   position: absolute;
-					//   content: "";
-					//   left: 0;
-					//   top: 8px;
-					//   background-color: white;
-					//   width: 6px;
-					//   height: 6px;
-					//   border-radius: 50%;
-					// }
-					&:last-child {
-						margin: 0;
-					}
-				}
-			}
-		}
-	}
-}
-
-section#servicesSection {
-
-	.services-inner {
-		margin: 34px 0 0 0;
-		.text-box {
-			h3 {
-				font-size: $font26;
-				line-height: 1;
-			}
-			p {
-				color: $dark_gray;
-				margin: 24px 0 35px 0;
-				max-width: 540px;
-				width: 100%;
-			}
-		}
-	}
-}
 
 section#newsSection {
 	.news-sec {
@@ -411,11 +222,6 @@ section#newsSection {
 	}
 
 	.detail-card {
-		h3 {
-			font-size: $font32;
-			line-height: 1;
-			margin-bottom: 0.9rem;
-		}
 
 		.date {
 			margin-bottom: 0.9rem;
@@ -492,55 +298,13 @@ section#newsSection {
 	}
 }
 
-section#globalReachSection {
-	&.global-reach-section {
-		.text-left {
-			h3 {
-				color: $eclipse;
-				margin: 0 0 22px 0;
-			}
-			p {
-				color: $eclipse;
-			}
-		}
-		.text-right {
-			p {
-				color: $eclipse;
-				margin-bottom: 14px;
-			}
-			.btn-secondary {
-				margin-top: 24px;
-			}
-		}
-	}
-}
-
 section#workingGrowthSection {
 	&.working-growth-section {
 		background-color: rgba($secondary, 0.1);
 		position: relative;
 		padding: 240px 0;
-		.text-left {
-			h3 {
-				color: black;
-				margin: 0 0 28px 0;
-			}
-		}
 		.text-box {
 			padding: 8px 0 0 0;
-			h4 {
-				color: $eclipse;
-				@include NeoSans(600);
-				font-size: $font16;
-				margin-bottom: 14px;
-				line-height: 24px;
-			}
-			p {
-				color: $eclipse;
-				margin-bottom: 14px;
-				max-width: 540px;
-				width: 100%;
-			}
 		}
 	}
 }
@@ -746,154 +510,10 @@ article#newsArticle {
 
 #indexPage {
 
-
-	p {
-		font-size: $font16;
-		line-height: 24px;
-		@include NeoSans(400);
-		color: $charcoal;
-	}
-
-	.btn-blue {
-		background-color: $secondary !important;
-		color: white !important;
-		border: 1px solid $secondary !important;
-	}
-
-	.title {
-		h2 {
-			color: $dark_gray;
-			font-size: $font62;
-			text-transform: uppercase;
-			line-height: 1;
-			@include Helvetica(bold);
-			margin: 0 0 25px 0;
-		}
-		p {
-			color: $dark_gray;
-			font-size: $font42;
-			text-transform: uppercase;
-			line-height: 52px;
-			@include NeoSans(400);
-		}
-	}
-
-	.shape-bottom {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		transform: rotateX(180deg);
-		svg {
-			height: 42px;
-			width: 100%;
-			display: block;
-		}
-	}
-
-	.vacant-shape {
-		position: absolute;
-		bottom: -42px;
-		left: 0;
-		width: 100%;
-		svg {
-			height: 42px;
-			width: 100%;
-			display: block;
-		}
-		&.vacant-shape2 {
-			bottom: -60px;
-			svg {
-				height: 60px;
-			}
-		}
-	}
-
 	/***** ARRIVED DRONE *****/
 
-	.arrived-drone-section {
-		// background-color: $secondary;
-		background: linear-gradient(206deg, #1f1a1c 0%, #212121 38.25%, #3437ff 100%);
-		.image-holder {
-			position: relative;
-			height: 800px;
-			&::after {
-				position: absolute;
-				content: "";
-				left: 0;
-				top: 0;
-				width: 100%;
-				height: 100%;
-				background-color: rgba(black, 0.4);
-			}
-			img {
-				height: 100%;
-				width: 100%;
-				object-fit: cover;
-			}
-			h4 {
-				@include NeoSans(700);
-				font-size: $font62;
-				text-align: right;
-				text-transform: uppercase;
-				line-height: 68px;
-				position: absolute;
-				top: 50%;
-				transform: translate(0, -50%);
-				color: white;
-				right: 0;
-				width: 100%;
-				padding: 100px;
-				height: 100%;
-				display: flex;
-				align-items: center;
-				justify-content: flex-end;
-			}
-		}
-		.text-box {
-			padding: 140px 140px 140px 140px;
-			height: 100%;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: flex-start;
-			h4 {
-				font-size: $font42;
-				color: white;
-				text-transform: uppercase;
-				line-height: 52px;
-				@include NeoSans(600);
-			}
-			p {
-				color: white;
-				margin: 30px 0 34px;
-			}
-		}
-	}
+	
 
-	/***** SOLAR SELL SEC ******/
-
-	.solar-cell-section {
-		background-color: $blue;
-		position: relative;
-		.image-holder {
-			&::after {
-				background-color: rgba(black, 0.2);
-			}
-		}
-		.text-box {
-			p {
-				margin-bottom: 15px;
-			}
-		}
-		.vacant-shape {
-			bottom: auto;
-			top: 0;
-			svg {
-				height: 60px;
-			}
-		}
-	}
 
 	/***** LET TALK AEC ******/
 
@@ -1549,19 +1169,6 @@ article#newsArticle {
 	}
 }
 
-.banner {
-	background-image: url(~assets/images/burooj_air_drone.jpg);
-	background-position: 50%;
-	background-repeat: no-repeat;
-	min-width: 100%;
-	min-height: 100%;
-	background-size: cover;
-	.overlay {
-		background-color: rgba($overlay, 0.35);
-		height: 600px;
-	}
-}
-
 #windowCleaningPage {
 	p {
 		font-size: $font16;
@@ -1679,10 +1286,6 @@ article#newsArticle {
 	}
 }
 
-.container {
-	position: relative;
-}
-
 #locationPage {
 	p {
 		font-size: $font16;
@@ -1785,7 +1388,6 @@ article#newsArticle {
 		}
 	}
 }
-
 
 #facadeCleaningPage {
 	p {
@@ -2469,18 +2071,6 @@ article#newsArticle {
 	}
 }
 
-#galleryPage {
-	p {
-		@include NeoSans(400);
-	}
-
-	.gallery-main {
-		background-color: $gray10;
-	}
-
-}
-
 footer {
 	background-color: #3437ff;
-	//@include NeoSans(600);
 }

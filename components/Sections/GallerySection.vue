@@ -1,32 +1,28 @@
 <template>
-	<section class="gallery-main py-5">
+	<section class="py-5 bg-gray-200 font-neo-sans">
 		<div class="container">
-			<div class="row">
-				<div class="col-lg-4 order-lg-1 order-2 bg-light p-5" style="">
-					<h3 class="mb-4 fs-1">{{ $t("IMAGES") }}</h3>
-                    <div class="row row-cols-3">
+			<div class="grid md:grid-cols-3">
+				<div class="bg-gray-100 p-5">
+					<h3 class="mb-4 text-5xl font-bold">{{ $t("IMAGES") }}</h3>
+					<LightGallery :images="images" :index="index"  @close="index = null" />
+					<div class="grid grid-cols-2 gap-2">
+						
+						<div class="overflow-hidden rounded-lg" v-for="(image, imageIndex) in images" :key="imageIndex" @click="index = imageIndex">
+							<a><img class="hover:scale-105 transition-all duration-400 aspect-square object-cover object-center" :src="image" /></a>
+						</div>
 
-
-                        <div class="col" v-for="image in images">
-                            <a>
-                                <img class="img-fluid" :src="image" />
-                            </a>
-                        </div>
-
-                    </div>
+						<div class="overflow-hidden rounded-lg" v-for="(image, imageIndex) in images" :key="imageIndex" @click="index = imageIndex">
+							<a><img class="hover:scale-105 transition-all duration-400 aspect-square object-cover object-center" :src="image" /></a>
+						</div>
+					</div>
 				</div>
-				<div class="col-lg-8 order-lg-2 order-1 bg-white p-5">
-					<div class="video-wrapper">
-                        <h3 class="mb-4 fs-1">{{ $t("VIDEOS") }}</h3>
-						<div class="row row-cols-1">
-							<div class="col">
-								<div v-for="video in videos" class="ratio ratio-16x9 rounded overflow-hidden">
-									<video autoplay muted loop playsinline preload="auto" class="d-none d-md-block">
-										<source :src="video" type="video/mp4" />
-									</video>
-								</div>
-							</div>
-
+				<div class="col-span-2 bg-white p-5">
+					<h3 class="mb-4 text-5xl font-bold">{{ $t("VIDEOS") }}</h3>
+					<div class="grid grid-cols-1 gap-4">
+						<div v-for="video in videos" class="ratio ratio-16x9 rounded overflow-hidden">
+							<video autoplay controls muted loop playsinline preload="auto" class="d-none d-md-block">
+								<source :src="video" type="video/mp4" />
+							</video>
 						</div>
 					</div>
 				</div>
@@ -35,8 +31,19 @@
 	</section>
 </template>
 <script>
+
 export default {
-    // add prop for videos
-    props: ['videos','images'],
+	mounted() {
+		console.log(this.gorseller);
+	},
+
+	// add prop for videos
+	props: ["videos", "images"],
+	data () {
+		return {
+			index: null,
+			
+		}
+	},
 };
 </script>

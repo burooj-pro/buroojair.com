@@ -1,15 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @import "_fonts.scss";
 @import "~bootstrap/scss/bootstrap";
 @import "bootstrap-icons/font/bootstrap-icons.css";
 @import "_mixin.scss";
 @import "_variables.scss";
-@import "_typography.scss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @import "styles.scss";
-
-@import "_responsive.scss";
-@import "_rtl.scss";

@@ -208,7 +208,7 @@ export default {
   OSAMAH_MD:'Osamah Abdullah Algrainees - Managing Director',
   FAISAL_PM:'Faisal Ghazi Awadh - Projects Manager',
   HATIM_DOM:'Hatim Hussin Shuwaikan - Drone Operations Manager',
-  MOHAMMED_DMS:'+ 25 Other Valuable Taem Members',
+  MOHAMMED_DMS:'+25 Other Valuable Taem Members',
 
 
 

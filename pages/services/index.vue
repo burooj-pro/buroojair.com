@@ -25,7 +25,7 @@
 			</div>
 		</section>
 		<!-- ADVANTAGE SECTION -->
-		<AdvantageSection />
+		<SectionsAdvantageSection />
 		<!-- METHOD SECTION -->
 		<section class="method">
 			<div class="container">

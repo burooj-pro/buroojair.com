@@ -1,5 +1,5 @@
 <template>
-  <div :dir="dir" class="relative">
+  <div :dir="this.$i18n.localeProperties.dir" class="relative">
     <Nuxt />
   </div>
 </template>
@@ -30,11 +30,7 @@ export default {
 			],
 		};
 	},
-	computed: {
-		dir() {
-			return this.$i18n.locale === "ar" ? "rtl" : "ltr";
-		},
-	},
+
 };
 
 
