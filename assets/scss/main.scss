@@ -1,6 +1,6 @@
 @import "_fonts.scss";
 @import "~bootstrap/scss/bootstrap";
-@import "bootstrap-icons/font/bootstrap-icons.css"; 
+@import "bootstrap-icons/font/bootstrap-icons.css";
 @import "_mixin.scss";
 @import "_variables.scss";
 //@import '_reset.scss';
@@ -161,13 +161,13 @@ section#heroSection {
 section#heroPartnerSection{
 	&.hero-partner-section {
 		position: relative;
-	  
+
 		&.partner {
 		  height: 100vh;
 		  display: flex;
 		  align-items: center;
 		  overflow: hidden;
-	  
+
 		  iframe {
 			position: absolute;
 			top: 0;
@@ -176,17 +176,17 @@ section#heroPartnerSection{
 			right: 0;
 		  }
 		}
-	  
+
 		.container {
 		  position: relative;
 		  z-index: 99;
-	  
+
 		  .titleText {
 			p,
 			h2 {
 			  color: $white;
 			}
-	  
+
 			h2 {
 			  color: $white;
 			  font-size: 68px;
@@ -198,7 +198,7 @@ section#heroPartnerSection{
 			  max-width: 360px;
 			  margin-bottom: 20px;
 			}
-	  
+
 			p {
 			  font-size: $font16;
 			  font-weight: 600;
@@ -221,23 +221,23 @@ section#contactSection{
 	h3 {
 		font-size: $font50;
 	  }
-	  
+
 	  p {
 		font-size: $font16;
 		line-height: 24px;
 		@include NeoSans(400);
 		color: $charcoal;
 	  }
-	  
+
 	  .btn-secondary {
 		background-color: $orange;
 		border: 1px solid $orange;
 	  }
 
-	  
+
 	  /***** CONTACT SEC ******/
 
-	  
+
 	&.contact-section {
 		background-color: $primary;
 		padding: 130px 0;
@@ -343,10 +343,11 @@ section#vacantPilotPositionSection{
 			align-items: center;
 			justify-content: center;
 			margin: 0 20px;
-			h4 {
+			h1 {
 			  color: $white;
 			  @include NeoSans(600);
 			  font-size: $font40;
+			// font-size: medium;
 			  text-transform: uppercase;
 			  margin-left: 16px;
 			  span {
@@ -361,21 +362,21 @@ section#vacantPilotPositionSection{
 section#familySection{
 	&.family {
 		background: $primary;
-	  
+
 		.text-box {
 		  padding: 200px 100px;
-	  
+
 		  h3 {
 			color: $white;
 			text-align: center;
 		  }
-	  
+
 		  h4 {
 			color: $white;
 			font-size: 18px;
 			margin-bottom: 20px;
 		  }
-	  
+
 		  p {
 			color: $white;
 			margin-bottom: 20px;
@@ -756,17 +757,17 @@ article#newsArticle{
 		@include NeoSans(400);
 		color: $charcoal;
 	}
-	
+
 	.btn-secondary {
 		background-color: $orange;
 		border: 1px solid $orange;
 	}
-	
 
-	
+
+
 	.news-sec {
 		padding: 65px 0;
-	
+
 		.news-inner {
 			h4 {
 				@include NeoSans(400);
@@ -778,13 +779,13 @@ article#newsArticle{
 			}
 		}
 	}
-	
+
 	.news-box {
 		margin: 20px 0;
-	
+
 		.text-box {
 			margin: 16px 0 0 0;
-	
+
 			h5 {
 				@include NeoSans(600);
 				font-size: $font20;
@@ -793,7 +794,7 @@ article#newsArticle{
 				color: $bright_gray;
 				margin: 0 0 5px 0;
 			}
-	
+
 			span {
 				display: block;
 				color: $gray53;
@@ -802,7 +803,7 @@ article#newsArticle{
 				text-transform: uppercase;
 				line-height: 16px;
 			}
-	
+
 			p {
 				color: $matterhorn;
 				@include NeoSans(400);
@@ -810,7 +811,7 @@ article#newsArticle{
 				line-height: 16px;
 				margin: 17px 0 13px 0;
 			}
-	
+
 			a {
 				font-size: $font13;
 				@include NeoSans(600);
@@ -819,44 +820,44 @@ article#newsArticle{
 			}
 		}
 	}
-	
+
 	.detail-card {
 		h3 {
 			font-size: $font32;
 			line-height: 1;
 			margin-bottom: 0.9rem;
 		}
-	
+
 		.date {
 			margin-bottom: 0.9rem;
 		}
-	
+
 		.titleImg {
 			margin-bottom: 0.9rem;
 		}
-	
+
 		.text-box {
 			p {
 				margin-bottom: 0.9rem;
 			}
 		}
-	
+
 		.like {
 			display: flex;
 			align-items: center;
 			margin: 0 -8px 0.9rem;
-	
+
 			li {
 				padding: 0 8px;
-	
+
 				a {
 					display: inline-flex;
 					align-items: center;
-	
+
 					i {
 						margin-right: 8px;
 						line-height: 0;
-	
+
 						svg {
 							width: 16px;
 							height: 16px;
@@ -866,31 +867,31 @@ article#newsArticle{
 			}
 		}
 	}
-	
+
 	.navigation {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		margin: 20px 0;
-	
+
 		a {
 			display: flex;
 			align-items: center;
-	
+
 			i {
 				margin-right: 10px;
 			}
-	
+
 			span {
 				flex: 1;
 				font-size: 14px;
 				text-transform: uppercase;
 				color: $gray53;
-	
+
 				&.media {
 					display: flex;
 					flex-direction: column;
-	
+
 					strong {
 						font-weight: bold;
 						color: $black;
@@ -943,24 +944,24 @@ article#newsArticle{
 		line-height: 68px;
 		@include NeoSans(900);
 	}
-	
+
 	p {
 		font-size: $font16;
 		line-height: 24px;
 		@include NeoSans(400);
 		color: $charcoal;
 	}
-	
-	
-	
-	
-	
+
+
+
+
+
 	.btn-blue {
 		background-color: $secondary !important;
 		color: $white !important;
 		border: 1px solid $secondary !important;
 	}
-	
+
 	.title {
 		h2 {
 			color: $dark_gray;
@@ -978,7 +979,7 @@ article#newsArticle{
 			@include NeoSans(400);
 		}
 	}
-	
+
 	.shape-bottom {
 		position: absolute;
 		bottom: 0;
@@ -991,7 +992,7 @@ article#newsArticle{
 			display: block;
 		}
 	}
-	
+
 	.vacant-shape {
 		position: absolute;
 		bottom: -42px;
@@ -1010,9 +1011,9 @@ article#newsArticle{
 			}
 		}
 	}
-	
+
 	/***** ARRIVED DRONE *****/
-	
+
 	.arrived-drone-sec {
 		// background-color: $secondary;
 		background: linear-gradient(206deg, #1f1a1c 0%, #212121 38.25%, #3437ff 100%);
@@ -1072,9 +1073,9 @@ article#newsArticle{
 			}
 		}
 	}
-	
+
 	/***** SOLAR SELL SEC ******/
-	
+
 	.solar-cell-sec {
 		background-color: $blue;
 		position: relative;
@@ -1096,9 +1097,9 @@ article#newsArticle{
 			}
 		}
 	}
-	
+
 	/***** LET TALK AEC ******/
-	
+
 	.let-talk-sec {
 		background: url(~assets/images/map_grey.png) no-repeat;
 		background-position: center center;
@@ -1143,9 +1144,9 @@ article#newsArticle{
 			}
 		}
 	}
-	
+
 	/***** INTENTION SEC ******/
-	
+
 	.intention-sec {
 		padding: 220px 0 226px;
 		background-color: $primary;
@@ -1177,7 +1178,7 @@ article#newsArticle{
 		}
 	}
 	/***** ESTIMATES FUTURE SEC ******/
-	
+
 	.estimated-future-sec {
 		background-color: #1f1f1f;
 		padding: 228px 0;
@@ -1220,11 +1221,11 @@ article#newsArticle{
 			}
 		}
 	}
-	
-	
-	
+
+
+
 	/***** POPULATED SEC *****/
-	
+
 	.populated-sec {
 		display: flex;
 		align-items: center;
@@ -1234,9 +1235,9 @@ article#newsArticle{
 			object-fit: cover;
 		}
 	}
-	
+
 	/***** WORK STAND SEC *****/
-	
+
 	.work-stand-sec {
 		background-color: $secondary;
 		position: relative;
@@ -1269,7 +1270,7 @@ article#newsArticle{
 		@include NeoSans(400);
 		color: $charcoal;
 	}
-	
+
 
 	.heroServices {
 		.heroFlag {
@@ -1321,7 +1322,7 @@ article#newsArticle{
 			}
 		}
 	}
-	
+
 	.inquiry {
 		background: $whiteSecondary;
 		padding: 100px 0;
@@ -1369,7 +1370,7 @@ article#newsArticle{
 		}
 		.text-box {
 			@include NeoSans(400);
-	
+
 			h3 {
 				color: $white;
 			}
@@ -1386,11 +1387,11 @@ article#newsArticle{
 			margin-bottom: 0.9rem;
 		}
 	}
-	
+
 	.solarPanel {
 		position: relative;
 		@include NeoSans(400);
-	
+
 		.shape {
 			position: absolute;
 			top: 0;
@@ -1453,7 +1454,7 @@ article#newsArticle{
 			}
 		}
 	}
-	
+
 	.standardSolar {
 		background: $primary;
 		padding: 240px 0px 100px 0px;
@@ -1466,7 +1467,7 @@ article#newsArticle{
 			}
 		}
 	}
-	
+
 	.safetyStand {
 		padding: 240px 0px 100px 0px;
 		background: $blue;
@@ -1522,22 +1523,22 @@ article#newsArticle{
   }
 
 #partnerPage{
-	
+
 p {
 	font-size: $font16;
 	line-height: 24px;
 	@include NeoSans(400);
 	color: $charcoal;
   }
-  
 
-  
-  
-  
+
+
+
+
   .cleaning {
 	background-color: $mainly_blue;
 	padding: 40px 0;
-  
+
 	h2 {
 	  color: $white;
 	  font-size: $font54;
@@ -1546,7 +1547,7 @@ p {
 	  line-height: 58px;
 	  margin-bottom: 10px;
 	}
-  
+
 	p {
 	  color: $white;
 	  font-size: $font40;
@@ -1555,23 +1556,23 @@ p {
 	  line-height: 52px;
 	}
   }
-  
+
   .partner-franchise {
 	position: relative;
-  
+
 	.text-box {
 	  padding: 20% 20%;
-  
+
 	  .btn {
 		display: inline-flex;
 		align-items: center;
-  
+
 		i {
 		  margin-right: 10px;
 		}
 	  }
 	}
-  
+
 	.opertunityBox {
 	  padding: 20% 20%;
 	  background: url(~assets/images/ktv_5461.jpg);
@@ -1579,14 +1580,14 @@ p {
 	  background-size: cover;
 	  position: relative;
 	  height: 100%;
-  
+
 	  &:after {
 		content: "";
 		inset: 0;
 		background: rgba(0, 0, 0, 0.5);
 		position: absolute;
 	  }
-  
+
 	  h2 {
 		color: $white;
 		font-size: 66px;
@@ -1597,7 +1598,7 @@ p {
 		position: relative;
 		z-index: 1;
 	  }
-  
+
 	  p {
 		color: $white;
 		font-size: 42px;
@@ -1608,10 +1609,10 @@ p {
 		z-index: 1;
 	  }
 	}
-  
+
 	.text-box {
 	  background: $bright_gray;
-  
+
 	  h2 {
 		font-size: 26px;
 		font-weight: 600;
@@ -1619,19 +1620,19 @@ p {
 		margin-bottom: 15px;
 		color: $white;
 	  }
-  
+
 	  h4 {
 		font-size: 1.25rem;
 		margin-bottom: 15px;
 		color: $white;
 	  }
-  
+
 	  p {
 		margin-bottom: 15px;
 		color: $white;
 	  }
 	}
-  
+
 	.shape {
 	  height: 60px;
 	  position: absolute;
@@ -1640,19 +1641,19 @@ p {
 	  right: 0;
 	  width: 100%;
 	  z-index: 6;
-  
+
 	  path {
 		fill: $mainly_blue;
 	  }
 	}
   }
-  
+
   .estimate {
 	text-align: center;
-  
+
 	.text-box {
 	  padding: 200px 40px;
-  
+
 	  p {
 		font-size: 54px;
 		font-weight: 500;
@@ -1661,14 +1662,14 @@ p {
 		max-width: 770px;
 		margin: 0 auto;
 	  }
-  
+
 	  h2 {
 		font-size: 90px;
 		font-weight: 800;
 		text-transform: uppercase;
 		line-height: 90px;
 	  }
-  
+
 	  h4 {
 		font-size: 41px;
 		font-weight: 800;
@@ -1676,7 +1677,7 @@ p {
 	  }
 	}
   }
-  
+
   .advantages {
 	padding: 240px 0 110px;
 	background-image: url(~assets/images/ktv_5505.jpg);
@@ -1714,30 +1715,30 @@ p {
 	  }
 	}
   }
-  
+
   .partnerAdvantage {
 	overflow: hidden;
-  
+
 	.container {
 	  position: relative;
 	  z-index: 55;
 	}
-  
+
 	.video {
 	  position: absolute;
 	  inset: 0;
-  
+
 	  iframe {
 		width: 100%;
 		height: 100%;
 	  }
 	}
   }
-  
+
   .how-ktv {
 	.text-box {
 	  padding: 200px;
-  
+
 	  h3 {
 		font-size: 42px;
 		text-transform: uppercase;
@@ -1745,29 +1746,29 @@ p {
 		margin-bottom: 20px;
 		line-height: 52px;
 	  }
-  
+
 	  p {
 		margin-bottom: 20px;
 	  }
-  
+
 	  a {
 		i {
 		  margin-right: 10px;
 		}
 	  }
 	}
-  
+
 	.img-holder {
 	  height: 100%;
 	  position: relative;
-  
+
 	  &:after {
 		content: "";
 		inset: 0;
 		background: rgba(0, 0, 0, 0.5);
 		position: absolute;
 	  }
-  
+
 	  img {
 		height: 100%;
 		object-fit: cover;
@@ -1777,17 +1778,17 @@ p {
 }
 
 #windowCleaningPage{
-	
+
 p {
 	font-size: $font16;
 	line-height: 24px;
 	@include NeoSans(400);
 	color: $charcoal;
   }
-  
-  
 
-  
+
+
+
   .banner {
 	background-image: url(~assets/images/burooj_air_drone.jpg);
 	background-position: 50%;
@@ -1842,9 +1843,9 @@ p {
 	  }
 	}
   }
-  
+
   /***** ADVANTAGE DRONE *****/
-  
+
   .advantages {
 	padding: 240px 0 110px;
 	background-image: url(~assets/images/BuroojAir_3.jpg);
@@ -1915,7 +1916,7 @@ p {
 }
 
 #locationPage{
-	
+
 
 p {
 	font-size: $font16;
@@ -1923,7 +1924,7 @@ p {
 	@include NeoSans(400);
 	color: $charcoal;
   }
-  
+
 
   .globalReach {
 	background: $primary;
@@ -1936,7 +1937,7 @@ p {
 	  }
 	}
   }
-  
+
   .locationContent {
 	padding: 180px;
 	.caption {
@@ -1958,7 +1959,7 @@ p {
 	  }
 	}
   }
-  
+
   .map-holder {
 	height: 100%;
 	img {
@@ -1968,7 +1969,7 @@ p {
 	  background-position: center center;
 	}
   }
-  
+
   .franchise {
 	position: relative;
 	background-color: $black;
@@ -2007,7 +2008,7 @@ p {
 	  }
 	}
   }
-  
+
   .working-growth {
 	padding: 240px 0 70px 0;
 	background-color: $whiteSecondary;
@@ -2021,20 +2022,20 @@ p {
 	  }
 	}
   }
-  
+
 }
 
 #facadeCleaningPage{
-	
+
 p {
 	font-size: $font16;
 	line-height: 24px;
 	@include NeoSans(400);
 	color: $charcoal;
   }
-  
 
-  
+
+
   .banner {
 	background-image: url(~assets/images/burooj_air_drone.jpg);
 	background-position: 50%;
@@ -2047,7 +2048,7 @@ p {
 	  height: 330px;
 	}
   }
-  
+
   .service {
 	padding: 180px 0 40px 0;
 	background: $primary;
@@ -2090,7 +2091,7 @@ p {
 	  }
 	}
   }
-  
+
   .advantages {
 	padding: 240px 0 110px;
 	background-image: url(~assets/images/BuroojAir_3.jpg);
@@ -2128,7 +2129,7 @@ p {
 	  }
 	}
   }
-  
+
   .inquiry {
 	background: $whiteSecondary;
 	padding: 100px 0;
@@ -2162,27 +2163,27 @@ p {
 }
 
 #contactPage{
-	
+
 p {
 	font-size: $font16;
 	line-height: 24px;
 	@include NeoSans(400);
 	color: $charcoal;
   }
-  
 
-  
+
+
   .contactMap {
 	iframe {
 	  height: 511px;
 	  width: 100%;
 	}
   }
-  
+
   .contact-location {
 	padding: 100px 0;
 	background: $whiteSecondary;
-  
+
 	.titleText {
 	  h3 {
 		font-size: $font24;
@@ -2191,23 +2192,23 @@ p {
 		line-height: 1.4;
 		margin: 0;
 	  }
-  
+
 	  p {
 		text-transform: uppercase;
 		margin-bottom: 20px;
 	  }
 	}
-  
+
 	.text-box {
 	  p {
 		margin-bottom: 0.9rem;
 	  }
 	}
   }
-  
+
   .enquireForm {
 	margin-top: 100px;
-  
+
 	h3 {
 	  font-size: $font24;
 	  text-transform: uppercase;
@@ -2215,18 +2216,18 @@ p {
 	  line-height: 1.4;
 	  margin-bottom: 20px;
 	}
-  
+
 	.form-group {
 	  margin-bottom: 14px;
 	}
-  
+
 	.form-control {
 	  background-color: $white;
 	  border-width: 0px 0px 0px 0px;
 	  @include border_radius(8px);
 	  height: 59px;
 	}
-  
+
 	textarea {
 	  &.form-control {
 		height: auto;
@@ -2236,7 +2237,7 @@ p {
 }
 
 #aboutUsPage{
-	
+
 p {
 	font-size: $font16;
 	line-height: 24px;
@@ -2271,7 +2272,7 @@ p {
 	  }
 	}
   }
-  
+
   .titleText {
 	position: relative;
 	z-index: 5;
@@ -2288,7 +2289,7 @@ p {
 	  line-height: 52px;
 	}
   }
-  
+
   .method {
 	background: $primary;
 	color: $white;
@@ -2329,7 +2330,7 @@ p {
 	&.aboutSetting {
 	  position: relative;
 	  background: $blue;
-  
+
 	  .shape {
 		fill: $primary;
 		position: absolute;
@@ -2339,11 +2340,11 @@ p {
 		height: 46px;
 		width: 100%;
 	  }
-  
+
 	  .settingStabdardBox {
 		height: 100%;
 	  }
-  
+
 	  .text-box {
 		h3,
 		p {
@@ -2353,11 +2354,11 @@ p {
 	  }
 	}
   }
-  
+
   .futureDevelopment {
 	position: relative;
 	background: $whiteSecondary !important;
-  
+
 	.shape {
 	  fill: $blue;
 	  position: absolute;
@@ -2367,23 +2368,23 @@ p {
 	  height: 46px;
 	  width: 100%;
 	}
-  
+
 	.text-box {
 	  h3 {
 		color: $primary !important;
 	  }
-  
+
 	  h4 {
 		font-weight: normal;
 		text-transform: uppercase;
 		font-size: $font42;
 		color: $primary !important;
 	  }
-  
+
 	  ul {
 		padding-left: 20px;
 		color: $primary !important;
-  
+
 		li {
 		  list-style: disc;
 		  font-size: $font16;
@@ -2394,7 +2395,7 @@ p {
 }
 
 #franchisePage{
-	
+
 p {
 	font-size: $font16;
 	line-height: 24px;
@@ -2429,7 +2430,7 @@ p {
 	  }
 	}
   }
-  
+
   .titleText {
 	position: relative;
 	z-index: 5;
@@ -2446,7 +2447,7 @@ p {
 	  line-height: 52px;
 	}
   }
-  
+
   .method {
 	background: $primary;
 	color: $white;
@@ -2487,7 +2488,7 @@ p {
 	&.aboutSetting {
 	  position: relative;
 	  background: $blue;
-  
+
 	  .shape {
 		fill: $primary;
 		position: absolute;
@@ -2497,11 +2498,11 @@ p {
 		height: 46px;
 		width: 100%;
 	  }
-  
+
 	  .settingStabdardBox {
 		height: 100%;
 	  }
-  
+
 	  .text-box {
 		h3,
 		p {
@@ -2511,11 +2512,11 @@ p {
 	  }
 	}
   }
-  
+
   .futureDevelopment {
 	position: relative;
 	background: $whiteSecondary !important;
-  
+
 	.shape {
 	  fill: $blue;
 	  position: absolute;
@@ -2525,23 +2526,23 @@ p {
 	  height: 46px;
 	  width: 100%;
 	}
-  
+
 	.text-box {
 	  h3 {
 		color: $primary !important;
 	  }
-  
+
 	  h4 {
 		font-weight: normal;
 		text-transform: uppercase;
 		font-size: $font42;
 		color: $primary !important;
 	  }
-  
+
 	  ul {
 		padding-left: 20px;
 		color: $primary !important;
-  
+
 		li {
 		  list-style: disc;
 		  font-size: $font16;
@@ -2549,7 +2550,7 @@ p {
 	  }
 	}
   }
-  
+
   .text-list {
 	ul {
 	  li {
@@ -2573,15 +2574,15 @@ p {
 	  }
 	}
   }
-  
+
 }
 
 #franchiseIndexPage{
 	.content {
 		background-color: #d7d7d7;
 	  }
-	  
-	  
+
+
 	  p {
 		font-size: $font16;
 		line-height: 24px;
@@ -2616,7 +2617,7 @@ p {
 		  }
 		}
 	  }
-	  
+
 	  .titleText {
 		position: relative;
 		z-index: 5;
@@ -2633,7 +2634,7 @@ p {
 		  line-height: 52px;
 		}
 	  }
-	  
+
 	  .method {
 		background: $primary;
 		color: $white;
@@ -2674,7 +2675,7 @@ p {
 		&.aboutSetting {
 		  position: relative;
 		  background: $blue;
-	  
+
 		  .shape {
 			fill: $primary;
 			position: absolute;
@@ -2684,11 +2685,11 @@ p {
 			height: 100px;
 			width: 100%;
 		  }
-	  
+
 		  .settingStabdardBox {
 			height: 100%;
 		  }
-	  
+
 		  .text-box {
 			h3,
 			p {
@@ -2698,11 +2699,11 @@ p {
 		  }
 		}
 	  }
-	  
+
 	  .futureDevelopment {
 		position: relative;
 		background: $whiteSecondary !important;
-	  
+
 		.shape {
 		  fill: $blue;
 		  position: absolute;
@@ -2712,23 +2713,23 @@ p {
 		  height: 46px;
 		  width: 100%;
 		}
-	  
+
 		.text-box {
 		  h3 {
 			color: $primary !important;
 		  }
-	  
+
 		  h4 {
 			font-weight: normal;
 			text-transform: uppercase;
 			font-size: $font42;
 			color: $primary !important;
 		  }
-	  
+
 		  ul {
 			padding-left: 20px;
 			color: $primary !important;
-	  
+
 			li {
 			  list-style: disc;
 			  font-size: $font16;
@@ -2739,17 +2740,17 @@ p {
 }
 
 #galleryPage{
-	
+
 p {
 	font-size: $font16;
 	line-height: 24px;
 	@include NeoSans(400);
 	color: $charcoal;
   }
-  
-  
 
-  
+
+
+
   .banner {
 	background-image: url(~assets/images/burooj_air_drone.jpg);
 	background-position: 50%;
@@ -2762,47 +2763,47 @@ p {
 	  height: 330px;
 	}
   }
-  
+
   .gallery-main {
 	background-color: $gray10;
 	padding: 100px 0;
-  
+
 	.inner {
 	  background: $whiteSecondary;
 	  padding: 20px;
 	  height: 100%;
 	}
-  
+
 	h3 {
 	  text-transform: uppercase;
 	  font-size: $font42;
 	  font-weight: 400;
 	}
-  
+
 	.gallery-container {
 	  display: block;
 	  margin: 0 -5px;
-  
+
 	  li {
 		float: left;
 		padding: 2.5px 5px;
-  
+
 		&.large {
 		  width: 70%;
 		}
-  
+
 		&.small {
 		  width: 30%;
-  
+
 		  img {
 			height: 90px;
 			object-fit: cover;
 		  }
 		}
-  
+
 		&.medium {
 		  width: 70%;
-  
+
 		  img {
 			height: 90px;
 			object-fit: cover;
@@ -2811,17 +2812,17 @@ p {
 		}
 	  }
 	}
-  
+
 	a {
 	  display: block;
 	}
   }
-  
-  .video-wrapper { 
+
+  .video-wrapper {
 	background: #fff;
 	padding: 20px;
 	height: 100%;
-  
+
 	.ratio {
 	  margin-bottom: 15px;
 	}

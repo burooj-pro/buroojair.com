@@ -42,7 +42,7 @@ export default {
   GACA_PART_107_DRONE_PILOT : "GACA PART 107 DRONE PILOT",
   IS_AVAILABLE: "Is Available",
   IS_REQUIRED: "IS REQUIRED ",
-  APPLY_NOW: "APPLY NOW",
+  APPLY_NOW: "Become a Pilot",
   WINDOW_AND_FACADE: "Window & Facade",
   BUILDINGS_CLEANING:"Utilizing Drones to Offer a ",
   AND_HEAVYLIFTING_USING_DRONE:"More Safer and Efficient Solution",
@@ -116,6 +116,8 @@ export default {
     "Sunday to Thursday, 08:00 AM to 5:00 PM (GMT+03)",
   ADDRESS: "Address",
   MAKE_AN_INQUIRY_TODAY: "Make an inquiry today",
+  GACA_PILOTE:"Become a GACA Part 107 Drone Pilot",
+  GACA_PILOTE_DESC:"Elevate your ambitions and become a certified GACA Part 107 Drone Pilot with Burooj Air. Our seasoned experts provide personalized training and assistance for a smooth certification journey.",
 
 
 
