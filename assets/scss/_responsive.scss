@@ -901,11 +901,12 @@
     .inquiry {
         background: #F3F3F3;
         padding: 50px 10px;
+        h3 {
+            margin-bottom: 20px;
+            line-height: 1;
+        }
     }
-    .inquiry h3 {
-        margin-bottom: 20px;
-        line-height: 1;
-    }
+
     .service .text-box .video-holder .iconPlay svg {
         width: 90px;
         height: 90px;
