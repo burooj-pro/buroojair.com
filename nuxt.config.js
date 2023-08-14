@@ -1,5 +1,3 @@
-import i18n from "./i18n";
-
 export default {
   target: "static",
   ssr: false,
@@ -70,5 +68,31 @@ export default {
     },
   },
 
-  i18n,
+  i18n: {
+		strategy: 'no_prefix',
+
+		locales: [{
+				code: 'en',
+				iso: 'en-US',
+        file: 'en-US.js',
+				dir: 'ltr',
+        name: "English",
+			},
+			{
+				code: 'ar',
+				iso: 'ar-SA',
+        file: 'ar-SA.js',
+				dir: 'rtl',
+        name: "Arabic",
+			}
+		],
+		lazy: true,
+		langDir: 'i18n/',
+		defaultLocale: 'en',
+		baseUrl: "https://buroojair.com" || 'http://localhost:3000',
+
+		vueI18n: {
+			fallbackLocale: 'en',
+		}
+	},
 };
