@@ -132,7 +132,7 @@
 		</section>
 
 		<!-- ADVANTAGE SECTION -->
-		<SectionsAdvantage />
+		<SectionsBenefits />
 		<!-- Advantages SECTION -->
 		<Footer />
 	</div>

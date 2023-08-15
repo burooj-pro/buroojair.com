@@ -42,7 +42,7 @@ export default {
   GACA_PART_107_DRONE_PILOT : "GACA PART 107 DRONE PILOT",
   IS_AVAILABLE: "Is Available",
   IS_REQUIRED: "IS REQUIRED ",
-  APPLY_NOW: "Become a Pilot",
+  APPLY_NOW: "Become a Pilot Today!",
   WINDOW_AND_FACADE: "Window & Facade",
   BUILDINGS_CLEANING:"Utilizing Drones to Offer a ",
   AND_HEAVYLIFTING_USING_DRONE:"More Safer and Efficient Solution",

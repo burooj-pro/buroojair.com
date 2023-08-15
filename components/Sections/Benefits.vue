@@ -1,11 +1,11 @@
 <template>
-  <section id="advantageSection" class="advantage-sec bg-blue-50 md:py-32 py-16 font-neo-sans">
-    <div class="container">
-      <div class="grid md:grid-cols-2 gap-4">
-        <div class="flex items-center p-8">
-            <h3 class="text-7xl font-black">{{ $t("ADVANTAGES_USING_BUROOJ_AIR_DRONES") }}</h3>
+  <section id="benefitsSection" class="advantage-sec bg-blue-50 md:py-32 py-16 font-neo-sans">
+    <div class="container g-0">
+      <div class="grid md:grid-cols-2 gap-4 p-8">
+        <div class="flex items-center">
+            <h3 class="text-5xl md:text-7xl font-black">{{ $t("ADVANTAGES_USING_BUROOJ_AIR_DRONES") }}</h3>
         </div>
-        <div class="flex items-center p-8">
+        <div class="flex items-center">
           <ul class="space-y-6 text-xl font-semibold">
               <li class="flex items-center">
                 <i class="bi bi-triangle-fill text-5xl text-emerald-400 me-4"></i>

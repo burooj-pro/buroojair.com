@@ -1,6 +1,6 @@
 <template>
-	<footer class="py-4 font-neo-sans text-white bg-brand-first">
-		<div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
+	<footer class="py-8 font-neo-sans text-white bg-brand-first">
+		<div class="container">
 			<div class="md:flex md:items-center md:justify-between">
 				<div class="text-center md:!text-left">
 					<p class="fw-bold">Burooj Air ®</p>

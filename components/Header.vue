@@ -14,7 +14,7 @@
 						</svg>
 					</button>
 					<div class="hidden w-full md:block md:w-auto" id="navbar-default">
-						<ul class="font-medium text-center flex gap-3 md:gap-3 flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
+						<ul class="font-medium text-center flex flex-col gap-1 md:gap-3  p-4 md:p-0 mt-4 md:flex-row md:space-x-8 md:mt-0 md:border-0">
 							<li>
 								<NuxtLink aria-current="page" class="block no-underline  text-white " to="/">{{ $t("HOME") }}</NuxtLink>
 							</li>
@@ -34,7 +34,7 @@
 								<span role="button" class="block no-underline  text-white hover:text-violet-500">{{ $t("LANGUAGE") }}</span>
 							</li>
 							<li>
-								<NuxtLink class="py-3 px-4 bg-brand-second rounded-lg hover:bg-brand-first text-white no-underline" to="/franchise/franchise">{{ $t("BECOME_A_PARTNER") }}</NuxtLink>
+								<NuxtLink class="whitespace-nowrap py-3 px-4 bg-brand-second rounded-lg hover:bg-brand-first text-white no-underline" to="/franchise/franchise">{{ $t("BECOME_A_PARTNER") }}</NuxtLink>
 							</li>
 						</ul>
 					</div>
