@@ -62,7 +62,7 @@ ACCESSING_ELEVATED_AREAS_WITHOUT_REQUIRING_HEIGHT_SPECIFIC_TOOLS:
   GACA_PART_107_DRONE_PILOT : "GACA PART 107 DRONE PILOT",
   IS_AVAILABLE: "متاح",
   IS_REQUIRED: "مطلوب",
-  APPLY_NOW: "كن طيارا",
+  APPLY_NOW: "كن طيارا اليوم!",
   WINDOW_AND_FACADE: "النوافذ والواجهات",
   BUILDINGS_CLEANING:"تنظيف المباني",
   AND_HEAVYLIFTING_USING_DRONE:"والرفع الثقيل باستخدام الدرونز ",

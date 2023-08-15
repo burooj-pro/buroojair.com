@@ -2,16 +2,21 @@
 	<section id="vacantPilotPositionSection" class=" z-30 font-neo-sans relative text-lg leading-none">
 		<div class="w-full text-white bg-gray-700 py-20">
 			<div class="container">
-			<div class="flex flex-col items-center gap-4 md:gap-0 md:flex-row justify-content-between">
-				
-				<h2 class="uppercase gap-5 md:gap-0 text-center md:text-start flex flex-col itemx-center md:inline text-5xl font-bold">
-					<i class="bi bi-info-circle-fill md:me-8 text-7xl"></i>
-					<span class="inline-block">{{ $t("GACA_PART_107_DRONE_PILOT") }}{{ $t("IS_REQUIRED") }}</span>
-				</h2>
-
-				<NuxtLink to="/pilot-position" class="py-3 px-4 bg-brand-second rounded-lg hover:bg-brand-first text-white no-underline">
+			<div class="flex flex-col items-center gap-4 md:gap-0 justify-content-between">
+				<NuxtLink to="/pilot-position" class="
+				text-xl py-3 px-4 rounded-lg no-underline
+				bg-white text-gray-700 
+				hover:!bg-brand-first hover:text-white
+				">
 					{{ $t("APPLY_NOW") }}
 				</NuxtLink>
+
+				<small class="uppercase gap-5 md:gap-0 text-center md:text-start text-base text-gray-300">
+					<i class="bi bi-info-circle-fill md:me-2"></i>
+					<span class="inline-block">{{ $t("GACA_PART_107_DRONE_PILOT") }}{{ $t("IS_REQUIRED") }}</span>
+				</small>
+
+				
 			</div>
 		</div>
 		</div>

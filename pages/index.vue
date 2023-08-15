@@ -15,7 +15,7 @@
 		<SectionsArrivedDrone />
 
 		<!-- ADVANTAGE SECTION -->
-		<SectionsAdvantage />
+		<SectionsBenefits />
 
 		<!-- SOLAR CELL SECTION -->
 		<SectionsSolarCells />

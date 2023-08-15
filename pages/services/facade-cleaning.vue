@@ -70,7 +70,7 @@
 		</section>
 		<!-- Service End -->
 		<!-- ADVANTAGE SECTION -->
-		<SectionsAdvantage />
+		<SectionsBenefits />
 		<!-- Advantages SECTION -->
 		<section class="advantages">
 			<div class="container">

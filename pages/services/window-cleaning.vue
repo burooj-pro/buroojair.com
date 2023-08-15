@@ -10,7 +10,7 @@
     <SectionsWindowCleaningService/>
 
     <!-- ADVANTAGE SECTION -->
-    <SectionsAdvantage/>
+		<SectionsBenefits />
 
     <!-- Advantages SECTION -->
     <SectionsFacadeCleaningAdvantages/>
