@@ -3,56 +3,55 @@
 		<Header />
 
 		<!-- Hero SECTION -->
-		<SectionsHeroSection />
+		<SectionsHero />
 
 		<!-- SERVICES SECTION -->
-		<SectionsServicesSection />
+		<SectionsServices />
 
 		<!-- VACANT PILOT SECTION -->
-		<SectionsVacantPilotPositionSection />
+		<SectionsVacantPilotPosition />
 
 		<!-- ARRIVED DRONE SECTION -->
-		<SectionsArrivedDroneSection />
+		<SectionsArrivedDrone />
 
 		<!-- ADVANTAGE SECTION -->
-		<SectionsAdvantageSection />
+		<SectionsAdvantage />
 
 		<!-- SOLAR CELL SECTION -->
-		<SectionsSolarCellsSection />
+		<SectionsSolarCells />
 
 		<!-- LET TALK SECTION -->
-		<SectionsLetsTalkSection />
-		
-		<!-- INTENTION SECTION -->
-		<SectionsIntentionSection />
+		<SectionsLetsTalk />
 
+		<!-- INTENTION SECTION -->
+		<SectionsIntention />
+		
 		<!-- ABOUT US SECTION -->
-		<SectionsAboutUsSection />
-		
+		<SectionsAboutUs />
+
 		<!-- ESTIMATED FUTURE SECTION -->
-    <SectionsEstimatedFutureSection />
-		
+		<SectionsEstimatedFuture />
+
 		<!-- GLOBAL REACH SECTION -->
-		<SectionsGlobalReachSection />
+		<SectionsGlobalReach />
 
 		<!-- WORKING GROWTH SECTION -->
-		<SectionsWorkingGrowthSection />
-		
+		<SectionsWorkingGrowth />
 
 		<!-- SAFETY STATEMENT SECTION -->
-		<SectionsSafetyStatementSection />
+		<SectionsSafetyStatement />
 
 		<!-- POPULATED SECTION -->
-    <SectionsPopulatedSection />
-		
+		<SectionsPopulated />
+
 		<!-- WORK STAND SECTION -->
-    <SectionsWorkStandSection />
-		
+		<SectionsWorkStand />
+
 		<!-- DEVELOPMENT SECTION -->
-		<SectionsDevelopmentSection />
+		<SectionsDevelopment />
 
 		<!-- Contact Section -->
-		<SectionsContactSection />
+		<SectionsContact />
 
 		<Footer />
 	</div>

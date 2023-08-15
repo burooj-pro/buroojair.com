@@ -25,7 +25,7 @@
 			</div>
 		</section>
 		<!-- ADVANTAGE SECTION -->
-		<SectionsAdvantageSection />
+		<SectionsAdvantage/>
 		<!-- METHOD SECTION -->
 		<section class="method">
 			<div class="container">
@@ -257,7 +257,7 @@
 			</div>
 		</section>
 
-		<SectionsContactSection />
+		<SectionsContact/>
 		<Footer />
 	</div>
 </template>
