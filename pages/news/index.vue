@@ -2,9 +2,9 @@
   <div class="overflow-hidden">
     <Header />
     <!-- NEWS SECTION -->
-    <SectionsNewsSection />
+    <SectionsNews/>
 
-    <SectionsContactSection />
+    <SectionsContact/>
     <Footer />
   </div>
 </template>

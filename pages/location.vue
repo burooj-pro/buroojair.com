@@ -275,7 +275,7 @@
       </div>
     </section>
 
-    <SectionsContactSection />
+    <SectionsContact/>
     <Footer />
   </div>
 </template>

@@ -132,7 +132,7 @@
 			</div>
 		</section>
 
-		<SectionsContactSection />
+		<SectionsContact/>
     
 		<Footer />
 	</article>

@@ -7,19 +7,19 @@
     </section>
 
     <!-- Service Start -->
-    <SectionsWindowCleaningServiceSection />
+    <SectionsWindowCleaningService/>
 
     <!-- ADVANTAGE SECTION -->
-    <SectionsAdvantageSection />
+    <SectionsAdvantage/>
 
     <!-- Advantages SECTION -->
-    <SectionsFacadeCleaningAdvantagesSection />
+    <SectionsFacadeCleaningAdvantages/>
     
     <!-- INQUIRY SECTION -->
-    <SectionsInquirySection />
+    <SectionsInquiry/>
     
     <!-- Contact Section -->
-    <SectionsContactSection />
+    <SectionsContact/>
     
     <Footer />
   </div>

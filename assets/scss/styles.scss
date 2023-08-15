@@ -1,51 +1,5 @@
-html,
-body {
-    background-color: white;
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-
-.pipedriveWebForms form {
-    .form-group {
-        margin-bottom: 10px;
-        .form-control {
-            background-color: white;
-            box-shadow: none;
-            height: 40px;
-            font-size: $font12;
-            @include NeoSans(400);
-            text-transform: uppercase;
-            border: none;
-            &:focus {
-                border-color: transparent;
-            }
-        }
-        textarea {
-            &.form-control {
-                height: 106px;
-                resize: none;
-            }
-            &.info-field {
-                height: 58px;
-            }
-        }
-        .btn-default {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0;
-            height: 40px;
-            max-width: 237px;
-            width: 100%;
-            color: #fff;
-            text-transform: uppercase;
-            @include NeoSans(900);
-            letter-spacing: 0.5px;
-            background-color: $orange;
-        }
-    }
+html{
+    font-size: 18px;
 }
 
 section#heroPartnerSection {
@@ -93,28 +47,6 @@ section#heroPartnerSection {
 	}
 }
 
-section#contactSection {
-	form {
-		.form-group {
-			.form-control {
-				border: none;
-				background-color: white;
-				@include NeoSans(400);
-				font-size: $font14;
-				text-transform: uppercase;
-				height: 59px;
-				color: black;
-				padding: 7px 20px;
-				&::placeholder {
-					color: black;
-				}
-			}
-		}
-	}
-}
-
-
-
 section#familySection {
 	&.family {
 		background: $primary;
@@ -126,9 +58,6 @@ section#familySection {
 		}
 	}
 }
-
-
-
 
 section#newsSection {
 	.news-sec {
@@ -682,27 +611,8 @@ article#newsArticle {
 			margin-bottom: 20px;
 			@include NeoSans(400);
 		}
-		.row {
-			align-items: center;
-		}
-		form {
-			@include NeoSans(400);
-			max-width: 504px;
-			.form-group {
-				margin-bottom: 14px;
-			}
-			.form-control {
-				background-color: white;
-				border-width: 0px 0px 0px 0px;
-				@include NeoSans(400);
-				height: 59px;
-			}
-			textarea {
-				&.form-control {
-					height: auto;
-				}
-			}
-		}
+
+
 	}
 	.method {
 		background: $primary;
@@ -1201,22 +1111,7 @@ article#newsArticle {
 		.row {
 			align-items: center;
 		}
-		form {
-			max-width: 504px;
-			.form-group {
-				margin-bottom: 14px;
-			}
-			.form-control {
-				background-color: white;
-				border-width: 0px 0px 0px 0px;
-				height: 59px;
-			}
-			textarea {
-				&.form-control {
-					height: auto;
-				}
-			}
-		}
+
 	}
 }
 
@@ -1420,22 +1315,7 @@ article#newsArticle {
 		.row {
 			align-items: center;
 		}
-		form {
-			max-width: 504px;
-			.form-group {
-				margin-bottom: 14px;
-			}
-			.form-control {
-				background-color: white;
-				border-width: 0px 0px 0px 0px;
-				height: 59px;
-			}
-			textarea {
-				&.form-control {
-					height: auto;
-				}
-			}
-		}
+
 	}
 }
 
@@ -1480,33 +1360,7 @@ article#newsArticle {
 		}
 	}
 
-	.enquireForm {
-		margin-top: 100px;
-
-		h3 {
-			font-size: $font24;
-			text-transform: uppercase;
-			color: black;
-			line-height: 1.4;
-			margin-bottom: 20px;
-		}
-
-		.form-group {
-			margin-bottom: 14px;
-		}
-
-		.form-control {
-			background-color: white;
-			border-width: 0px 0px 0px 0px;
-			height: 59px;
-		}
-
-		textarea {
-			&.form-control {
-				height: auto;
-			}
-		}
-	}
+	
 }
 
 #aboutUsPage {
@@ -2005,6 +1859,3 @@ article#newsArticle {
 	}
 }
 
-footer {
-	background-color: #3437ff;
-}
