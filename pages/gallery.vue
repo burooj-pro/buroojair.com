@@ -2,10 +2,10 @@
   <div id="galleryPage" class="overflow-hidden font-neo-sans">
     <Header />
 
-    <SectionsHeadingSection :title="$t('GALLERY')" image="~assets/images/burooj_air_drone.jpg" />
+    <SectionsHeading :title="$t('GALLERY')" image="~assets/images/burooj_air_drone.jpg" />
 
     <!-- GALLERY SECTION -->
-    <SectionsGallerySection :videos="videos" :images="images" />
+    <SectionsGallery :videos="videos" :images="images" />
     
     <Footer />
   </div>

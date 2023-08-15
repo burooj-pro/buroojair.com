@@ -3,7 +3,7 @@
     <Header />
     <!-- Global Reach SECTION -->
     <section class="globalReach mt-5 pt-4">
-      <div class="container">
+      <div class="container mx-auto">
         <div class="text-box">
           <h3>GLOBAL REACH</h3>
         </div>
@@ -205,7 +205,7 @@
     </section>
     <!-- Franchise SECTION -->
     <section class="franchise">
-      <div class="container">
+      <div class="container mx-auto">
         <div class="row">
           <div class="col-lg-6">
             <div class="text-box">
@@ -228,7 +228,7 @@
       </div>
     </section>
     <section class="working-growth">
-      <div class="container">
+      <div class="container mx-auto">
         <div class="row">
           <div class="col-lg-6">
             <div class="text-box">

@@ -1,164 +1,233 @@
 <template>
-  <div id="franchiseIndexPage">
-    <section class="standardSolar aboutSetting">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="text-box text-center">
+  <div id="franchisePage" class="overflow-hidden">
+    <Header />
+    <!-- Service Hero SECTION -->
+    <section class="heroServices mt-5 pt-4">
+      <div class="row g-0">
+        <div class="col-lg-7">
+          <div class="heroFlag">
+            <div class="titleText">
+              <h2>{{ $t("ABOUT_US") }}</h2>
+              <p>
+                {{ $t("OUR_HISTORY_AND_THE_EVOLUTION_OF_CLEANING") }}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="text-box">
+            <p>
+              <strong>
+                {{
+                  $t(
+                    "BUROOJ_AIR_IS_A_DRONE_COMPANY_BASED_IN_THE_KINGDOM_OF_SAUDI_ARABIA"
+                  )
+                }}
+              </strong>
+            </p>
+            <p>
+              {{ $t("CLEANING_BUILDINGS_BUROOJ_AIR_DRONES_CAN_BE_USED") }}
+            </p>
+
+            <p>
+              {{ $t("WEIGHTLIFTING_BUROOJ_AIR_DRONES_CAN_BE_USED") }}
+            </p>
+
+            <p>
+              {{ $t("HEAT_MEASUREMENT_AND_FIRE_FIGHTING") }}
+            </p>
+
+            <p>
+              {{ $t("CAMERA_FILMING") }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- METHOD SECTION -->
+    <section class="method">
+      <div class="container mx-auto">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="text-box">
               <h3>
-                {{ $t("franchise") }}
+                {{ $t("OUR_INTENTION") }}
               </h3>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="text-box">
+              <p>
+                {{ $t("OUR_MAIN_INTENTION_IS_TO_DO_GOOD") }}
+              </p>
+              <p>
+                {{ $t("WE_AIM_TO_CONTRIBUTE_TO_A_SAFER_WORK") }}
+              </p>
+              <p>
+                {{ $t("THESE_ARE_PHYSICALLY_DEMANDING_JOBS") }}
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="content">
-      <div class="container">
-        <div class="row pt-3">
-          <p>
-            <h3>Franchise model Burooj AIR</h3>
+    <!-- SETTING STANDARD SECTION -->
+    <section class="standardSolar aboutSetting">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1000 100"
+        class="shape"
+        preserveAspectRatio="none"
+      >
+        <path
           
-            <br />
-            <b>NON-DISCLOSURE AGREEMENT</b>
-          </p>
-          <!-- First Section -->
-          <div class="col-6">
-            <p><b>THIS AGREEMENT (the NDA) is entered into between:</b></p>
-            <p>
-              (1) Burooj Air, a private limited company incorporated under the
-              laws of Saudi Arabia whose registered office is at PRINCE TURKI ST, KHOBAR, SAUDI ARABIA; and <br> <br>(2) The visitor to this page and recipient of
-              information of the Burooj Air (the Recipient). together
-              referred to as the Parties and each as a Party to this NDA.
-            </p>
-            <p>
-              <br>
-              <b>BACKGROUND</b> <br><br>
-              (A) The Company has developed a technology for utilizing drones in
-              the cleaning industry and is contemplating a collaboration (the
-              Collaboration) with the Recipient. The Company has therefore
-              invited the Recipient to discuss the possibility of a distribution
-              or resale agreement between the Parties. The Recipient will in
-              connection with such discussions be invited to a demonstration of
-              the drone technology. Furthermore, the Recipient will be provided
-              with certain Confidential Information (as defined in clause 1.1).
-              <br> <br>
-              (B) This NDA sets out the terms and conditions agreed between the
-              Parties in relation to the provision of such Confidential
-              Information by the Company to the Recipient.
-              <br><br>
-              (C) The Confidential
-              Information provided from the Company to the Recipient will be
-              provided on a non-exclusive basis, and this NDA does not restrict
-              the Company to give the same Confidential Information to any other
-              entities.
-            </p>
-            <p>
-               <br>
-              <b>   AGREED TERMS</b> <br><br>
-
-             <b> 1 Confidentiality </b> <br> <br>
-              1.1 For the purpose of this NDA,
-              Confidential Information shall mean all information (however
-              recorded or preserved) which is or has been, either directly or
-              indirectly, disclosed or made available to the Recipient (in any
-              form or medium), in connection with the demonstration of the drone
-              technology and Recipient considering the Collaboration, and shall
-              also include any and all information regarding the existence,
-              nature or progress of any discussions between the Parties relating
-              to the possible Collaboration, including the demonstration of the
-              drone technology.<br> <br>
-              1.2 The Recipient shall keep all Confidential
-              Information strictly confidential and shall not disclose any
-              Confidential Information to any third party. <br> <br>
-              1.3 The Recipient may
-              disclose Confidential Information only when so required by law or
-              any court of competent jurisdiction, provided that the Company is
-              given due notice prior to such disclosure. <br> <br>
-              1.4 The Recipient may
-              disclose such Confidential Information as may be necessary to such
-              of its directors, officers, employees, and advisors<b> (the
-              Representatives)</b> when strictly necessary to enable the Recipient
-              to evaluate, prepare for, negotiate and carry out the
-              Collaboration. Prior to any such disclosure of Confidential
-              Information, the Recipient shall ensure that each such
-              Representative is made aware of and agrees to observe the
-              obligations contained herein. The Recipient may not disclose
-              Confidential Information to any other physical or legal person
-              except if agreed in writing by the Company.
-            </p>
+          d="M761.9,44.1L643.1,27.2L333.8,98L0,3.8V0l1000,0v3.9"
+        ></path>
+      </svg>
+      <div class="container mx-auto">
+        <div class="row">
+          <div class="col-lg-7 m-auto">
+            <div class="text-box">
+              <h3>
+                {{ $t("FRANCHISE_OPPORTUNITIES_AVAILABLE") }}
+              </h3>
+            </div>
           </div>
-          <div class="col-6">
-            <p>
-               <b>  4 Non-competition, non-solicitation and non-recruitment  </b> <br> <br>
-             4.1 During
-              the duration of this Agreement, the Recipient will not, and will
-              ensure that the Recipient do not, without the prior written
-              consent of the Company, either directly or indirectly become
-              involved or participate in any capacity in any business,
-              activities, decisions, operations, undertakings or concerns which,
-              in the reasonable opinion of the Company:<br> <br>
-              (a) conflict, or appear
-              to conflict, with the interests of the Company; and<br> <br>
-              (b) are in
-              competition with, or are of a similar nature to, the activities of
-              the Company <br> <br>
-              4.2 In connection with the Recipient considering the
-              Collaboration, the Recipient and its Representatives shall not
-              contact any of the Company’s employees, suppliers or customers
-              without the Company’s prior written consent.<br> <br>
-               4.3 The Recipient
-              shall not solicit or entice or endeavour to solicit or entice any
-              existing supplier, customer or other contract or trading party of
-              the Company to terminate or alter their business relationship with
-              the Company. This clause 4.3 shall remain in force during the
-              negotiations regarding the Collaboration and for 12 months after
-              the termination of such negotiations if the negotiations are not
-              successful.
-            </p>
-
-            <p>
-              <br> <br>
-              4.4 The Recipient shall not solicit or entice or endeavour to
-              solicit or entice any directors, employees or other
-              representatives of the Company, or consultants delivering services
-              to the Company, to leave their current employment. This clause
-              shall remain in force during the negotiations regarding the
-              Collaboration and for 12 months after the termination of such
-              negotiations if the negotiations are not successful.<br> <br>
-              4.5 The
-              Recipient acknowledges that the covenants in respect of
-              non-competition contained in this clause are fair and reasonable
-              and that the Company is relying upon this acknowledgement in
-              entering into this agreement. The Recipient will ensure that the
-              Recipients directors, employees and agents will make the same
-              acknowledgement.
-            </p>
-
-            <p><br> <br>
-              4.6 The Recipient agrees and acknowledges that should the
-              Recipient take over or acquire any client from the Company during
-              its term of engagement or within (12) twelve months after the
-              termination of its engagement with the Company the Recipient will
-              be required to pay compensation to the Company in respect of those
-              clients. The calculation for the compensation shall be equal to
-              one dollar ($1.00) for every dollar of gross fees charged to that
-              client for the previous twelve months. At the Company’s discretion
-              allowances may be made in respect of clients introduced to the
-              Company by the Recipient. This clause shall not merge on
-              completion of this Agreement. had direct dealings in the course
-              of, or in connection with, the duration of the NDA.
-            </p>
-          </div>
-        </div>
-<hr>
-        <div class="row pt-3">
-          <div class="col-4">
-            <div class="pipedriveWebForms" data-pd-webforms="https://webforms.pipedrive.com/f/bXCZRhnEATSSg8AiaLHNw1Fkti3HRSJNU7pWyVOxhoYkm92ZdiQQcGzHw83hVqKg5J"><script src="https://webforms.pipedrive.com/f/loader"></script></div>
+          <div class="col-lg-5">
+            <div class="text-box">
+              <p>
+                <strong>
+                  {{ $t("BECOME_INVOLVED_IN_THE_MOST_INNOVATIVE") }}
+                </strong>
+              </p>
+              <p>
+                {{ $t("OUR_PHILOSOPHY_AT_BUROOJ") }}
+              </p>
+              <p>
+                {{ $t("BUROOJ_AIR_CREATING_A_FAMILY") }}
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Future Development -->
+    <section class="standardSolar futureDevelopment">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1000 100"
+        class="shape"
+        preserveAspectRatio="none"
+      >
+        <path
+          
+          d="M761.9,44.1L643.1,27.2L333.8,98L0,3.8V0l1000,0v3.9"
+        ></path>
+      </svg>
+      <div class="container mx-auto">
+        <div class="row">
+          <div class="col-lg-7">
+            <div class="text-box titleText">
+              <h3>
+                {{ $t("WE_ARE_FAMILY") }}
+              </h3>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div>
+              <p>
+                <b>
+                  {{  $t("WE_THINK_OF_OUR_PARTNERS_AS_FAMILY") }}
+                </b>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="standardSolar">
+      <div class="container mx-auto">
+        <div class="row">
+          <div class="col-lg-7 m-auto">
+            <div class="text-box">
+              <h3>
+                {{ $t("GET_INVOLVED_AND_BECOME_PARTNER") }}
+              </h3>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="text-box">
+              <p>
+                <strong>
+                  {{ $t("WE_ARE_SEEKING_INTERSET_FOR_COUNTRY_PARTNERS") }}
+                </strong>
+              </p>
+              <div>
+                <p>
+                 {{ $t('The_drone_and_all_the_fitting_required_to_operate_the_drone_for_cleaning_at_heights') }}
+                </p>
+                <p>
+                  {{ $t('The_required_equipment_list_necessary_to_operate') }}
+                </p>
+                <p>
+                  {{ $t('Assistance_and_application_directly_to_the_countries_civil_aviation_authority_for_licensing') }}
+                </p>
+                <p>
+                  {{ $t('Full_UAV_operators_manual') }}
+                </p>
+              </div>
+              <p>
+                <strong>
+                  {{  $t('COST')  }}
+                </strong>
+              </p>
+              <p>
+                {{ $t('If_like_to_find_out_more_and_get_involved_regardless') }}
+              </p>
+              <p>
+                {{ $t('Our_partnership_and_exclusive_master_license')  }}
+              </p>
+              <p>
+                {{ $t('Our_aim_is_to_work_with_our_partners_to_expand') }}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row ">
+          <div class="col-12 text-center mt-3">
+            <NuxtLink to="/franchise" class="btn btn-secondary btn-blue text-center">
+              <span>
+                {{ $t("NDA_BUTTON") }}
+              </span>
+            </NuxtLink>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Footer />
   </div>
 </template>
+
+<script>
+export default {
+  name: "Franchise",
+  head() {
+    return {
+      title: `Burooj Air | ${this.$t("FRANCHISE")}`,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "We aim to contribute to a safer work day for people who work at great heights with lifts, scaffolding and for facade climbers.",
+        },
+      ],
+    };
+  },
+};
+</script>

@@ -1,6 +1,6 @@
 <template>
     <!-- <section class="safety-statement-section">
-      <div class="container">
+      <div class="container mx-auto">
         <div class="row">
           <div class="col-md-7">
             <div class="statement-left">

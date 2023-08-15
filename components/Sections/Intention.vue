@@ -1,6 +1,6 @@
 <template>
 	<section class="intention-section text-lg py-16 md:py-32 bg-gray-800 text-white font-neo-sans">
-		<div class="container">
+		<div class="container mx-auto">
 			<div class="grid grid-cols md:grid-cols-2 gap-8">
 				<div class="flex justify-center items-center">
 					<h3 class="text-6xl font-bold">{{ $t("OUR_INTENTION") }}</h3>

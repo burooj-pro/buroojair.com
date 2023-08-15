@@ -4,7 +4,7 @@
 		
     <!-- NEWS SECTION -->
 		<section class="news-sec">
-			<div class="container">
+			<div class="container mx-auto">
 				<div class="row">
 					<div class="col-lg-9">
 						<div class="detail-card">

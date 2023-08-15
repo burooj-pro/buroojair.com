@@ -1,6 +1,6 @@
 <template>
     <section class="service">
-      <div class="container">
+      <div class="container mx-auto">
         <div class="row align-items-center">
           <div class="col-lg-7">
             <div class="text-box">

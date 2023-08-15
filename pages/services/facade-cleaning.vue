@@ -8,7 +8,7 @@
 
 		<!-- Service Start -->
 		<section class="service">
-			<div class="container">
+			<div class="container mx-auto">
 				<div class="row">
 					<div class="col-lg-7">
 						<div class="text-box">
@@ -73,7 +73,7 @@
 		<SectionsBenefits />
 		<!-- Advantages SECTION -->
 		<section class="advantages">
-			<div class="container">
+			<div class="container mx-auto">
 				<div class="row align-items-center">
 					<div class="col-lg-8">
 						<div class="text-box">
@@ -131,7 +131,7 @@
 		</section>
 		<!-- INQUIRY SECTION -->
 		<section class="inquiry">
-			<div class="container">
+			<div class="container mx-auto">
 				<div class="row">
 					<div class="col-lg-6">
 						<div class="text-box">

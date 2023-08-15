@@ -1,6 +1,6 @@
 <template>
 	<section class="advantages">
-		<div class="container">
+		<div class="container mx-auto">
 			<div class="row">
 				<div class="col-lg-8">
 					<div class="text-box">

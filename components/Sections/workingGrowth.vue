@@ -1,6 +1,6 @@
 <template>
     <!-- <section id=workingGrowthSection class="working-growth-section">
-      <div class="container">
+      <div class="container mx-auto">
         <div class="row">
           <div class="col-md-6">
             <div class="text-left">

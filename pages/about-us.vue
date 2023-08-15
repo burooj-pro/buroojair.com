@@ -43,7 +43,7 @@
 
     <!-- METHOD SECTION -->
     <section class="method">
-      <div class="container">
+      <div class="container mx-auto">
         <div class="row align-items-center">
           <div class="col-lg-6">
             <div class="text-box">
@@ -84,7 +84,7 @@
           d="M761.9,44.1L643.1,27.2L333.8,98L0,3.8V0l1000,0v3.9"
         ></path>
       </svg>
-      <div class="container">
+      <div class="container mx-auto">
         <div class="row">
           <div class="col-lg-7">
             <div class="text-box">
@@ -135,11 +135,11 @@
           d="M761.9,44.1L643.1,27.2L333.8,98L0,3.8V0l1000,0v3.9"
         ></path>
       </svg>
-      <div class="container">
+      <div class="container mx-auto">
         <div class="row">
           <div class="col-lg-7">
             <div class="text-box titleText">
-              <h3 class="">
+              <h3>
                 {{ $t("FUTURE_DEVELOPMENT") }}
               </h3>
               <h4>

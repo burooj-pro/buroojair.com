@@ -1,6 +1,6 @@
 <template>
     <section id="developmentSection" class="font-neo-sans development-sec py-20 md:py-60 bg-blue-100">
-      <div class="container">
+      <div class="container mx-auto">
         <div class="grid md:grid-cols-2">
           <div class="p-4 md:p-8">
             <h3 class="text-7xl font-bold mb-2">{{ $t("A_LOOK_TOWARDS_FUTURE_INVENTIONS") }}</h3>

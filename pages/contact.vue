@@ -12,7 +12,7 @@
     </section>
     <!-- Contact Location SECTION -->
     <section class="contact-location">
-      <div class="container">
+      <div class="container mx-auto">
         <div class="titleText">
           <h3>{{ $t("BUROOJ_AIR_HEADQUARTERS") }}</h3>
           <p style="color: black;">{{ $t("KHOBAR_SAUDI_ARABIA") }}</p>

@@ -2,7 +2,7 @@
   <div id="franchiseIndexPage">
 	    <Header />
     <!-- <section class="standardSolar aboutSetting">
-      <div class="container">
+      <div class="container mx-auto">
         <div class="row">
           <div class="col-lg-12">
             <div class="text-box text-center">
@@ -18,7 +18,7 @@
 
 
     <section class="content p-5">
-      <div class="container p-5">
+      <div class="container mx-auto p-5">
 		    <div class="row">
         <div class="col-12 col-md-6 text-md-start text-center mb-5 mb-md-0">
           <div class="contact-left">

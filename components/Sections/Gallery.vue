@@ -1,6 +1,6 @@
 <template>
 	<section class="py-5 bg-gray-200 font-neo-sans">
-		<div class="container">
+		<div class="container mx-auto">
 			<div class="grid md:grid-cols-3">
 				<div class="bg-gray-100 p-5">
 					<h3 class="mb-4 text-5xl font-bold">{{ $t("IMAGES") }}</h3>
