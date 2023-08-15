@@ -6,7 +6,7 @@
 
 		<!-- CLEANING SECTION -->
 		<section class="cleaning">
-			<div class="container">
+			<div class="container mx-auto">
 				<div class="text-box">
 					<h2>{{ $t("FACADE_CLEANING") }}​</h2>
 					<p>
@@ -69,9 +69,9 @@
 		</section>
 		<section class="advantages partnerAdvantage">
 			<div class="video">
-				<iframe src="https://player.vimeo.com/video/713580406?h=6988e72af6&amp;muted=1&amp;autoplay=1&amp;loop=1&amp;transparent=0&amp;background=1&amp;app_id=122963" width="426" height="240" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" title="BUROOJ AIR Working Drone" data-ready="true" class="" style="width: 1903px; height: 1072.11px"></iframe>
+				<iframe src="https://player.vimeo.com/video/713580406?h=6988e72af6&amp;muted=1&amp;autoplay=1&amp;loop=1&amp;transparent=0&amp;background=1&amp;app_id=122963" width="426" height="240" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" title="BUROOJ AIR Working Drone" data-ready="true" style="width: 1903px; height: 1072.11px"></iframe>
 			</div>
-			<div class="container">
+			<div class="container mx-auto">
 				<div class="row align-items-center">
 					<div class="col-lg-8">
 						<div class="text-box">

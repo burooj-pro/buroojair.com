@@ -13,7 +13,7 @@
           ></path>
         </svg>
       </div>
-      <div class="container">
+      <div class="container mx-auto">
         <div class="row">
           <div class="col-md-7">
             <h3>SETTING THE STANDARD FOR WORKING DRONES</h3>

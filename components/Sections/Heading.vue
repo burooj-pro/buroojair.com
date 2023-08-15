@@ -1,15 +1,25 @@
 <template>
-    <section id="headingSection" class="relative aspect-[2]">
-      <img src="~assets/images/burooj_air_drone.jpg" class="object-cover cover object-right h-full absolute top-0" />
-      <div class="absolute top-0 left-0 w-full h-full bg-indigo-800 bg-opacity-10 bg-blend-darken"></div>
-      <div class="container mx-auto py-8 h-full d-flex items-center drop-shadow-md">
-        <h1 class="text-white text-4xl font-semibold">{{ $t("GALLERY") }}</h1>
-      </div>
-    </section>
+	<div>
+		<section 
+      id="headingSection" 
+      class="
+      overflow-hidden 
+      bg-[url(~assets/images/burooj_air_drone.jpg)] 
+      bg-cover bg-top bg-no-repeat 
+      pt-36 font-neo-sans
+      ">
+			<div class="bg-black/25 md:py-24">
+				<div class="container mx-auto">
+          <div class="text-center ltr:sm:text-left rtl:sm:text-right">
+					<h2 class="text-2xl font-bold text-white sm:text-3xl md:text-5xl">{{ $t("GALLERY") }}</h2>
+				</div>
+        </div>
+			</div>
+		</section>
+	</div>
 </template>
 <script>
 export default {
-  props: ['image', 'title']
+	props: ["image", "title"],
 };
-
 </script>

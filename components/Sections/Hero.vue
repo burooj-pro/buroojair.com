@@ -7,7 +7,7 @@
 		<div class="absolute top-0 left-0 w-full h-full bg-indigo-800 bg-opacity-5 bg-blend-darken"></div>
 
 		<div class="z-30 md:absolute relative flex w-full md:top-0 md:left-0 md:items-center md:h-screen">
-			<div class="md:container w-full mx-auto md:m-0 p-0 m-0 md:h-full items-end flex md:pb-18">
+			<div class="md:container md:mx-auto w-full mx-auto md:m-0 p-0 m-0 md:h-full items-end flex md:pb-18">
 				<div class="bg-gray-900 bg-opacity-95 md:mb-16 w-full p-12 md:max-w-xl md:rounded-tl-2xl md:rounded-br-2xl md:rounded-tr-[80px] md:rounded-bl-[80px]">
 					<h3 class="text-white text-3xl uppercase font-neo-sans mb-5">{{ $t("NOW_REQUEST_A_QUOTE_FOR_DRONE_CLEANING") }}</h3>
 

@@ -1,6 +1,6 @@
 <template>
 	<section id="contactSection" class="contact-section bg-gray-900 py-32 text-white">
-		<div class="container">
+		<div class="container mx-auto">
 			<div class="grid md:grid-cols-2 gap-8">
 				<div class="p-8 !text-center md:!text-start mb-5 md:mb-0">
 					<div class="text-box text-white">

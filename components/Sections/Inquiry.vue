@@ -1,6 +1,6 @@
 <template>
     <section class="inquiry">
-      <div class="container">
+      <div class="container mx-auto">
         <div class="row">
           <div class="col-lg-6">
             <div class="text-box">

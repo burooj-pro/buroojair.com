@@ -28,7 +28,7 @@
 		<SectionsBenefits />
 		<!-- METHOD SECTION -->
 		<section class="method">
-			<div class="container">
+			<div class="container mx-auto">
 				<div class="row">
 					<div class="col-lg-6">
 						<div class="caption">
@@ -80,7 +80,7 @@
 		</section>
 		<!-- SETTING STANDARD SECTION -->
 		<section class="standardSolar">
-			<div class="container">
+			<div class="container mx-auto">
 				<div class="row">
 					<div class="col-lg-7">
 						<div class="text-box">
@@ -113,7 +113,7 @@
 		</section>
 		<!-- INQUIRY SECTION -->
 		<!-- <section class="inquiry">
-      <div class="container">
+      <div class="container mx-auto">
         <div class="row">
           <div class="col-lg-6">
             <div class="text-box">
@@ -221,7 +221,7 @@
     </section> -->
 		<!-- SAFETY SECTION -->
 		<section class="safetyStand">
-			<div class="container">
+			<div class="container mx-auto">
 				<div class="row">
 					<div class="col-lg-7">
 						<div class="text-box">

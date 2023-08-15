@@ -24,7 +24,7 @@
         style="width: 1903px; height: 1072.11px"
       ></iframe>
 
-      <div class="container">
+      <div class="container mx-auto">
         <div class="titleText">
           <h2>{{ $t("WINDOW_CLEANING") }}​</h2>
           <p>{{ $t("BUROOJ_WORKING_DRONE") }}</p>

@@ -28,7 +28,6 @@ export default {
     'animate.css/animate.min.css'],
 
   plugins: [
-    { src: "@/plugins/bootstrap.client.js" },
     { src: "@/plugins/light-gallery.client.js", ssr: false }
   ],
 

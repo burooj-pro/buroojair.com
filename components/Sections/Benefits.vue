@@ -1,6 +1,6 @@
 <template>
-  <section id="benefitsSection" class="advantage-sec bg-blue-50 md:py-32 py-16 font-neo-sans">
-    <div class="container g-0">
+  <section id="benefitsSection" class="advantage-sec bg-blue-50 md:py-32 py-16 font-neo-sans text-gray-800">
+    <div class="container mx-auto">
       <div class="grid md:grid-cols-2 gap-4 p-8">
         <div class="flex items-center">
             <h3 class="text-5xl md:text-7xl font-black">{{ $t("ADVANTAGES_USING_BUROOJ_AIR_DRONES") }}</h3>
