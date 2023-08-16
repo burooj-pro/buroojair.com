@@ -111,3 +111,13 @@
     </section>
 	</div>
 </template>
+<script>
+export default {
+  name: "Franchise",
+  head() {
+    return {
+      title: "Non-Disclosure Agreement",
+    };
+  },
+};
+</script>

@@ -22,3 +22,12 @@
     <Footer />
   </div>
 </template>
+<script>
+export default {
+  head() {
+    return {
+      title: this.$t("WINDOW_CLEANING"),
+    };
+  },
+};
+</script>
