@@ -72,10 +72,5 @@ export default {
 			],
 		};
 	},
-	computed: {
-		dir() {
-			return this.language === "ar" ? "rtl" : "ltr";
-		},
-	},
 };
 </script>

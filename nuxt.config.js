@@ -28,8 +28,9 @@ export default {
     'animate.css/animate.min.css'],
 
   plugins: [
-    { src: "@/plugins/light-gallery.client.js", ssr: false }
-  ],
+    { src: "@/plugins/light-gallery.client.js", ssr: false },
+    {src: '~/plugins/chart.js', mode: 'client'}
+    ],
 
   components: {
     dirs: [
