@@ -5,19 +5,19 @@
     <SectionsHeading :title="$t('WINDOW_CLEANING')" image="~assets/images/burooj_air_drone.jpg" />
     
     <!-- Service Start -->
-    <SectionsWindowCleaningService/>
+    <SectionsServicesWindowCleaning />
 
     <!-- ADVANTAGE SECTION -->
 		<SectionsBenefits />
 
     <!-- Advantages SECTION -->
-    <SectionsFacadeCleaningAdvantages/>
+    <SectionsFacadeCleaningAdvantages />
     
     <!-- INQUIRY SECTION -->
-    <SectionsInquiry/>
+    <SectionsInquiry />
     
     <!-- Contact Section -->
-    <SectionsContact/>
+    <SectionsContact />
     
     <Footer />
   </div>

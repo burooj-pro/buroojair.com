@@ -41,6 +41,7 @@
 		</section>
 
 		<SectionsContact />
+		
 		<Footer />
 	</div>
 </template>

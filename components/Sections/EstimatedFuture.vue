@@ -1,5 +1,5 @@
 <template>
-    <section class="font-neo-sans my-44 relative">
+    <section class="font-neo-sans relative">
       <div class="bg-emerald-600 text-white py-56 relative">
         <div class="container mx-auto p-0">
         <div class="grid grid-cols-1 lg:grid-cols-2">

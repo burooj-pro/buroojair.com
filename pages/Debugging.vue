@@ -10,6 +10,10 @@
 
         <SectionsFamily />
 
+        <SectionsWorkStand />
+
+        <SectionsServicesWindowCleaning />
+
 		<!-- Contact Section -->
 		<SectionsContact />
 
