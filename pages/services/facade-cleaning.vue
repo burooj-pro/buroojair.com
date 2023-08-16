@@ -2,9 +2,7 @@
 	<div id="facadeCleaningPage" class="overflow-hidden">
 		<Header />
 		<!-- Banner Start -->
-		<section class="banner">
-			<div class="overlay"></div>
-		</section>
+		<SectionsHeading :title="$t('HIGH_RISE_FACADE_CLEANING')" image="~assets/images/burooj_air_drone.jpg" />
 
 		<!-- Service Start -->
 		<section class="service">
@@ -16,19 +14,6 @@
 							<h4>{{ $t("HIGH_RISE_FACADE_CLEANING") }}</h4>
 							<div class="video-holder">
 								<img src="~assets/images/BuroojAir_1.jpg" alt="#" class="w-100" />
-								<!-- <i class="iconPlay">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="256"
-                    height="256"
-                    viewBox="0 0 256 256"
-                  >
-                    <path
-                      fill="white"
-                      d="M128 26a102 102 0 1 0 102 102A102.12 102.12 0 0 0 128 26Zm0 192a90 90 0 1 1 90-90a90.1 90.1 0 0 1-90 90Zm35.33-95l-48-32a6 6 0 0 0-9.33 5v64a6 6 0 0 0 9.33 5l48-32a6 6 0 0 0 0-10ZM118 148.79v-41.58L149.18 128Z"
-                    />
-                  </svg>
-                </i> -->
 							</div>
 							<h5>{{ $t("SELFCLEANER_METHOD") }}</h5>
 							<p>

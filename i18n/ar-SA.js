@@ -97,7 +97,7 @@ ACCESSING_ELEVATED_AREAS_WITHOUT_REQUIRING_HEIGHT_SPECIFIC_TOOLS:
 
   MOHAMMED_CEO:'محمد بن فيحان - المؤسس والرئيس التنفيذي',
   MOHANNAD_CTO:'مهند فيحان العتيبي - رئيس قسم التكنولوجيا',
-  OSAMAH_MD:'أسامة بن عبدالله القرينيس - مدير عام',
+  OSAMAH_lg:'أسامة بن عبدالله القرينيس - مدير عام',
   FAISAL_PM:'فيصل غازي عوض - مدير المشاريع',
   HATIM_DOM:'حاتم حسين شويخان - مدير عمليات الطائرات بدون طيار',
   MOHAMMED_DMS:'+25 من أعضاء الفريق القيمين الآخرين',

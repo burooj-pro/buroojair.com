@@ -1,31 +1,15 @@
 <template>
-  <section id="benefitsSection" class="advantage-sec bg-blue-50 md:py-32 py-16 font-neo-sans text-gray-800">
-    <div class="container mx-auto">
-      <div class="grid md:grid-cols-2 gap-4 p-8">
-        <div class="flex items-center">
-            <h3 class="text-5xl md:text-7xl font-black">{{ $t("ADVANTAGES_USING_BUROOJ_AIR_DRONES") }}</h3>
-        </div>
-        <div class="flex items-center">
-          <ul class="space-y-6 text-xl font-semibold">
-              <li class="flex items-center">
-                <i class="bi bi-triangle-fill text-5xl text-emerald-400 me-4"></i>
-                <span>{{$t("HIGH_SPEED_AND_EFFECTIVE_SURPASSING_TRADITIONAL_METHODS")}}</span>
-              </li>
-              <li class="flex items-center">
-                <i class="bi bi-triangle-fill text-5xl text-emerald-400 me-4"></i>
-                <span>{{ $t("SIMPLIFIED_ACCESS_TO_REMOTE_OR_HARD_TO_GET_TO_PLACES") }}</span>
-              </li>
-              <li class="flex items-center">
-                <i class="bi bi-triangle-fill text-5xl text-emerald-400 me-4"></i>
-                <span>{{ $t("REINFORCED_SAFETY_AND_SECURITY") }}</span>
-              </li>
-              <li class="flex items-center">
-                <i class="bi bi-triangle-fill text-5xl text-emerald-400 me-4"></i>
-                <span>{{ $t("ACCESSING_ELEVATED_AREAS_WITHOUT_REQUIRING_HEIGHT_SPECIFIC_TOOLS") }}</span>
-              </li>
-            </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+	<section id="benefitsSection" class="bg-blue-50 lg:py-32 p-8 font-neo-sans text-gray-800">
+		<div class="container mx-auto">
+			<div class="grid lg:grid-cols-2 gap-4">
+				<h3 class="text-5xl lg:text-7xl font-black">{{ $t("ADVANTAGES_USING_BUROOJ_AIR_DRONES") }}</h3>
+				<ul class="space-y-6 text-xl font-semibold">
+					<Benefit :text="$t('HIGH_SPEED_AND_EFFECTIVE_SURPASSING_TRADITIONAL_METHODS')" />
+					<Benefit :text="$t('SIMPLIFIED_ACCESS_TO_REMOTE_OR_HARD_TO_GET_TO_PLACES')" />
+					<Benefit :text="$t('REINFORCED_SAFETY_AND_SECURITY')" />
+					<Benefit :text="$t('ACCESSING_ELEVATED_AREAS_WITHOUT_REQUIRING_HEIGHT_SPECIFIC_TOOLS')" />
+				</ul>
+			</div>
+		</div>
+	</section>
 </template>

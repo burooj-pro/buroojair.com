@@ -17,7 +17,7 @@
 
 		<template #imageText>
 			<div class="p-8 max-w-xl">
-				<h4 class="text-4xl md:text-6xl font-bold">
+				<h4 class="text-4xl lg:text-6xl font-bold">
 				{{ $t("BUILDINGS_CLEANING") }} <br />
 				{{ $t("AND_HEAVYLIFTING_USING_DRONE") }}
 			</h4>

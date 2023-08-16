@@ -1,6 +1,6 @@
 <template>
 	<div id="partnerPage">
-		<Header />
+		<Header disableSpacer="true" />
 		<!-- Hero -->
 		<SectionsHeroPartner />
 
@@ -143,7 +143,7 @@ export default {
 	name: "BECOME_A_PARTNER",
 	head() {
 		return {
-			title: `Burooj Air | ${this.$t("BECOME_A_PARTNER")}`,
+			title: this.$t("BECOME_A_PARTNER"),
 			meta: [
 				{
 					hid: "description",
