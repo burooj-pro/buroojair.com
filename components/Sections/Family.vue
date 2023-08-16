@@ -1,16 +1,13 @@
 <template>
     <!-- FAMILY SECTION -->
-    <!-- <section id="familySection" class="family">
-      <div class="container-fluid">
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <div class="text-box">
-              <h3>WE ARE FAMILY</h3>
-            </div>
+    <section id="familySection" class="bg-gray-800 text-white py-12 lg:py-32 font-neo-sans">
+      <div class="container mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2">
+          <div class="p-8">
+            <h3 class="text-3xl lg:text-7xl font-bold">WE ARE FAMILY</h3>
           </div>
-          <div class="col-lg-6">
-            <div class="text-box">
-              <h4>
+          <div class="p-8 space-y-8">
+              <h4 class="text-lg lg:text-2xl font-bold">
                 We think of our partners as family. Everyone supports and backs
                 each other up like a family, and in this way we grow and get
                 better together.
@@ -27,8 +24,7 @@
                 for people.
               </p>
             </div>
-          </div>
         </div>
       </div>
-    </section> -->
+    </section>
 </template>

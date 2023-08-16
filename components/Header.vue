@@ -47,7 +47,7 @@
 			</div>
 		</div>
 
-		<div v-if="!disableSpacer" class="relative w-full hidden lg:block" :class="{ 'flip-horizontal': language === 'ar' }">
+		<div v-if="!disableSpacer" class="relative w-full hidden lg:block" :class="{  }">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" class="h-12 block translate-x-0 w-full">
 				<path class="fill-gray-900 opacity-90" d="M761.9,44.1L643.1,27.2L333.8,98L0,3.8V0l1000,0v3.9" fill="#212121"></path>
 			</svg>
@@ -63,24 +63,13 @@ export default {
 			language: this.$i18n.locale ?? "ar",
 		};
 	},
-	mounted() {
-		if (this.$i18n && this.$i18n.locale) {
-			this.language = this.$i18n.locale;
-		}
-	},
 	methods: {
 		onChangeLanguage() {
 			if (this.$i18n) {
 				const lan = this.language === "en" ? "ar" : "en";
-				this.language = lan;
 				window.localStorage.setItem("language", lan);
 				this.$i18n.setLocale(lan);
 			}
-		},
-	},
-	computed: {
-		dir() {
-			return this.language === "ar" ? "rtl" : "ltr";
 		},
 	},
 };

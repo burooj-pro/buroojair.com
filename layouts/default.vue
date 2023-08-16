@@ -9,8 +9,6 @@ import {     initCollapses,  } from 'flowbite'
 export default {
   mounted() {
     initCollapses();
-
-
   },
 
   head() {
