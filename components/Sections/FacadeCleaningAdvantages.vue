@@ -1,15 +1,13 @@
 <template>
-	<section class="advantages">
+	<section class="bg-white text-gray-700 py-12 lg:py-24 font-neo-sans">
 		<div class="container mx-auto">
-			<div class="row">
-				<div class="col-lg-8">
-					<div class="text-box">
-						<h3>{{ $t("ADVANTAGES_OF_GLASS_AND_FACADE_CLEANING_WITH_BUROOJ_AIR_DRONE") }}</h3>
-					</div>
+			<div class="grid grid-cols-1 lg:grid-cols-2">
+				<div class="p-8 lg:order-2">
+					<h3 class="text-2xl lg:text-4xl font-bold uppercase">{{ $t("ADVANTAGES_OF_GLASS_AND_FACADE_CLEANING_WITH_BUROOJ_AIR_DRONE") }}</h3>
 				</div>
-				<div class="col-lg-4">
-					<div class="text-box">
-						<h4>{{ $t("IMPORTANT_KEY_FACTS") }}</h4>
+				<div class="p-8 lg:order-1 grid grid-cols-1 lg:grid-cols-2">
+					<div class="space-y-4">
+						<h4 class="text-lg lg:text-2xl font-bold uppercase">{{ $t("IMPORTANT_KEY_FACTS") }}</h4>
 						<p>
 							<strong>1000 {{ $t("SQM_HOUR") }}</strong
 							><br />{{ $t("CAPACITY_FACADE_CLEANING") }}
@@ -22,6 +20,8 @@
 							<strong>{{ $t("HEIGHT") }} 100+ {{ $t("METER") }}</strong
 							><br />{{ $t("DRONE_FULLY_OPERATIONAL") }}
 						</p>
+					</div>
+					<div class="space-y-4">
 						<p>
 							<strong>{{ $t("FLYTIME") }} 24 {{ $t("HOUR") }}</strong
 							><br />{{ $t("BATTERY_CASE_BATTERIES") }}
@@ -50,43 +50,6 @@
 							<strong>{{ $t("IP_45") }}</strong
 							><br />{{ $t("PROTECTED_AGAINST_PRESSURE") }}
 						</p>
-						<!-- <p>
-                <strong>1000 sqm/hour</strong><br />Capacity facade cleaning
-              </p>
-              <p>
-                <strong>1500 sqm/hour</strong><br />Capacity window cleaning
-              </p>
-              <p>
-                <strong>Height 100+ meter</strong><br />When the drone is fully
-                operational
-              </p>
-              <p>
-                <strong>Flytime 24 hour</strong><br />With battery case with 8
-                batteries
-              </p>
-              <p>
-                <strong>7 m/sec</strong><br />Works in maximum winds of 7 m/s.
-                Up to 15 m/s without equipment
-              </p>
-              <p>
-                <strong>Up to 180 bar pressure</strong><br />Capacity water
-                pressure
-              </p>
-              <p>
-                <strong>AirSense ADS-B</strong><br />Advanced flight / collision
-                warning system
-              </p>
-              <p>
-                <strong>Self-heating battery</strong><br />Provides efficient
-                battery use
-              </p>
-              <p>
-                <strong>-20°C to 50°C</strong><br />Working temperature range
-              </p>
-              <p>
-                <strong>IP 45</strong><br />Protected against low pressure water
-                jets
-              </p> -->
 					</div>
 				</div>
 			</div>

@@ -9,7 +9,7 @@
 				<div class="p-8 flex flex-col justify-between items-start gap-3">
 					<h3 class="text-3xl font-bold">{{ $t("CLEANING_BUILDINGS") }}</h3>
 					<p>{{ $t("CLEANING_BUILDINGS_DESC") }}</p>
-					<NuxtLink to="/services/-cleaning" class="py-3 px-4 bg-brand-second rounded-lg hover:bg-brand-first text-white no-underline">
+					<NuxtLink to="/services/window-cleaning" class="py-3 px-4 bg-brand-second rounded-lg hover:bg-brand-first text-white no-underline">
 						<i class="bi bi-arrow-right fs-5 me-2"></i>
 						{{ $t("READ_MORE") }}
 					</NuxtLink>

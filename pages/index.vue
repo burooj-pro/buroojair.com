@@ -29,11 +29,11 @@
 		<!-- ABOUT US SECTION -->
 		<SectionsAboutUs />
 
-		<!-- ESTIMATED FUTURE SECTION -->
-		<SectionsEstimatedFuture />
-
 		<!-- GLOBAL REACH SECTION -->
 		<SectionsGlobalReach />
+
+		<!-- ESTIMATED FUTURE SECTION -->
+		<SectionsEstimatedFuture />
 
 		<!-- WORKING GROWTH SECTION -->
 		<SectionsWorkingGrowth />
