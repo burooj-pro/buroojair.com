@@ -62,7 +62,7 @@ export default {
 	name: "HOME",
 	head() {
 		return {
-			title: `Burooj Air`,
+			title: `Home`,
 			meta: [
 				{
 					hid: "description",

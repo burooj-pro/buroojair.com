@@ -16,7 +16,7 @@ export default {
   head() {
     let i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true })
 		return {
-			title: `Burooj Air`,
+      titleTemplate: '%s | Burooj Air',
       htmlAttrs: {
                 lang: 'en',
                 ...i18nHead.htmlAttrs

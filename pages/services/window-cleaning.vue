@@ -2,10 +2,8 @@
   <div id="windowCleaningPage" class="overflow-hidden">
     <Header />
     <!-- Banner Start -->
-    <section class="banner">
-      <div class="overlay"></div>
-    </section>
-
+    <SectionsHeading :title="$t('WINDOW_CLEANING')" image="~assets/images/burooj_air_drone.jpg" />
+    
     <!-- Service Start -->
     <SectionsWindowCleaningService/>
 

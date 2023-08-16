@@ -34,7 +34,7 @@ export default {
   name: "Gallery",
   head() {
     return {
-      title: `Burooj Air | ${this.$t("GALLERY")}`,
+      title: this.$t("GALLERY"),
       meta: [
         {
           hid: "description",

@@ -205,7 +205,7 @@ export default {
 
   MOHAMMED_CEO:'Mohammed bin Faihan - Founder & Chief Executive Officer',
   MOHANNAD_CTO:'Mohannad F. Alotaibi - Chief Technology Officer',
-  OSAMAH_MD:'Osamah Abdullah Algrainees - Managing Director',
+  OSAMAH_lg:'Osamah Abdullah Algrainees - Managing Director',
   FAISAL_PM:'Faisal Ghazi Awadh - Projects Manager',
   HATIM_DOM:'Hatim Hussin Shuwaikan - Drone Operations Manager',
   MOHAMMED_DMS:'+25 Other Valuable Taem Members',
