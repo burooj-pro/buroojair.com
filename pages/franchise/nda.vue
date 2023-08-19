@@ -60,7 +60,7 @@
 									contained herein. The Recipient may not disclose Confidential Information to any other physical or legal person except if agreed in writing by the Company.
 								</p>
 							</div>
-              <div class="space-y-4">
+							<div class="space-y-4">
 								<h5 class="font-bold text-lg">2 Use of the Confidential Information – Approved Purpose</h5>
 								<p>The Recipient shall not use, directly or indirectly, any Confidential Information for any other purpose whatsoever other than evaluating, preparing for, negotiating and carrying out the Collaboration <b>(Approved Purpose)</b>. The Recipient must not profit from the use of the Confidential Information, except in respect of the Approved Purpose.</p>
 							</div>
@@ -75,8 +75,6 @@
 							</div>
 						</div>
 						<div class="p-8 space-y-8">
-							
-
 							<div class="space-y-4">
 								<h5 class="font-bold text-lg">4 Non-competition, non-solicitation and non-recruitment</h5>
 								<p>4.1 During the duration of this Agreement, the Recipient will not, and will ensure that the Recipient do not, without the prior written consent of the Company, either directly or indirectly become involved or participate in any capacity in any business, activities, decisions, operations, undertakings or concerns which, in the reasonable opinion of the Company:<br /></p>
@@ -94,30 +92,28 @@
 							</div>
 						</div>
 					</div>
-
-          
 				</div>
 			</div>
 		</section>
 
-    <section class="bg-white text-black text-thin">
-      <div class="container mx-auto">
-            <div class="grid">
-              <div class="pipedriveWebForms p-8" data-pd-webforms="https://webforms.pipedrive.com/f/bXCZRhnEATSSg8AiaLHNw1Fkti3HRSJNU7pWyVOxhoYkm92ZdiQQcGzHw83hVqKg5J">
-                <script src="https://webforms.pipedrive.com/f/loader"></script>
-              </div>
-            </div>
-          </div>
-    </section>
+		<section class="bg-white text-black text-thin">
+			<div class="container mx-auto">
+				<div class="grid">
+					<div class="pipedriveWebForms p-8" data-pd-webforms="https://webforms.pipedrive.com/f/bXCZRhnEATSSg8AiaLHNw1Fkti3HRSJNU7pWyVOxhoYkm92ZdiQQcGzHw83hVqKg5J">
+						<script src="https://webforms.pipedrive.com/f/loader"></script>
+					</div>
+				</div>
+			</div>
+		</section>
 	</div>
 </template>
 <script>
 export default {
-  name: "Franchise",
-  head() {
-    return {
-      title: "Non-Disclosure Agreement",
-    };
-  },
-};
+	name: 'Franchise',
+	head() {
+		return {
+			title: 'Non-Disclosure Agreement',
+		}
+	},
+}
 </script>

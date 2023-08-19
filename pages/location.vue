@@ -1,9 +1,8 @@
 <template>
-  <div id="locationPage" class="overflow-hidden">
-    <Header />
+	<div id="locationPage" class="overflow-hidden">
+		<Header />
 
-
-    <SectionsContact/>
-    <Footer />
-  </div>
+		<SectionsContact />
+		<Footer />
+	</div>
 </template>
