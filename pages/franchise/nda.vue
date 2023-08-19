@@ -1,6 +1,6 @@
 <template>
 	<div class="bg-gray-400 font-neo-sans">
-		<section class="bg-gray-800 text-white text-sm py-4">
+		<section class="bg-gray-800 py-4 text-sm text-white">
 			<div class="container mx-auto">
 				<div class="grid">
 					<div class="px-8">
@@ -11,7 +11,7 @@
 		</section>
 
 		<section class="bg-gradient-to-tr from-emerald-400 to-brand-first py-6">
-			<div class="container mx-auto text-center items-center justify-center">
+			<div class="container mx-auto items-center justify-center text-center">
 				<div class="grid">
 					<div class="px-8">
 						<NuxtLink class="flex items-start" to="/"><img src="~assets/images/logo.png" alt="" class="h-12 lg:h-20" /></NuxtLink>
@@ -20,7 +20,7 @@
 			</div>
 		</section>
 
-		<section class="bg-white text-black text-thin">
+		<section class="text-thin bg-white text-black">
 			<div class="container mx-auto">
 				<div class="grid grid-cols-1">
 					<div class="p-8 font-bold uppercase">
@@ -28,16 +28,16 @@
 						<p>NON-DISCLOSURE AGREEMENT</p>
 						<!-- First Section -->
 					</div>
-					<div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-						<div class="p-8 space-y-8">
+					<div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
+						<div class="space-y-8 p-8">
 							<div class="space-y-4">
-								<h4 class="font-bold text-lg">THIS AGREEMENT (the NDA) is entered into between:</h4>
+								<h4 class="text-lg font-bold">THIS AGREEMENT (the NDA) is entered into between:</h4>
 								<p>(1) Burooj Air, a private limited company incorporated under the laws of Saudi Arabia whose registered office is at PRINCE TURKI ST, KHOBAR, SAUDI ARABIA; and <br /></p>
 								<p>(2) The visitor to this page and recipient of information of the Burooj Air (the Recipient). together referred to as the Parties and each as a Party to this NDA.</p>
 							</div>
 
 							<div class="space-y-4">
-								<h4 class="font-bold text-xl">BACKGROUND</h4>
+								<h4 class="text-xl font-bold">BACKGROUND</h4>
 								<p>
 									(A) The Company has developed a technology for utilizing drones in the cleaning industry and is contemplating a collaboration (the Collaboration) with the Recipient. The Company has therefore invited the Recipient to discuss the possibility of a distribution or resale agreement between the Parties. The Recipient will in connection with such discussions be invited to a demonstration of the drone technology. Furthermore, the Recipient will be provided with
 									certain Confidential Information (as defined in clause 1.1).
@@ -47,8 +47,8 @@
 							</div>
 
 							<div class="space-y-4">
-								<h4 class="font-bold text-xl">AGREED TERMS</h4>
-								<h5 class="font-bold text-lg">1 Confidentiality</h5>
+								<h4 class="text-xl font-bold">AGREED TERMS</h4>
+								<h5 class="text-lg font-bold">1 Confidentiality</h5>
 								<p>
 									1.1 For the purpose of this NDA, Confidential Information shall mean all information (however recorded or preserved) which is or has been, either directly or indirectly, disclosed or made available to the Recipient (in any form or medium), in connection with the demonstration of the drone technology and Recipient considering the Collaboration, and shall also include any and all information regarding the existence, nature or progress of any discussions between
 									the Parties relating to the possible Collaboration, including the demonstration of the drone technology.
@@ -61,12 +61,12 @@
 								</p>
 							</div>
 							<div class="space-y-4">
-								<h5 class="font-bold text-lg">2 Use of the Confidential Information – Approved Purpose</h5>
+								<h5 class="text-lg font-bold">2 Use of the Confidential Information – Approved Purpose</h5>
 								<p>The Recipient shall not use, directly or indirectly, any Confidential Information for any other purpose whatsoever other than evaluating, preparing for, negotiating and carrying out the Collaboration <b>(Approved Purpose)</b>. The Recipient must not profit from the use of the Confidential Information, except in respect of the Approved Purpose.</p>
 							</div>
 
 							<div class="space-y-4">
-								<h5 class="font-bold text-lg">3 Storing and return of the Confidential Information</h5>
+								<h5 class="text-lg font-bold">3 Storing and return of the Confidential Information</h5>
 								<p>3.1 The Recipient and its Representatives shall keep all the received written and electronic Confidential Information in a secure manner. The same applies to written and electronic material containing excerpts from or references to Confidential Information, including the Recipient’s own notes and documents regarding the Company and/or the Collaboration.</p>
 								<p>3.2 The Recipient shall at its own expense, within five days of receipt of a written notification from the Company:</p>
 								<p>(a) return or destroy all written Confidential Information provided to the Recipient or its Representatives without keeping any copies;</p>
@@ -74,9 +74,9 @@
 								<p>(c) delete or cause the deletion of all Confidential Information from any computer or other device in the possession or under the control of the Recipient or its Representatives; and</p>
 							</div>
 						</div>
-						<div class="p-8 space-y-8">
+						<div class="space-y-8 p-8">
 							<div class="space-y-4">
-								<h5 class="font-bold text-lg">4 Non-competition, non-solicitation and non-recruitment</h5>
+								<h5 class="text-lg font-bold">4 Non-competition, non-solicitation and non-recruitment</h5>
 								<p>4.1 During the duration of this Agreement, the Recipient will not, and will ensure that the Recipient do not, without the prior written consent of the Company, either directly or indirectly become involved or participate in any capacity in any business, activities, decisions, operations, undertakings or concerns which, in the reasonable opinion of the Company:<br /></p>
 								<p>(a) conflict, or appear to conflict, with the interests of the Company; and<br /></p>
 								<p>(b) are in competition with, or are of a similar nature to, the activities of the Company <br /></p>
@@ -96,7 +96,7 @@
 			</div>
 		</section>
 
-		<section class="bg-white text-black text-thin">
+		<section class="text-thin bg-white text-black">
 			<div class="container mx-auto">
 				<div class="grid">
 					<div class="pipedriveWebForms p-8" data-pd-webforms="https://webforms.pipedrive.com/f/bXCZRhnEATSSg8AiaLHNw1Fkti3HRSJNU7pWyVOxhoYkm92ZdiQQcGzHw83hVqKg5J">

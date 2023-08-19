@@ -1,13 +1,13 @@
 <template>
-	<section class="bg-white text-gray-800 py-16 lg:py-32 font-neo-sans">
+	<section class="bg-white py-16 font-neo-sans text-gray-800 lg:py-32">
 		<div class="container mx-auto">
 			<div class="grid grid-cols-1">
 				<div class="p-8">
-					<h3 class="text-3xl lg:text-6xl font-bold uppercase">
+					<h3 class="text-3xl font-bold uppercase lg:text-6xl">
 						{{ $t('GET_INVOLVED_AND_BECOME_PARTNER') }}
 					</h3>
 				</div>
-				<div class="p-8 text-lg space-y-8">
+				<div class="space-y-8 p-8 text-lg">
 					<p>
 						<strong>{{ $t('WE_ARE_SEEKING_INTERSET_FOR_COUNTRY_PARTNERS') }}</strong>
 					</p>
@@ -26,7 +26,7 @@
 				</div>
 			</div>
 			<div class="p-8">
-				<NuxtLink to="/franchise/nda" class="whitespace-nowrap py-3 px-4 bg-brand-second rounded-lg hover:bg-brand-first text-white no-underline">
+				<NuxtLink to="/franchise/nda" class="whitespace-nowrap rounded-lg bg-brand-second px-4 py-3 text-white no-underline hover:bg-brand-first">
 					<span>{{ $t('NDA_BUTTON') }}</span>
 				</NuxtLink>
 			</div>
