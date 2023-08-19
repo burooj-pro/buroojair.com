@@ -1,5 +1,5 @@
 <template>
-	<footer class="py-8 font-neo-sans text-white bg-brand-first">
+	<footer class="bg-brand-first py-8 font-neo-sans text-white">
 		<div class="container mx-auto">
 			<div class="lg:flex lg:items-center lg:justify-between">
 				<div class="text-center lg:!text-left">

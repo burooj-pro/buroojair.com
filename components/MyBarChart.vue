@@ -1,6 +1,6 @@
 <template>
-	<div class="p-2 bg-white rounded-lg shadow-md text-black">
-		<label class="block mb-2 font-bold"> Drone Market Size & Forecast 2020-2025 </label>
+	<div class="rounded-lg bg-white p-2 text-black shadow-md">
+		<label class="mb-2 block font-bold"> Drone Market Size & Forecast 2020-2025 </label>
 
 		<div class="font-thin">
 			<BarChart :options="chartOptions" :data="chartData" />

@@ -1,5 +1,5 @@
 <template>
-	<div class="absolute top-0 w-full h-full bg-blend-darken" :class="jointClasses"></div>
+	<div class="absolute top-0 h-full w-full bg-blend-darken" :class="jointClasses"></div>
 </template>
 
 <script>

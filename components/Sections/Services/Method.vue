@@ -1,11 +1,11 @@
 <template>
-	<section id="servicesMethod" class="method bg-gray-900 text-white py-12 lg:py-60 font-normal">
+	<section id="servicesMethod" class="method bg-gray-900 py-12 font-normal text-white lg:py-60">
 		<div class="container mx-auto">
 			<div class="grid grid-cols-1 lg:grid-cols-2">
 				<div class="p-8">
-					<h2 class="text-2xl lg:text-4xl font-bold">{{ $t('FOR_FACADE_AND_WINDOW_CLEANING_WE_USE_MULTIPLE_METHODS') }}</h2>
+					<h2 class="text-2xl font-bold lg:text-4xl">{{ $t('FOR_FACADE_AND_WINDOW_CLEANING_WE_USE_MULTIPLE_METHODS') }}</h2>
 				</div>
-				<div class="p-8 col-lg-6">
+				<div class="col-lg-6 p-8">
 					<ol class="list-decimal">
 						<li>{{ $t('IF_THE_FACADE_IS_TRADITIONALLY_DIRTY_THE_DRONE') }}<br /><br /></li>
 						<li>

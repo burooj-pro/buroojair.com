@@ -1,6 +1,6 @@
 <template>
-	<section class="font-neo-sans relative">
-		<div class="bg-emerald-600 text-white py-56 relative">
+	<section class="relative font-neo-sans">
+		<div class="relative bg-emerald-600 py-56 text-white">
 			<div class="container mx-auto p-0">
 				<div class="grid grid-cols-1 lg:grid-cols-2">
 					<div class="p-8 text-4xl uppercase">

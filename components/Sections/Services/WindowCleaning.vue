@@ -1,11 +1,11 @@
 <template>
-	<section class="font-neo-sans bg-emerald-600 text-white py-16 lg:py-32">
+	<section class="bg-emerald-600 py-16 font-neo-sans text-white lg:py-32">
 		<div class="container mx-auto">
 			<div class="grid grid-cols-1 lg:grid-cols-2">
 				<div class="p-8">
-					<h3 class="text-2xl lg:text-4xl font-bold mb-6 uppercase">
+					<h3 class="mb-6 text-2xl font-bold uppercase lg:text-4xl">
 						{{ $t('SERVICES') }}
-						<small class="font-thin block">{{ $t('HIGH_RISE_WINDOW_AND_FACADE_CLEANING') }}</small>
+						<small class="block font-thin">{{ $t('HIGH_RISE_WINDOW_AND_FACADE_CLEANING') }}</small>
 					</h3>
 
 					<div class="video-holder">
@@ -13,8 +13,8 @@
 					</div>
 				</div>
 
-				<div class="p-8 space-y-8">
-					<h5 class="uppercase text-xl lg:text-3xl font-bold">{{ $t('WINDOW_CLEANING') }}</h5>
+				<div class="space-y-8 p-8">
+					<h5 class="text-xl font-bold uppercase lg:text-3xl">{{ $t('WINDOW_CLEANING') }}</h5>
 					<p class="font-semibold">{{ $t('HIGH_RISE_COMMERICAL_WINDOW_CLEANING') }}</p>
 					<p>{{ $t('MODERN_DAY_BUILDINGS_INCLUDING') }}</p>
 					<p>

@@ -1,13 +1,13 @@
 <template>
-	<section class="bg-white text-gray-700 py-12 lg:py-24 font-neo-sans">
+	<section class="bg-white py-12 font-neo-sans text-gray-700 lg:py-24">
 		<div class="container mx-auto">
 			<div class="grid grid-cols-1 lg:grid-cols-2">
 				<div class="p-8 lg:order-2">
-					<h3 class="text-2xl lg:text-4xl font-bold uppercase">{{ $t('ADVANTAGES_OF_GLASS_AND_FACADE_CLEANING_WITH_BUROOJ_AIR_DRONE') }}</h3>
+					<h3 class="text-2xl font-bold uppercase lg:text-4xl">{{ $t('ADVANTAGES_OF_GLASS_AND_FACADE_CLEANING_WITH_BUROOJ_AIR_DRONE') }}</h3>
 				</div>
-				<div class="p-8 lg:order-1 grid grid-cols-1 lg:grid-cols-2">
+				<div class="grid grid-cols-1 p-8 lg:order-1 lg:grid-cols-2">
 					<div class="space-y-4">
-						<h4 class="text-lg lg:text-2xl font-bold uppercase">{{ $t('IMPORTANT_KEY_FACTS') }}</h4>
+						<h4 class="text-lg font-bold uppercase lg:text-2xl">{{ $t('IMPORTANT_KEY_FACTS') }}</h4>
 						<p>
 							<strong>1000 {{ $t('SQM_HOUR') }}</strong
 							><br />{{ $t('CAPACITY_FACADE_CLEANING') }}
