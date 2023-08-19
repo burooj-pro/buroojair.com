@@ -16,23 +16,23 @@
 		<section class="py-12 lg:py-24">
 			<div class="container mx-auto">
 				<div class="p-8 space-y-6">
-					<h3 class="text-xl lg:text-3xl font-bold">{{ $t("BUROOJ_AIR_HEADQUARTERS") }}</h3>
-					<p>{{ $t("KHOBAR_SAUDI_ARABIA") }}</p>
+					<h3 class="text-xl lg:text-3xl font-bold">{{ $t('BUROOJ_AIR_HEADQUARTERS') }}</h3>
+					<p>{{ $t('KHOBAR_SAUDI_ARABIA') }}</p>
 					<p>
-						<strong>{{ $t("GENERAL_INQUIRY") }}:</strong><br />contact@buroojair.com
+						<strong>{{ $t('GENERAL_INQUIRY') }}:</strong><br />contact@buroojair.com
 					</p>
 					<p>
-						<strong>{{ $t("OFFICE_HOURS") }}:</strong><br />{{ $t("SUNDAY_TO_THURSDAY_08_00_AM_TO_5_00_PM") }}
+						<strong>{{ $t('OFFICE_HOURS') }}:</strong><br />{{ $t('SUNDAY_TO_THURSDAY_08_00_AM_TO_5_00_PM') }}
 					</p>
 					<p>
-						<strong>{{ $t("ADDRESS") }}:</strong>
+						<strong>{{ $t('ADDRESS') }}:</strong>
 						<br />
-						<strong>{{ $t("BUROOJ_AIR") }}</strong>
+						<strong>{{ $t('BUROOJ_AIR') }}</strong>
 						<br />
-						{{ $t("KHOBAR_SAUDI_ARABIA") }}
+						{{ $t('KHOBAR_SAUDI_ARABIA') }}
 					</p>
 					<p>
-						<strong>{{ $t("PHONE") }}:</strong>
+						<strong>{{ $t('PHONE') }}:</strong>
 						<br />
 						+966566639994
 					</p>
@@ -41,25 +41,25 @@
 		</section>
 
 		<SectionsContact />
-		
+
 		<Footer />
 	</div>
 </template>
 
 <script>
 export default {
-	name: "CONTACT",
+	name: 'CONTACT',
 	head() {
 		return {
-			title: this.$t("CONTACT"),
+			title: this.$t('CONTACT'),
 			meta: [
 				{
-					hid: "description",
-					name: "description",
-					content: "We aim to contribute to a safer work day for people who work at great heights with lifts, scaffolding and for facade climbers.",
+					hid: 'description',
+					name: 'description',
+					content: 'We aim to contribute to a safer work day for people who work at great heights with lifts, scaffolding and for facade climbers.',
 				},
 			],
-		};
+		}
 	},
-};
+}
 </script>

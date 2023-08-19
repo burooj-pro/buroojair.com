@@ -1,11 +1,10 @@
 <template>
-  <div class="overflow-hidden">
-    <Header />
-    <!-- NEWS SECTION -->
-    <SectionsNews/>
+	<div class="overflow-hidden">
+		<Header />
+		<!-- NEWS SECTION -->
+		<SectionsNews />
 
-    <SectionsContact/>
-    <Footer />
-  </div>
+		<SectionsContact />
+		<Footer />
+	</div>
 </template>
-

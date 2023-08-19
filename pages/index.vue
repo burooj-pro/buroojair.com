@@ -25,7 +25,7 @@
 
 		<!-- INTENTION SECTION -->
 		<SectionsIntention />
-		
+
 		<!-- ABOUT US SECTION -->
 		<SectionsAboutUs />
 
@@ -59,18 +59,18 @@
 
 <script>
 export default {
-	name: "HOME",
+	name: 'HOME',
 	head() {
 		return {
 			title: `Home`,
 			meta: [
 				{
-					hid: "description",
-					name: "description",
-					content: "We aim to contribute to a safer work day for people who work at great heights with lifts, scaffolding and for facade climbers.",
+					hid: 'description',
+					name: 'description',
+					content: 'We aim to contribute to a safer work day for people who work at great heights with lifts, scaffolding and for facade climbers.',
 				},
 			],
-		};
+		}
 	},
-};
+}
 </script>

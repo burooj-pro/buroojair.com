@@ -1,10 +1,10 @@
-@import "_fonts.scss";
-@import "bootstrap-icons/font/bootstrap-icons.css";
+@import '_fonts.scss';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html{
-    font-size: 18px;
+html {
+	font-size: 18px;
 }

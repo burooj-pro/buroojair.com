@@ -12,64 +12,62 @@
 
 <script>
 export default {
-	
-  mounted() {
-    
-  },
+	mounted() {},
 	computed: {
 		chartOptions() {
-  return {
-    responsive: true,
-    maintainAspectRatio: false,
-    legend: {
-      display: false,
-    },
-    plugins: {
-      legend: {
-        labels: {
-          font: {
-            size: 14,
-            family: 'NeoSans', // Set the font family
-            weight: '100' // Set the font weight to thin
-          },
-        },
-      },
-    },
-    scales: { // Apply the same changes to the scales for the axes
-      x: {
-        ticks: {
-          font: {
-            family: 'NeoSans',
-            weight: '100'
-          }
-        }
-      },
-      y: {
-        ticks: {
-          font: {
-            family: 'NeoSans',
-            weight: '100'
-          }
-        }
-      }
-    }
-  };
-},
+			return {
+				responsive: true,
+				maintainAspectRatio: false,
+				legend: {
+					display: false,
+				},
+				plugins: {
+					legend: {
+						labels: {
+							font: {
+								size: 14,
+								family: 'NeoSans', // Set the font family
+								weight: '100', // Set the font weight to thin
+							},
+						},
+					},
+				},
+				scales: {
+					// Apply the same changes to the scales for the axes
+					x: {
+						ticks: {
+							font: {
+								family: 'NeoSans',
+								weight: '100',
+							},
+						},
+					},
+					y: {
+						ticks: {
+							font: {
+								family: 'NeoSans',
+								weight: '100',
+							},
+						},
+					},
+				},
+			}
+		},
 
 		chartData() {
 			return {
 				labels: [2019, 2020, 2021, 2022, 2023, 2024, 2025],
 				datasets: [
 					{
-						label: "$ Billion ",
+						label: '$ Billion ',
 						data: [18, 22, 28, 33, 37, 40, 43],
-						backgroundColor: "rgba(52, 55, 255, 0.3)",
-						borderColor: "rgba(52, 55, 255, 1)",
+						backgroundColor: 'rgba(52, 55, 255, 0.3)',
+						borderColor: 'rgba(52, 55, 255, 1)',
 						borderWidth: 2,
 					},
 				],
-			};
+			}
 		},
 	},
-};
+}
 </script>

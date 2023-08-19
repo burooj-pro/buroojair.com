@@ -1,34 +1,34 @@
 <template>
-  <div id="franchisePage" class="overflow-hidden">
-    <Header disableSpacer="true" />
+	<div id="franchisePage" class="overflow-hidden">
+		<Header disableSpacer="true" />
 
-    <!-- BANNER SECTION -->
-    <SectionsFranchiseAbout />
-    
-    <!-- INTENTION SECTION -->
-    <SectionsIntention />
+		<!-- BANNER SECTION -->
+		<SectionsFranchiseAbout />
 
-    <!-- FRANCHISE OPPORTUNITY SECTION -->
-    <SectionsFranchiseOpportunity />
+		<!-- INTENTION SECTION -->
+		<SectionsIntention />
 
-    <!-- FRANCHISE FAMILY SECTION -->
-    <SectionsFranchiseFamily />
-    
-    <!-- FRANCHISE JOIN US SECTION -->
-    <SectionsFranchiseJoinUs />
+		<!-- FRANCHISE OPPORTUNITY SECTION -->
+		<SectionsFranchiseOpportunity />
 
-    <!-- FOOTER SECTION -->
-    <Footer />
-  </div>
+		<!-- FRANCHISE FAMILY SECTION -->
+		<SectionsFranchiseFamily />
+
+		<!-- FRANCHISE JOIN US SECTION -->
+		<SectionsFranchiseJoinUs />
+
+		<!-- FOOTER SECTION -->
+		<Footer />
+	</div>
 </template>
 
 <script>
 export default {
-  name: "Franchise",
-  head() {
-    return {
-      title: this.$t("FRANCHISE"),
-    };
-  },
-};
+	name: 'Franchise',
+	head() {
+		return {
+			title: this.$t('FRANCHISE'),
+		}
+	},
+}
 </script>

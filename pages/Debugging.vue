@@ -2,17 +2,17 @@
 	<div class="overflow-hidden">
 		<Header />
 
-        <SectionsEstimatedFuture />
+		<SectionsEstimatedFuture />
 
-        <SectionsPopulated />
+		<SectionsPopulated />
 
-        <SectionsWorkingGrowth />
+		<SectionsWorkingGrowth />
 
-        <SectionsFamily />
+		<SectionsFamily />
 
-        <SectionsWorkStand />
+		<SectionsWorkStand />
 
-        <SectionsServicesWindowCleaning />
+		<SectionsServicesWindowCleaning />
 
 		<!-- Contact Section -->
 		<SectionsContact />
@@ -28,12 +28,12 @@ export default {
 			title: `Debugging`,
 			meta: [
 				{
-					hid: "description",
-					name: "description",
-					content: "We aim to contribute to a safer work day for people who work at great heights with lifts, scaffolding and for facade climbers.",
+					hid: 'description',
+					name: 'description',
+					content: 'We aim to contribute to a safer work day for people who work at great heights with lifts, scaffolding and for facade climbers.',
 				},
 			],
-		};
+		}
 	},
-};
+}
 </script>

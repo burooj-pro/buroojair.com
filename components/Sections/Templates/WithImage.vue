@@ -6,21 +6,21 @@
 			</div>
 		</div>
 		<div class="relative">
-            <img :src="image" class="w-full object-cover lg:h-full" :class="imageLocation == 'left' ? 'order-1' : ''" />
-            <SectionsTemplatesOverlay classColor="bg-black" classOpacity="bg-opacity-50" />
-            <div v-if="$slots.imageText" class="absolute w-full h-full inset-0 top-0 flex items-center justify-center text-white">
-                <slot name="imageText" />
-            </div>
-        </div>
+			<img :src="image" class="w-full object-cover lg:h-full" :class="imageLocation == 'left' ? 'order-1' : ''" />
+			<SectionsTemplatesOverlay classColor="bg-black" classOpacity="bg-opacity-50" />
+			<div v-if="$slots.imageText" class="absolute w-full h-full inset-0 top-0 flex items-center justify-center text-white">
+				<slot name="imageText" />
+			</div>
+		</div>
 	</section>
 </template>
 <script>
 export default {
-	props: ["image", "imageLocation", "sectionClass"],
-    mounted() {
-        if (this.sectionClass) {
-            console.log(this.sectionClass);
-        }
-    },
-};
+	props: ['image', 'imageLocation', 'sectionClass'],
+	mounted() {
+		if (this.sectionClass) {
+			console.log(this.sectionClass)
+		}
+	},
+}
 </script>

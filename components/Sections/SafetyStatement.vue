@@ -1,5 +1,5 @@
 <template>
-    <!-- <section class="safety-statement-section">
+	<!-- <section class="safety-statement-section">
       <div class="container mx-auto">
         <div class="row">
           <div class="col-md-7">

@@ -13,32 +13,27 @@
 							</svg>
 						</button>
 						<div class="hidden w-full lg:block lg:w-auto" id="navbar-default">
-							<ul class="
-							font-medium text-center 
-							flex flex-col gap-5 lg:gap-3 
-							lg:flex-row lg:space-x-8
-							p-4 lg:p-0 mt-4 lg:mt-0
-							">
+							<ul class="font-medium text-center flex flex-col gap-5 lg:gap-3 lg:flex-row lg:space-x-8 p-4 lg:p-0 mt-4 lg:mt-0">
 								<li>
-									<NuxtLink aria-current="page" class="block no-underline text-white" to="/">{{ $t("HOME") }}</NuxtLink>
+									<NuxtLink aria-current="page" class="block no-underline text-white" to="/">{{ $t('HOME') }}</NuxtLink>
 								</li>
 								<li>
-									<NuxtLink class="block no-underline text-white" to="/services">{{ $t("SERVICES") }}</NuxtLink>
+									<NuxtLink class="block no-underline text-white" to="/services">{{ $t('SERVICES') }}</NuxtLink>
 								</li>
 								<li>
-									<NuxtLink class="block no-underline text-white" to="/gallery">{{ $t("GALLERY") }}</NuxtLink>
+									<NuxtLink class="block no-underline text-white" to="/gallery">{{ $t('GALLERY') }}</NuxtLink>
 								</li>
 								<li>
-									<NuxtLink class="block no-underline text-white" to="/about-us">{{ $t("ABOUT_US") }}</NuxtLink>
+									<NuxtLink class="block no-underline text-white" to="/about-us">{{ $t('ABOUT_US') }}</NuxtLink>
 								</li>
 								<li>
-									<NuxtLink class="block no-underline text-white" to="/contact">{{ $t("CONTACT") }}</NuxtLink>
+									<NuxtLink class="block no-underline text-white" to="/contact">{{ $t('CONTACT') }}</NuxtLink>
 								</li>
 								<li @click="onChangeLanguage()">
-									<span role="button" class="block no-underline text-white hover:text-violet-500">{{ $t("LANGUAGE") }}</span>
+									<span role="button" class="block no-underline text-white hover:text-violet-500">{{ $t('LANGUAGE') }}</span>
 								</li>
 								<li>
-									<NuxtLink class="whitespace-nowrap py-3 px-4 bg-brand-second rounded-lg hover:bg-brand-first text-white no-underline" to="/franchise">{{ $t("BECOME_A_PARTNER") }}</NuxtLink>
+									<NuxtLink class="whitespace-nowrap py-3 px-4 bg-brand-second rounded-lg hover:bg-brand-first text-white no-underline" to="/franchise">{{ $t('BECOME_A_PARTNER') }}</NuxtLink>
 								</li>
 							</ul>
 						</div>
@@ -47,7 +42,7 @@
 			</div>
 		</div>
 
-		<div v-if="!disableSpacer" class="relative w-full hidden lg:block" :class="{  }">
+		<div v-if="!disableSpacer" class="relative w-full hidden lg:block" :class="{}">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" class="h-12 block translate-x-0 w-full">
 				<path class="fill-gray-900 opacity-90" d="M761.9,44.1L643.1,27.2L333.8,98L0,3.8V0l1000,0v3.9" fill="#212121"></path>
 			</svg>
@@ -60,17 +55,17 @@ export default {
 	props: ['disableSpacer'],
 	data() {
 		return {
-			language: this.$i18n.locale ?? "ar",
-		};
+			language: this.$i18n.locale ?? 'ar',
+		}
 	},
 	methods: {
 		onChangeLanguage() {
 			if (this.$i18n) {
-				const lan = this.language === "en" ? "ar" : "en";
-				window.localStorage.setItem("language", lan);
-				this.$i18n.setLocale(lan);
+				const lan = this.language === 'en' ? 'ar' : 'en'
+				window.localStorage.setItem('language', lan)
+				this.$i18n.setLocale(lan)
 			}
 		},
 	},
-};
+}
 </script>
