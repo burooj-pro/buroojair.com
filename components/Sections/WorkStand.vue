@@ -3,7 +3,7 @@
 		<div class="container mx-auto">
 			<div class="grid grid-cols-1 lg:grid-cols-2">
 				<div class="p-8">
-					<h3 class="text-2xl font-bold lg:text-4xl">SETTING THE STANDARD FOR WORKING DRONES</h3>
+					<h3 class="text-2xl font-bold lg:text-4xl">SETTING THE STANDARD FOR WORKING DRONE</h3>
 				</div>
 				<div class="space-y-8 p-8">
 					<p class="text-lg font-semibold">BUROOJ AIR Working Drone evolved out of BUROOJ AIR Group. BUROOJ AIR Group was founded in 1992 by Kennet Nilsen. BUROOJ AIR Group have more than 30 years experience with facade and window cleaning and are experts in their field.</p>
