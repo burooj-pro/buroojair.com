@@ -4,7 +4,7 @@
 			<div class="container mx-auto">
 				<div class="grid">
 					<div class="px-8">
-						<p>BUROOJ AIR - Franchise NDA Form</p>
+						<p>	{{ $t('BUROOJ_AIR_NDA_FORM') }}</p>
 					</div>
 				</div>
 			</div>
@@ -24,73 +24,134 @@
 			<div class="container mx-auto">
 				<div class="grid grid-cols-1">
 					<div class="p-8 font-bold uppercase">
-						<h3 class="text-2xl">Franchise model Burooj AIR</h3>
-						<p>NON-DISCLOSURE AGREEMENT</p>
+						<h3 class="text-2xl"> {{ $t('FRANCHISE_MODEL') }}</h3>
+						<p> {{ $t('NDA_AGREEMENT') }}</p>
 						<!-- First Section -->
 					</div>
 					<div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
 						<div class="space-y-8 p-8">
 							<div class="space-y-4">
-								<h4 class="text-lg font-bold">THIS AGREEMENT (the NDA) is entered into between:</h4>
-								<p>(1) Burooj Air, a private limited company incorporated under the laws of Saudi Arabia whose registered office is at PRINCE TURKI ST, KHOBAR, SAUDI ARABIA; and <br /></p>
-								<p>(2) The visitor to this page and recipient of information of the Burooj Air (the Recipient). together referred to as the Parties and each as a Party to this NDA.</p>
+								<h4 class="text-lg font-bold">{{ $t('THIS_AGREEMENT_NDA_IS_ENTERED') }}</h4>
+								<p>{{ $t('BUROOJ_PRIVATE_LIMITED_COMPANY') }} <br /></p>
+								<p>{{ $t('THE_VISITOR_TO_THIS_PAGE') }}</p>
 							</div>
 
 							<div class="space-y-4">
-								<h4 class="text-xl font-bold">BACKGROUND</h4>
+								<h4 class="text-xl font-bold"> {{ $t('BACKGROUND') }}</h4>
 								<p>
-									(A) The Company has developed a technology for utilizing drones in the cleaning industry and is contemplating a collaboration (the Collaboration) with the Recipient. The Company has therefore invited the Recipient to discuss the possibility of a distribution or resale agreement between the Parties. The Recipient will in connection with such discussions be invited to a demonstration of the drone technology. Furthermore, the Recipient will be provided with
-									certain Confidential Information (as defined in clause 1.1).
+									{{ $t('THE_COMPANY_HAS_DEVELOPED') }}
 								</p>
-								<p>(B) This NDA sets out the terms and conditions agreed between the Parties in relation to the provision of such Confidential Information by the Company to the Recipient.</p>
-								<p>(C) The Confidential Information provided from the Company to the Recipient will be provided on a non-exclusive basis, and this NDA does not restrict the Company to give the same Confidential Information to any other entities.</p>
+								<p>{{ $t('THIS_NDA_SETS_OUT') }}</p>
+								<p> {{ $t('THE_CONFIDENTIAL_INFORMATION') }}</p>
 							</div>
 
 							<div class="space-y-4">
-								<h4 class="text-xl font-bold">AGREED TERMS</h4>
-								<h5 class="text-lg font-bold">1 Confidentiality</h5>
+								<h4 class="text-xl font-bold"> {{ $t('AGREED_TERMS') }}</h4>
+								<h5 class="text-lg font-bold"> {{ $t('CONFIDENTIALITY') }}</h5>
 								<p>
-									1.1 For the purpose of this NDA, Confidential Information shall mean all information (however recorded or preserved) which is or has been, either directly or indirectly, disclosed or made available to the Recipient (in any form or medium), in connection with the demonstration of the drone technology and Recipient considering the Collaboration, and shall also include any and all information regarding the existence, nature or progress of any discussions between
-									the Parties relating to the possible Collaboration, including the demonstration of the drone technology.
+									{{ $t('FOR_THE_PURPOSE_OF_THIS_NDA') }}
 								</p>
-								<p>1.2 The Recipient shall keep all Confidential Information strictly confidential and shall not disclose any Confidential Information to any third party.</p>
-								<p>1.3 The Recipient may disclose Confidential Information only when so required by law or any court of competent jurisdiction, provided that the Company is given due notice prior to such disclosure.</p>
+								<p>{{ $t('THE_RECIPIENT_SHALL_KEEP') }} </p>
+								<p>{{ $t('THE_RECIPIENT_MAY_DISCLOSE_CONFIDENTIAL_INFORMATION') }}</p>
 								<p>
-									1.4 The Recipient may disclose such Confidential Information as may be necessary to such of its directors, officers, employees, and advisors<b> (the Representatives)</b> when strictly necessary to enable the Recipient to evaluate, prepare for, negotiate and carry out the Collaboration. Prior to any such disclosure of Confidential Information, the Recipient shall ensure that each such Representative is made aware of and agrees to observe the obligations
-									contained herein. The Recipient may not disclose Confidential Information to any other physical or legal person except if agreed in writing by the Company.
+									{{ $t('THE_RECIPIENT_MAY_DISCLOSE_SUCH_CONFIDENTIAL_INFORMATION') }}
+
+								</p>
+									<p>
+									{{ $t('THE_FORGOTTEN_OBLIGATION') }}
+
+								</p>
+										<p>
+									{{ $t('WHICH_IS_ALREADY_KNOWN') }}
+
+								</p>
+										<p>
+									{{ $t('WHICH_THE_RECIEPENT') }}
+
+								</p>
+											<p>
+									{{ $t('WHICH_THE_RECIEPENT_CAN_PROVE') }}
+
+								</p>
+											<p>
+									{{ $t('WHICH_THE_RECIEPENT_CAN_PROVE_HAS_BEEN_DEVELOPED') }}
+
+								</p>
+												<p>
+									{{ $t('THE_RECIPIENT_ACKNOWLEDGS') }}
+
 								</p>
 							</div>
 							<div class="space-y-4">
-								<h5 class="text-lg font-bold">2 Use of the Confidential Information – Approved Purpose</h5>
-								<p>The Recipient shall not use, directly or indirectly, any Confidential Information for any other purpose whatsoever other than evaluating, preparing for, negotiating and carrying out the Collaboration <b>(Approved Purpose)</b>. The Recipient must not profit from the use of the Confidential Information, except in respect of the Approved Purpose.</p>
+								<h5 class="text-lg font-bold"> {{ $t('USE_OF_THE_CONFIDENTIAL_INFORMATION') }}</h5>
+								<p>{{ $t('THE_RECIPIENT_SHALL_NOT_USE') }}</p>
 							</div>
 
 							<div class="space-y-4">
-								<h5 class="text-lg font-bold">3 Storing and return of the Confidential Information</h5>
-								<p>3.1 The Recipient and its Representatives shall keep all the received written and electronic Confidential Information in a secure manner. The same applies to written and electronic material containing excerpts from or references to Confidential Information, including the Recipient’s own notes and documents regarding the Company and/or the Collaboration.</p>
-								<p>3.2 The Recipient shall at its own expense, within five days of receipt of a written notification from the Company:</p>
-								<p>(a) return or destroy all written Confidential Information provided to the Recipient or its Representatives without keeping any copies;</p>
-								<p>(b) destroy all analyses, notes or other documents prepared by the Recipient or its Representatives which contain or otherwise reflect Confidential Information;</p>
-								<p>(c) delete or cause the deletion of all Confidential Information from any computer or other device in the possession or under the control of the Recipient or its Representatives; and</p>
+								<h5 class="text-lg font-bold">{{ $t('STORING_AND_RETURN_CONFIDENTIAL_INFORMATION') }}</h5>
+								<p>{{ $t('THE_RECIPIENT_AND_ITS_REPRESENTATIVES') }} </p>
+								<p>{{ $t('THE_RECIPIENT_SHALL_AT_ITS_OWN_EXPENSE') }}</p>
+								<p>{{ $t('RETURN_OR_DESTROY_ALL_WRITTEN') }}</p>
+								<p>{{ $t('DESTROY_ALL_ANALYSES') }} </p>
+								<p>{{ $t('DELETE_ORCAUSE_THE_DELETION') }}</p>
+								<p>{{ $t('ON_REQUEST_CONFIRM') }}</p>
 							</div>
 						</div>
 						<div class="space-y-8 p-8">
 							<div class="space-y-4">
-								<h5 class="text-lg font-bold">4 Non-competition, non-solicitation and non-recruitment</h5>
-								<p>4.1 During the duration of this Agreement, the Recipient will not, and will ensure that the Recipient do not, without the prior written consent of the Company, either directly or indirectly become involved or participate in any capacity in any business, activities, decisions, operations, undertakings or concerns which, in the reasonable opinion of the Company:<br /></p>
-								<p>(a) conflict, or appear to conflict, with the interests of the Company; and<br /></p>
-								<p>(b) are in competition with, or are of a similar nature to, the activities of the Company <br /></p>
-								<p>4.2 In connection with the Recipient considering the Collaboration, the Recipient and its Representatives shall not contact any of the Company’s employees, suppliers or customers without the Company’s prior written consent.<br /></p>
-								<p>4.3 The Recipient shall not solicit or entice or endeavour to solicit or entice any existing supplier, customer or other contract or trading party of the Company to terminate or alter their business relationship with the Company. This clause 4.3 shall remain in force during the negotiations regarding the Collaboration and for 12 months after the termination of such negotiations if the negotiations are not successful.</p>
-								<p>4.4 The Recipient shall not solicit or entice or endeavour to solicit or entice any directors, employees or other representatives of the Company, or consultants delivering services to the Company, to leave their current employment. This clause shall remain in force during the negotiations regarding the Collaboration and for 12 months after the termination of such negotiations if the negotiations are not successful.<br /></p>
-								<p>4.5 The Recipient acknowledges that the covenants in respect of non-competition contained in this clause are fair and reasonable and that the Company is relying upon this acknowledgement in entering into this agreement. The Recipient will ensure that the Recipients directors, employees and agents will make the same acknowledgement.</p>
-
-								<p>
-									4.6 The Recipient agrees and acknowledges that should the Recipient take over or acquire any client from the Company during its term of engagement or within (12) twelve months after the termination of its engagement with the Company the Recipient will be required to pay compensation to the Company in respect of those clients. The calculation for the compensation shall be equal to one dollar ($1.00) for every dollar of gross fees charged to that client for the
-									previous twelve months. At the Company’s discretion allowances may be made in respect of clients introduced to the Company by the Recipient. This clause shall not merge on completion of this Agreement. had direct dealings in the course of, or in connection with, the duration of the NDA.
-								</p>
+								<h5 class="text-lg font-bold">{{ $t('NON_COMPETITION_NON_SOLICITATION_AND_NON_RECRUITMENT') }}</h5>
+								<p>{{ $t('DURING_THE_DURATION_OF_THIS_AGREEMENT') }} <br /></p>
+								<p>{{ $t('CONFLICT_OR_APPEAR_TO_CONFLICT') }} <br /></p>
+								<p>{{ $t('ARE_IN_COMPETITION_WITH') }} <br /></p>
+								<p>{{ $t('IN_CONNECTION_WITH_THE_RECIPIENT') }}<br /></p>
+								<p>{{ $t('THE_RECIPIENT_SHALL_NOT_SOLICIT') }}</p>
+								<p>{{ $t('THE_RECIPIENT_SHALL_NOT_SOLICIT_OR_ENTICE') }} <br /></p>
+								<p>{{ $t('THE_RECIPIENT_ACKNOWLEDGS_THAT') }} </p>
+								<p>{{ $t('THE_RECIPIENT_AGREES_AND_ACKNOWLEDGS_THAT') }} </p>
 							</div>
+									<div class="space-y-4">
+								<h5 class="text-lg font-bold">{{ $t('MISCELLANEOUS') }}</h5>
+								<p>{{ $t('THE_RECIPIENT_AGREES_AND_ACKNOWLEDGS_THAT_IT_SHALL_NOT_OBTAIN') }} <br /></p>
+								<p>{{ $t('THE_RECIPIENT_SHALL_IMMEDIETLLY') }} <br /></p>
+								<p>{{ $t('THE_RECIPIENT_HEREBY_AGREES') }} <br /></p>
+								<p>{{ $t('THE_EXPRESS_PROVISIONS_IN_THIS_NDA') }}<br /></p>
+								<p>{{ $t('THE_COMPANY_ITS_AFFILIATES') }}</p>
+								<p>{{ $t('IF_ANY_PROVISION_OF_THIS_NDA') }} <br /></p>
+								<p>{{ $t('THIS_NDA_SHALL_NOT_CREATE') }} </p>
+								<p>{{ $t('THE_RECIPIENT_SHALL_NOT_DISCLOSE_THE_CONFIDENTIAL_INFORMATION') }} </p>
+							</div>
+
+							<div class="space-y-4">
+								<h5 class="text-lg font-bold">{{ $t('COMMENCEMENT_AND_TERM') }}</h5>
+								<p>{{ $t('THIS_NDA_SHALL_COME_INTO_EFFECT') }} <br /></p>
+								<p>{{ $t('THIS_NDA_SHALL_REMAIN_IN_FULL_FORCE') }} <br /></p>
+							</div>
+
+
+							<div class="space-y-4">
+								<h5 class="text-lg font-bold">{{ $t('GOVERNING_LAW_AND_JURISDICTION') }}</h5>
+								<p>{{ $t('ALL_MATTERS_RELATED_TO_THE_NDA') }} <br /></p>
+								<p>{{ $t('ANY_DISPUTE_CONTROVERSY') }} <br /></p>
+								<p>{{ $t('THIS_NDA_IS_SIGNED_ON_THE_EFFECTIVE_DATA') }} </p>
+							</div>
+			
+
+
 						</div>
+								<!-- <div class="space-y-8 p-8">
+							<div class="space-y-4">
+								<h5 class="text-lg font-bold">{{ $t('MISCELLANEOUS') }}</h5>
+								<p>{{ $t('THE_RECIPIENT_AGREES_AND_ACKNOWLEDGS_THAT_IT_SHALL_NOT_OBTAIN') }} <br /></p>
+								<p>{{ $t('THE_RECIPIENT_SHALL_IMMEDIETLLY') }} <br /></p>
+								<p>{{ $t('THE_RECIPIENT_HEREBY_AGREES') }} <br /></p>
+								<p>{{ $t('THE_EXPRESS_PROVISIONS_IN_THIS_NDA') }}<br /></p>
+								<p>{{ $t('THE_COMPANY_ITS_AFFILIATES') }}</p>
+								<p>{{ $t('IF_ANY_PROVISION_OF_THIS_NDA') }} <br /></p>
+								<p>{{ $t('THIS_NDA_SHALL_NOT_CREATE') }} </p>
+								<p>{{ $t('THE_RECIPIENT_SHALL_NOT_DISCLOSE_THE_CONFIDENTIAL_INFORMATION') }} </p>
+							</div>
+						</div> -->
+
 					</div>
 				</div>
 			</div>
