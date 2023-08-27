@@ -5,7 +5,7 @@
         {{ $t('MEET_BUROOJ_AIR_TEAM') }}
       </h2>
       <div class="overflow-x-auto relative">
-        <div class="flex lg:gap-6">
+        <div class="flex lg:gap-6 gap-4">
           <div
             class="lg:w-1/3 lg:mb-8 mb-8"
             v-for="member in teamMembers"
