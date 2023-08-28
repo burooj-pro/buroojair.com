@@ -140,7 +140,7 @@ export default {
 				{
 					id: 8,
 					name: 'Aisha AlAseery',
-					position: 'Senior Account Manage',
+					position: 'Senior Account Manager',
 					image: '/images/Aisha.png',
 					linkedin: 'https://www.linkedin.com/in/aisha-al-aseery-a7570b190',
 					email: 'mailto:aisha@buroojair.com',
