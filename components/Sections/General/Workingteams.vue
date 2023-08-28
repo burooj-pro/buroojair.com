@@ -4,7 +4,7 @@
       <h2 class="mb-12 text-3xl font-bold uppercase leading-relaxed text-gray-600">
         {{ $t('MEET_BUROOJ_AIR_TEAM') }}
       </h2>
-      <div class="overflow-x-auto relative">
+      <div class="overflow-x-auto relative m-5">
         <div class="flex lg:gap-6 gap-4">
           <div
             class="lg:w-1/3 lg:mb-8 mb-8"
@@ -35,7 +35,7 @@
   <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
 </svg>
                   </a>
-                  <!-- Add more social media links/icons as needed -->
+
                 </div>
               </div>
             </div>
@@ -87,7 +87,7 @@ export default {
 					position: 'Chief Executive Officer',
 					image: '/images/gallery/Mohammed.png',
 					linkedin: 'https://www.linkedin.com/in/mohammed-bin-faihan/',
-					email: '',
+					email: 'mailto:mohammed@buroojair.com',
 				},
 				{
 					id: 2,
@@ -95,7 +95,7 @@ export default {
 					position: 'Chief Technology Officer',
 					image: '/images/gallery/Mohannad.png',
 					linkedin: 'https://www.linkedin.com/in/mohannadotaibi/',
-					email: '',
+					email: 'mailto:mohannad@buroojair.com',
 				},
 				{
 					id: 3,
@@ -103,7 +103,7 @@ export default {
 					position: 'Managing Director',
 					image: '/images/gallery/osama.png',
 					linkedin: 'https://www.linkedin.com/in/osama-al-grainees-business-developer®-14b44b179/',
-					email: '',
+					email: 'mailto:osamah@buroojair.com',
 				},
 				{
 					id: 4,
@@ -111,7 +111,7 @@ export default {
 					position: 'Operation Manager',
 					image: '/images/gallery/Hatim.png',
 					linkedin: 'https://www.linkedin.com/in/hatim-h-shuwaikan/',
-					email: 'hatim@burooj.pro',
+					email: 'mailto:hatim@buroojair.com',
 				},
 				// {
 				// 	id: 5,
@@ -127,23 +127,23 @@ export default {
 					position: 'Software Engineer',
 					image: '/images/gallery/Mutlaq.png',
 					linkedin: 'https://www.linkedin.com/in/mutlaq-aldhbuiub/',
-					email: '',
+					email: 'mailto:mutlaq@buroojair.com',
 				},
-				// 		{
-				// 	id: 7,
-				// 	name: 'Sumaya Alzahrani',
-				// 	position: 'Marketing Manager',
-				// 	image: '/images/gallery/Sumaya.png',
-				// 	linkedin: '',
-				// 	email: '',
-				// },
+						{
+					id: 7,
+					name: 'Sumaya Alzahrani',
+					position: 'Marketing Manager',
+					image: '/images/gallery/Sumaya.png',
+					linkedin: 'https://www.linkedin.com/in/sumaya-alzahrani-090a821a8',
+					email: 'mailto:sumaya@buroojair.com',
+				},
 				{
 					id: 8,
 					name: 'Aisha AlAseery',
 					position: 'Senior Account Manage',
 					image: '/images/Aisha.png',
 					linkedin: 'https://www.linkedin.com/in/aisha-al-aseery-a7570b190',
-					email: '',
+					email: 'mailto:aisha@buroojair.com',
 				},
 				// 					{
 				// 	id: 9,
@@ -159,7 +159,7 @@ export default {
 					position: 'Public Relations Manager',
 					image: 'https://media.licdn.com/dms/image/C4D03AQEhBvcmCKD0FQ/profile-displayphoto-shrink_200_200/0/1639233293545?e=1698278400&v=beta&t=35tu_KCfW1Xr9QCxn-1fjJCcHZRaMeW27Gt9Y6ayAIE',
 					linkedin: 'https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAAC-em00B3igBHvbXFXCXy4531Eztgf31c5s&keywords=hanin%20g.%20alharbi&origin=RICH_QUERY_SUGGESTION&position=0&searchId=760ec250-679f-4a39-b299-607903346c67&sid=9LZ',
-					email: '',
+					email: 'mailto:hanin@buroojair.com',
 				},
 				// 								{
 				// 	id: 10,
