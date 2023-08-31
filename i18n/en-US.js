@@ -95,10 +95,11 @@ export default {
 	GACA_PILOTE_DESC: 'Elevate your ambitions and become a certified GACA Part 107 Drone Pilot with Burooj Air. Our seasoned experts provide personalized training and assistance for a smooth certification journey.',
 
 	//about us page
-	BUROOJ_AIR_IS_A_DRONE_COMPANY_BASED_IN_THE_KINGDOM_OF_SAUDI_ARABIA: `Burooj Air is a drone company based in the Kingdom of Saudi
-  Arabia that specializes in developing and deploying drones for a
-  variety of industrial and commercial applications. The company’s
-  drones can perform a wide range of tasks, including:`,
+	BUROOJ_AIR_IS_A_DRONE_COMPANY_BASED_IN_THE_KINGDOM_OF_SAUDI_ARABIA: `
+		Burooj Air is a drone company based in the Kingdom of Saudi Arabia that specializes in developing and deploying drones for a variety of industrial and commercial applications. Our team consists of specialized Saudi talents employing their skills and efforts to operate and continually develop UAVs to be utilized commercially solving business challenges or needs. The company’s drones can perform a wide range of tasks, including cleaning buildings & outdoor assets, weightlifting and projects inspection.
+		We partner with international companies for our efforts in research and development. We also aim to partner with global manufacturers to complement their team in the Kingdom of Saudi Arabia.
+		Burooj Air is proud to be TT Aviation’s exclusive partner and distributer in the GCC.
+	`,
 	CLEANING_BUILDINGS_BUROOJ_AIR_DRONES_CAN_BE_USED: `Cleaning Buildings: Burooj Air’s drones can be used to clean the
   exterior of buildings, removing dirt, and dust. This can save
   businesses and organizations a significant amount of time and
