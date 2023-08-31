@@ -20,9 +20,10 @@
 
 					<SectionsGeneralMap />
 				</div>
-
-				<div class="pipedriveWebForms p-8" data-pd-webforms="https://webforms.pipedrive.com/f/6coemjWsjuoqlhJqDxw5vARg9RKtlXs9Rk7xeP0SZJLEXlmO9hyO7YDdWfq6IcrYLV">
-					<script src="https://webforms.pipedrive.com/f/loader"></script>
+				<div class="container mx-auto">
+					<div class="pipedriveWebForms p-2" data-pd-webforms="https://webforms.pipedrive.com/f/6coemjWsjuoqlhJqDxw5vARg9RKtlXs9Rk7xeP0SZJLEXlmO9hyO7YDdWfq6IcrYLV">
+						<script src="https://webforms.pipedrive.com/f/loader"></script>
+					</div>
 				</div>
 			</div>
 		</div>
