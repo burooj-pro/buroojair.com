@@ -78,7 +78,7 @@ export default {
 					position: 'Account Manager',
 					position_ar: 'مدير حساب',
 					image: '/images/employees/Faisal.png',
-					linkedin: '',
+					linkedin: 'https://www.linkedin.com/in/faisal-alotaibi-1b812728b/',
 					email: 'mailto:faisal@buroojair.com',
 				},
 				{
