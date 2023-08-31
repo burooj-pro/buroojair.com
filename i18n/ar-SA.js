@@ -118,9 +118,8 @@ export default {
 	ADDRESS: 'عنوان',
 	MAKE_AN_INQUIRY_TODAY: 'استفسر الآن',
 	//new in index
-	THIS_PROCEDURE_KEEPS: `يحافظ هذا الإجراء على سطح اللوحة دون أي ضرر أو ضرر.`,
-	OUR_WINDOW_CLEANING_METHOD: `طريقة تنظيف النوافذ لدينا مثالية لتنظيف الألواح الشمسية ،
-  وهو آمن تماما لسطح اللوحة.`,
+	THIS_PROCEDURE_KEEPS: `يحافظ هذا الإجراء على سطح اللوحة دون أي ضرر`,
+	OUR_WINDOW_CLEANING_METHOD: `تعد طريقة تنظيف المباني لدنيا هي الأكثر أمانا`,
 	ADDITIONALLY_THIS_TECNHIQUE: `بالإضافة إلى ذلك ، توفر هذه التقنية ميزة ملحوظة ل
   منع البقع والحفاظ على نظافة الأسطح لفترة أطول
   الفترة مقارنة بطرق التنظيف التقليدية.`,
@@ -262,7 +261,7 @@ export default {
   الوقت. كما أنه يزيل مخاطر تآكل السطح مثل
   الخطوط الناجمة عن دليل أكثر تقليدية وأكثر خطورة
   طرق التنظيف.`,
-	SOLAR_CELL_PANEL: `لوحة الخلايا الشمسية`,
+	SOLAR_CELL_PANEL: `تنظيف لوحة الخلايا الشمسية `,
 	CLEANING: `تنظيف`,
 	THIS_METHOD_DOES_NOT_HARM_THE_PANEL_SURFACE: `هذه الطريقة لا تضر سطح اللوحة`,
 	OUR_METHOD_DEVELOPED_FOR_WINDOW_CLEANING_IS_PERFECT: `طريقتنا المطورة لتنظيف النوافذ مثالية للتنظيف
