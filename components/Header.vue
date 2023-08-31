@@ -29,9 +29,9 @@
 								<li>
 									<NuxtLink class="block text-white no-underline" to="/contact">{{ $t('CONTACT') }}</NuxtLink>
 								</li>
-								<li @click="onChangeLanguage()">
+								<!-- <li @click="onChangeLanguage()">
 									<span role="button" class="block text-white no-underline hover:text-violet-500">{{ $t('LANGUAGE') }}</span>
-								</li>
+								</li> -->
 								<li>
 									<NuxtLink class="whitespace-nowrap rounded-lg bg-brand-second px-4 py-3 text-white no-underline hover:bg-brand-first" to="/franchise">{{ $t('BECOME_A_PARTNER') }}</NuxtLink>
 								</li>
