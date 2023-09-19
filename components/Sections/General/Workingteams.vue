@@ -62,16 +62,6 @@ export default {
 					email: 'mailto:mohammed@buroojair.com',
 				},
 				{
-					id: 2,
-					name: 'Mohannad F. Otaibi',
-					name_ar: 'مهند العتيبي',
-					position: 'Chief Technology Officer',
-					position_ar: 'رئيس تكنولوجيا المعلومات',
-					image: '/images/employees/Mohannad.png',
-					linkedin: 'https://www.linkedin.com/in/mohannadotaibi/',
-					email: 'mailto:mohannad@buroojair.com',
-				},
-				{
 					id: 3,
 					name: 'Faisal G. Alotaibi',
 					name_ar: 'فيصل العتيبي',
@@ -100,16 +90,6 @@ export default {
 					image: '/images/employees/osama.png',
 					linkedin: 'https://www.linkedin.com/in/osama-al-grainees-business-developer®-14b44b179/',
 					email: 'mailto:osamah@buroojair.com',
-				},
-				{
-					id: 6,
-					name: 'Hatim Shuwaikan',
-					name_ar: 'حاتم شويكان',
-					position: 'Operation Manager',
-					position_ar: 'مدير العمليات',
-					image: '/images/employees/Hatim.png',
-					linkedin: 'https://www.linkedin.com/in/hatim-h-shuwaikan/',
-					email: 'mailto:hatim@buroojair.com',
 				},
 				{
 					id: 7,
