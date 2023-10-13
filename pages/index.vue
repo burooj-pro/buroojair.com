@@ -35,6 +35,9 @@
 		<!-- ESTIMATED FUTURE SECTION -->
 		<SectionsEstimatedFuture />
 
+			<!-- TTA SECTION -->
+		<SectionsTTA />
+
 		<!-- WORKING GROWTH SECTION -->
 		<SectionsWorkingGrowth />
 
