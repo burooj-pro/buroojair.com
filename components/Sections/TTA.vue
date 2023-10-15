@@ -39,7 +39,7 @@
 					<div class="lg:w-1/3 lg:mb-8 mb-8" v-for="product in products" :key="product.id">
 						<div class="member-card relative rounded-lg overflow-hidden bg-white border border-gray-300 h-70 w-80">
 							<div class="member-image-circle mx-auto mt-4 w-24 h-24 rounded-full">
-								<img :src="product.image" :alt="product.name" class="w-full h-full object-cover" />
+								<img :src="product.image" :alt="product.name" class="w-full h-full" />
 							</div>
 							<div class="p-4">
 								<h5 class="mb-2 text-lg font-semibold">
