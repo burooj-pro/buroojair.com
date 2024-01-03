@@ -1,7 +1,7 @@
 <template>
 	<section id="heroSection" class="hero-section relative font-neo-sans">
 		<video ref="videoPlayer" muted autoplay loop playsinline class="relative aspect-square h-auto w-full object-cover lg:aspect-auto">
-			<source src="https://res.cloudinary.com/dshekyqdl/video/upload/v1692770959/Website_vid_final_t8zsnk.mp4" type="video/mp4" />
+			<source src="https://buroojair.com/Website.mp4" type="video/mp4" />
 		</video>
 
 		<SectionsTemplatesOverlay classColor="bg-indigo-800" classOpacity="bg-opacity-10" />
