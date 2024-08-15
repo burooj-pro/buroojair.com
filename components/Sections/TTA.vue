@@ -16,9 +16,6 @@
 								<h5 class="mb-2 text-lg font-semibold">
 									{{ product.name }}
 								</h5>
-								<p class="mb-2">
-									Price:  {{ product.price }}
-								</p>
 								<a :href="'mailto:contact@buroojair.com?subject=Interested in ' + product.name"
 									class="contact-button block px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition duration-300 ease-in-out">
 									Contact Us
