@@ -12,7 +12,7 @@
 								<h3>BUROOJ AIR WORKING DRONE SIGNS COUNTRY PARTNER AGREEMENT FOR SPAIN</h3>
 								<div class="date">31. Mars, 2023</div>
 								<div class="titleImg">
-									<img src="~assets/images/countrypartner_spain-1024x683.jpg" alt="" class="w-100" />
+									<!-- <img src="~assets/images/countrypartner_spain-1024x683.jpg" alt="" class="w-100" /> -->
 								</div>
 								<div class="text-box">
 									<p>
@@ -59,7 +59,7 @@
 								<div class="news-box">
 									<div class="image-holder">
 										<a href="#">
-											<img src="~assets/images/news-img.jpg" alt="" class="img-fluid" />
+											<!-- <img src="~assets/images/news-img.jpg" alt="" class="img-fluid" /> -->
 										</a>
 									</div>
 									<div class="text-box">
@@ -74,7 +74,7 @@
 								<div class="news-box">
 									<div class="image-holder">
 										<a href="#">
-											<img src="~assets/images/news-img.jpg" alt="" class="img-fluid" />
+											<!-- <img src="~assets/images/news-img.jpg" alt="" class="img-fluid" /> -->
 										</a>
 									</div>
 									<div class="text-box">
@@ -89,7 +89,7 @@
 								<div class="news-box">
 									<div class="image-holder">
 										<a href="#">
-											<img src="~assets/images/news-img.jpg" alt="" class="img-fluid" />
+											<!-- <img src="~assets/images/news-img.jpg" alt="" class="img-fluid" /> -->
 										</a>
 									</div>
 									<div class="text-box">
