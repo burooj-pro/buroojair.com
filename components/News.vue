@@ -4,7 +4,7 @@
 			<div class="news-box">
 				<div class="image-holder">
 					<a href="#">
-						<img src="~assets/images/news-img.jpg" alt="" class="img-fluid" />
+						<!-- <img src="~assets/images/news-img.jpg" alt="" class="img-fluid" /> -->
 					</a>
 				</div>
 				<div class="text-box">

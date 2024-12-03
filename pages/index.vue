@@ -7,9 +7,14 @@
 
 		<!-- SERVICES SECTION -->
 		<SectionsServices />
+		
 
+		<SectionsService />
 		<!-- VACANT PILOT SECTION -->
-		<SectionsVacantPilotPosition />
+		<!-- <SectionsVacantPilotPosition /> -->
+
+				<!-- POPULATED SECTION -->
+				<!-- <SectionsPopulated /> -->
 
 		<!-- ARRIVED DRONE SECTION -->
 		<SectionsArrivedDrone />
@@ -29,14 +34,18 @@
 		<!-- ABOUT US SECTION -->
 		<SectionsAboutUs />
 
+			<!-- POPULATED SECTION -->
+			<SectionsPopulated />
+					<!-- TTA SECTION -->
+					<SectionsTTA />
+
 		<!-- GLOBAL REACH SECTION -->
-		<SectionsGlobalReach />
+		<!-- <SectionsGlobalReach /> -->
 
 		<!-- ESTIMATED FUTURE SECTION -->
 		<SectionsEstimatedFuture />
 
-			<!-- TTA SECTION -->
-		<SectionsTTA />
+
 
 		<!-- WORKING GROWTH SECTION -->
 		<SectionsWorkingGrowth />
@@ -44,14 +53,14 @@
 		<!-- SAFETY STATEMENT SECTION -->
 		<SectionsSafetyStatement />
 
-		<!-- POPULATED SECTION -->
-		<SectionsPopulated />
+	
 
 		<!-- WORK STAND SECTION -->
-		<SectionsWorkStand />
+		<!-- <SectionsWorkStand /> -->
 
 		<!-- DEVELOPMENT SECTION -->
 		<SectionsDevelopment />
+		<!-- <SectionsFamily /> -->
 
 		<!-- Contact Section -->
 		<SectionsContact />
