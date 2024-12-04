@@ -96,7 +96,7 @@ export default {
 					name_ar: 'ماجد اليامي',
 					position: 'Projects’ Bidding Manager',
 					position_ar: 'أخصائي مناقصات أول',
-					image: '/images/employees/MAjid.png',
+					image: '/images/employees/Majid.png',
 				},
 				// {
 				// 	id: 7,
