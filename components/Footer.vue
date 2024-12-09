@@ -6,10 +6,15 @@
 					<p class="fw-bold">Burooj Air ®</p>
 					<p>{{ $t('FOR_INQUIRIES_PLEASE_USE_OUR_LISTED_CONTACT_INFO') }}</p>
 				</div>
-
-				<p class="text-center text-sm lg:text-right">
-					{{ $t('COPY_RIGHT') }}
-				</p>
+				
+				<div class="text-center text-sm lg:text-right">
+					<p>{{ $t('COPY_RIGHT') }}</p>
+					<p>
+						<a href="/privacy-policy" class="underline hover:no-underline text-white">
+							{{ $t('PRIVACY_POLICY') }}
+						</a>
+					</p>
+				</div>
 			</div>
 		</div>
 	</footer>
