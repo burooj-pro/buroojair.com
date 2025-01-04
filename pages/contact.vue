@@ -37,7 +37,15 @@
 						<br />
 						<a href="tel:+966566639994" class="text-brand-second hover:underline">+966 56 663 9994</a>
 					</p>
-		
+					<p>
+						<strong>{{ $t('SOCIAL') }}:</strong>
+						<br />
+						<a href="https://www.instagram.com/buroojair" target="_blank" class="text-brand-second hover:underline">Instagram</a>
+						<br />
+						<a href="https://www.linkedin.com/company/buroojair" target="_blank" class="text-brand-second hover:underline">LinkedIn</a>
+						<br />
+						<a href="https://twitter.com/buroojair" target="_blank" class="text-brand-second hover:underline">Twitter</a>
+					</p>
 				</div>
 			</div>
 		</section>
@@ -53,12 +61,46 @@ export default {
 	name: 'CONTACT',
 	head() {
 		return {
-			title: this.$t('CONTACT'),
+			title: this.$t('CONTACT') + ' - Burooj Air | Drone Cleaning Services Contact',
 			meta: [
 				{
 					hid: 'description',
 					name: 'description',
-					content: 'We aim to contribute to a safer work day for people who work at great heights with lifts, scaffolding and for facade climbers.',
+					content: 'Get in touch with Burooj Air for inquiries about drone cleaning services, building maintenance solutions, and high-risk task support in Khobar, Saudi Arabia.',
+				},
+				{
+					hid: 'keywords',
+					name: 'keywords',
+					content: 'Burooj Air contact, drone cleaning services contact, building maintenance support, high-risk task inquiries, contact Khobar drone services',
+				},
+				{
+					name: 'robots',
+					content: 'index, follow',
+				},
+				{
+					hid: 'og:title',
+					property: 'og:title',
+					content: 'Contact Burooj Air | Drone Cleaning Services in Khobar',
+				},
+				{
+					hid: 'og:description',
+					property: 'og:description',
+					content: 'Reach out to Burooj Air for drone cleaning services, building maintenance, and innovative solutions in Khobar, Saudi Arabia.',
+				},
+				{
+					hid: 'og:image',
+					property: 'og:image',
+					content: '/images/BuroojAir.png',
+				},
+				{
+					hid: 'og:url',
+					property: 'og:url',
+					content: 'https://buroojair.com/contact',
+				},
+				{
+					hid: 'twitter:card',
+					name: 'twitter:card',
+					content: 'summary_large_image',
 				},
 			],
 		}
