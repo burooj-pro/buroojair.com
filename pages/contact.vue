@@ -19,7 +19,8 @@
 					<h3 class="text-xl font-bold lg:text-3xl">{{ $t('BUROOJ_AIR_HEADQUARTERS') }}</h3>
 					<p>{{ $t('KHOBAR_SAUDI_ARABIA') }}</p>
 					<p>
-						<strong>{{ $t('GENERAL_INQUIRY') }}:</strong><br />contact@buroojair.com
+						<strong>{{ $t('GENERAL_INQUIRY') }}:</strong><br />
+						<a href="mailto:contact@buroojair.com" class="text-brand-second hover:underline">contact@buroojair.com</a>
 					</p>
 					<p>
 						<strong>{{ $t('OFFICE_HOURS') }}:</strong><br />{{ $t('SUNDAY_TO_THURSDAY_08_00_AM_TO_5_00_PM') }}
@@ -34,8 +35,9 @@
 					<p>
 						<strong>{{ $t('PHONE') }}:</strong>
 						<br />
-						+966566639994
+						<a href="tel:+966566639994" class="text-brand-second hover:underline">+966 56 663 9994</a>
 					</p>
+		
 				</div>
 			</div>
 		</section>
