@@ -18,14 +18,15 @@
 									<NuxtLink aria-current="page" class="block text-white no-underline" to="/">{{ $t('HOME') }}</NuxtLink>
 								</li>
 								<li>
-									<NuxtLink class="block text-white no-underline" to="/services">{{ $t('SERVICES') }}</NuxtLink>
+									<NuxtLink class="block text-white no-underline" to="/about-us">{{ $t('ABOUT_US') }}</NuxtLink>
 								</li>
+								<!-- <li>
+									<NuxtLink class="block text-white no-underline" to="/services">{{ $t('SERVICES') }}</NuxtLink>
+								</li> -->
 								<li>
 									<NuxtLink class="block text-white no-underline" to="/gallery">{{ $t('GALLERY') }}</NuxtLink>
 								</li>
-								<li>
-									<NuxtLink class="block text-white no-underline" to="/about-us">{{ $t('ABOUT_US') }}</NuxtLink>
-								</li>
+							
 								<li>
 									<NuxtLink class="block text-white no-underline" to="/contact">{{ $t('CONTACT') }}</NuxtLink>
 								</li>
