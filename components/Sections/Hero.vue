@@ -8,7 +8,7 @@
 
 		<div class="relative flex w-full lg:absolute lg:top-0 lg:h-screen lg:items-center">
 			<div class="flex w-full items-start lg:container lg:mx-auto lg:h-full lg:pt-52">
-				<div class="w-full bg-gray-900 bg-opacity-95 p-8 lg:mb-16 lg:max-w-md lg:rounded-bl-[80px] lg:rounded-br-2xl lg:rounded-tl-2xl lg:rounded-tr-[80px]">
+				<div class="w-full bg-gray-900 bg-opacity-95 p-8 lg:mb-16 lg:max-w-md lg:rounded-bl-[80px] lg:rounded-br-2xl lg:rounded-tl-2xl lg:rounded-tr-[80px] z-10">
 					<h3 class="mb-5 font-neo-sans text-3xl uppercase text-white">{{ $t('NOW_REQUEST_A_QUOTE_FOR_DRONE_CLEANING') }}</h3>
 
 					<div class="pipedriveWebForms" data-pd-webforms="https://webforms.pipedrive.com/f/6coemjWsjuoqlhJqDxw5vARg9RKtlXs9Rk7xeP0SZJLEXlmO9hyO7YDdWfq6IcrYLV">
