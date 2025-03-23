@@ -1,5 +1,23 @@
+<style>
+
+.who-we-are {
+	padding-top: 15rem;
+}
+
+@media 	(min-width: 1024px) and  (max-width: 1300px) {
+    .who-we-are {
+        padding-top: 23rem;
+    }
+}
+
+@media 	(max-width: 1023px)  {
+    .who-we-are {
+        padding-top: 5rem;
+    }
+}
+</style>
 <template>
-	<section id="servicesSection" class="services-section bg-purple-50 py-12 font-neo-sans lg:py-24">
+	<section id="servicesSection" class="services-section who-we-are bg-purple-50 py-12  font-neo-sans" >
 		<div class="container mx-auto px-4 lg:px-8">
 			<!-- Section Header -->
 			<div class="text-center mb-8 lg:mb-12">
