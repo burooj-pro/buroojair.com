@@ -51,6 +51,20 @@ export default {
 		{ name: 'format-detection', content: 'telephone=no' },
 	  ],
 	  script: [
+	
+		  {
+			src: 'https://www.googletagmanager.com/gtag/js?id=G-27G4RCWQCP',
+			async: true
+		  },
+		  {
+			hid: 'google-tag',
+			innerHTML: `window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-27G4RCWQCP');`,
+			type: 'text/javascript',
+			charset: 'utf-8'
+		  },		
 		{
 			hid: 'gtm',
 			innerHTML: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -61,6 +75,7 @@ export default {
 			type: 'text/javascript',
 			charset: 'utf-8'
 		  },
+		  
 		{
 		  hid: 'tiktok-pixel',
 		  innerHTML: `!function (w, d, t) {
@@ -116,6 +131,7 @@ export default {
 		'tiktok-pixel': ['innerHTML'],
 		'snap-pixel': ['innerHTML'],
 		'meta-pixel': ['innerHTML'],
+		'google-tag': ['innerHTML']
 	  },
 	},
   
