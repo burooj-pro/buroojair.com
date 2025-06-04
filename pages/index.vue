@@ -59,7 +59,7 @@
 		<!-- <SectionsWorkStand /> -->
 
 		<!-- DEVELOPMENT SECTION -->
-		<SectionsDevelopment />
+		<!-- <SectionsDevelopment /> -->
 		<!-- <SectionsFamily /> -->
 
 		<!-- Contact Section -->

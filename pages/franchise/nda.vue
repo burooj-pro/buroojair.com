@@ -20,14 +20,14 @@
 			</div>
 		</section>
 
-		<section class="text-thin bg-white text-black">
+		<!-- <section class="text-thin bg-white text-black">
 			<div class="container mx-auto">
 				<div class="grid grid-cols-1">
 					<div class="p-8 font-bold uppercase">
 						<h3 class="text-2xl"> {{ $t('FRANCHISE_MODEL') }}</h3>
-						<p> {{ $t('NDA_AGREEMENT') }}</p>
+						<p> {{ $t('NDA_AGREEMENT') }}</p> -->
 						<!-- First Section -->
-					</div>
+					<!-- </div>
 					<div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
 						<div class="space-y-8 p-8">
 							<div class="space-y-4">
@@ -137,7 +137,7 @@
 			
 
 
-						</div>
+						</div> -->
 								<!-- <div class="space-y-8 p-8">
 							<div class="space-y-4">
 								<h5 class="text-lg font-bold">{{ $t('MISCELLANEOUS') }}</h5>
@@ -152,9 +152,9 @@
 							</div>
 						</div> -->
 
-					</div>
+					<!-- </div>
 				</div>
-			</div>
+			</div> -->
 		</section>
 
 		<section class="text-thin bg-white text-black">
