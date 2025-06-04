@@ -13,13 +13,13 @@
 					<p>
 						<strong>{{ $t('BUROOJ_AIR_IS_A_DRONE_COMPANY_BASED_IN_THE_KINGDOM_OF_SAUDI_ARABIA') }}</strong>
 					</p>
-					<p>{{ $t('CLEANING_BUILDINGS_BUROOJ_AIR_DRONES_CAN_BE_USED') }}</p>
+					<!-- <p>{{ $t('CLEANING_BUILDINGS_BUROOJ_AIR_DRONES_CAN_BE_USED') }}</p>
 
 					<p>{{ $t('WEIGHTLIFTING_BUROOJ_AIR_DRONES_CAN_BE_USED') }}</p>
 
 					<p>{{ $t('HEAT_MEASUREMENT_AND_FIRE_FIGHTING') }}</p>
 
-					<p>{{ $t('CAMERA_FILMING') }}</p>
+					<p>{{ $t('CAMERA_FILMING') }}</p> -->
 				</div>
 			</div>
 		</div>

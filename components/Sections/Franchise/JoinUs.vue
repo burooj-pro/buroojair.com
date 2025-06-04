@@ -25,11 +25,20 @@
 					<p>{{ $t('Our_aim_is_to_work_with_our_partners_to_expand') }}</p>
 				</div>
 			</div>
-			<div class="p-8">
+			<section class="text-thin bg-white text-black">
+			<div class="container mx-auto">
+				<div class="grid">
+					<div class="pipedriveWebForms p-8" data-pd-webforms="https://webforms.pipedrive.com/f/bXCZRhnEATSSg8AiaLHNw1Fkti3HRSJNU7pWyVOxhoYkm92ZdiQQcGzHw83hVqKg5J">
+						<script src="https://webforms.pipedrive.com/f/loader"></script>
+					</div>
+				</div>
+			</div>
+		</section>
+			<!-- <div class="p-8">
 				<NuxtLink to="/franchise/nda" class="whitespace-nowrap rounded-lg bg-brand-second px-4 py-3 text-white no-underline hover:bg-brand-first">
 					<span>{{ $t('NDA_BUTTON') }}</span>
 				</NuxtLink>
-			</div>
+			</div> -->
 		</div>
 	</section>
 </template>

@@ -40,7 +40,7 @@ export default {
 	
 	CLEANING_WITH_DRONE: 'Cleaning with Drone',
 	THE_BEST_SOLUTION_TO_CLEAN_BUILDINGS_AND_LIFT_HEAVY_WEIGHTS_IN_A_FASTER_WAY_IS_AVAILABLE_NOW: 'Advanced Drone Technology',
-	UNTIL_NOW_CLEANING_OF_TALL_BUILDINGS_HAS_BEEN_A_COMPLEX_AND_DANGEROUS_UNDERTAKING: "Burooj Air drones are designed to tackle the most demanding tasks. From cleaning high-rise facades to precise heavy-lifting operations, our UAVs incorporate state-of-the-art technology for maximum efficiency and safety.",
+	UNTIL_NOW_CLEANING_OF_TALL_BUILDINGS_HAS_BEEN_A_COMPLEX_AND_DANGEROUS_UNDERTAKING: "Burooj Air drones are built to handle the toughest tasks. With advanced technology, our UAVs make high-rise facade cleaning safer and more efficient than ever before.",
 	OPPORTUNITIES_AVAILABLE: 'Opportunities Available',
 	PARTICIPATE_IN_THE_MOST_CREATIVE: 'Join the most groundbreaking business concept to revolutionize the cleaning industry in over a century.',
 	TAKE_PART_IN_THE_MOST_INNOVATIVE_BUSINESS_IDEA: 'Be part of the innovative business idea that is transforming the cleaning industry worldwide.',
@@ -96,8 +96,9 @@ export default {
 	
 	//about us page
 	BUROOJ_AIR_IS_A_DRONE_COMPANY_BASED_IN_THE_KINGDOM_OF_SAUDI_ARABIA: `
-    Burooj Air is a pioneering drone company based in the Kingdom of Saudi Arabia, specializing in designing and deploying advanced UAVs for industrial and commercial applications. Our team, comprised of highly skilled Saudi professionals, continuously innovates to create drone solutions that address diverse business challenges. From cleaning buildings and outdoor assets to weightlifting and project inspections, we deliver cutting-edge capabilities.
-    Through strategic partnerships with international companies, we lead in research and development while fostering collaborations with global manufacturers to expand expertise in the Kingdom. Burooj Air proudly serves as the exclusive GCC partner and distributor for TT Aviation, introducing state-of-the-art UAV technologies to the region.
+   Burooj Air is a pioneering drone company based in the Kingdom of Saudi Arabia, specializing in the design and deployment of advanced UAVs for industrial and commercial applications. Our team, composed of highly skilled Saudi professionals, continuously innovates to develop drone solutions that address diverse business challenges. From cleaning buildings to servicing outdoor assets, we deliver cutting-edge capabilities.
+Through strategic partnerships with international companies, we lead in research and development while fostering collaborations with global manufacturers to expand expertise within the Kingdom. Burooj Air proudly serves as the exclusive GCC partner and distributor for TT Aviation, bringing state-of-the-art UAV technologies to the region.
+
 `,
 CLEANING_BUILDINGS_BUROOJ_AIR_DRONES_CAN_BE_USED: `Cleaning Buildings: Burooj Air’s drones provide an efficient, safe, and cost-effective solution for cleaning building exteriors by removing dirt and dust. This eliminates the need for traditional methods such as scaffolding and manual labor, saving businesses significant time and resources.`,
 
@@ -402,17 +403,24 @@ BUROOJ_AIR_WORKING_DRONE_EVOLVED_OUT: `The Burooj Air Working Drone was develope
 	OUR_SERVICES: 'Our Services',
 TRANSFORMING_INDUSTRIES_WITH_DRONE_SOLUTIONS: 'Transforming Industries with Drone Solutions',
 
-BUILDING_ASSET_CLEANING: 'Building & Asset Cleaning',
-BUILDING_ASSET_CLEANING_DESC: 'Our drones provide an advanced alternative for exterior cleaning, effectively removing dirt and dust. This saves time and resources by eliminating the need for traditional cleaning methods like scaffolding or manual labor.',
+BUILDING_ASSET_CLEANING: 'Building Facade Cleaning',
+BUILDING_ASSET_CLEANING_DESC: 'Advanced cleaning of glass and concrete facades, eliminating the need for scaffolding or manual labor.',
 
-WEIGHTLIFTING_TRANSPORT: 'Weightlifting & Transport',
-WEIGHTLIFTING_TRANSPORT_DESC: 'Safely lift and transport objects up to 50 kg, including construction materials and medical supplies. Ideal for industries requiring swift and efficient logistics.',
+WEIGHTLIFTING_TRANSPORT: 'Solar Panel Cleaning',
+WEIGHTLIFTING_TRANSPORT_DESC: 'Removing dirt and debris to improve the operational efficiency of solar panels by up to %30.',
 
-HEAT_MEASUREMENT_FIREFIGHTING: 'Heat Measurement & Firefighting',
-HEAT_MEASUREMENT_FIREFIGHTING_DESC: 'Equipped with thermal sensors, our drones monitor heat signatures, prevent accidents, and extinguish fires safely with advanced suppression systems.',
+HEAT_MEASUREMENT_FIREFIGHTING: 'Bridge and Highway Cleaning',
+HEAT_MEASUREMENT_FIREFIGHTING_DESC: 'Cleaning surfaces and sidewalls of bridges and highways using precision drone-mounted spraying systems.',
 
-AERIAL_FILMING: 'Aerial Filming',
-AERIAL_FILMING_DESC: 'Capture unique aerial footage with high-resolution cameras for events, projects, and inspections, offering unparalleled perspectives.',
+AERIAL_FILMING: ' Large Water Tank Cleaning',
+AERIAL_FILMING_DESC: 'Specialized cleaning solutions for hard-to-reach water tanks.',
+
+
+INDUSTRIAL_STRUCTURE: 'Industrial Structure Cleaning',
+INDUSTRIAL_STRUCTURE_DESC: 'Cleaning industrial structures such as cooling towers, silos, and metal infrastructure.',
+
+SURFACE_CLENNING: ' Billboard and Elevated Surface Cleaning',
+SURFACE_CLENNING_DESC: 'Efficient cleaning of high-rise signage and billboards with drones.',
 
 	
 }

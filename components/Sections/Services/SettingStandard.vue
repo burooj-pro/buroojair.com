@@ -22,9 +22,9 @@
 					<p class="mb-5">
 						{{ $t('BUROOJ_AIR_WORKING_DRONE_WAS_READY_AND_THE_COMMERCIALISING') }}
 					</p>
-					<p>
+					<!-- <p>
 						{{ $t('THE_FUTURE_HOLDS_MANY_OPPORTUNITIES_FOR_DEVELOPMENT') }}
-					</p>
+					</p> -->
 				</div>
 			</div>
 		</div>

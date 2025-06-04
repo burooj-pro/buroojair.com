@@ -82,14 +82,14 @@ export default {
 					position_ar: 'مدير التسويق',
 					image: '/images/employees/MohammedB.png',
 				},
-				{
-					id: 6,
-					name: 'Mahjoub O. Mohamed',
-					name_ar: 'عائشة العسيري',
-					position: 'Drone Operator Assistant',
-					position_ar: 'مدير حساب خبير',
-					image: '/images/employees/Mahjob.png',
-				},
+				// {
+				// 	id: 6,
+				// 	name: 'Mahjoub O. Mohamed',
+				// 	name_ar: 'عائشة العسيري',
+				// 	position: 'Drone Operator Assistant',
+				// 	position_ar: 'مدير حساب خبير',
+				// 	image: '/images/employees/Mahjob.png',
+				// },
 				{
 					id: 7,
 					name: 'Majid A. Alyami',
