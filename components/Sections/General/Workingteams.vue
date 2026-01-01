@@ -1,40 +1,46 @@
 <template>
-	<div class="container my-24 mx-auto md:px-6">
-		<section class="mb-32 text-center font-neo-sans">
-			<h2 class="mb-12 text-3xl font-bold uppercase leading-relaxed text-gray-800">
-				{{ $t('MEET_BUROOJ_AIR_TEAM') }}
+	<section class="bg-[#EBF5FF] py-16 font-neo-sans dark:bg-[#04061C] lg:py-24">
+		<div class="container mx-auto px-4 lg:px-8">
+			<div class="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
+				<!-- Left Side - Text Content -->
+				<div>
+					<h2 class="mb-6 text-3xl font-black uppercase leading-tight text-gray-900 dark:text-white lg:text-5xl xl:text-6xl">
+						{{ $t('BEHIND_THE_PROJECTS') || 'BEHIND THE PROJECTS' }}
 			</h2>
-			<div class="overflow-x-auto">
-				<div class="flex space-x-4">
+					<p class="text-base font-light leading-relaxed text-gray-700 dark:text-gray-300 lg:text-lg">
+						{{ $t('BEHIND_THE_PROJECTS_DESC') || 'Meet the minds behind the magic. Our team blends creativity, strategy, and passion to turn ideas into impactful design. Together, we bring your vision to life—one pixel at a time.' }}
+					</p>
+				</div>
+
+				<!-- Right Side - Team Members Grid (2x3) -->
+				<div class="grid grid-cols-2 gap-6 lg:gap-8">
 					<div
 						v-for="member in teamMembers"
 						:key="member.id"
-						class="relative flex-shrink-0 rounded-lg overflow-hidden bg-white shadow-md w-64 h-80"
+						class="relative aspect-[3/4] overflow-hidden rounded-xl bg-white dark:bg-gray-800 shadow-lg transition-transform duration-300 hover:scale-105"
 					>
-						<div class="relative w-full h-full overflow-hidden">
-							<img
-								:src="member.image"
-								:alt="member.name"
-								class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 transform hover:scale-105 grayscale hover:grayscale-0"
-							/>
-							<div
-								class="absolute inset-0 pointer-events-none"
-								style="background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #000 133.3%);"
-							></div>
-						</div>
-						<div class="absolute bottom-0 left-0 right-0 p-4 text-white z-10">
-							<h3 class="text-lg font-semibold">
+						<img
+							:src="member.image"
+							:alt="`${member.name} - ${$i18n.locale === 'ar' ? member.position_ar : member.position}`"
+							class="h-full w-full object-cover transition-transform duration-300 hover:scale-110"
+							loading="lazy"
+						/>
+						<!-- Linear Gradient Overlay from Bottom -->
+						<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent pointer-events-none z-[1]"></div>
+						<!-- Name and Position at Bottom Left -->
+						<div class="absolute bottom-0 left-0 right-0 p-4 lg:p-6 z-10">
+							<h3 class="text-base font-semibold leading-tight text-white lg:text-lg mb-1">
 								{{ $i18n.locale === 'ar' ? member.name_ar : member.name }}
 							</h3>
-							<p class="text-sm">
+							<p class="text-xs font-light text-white/90 lg:text-sm">
 								{{ $i18n.locale === 'ar' ? member.position_ar : member.position }}
 							</p>
 						</div>
 					</div>
 				</div>
 			</div>
-		</section>
-	</div>
+		</div>
+	</section>
 </template>
 
 <script>
@@ -130,4 +136,5 @@ img:hover {
 	transform: scale(1.05);
 	filter: none;
 }
+
 </style>

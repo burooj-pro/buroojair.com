@@ -2,6 +2,7 @@
 module.exports = {
 	content: ['./components/**/*.{js,vue,ts}', './layouts/**/*.vue', './pages/**/*.vue', './plugins/**/*.{js,ts}', './nuxt.config.{js,ts}', './node_modules/flowbite/**/*.js'],
 	purge: ['./components/**/*.{js,vue,ts}', './layouts/**/*.vue', './pages/**/*.vue', './plugins/**/*.{js,ts}', './nuxt.config.{js,ts}', './node_modules/flowbite/**/*.js'],
+	darkMode: 'class', // Enable class-based dark mode
 
 	theme: {
 		extend: {
@@ -14,8 +15,14 @@ module.exports = {
 
 			fontFamily: {
 				'neo-sans': ['NeoSans', 'Helvetica', 'sans-serif'],
+				'helvetica': ['Helvetica', 'sans-serif'],
+				'neosans': ['NeoSans', 'sans-serif'],
 			},
 		},
 	},
 	plugins: [require('flowbite/plugin')],
+	// Enable RTL support
+	corePlugins: {
+		preflight: true,
+	},
 }

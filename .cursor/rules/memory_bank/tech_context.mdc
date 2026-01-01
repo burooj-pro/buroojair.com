@@ -1,0 +1,261 @@
+---
+alwaysApply: true
+---
+
+# Technical Context: Environment Specification
+
+## Technology Stack
+
+### Core Framework
+- **Nuxt.js**: 2.15.8
+- **Vue.js**: 2.6.14
+- **Node.js**: (Check with `node --version` in project)
+- **Package Manager**: npm (package-lock.json present)
+
+### Build System
+- **Webpack**: 4.46.0
+- **Target**: Static site generation (`target: 'static'`)
+- **Rendering**: Client-side only (`ssr: false`)
+
+### Styling
+- **Tailwind CSS**: 3.3.3
+- **PostCSS**: 8.4.27
+- **Autoprefixer**: 10.4.15
+- **SASS/SCSS**: 1.49.9
+- **SASS Loader**: 10.1.1
+
+### Internationalization
+- **Vue I18n**: 8.24.4
+- **@nuxtjs/i18n**: 7.3.1
+- **Strategy**: `no_prefix` (no URL prefix for locale)
+- **Default Locale**: English (`en`)
+- **Supported Locales**: English (active), Arabic (prepared)
+
+### UI Libraries & Plugins
+- **Animate.css**: 4.1.1 (CSS animations)
+- **Chart.js**: 2.9.4 (data visualization)
+- **Vue Chart.js**: 3.5.1 (Vue wrapper for Chart.js)
+- **Vue Light Gallery**: 1.0.1 (image gallery)
+- **Vue Countup V2**: 4.0.0 (number animations)
+- **Flowbite**: 1.8.1 (UI components)
+- **Bootstrap Icons**: 1.10.5 (icon library)
+- **@popperjs/core**: 2.11.8 (tooltip/popper positioning)
+
+### Content Management
+- **@nuxt/content**: 1.15.1 (content module, if used for blog)
+
+### Development Tools
+- **Prettier**: 3.0.2 (code formatting)
+- **Prettier Plugin Tailwind**: 0.5.3 (Tailwind class sorting)
+- **@nuxtjs/style-resources**: 1.2.1 (global style injection)
+
+### Core Dependencies
+- **core-js**: 3.19.3 (polyfills)
+- **vue-server-renderer**: 2.6.14 (SSR support, though disabled)
+- **vue-template-compiler**: 2.6.14 (template compilation)
+
+### Package Overrides
+- **chokidar**: 3.5.3 (file watcher)
+- **glob-parent**: 6.0.2 (glob pattern parent)
+
+## Development Environment
+
+### Required Tools
+- **Node.js**: (Version specified in project or check `.nvmrc` if exists)
+- **npm**: Comes with Node.js
+- **Git**: Version control
+
+### Development Scripts
+```bash
+npm run dev      # Development server with hot reload (localhost:3000)
+npm run build    # Production build
+npm run start    # Start production server (if SSR enabled)
+npm run generate # Generate static site
+```
+
+### Build Configuration
+
+**Key Build Settings:**
+- `extractCSS: true` - Extract CSS into separate files
+- `splitChunks`: Enabled for layouts, pages, and commons
+- `hardSource: false` - Build cache disabled
+- PostCSS plugins: Tailwind CSS and Autoprefixer
+
+**CSS Processing:**
+- Global SCSS: `@/assets/scss/main.scss`
+- Animate.css: Included globally
+- Tailwind: Processed via PostCSS
+
+## External Services & APIs
+
+### Lead Generation
+- **Pipedrive WebForms**: 
+  - Form ID: `6coemjWsjuoqlhJqDxw5vARg9RKtlXs9Rk7xeP0SZJLEXlmO9hyO7YDdWfq6IcrYLV`
+  - Loader: `https://webforms.pipedrive.com/f/loader`
+  - Integration: Embedded in Hero section
+
+### Analytics Services
+
+#### Google Analytics
+- **GA4 ID**: `G-27G4RCWQCP`
+- **Implementation**: Google Tag Manager script
+
+#### Google Tag Manager
+- **GTM ID**: `GTM-55SGMJF5`
+- **Implementation**: Inline script in head
+
+#### TikTok Pixel
+- **Pixel ID**: `D0M466RC77U6GBUFK3M0`
+- **Implementation**: Inline script in head
+
+#### Snap Pixel
+- **Pixel ID**: `74876930-c068-4ef8-abc7-f9c5f4cdc9f0`
+- **Implementation**: Inline script in head
+
+#### Meta (Facebook) Pixel
+- **Pixel ID**: `2545877985601143`
+- **Implementation**: Inline script in head
+
+## File Structure
+
+### Source Directories
+```
+/
+├── assets/              # Processed assets (SCSS, fonts, images)
+│   ├── font/           # Custom fonts (NeoSans, Helvetica)
+│   ├── images/         # Source images
+│   └── scss/           # SCSS stylesheets
+├── components/         # Vue components
+│   └── Sections/       # Page section components
+├── i18n/              # Translation files
+│   ├── en-US.js       # English translations
+│   └── ar-SA.js       # Arabic translations
+├── layouts/           # Nuxt layouts
+├── pages/             # Nuxt pages (auto-routing)
+├── plugins/           # Vue plugins
+├── static/            # Static files (served as-is)
+│   ├── images/        # Static images
+│   │   ├── employees/ # Team member photos
+│   │   └── gallery/   # Gallery images
+│   └── videos/        # Video files
+└── .cursor/           # Cursor AI configuration
+    └── rules/         # Project rules and memory bank
+```
+
+### Configuration Files
+- `nuxt.config.js` - Nuxt.js configuration
+- `tailwind.config.js` - Tailwind CSS configuration
+- `package.json` - Dependencies and scripts
+- `jsconfig.json` - JavaScript project configuration
+
+## Browser Compatibility
+
+### Target Browsers
+- Modern browsers (Chrome, Firefox, Safari, Edge)
+- Mobile browsers (iOS Safari, Chrome Mobile)
+- RTL support prepared for Arabic locale
+
+### Performance Targets
+- Fast initial page load (static generation)
+- Optimized images and videos
+- Code splitting for reduced bundle size
+- CSS extraction for faster rendering
+
+## Security Considerations
+
+### Current Implementation
+- Static site (reduced attack surface)
+- No user authentication (no sensitive data handling)
+- External form submission (Pipedrive handles form data)
+- Analytics scripts with sanitization disabled (required for functionality)
+
+### Best Practices
+- Keep dependencies updated
+- Review external script integrations
+- Monitor analytics for suspicious activity
+- Regular security audits
+
+## Deployment Environment
+
+### Hosting
+- **Type**: Static hosting (CDN recommended)
+- **Build Output**: `dist/` directory (from `npm run generate`)
+- **Domain**: `buroojair.com` / `www.buroojair.com`
+
+### Deployment Process
+1. Run `npm run generate` to create static files
+2. Deploy `dist/` directory to static host
+3. Configure CDN if applicable
+4. Verify analytics tracking
+
+### Environment Variables
+- Currently no `.env` file detected
+- Base URL: `https://buroojair.com` (hardcoded in nuxt.config.js)
+- Analytics IDs: Hardcoded in nuxt.config.js
+
+## Development Workflow
+
+### Code Style
+- **Formatter**: Prettier 3.0.2
+- **Tailwind**: Prettier plugin for class sorting
+- **Conventions**: Vue.js style guide recommended
+
+### Component Structure
+- Single File Components (SFC) with `<template>`, `<script>`, `<style>`
+- Scoped styles where appropriate
+- Component auto-import (no manual imports needed)
+
+### Git Workflow
+- Standard Git workflow
+- Check `CONTRIBUTING.md` for contribution guidelines
+
+## Performance Optimizations
+
+### Implemented
+- Static site generation (pre-rendered HTML)
+- CSS extraction (separate CSS files)
+- Code splitting (layouts, pages, commons)
+- Image optimization (use appropriate formats)
+- Lazy loading for plugins (client-only)
+
+### Potential Improvements
+- Image lazy loading
+- Video lazy loading
+- Further code splitting
+- Service worker for PWA features
+- Asset compression
+
+## Technical Constraints
+
+### Framework Limitations
+- Nuxt.js 2 (legacy, no Nuxt 3 features)
+- Vue.js 2 (no Composition API)
+- Webpack 4 (older build system)
+
+### Build Constraints
+- Static generation only (no SSR)
+- Client-side rendering required for interactivity
+- No server-side API routes
+
+### Browser Constraints
+- Requires JavaScript enabled
+- Modern browser features expected
+- No IE11 support (Vue 2 compatible but not tested)
+
+## Dependencies Management
+
+### Update Strategy
+- Regular security updates
+- Test thoroughly before major version updates
+- Consider migration path for Nuxt 3 (future)
+
+### Critical Dependencies
+- Nuxt.js 2.15.8 (core framework)
+- Vue.js 2.6.14 (core framework)
+- Tailwind CSS 3.3.3 (styling system)
+- Vue I18n 8.24.4 (internationalization)
+
+### Optional Dependencies
+- Chart.js (only if charts used)
+- Vue Light Gallery (only if gallery used)
+- Animate.css (only if animations used)

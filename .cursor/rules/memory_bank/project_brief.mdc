@@ -1,0 +1,121 @@
+---
+alwaysApply: true
+---
+
+# Project Brief: Burooj Air Website
+
+## Project Identity
+
+**Project Name:** Burooj Air Official Website  
+**Project Type:** Commercial Corporate Website  
+**Version:** 1.0.0  
+**Status:** Production
+
+## Core Mission
+
+Burooj Air is the **first Saudi company licensed for drone cleaning services**. The website serves as the official online presence, showcasing the company's innovative drone-powered cleaning solutions that replace traditional high-risk methods (lifts, scaffolding, facade climbers) with precision drone technology.
+
+## Primary Objectives
+
+1. **Brand Presence**: Establish Burooj Air as the leading licensed drone cleaning service provider in Saudi Arabia
+2. **Service Showcase**: Comprehensively display all drone cleaning services and capabilities
+3. **Lead Generation**: Capture qualified leads through integrated Pipedrive WebForms
+4. **Business Development**: Facilitate franchise and partnership opportunities
+5. **Information Hub**: Provide detailed information about services, team, company history, and contact methods
+6. **Compliance Communication**: Demonstrate adherence to Saudi General Authority of Civil Aviation regulations
+
+## Key Deliverables
+
+### Functional Requirements
+- ✅ Responsive website accessible on all devices
+- ✅ Multilingual support (English primary, Arabic prepared)
+- ✅ Lead generation form integration (Pipedrive)
+- ✅ Service pages with detailed information
+- ✅ Team showcase with employee profiles
+- ✅ Gallery of completed projects (images and videos)
+- ✅ Contact information and location details
+- ✅ Franchise and partnership information pages
+- ✅ News/Blog section for content marketing
+- ✅ SEO optimization for search visibility
+
+### Technical Requirements
+- ✅ Static site generation (SSG) for optimal performance
+- ✅ Client-side rendering (SSR disabled)
+- ✅ Analytics integration (GA4, GTM, TikTok, Snap, Meta pixels)
+- ✅ Mobile-first responsive design
+- ✅ Fast load times and optimized builds
+- ✅ Code splitting for performance
+
+## Stakeholder Expectations
+
+### Business Stakeholders
+- Professional, modern website design reflecting innovation and safety
+- Clear communication of services and competitive advantages
+- Easy lead capture and contact methods
+- Franchise opportunity presentation
+- Compliance and licensing information visibility
+
+### Technical Stakeholders
+- Maintainable, well-structured codebase
+- Performance-optimized static site
+- SEO-friendly implementation
+- Analytics tracking for business insights
+- Scalable architecture for future enhancements
+
+## Project Scope
+
+### In Scope
+- Corporate website with all standard pages (Home, About, Services, Gallery, Contact)
+- Service-specific detail pages (Facade Cleaning, Window Cleaning)
+- Franchise and partnership pages
+- News/Blog functionality
+- Team showcase
+- Lead generation integration
+- Multilingual content structure (English implemented, Arabic prepared)
+- Analytics and tracking implementation
+- SEO optimization
+
+### Out of Scope
+- E-commerce functionality
+- User authentication/accounts
+- Real-time chat or messaging
+- Payment processing
+- Backend API development
+- Content management system (CMS) integration
+- Mobile application
+
+## Constraints and Boundaries
+
+### Technical Constraints
+- Must use Nuxt.js 2 (legacy framework, no migration to Nuxt 3)
+- Static site generation only (no server-side rendering)
+- Client-side rendering limitations
+- Browser compatibility requirements (modern browsers)
+
+### Business Constraints
+- Must comply with Saudi General Authority of Civil Aviation regulations
+- Content must reflect licensed status and compliance
+- Brand guidelines must be followed
+- Lead generation must integrate with existing Pipedrive CRM
+
+### Timeline Constraints
+- Project is in production state
+- Changes must maintain existing functionality
+- No breaking changes to deployed site
+
+## Success Criteria
+
+1. **Performance**: Fast page load times, optimized static assets
+2. **Usability**: Intuitive navigation, clear information hierarchy
+3. **Conversion**: Effective lead generation form placement and functionality
+4. **SEO**: Strong search engine visibility for relevant keywords
+5. **Accessibility**: Responsive design across all device sizes
+6. **Maintainability**: Clean, documented codebase for future updates
+
+## Project Status Summary
+
+The website is **fully functional and in production**. All core features have been implemented. The project is in a maintenance and enhancement phase, with focus on:
+- Code quality improvements
+- Performance optimizations
+- Responsive design refinements
+- Content updates as needed

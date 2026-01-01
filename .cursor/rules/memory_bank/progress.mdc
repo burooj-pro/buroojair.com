@@ -1,0 +1,377 @@
+---
+alwaysApply: true
+---
+
+# Progress: Real-time Ledger of Work
+
+## Project Status Overview
+
+**Current Phase:** Production & Maintenance  
+**Overall Completion:** ~98%  
+**Last Major Update:** GSAP Animations & Project Review
+
+## Completed Features
+
+### Core Website Structure
+- [x] Homepage with all sections
+- [x] About Us page
+- [x] Contact page (dedicated page)
+- [x] Franchise page (index only)
+- [x] Partner page
+- [x] Privacy Policy page
+- [x] Projects page (all projects showcase)
+- [x] Sitemap page
+- [-] Gallery page (removed)
+- [-] Services pages (removed - facade-cleaning, window-cleaning, index)
+- [-] News/Blog section (removed)
+- [-] NDA page (removed)
+- [-] Pilot Position page (removed)
+
+### Component Implementation
+- [x] Header component with navigation
+- [x] Footer component
+- [x] Hero section with video background
+- [x] Services section
+- [x] Mission section (new, with GSAP animations)
+- [x] Service section (detailed numbered services)
+- [x] Team section (Workingteams.vue)
+- [x] Gallery section with light gallery
+- [x] Contact section
+- [x] About Us section
+- [x] Franchise sections
+- [x] Service-specific sections (FacadeCleaning, WindowCleaning, etc.)
+- [x] Template components (Overlay, WithImage)
+- [x] Divider components
+- [x] FAQ section with GSAP animations
+- [x] Our Recent Work section
+- [x] LetsTalk (Franchise) section
+- [x] TTA section
+- [x] Our Clients section
+
+### Technical Implementation
+- [x] Nuxt.js 2 setup and configuration
+- [x] Tailwind CSS integration
+- [x] SCSS custom styles
+- [x] Vue I18n internationalization setup
+- [x] English translations (en-US.js) - 349 keys
+- [x] Arabic translations (ar-SA.js) - 361 keys (all English content translated)
+- [x] Arabic language activation complete
+- [x] Language switcher in header (desktop and mobile)
+- [x] RTL support for Arabic locale
+- [x] localStorage plugin for language preference persistence
+- [x] Pipedrive WebForms integration
+- [x] Analytics integration (GA4, GTM, TikTok, Snap, Meta)
+- [x] SEO optimization (meta tags, Open Graph, Twitter Cards)
+- [x] Responsive design implementation
+- [x] Static site generation configuration
+- [x] Build optimization (code splitting, CSS extraction)
+- [x] GSAP integration and animations
+- [x] Page transitions with GSAP
+- [x] Scroll-triggered animations
+
+### Content & Assets
+- [x] Custom fonts (NeoSans, Helvetica) integrated
+- [x] Video assets organized
+- [x] Employee photos organized
+- [x] Gallery images organized
+- [x] Logo and branding assets
+
+## In Progress
+
+### Code Quality & Maintenance
+- [x] Code quality review and improvements
+- [x] Performance optimization review
+- [x] Responsive design verification across all sections
+- [x] Documentation completion (Memory Bank)
+- [x] GSAP animations implementation
+- [x] Project-wide consistency review
+
+## To Do (Backlog)
+
+### Enhancements
+- [ ] Verify all sections on mobile devices (ongoing)
+- [ ] Performance audit and optimization
+- [ ] Accessibility audit (WCAG compliance)
+- [ ] Cross-browser testing
+- [ ] Image optimization review
+- [ ] Video optimization review
+
+### Potential Features
+- [x] Arabic language activation (✅ Activated - all translations complete)
+- [ ] Additional service pages if needed
+- [ ] Blog/content management improvements
+- [ ] Advanced analytics tracking
+- [ ] A/B testing setup (if needed)
+
+### Technical Debt
+- [ ] Consider Nuxt 3 migration (future consideration)
+- [ ] Dependency updates and security patches
+- [ ] Code refactoring opportunities
+- [ ] Documentation improvements
+- [ ] Remove or fix Debugging.vue page (references missing components)
+
+## Known Issues
+
+### Fixed Issues
+- [x] Form responsiveness in Hero section (addressed)
+- [x] Missing SectionsBenefits component reference (removed from index.vue)
+- [x] Missing background color in location.vue (fixed)
+- [x] FAQ hover effect removed (as requested)
+
+### Minor Issues
+- [ ] Debugging.vue page references missing component (SectionsWorkingGrowth)
+- [ ] Verify all external links and forms work correctly
+- [ ] Check analytics tracking accuracy
+
+### No Critical Issues
+- No blocking bugs or critical issues currently known
+
+## Recent Changes
+
+### Project Cleanup - Unused Files Deletion (Current Session)
+- [x] Deleted unused video files:
+  - [x] Removed test videos from static/videos (C9844 series, ss.mp4, sss.mp4, ssss.mp4, long_vo.mp4, long_viسسdeo.mp4)
+  - [x] Removed duplicate/unused videos (burooj_air_-_al_fozan_cleaning, burooj_air_-_al_qossaib)
+  - [x] Removed unused demo video (Burooj Air - Basic Demo 03.mp4)
+- [x] Deleted unused image files:
+  - [x] Removed entire gallery folder from static/images (gallery page was removed)
+  - [x] Removed unused static images (Twitter.png, section-bg.png, burooj-air-bg-1.png)
+  - [x] Removed unused assets/images files (arriv-img.png, arrived-drone-img.png, populated-img.png, check-icon.png, dronestats.png, footer-logo.png, graph-img.png, info-icon.png, kart_bluesss.png, map_grey.png, right-arrow.svg, solar-cell-img files, BuroojAir_2-4 files, etc.)
+- [x] Deleted unused component files:
+  - [x] Removed SectionsGallery.vue (gallery page removed)
+  - [x] Removed SectionsNews.vue (news pages removed)
+  - [x] Removed SectionsInquiry.vue (not used)
+  - [x] Removed SectionsHeading.vue (not used)
+  - [x] Removed SectionsIntention.vue (not used)
+  - [x] Removed News.vue component (not used)
+  - [x] Removed SectionsFacadeCleaningAdvantages.vue (not used)
+  - [x] Removed SectionsFranchise/About.vue (not used)
+  - [x] Removed SectionsFranchise/Family.vue (not used)
+  - [x] Removed SectionsFranchise/Opportunity.vue (not used)
+- [x] Verified no broken references after cleanup
+- [x] All linter checks passed
+
+### Comprehensive SEO Improvements (Previous Session)
+- [x] Enhanced SEO for all pages with complete meta tags
+- [x] Added Open Graph (OG) tags to all pages:
+  - [x] og:title, og:description, og:image, og:url, og:type, og:site_name
+- [x] Added Twitter Card meta tags to all pages:
+  - [x] twitter:card, twitter:title, twitter:description, twitter:image
+- [x] Added canonical URLs to all pages
+- [x] Improved meta descriptions with relevant keywords
+- [x] Added comprehensive keywords meta tags
+- [x] Added robots meta tags (index/follow for main pages, noindex for privacy/sitemap)
+- [x] Updated OG image to use buroojair-og.png across all pages
+- [x] Pages updated:
+  - [x] Homepage (index.vue) - Complete SEO with OG and Twitter cards
+  - [x] About Us (about-us.vue) - Enhanced with Twitter cards
+  - [x] Contact (contact.vue) - Full SEO implementation
+  - [x] Franchise (franchise/index.vue) - Complete SEO
+  - [x] Projects (projects.vue) - Added OG image and Twitter card
+  - [x] Partner (partner.vue) - Full SEO implementation
+  - [x] Privacy Policy (privacy-policy.vue) - SEO with noindex
+  - [x] Sitemap (sitemap.vue) - SEO with noindex
+
+### Page Cleanup & Navigation Updates (Previous Session)
+- [x] Fixed mobile hero section video height and separation
+- [x] Deleted gallery page and removed all references
+- [x] Deleted all service pages (facade-cleaning, window-cleaning, index)
+- [x] Deleted news pages (index, _slug)
+- [x] Deleted NDA page
+- [x] Deleted pilot-position page
+- [x] Updated navbar links to point to homepage sections
+- [x] Added franchise link to navbar and footer
+- [x] Removed active state styling from navbar links
+- [x] Unified link styles in navbar and footer
+- [x] Updated footer Quick Links (removed Mission, reordered: Home, About Us, Services, Our Projects, Contact)
+- [x] Removed sitemap link from footer
+- [x] Removed contact section from about-us page
+- [x] Removed contact section from privacy-policy page
+- [x] Updated Privacy Policy styling (light font weight for all descriptions)
+- [x] Updated Privacy Policy date to 01-01-2026
+- [x] Updated sitemap to reflect deleted pages
+- [x] Updated franchise page CTA to link to contact page instead of NDA
+- [x] Increased spacing between FAQ items
+
+### Arabic Language Activation (Previous Session)
+- [x] Enabled Arabic locale in nuxt.config.js
+- [x] Uncommented all Arabic translations in ar-SA.js
+- [x] Added all missing Arabic translations (349 English keys → 361 Arabic keys)
+- [x] Registered localStorageLocale plugin for language preference persistence
+- [x] Added language switcher button to header (desktop and mobile)
+- [x] Updated language switching logic to use current locale
+- [x] Verified all translations are complete (0 missing keys)
+
+### GSAP Animations Implementation (Previous Session)
+- [x] Installed GSAP library
+- [x] Created GSAP client-side plugin
+- [x] Implemented page transitions with GSAP
+- [x] Added GSAP animations to Hero section (fade-in on load)
+- [x] Added GSAP animations to Mission section (staggered card reveals)
+- [x] Added GSAP animations to Services section (sticky left, scrollable right with opacity animations)
+- [x] Added GSAP animations to FAQ section:
+  - [x] Header elements fade-in on scroll
+  - [x] FAQ items stagger reveal on scroll
+  - [x] Smooth accordion expand/collapse animations
+- [x] Removed hover effect from FAQ buttons
+
+### Project Review & Fixes (Current Session)
+- [x] Removed non-existent SectionsBenefits reference from index.vue
+- [x] Added missing background color to location.vue
+- [x] Reviewed all pages for consistency
+- [x] Verified component usage across project
+
+### Code Quality Improvements (Previous Sessions)
+- [x] Removed all console.log statements from components
+- [x] Fixed video path typo in Hero.vue (removed double slash)
+- [x] Added proper prop validation to all components
+- [x] Improved Hero section:
+  - [x] Fixed video path
+  - [x] Added error handling for video
+  - [x] Improved accessibility with fallback text
+  - [x] Split mobile and desktop views
+  - [x] Video starts from top behind navbar
+- [x] Fixed Gallery component:
+  - [x] Removed duplicate image rendering
+  - [x] Replaced Bootstrap classes with Tailwind CSS
+  - [x] Improved video handling
+  - [x] Added proper alt text to images
+- [x] Performance optimizations:
+  - [x] Added lazy loading to team member images
+  - [x] Added lazy loading to gallery images
+  - [x] Added lazy loading to TTA product images
+  - [x] Added lazy loading to template images
+  - [x] Optimized video preload settings
+- [x] Accessibility improvements:
+  - [x] Added alt text to logo in Header
+  - [x] Added descriptive alt text to all images
+  - [x] Added aria-labels to videos
+  - [x] Improved image alt text with context
+- [x] Code cleanup:
+  - [x] Removed empty class bindings
+  - [x] Fixed undefined variable references
+  - [x] Improved code structure and readability
+
+### Memory Bank Initialization (Previous Session)
+- [x] Created comprehensive project description
+- [x] Initialized Memory Bank structure
+- [x] Created all core Memory Bank files:
+  - [x] project_brief.mdc
+  - [x] product_context.mdc
+  - [x] active_context.mdc
+  - [x] system_patterns.mdc
+  - [x] tech_context.mdc
+  - [x] progress.mdc (this file)
+- [x] Created devlog directory structure
+
+## Task Status Legend
+
+- `[ ]` = Backlog (not started)
+- `[>]` = To Do (planned, ready to start)
+- `[~]` = In Progress (actively working)
+- `[@]` = In Review (completed, needs review)
+- `[x]` = Done (completed and verified)
+- `[-]` = Canceled (no longer needed)
+
+## Next Immediate Actions
+
+1. ✅ Memory Bank initialization complete
+2. ✅ Code quality improvements completed
+3. ✅ Responsive design improvements completed
+4. ✅ GSAP animations implemented
+5. ✅ Project review completed
+6. ✅ Page cleanup and navigation updates completed
+7. Test form functionality
+8. Performance audit (ongoing monitoring)
+9. Consider removing or fixing Debugging.vue page
+
+## Project Milestones
+
+### Phase 1: Initial Development ✅
+- Website structure and core pages
+- Component implementation
+- Basic styling and layout
+
+### Phase 2: Integration ✅
+- Analytics integration
+- Lead generation forms
+- Content population
+
+### Phase 3: Optimization ✅
+- Performance optimization
+- SEO implementation
+- Responsive design
+
+### Phase 4: Enhancement & Animation ✅
+- GSAP animations
+- Page transitions
+- Scroll-triggered effects
+- Interactive elements
+
+### Phase 5: Maintenance & Polish (Current)
+- Code quality improvements
+- Documentation
+- Ongoing optimizations
+- Consistency reviews
+
+## Notes
+
+- Project is in production and fully functional
+- Focus is on maintenance, improvements, and code quality
+- All major features are implemented
+- GSAP animations enhance user experience
+- Memory Bank helps track future work and decisions
+- All pages use consistent background colors: `bg-[#EBF5FF] dark:bg-[#04061C]`
+- Debugging.vue page exists but references some missing components (non-critical)
+- Navigation simplified: Services link points to homepage section, not dedicated page
+- Several pages removed to streamline site structure (Gallery, Services pages, News, NDA, Pilot Position)
+- Contact is now a dedicated page, removed from other pages
+- Footer navigation updated to match current site structure
+
+## Component Usage Status
+
+### Actively Used Components
+- SectionsHero
+- SectionsServices
+- SectionsMission
+- SectionsService
+- SectionsOurRecentWork
+- SectionsLetsTalk
+- SectionsTTA
+- SectionsFAQ
+- SectionsOurClients
+- SectionsContact
+- SectionsAboutHero
+- SectionsServicesSettingStandard
+- SectionsGeneralWorkingteams
+- SectionsServicesHero
+- SectionsServicesMethod
+- SectionsServicesSolarCells
+- SectionsServicesSafety
+- SectionsServicesFacadeCleaning
+- SectionsServicesWindowCleaning
+- SectionsFranchiseAbout
+- SectionsIntention
+- SectionsFranchiseOpportunity
+- SectionsFranchiseFamily
+- SectionsFranchiseJoinUs
+- SectionsNews
+- SectionsPrivacyPolicy
+- SectionsWorkStand
+- SectionsGallery (integrated into gallery.vue)
+
+### Unused/Test Components
+- SectionsPopulated (only in Debugging.vue)
+- SectionsFamily (only in Debugging.vue, also exists in Franchise/Family.vue)
+- SectionsWorkingGrowth (referenced but doesn't exist)
+- SectionsDevelopment (exists but not used)
+- SectionsArrivedDrone (exists but not used)
+- SectionsGlobalReach (exists but not used)
+- SectionsHeroPartner (exists but not used)
+- SectionsAboutUs (exists but not used)
+- SectionsSolarCells (exists but not used, Services/SolarCells.vue is used instead)
+- SectionsVacantPilotPosition (exists but not used)
+- SectionsNews (exists but news pages removed)
+- SectionsServicesFacadeCleaning (exists but service pages removed)
+- SectionsServicesWindowCleaning (exists but service pages removed)
+- SectionsGallery (exists but gallery page removed)

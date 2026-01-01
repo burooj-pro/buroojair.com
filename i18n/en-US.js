@@ -5,26 +5,30 @@ export default {
 	GALLERY: 'Gallery',
 	NEWS: 'News',
 	ABOUT_US: 'About Us',
+	ABOUT_US_HERO_DESC: 'Burooj Air is a pioneering drone company based in the Kingdom of Saudi Arabia, leading the way in cutting edge UAV (Unmanned Aerial Vehicle) solutions for diverse industrial and commercial applications. As the official GCC agent for TT Aviation, we bring the most advanced drone technology to the region, redefining traditional operations with innovation and precision.',
+	BEHIND_THE_PROJECTS: 'BEHIND THE PROJECTS',
+	BEHIND_THE_PROJECTS_DESC: 'Meet the minds behind the magic. Our team blends creativity, strategy, and passion to turn ideas into impactful solutions. Together, we bring your vision to life one innovation at a time.',
+	JOIN_US: 'Join us',
 	CONTACT: 'Contact',
 	CONTACT_US: 'Contact Us',
 	BECOME_A_PARTNER: 'Become a Partner',
 	EMAIL: 'Email',
 	PHONE: 'Phone',
 	LANGUAGE: 'العربية',
-	COPY_RIGHT: 'Copyright © All rights reserved',
+	COPY_RIGHT: '© 2025 Burooj Air. All rights reserved.',
 	FOR_INQUIRIES_PLEASE_USE_OUR_LISTED_CONTACT_INFO: 'For inquiries, please use our listed contact information.',
 	ADVANTAGES_USING_BUROOJ_AIR_DRONES: 'Benefits of Using Burooj Air Drones',
 	HIGH_SPEED_AND_EFFECTIVE_SURPASSING_TRADITIONAL_METHODS: 'Faster and more efficient, delivering results up to 10 times quicker than traditional methods.',
-	SIMPLIFIED_ACCESS_TO_REMOTE_OR_HARD_TO_GET_TO_PLACES: 'Easily access remote or hard-to-reach areas with drone technology.',
+	SIMPLIFIED_ACCESS_TO_REMOTE_OR_HARD_TO_GET_TO_PLACES: 'Easily access remote or hard to reach areas with drone technology.',
 	REINFORCED_SAFETY_AND_SECURITY: 'Enhances safety compared to conventional methods.',
-	ACCESSING_ELEVATED_AREAS_WITHOUT_REQUIRING_HEIGHT_SPECIFIC_TOOLS: 'Cost-effective solutions for elevated access without specialized tools.',
-	ZERO_CONTACT_ALTERNATIVE: 'A safe, zero-contact alternative.',
+	ACCESSING_ELEVATED_AREAS_WITHOUT_REQUIRING_HEIGHT_SPECIFIC_TOOLS: 'Cost effective solutions for elevated access without specialized tools.',
+	ZERO_CONTACT_ALTERNATIVE: 'A safe, zero contact alternative.',
 	NOW_REQUEST_A_QUOTE_FOR_DRONE_CLEANING: 'Request a Quote Today',
 	ARE_YOU_INTERESTED_IN_HAVING_A_DRONE_CLEAN_THE_WINDOWS_OR_THE_FACADE_OF_YOUR_BUILDING: 'Interested in having a drone clean your building’s windows or facade?',
-	YOU_CAN_CONTACT_US_ANYWHERE_IN_THE_WORLD_FOR_A_NON_BINDING_PRICE_QUOTE: 'Contact us globally for a free, non-binding price quote.',
+	YOU_CAN_CONTACT_US_ANYWHERE_IN_THE_WORLD_FOR_A_NON_BINDING_PRICE_QUOTE: 'Contact us globally for a free, non binding price quote.',
 	SEND_YOUR_INQUIRY_AND_WE_WILL_GET_IN_TOUCH_AS_SOON_AS_POSSIBLE: 'Send us your inquiry, and we’ll respond promptly.',
 	DRONE_SERVICES: ' Who We Are',
-	CLEANING_BUILDINGS_AND_HEAVY_LIFTING: 'Burooj Air is a pioneering drone company based in the Kingdom of Saudi Arabia, leading the way in cutting-edge UAV (Unmanned Aerial Vehicle) solutions for diverse industrial and commercial applications. As the official GCC agent for TT Aviation, we bring the most advanced drone technology to the region, redefining traditional operations with innovation and precision.',
+	CLEANING_BUILDINGS_AND_HEAVY_LIFTING: 'Burooj Air is a Saudi based company specializing in drone solutions, delivering advanced services and technologies for industrial and commercial needs. As the official GCC agent for TT Aviation, Burooj Air brings advanced drone technologies to the region, helping improve traditional operations through smart, efficient, and precise solutions.',
 	CLEANING_BUILDINGS: 'Building Smarter Solutions',
 	CLEANING_BUILDINGS_DESC: "Burooj is at the forefront of drone innovation, offering advanced UAV technologies tailored to industrial and commercial needs. From cleaning and weightlifting to firefighting and aerial filming, our solutions redefine how businesses address complex challenges.",
 	READ_MORE: 'Read More',
@@ -40,19 +44,22 @@ export default {
 	
 	CLEANING_WITH_DRONE: 'Cleaning with Drone',
 	THE_BEST_SOLUTION_TO_CLEAN_BUILDINGS_AND_LIFT_HEAVY_WEIGHTS_IN_A_FASTER_WAY_IS_AVAILABLE_NOW: 'Advanced Drone Technology',
-	UNTIL_NOW_CLEANING_OF_TALL_BUILDINGS_HAS_BEEN_A_COMPLEX_AND_DANGEROUS_UNDERTAKING: "Burooj Air drones are built to handle the toughest tasks. With advanced technology, our UAVs make high-rise facade cleaning safer and more efficient than ever before.",
+	UNTIL_NOW_CLEANING_OF_TALL_BUILDINGS_HAS_BEEN_A_COMPLEX_AND_DANGEROUS_UNDERTAKING: "Burooj Air drones are built to handle the toughest tasks. With advanced technology, our UAVs make high rise facade cleaning safer and more efficient than ever before.",
 	OPPORTUNITIES_AVAILABLE: 'Opportunities Available',
 	PARTICIPATE_IN_THE_MOST_CREATIVE: 'Join the most groundbreaking business concept to revolutionize the cleaning industry in over a century.',
 	TAKE_PART_IN_THE_MOST_INNOVATIVE_BUSINESS_IDEA: 'Be part of the innovative business idea that is transforming the cleaning industry worldwide.',
+	BECOME_A_BUROOJ_AIR_FRANCHISE_PARTNER: 'Become a Burooj Air Franchise Partner',
+	JOIN_PIONEERING_DRONE_CLEANING_BRAND: 'Join a pioneering drone cleaning brand and bring advanced, licensed UAV services to your market.',
+	APPLY_FOR_FRANCHISE: 'Apply for Franchise',
 	LET_S_TALK: "Let's Talk",
 	OUR_INTENTION: 'Our Intention',
 	OUR_MAIN_GOAL_IS_TO_HELP_OTHERS_AND_MAKE_WORKING_LIFE_BETTER_FOR_EVERYONE: 'Our core mission is to help people and enhance the quality of working life for everyone.',
 	WE_WANT_TO_HELP_MAKE_WORKDAYS: 'We strive to make workdays safer for individuals relying on lifts, scaffolding, or scaling buildings.',
 	THESE_ARE_PHYSICALLY_DEMANDING_JOBS: 'Such physically demanding jobs often lead to stress and injuries. Burooj Air’s drones are designed to alleviate these risks and improve workplace safety.',
 	GROUP_IN_2018_WHICH_GREW_INTO_BUROOJ_AIR_DRONES_THE_BUROOJ_GROUPS_PRIORITY_WAS_HIGH_PRESSURE_CLEANING: 'OUR TEAM',
-	MOHAMMED_ALOTAIBI_FOUNDED_THE_BUROOJ: 'In 2020, our team began advancing drone technology to address cleaning and heavy-lifting challenges in Saudi Arabia. By 2023, after years of R&D, we delivered a groundbreaking solution now recognized globally as one of the safest. We proudly partner with TT Aviation, integrating their drones with our proprietary technologies for unmatched performance.',
+	MOHAMMED_ALOTAIBI_FOUNDED_THE_BUROOJ: 'In 2020, our team began advancing drone technology to address cleaning and heavy lifting challenges in Saudi Arabia. By 2023, after years of R&D, we delivered a groundbreaking solution now recognized globally as one of the safest. We proudly partner with TT Aviation, integrating their drones with our proprietary technologies for unmatched performance.',
 	OUR_HISTORY_AND_THE_EVOLUTION_OF_CLEANING: 'Our History and the Evolution of Cleaning',
-	THE_ESTIMATED_NEED_FOR_FUTURE_DRONE_CLEANING_SERVICES_IS_APPROXIMATELY: 'The demand for drone-based cleaning services is projected to grow exponentially in the coming years.',
+	THE_ESTIMATED_NEED_FOR_FUTURE_DRONE_CLEANING_SERVICES_IS_APPROXIMATELY: 'The demand for drone based cleaning services is projected to grow exponentially in the coming years.',
 	DRONES_INTERNATIONALLY: 'DRONES INTERNATIONALLY',
 	GLOBAL_REACH: 'GLOBAL REACH',
 	REACH_WORLDWIDE: 'WORLDWIDE REACH',
@@ -69,7 +76,7 @@ export default {
 	IMPORTANT_KEY_FACTS: 'Essential Facts',
 	ENQUIRE_TODAY: 'Enquire Today',
 	
-	THE_EVOLUTION_OF_HIGH_RISE_WINDOW_AND_FACADE_CLEANING_HAS_ARRIVED: 'The revolution in high-rise window and facade cleaning has arrived with Burooj Air.',
+	THE_EVOLUTION_OF_HIGH_RISE_WINDOW_AND_FACADE_CLEANING_HAS_ARRIVED: 'The revolution in high rise window and facade cleaning has arrived with Burooj Air.',
 	HIGH_RISE_WINDOW_AND_FACADE_CLEANING: 'Window and Facade Cleaning',
 	FOR_FACADE_AND_WINDOW_CLEANING_WE_USE_MULTIPLE_METHODS: 'We employ various innovative methods for facade and window cleaning.',
 	SETTING_THE_STANDARD_FOR_WORKING_DRONES: 'Setting the Standard for Drone Technology',
@@ -96,27 +103,27 @@ export default {
 	
 	//about us page
 	BUROOJ_AIR_IS_A_DRONE_COMPANY_BASED_IN_THE_KINGDOM_OF_SAUDI_ARABIA: `
-   Burooj Air is a pioneering drone company based in the Kingdom of Saudi Arabia, specializing in the design and deployment of advanced UAVs for industrial and commercial applications. Our team, composed of highly skilled Saudi professionals, continuously innovates to develop drone solutions that address diverse business challenges. From cleaning buildings to servicing outdoor assets, we deliver cutting-edge capabilities.
-Through strategic partnerships with international companies, we lead in research and development while fostering collaborations with global manufacturers to expand expertise within the Kingdom. Burooj Air proudly serves as the exclusive GCC partner and distributor for TT Aviation, bringing state-of-the-art UAV technologies to the region.
+   Burooj Air is a pioneering drone company based in the Kingdom of Saudi Arabia, specializing in the design and deployment of advanced UAVs for industrial and commercial applications. Our team, composed of highly skilled Saudi professionals, continuously innovates to develop drone solutions that address diverse business challenges. From cleaning buildings to servicing outdoor assets, we deliver cutting edge capabilities.
+Through strategic partnerships with international companies, we lead in research and development while fostering collaborations with global manufacturers to expand expertise within the Kingdom. Burooj Air proudly serves as the exclusive GCC partner and distributor for TT Aviation, bringing state of the art UAV technologies to the region.
 
 `,
-CLEANING_BUILDINGS_BUROOJ_AIR_DRONES_CAN_BE_USED: `Cleaning Buildings: Burooj Air’s drones provide an efficient, safe, and cost-effective solution for cleaning building exteriors by removing dirt and dust. This eliminates the need for traditional methods such as scaffolding and manual labor, saving businesses significant time and resources.`,
+CLEANING_BUILDINGS_BUROOJ_AIR_DRONES_CAN_BE_USED: `Cleaning Buildings: Burooj Air’s drones provide an efficient, safe, and cost effective solution for cleaning building exteriors by removing dirt and dust. This eliminates the need for traditional methods such as scaffolding and manual labor, saving businesses significant time and resources.`,
 
 WEIGHTLIFTING_BUROOJ_AIR_DRONES_CAN_BE_USED: `Weightlifting: Our drones are capable of lifting and transporting loads of up to 50 kg, including construction materials and medical supplies. This offers a fast and reliable solution for organizations that require heavy objects to be moved swiftly, particularly in remote or challenging areas.`,
 
 HEAT_MEASUREMENT_AND_FIRE_FIGHTING: `Heat Measurement & Fire Fighting: Equipped with thermal sensors, Burooj Air drones detect heat signatures, identify fire hazards, and monitor industrial equipment temperatures to prevent accidents. Additionally, they can be fitted with fire suppression systems to reach inaccessible areas, making firefighting safer and more efficient.`,
 
-CAMERA_FILMING: `Camera Filming: Burooj Air’s drones, equipped with high-resolution cameras, capture aerial footage and film events from unique perspectives. This makes them invaluable for businesses and organizations needing bird’s-eye view documentation or creative visual content.`,
+CAMERA_FILMING: `Camera Filming: Burooj Air’s drones, equipped with high resolution cameras, capture aerial footage and film events from unique perspectives. This makes them invaluable for businesses and organizations needing bird’s eye view documentation or creative visual content.`,
 
 OUR_MAIN_INTENTION_IS_TO_DO_GOOD: `Our primary mission is to bring positive change and improve people’s working lives through innovative drone solutions.`,
 
 WE_AIM_TO_CONTRIBUTE_TO_A_SAFER_WORK: `We strive to enhance workplace safety, particularly for individuals working at great heights on lifts, scaffolding, or facades. Our drones aim to mitigate risks and ensure safer work environments.`,
 
-THESE_ARE_PHYSICALLY_DEMANDING_JOBS: `These are physically demanding jobs that often result in stress injuries and daily exposure to danger. Burooj Air's drones are specifically designed to support and protect individuals in these high-risk roles.`,
+THESE_ARE_PHYSICALLY_DEMANDING_JOBS: `These are physically demanding jobs that often result in stress injuries and daily exposure to danger. Burooj Air's drones are specifically designed to support and protect individuals in these high risk roles.`,
 
 BUROOJ_AIR_WORKING_DRONE_EVOLVED: `Burooj Air Working Drone evolved from the expertise of the Burooj Air Group, founded by Mohammed Bin Faihan. With extensive experience in facade and window cleaning, the group has established itself as an industry leader in innovative cleaning solutions.`,
 
-BUROOJ_AIR_WORKING_DRONE_ORIGINATED: `The Burooj Air Working Drone was born from the vision to develop an innovative and efficient method for cleaning facades and windows. Extensive modifications were made to create a unique drone equipped with tailor-made mounting systems and specialized cleaning tools. Additionally, a patent-pending safety mechanism ensures the drone remains secure during operation.`,
+BUROOJ_AIR_WORKING_DRONE_ORIGINATED: `The Burooj Air Working Drone was born from the vision to develop an innovative and efficient method for cleaning facades and windows. Extensive modifications were made to create a unique drone equipped with tailor made mounting systems and specialized cleaning tools. Additionally, a patent pending safety mechanism ensures the drone remains secure during operation.`,
 
 THE_DRONE_HAS_BEEN_EXTENSIVELY_TESTED: `The drone has undergone rigorous testing and has been successfully commercialized for window and facade cleaning. It has been operational since 2020, with proven results from the Burooj Air Group's deployments in Saudi Arabia.`,
 
@@ -128,9 +135,9 @@ THE_FUTURE_HOLDS_MANY_OPPORTUNITIES_FOR_DEVELOPMENT: `The future of Burooj Air W
 SPRAY_PAINTING: 'Date Palms Pollination',
 WITH_CONTINUED_DEVELOPMENT: `In collaboration with our partners, we are developing an automated drone solution for date palm pollination, digitizing this crucial agricultural process based on market needs.`,
 
-HIGHER_ALTITUDES: 'Reaching New Heights for High-Rise Buildings',
+HIGHER_ALTITUDES: 'Reaching New Heights for High Rise Buildings',
 
-WE_HAVE_SOLVED_THE_OPERATING_HEIGHT_RESTRICTION: `Our patent-pending roof safety system has resolved height restrictions for drone operations. We are now able to operate drones safely at altitudes of up to 600 meters and beyond, paving the way for unprecedented capabilities.`,
+WE_HAVE_SOLVED_THE_OPERATING_HEIGHT_RESTRICTION: `Our patent pending roof safety system has resolved height restrictions for drone operations. We are now able to operate drones safely at altitudes of up to 600 meters and beyond, paving the way for unprecedented capabilities.`,
 
 GOGGLES: 'Specialized Flight Goggles',
 
@@ -141,32 +148,32 @@ LOOKING_FURTHER_WE_ARE_PLANNING: `Looking ahead, we are planning to establish re
 
 REMOTE_CONTROL_ROOMS_WOULD_BE_A_GREAT_ADVANTAGE: `Remote control rooms provide significant advantages, particularly in challenging environments with high noise levels, extreme temperatures, or other adverse conditions.`,
 
-MOHAMMED_CEO: 'Mohammed bin Faihan - Founder & Chief Executive Officer',
-MOHANNAD_CTO: 'Mohannad F. Alotaibi - Chief Technology Officer',
-OSAMAH_lg: 'Osamah Abdullah Algrainees - Managing Director',
-FAISAL_PM: 'Faisal Ghazi Awadh - Projects Manager',
-HATIM_DOM: 'Hatim Hussin Shuwaikan - Drone Operations Manager',
+MOHAMMED_CEO: 'Mohammed bin Faihan Founder & Chief Executive Officer',
+MOHANNAD_CTO: 'Mohannad F. Alotaibi Chief Technology Officer',
+OSAMAH_lg: 'Osamah Abdullah Algrainees Managing Director',
+FAISAL_PM: 'Faisal Ghazi Awadh Projects Manager',
+HATIM_DOM: 'Hatim Hussin Shuwaikan Drone Operations Manager',
 MOHAMMED_DMS: '+25 Other Valuable Team Members',
 
 
 	//services page
 
-	UP_UNTIL_NOW_HIGH_RISE_WINDOW_AND_FACADE_CLEANING: `Until now, high-rise window and facade cleaning was performed by specialized cleaning companies using abseiling, skylifts, or expensive scaffolding for smaller buildings. This profession is among the six most dangerous globally, and due to high costs, cleaning tasks are often delayed, leaving windows dirty for extended periods.`,
+	UP_UNTIL_NOW_HIGH_RISE_WINDOW_AND_FACADE_CLEANING: `Until now, high rise window and facade cleaning was performed by specialized cleaning companies using abseiling, skylifts, or expensive scaffolding for smaller buildings. This profession is among the six most dangerous globally, and due to high costs, cleaning tasks are often delayed, leaving windows dirty for extended periods.`,
 
-	WITH_THE_INNOVATION_OF_BUROOJ_AIR_WORKING_DRONE: `The innovative Burooj Air Working Drone has revolutionized high-rise cleaning by eliminating the need for abseilers, rope access, and skylifts. This solution offers a safer, more efficient, and cost-effective alternative to traditional methods.`,
+	WITH_THE_INNOVATION_OF_BUROOJ_AIR_WORKING_DRONE: `The innovative Burooj Air Working Drone has revolutionized high rise cleaning by eliminating the need for abseilers, rope access, and skylifts. This solution offers a safer, more efficient, and cost effective alternative to traditional methods.`,
 	
-	A_MORE_EFFICIENT_SAFER_AND: `A More Efficient, Safer, and Cost-Effective Solution`,
+	A_MORE_EFFICIENT_SAFER_AND: `A More Efficient, Safer, and Cost Effective Solution`,
 	
-	BUROOJ_AIR_WORKING_DRONE_ARE_NOW_BEING: `Burooj Air Working Drones are now being deployed commercially worldwide for window and facade cleaning. Development is underway to expand their capabilities, including drone-based painting solutions in the near future.`,
+	BUROOJ_AIR_WORKING_DRONE_ARE_NOW_BEING: `Burooj Air Working Drones are now being deployed commercially worldwide for window and facade cleaning. Development is underway to expand their capabilities, including drone based painting solutions in the near future.`,
 	
-	FOR_NOW_WE_HAVE_COMMERCIALISED_THE_USE_FOR: `Currently, Burooj Air Working Drones are commercialized for window cleaning, achieving up to 1,500 square meters per hour using our eco-friendly SelfCleaner solution (mixed with 75% water). For a fully eco-friendly option, pure water can clean up to 500 square meters per hour.`,
+	FOR_NOW_WE_HAVE_COMMERCIALISED_THE_USE_FOR: `Currently, Burooj Air Working Drones are commercialized for window cleaning, achieving up to 1,500 square meters per hour using our eco friendly SelfCleaner solution (mixed with 75% water). For a fully eco friendly option, pure water can clean up to 500 square meters per hour.`,
 	
 	BUROOJ_AIR_WORKING_DRONE_IS_IN_FURTHER_DEVELOPMENT: `Burooj Air Working Drones are undergoing further development to operate at heights exceeding 100 meters and to safely reach altitudes up to 600 meters, expanding their operational capabilities.`,
 	
 
-	IF_THE_FACADE_IS_TRADITIONALLY_DIRTY_THE_DRONE: `For traditionally dirty facades, the drone applies the SelfCleaner solution as a foam using low pressure. This specially formulated cleaner, developed by the Burooj Air Group, is highly effective for tough cleaning tasks. For extremely dirty buildings or those that have not been cleaned in a long time, the process includes a follow-up cleaning using the clean-water method.`,
+	IF_THE_FACADE_IS_TRADITIONALLY_DIRTY_THE_DRONE: `For traditionally dirty facades, the drone applies the SelfCleaner solution as a foam using low pressure. This specially formulated cleaner, developed by the Burooj Air Group, is highly effective for tough cleaning tasks. For extremely dirty buildings or those that have not been cleaned in a long time, the process includes a follow up cleaning using the clean water method.`,
 
-	THE_CLEAN_WATER_METHOD_IS_IN_SHORT: `The clean-water method utilizes purified water treated with reverse osmosis, heated to 70 degrees, and applied with high pressure by the Burooj Air Working Drone. This eco-friendly method ensures thorough cleaning,`,
+	THE_CLEAN_WATER_METHOD_IS_IN_SHORT: `The clean water method utilizes purified water treated with reverse osmosis, heated to 70 degrees, and applied with high pressure by the Burooj Air Working Drone. This eco friendly method ensures thorough cleaning,`,
 	CLEANED: `cleaned`,
 	WITHOUT_CHEMICALS: 'without the use of chemicals',
 	WINDOWS_STAY_CLEANER: `and results in windows that stay cleaner for longer. It also minimizes surface wear and prevents streaks, which are common with traditional, more hazardous manual cleaning methods.`,
@@ -175,19 +182,19 @@ MOHAMMED_DMS: '+25 Other Valuable Team Members',
 	
 	//new
 	THIS_PROCEDURE_KEEPS: `Our advanced drone cleaning solution protects solar panels, ensuring minimal risk compared to traditional cleaning methods`,
-	OUR_WINDOW_CLEANING_METHOD: `Our innovative drone technology offers the ideal solution for solar panel maintenance. Cost-effective and safe, it enables frequent cleaning to combat efficiency losses caused by sandstorms, ensuring panels operate at peak performance. Choose a safer, smarter, and more efficient way to maintain your solar investments.`,
+	OUR_WINDOW_CLEANING_METHOD: `Our innovative drone technology offers the ideal solution for solar panel maintenance. Cost effective and safe, it enables frequent cleaning to combat efficiency losses caused by sandstorms, ensuring panels operate at peak performance. Choose a safer, smarter, and more efficient way to maintain your solar investments.`,
 	ADDITIONALLY_THIS_TECNHIQUE: `This technique also prevents stains and keeps surfaces cleaner for a longer duration compared to conventional cleaning methods.`,
 	
 	//endnew
 
 	//new2
-	WE_HAVE_SOLVED_THE_OPERATING_HEIGHT_RESTRICTION: `Our patent-pending roof safety system has resolved height restrictions, enabling drones to operate safely at altitudes up to 600 meters and beyond. Ongoing testing ensures reliable and efficient performance at these heights.`,
+	WE_HAVE_SOLVED_THE_OPERATING_HEIGHT_RESTRICTION: `Our patent pending roof safety system has resolved height restrictions, enabling drones to operate safely at altitudes up to 600 meters and beyond. Ongoing testing ensures reliable and efficient performance at these heights.`,
 
 	USE_LATEST_DRONE_CONTROL_TECHNOLOGIES: `Spray Painting`,
 	
 	AS_A_RESULT_OF_OPERATING_IN_HIGHER_ALTITUDES: `With further development, our cleaning drones will soon be capable of performing building spray painting, marking a significant milestone in drone innovation.`,
 	
-	LONG_DISTANCE_DRONE_CONTROL: 'Long-Distance Drone Control (Inspection Drones)',
+	LONG_DISTANCE_DRONE_CONTROL: 'Long Distance Drone Control (Inspection Drones)',
 	
 	AFTER_EVALUATION: `After assessing market needs, we are collaborating with partners to develop drones operable from long distances via the internet. These models will serve industries requiring frequent inspections in remote or harsh environments.`,
 	
@@ -199,7 +206,7 @@ MOHAMMED_DMS: '+25 Other Valuable Team Members',
 	
 	RESULT_OPERATING_IN_HIGHER_ALTITUDES: `Operating at higher altitudes necessitates the use of specialized flight goggles, which are currently being tested to ensure safety and precision.`,
 	
-	WE_HAVE_SOLVED_THE_OPERATING_HEIGHT: `Our patent-pending roof safety system effectively removes height limitations, allowing drones to operate securely at elevations of up to 600 meters. Continued testing ensures safe and efficient operations at these altitudes.`,
+	WE_HAVE_SOLVED_THE_OPERATING_HEIGHT: `Our patent pending roof safety system effectively removes height limitations, allowing drones to operate securely at elevations of up to 600 meters. Continued testing ensures safe and efficient operations at these altitudes.`,
 	 //endnew2
 
 THIS_METHOD_DOES_NOT_HARM_THE_PANEL_SURFACE: `This method ensures no damage to the panel surface, preserving its integrity.`,
@@ -212,7 +219,7 @@ BUROOJ_AIR_WORKING_DRONE_EVOLVED_OUT: `The Burooj Air Working Drone was develope
 	IF_YOU_ARE: `If you’re a`,
 	BUILDING_OWNER_DEVELOPER: `building owner, developer, or building management company,`,
 	CLEANING_COMPANY: `cleaning company`,
-	WITH_HIGH_RISE_WINDOW_CLEANING: `with high-rise window cleaning contracts or requirements, and you’re seeking to reduce costs while ensuring a safer and more secure service, then Burooj Air Working Drone has the perfect solution for you.\n`,
+	WITH_HIGH_RISE_WINDOW_CLEANING: `with high rise window cleaning contracts or requirements, and you’re seeking to reduce costs while ensuring a safer and more secure service, then Burooj Air Working Drone has the perfect solution for you.\n`,
 	WHICH_COUNTRY: 'Which Country?',
 	FOR_THE_MANAGEMENT_OF_BUROOJ_AIR_WORKING: `At Burooj Air, safety is our top priority in managing Working Drones. Our primary goal is to ensure that all staff, partners, and franchisees comply with our stringent safety policies, mitigating risks and safeguarding the brand's integrity.`,
 	BUROOJ_AIR_WORKING_DRONE_IMPLEMENTS: `Burooj Air Working Drone adheres to comprehensive safety procedures and precautions aligned with global safety standards outlined in the company’s policies. These include but are not limited to:`,
@@ -224,16 +231,16 @@ BUROOJ_AIR_WORKING_DRONE_EVOLVED_OUT: `The Burooj Air Working Drone was develope
 	
 
 	//facade cleaning page
-	HIGH_RISE_FACADE_CLEANING: `High-Rise Facade Cleaning`,
+	HIGH_RISE_FACADE_CLEANING: `High Rise Facade Cleaning`,
 	SELFCLEANER_METHOD: `SelfCleaner Method`,
 	THE_SELFCLEANER_METHOD_WAS_DEVELOPED: `The SelfCleaner method, developed in 2015, is designed to address issues caused by humidity, pollution, algae, microorganisms, and greenery on facades.`,
 	
-	THE_METHOD_ENABLES_FACADE_CLEANING: `This method allows for facade cleaning without high-pressure flushing. The special SelfCleaner agent is applied as foam using low pressure, and natural weather elements like rain and wind clean the surface over 3-4 weeks.`,
+	THE_METHOD_ENABLES_FACADE_CLEANING: `This method allows for facade cleaning without high pressure flushing. The special SelfCleaner agent is applied as foam using low pressure, and natural weather elements like rain and wind clean the surface over 3-4 weeks.`,
 	
 	ALREADY_AFTER_1_2_WEEKS_YOU_WILL: `Visible results can be observed as early as 1-2 weeks, with the SelfCleaner continuing its effect for up to 3 months. This method avoids high pressure, preventing unnecessary wear and tear while safeguarding facade integrity.`,
 	
 	FACADE_CLEANING: `Facade Cleaning`,
-	MANY_MULTI_STOREY_BUILDINGS_CREATE: `Many multi-storey buildings present significant challenges for professional cleaners, requiring adherence to strict safety protocols. Facades come in diverse materials such as glass, stone, copper, composite aluminium sheets, and stainless steel, each requiring specialized cleaning methods.`,
+	MANY_MULTI_STOREY_BUILDINGS_CREATE: `Many multi storey buildings present significant challenges for professional cleaners, requiring adherence to strict safety protocols. Facades come in diverse materials such as glass, stone, copper, composite aluminium sheets, and stainless steel, each requiring specialized cleaning methods.`,
 	
 	ENVIRONMENTAL_FRIENDLY_SOLUTIONS: `Environmentally friendly solutions are increasingly demanded by organizations, developers, and governments. Burooj Air Working Drone offers safer, more efficient alternatives to traditional methods, completing tasks quicker and with greater environmental responsibility.`,
 	
@@ -242,7 +249,7 @@ BUROOJ_AIR_WORKING_DRONE_EVOLVED_OUT: `The Burooj Air Working Drone was develope
 
 	BUROOJ_AIR_WORKING_DRONE_IS_NOW_ABLE_TO_PROVIDE: `Burooj Air Working Drone now offers an innovative alternative to challenges previously addressed only by traditional methods, redefining efficiency and safety standards.`,
 
-	BUROOJ_AIR_WORKING_DRONE_IS_ALSO_CONSIDERED_TO_BE_WORKSAFE: `Burooj Air Working Drone is recognized for its work-safe technology. Operating at hazardous heights often poses significant risks, but this drone technology eliminates the need for physical access to dangerous environments. This innovation ensures a much safer approach to tasks traditionally considered high-risk.`,
+	BUROOJ_AIR_WORKING_DRONE_IS_ALSO_CONSIDERED_TO_BE_WORKSAFE: `Burooj Air Working Drone is recognized for its work safe technology. Operating at hazardous heights often poses significant risks, but this drone technology eliminates the need for physical access to dangerous environments. This innovation ensures a much safer approach to tasks traditionally considered high risk.`,
 	
 
 	SQM_HOUR: `sqm/hour`,
@@ -260,30 +267,30 @@ BUROOJ_AIR_WORKING_DRONE_EVOLVED_OUT: `The Burooj Air Working Drone was develope
 	WITHOUT_EQUIPMENT: `without additional equipment`,
 	BAR_PRESSURE: `Bar Pressure`,
 	CAPACITY_WATER_PRESSURE: `Water Pressure Capacity`,
-	AIRSENSE_ADS: `AirSense ADS-B System`,
+	AIRSENSE_ADS: `AirSense ADS B System`,
 	ADVANCED_FLIGHT_COLLISION: `Advanced flight and collision warning system`,
-	SELF_HEATING_BATTERY: `Self-heating battery technology`,
+	SELF_HEATING_BATTERY: `Self heating battery technology`,
 	EFFICIENT_BATTERY_USE: `Optimized battery efficiency`,
 	TO: `to`,
 	WORKING_TEMPERATURE_RANGE: `Operating Temperature Range`,
 	IP_45: `IP 45 Rating`,
-	PROTECTED_AGAINST_PRESSURE: `Protected against low-pressure water jets`,
+	PROTECTED_AGAINST_PRESSURE: `Protected against low pressure water jets`,
 	BUROOJ_AIR_DRONES_PROVIDES_A_SOLUTION: `Burooj Air Drones provides tailored solutions for you, whether you're a`,
 	BUILDING_OWNER_DEVELOPER_BUILDING_MANAGEMENT_BUSINESS_OR: `building owner, developer, property management professional, or cleaning service provider`,
 	BUROOJ_AIR_DRONES: `Burooj Air Drones`,
 	
-	OFFERS_VARIETY_OF_DIRECT_INDIRECT: `Burooj Air offers a variety of direct and indirect approaches to provide this service, collaborating with a diverse range of businesses to secure tailored contracts. Whether you're a direct client seeking a one-time service, a construction firm needing long-term fixed contracts, a developer or building owner aiming to reduce costs, or simply curious about how this technology can benefit you, we are here to help. 
+	OFFERS_VARIETY_OF_DIRECT_INDIRECT: `Burooj Air offers a variety of direct and indirect approaches to provide this service, collaborating with a diverse range of businesses to secure tailored contracts. Whether you're a direct client seeking a one time service, a construction firm needing long term fixed contracts, a developer or building owner aiming to reduce costs, or simply curious about how this technology can benefit you, we are here to help. 
 
-	Get in touch with us, and a member of our team will assist you in finding the most cost-effective and secure solution for high-rise cleaning.`,
+	Get in touch with us, and a member of our team will assist you in finding the most cost effective and secure solution for high rise cleaning.`,
 	
 
 	//end facade cleaning
 
 	//window cleaning page
 
-	HIGH_RISE_COMMERICAL_WINDOW_CLEANING: `High-rise commercial window cleaning is often time-consuming and costly. Burooj Air Working Drone offers a safer, more efficient, and faster solution, significantly reducing time and expenses.`,
+	HIGH_RISE_COMMERICAL_WINDOW_CLEANING: `High rise commercial window cleaning is often time consuming and costly. Burooj Air Working Drone offers a safer, more efficient, and faster solution, significantly reducing time and expenses.`,
 
-	MODERN_DAY_BUILDINGS_INCLUDING: `Modern buildings, such as apartment complexes, office developments, and commercial properties, feature extensive glazing. Due to their height, design, and location, maintaining these buildings can be both time-consuming and expensive. Work at such heights often involves substantial risks and high costs.\n`,
+	MODERN_DAY_BUILDINGS_INCLUDING: `Modern buildings, such as apartment complexes, office developments, and commercial properties, feature extensive glazing. Due to their height, design, and location, maintaining these buildings can be both time consuming and expensive. Work at such heights often involves substantial risks and high costs.\n`,
 	
 	UP_UNTIL_NOW_ONLY_PRO: `Until now, only professional`,
 	
@@ -300,7 +307,7 @@ BUROOJ_AIR_WORKING_DRONE_EVOLVED_OUT: `The Burooj Air Working Drone was develope
 	
 	BUROOJ_AIR_WORKING_DRONE: `Burooj Air Working Drone`,
 	
-	HAS_MANY_WAYS_THAT_CAN_PROVIDE: `offers multiple approaches to deliver this service, both directly and through partnerships with various companies. Whether you’re a direct client seeking a one-time service, a construction firm requiring long-term contracts, a developer or building owner aiming to cut costs, or simply exploring how this technology can benefit you, we are here to help. Contact us today, and our team will guide you to the most cost-effective and safe solution for your high-rise cleaning needs.`,
+	HAS_MANY_WAYS_THAT_CAN_PROVIDE: `offers multiple approaches to deliver this service, both directly and through partnerships with various companies. Whether you’re a direct client seeking a one time service, a construction firm requiring long term contracts, a developer or building owner aiming to cut costs, or simply exploring how this technology can benefit you, we are here to help. Contact us today, and our team will guide you to the most cost effective and safe solution for your high rise cleaning needs.`,
 	
 
 	//end window cleaning
@@ -314,12 +321,12 @@ BUROOJ_AIR_WORKING_DRONE_EVOLVED_OUT: `The Burooj Air Working Drone was develope
 	WE_THINK_OF_OUR_PARTNERS_AS_FAMILY: `At Burooj Air, we treat our partners like family. By supporting and uplifting each other, we grow stronger and achieve greater success together.`,
 	GET_INVOLVED_AND_BECOME_PARTNER: `Join Us and Become a Partner`,
 	WE_ARE_SEEKING_INTERSET_FOR_COUNTRY_PARTNERS: `We are actively seeking country partners and franchise operators in established and new regions. With inquiries pouring in daily, we are eager to meet demand. Once a commercial agreement is finalized, we provide the following:`,
-	The_drone_and_all_the_fitting_required_to_operate_the_drone_for_cleaning_at_heights: `All necessary drones and fittings for high-altitude cleaning operations`,
+	The_drone_and_all_the_fitting_required_to_operate_the_drone_for_cleaning_at_heights: `All necessary drones and fittings for high altitude cleaning operations`,
 	The_required_equipment_list_necessary_to_operate: `A comprehensive equipment list required for smooth operations`,
 	Assistance_and_application_directly_to_the_countries_civil_aviation_authority_for_licensing: `Support and applications for licensing with the respective country’s civil aviation authority (for country partners only)`,
 	Full_UAV_operators_manual: `A detailed UAV operator's manual`,
 	COST: `Investment Costs`,
-	If_like_to_find_out_more_and_get_involved_regardless: `If you’d like to learn more about becoming a country partner, drone operator, or exploring other opportunities with Burooj Air, scroll further and click the link/button below.`,
+	If_like_to_find_out_more_and_get_involved_regardless: `If you'd like to learn more about becoming a country partner, drone operator, or exploring other opportunities with Burooj Air, scroll further and submit the form below.`,
 	Our_partnership_and_exclusive_master_license: `Our partnership and exclusive master license/franchise grants rights within a country to develop the Burooj Air presence and establish a network of operators in local areas and territories.`,
 	Our_aim_is_to_work_with_our_partners_to_expand: `We aim to work closely with our partners to expand drone usage responsibly. Rather than merely selling drones, we focus on strengthening the Burooj Air brand and leveraging our expertise. This ensures sustained growth for our brand and our partners, positioning us as market leaders in drone services.`,
 	NDA_BUTTON: `Click here to access the NDA for Burooj Air`,
@@ -328,16 +335,20 @@ BUROOJ_AIR_WORKING_DRONE_EVOLVED_OUT: `The Burooj Air Working Drone was develope
 
 
 	//NDA section
-	BUROOJ_AIR_NDA_FORM: `Burooj Air - Franchise NDA Form`,
-	FRANCHISE_MODEL: `Franchise Model - Burooj Air`,
-	NDA_AGREEMENT: `Non-Disclosure Agreement`,
+	BUROOJ_AIR_NDA_FORM: `Burooj Air Franchise NDA Form`,
+	FRANCHISE_MODEL: `Franchise Model Burooj Air`,
+	NDA_AGREEMENT: `Non Disclosure Agreement`,
+	BUROOJ_AIR_WORKING_DRONE_GROWTH: `BUROOJ AIR WORKING DRONE GROWTH`,
+	DRONE_USE_IS_INCREASING_WORLDWIDE: `Drone use is increasing worldwide for a variety of purposes, and many industries are still seeing rapid innovation. No matter if they are flown for recreational, military, or commercial purposes, drones are becoming more and more common. The worldwide drone business is expanding year after year.`,
+	BUROOJ_AIR_DRONES_IS_PART_OF_EXPANSION: `Burooj Air Drones is a part of this expansion commercializing the usage of drones for the cleaning business by utilizing several solutions.`,
+	BUROOJ_AIR_DRONES_OFFERS_COMPREHENSIVE_SOLUTION: `Burooj Air Drones offers a comprehensive contactless solution that reduces the hazards associated with conventional techniques. A contactless solution might also lessen the long term risk to building structures, where minor mishaps can occasionally occur without warning and necessitate repairs years later.`,
 	THIS_AGREEMENT_NDA_IS_ENTERED: `This Agreement (the NDA) is entered into between:`,
 	BUROOJ_PRIVATE_LIMITED_COMPANY: `(1) Burooj, a private limited company incorporated under the laws of Saudi Arabia, with its registered office located at Prince Turki St, Khobar, Saudi Arabia; and`,
 	THE_VISITOR_TO_THIS_PAGE: `(2) The visitor to this page and recipient of information from Burooj Air (the Recipient). Together referred to as the "Parties" and individually as a "Party" to this NDA.`,
 	BACKGROUND: `Background`,
 	THE_COMPANY_HAS_DEVELOPED: `(A) The Company has developed a drone technology for the cleaning industry and is exploring a potential collaboration (the Collaboration) with the Recipient. The Company invites the Recipient to discuss a distribution or resale agreement and will provide a demonstration of its drone technology. Additionally, the Recipient will receive certain Confidential Information (as defined in Clause 1.1).`,
 	THIS_NDA_SETS_OUT: `(B) This NDA outlines the terms and conditions governing the disclosure of Confidential Information by the Company to the Recipient.`,
-	THE_CONFIDENTIAL_INFORMATION: `(C) Confidential Information disclosed by the Company to the Recipient will be shared on a non-exclusive basis, and the Company reserves the right to disclose the same information to other entities.`,
+	THE_CONFIDENTIAL_INFORMATION: `(C) Confidential Information disclosed by the Company to the Recipient will be shared on a non exclusive basis, and the Company reserves the right to disclose the same information to other entities.`,
 	AGREED_TERMS: `Agreed Terms`,
 	CONFIDENTIALITY: `1 Confidentiality`,
 	FOR_THE_PURPOSE_OF_THIS_NDA: `1.1 Confidential Information refers to all information (in any form or medium) disclosed or made available by the Company to the Recipient in connection with the demonstration of the drone technology or the proposed Collaboration, including information regarding the existence, nature, or progress of discussions between the Parties.`,
@@ -359,14 +370,14 @@ BUROOJ_AIR_WORKING_DRONE_EVOLVED_OUT: `The Burooj Air Working Drone was develope
 	DESTROY_ALL_ANALYSES: `(b) Destroy all analyses or notes derived from the Confidential Information;`,
 	DELETE_ORCAUSE_THE_DELETION: `(c) Delete or ensure the deletion of all electronic Confidential Information; and`,
 	ON_REQUEST_CONFIRM: `(d) Confirm compliance with this clause in writing upon request.`,
-	NON_COMPETITION_NON_SOLICITATION_AND_NON_RECRUITMENT: `4 Non-Competition, Non-Solicitation, and Non-Recruitment`,
+	NON_COMPETITION_NON_SOLICITATION_AND_NON_RECRUITMENT: `4 Non Competition, Non Solicitation, and Non Recruitment`,
 	DURING_THE_DURATION_OF_THIS_AGREEMENT: `4.1 The Recipient shall not engage in activities that conflict with or compete with the Company’s interests without prior written consent.`,
 	CONFLICT_OR_APPEAR_TO_CONFLICT: `(a) Activities that conflict with the Company’s interests; or`,
 	ARE_IN_COMPETITION_WITH: `(b) Activities similar to or competing with the Company’s operations.`,
 	IN_CONNECTION_WITH_THE_RECIPIENT: `4.2 The Recipient shall not contact the Company’s employees, suppliers, or customers without prior approval.`,
 	THE_RECIPIENT_SHALL_NOT_SOLICIT: `4.3 The Recipient shall not solicit or interfere with the Company’s business relationships for 12 months following the termination of the Collaboration discussions.`,
 	THE_RECIPIENT_SHALL_NOT_SOLICIT_OR_ENTICE: `4.4 The Recipient shall not solicit or entice the Company’s employees or consultants to leave their roles for 12 months following the end of negotiations.`,
-	THE_RECIPIENT_ACKNOWLEDGS_THAT: `4.6 The Recipient acknowledges the reasonableness of the non-competition provisions and agrees to ensure their Representatives also comply.`,
+	THE_RECIPIENT_ACKNOWLEDGS_THAT: `4.6 The Recipient acknowledges the reasonableness of the non competition provisions and agrees to ensure their Representatives also comply.`,
 	THE_RECIPIENT_AGREES_AND_ACKNOWLEDGS_THAT: `4.7 If the Recipient acquires a Company client within 12 months of the engagement's termination, the Recipient will compensate the Company based on prior revenue from the client.`,
 	MISCELLANEOUS: `5 Miscellaneous`,
 	
@@ -410,17 +421,148 @@ WEIGHTLIFTING_TRANSPORT: 'Solar Panel Cleaning',
 WEIGHTLIFTING_TRANSPORT_DESC: 'Removing dirt and debris to improve the operational efficiency of solar panels by up to %30.',
 
 HEAT_MEASUREMENT_FIREFIGHTING: 'Bridge and Highway Cleaning',
-HEAT_MEASUREMENT_FIREFIGHTING_DESC: 'Cleaning surfaces and sidewalls of bridges and highways using precision drone-mounted spraying systems.',
+HEAT_MEASUREMENT_FIREFIGHTING_DESC: 'Cleaning surfaces and sidewalls of bridges and highways using precision drone mounted spraying systems.',
 
 AERIAL_FILMING: ' Large Water Tank Cleaning',
-AERIAL_FILMING_DESC: 'Specialized cleaning solutions for hard-to-reach water tanks.',
+AERIAL_FILMING_DESC: 'Specialized cleaning solutions for hard to reach water tanks.',
 
 
 INDUSTRIAL_STRUCTURE: 'Industrial Structure Cleaning',
 INDUSTRIAL_STRUCTURE_DESC: 'Cleaning industrial structures such as cooling towers, silos, and metal infrastructure.',
 
 SURFACE_CLENNING: ' Billboard and Elevated Surface Cleaning',
-SURFACE_CLENNING_DESC: 'Efficient cleaning of high-rise signage and billboards with drones.',
+SURFACE_CLENNING_DESC: 'Efficient cleaning of high rise signage and billboards with drones.',
 
+	// Mission Section
+	OUR_MISSION: 'OUR MISSION',
+	MISSION: 'Mission',
+	MISSION_DESCRIPTION: 'We design experiences that drive results — smarter interfaces, seamless journeys, and outcomes that speak for themselves.',
+	MISSION_IMAGE_CAPTION: 'Precision drone cleaning in real world operations',
+	MISSION_QUOTE: 'We replace high risk manual cleaning with advanced drone technology to deliver safer, faster, and more efficient operations across complex environments.',
+	BUROOJ_AIR: 'Burooj Air',
+	DRONE_CLEANING_SERVICES: 'Drone Cleaning Services',
+	FIRST_IN_KSA_GCC: 'First in KSA & GCC',
+	MISSION_RECOGNITION_DESC: 'Pioneering drone powered cleaning solutions across Saudi Arabia and the GCC region.',
+	FASTER_OPERATIONS: 'Faster Operations',
+	FASTER_OPERATIONS_DESC: 'Projects are completed up to ten times faster than traditional cleaning methods, significantly reducing downtime and operational disruption.',
+	PROVEN_ACROSS_ASSETS: 'Proven Across Multiple Assets',
+	PROVEN_ACROSS_ASSETS_DESC: 'Commercial buildings, high rise towers, industrial structures, and residential villas cleaned safely and efficiently.',
+	MISSION_CTA_DESC: 'From inspection to execution, we deliver safe, efficient, and cost effective drone cleaning solutions without compromising quality.',
+	REQUEST_SITE_ASSESSMENT: 'Request a Site Assessment',
+	OUR_RECENT_WORK: 'Our Recent Work',
+	OUR_RECENT_WORK_DESC: 'We support impact focused organisations through strategic creative work that amplifies their reach.',
+	OUR_WORK: 'Our Work',
+	VIEW_ALL_PROJECTS: 'View All Projects',
+	OUR_PROJECTS: 'Our Projects',
+	FRANCHISE: 'Franchise',
+	
+	// Project Titles
+	PROJECT_TAMIMI_TITLE: 'Tamimi Group',
+	PROJECT_ARAMCO_TITLE: 'Aramco Spark',
+	PROJECT_JINAN_TITLE: 'Jinan',
+	PROJECT_QOSSIBI_TITLE: 'Al Qossibi HQ',
+	PROJECT_FOZAN_TITLE: 'Private Villa',
+	PROJECT_SAFA_TITLE: 'Private Villa',
+	PROJECT_ZAMIL_TITLE: 'Al Zamil Compound',
+	PROJECT_ASSALAM_TITLE: 'Private Villa',
+	PROJECT_BASIC_DEMO_TITLE: 'Al Asasyah',
+	PROJECT_CORNAICH_TITLE: 'Cornaich Park Screen',
+	
+	// Project Descriptions
+	PROJECT_TAMIMI_DESC: 'Cleaning buildings and assets with drone technology. This project showcases our innovative drone cleaning services, demonstrating efficiency and safety in high rise maintenance.',
+	PROJECT_ARAMCO_DESC: 'Drone cleaning highlights the potential of our technology to deliver efficient cleaning solutions that allow property managers to maintain buildings in new and innovative ways.',
+	PROJECT_JINAN_DESC: 'Professional drone cleaning services showcasing our advanced technology and precision in high rise building maintenance.',
+	PROJECT_QOSSIBI_DESC: 'Comprehensive drone cleaning services demonstrating our expertise in maintaining prestigious commercial buildings with precision and efficiency.',
+	PROJECT_FOZAN_DESC: 'Expert drone cleaning services showcasing our precision and efficiency in maintaining high rise commercial structures with advanced drone technology.',
+	PROJECT_SAFA_DESC: 'Professional drone cleaning services demonstrating our capability to deliver safe and efficient cleaning solutions for residential properties with precision and care.',
+	PROJECT_ZAMIL_DESC: 'Comprehensive drone cleaning services showcasing our expertise in maintaining large residential complexes with advanced drone technology and precision.',
+	PROJECT_ASSALAM_DESC: 'Professional drone cleaning services demonstrating our expertise in delivering safe and efficient cleaning solutions for luxury residential properties with precision and care.',
+	PROJECT_BASIC_DEMO_DESC: 'Cleaning trial on the main building of Al Asasyah, official distributors of GREE, BASIC, and other major brands in Al Khobar. Showcasing our advanced aerial cleaning technology for corporate and large-scale commercial facilities with high efficiency and zero disruption to daily operations.',
+	PROJECT_CORNAICH_DESC: 'Professional drone cleaning services showcasing our advanced technology and precision in maintaining large scale display screens and outdoor structures with efficiency and safety.',
+	
+	// Project Categories
+	CATEGORY_BUILDING_MAINTENANCE: 'Building Maintenance',
+	CATEGORY_INDUSTRIAL_CLEANING: 'Industrial Cleaning',
+	CATEGORY_FACADE_CLEANING: 'Facade Cleaning',
+	OUR_PROJECTS_DESC: 'Explore our portfolio of innovative drone cleaning projects. From high rise facades to industrial facilities, see how we deliver safe, efficient, and cost effective cleaning solutions.',
+	ALL_PROJECTS: 'All Projects',
+	NO_PROJECTS_FOUND: 'No projects found in this category.',
+	READY_TO_START_YOUR_PROJECT: 'Ready to Start Your Project?',
+	CONTACT_US_FOR_A_QUOTE: 'Contact us today to discuss how our drone cleaning services can help maintain your property safely and efficiently.',
+	GET_IN_TOUCH: 'Get in Touch',
+	READY_TO_BECOME_A_PARTNER: 'Ready to Become a Partner?',
+	JOIN_OUR_GLOBAL_NETWORK: 'Join our global network of partners and bring innovative drone cleaning solutions to your region.',
+	VIEW_NDA: 'View NDA',
+	
+	// TTA Section
+	EXCLUSIVE_PARTNERSHIP_WITH_TTA: 'Exclusive Partnership with TTA',
+	TTA_PARTNERSHIP_DESC: 'Burooj Air is proud to be the official GCC agent for TT Aviation, a global leader in UAV technologies. Together, we bring cutting edge drone solutions to the region.',
+	
+	// TTA Products
+	TTA_PRODUCT_M4E_NAME: 'M4E (5L)',
+	TTA_PRODUCT_M4E_DESC: 'Compact and efficient for small scale operations.',
+	TTA_PRODUCT_M6E1_NAME: 'M6E-1 (10L)',
+	TTA_PRODUCT_M6E1_DESC: 'Ideal for medium scale cleaning tasks.',
+	TTA_PRODUCT_M6EX_V1_NAME: 'M6E X, Version1 (10L)',
+	TTA_PRODUCT_M6EX_V1_DESC: 'Enhanced performance with advanced features.',
+	TTA_PRODUCT_M6EX_V2_NAME: 'M6E X, Version2 (10L)',
+	TTA_PRODUCT_M6EX_V2_DESC: 'Superior range and payload capacity.',
+	TTA_PRODUCT_M6EG200_NAME: 'M6E G200 (16L)',
+	TTA_PRODUCT_M6EG200_DESC: 'Engineered for large scale industrial tasks.',
+	TTA_PRODUCT_M8APRO_NAME: 'M8A PRO (20L)',
+	TTA_PRODUCT_M8APRO_DESC: 'High efficiency and reliability for demanding jobs.',
+	TTA_PRODUCT_M6EG300_NAME: 'M6E G300 (30L) 4 Atomizers',
+	TTA_PRODUCT_M6EG300_DESC: 'Cutting edge technology for maximum productivity.',
+	ABOUT_BUROOJ_AIR: 'About Burooj Air',
+	PIONEERING_DRONE_TECHNOLOGY: 'Pioneering Drone Technology',
+	WHY_PARTNER_WITH_US: 'Why Partner With Us?',
+	FIRST_LICENSED_DRONE_COMPANY: 'First licensed drone cleaning company in Saudi Arabia',
+	PROVEN_TECHNOLOGY: 'Proven technology with successful operations',
+	COMPREHENSIVE_SUPPORT: 'Comprehensive training and ongoing support',
+	GROWING_MARKET: 'Growing market with increasing demand',
+	OUR_PHILOSOPHY: 'Our Philosophy',
+	JOIN_THE_REVOLUTION: 'Join the revolution in cleaning technology and become part of a growing global network.',
+	COLLABORATIVE_PARTNERSHIP: 'Collaborative Partnership',
+	WORK_TOGETHER_FOR_SUCCESS: 'We work together as a team to ensure mutual success and growth.',
+	ONGOING_SUPPORT: 'Ongoing Support',
+	CONTINUOUS_ASSISTANCE: 'Receive continuous assistance and guidance throughout your partnership journey.',
+	GLOBAL_NETWORK: 'Global Network',
+	JOIN_WORLDWIDE_COMMUNITY: 'Join a worldwide community of innovative partners',
+	GALLERY_DESC: 'Explore our collection of drone cleaning projects, showcasing innovative solutions and successful operations.',
+	OUR_IMAGES: 'Our Images',
+	GALLERY_IMAGES_DESC: 'Browse through our collection of high quality images showcasing our drone cleaning operations.',
+	OUR_VIDEOS: 'Our Videos',
+	GALLERY_VIDEOS_DESC: 'Watch our drone cleaning operations in action through our video collection.',
+	VIDEO: 'Video',
+	DRONE_CLEANING_OPERATION: 'Drone cleaning operation',
+	INTERESTED_IN_OUR_SERVICES: 'Interested in Our Services?',
+	CONTACT_US_FOR_MORE_INFO: 'Contact us to learn more about our drone cleaning solutions and how we can help maintain your property.',
+	
+	// FAQ Section
+	FREQUENTLY_ASKED_QUESTIONS: 'Frequently Asked Questions',
+	FAQ_TITLE: 'Your Questions, Clearly Answered',
+	FAQ_DESC: 'Learn more about our drone cleaning services, safety standards, licensing, and operational approach.',
+	
+	// FAQ Questions
+	FAQ_Q1: 'Is Burooj Air officially licensed to operate drones in Saudi Arabia?',
+	FAQ_A1: 'Yes. Burooj Air is the first Saudi company to obtain official authorization to provide drone based building and asset cleaning services in Saudi Arabia. The company received its operating license from the relevant authorities in early 2022.',
+	FAQ_Q2: 'What makes Burooj Air different from traditional cleaning methods?',
+	FAQ_A2: 'Burooj Air replaces scaffolding, lifts, and manual work at heights with advanced drone technology, delivering a solution that is safer, faster, more cost effective, and capable of reaching areas that traditional methods cannot.',
+	FAQ_Q3: 'Does Burooj Air have proven real world results?',
+	FAQ_A3: 'Yes. Burooj Air has successfully delivered multiple projects across residential and commercial properties, demonstrating the effectiveness of drone based cleaning in real operational environments. These projects confirm our ability to achieve high quality results with greater efficiency and consistency compared to traditional cleaning methods.',
+	FAQ_Q4: 'Is drone cleaning safe for buildings and surfaces?',
+	FAQ_A4: 'Absolutely. We use controlled water pressure, filtered water, and surface specific cleaning techniques to protect glass, paint, and structural materials while ensuring consistent, high quality results.',
+	FAQ_Q5: 'How can I request a quote or schedule a service?',
+	FAQ_A5: 'You can request a service by filling out the Request a Quote form on our website. Our team will assess your project and provide a customized solution based on your building type and requirements.',
+	
+	// Our Clients Section
+	OUR_CLIENTS: 'Our Clients',
+	OUR_CLIENTS_DESC: 'Trusted by leading organizations across various industries who rely on our innovative drone cleaning solutions.',
+	
+	// Footer
+	LEGAL: 'Legal',
+	QUICK_LINKS: 'Quick Links',
+	PRIVACY_POLICY: 'Privacy Policy',
+	SITEMAP: 'Sitemap',
 	
 }

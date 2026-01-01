@@ -1,72 +1,284 @@
 <template>
-	<header class="lg:fixed lg:top-0 lg:z-10 lg:w-full">
-		<div class="h-3 bg-brand-second"></div>
-		<div class="bg-gray-900 bg-opacity-90">
-			<div class="container mx-auto p-6">
-				<nav>
-					<div class="mx-auto flex flex-wrap items-center justify-between font-neo-sans text-lg">
-						<NuxtLink class="flex items-start" to="/"><img src="~assets/images/logo.png" alt="" class="mr-3 h-12 lg:h-20" /></NuxtLink>
-						<button data-collapse-toggle="navbar-default" type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-white hover:bg-brand-first focus:bg-brand-first focus:outline-none lg:hidden" aria-controls="navbar-default" aria-expanded="false">
-							<span class="sr-only">Open main menu</span>
-							<svg class="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-								<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
-							</svg>
-						</button>
-						<div class="hidden w-full lg:block lg:w-auto" id="navbar-default">
-							<ul class="mt-4 flex flex-col gap-5 p-4 text-center font-medium lg:mt-0 lg:flex-row lg:gap-3 lg:space-x-8 lg:p-0">
-								<li>
-									<NuxtLink aria-current="page" class="block text-white no-underline" to="/">{{ $t('HOME') }}</NuxtLink>
-								</li>
-								<li>
-									<NuxtLink class="block text-white no-underline" to="/about-us">{{ $t('ABOUT_US') }}</NuxtLink>
-								</li>
-								<!-- <li>
-									<NuxtLink class="block text-white no-underline" to="/services">{{ $t('SERVICES') }}</NuxtLink>
-								</li> -->
-								<li>
-									<NuxtLink class="block text-white no-underline" to="/gallery">{{ $t('GALLERY') }}</NuxtLink>
-								</li>
-							
-								<li>
-									<NuxtLink class="block text-white no-underline" to="/contact">{{ $t('CONTACT') }}</NuxtLink>
-								</li>
-								<!-- <li @click="onChangeLanguage()">
-									<span role="button" class="block text-white no-underline hover:text-violet-500">{{ $t('LANGUAGE') }}</span>
-								</li> -->
-								<li>
-									<NuxtLink class="whitespace-nowrap rounded-lg bg-brand-second px-4 py-3 text-white no-underline hover:bg-brand-first" to="/franchise">{{ $t('BECOME_A_PARTNER') }}</NuxtLink>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</nav>
-			</div>
+	<div>
+		<!-- Progress Bar - Always Visible -->
+		<div class="fixed top-0 left-0 rtl:right-0 z-[60] h-1 w-full bg-gray-200 dark:bg-gray-800">
+			<div 
+				class="h-full bg-brand-second transition-all duration-150 ease-out"
+				:style="{ width: scrollProgress + '%' }"
+			></div>
 		</div>
 
-		<div v-if="!disableSpacer" class="relative hidden w-full lg:block" :class="{}">
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" class="block h-12 w-full translate-x-0">
-				<path class="fill-gray-900 opacity-90" d="M761.9,44.1L643.1,27.2L333.8,98L0,3.8V0l1000,0v3.9" fill="#212121"></path>
-			</svg>
-		</div>
-	</header>
+		<header 
+			:class="[
+				'fixed top-0 left-0 rtl:right-0 w-full z-50 py-4 lg:py-6 transition-transform duration-300 ease-in-out',
+				isNavbarVisible ? 'translate-y-0' : '-translate-y-full'
+			]"
+		>
+			<div class="container mx-auto px-4 lg:px-6">
+				<nav class="mx-auto max-w-7xl rounded-2xl bg-gray-800/80 backdrop-blur-md border border-gray-700/50 shadow-lg">
+					<div class="flex items-center justify-between p-4 font-neo-sans text-lg lg:p-4">
+					<!-- Logo and Navigation Links (Left Side) -->
+					<div class="flex items-center gap-6 lg:gap-8">
+						<NuxtLink class="flex items-center flex-shrink-0" to="/">
+							<img src="~assets/images/logo.png" alt="Burooj Air Logo" class="h-10 lg:h-12" />
+						</NuxtLink>
+						
+						<!-- Desktop Navigation Links -->
+						<div class="hidden lg:flex lg:items-center">
+							<ul class="flex gap-1 space-x-1 font-medium p-0">
+							<li>
+								<NuxtLink 
+									class="block min-h-[44px] rounded-lg px-4 py-2 text-white no-underline focus:outline-none"
+									to="/about-us"
+								>
+									{{ $t('ABOUT_US') }}
+								</NuxtLink>
+							</li>
+							<li>
+								<NuxtLink 
+									class="block min-h-[44px] rounded-lg px-4 py-2 text-white no-underline focus:outline-none"
+									to="/#servicesSection"
+									@click.native="smoothScroll('#servicesSection')"
+								>
+									{{ $t('SERVICES') }}
+								</NuxtLink>
+							</li>
+							<li>
+								<NuxtLink 
+									class="block min-h-[44px] rounded-lg px-4 py-2 text-white no-underline focus:outline-none"
+									to="/projects"
+								>
+									{{ $t('OUR_PROJECTS') || 'Projects' }}
+								</NuxtLink>
+							</li>
+							<li>
+								<NuxtLink 
+									class="block min-h-[44px] rounded-lg px-4 py-2 text-white no-underline focus:outline-none"
+									to="/franchise"
+								>
+									{{ $t('FRANCHISE') }}
+								</NuxtLink>
+							</li>
+						</ul>
+						</div>
+					</div>
+					
+					<!-- Right Side - Desktop: Language Switcher, Theme Toggle and Contact Button -->
+					<div class="hidden lg:flex items-center gap-3">
+						<!-- Language Switcher -->
+						<button
+							@click="onChangeLanguage"
+							class="min-h-[44px] rounded-lg px-4 py-2 text-sm font-medium text-white no-underline focus:outline-none"
+							:aria-label="$i18n.locale === 'en' ? 'Switch to Arabic' : 'Switch to English'"
+						>
+							{{ $i18n.locale === 'en' ? 'العربية' : 'English' }}
+						</button>
+						<ThemeToggle />
+						<NuxtLink 
+							class="whitespace-nowrap rounded-lg bg-blue-600 px-6 py-2.5 text-base font-medium text-white no-underline min-h-[44px] flex items-center justify-center focus:outline-none" 
+							to="/contact"
+						>
+							{{ $t('CONTACT') }} Us
+						</NuxtLink>
+					</div>
+					
+					<!-- Mobile: Theme Toggle and Menu Button -->
+					<div class="flex items-center gap-3 lg:hidden">
+						<ThemeToggle />
+						<button 
+							@click="toggleMenu"
+							type="button" 
+							class="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-white focus:outline-none" 
+							aria-controls="navbar-default" 
+							:aria-expanded="isMenuOpen"
+						>
+							<span class="sr-only">Open main menu</span>
+							<svg v-if="!isMenuOpen" class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+							</svg>
+							<svg v-else class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+							</svg>
+						</button>
+					</div>
+				</div>
+				
+				<!-- Mobile Navigation Menu -->
+				<div 
+					:class="isMenuOpen ? 'block' : 'hidden'" 
+					class="w-full lg:hidden border-t border-gray-700/50" 
+					id="navbar-default"
+				>
+					<ul class="flex flex-col gap-1 px-4 py-4 font-medium">
+						<li>
+							<NuxtLink 
+								@click.native="closeMenu"
+								class="block min-h-[44px] rounded-lg px-4 py-3 text-white no-underline focus:outline-none"
+								to="/about-us"
+							>
+								{{ $t('ABOUT_US') }}
+							</NuxtLink>
+						</li>
+						<li>
+							<NuxtLink 
+								@click.native="handleServicesClick"
+								class="block min-h-[44px] rounded-lg px-4 py-3 text-white no-underline focus:outline-none"
+								to="/#servicesSection"
+							>
+								{{ $t('SERVICES') }}
+							</NuxtLink>
+						</li>
+						<li>
+							<NuxtLink 
+								@click.native="closeMenu"
+								class="block min-h-[44px] rounded-lg px-4 py-3 text-white no-underline focus:outline-none"
+								to="/projects"
+							>
+								{{ $t('OUR_PROJECTS') || 'Projects' }}
+							</NuxtLink>
+						</li>
+						<li>
+							<NuxtLink 
+								@click.native="closeMenu"
+								class="block min-h-[44px] rounded-lg px-4 py-3 text-white no-underline focus:outline-none"
+								to="/franchise"
+							>
+								{{ $t('FRANCHISE') }}
+							</NuxtLink>
+						</li>
+						<!-- Contact Us Button - Mobile Only -->
+						<li class="mt-2">
+							<NuxtLink 
+								@click.native="closeMenu"
+								class="block w-full min-h-[44px] rounded-lg bg-blue-600 px-4 py-3 text-center text-sm font-semibold text-white no-underline focus:outline-none"
+								to="/contact"
+							>
+								{{ $t('CONTACT') }} Us
+							</NuxtLink>
+						</li>
+						<!-- Language Switcher - Mobile Only -->
+						<li class="mt-2">
+							<button
+								@click="onChangeLanguage"
+								class="block w-full min-h-[44px] rounded-lg px-4 py-3 text-center text-sm font-medium text-white no-underline focus:outline-none"
+								:aria-label="$i18n.locale === 'en' ? 'Switch to Arabic' : 'Switch to English'"
+							>
+								{{ $i18n.locale === 'en' ? 'العربية' : 'English' }}
+							</button>
+						</li>
+					</ul>
+				</div>
+				</nav>
+			</div>
+		</header>
+	</div>
 </template>
 
 <script>
 export default {
-	props: ['disableSpacer'],
-	data() {
-		return {
-			language: this.$i18n.locale ?? 'ar',
-		}
+	props: {
+		disableSpacer: {
+			type: Boolean,
+			default: false,
+		},
 	},
-	methods: {
-		onChangeLanguage() {
-			if (this.$i18n) {
-				const lan = this.language === 'en' ? 'ar' : 'en'
-				window.localStorage.setItem('language', lan)
-				this.$i18n.setLocale(lan)
+		data() {
+			return {
+				isMenuOpen: false,
+				scrollProgress: 0,
+				isNavbarVisible: true,
+				lastScrollY: 0,
 			}
 		},
+	methods: {
+		onChangeLanguage() {
+			if (this.$i18n && process.client) {
+				const currentLocale = this.$i18n.locale
+				const newLocale = currentLocale === 'en' ? 'ar' : 'en'
+				localStorage.setItem('language', newLocale)
+				this.$i18n.setLocale(newLocale)
+			}
+		},
+		toggleMenu() {
+			this.isMenuOpen = !this.isMenuOpen
+		},
+		closeMenu() {
+			this.isMenuOpen = false
+		},
+		handleServicesClick() {
+			this.closeMenu()
+			if (this.$route.path === '/') {
+				this.smoothScroll('#servicesSection')
+			} else {
+				this.$router.push('/#servicesSection')
+			}
+		},
+		smoothScroll(target) {
+			const element = document.querySelector(target)
+			if (element) {
+				element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+			}
+		},
+		handleScroll() {
+			if (!process.client) return
+			
+			const currentScrollY = window.scrollY
+			
+			// Calculate scroll progress
+			const windowHeight = window.innerHeight
+			const documentHeight = document.documentElement.scrollHeight
+			const scrollableHeight = documentHeight - windowHeight
+			const progress = scrollableHeight > 0 ? (currentScrollY / scrollableHeight) * 100 : 0
+			this.scrollProgress = Math.min(100, Math.max(0, progress))
+			
+			// Show navbar at top of page
+			if (currentScrollY < 10) {
+				this.isNavbarVisible = true
+				this.lastScrollY = currentScrollY
+				return
+			}
+			
+			// Determine scroll direction
+			const scrollDifference = currentScrollY - this.lastScrollY
+			
+			// Show navbar when scrolling up, hide when scrolling down
+			if (scrollDifference < 0) {
+				// Scrolling up
+				this.isNavbarVisible = true
+			} else if (scrollDifference > 0 && currentScrollY > 100) {
+				// Scrolling down and past 100px
+				this.isNavbarVisible = false
+			}
+			
+			this.lastScrollY = currentScrollY
+		},
+	},
+		mounted() {
+			// Close menu when clicking outside
+			if (process.client) {
+				document.addEventListener('click', (e) => {
+					if (!this.$el.contains(e.target)) {
+						this.isMenuOpen = false
+					}
+				})
+				
+				// Scroll detection for progress bar
+				window.addEventListener('scroll', this.handleScroll)
+			}
+		},
+	beforeDestroy() {
+		if (process.client) {
+			window.removeEventListener('scroll', this.handleScroll)
+		}
 	},
 }
 </script>
+
+<style scoped>
+/* Unify navigation link styling - ensure consistent capitalization */
+nav ul li a {
+	text-transform: none;
+	font-weight: 500;
+	letter-spacing: 0.025em;
+}
+</style>

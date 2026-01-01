@@ -7,6 +7,15 @@
 </template>
 <script>
 export default {
-	props: ['pathClass', 'sectionClass'],
+	props: {
+		pathClass: {
+			type: String,
+			default: '',
+		},
+		sectionClass: {
+			type: String,
+			default: '',
+		},
+	},
 }
 </script>

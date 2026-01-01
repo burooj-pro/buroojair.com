@@ -5,7 +5,7 @@ export default {
 	head: {
 	  title: 'Burooj Air - Industrial and Commercial Drone Solutions in Saudi Arabia',
 	  htmlAttrs: { lang: 'en' },
-	  link: [{ rel: 'canonical', href: 'https://www.buroojair.com/' }],
+	  link: [{ rel: 'canonical', href: 'https://buroojair.com/' }],
 	  meta: [
 		{ charset: 'utf-8' },
 		{ name: 'keywords', content: 'drone, industrial, commercial, Saudi Arabia' },
@@ -32,9 +32,9 @@ export default {
 		{
 		  hid: 'og:image',
 		  property: 'og:image',
-		  content: 'https://buroojair.com/images/BuroojAir.png',
+		  content: 'https://buroojair.com/images/buroojair-og.png',
 		},
-		{ hid: 'og:url', property: 'og:url', content: 'https://www.buroojair.com/' },
+		{ hid: 'og:url', property: 'og:url', content: 'https://buroojair.com/' },
 		{ hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
 		{ hid: 'twitter:title', name: 'twitter:title', content: 'Burooj Air' },
 		{
@@ -46,93 +46,13 @@ export default {
 		{
 		  hid: 'twitter:image',
 		  name: 'twitter:image',
-		  content: 'https://buroojair.com/images/BuroojAir.png',
+		  content: 'https://buroojair.com/images/buroojair-og.png',
 		},
 		{ name: 'format-detection', content: 'telephone=no' },
 	  ],
-	  script: [
-	
-		  {
-			src: 'https://www.googletagmanager.com/gtag/js?id=G-27G4RCWQCP',
-			async: true
-		  },
-		  {
-			hid: 'google-tag',
-			innerHTML: `window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'G-27G4RCWQCP');`,
-			type: 'text/javascript',
-			charset: 'utf-8'
-		  },		
-		{
-			hid: 'gtm',
-			innerHTML: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-			  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-			  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-			  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-			  })(window,document,'script','dataLayer','GTM-55SGMJF5');`,
-			type: 'text/javascript',
-			charset: 'utf-8'
-		  },
-		  
-		{
-		  hid: 'tiktok-pixel',
-		  innerHTML: `!function (w, d, t) {
-			w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];
-			ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"];
-			ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};
-			for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq, ttq.methods[i]);
-			ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e};
-			ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;
-			ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};
-			var s=d.createElement("script");s.type="text/javascript";s.async=!0;
-			s.src=r+"?sdkid="+e+"&lib="+t;
-			var f=d.getElementsByTagName("script")[0];
-			f.parentNode.insertBefore(s,f)};
-			ttq.load("D0M466RC77U6GBUFK3M0");
-			ttq.page();
-		  }(window, document, 'ttq');`,
-		  type: 'text/javascript',
-		  charset: 'utf-8',
-		},
-		{
-		  hid: 'snap-pixel',
-		  innerHTML: `(function(e,t,n){if(e.snaptr)return;var a=e.snaptr=function()
-		  {a.handleRequest?a.handleRequest.apply(a,arguments):a.queue.push(arguments)};
-		  a.queue=[];var s='script';r=t.createElement(s);r.async=!0;
-		  r.src=n;var u=t.getElementsByTagName(s)[0];
-		  u.parentNode.insertBefore(r,u);})(window,document,
-		  'https://sc-static.net/scevent.min.js');
-  
-		  snaptr('init', '74876930-c068-4ef8-abc7-f9c5f4cdc9f0');
-		  snaptr('track', 'PAGE_VIEW');`,
-		  type: 'text/javascript',
-		  charset: 'utf-8',
-		},
-		{
-			hid: 'meta-pixel',
-			innerHTML: `!function(f,b,e,v,n,t,s)
-			{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-			n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-			if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-			n.queue=[];t=b.createElement(e);t.async=!0;
-			t.src=v;s=b.getElementsByTagName(e)[0];
-			s.parentNode.insertBefore(t,s)}(window, document,'script',
-			'https://connect.facebook.net/en_US/fbevents.js');
-			fbq('init', '2545877985601143');
-			fbq('track', 'PageView');`,
-			type: 'text/javascript',
-			charset: 'utf-8',
-		  },
-	  ],
-	  __dangerouslyDisableSanitizersByTagID: {
-		gtm: ['innerHTML'],
-		'tiktok-pixel': ['innerHTML'],
-		'snap-pixel': ['innerHTML'],
-		'meta-pixel': ['innerHTML'],
-		'google-tag': ['innerHTML']
-	  },
+	  // Analytics scripts moved to plugins/analytics.client.js to load after page load for better performance
+	  script: [],
+	  __dangerouslyDisableSanitizersByTagID: {},
 	},
   
 	css: ['@/assets/scss/main.scss', 'animate.css/animate.min.css'],
@@ -140,6 +60,11 @@ export default {
 	plugins: [
 	  { src: '@/plugins/light-gallery.client.js', ssr: false },
 	  { src: '~/plugins/chart.js', mode: 'client' },
+	  { src: '~/plugins/theme.client.js', mode: 'client' },
+	  { src: '~/plugins/gsap.client.js', mode: 'client' },
+	  { src: '~/plugins/page-transitions.client.js', mode: 'client' },
+	  { src: '~/plugins/localStorageLocale.js', mode: 'client' },
+	  { src: '~/plugins/analytics.client.js', mode: 'client' },
 	],
   
 	components: {
@@ -150,6 +75,13 @@ export default {
   
 	build: {
 	  extractCSS: true,
+	  // Generate source maps for better debugging (required by Lighthouse)
+	  devtools: process.env.NODE_ENV === 'development',
+	  extend(config, { isDev, isClient }) {
+		if (isClient) {
+		  config.devtool = isDev ? 'eval-source-map' : 'source-map'
+		}
+	  },
 	  postcss: {
 		postcssOptions: {
 		  plugins: {
@@ -164,6 +96,19 @@ export default {
 		pages: true,
 		commons: true,
 	  },
+	  // Optimize bundle size
+	  optimization: {
+		splitChunks: {
+		  chunks: 'all',
+		  cacheGroups: {
+			vendor: {
+			  test: /[\\/]node_modules[\\/]/,
+			  name: 'vendors',
+			  priority: 10,
+			},
+		  },
+		},
+	  },
 	},
   
 	i18n: {
@@ -176,14 +121,13 @@ export default {
 		  dir: 'ltr',
 		  name: 'English',
 		},
-		// Uncomment if Arabic is added
-		// {
-		//   code: 'ar',
-		//   iso: 'ar-SA',
-		//   file: 'ar-SA.js',
-		//   dir: 'rtl',
-		//   name: 'Arabic',
-		// },
+		{
+		  code: 'ar',
+		  iso: 'ar-SA',
+		  file: 'ar-SA.js',
+		  dir: 'rtl',
+		  name: 'Arabic',
+		},
 	  ],
 	  lazy: true,
 	  langDir: 'i18n/',
@@ -195,4 +139,3 @@ export default {
 	  },
 	},
   }
-  

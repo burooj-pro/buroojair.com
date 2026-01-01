@@ -1,12 +1,15 @@
 <template>
-	<div class="rounded-lg bg-white p-2 text-black shadow-md">
-		<label class="mb-2 block font-bold"> Drone Market Size & Forecast 2020-2025 </label>
+	<div class="rounded-lg bg-white p-4 text-black shadow-lg dark:bg-gray-800 dark:text-white lg:p-6">
+		<label class="mb-2 block text-lg font-bold lg:text-xl"> Drone Market Size & Forecast 2020-2025 </label>
 
-		<div class="font-thin">
+		<div class="mb-4 font-thin overflow-hidden" style="height: 500px; position: relative;">
 			<BarChart :options="chartOptions" :data="chartData" />
 		</div>
-		<p class="text-sm text-gray-500">Source: Drone Market Report 2020 (c) by Drone Industry Insignt</p>
-		<p>The global drone market could generate $43 Billion in revenues by 2025.</p>
+		
+		<div class="mt-2 space-y-1 pt-2">
+			<p class="text-xs text-gray-500 dark:text-gray-400 lg:text-sm">Source: Drone Market Report 2020 (c) by Drone Industry Insignt</p>
+			<p class="text-sm font-semibold text-gray-700 dark:text-gray-300 lg:text-base">The global drone market could generate $43 Billion in revenues by 2025.</p>
+		</div>
 	</div>
 </template>
 

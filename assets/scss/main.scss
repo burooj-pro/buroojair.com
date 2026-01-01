@@ -7,4 +7,131 @@
 
 html {
 	font-size: 18px;
+	scroll-behavior: smooth;
+}
+
+body {
+	background: #212121;
+	min-height: 100vh;
+}
+
+html.dark body {
+	background: #04061C;
+}
+
+/* Smooth scrolling for anchor links */
+@media (prefers-reduced-motion: no-preference) {
+	html {
+		scroll-behavior: smooth;
+	}
+}
+
+/* Focus styles for accessibility */
+a:focus-visible,
+button:focus-visible {
+	outline: 2px solid #3437FF;
+	outline-offset: 2px;
+}
+
+/* Better scrollbar styling */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+/* RTL Support */
+[dir="rtl"] {
+	direction: rtl;
+	text-align: right;
+}
+
+[dir="ltr"] {
+	direction: ltr;
+	text-align: left;
+}
+
+/* RTL-specific adjustments */
+[dir="rtl"] .list-disc {
+	padding-right: 1.5rem;
+	padding-left: 0;
+}
+
+[dir="ltr"] .list-disc {
+	padding-left: 1.5rem;
+	padding-right: 0;
+}
+
+/* Font family overrides for language-specific fonts */
+/* English (LTR) - Use Helvetica only */
+[dir="ltr"] {
+	font-family: 'Helvetica', sans-serif;
+}
+
+[dir="ltr"] body,
+[dir="ltr"] *,
+[dir="ltr"] .font-neo-sans {
+	font-family: 'Helvetica', sans-serif !important;
+}
+
+/* English (LTR) - Use Helvetica Light (font-weight: 100) for tabs and links */
+[dir="ltr"] a,
+[dir="ltr"] nav a,
+[dir="ltr"] header a,
+[dir="ltr"] footer a,
+[dir="ltr"] button:not([type="submit"]):not(.pipedrive-submit-button),
+[dir="ltr"] nav button,
+[dir="ltr"] header button,
+[dir="ltr"] [role="tab"],
+[dir="ltr"] [role="link"],
+[dir="ltr"] .nav-link {
+	font-family: 'Helvetica', sans-serif !important;
+	font-weight: 100 !important;
+}
+
+/* English (LTR) - Use Helvetica Light for Mission section text */
+[dir="ltr"] #missionSection,
+[dir="ltr"] #missionSection *,
+[dir="ltr"] #missionSection p,
+[dir="ltr"] #missionSection span,
+[dir="ltr"] #missionSection button {
+	font-family: 'Helvetica', sans-serif !important;
+	font-weight: 100 !important;
+}
+
+/* English (LTR) - Use Helvetica Light for Footer specific texts */
+/* "For inquiries" text - paragraph in first column (not in lists) */
+[dir="ltr"] footer > div > div > div:first-child > p,
+[dir="ltr"] footer [class*="col-span-2"] > p:not(ul p):not(li p) {
+	font-family: 'Helvetica', sans-serif !important;
+	font-weight: 100 !important;
+}
+
+/* Copyright text at bottom - paragraph in border-t div */
+[dir="ltr"] footer > div > div.border-t p,
+[dir="ltr"] footer > div > div[class*="border-t"] p {
+	font-family: 'Helvetica', sans-serif !important;
+	font-weight: 100 !important;
+}
+
+/* Arabic (RTL) - Use NeoSans only */
+[dir="rtl"] {
+	font-family: 'NeoSans', sans-serif;
+}
+
+[dir="rtl"] body,
+[dir="rtl"] *,
+[dir="rtl"] .font-neo-sans {
+	font-family: 'NeoSans', sans-serif !important;
 }

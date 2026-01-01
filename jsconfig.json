@@ -8,5 +8,45 @@
 			"@@/*": ["./*"]
 		}
 	},
-	"exclude": ["node_modules", ".nuxt", "dist"]
+	"include": [
+		"**/*.js",
+		"**/*.vue",
+		"**/*.ts"
+	],
+	"exclude": [
+		"node_modules",
+		".nuxt",
+		"dist",
+		"components/Sections/AboutUs.vue",
+		"components/Sections/ArrivedDrone.vue",
+		"components/Sections/Development.vue",
+		"components/Sections/Family.vue",
+		"components/Sections/GlobalReach.vue",
+		"components/Sections/HeroPartner.vue",
+		"components/Sections/HeroVideo.vue",
+		"components/Sections/Populated.vue",
+		"components/Sections/SafetyStatement.vue",
+		"components/Sections/SolarCells.vue",
+		"components/Sections/VacantPilotPosition.vue",
+		"components/Sections/Gallery.vue",
+		"components/Sections/News.vue",
+		"components/Sections/Inquiry.vue",
+		"components/Sections/Heading.vue",
+		"components/Sections/Intention.vue",
+		"components/Sections/FacadeCleaningAdvantages.vue",
+		"components/Sections/Franchise/About.vue",
+		"components/Sections/Franchise/Family.vue",
+		"components/Sections/Franchise/Opportunity.vue",
+		"components/News.vue",
+		"pages/Debugging.vue",
+		"pages/location.vue",
+		"pages/franchise/nda.vue",
+		"pages/gallery.vue",
+		"pages/news/_slug.vue",
+		"pages/news/index.vue",
+		"pages/pilot-position.vue",
+		"pages/services/facade-cleaning.vue",
+		"pages/services/index.vue",
+		"pages/services/window-cleaning.vue"
+	]
 }

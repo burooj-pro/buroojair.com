@@ -4,7 +4,16 @@
 
 <script>
 export default {
-	props: ['classColor', 'classOpacity'],
+	props: {
+		classColor: {
+			type: String,
+			default: 'bg-black',
+		},
+		classOpacity: {
+			type: String,
+			default: 'bg-opacity-50',
+		},
+	},
 	computed: {
 		jointClasses() {
 			return `${this.classColor} ${this.classOpacity}`

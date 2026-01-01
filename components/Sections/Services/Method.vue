@@ -1,18 +1,16 @@
 <template>
-	<section id="servicesMethod" class="method bg-gray-900 py-12 font-normal text-white lg:py-60">
-		<div class="container mx-auto">
-			<div class="grid grid-cols-1 lg:grid-cols-2">
-				<div class="p-8">
-					<h2 class="text-2xl font-bold lg:text-4xl">{{ $t('FOR_FACADE_AND_WINDOW_CLEANING_WE_USE_MULTIPLE_METHODS') }}</h2>
+	<section id="servicesMethod" class="method bg-[#EBF5FF] py-16 font-normal dark:bg-[#04061C] lg:py-24">
+		<div class="container mx-auto px-4 lg:px-8">
+			<div class="grid gap-12 grid-cols-1 lg:grid-cols-2">
+				<div class="p-6 lg:p-8">
+					<h2 class="text-2xl font-black text-gray-900 dark:text-white lg:text-4xl">{{ $t('FOR_FACADE_AND_WINDOW_CLEANING_WE_USE_MULTIPLE_METHODS') }}</h2>
 				</div>
-				<div class="col-lg-6 p-8">
-					<ol class="list-decimal">
-						<li>{{ $t('IF_THE_FACADE_IS_TRADITIONALLY_DIRTY_THE_DRONE') }}<br /><br /></li>
+				<div class="p-6 lg:p-8">
+					<ol class="list-decimal space-y-4 text-base leading-relaxed text-gray-700 dark:text-gray-300 lg:text-lg">
+						<li>{{ $t('IF_THE_FACADE_IS_TRADITIONALLY_DIRTY_THE_DRONE') }}</li>
 						<li>
 							{{ $t('THE_CLEAN_WATER_METHOD_IS_IN_SHORT') }}
-							<b
-								><i>{{ $t('CLEANED') }}{{ $t('WITHOUT_CHEMICALS') }}</i></b
-							>
+							<strong class="text-gray-900 dark:text-white italic">{{ $t('CLEANED') }}{{ $t('WITHOUT_CHEMICALS') }}</strong>
 							{{ $t('WINDOWS_STAY_CLEANER') }}
 						</li>
 					</ol>
