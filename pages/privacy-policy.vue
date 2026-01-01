@@ -1,11 +1,12 @@
 <template>
-	<div id="aboutUsPage" class="overflow-hidden">
+	<div id="aboutUsPage" class="overflow-hidden bg-[#EBF5FF] dark:bg-[#04061C]">
 		<Header />
 
-		<!-- Intention SECTION -->
-		<SectionsPrivacyPolicy class="pt-20" />
+		<!-- Privacy Policy SECTION -->
+		<section class="bg-[#EBF5FF] py-16 dark:bg-[#04061C] lg:py-24">
+			<SectionsPrivacyPolicy />
+		</section>
 
-		<SectionsContact />
 		<Footer />
 	</div>
 </template>
@@ -15,12 +16,49 @@ export default {
 	name: 'PRIVACY_POLICY',
 	head() {
 		return {
-			title: this.$t('PRIVACY_POLICY'),
+			title: this.$t('PRIVACY_POLICY') + ' - Burooj Air',
+			link: [
+				{ rel: 'canonical', href: 'https://buroojair.com/privacy-policy' },
+			],
 			meta: [
 				{
 					hid: 'description',
 					name: 'description',
-					content: 'We aim to contribute to a safer work day for people who work at great heights with lifts, scaffolding and for facade climbers.',
+					content: 'Burooj Air Privacy Policy. Learn how we collect, use, and protect your personal information. Last updated: January 1, 2026.',
+				},
+				{
+					hid: 'keywords',
+					name: 'keywords',
+					content: 'Burooj Air privacy policy, data protection, privacy statement, GDPR, data privacy',
+				},
+				{
+					name: 'robots',
+					content: 'noindex, follow',
+				},
+				{
+					hid: 'og:title',
+					property: 'og:title',
+					content: 'Privacy Policy - Burooj Air',
+				},
+				{
+					hid: 'og:description',
+					property: 'og:description',
+					content: 'Burooj Air Privacy Policy. Learn how we collect, use, and protect your personal information.',
+				},
+				{
+					hid: 'og:image',
+					property: 'og:image',
+					content: 'https://buroojair.com/images/buroojair-og.png',
+				},
+				{
+					hid: 'og:url',
+					property: 'og:url',
+					content: 'https://buroojair.com/privacy-policy',
+				},
+				{
+					hid: 'og:type',
+					property: 'og:type',
+					content: 'website',
 				},
 			],
 		}

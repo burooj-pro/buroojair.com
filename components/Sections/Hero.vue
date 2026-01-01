@@ -1,24 +1,236 @@
 <template>
-	<section id="heroSection" class="hero-section relative font-neo-sans">
-		<video ref="videoPlayer" muted autoplay loop playsinline class="relative aspect-square h-auto w-full object-cover lg:aspect-auto">
-			<source src="/videos//long_video.mp4" type="video/mp4" />
-		</video>
-
-		<SectionsTemplatesOverlay classColor="bg-indigo-800" classOpacity="bg-opacity-10" />
-
-		<div class="relative flex w-full lg:absolute lg:top-0 lg:h-screen lg:items-center">
-			<div class="flex w-full items-start lg:container lg:mx-auto lg:h-full lg:pt-52">
-				<div class="w-full bg-gray-900 bg-opacity-95 p-8 lg:mb-16 lg:max-w-md lg:rounded-bl-[80px] lg:rounded-br-2xl lg:rounded-tl-2xl lg:rounded-tr-[80px] z-10">
-					<h3 class="mb-5 font-neo-sans text-3xl uppercase text-white">{{ $t('NOW_REQUEST_A_QUOTE_FOR_DRONE_CLEANING') }}</h3>
-
-					<div class="pipedriveWebForms" data-pd-webforms="https://webforms.pipedrive.com/f/6coemjWsjuoqlhJqDxw5vARg9RKtlXs9Rk7xeP0SZJLEXlmO9hyO7YDdWfq6IcrYLV">
-						<script src="https://webforms.pipedrive.com/f/loader"></script>
-					</div>
-				</div>
-			</div>
+	<section id="heroSection" class="hero-section font-neo-sans">
+	  <!-- Mobile: Video and form separated -->
+	  <div class="block lg:hidden hero-section-mobile">
+		<!-- Video Section -->
+		<div class="relative hero-video-container-mobile overflow-hidden">
+		  <video
+			ref="videoPlayerMobile"
+			muted
+			autoplay
+			loop
+			playsinline
+			preload="metadata"
+			class="hero-video-mobile w-full h-full"
+			@error="handleVideoError"
+		  >
+			<source src="/videos/long_video.mp4" type="video/mp4" />
+			Your browser does not support the video tag.
+		  </video>
+		  
+		  <!-- Overlay -->
+		  <SectionsTemplatesOverlay classColor="bg-indigo-800 dark:bg-gray-900" classOpacity="bg-opacity-10 dark:bg-opacity-30" />
 		</div>
-
-		<!-- Divider Section -->
-		<SectionsDividersBottom pathClass="fill-purple-50" sectionClass="rotate-180" />
+  
+		<!-- Form section below video -->
+		<div
+		  ref="mobileFormContainer"
+		  class="w-full bg-gray-900 bg-opacity-95 p-6 dark:bg-gray-800 dark:bg-opacity-95"
+		>
+		  <h3 ref="mobileTitle" class="mb-5 font-neo-sans text-2xl font-light uppercase text-white">
+			{{ $t('NOW_REQUEST_A_QUOTE_FOR_DRONE_CLEANING') }}
+		  </h3>
+  
+		  <div
+			ref="mobileForm"
+			class="pipedriveWebForms"
+			data-pd-webforms="https://webforms.pipedrive.com/f/6coemjWsjuoqlhJqDxw5vARg9RKtlXs9Rk7xeP0SZJLEXlmO9hyO7YDdWfq6IcrYLV"
+		  >
+			<script src="https://webforms.pipedrive.com/f/loader"></script>
+		  </div>
+		</div>
+	  </div>
+		
+	  <!-- Desktop: Full viewport video background + form overlay -->
+	  <div class="hidden lg:block hero-section-desktop relative">
+		<!-- Video -->
+		<video
+		  ref="videoPlayerDesktop"
+		  muted
+		  autoplay
+		  loop
+		  playsinline
+		  preload="metadata"
+		  class="hero-video absolute inset-0 z-0"
+		  @error="handleVideoError"
+		>
+		  <source src="/videos/long_video.mp4" type="video/mp4" />
+		  Your browser does not support the video tag.
+		</video>
+		
+		<!-- Overlay -->
+		<SectionsTemplatesOverlay classColor="bg-indigo-800 dark:bg-gray-900" classOpacity="bg-opacity-10 dark:bg-opacity-30" />
+  
+		<!-- Content -->
+		<div class="relative z-10 h-full w-full flex items-center hero-content-pad">
+		  <div class="container mx-auto px-6 flex items-center justify-start rtl:justify-end">
+			<div
+			  ref="desktopFormContainer"
+			  class="w-full bg-gray-900 bg-opacity-95 dark:bg-gray-800 dark:bg-opacity-95 max-w-md rounded-bl-[80px] rounded-br-2xl rounded-tl-2xl rounded-tr-[80px] p-8"
+			>
+			  <h3 ref="desktopTitle" class="mb-5 font-neo-sans text-3xl font-light uppercase text-white">
+				{{ $t('NOW_REQUEST_A_QUOTE_FOR_DRONE_CLEANING') }}
+			  </h3>
+  
+			  <div
+				ref="desktopForm"
+				class="pipedriveWebForms"
+				data-pd-webforms="https://webforms.pipedrive.com/f/6coemjWsjuoqlhJqDxw5vARg9RKtlXs9Rk7xeP0SZJLEXlmO9hyO7YDdWfq6IcrYLV"
+			  >
+				<script src="https://webforms.pipedrive.com/f/loader"></script>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
 	</section>
-</template>
+  </template>
+  
+  <script>
+  export default {
+	mounted() {
+	  if (process.client) {
+		this.initGSAP()
+	  }
+	},
+	methods: {
+	  handleVideoError() {
+		// decorative only
+	  },
+	  async initGSAP() {
+		if (!process.client) return
+  
+		const { gsap } = await import('gsap')
+  
+		this.$nextTick(() => {
+		  // Desktop animations
+		  const desktopTitle = this.$refs.desktopTitle
+		  const desktopForm = this.$refs.desktopForm
+		  const desktopContainer = this.$refs.desktopFormContainer
+  
+		  // Mobile animations
+		  const mobileTitle = this.$refs.mobileTitle
+		  const mobileForm = this.$refs.mobileForm
+		  const mobileContainer = this.$refs.mobileFormContainer
+  
+		  // Desktop: Animate title and form
+		  if (desktopContainer && window.innerWidth >= 1024) {
+			gsap.set(desktopTitle, { opacity: 0, y: 30 })
+			gsap.set(desktopForm, { opacity: 0, y: 30 })
+  
+			const desktopTL = gsap.timeline({ delay: 0.3 })
+			desktopTL
+			  .to(desktopTitle, {
+				opacity: 1,
+				y: 0,
+				duration: 0.8,
+				ease: 'power3.out',
+			  })
+			  .to(
+				desktopForm,
+				{
+				  opacity: 1,
+				  y: 0,
+				  duration: 0.8,
+				  ease: 'power3.out',
+				},
+				'-=0.4'
+			  )
+		  }
+  
+		  // Mobile: Animate title and form
+		  if (mobileContainer && window.innerWidth < 1024) {
+			gsap.set(mobileTitle, { opacity: 0, y: 20 })
+			gsap.set(mobileForm, { opacity: 0, y: 20 })
+  
+			const mobileTL = gsap.timeline({ delay: 0.2 })
+			mobileTL
+			  .to(mobileTitle, {
+				opacity: 1,
+				y: 0,
+				duration: 0.6,
+				ease: 'power2.out',
+			  })
+			  .to(
+				mobileForm,
+				{
+				  opacity: 1,
+				  y: 0,
+				  duration: 0.6,
+				  ease: 'power2.out',
+				},
+				'-=0.3'
+			  )
+		  }
+		})
+	  },
+	},
+  }
+  </script>
+  
+  <style scoped>
+  /* =========
+	 HERO HEIGHT
+	 =========
+	 Use 100svh for better mobile viewport behavior (Safari URL bar),
+	 with 100vh fallback.
+  */
+  .hero-section-desktop {
+	height: 100vh;
+	min-height: 100vh;
+  }
+  
+  .hero-section-mobile {
+	display: flex;
+	flex-direction: column;
+  }
+
+  @media (min-width: 1024px) {
+	.hero-section-mobile {
+	  display: none !important;
+	}
+  }
+  
+  @supports (height: 100svh) {
+	.hero-section-desktop {
+	  height: 100svh;
+	  min-height: 100svh;
+	}
+  }
+  
+  /* =========
+	 VIDEO
+	 ========= */
+  .hero-video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+  }
+
+  /* =========
+	 MOBILE VIDEO CONTAINER
+	 ========= */
+  .hero-video-container-mobile {
+	width: 100%;
+	height: 60vh;
+	min-height: 400px;
+	position: relative;
+  }
+
+  .hero-video-mobile {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+  }
+  
+  /* =========
+	 NAVBAR OFFSET
+	 =========
+	 Instead of negative margins/tops, we pad the content to avoid hiding behind navbar.
+	 Adjust this value to match your actual navbar height.
+  */
+  .hero-content-pad {
+	padding-top: 120px;
+  }
+  </style>
+  

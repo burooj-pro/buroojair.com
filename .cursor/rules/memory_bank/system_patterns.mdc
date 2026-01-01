@@ -1,0 +1,259 @@
+---
+alwaysApply: true
+---
+
+# System Patterns: Architectural Blueprint
+
+## High-Level Architecture
+
+```mermaid
+flowchart TD
+    User["User Browser"] --> CDN["Static Hosting/CDN"]
+    CDN --> StaticFiles["Static HTML/CSS/JS Files"]
+    
+    StaticFiles --> NuxtApp["Nuxt.js 2 Application"]
+    
+    NuxtApp --> Pages["Pages Router<br>(/pages directory)"]
+    NuxtApp --> Components["Component System<br>(/components directory)"]
+    NuxtApp --> Plugins["Vue Plugins<br>(/plugins directory)"]
+    
+    Pages --> Sections["Section Components<br>(/components/Sections)"]
+    Sections --> Templates["Template Components<br>(/components/Sections/Templates)"]
+    
+    NuxtApp --> I18n["Vue I18n<br>(Multilingual Support)"]
+    NuxtApp --> Tailwind["Tailwind CSS<br>(Styling System)"]
+    
+    StaticFiles --> ExternalServices["External Services"]
+    ExternalServices --> Pipedrive["Pipedrive WebForms<br>(Lead Generation)"]
+    ExternalServices --> Analytics["Analytics Services<br>(GA4, GTM, Pixels)"]
+```
+
+## Component Architecture
+
+### Component Hierarchy
+
+```mermaid
+flowchart TD
+    Layout["Layout<br>(default.vue)"] --> Header["Header Component"]
+    Layout --> Footer["Footer Component"]
+    Layout --> Page["Page Component<br>(/pages/*.vue)"]
+    
+    Page --> Hero["Hero Section"]
+    Page --> Services["Services Section"]
+    Page --> Benefits["Benefits Section"]
+    Page --> Team["Team Section<br>(Workingteams.vue)"]
+    Page --> Gallery["Gallery Section"]
+    Page --> Contact["Contact Section"]
+    
+    Hero --> Overlay["Overlay Template"]
+    Hero --> Divider["Divider Component"]
+    Services --> ServiceCard["Service Components"]
+    Gallery --> LightGallery["Vue Light Gallery"]
+```
+
+### Component Organization Pattern
+
+**Directory Structure:**
+```
+/components
+  /Sections          # Main page sections
+    /Dividers        # Visual dividers between sections
+    /Franchise       # Franchise-related sections
+    /General         # General purpose sections (Team, Map)
+    /Services        # Service-specific sections
+    /Templates       # Reusable template components
+  Header.vue         # Site header
+  Footer.vue         # Site footer
+```
+
+**Naming Convention:**
+- Section components: PascalCase (e.g., `Hero.vue`, `Services.vue`)
+- Template components: PascalCase with "Template" suffix (e.g., `Overlay.vue`)
+- Component files match their directory structure when imported
+
+## Design Patterns
+
+### 1. Section-Based Composition Pattern
+
+**Pattern:** Each major page section is a self-contained component in `/components/Sections/`
+
+**Rationale:**
+- Promotes reusability across pages
+- Maintains clear separation of concerns
+- Simplifies page composition
+- Enables easy section reordering or conditional rendering
+
+**Example:**
+```vue
+<!-- pages/index.vue -->
+<template>
+  <div>
+    <SectionsHero />
+    <SectionsServices />
+    <SectionsBenefits />
+  </div>
+</template>
+```
+
+### 2. Template Component Pattern
+
+**Pattern:** Reusable visual templates in `/components/Sections/Templates/`
+
+**Rationale:**
+- DRY principle for common visual patterns
+- Consistent styling across sections
+- Easy theme updates
+
+**Examples:**
+- `Overlay.vue`: Video/image overlays with customizable colors
+- `WithImage.vue`: Image + content layout template
+
+### 3. Internationalization Pattern
+
+**Pattern:** Vue I18n with translation files in `/i18n/`
+
+**Implementation:**
+- Translation keys in `en-US.js` and `ar-SA.js`
+- Access via `$t('KEY')` in templates
+- Locale switching capability (currently English primary)
+- RTL support prepared for Arabic
+
+**Usage:**
+```vue
+<h1>{{ $t('HOME') }}</h1>
+<p>{{ $t('SERVICES_DESCRIPTION') }}</p>
+```
+
+### 4. Static Asset Organization Pattern
+
+**Pattern:** Clear separation between static and compiled assets
+
+**Structure:**
+- `/static/`: Files served as-is (videos, images, favicon)
+- `/assets/`: Files processed by build system (SCSS, fonts, processed images)
+
+**Rationale:**
+- Static files: Direct URL access needed (e.g., `/videos/long_video.mp4`)
+- Assets: Require processing (SCSS compilation, font optimization)
+
+### 5. Plugin Registration Pattern
+
+**Pattern:** Client-side only plugins registered in `/plugins/` with `mode: 'client'` or `ssr: false`
+
+**Examples:**
+- `light-gallery.client.js`: Image gallery (client-only)
+- `chart.js`: Data visualization (client-only)
+
+**Rationale:**
+- Some libraries require browser APIs
+- Reduces bundle size for static generation
+- Prevents SSR errors
+
+## Technical Decisions
+
+### 1. Static Site Generation (SSG)
+
+**Decision:** Use Nuxt.js static generation (`target: 'static'`, `ssr: false`)
+
+**Rationale:**
+- Optimal performance (pre-rendered HTML)
+- Easy CDN deployment
+- Lower hosting costs
+- Fast page loads
+
+**Trade-offs:**
+- No server-side data fetching
+- Limited dynamic content
+- Client-side rendering for interactivity
+
+### 2. Tailwind CSS Utility-First Styling
+
+**Decision:** Use Tailwind CSS 3.3.3 with custom SCSS for complex styles
+
+**Rationale:**
+- Rapid development
+- Consistent design system
+- Small bundle size with purging
+- Easy responsive design
+
+**Custom Styles:**
+- Custom fonts (NeoSans, Helvetica) in `/assets/scss/_fonts.scss`
+- Global styles in `/assets/scss/main.scss`
+
+### 3. Component Auto-Import
+
+**Decision:** Nuxt.js auto-imports components from `/components` directory
+
+**Rationale:**
+- No manual imports needed
+- Cleaner component code
+- Automatic component registration
+
+**Usage:**
+```vue
+<!-- No import needed -->
+<SectionsHero />
+<Header />
+```
+
+### 4. Analytics Integration Strategy
+
+**Decision:** Multiple analytics platforms integrated via Nuxt head configuration
+
+**Platforms:**
+- Google Analytics 4 (GA4)
+- Google Tag Manager (GTM)
+- TikTok Pixel
+- Snap Pixel
+- Meta (Facebook) Pixel
+
+**Implementation:**
+- Scripts injected in `nuxt.config.js` head section
+- Sanitization disabled for analytics scripts
+- Async loading for performance
+
+## Data Flow Patterns
+
+### Lead Generation Flow
+
+```mermaid
+sequenceDiagram
+    User->>Hero Section: Fills Pipedrive Form
+    Hero Section->>Pipedrive: Form Submission
+    Pipedrive->>CRM: Lead Data Stored
+    Pipedrive->>Analytics: Conversion Event
+    Analytics->>Business: Lead Notification
+```
+
+### Page Rendering Flow
+
+```mermaid
+sequenceDiagram
+    User->>CDN: Request Page
+    CDN->>User: Static HTML/CSS/JS
+    User Browser->>Nuxt App: Hydrate Vue App
+    Nuxt App->>I18n: Load Translations
+    Nuxt App->>Components: Render Sections
+    Components->>External: Load Assets (if needed)
+```
+
+## Code Organization Principles
+
+1. **Modularity**: Each section is a self-contained component
+2. **Reusability**: Template components for common patterns
+3. **Separation of Concerns**: Clear division between pages, components, and assets
+4. **Consistency**: Standardized naming and structure
+5. **Maintainability**: Well-organized directory structure
+
+## Future Architectural Considerations
+
+### Potential Enhancements
+- Content Management: Consider headless CMS for news/blog content
+- API Integration: If dynamic content needed, consider API routes
+- Progressive Web App: PWA features for mobile experience
+- Performance: Further optimization with lazy loading and code splitting
+
+### Migration Considerations
+- Nuxt 3 migration: Would require significant refactoring
+- Vue 3 upgrade: Component API changes needed
+- Build system: Current Webpack 4 could be upgraded

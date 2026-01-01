@@ -1,0 +1,106 @@
+---
+alwaysApply: true
+---
+Title: Burooj Air
+
+Description: Burooj Air is the first Saudi company licensed for drone cleaning services, offering innovative and eco-friendly solutions for high-rise facade cleaning, window cleaning, solar panel cleaning, and elevated asset maintenance. The project replaces traditional high-risk methods (lifts, scaffolding, facade climbers) with precision drone technology to improve safety, efficiency, and sustainability.
+
+## Project Overview
+
+This is a commercial website built with **Nuxt.js 2** (Vue.js framework) that serves as the official online presence for Burooj Air, a leading drone services company based in Saudi Arabia. The website showcases the company's services, team, gallery, and provides lead generation capabilities through integrated forms.
+
+## Key Technologies
+
+- **Framework**: Nuxt.js 2.15.8 (Vue.js 2.6.14)
+- **Styling**: Tailwind CSS 3.3.3 with custom SCSS
+- **Internationalization**: Vue I18n (@nuxtjs/i18n) - English and Arabic support
+- **Build Target**: Static site generation (SSG)
+- **Deployment**: Static hosting (SSR disabled)
+- **Additional Libraries**: 
+  - Chart.js for data visualization
+  - Vue Light Gallery for image galleries
+  - Animate.css for animations
+  - Flowbite for UI components
+
+## Core Features
+
+### Website Sections
+- **Hero Section**: Video background with embedded Pipedrive lead generation form
+- **Services Section**: Comprehensive service offerings including:
+  - Building & Asset Cleaning
+  - Facade & Window Cleaning
+  - Solar Panel Cleaning
+  - Weightlifting & Transport
+  - Heat Measurement & Firefighting
+  - Aerial Filming
+  - Industrial Structure Services
+  - Surface Cleaning
+- **Team Section**: Employee showcase with bilingual support
+- **Gallery**: Image and video showcase of completed projects
+- **Benefits Section**: Key advantages of drone cleaning technology
+- **About Us**: Company history and mission
+- **Contact Section**: Multiple contact methods and location information
+- **Franchise Section**: Partnership and franchise opportunities
+
+### Pages
+- Home (`/`)
+- About Us (`/about-us`)
+- Services (`/services`, `/services/facade-cleaning`, `/services/window-cleaning`)
+- Gallery (`/gallery`)
+- Contact (`/contact`)
+- Franchise (`/franchise`, `/franchise/nda`)
+- Partner (`/partner`)
+- Pilot Position (`/pilot-position`)
+- Privacy Policy (`/privacy-policy`)
+- News/Blog (`/news`, `/news/:slug`)
+
+### Technical Features
+- **Responsive Design**: Mobile-first approach with Tailwind CSS breakpoints
+- **Multilingual Support**: English (primary) and Arabic (prepared) with RTL support
+- **Lead Generation**: Pipedrive WebForms integration in hero section
+- **Analytics Integration**: 
+  - Google Analytics (GA4)
+  - Google Tag Manager
+  - TikTok Pixel
+  - Snap Pixel
+  - Meta (Facebook) Pixel
+- **SEO Optimized**: Meta tags, Open Graph, Twitter Cards
+- **Performance**: Code splitting, CSS extraction, optimized builds
+
+## Project Structure
+
+```
+/components
+  /Sections - Modular page sections (Hero, Services, Benefits, etc.)
+  /Sections/Dividers - Visual section dividers
+  /Sections/Franchise - Franchise-related components
+  /Sections/General - Team and map components
+  /Sections/Services - Service-specific components
+  /Sections/Templates - Reusable template components
+  Header.vue, Footer.vue - Layout components
+
+/pages - Nuxt.js routing pages
+/i18n - Translation files (en-US.js, ar-SA.js)
+/assets - Images, fonts, SCSS styles
+/static - Static assets (videos, employee photos, gallery images)
+/plugins - Vue plugins (chart.js, light-gallery, i18n)
+/layouts - Nuxt layout templates
+```
+
+## Business Context
+
+Burooj Air operates as a licensed drone services provider in Saudi Arabia, focusing on:
+- **Safety**: Eliminating high-risk traditional cleaning methods
+- **Innovation**: First licensed drone cleaning company in Saudi Arabia
+- **Sustainability**: Eco-friendly cleaning solutions
+- **Compliance**: Adherence to Saudi General Authority of Civil Aviation regulations
+- **Expansion**: Franchise and partnership opportunities
+
+## Development Notes
+
+- The project uses static site generation for optimal performance
+- Client-side rendering is enabled (SSR disabled)
+- Custom fonts (NeoSans, Helvetica) are loaded from assets
+- Video content is stored in `/static/videos/`
+- Employee photos are in `/static/images/employees/`
+- Gallery images are in `/static/images/gallery/`
