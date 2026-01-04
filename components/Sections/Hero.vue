@@ -14,7 +14,7 @@
 			class="hero-video-mobile w-full h-full"
 			@error="handleVideoError"
 		  >
-			<source src="/videos/long_video.mp4" type="video/mp4" />
+			<source src="/videos/hero.mp4" type="video/mp4" />
 			Your browser does not support the video tag.
 		  </video>
 		  
@@ -54,7 +54,7 @@
 		  class="hero-video absolute inset-0 z-0"
 		  @error="handleVideoError"
 		>
-		  <source src="/videos/long_video.mp4" type="video/mp4" />
+		  <source src="/videos/hero.mp4" type="video/mp4" />
 		  Your browser does not support the video tag.
 		</video>
 		

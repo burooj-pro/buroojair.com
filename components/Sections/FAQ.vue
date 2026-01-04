@@ -88,6 +88,18 @@ export default {
 			this.initGSAP()
 		}
 	},
+	watch: {
+		'$route'(to, from) {
+			// Re-initialize GSAP animations when route changes
+			if (process.client && to.path !== from.path) {
+				this.$nextTick(() => {
+					setTimeout(() => {
+						this.initGSAP()
+					}, 300)
+				})
+			}
+		},
+	},
 	methods: {
 		async initGSAP() {
 			if (!process.client) return

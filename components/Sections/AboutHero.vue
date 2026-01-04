@@ -10,7 +10,7 @@
 			class="relative h-[50vh] w-full object-cover lg:h-[70vh] lg:object-cover"
 			@error="handleVideoError"
 		>
-			<source src="/videos/long_video.mp4" type="video/mp4" />
+			<source src="/videos/hero.mp4" type="video/mp4" />
 			Your browser does not support the video tag.
 		</video>
 

@@ -35,7 +35,7 @@
 					<!-- Project Visual - Top -->
 					<div class="relative mb-6 aspect-square overflow-hidden rounded-lg bg-gray-100 group">
 						<video
-							:src="project.video"
+							:src="encodeVideoUrl(project.video)"
 							class="h-full w-full object-cover"
 							autoplay
 							muted
@@ -44,7 +44,7 @@
 							preload="metadata"
 							:aria-label="project.title"
 						>
-							<source :src="project.video" type="video/mp4" />
+							<source :src="encodeVideoUrl(project.video)" type="video/mp4" />
 							Your browser does not support the video tag.
 						</video>
 						<!-- Play Button Overlay -->
@@ -100,33 +100,40 @@ export default {
 				{
 					title: this.$t('PROJECT_TAMIMI_TITLE'),
 					description: this.$t('PROJECT_TAMIMI_DESC'),
-					video: require('~/assets/videos/Burooj Air 01 - Al-Tamimi Video.MP4'),
+					video: '/videos/Burooj Air 01 - Al-Tamimi Video.MP4',
 					category: this.$t('CATEGORY_BUILDING_MAINTENANCE'),
 				},
 				{
 					title: this.$t('PROJECT_ARAMCO_TITLE'),
 					description: this.$t('PROJECT_ARAMCO_DESC'),
-					video: require('~/assets/videos/Burooj Air - Aramco Spark 2.mp4'),
+					video: '/videos/Burooj Air - Aramco Spark 2.mp4',
 					category: this.$t('CATEGORY_INDUSTRIAL_CLEANING'),
 				},
 				{
 					title: this.$t('PROJECT_JINAN_TITLE'),
 					description: this.$t('PROJECT_JINAN_DESC'),
-					video: require('~/assets/videos/Burooj Air - Jinan Building D5.mp4'),
+					video: '/videos/Burooj Air - Jinan Building D5.mp4',
 					category: this.$t('CATEGORY_FACADE_CLEANING'),
 				},
 				{
 					title: this.$t('PROJECT_QOSSIBI_TITLE'),
 					description: this.$t('PROJECT_QOSSIBI_DESC'),
-					video: require('~/assets/videos/Burooj Air - Al Qossibi HQ H.mp4'),
+					video: '/videos/Burooj Air - Al Qossibi HQ H.mp4',
 					category: this.$t('CATEGORY_FACADE_CLEANING'),
 				},
 			]
 		},
 	},
 	methods: {
+		encodeVideoUrl(url) {
+			// Encode only the filename part, keep path separators
+			const parts = url.split('/')
+			const filename = parts.pop()
+			const path = parts.join('/')
+			return path ? `${path}/${encodeURIComponent(filename)}` : encodeURIComponent(filename)
+		},
 		openVideoModal(videoSrc, title) {
-			this.selectedVideoSrc = videoSrc
+			this.selectedVideoSrc = this.encodeVideoUrl(videoSrc)
 			this.selectedVideoTitle = title
 			this.isVideoModalOpen = true
 		},

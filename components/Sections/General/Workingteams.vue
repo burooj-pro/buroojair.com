@@ -62,7 +62,7 @@ export default {
 					name_ar: 'فيصل العتيبي',
 					position: 'Managing Director',
 					position_ar: 'مدير حساب',
-					image: '/images/employees/Faisal.png',
+					image: '/images/employees/Faisal.png?v=2',
 				},
 				{
 					id: 3,

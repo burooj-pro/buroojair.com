@@ -47,7 +47,7 @@
   export default {
 	data() {
 	  return {
-		currentTheme: 'light',
+		currentTheme: 'dark',
 		_themeInterval: null,
 		_storageHandler: null,
 	  }
@@ -75,7 +75,7 @@
   
 		this._storageHandler = (e) => {
 		  if (e.key === 'theme') {
-			this.currentTheme = e.newValue || 'light'
+			this.currentTheme = e.newValue || 'dark'
 			if (this.$theme) this.$theme.setTheme(this.currentTheme)
 		  }
 		}

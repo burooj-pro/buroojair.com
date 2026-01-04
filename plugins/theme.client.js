@@ -2,9 +2,9 @@ export default ({ app }, inject) => {
 	if (process.client) {
 		// Theme management
 		const theme = {
-			// Get current theme from localStorage or default to 'light'
+			// Get current theme from localStorage or default to 'dark'
 			getTheme() {
-				return localStorage.getItem('theme') || 'light'
+				return localStorage.getItem('theme') || 'dark'
 			},
 
 			// Set theme
