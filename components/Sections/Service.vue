@@ -114,13 +114,116 @@ export default {
 	data() {
 		return {
 			visibleServices: [],
+			scrollTriggerInstance: null,
+			resizeHandler: null,
 		}
 	},
 	mounted() {
 		if (process.client) {
-			this.initGSAP()
-			this.observeServices()
+			// Wait for page transition to complete
+			setTimeout(() => {
+				this.initGSAP()
+				this.observeServices()
+			}, 600)
 		}
+	},
+	beforeDestroy() {
+		// Clean up ScrollTrigger and event listeners
+		if (process.client) {
+			if (this.resizeHandler) {
+				window.removeEventListener('resize', this.resizeHandler)
+			}
+			
+			// Reset leftSide element styles
+			if (this.$refs.leftSide) {
+				const leftSide = this.$refs.leftSide
+				try {
+					const { gsap } = require('gsap')
+					gsap.set(leftSide, { clearProps: 'all' })
+				} catch (e) {
+					// Fallback: manually clear styles
+					if (leftSide.style) {
+						leftSide.style.transform = ''
+						leftSide.style.position = ''
+						leftSide.style.top = ''
+						leftSide.style.left = ''
+						leftSide.style.width = ''
+						leftSide.style.marginTop = ''
+						leftSide.style.marginBottom = ''
+					}
+				}
+			}
+			
+			try {
+				const { ScrollTrigger } = require('gsap/ScrollTrigger')
+				// Kill the specific ScrollTrigger instance
+				if (this.scrollTriggerInstance) {
+					this.scrollTriggerInstance.kill()
+					this.scrollTriggerInstance = null
+				}
+				// Also kill any remaining ScrollTriggers for this component
+				ScrollTrigger.getAll().forEach((trigger) => {
+					if (trigger.vars && trigger.vars.trigger === this.$el) {
+						trigger.kill()
+					}
+				})
+				// Refresh to clear any remaining pin spacing
+				ScrollTrigger.refresh()
+			} catch (error) {
+				console.warn('ScrollTrigger cleanup failed:', error)
+			}
+		}
+	},
+	watch: {
+		'$route'(to, from) {
+			// Clean up before re-initializing
+			if (process.client && to.path !== from.path) {
+				// Kill existing ScrollTrigger
+				if (this.scrollTriggerInstance) {
+					try {
+						this.scrollTriggerInstance.kill()
+						this.scrollTriggerInstance = null
+					} catch (error) {
+						console.warn('Error killing ScrollTrigger:', error)
+					}
+				}
+				
+				// Remove resize handler
+				if (this.resizeHandler) {
+					window.removeEventListener('resize', this.resizeHandler)
+					this.resizeHandler = null
+				}
+				
+				// Reset leftSide element styles immediately
+				if (this.$refs.leftSide) {
+					const leftSide = this.$refs.leftSide
+					// Clear GSAP styles
+					try {
+						const { gsap } = require('gsap')
+						gsap.set(leftSide, { clearProps: 'all' })
+					} catch (e) {
+						// Fallback: manually clear styles
+						if (leftSide.style) {
+							leftSide.style.transform = ''
+							leftSide.style.position = ''
+							leftSide.style.top = ''
+							leftSide.style.left = ''
+							leftSide.style.width = ''
+							leftSide.style.marginTop = ''
+							leftSide.style.marginBottom = ''
+						}
+					}
+				}
+				
+				// Re-initialize after page transition completes
+				this.$nextTick(() => {
+					setTimeout(() => {
+						this.initGSAP()
+						this.observeServices()
+					}, 700)
+				})
+			}
+		},
 	},
 	methods: {
 		async initGSAP() {
@@ -138,42 +241,51 @@ export default {
 
 				if (!leftSide || !rightSide || !section) return
 
-				// Only apply on desktop (lg and above)
-				if (window.innerWidth >= 1024) {
-					// Pin the left side while scrolling
-					ScrollTrigger.create({
-						trigger: section,
-						start: 'top top',
-						end: () => `+=${rightSide.scrollHeight}`,
-						pin: leftSide,
-						pinSpacing: true,
-						anticipatePin: 1,
-					})
+				// Reset leftSide element - clear any previous GSAP/ScrollTrigger styles
+				gsap.set(leftSide, {
+					clearProps: 'all',
+					force3D: false,
+				})
+				// Remove any inline styles that ScrollTrigger might have added
+				if (leftSide.style) {
+					leftSide.style.transform = ''
+					leftSide.style.position = ''
+					leftSide.style.top = ''
+					leftSide.style.left = ''
+					leftSide.style.width = ''
+					leftSide.style.marginTop = ''
+					leftSide.style.marginBottom = ''
+				}
 
-					// Keep all services fully visible with normal colors (no hover/scroll effects)
-					for (let i = 1; i <= 6; i++) {
-						const serviceRef = this.$refs[`service${i}`]
-						if (serviceRef) {
-							const titleEl = serviceRef.querySelector('.service-title')
-							const descEl = serviceRef.querySelector('.service-desc')
-							
-							// Set all services to full opacity and normal colors
-							gsap.set(serviceRef, { 
-								opacity: 1,
+				// Refresh ScrollTrigger to clear any stale calculations
+				ScrollTrigger.refresh()
+
+				// Note: Title section is no longer pinned - it scrolls normally with the page
+				// Removed pinning functionality as requested
+
+				// Keep all services fully visible with normal colors (no hover/scroll effects)
+				for (let i = 1; i <= 6; i++) {
+					const serviceRef = this.$refs[`service${i}`]
+					if (serviceRef) {
+						const titleEl = serviceRef.querySelector('.service-title')
+						const descEl = serviceRef.querySelector('.service-desc')
+						
+						// Set all services to full opacity and normal colors
+						gsap.set(serviceRef, { 
+							opacity: 1,
+							clearProps: 'all'
+						})
+						if (titleEl) {
+							gsap.set(titleEl, {
+								color: '',
 								clearProps: 'all'
 							})
-							if (titleEl) {
-								gsap.set(titleEl, {
-									color: '',
-									clearProps: 'all'
-								})
-							}
-							if (descEl) {
-								gsap.set(descEl, {
-									color: '',
-									clearProps: 'all'
-								})
-							}
+						}
+						if (descEl) {
+							gsap.set(descEl, {
+								color: '',
+								clearProps: 'all'
+							})
 						}
 					}
 				}
@@ -208,10 +320,20 @@ export default {
 				}
 
 				// Handle window resize
-				const handleResize = () => {
+				if (this.resizeHandler) {
+					window.removeEventListener('resize', this.resizeHandler)
+				}
+				
+				this.resizeHandler = () => {
 					ScrollTrigger.refresh()
 					// Re-apply mobile styles if resized to mobile
 					if (window.innerWidth < 1024) {
+						// Kill pin if resizing to mobile
+						if (this.scrollTriggerInstance) {
+							this.scrollTriggerInstance.kill()
+							this.scrollTriggerInstance = null
+						}
+						
 						for (let i = 1; i <= 6; i++) {
 							const serviceRef = this.$refs[`service${i}`]
 							if (serviceRef) {
@@ -238,16 +360,7 @@ export default {
 						}
 					}
 				}
-				window.addEventListener('resize', handleResize)
-				
-				// Clean up on component destroy
-				this.$once('hook:beforeDestroy', () => {
-					window.removeEventListener('resize', handleResize)
-					// Kill all ScrollTrigger instances for this component
-					ScrollTrigger.getAll().forEach((trigger) => {
-						trigger.kill()
-					})
-				})
+				window.addEventListener('resize', this.resizeHandler)
 			})
 		},
 		observeServices() {

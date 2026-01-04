@@ -28,7 +28,7 @@
 						<!-- Project Visual - Top -->
 						<div class="relative mb-6 aspect-square overflow-hidden rounded-xl bg-gray-100 shadow-lg group">
 							<video
-								:src="project.video"
+								:src="encodeVideoUrl(project.video)"
 								class="h-full w-full object-cover"
 								autoplay
 								muted
@@ -37,7 +37,7 @@
 								preload="metadata"
 								:aria-label="project.title"
 							>
-								<source :src="project.video" type="video/mp4" />
+								<source :src="encodeVideoUrl(project.video)" type="video/mp4" />
 								Your browser does not support the video tag.
 							</video>
 							<!-- Glassy Video Icon Overlay -->
@@ -101,8 +101,15 @@ export default {
 		}
 	},
 	methods: {
+		encodeVideoUrl(url) {
+			// Encode only the filename part, keep path separators
+			const parts = url.split('/')
+			const filename = parts.pop()
+			const path = parts.join('/')
+			return path ? `${path}/${encodeURIComponent(filename)}` : encodeURIComponent(filename)
+		},
 		openVideoModal(videoSrc, title) {
-			this.selectedVideoSrc = videoSrc
+			this.selectedVideoSrc = this.encodeVideoUrl(videoSrc)
 			this.selectedVideoTitle = title
 			this.isVideoModalOpen = true
 		},
@@ -118,61 +125,61 @@ export default {
 				{
 					title: this.$t('PROJECT_TAMIMI_TITLE'),
 					description: this.$t('PROJECT_TAMIMI_DESC'),
-					video: require('~/assets/videos/Burooj Air 01 - Al-Tamimi Video.MP4'),
+					video: '/videos/Burooj Air 01 - Al-Tamimi Video.MP4',
 					category: this.$t('CATEGORY_BUILDING_MAINTENANCE'),
 				},
 				{
 					title: this.$t('PROJECT_ARAMCO_TITLE'),
 					description: this.$t('PROJECT_ARAMCO_DESC'),
-					video: require('~/assets/videos/Burooj Air - Aramco Spark 2.mp4'),
+					video: '/videos/Burooj Air - Aramco Spark 2.mp4',
 					category: this.$t('CATEGORY_INDUSTRIAL_CLEANING'),
 				},
 				{
 					title: this.$t('PROJECT_JINAN_TITLE'),
 					description: this.$t('PROJECT_JINAN_DESC'),
-					video: require('~/assets/videos/Burooj Air - Jinan Building D5.mp4'),
+					video: '/videos/Burooj Air - Jinan Building D5.mp4',
 					category: this.$t('CATEGORY_FACADE_CLEANING'),
 				},
 				{
 					title: this.$t('PROJECT_QOSSIBI_TITLE'),
 					description: this.$t('PROJECT_QOSSIBI_DESC'),
-					video: require('~/assets/videos/Burooj Air - Al Qossibi HQ H.mp4'),
+					video: '/videos/Burooj Air - Al Qossibi HQ H.mp4',
 					category: this.$t('CATEGORY_FACADE_CLEANING'),
 				},
 				{
 					title: this.$t('PROJECT_FOZAN_TITLE'),
 					description: this.$t('PROJECT_FOZAN_DESC'),
-					video: require('~/assets/videos/Burooj Air - Al Fozan H.mp4'),
+					video: '/videos/Burooj Air - Al Fozan H.mp4',
 					category: this.$t('CATEGORY_FACADE_CLEANING'),
 				},
 				{
 					title: this.$t('PROJECT_SAFA_TITLE'),
 					description: this.$t('PROJECT_SAFA_DESC'),
-					video: require('~/assets/videos/Burooj Air - AL Safa Privet House H .mp4'),
+					video: '/videos/Burooj Air - AL Safa Privet House H .mp4',
 					category: this.$t('CATEGORY_BUILDING_MAINTENANCE'),
 				},
 				{
 					title: this.$t('PROJECT_ZAMIL_TITLE'),
 					description: this.$t('PROJECT_ZAMIL_DESC'),
-					video: require('~/assets/videos/Burooj Air - Al Zamil Edit 02.mp4'),
+					video: '/videos/Burooj Air - Al Zamil Edit 02.mp4',
 					category: this.$t('CATEGORY_BUILDING_MAINTENANCE'),
 				},
 				{
 					title: this.$t('PROJECT_ASSALAM_TITLE'),
 					description: this.$t('PROJECT_ASSALAM_DESC'),
-					video: require('~/assets/videos/Burooj Air - AsSalam Privet Villa.mp4'),
+					video: '/videos/Burooj Air - AsSalam Privet Villa.mp4',
 					category: this.$t('CATEGORY_BUILDING_MAINTENANCE'),
 				},
 				{
 					title: this.$t('PROJECT_CORNAICH_TITLE'),
 					description: this.$t('PROJECT_CORNAICH_DESC'),
-					video: require('~/assets/videos/Burooj Air - Cornaich Park Screen H.mp4'),
+					video: '/videos/Burooj Air - Cornaich Park Screen H.mp4',
 					category: this.$t('CATEGORY_BUILDING_MAINTENANCE'),
 				},
 				{
 					title: this.$t('PROJECT_BASIC_DEMO_TITLE'),
 					description: this.$t('PROJECT_BASIC_DEMO_DESC'),
-					video: require('~/assets/videos/Burooj Air - Basic Demo 03.mp4'),
+					video: '/videos/Burooj Air - Basic Demo 03.mp4',
 					category: this.$t('CATEGORY_BUILDING_MAINTENANCE'),
 				},
 			]

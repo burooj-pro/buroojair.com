@@ -39,6 +39,23 @@ export default {
 			this.$theme.init()
 		}
 	},
+	watch: {
+		'$route'(to, from) {
+			// When route changes, refresh ScrollTrigger after a short delay
+			if (process.client && to.path !== from.path) {
+				this.$nextTick(() => {
+					setTimeout(async () => {
+						try {
+							const { ScrollTrigger } = await import('gsap/ScrollTrigger')
+							ScrollTrigger.refresh()
+						} catch (error) {
+							console.warn('ScrollTrigger refresh failed:', error)
+						}
+					}, 200)
+				})
+			}
+		},
+	},
 	methods: {
 		async onEnter(el, done) {
 			if (!process.client) {
@@ -80,10 +97,32 @@ export default {
 				onComplete: done,
 			})
 		},
-		onAfterEnter() {
+		async onAfterEnter() {
 			// Scroll to top after page transition
 			if (process.client) {
 				window.scrollTo({ top: 0, behavior: 'smooth' })
+				
+				// Refresh ScrollTrigger after page transition
+				// This ensures all scroll-triggered animations work correctly
+				try {
+					const { ScrollTrigger } = await import('gsap/ScrollTrigger')
+					// Wait a bit for DOM to settle
+					setTimeout(() => {
+						ScrollTrigger.refresh()
+					}, 100)
+				} catch (error) {
+					console.warn('ScrollTrigger refresh failed:', error)
+				}
+				
+				// Re-initialize Flowbite collapses
+				this.$nextTick(() => {
+					try {
+						const { initCollapses } = require('flowbite')
+						initCollapses()
+					} catch (error) {
+						console.warn('Flowbite init failed:', error)
+					}
+				})
 			}
 		},
 	},

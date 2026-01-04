@@ -51,8 +51,26 @@ export default {
 		{ name: 'format-detection', content: 'telephone=no' },
 	  ],
 	  // Analytics scripts moved to plugins/analytics.client.js to load after page load for better performance
-	  script: [],
-	  __dangerouslyDisableSanitizersByTagID: {},
+	  script: [
+		{
+		  hid: 'theme-init',
+		  innerHTML: `
+			(function() {
+			  const theme = localStorage.getItem('theme') || 'dark';
+			  if (theme === 'dark') {
+				document.documentElement.classList.add('dark');
+			  } else {
+				document.documentElement.classList.remove('dark');
+			  }
+			})();
+		  `,
+		  type: 'text/javascript',
+		  charset: 'utf-8'
+		}
+	  ],
+	  __dangerouslyDisableSanitizersByTagID: {
+		'theme-init': ['innerHTML']
+	  },
 	},
   
 	css: ['@/assets/scss/main.scss', 'animate.css/animate.min.css'],

@@ -145,6 +145,19 @@ export default {
 			this.observeSection()
 		}
 	},
+	watch: {
+		'$route'(to, from) {
+			// Re-initialize GSAP animations when route changes
+			if (process.client && to.path !== from.path) {
+				this.$nextTick(() => {
+					setTimeout(() => {
+						this.initGSAP()
+						this.observeSection()
+					}, 300)
+				})
+			}
+		},
+	},
 	beforeDestroy() {
 		if (process.client && this.$ScrollTrigger) {
 			// Clean up ScrollTrigger instances
