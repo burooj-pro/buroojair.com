@@ -82,7 +82,7 @@ function initAnalytics() {
     var s=d.createElement("script");s.type="text/javascript";s.async=!0;s.defer=true;
     s.src=r+"?sdkid="+e+"&lib="+t;
     var f=d.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(s,f)};
+    if(f&&f.parentNode){f.parentNode.insertBefore(s,f);}else{(d.head||d.body||d.documentElement).appendChild(s);}};
     ttq.load("D0M466RC77U6GBUFK3M0");
     ttq.page();
   }(window, document, 'ttq');`
