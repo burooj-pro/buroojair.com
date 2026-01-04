@@ -35,7 +35,7 @@
 					<!-- Project Visual - Top -->
 					<div class="relative mb-6 aspect-square overflow-hidden rounded-lg bg-gray-100 group">
 						<video
-							:src="encodeVideoUrl(project.video)"
+							:src="project.video"
 							class="h-full w-full object-cover"
 							autoplay
 							muted
@@ -44,7 +44,7 @@
 							preload="metadata"
 							:aria-label="project.title"
 						>
-							<source :src="encodeVideoUrl(project.video)" type="video/mp4" />
+							<source :src="project.video" type="video/mp4" />
 							Your browser does not support the video tag.
 						</video>
 						<!-- Play Button Overlay -->
@@ -126,14 +126,18 @@ export default {
 	},
 	methods: {
 		encodeVideoUrl(url) {
-			// Encode only the filename part, keep path separators
-			const parts = url.split('/')
-			const filename = parts.pop()
-			const path = parts.join('/')
-			return path ? `${path}/${encodeURIComponent(filename)}` : encodeURIComponent(filename)
+			// For static files, encode the entire path properly
+			// Split by /, encode each segment, then join
+			return url.split('/').map(segment => {
+				// Don't encode empty segments (leading/trailing slashes)
+				if (!segment) return segment
+				// Encode the segment (handles spaces and special chars)
+				return encodeURIComponent(segment)
+			}).join('/')
 		},
 		openVideoModal(videoSrc, title) {
-			this.selectedVideoSrc = this.encodeVideoUrl(videoSrc)
+			// Encode URL for modal (browser handles spaces in static paths)
+			this.selectedVideoSrc = encodeURI(videoSrc)
 			this.selectedVideoTitle = title
 			this.isVideoModalOpen = true
 		},

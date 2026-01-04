@@ -10,11 +10,12 @@
 			autoplay
 			loop
 			playsinline
-			preload="metadata"
+			preload="auto"
 			class="hero-video-mobile w-full h-full"
 			@error="handleVideoError"
+			@loadeddata="handleVideoLoaded"
 		  >
-			<source src="/videos/hero.mp4" type="video/mp4" />
+			<source src="/videos/hero.mp4?v=2" type="video/mp4" />
 			Your browser does not support the video tag.
 		  </video>
 		  
@@ -50,11 +51,12 @@
 		  autoplay
 		  loop
 		  playsinline
-		  preload="metadata"
+		  preload="auto"
 		  class="hero-video absolute inset-0 z-0"
 		  @error="handleVideoError"
+		  @loadeddata="handleVideoLoaded"
 		>
-		  <source src="/videos/hero.mp4" type="video/mp4" />
+		  <source src="/videos/hero.mp4?v=2" type="video/mp4" />
 		  Your browser does not support the video tag.
 		</video>
 		
@@ -94,8 +96,23 @@
 	  }
 	},
 	methods: {
-	  handleVideoError() {
-		// decorative only
+	  handleVideoError(e) {
+		// Log error for debugging
+		console.warn('Hero video error:', e.target?.error)
+		// Video is decorative, so failure is not critical
+	  },
+	  handleVideoLoaded() {
+		// Video loaded successfully
+		if (this.$refs.videoPlayerMobile) {
+		  this.$refs.videoPlayerMobile.play().catch(() => {
+			// Autoplay was prevented, which is fine
+		  })
+		}
+		if (this.$refs.videoPlayerDesktop) {
+		  this.$refs.videoPlayerDesktop.play().catch(() => {
+			// Autoplay was prevented, which is fine
+		  })
+		}
 	  },
 	  async initGSAP() {
 		if (!process.client) return
