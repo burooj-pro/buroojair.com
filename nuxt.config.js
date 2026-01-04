@@ -34,6 +34,21 @@ export default {
 		  property: 'og:image',
 		  content: 'https://buroojair.com/images/buroojair-og.png',
 		},
+		{
+		  hid: 'og:image:width',
+		  property: 'og:image:width',
+		  content: '1200',
+		},
+		{
+		  hid: 'og:image:height',
+		  property: 'og:image:height',
+		  content: '630',
+		},
+		{
+		  hid: 'og:image:type',
+		  property: 'og:image:type',
+		  content: 'image/png',
+		},
 		{ hid: 'og:url', property: 'og:url', content: 'https://buroojair.com/' },
 		{ hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
 		{ hid: 'twitter:title', name: 'twitter:title', content: 'Burooj Air' },
