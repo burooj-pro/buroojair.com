@@ -97,8 +97,33 @@
 	},
 	methods: {
 	  handleVideoError(e) {
-		// Log error for debugging
-		console.warn('Hero video error:', e.target?.error)
+		// Log detailed error for debugging
+		const video = e.target
+		const error = video?.error
+		if (error) {
+		  let errorMsg = 'Unknown error'
+		  switch (error.code) {
+			case error.MEDIA_ERR_ABORTED:
+			  errorMsg = 'Video loading aborted'
+			  break
+			case error.MEDIA_ERR_NETWORK:
+			  errorMsg = 'Network error while loading video'
+			  break
+			case error.MEDIA_ERR_DECODE:
+			  errorMsg = 'Video decoding error'
+			  break
+			case error.MEDIA_ERR_SRC_NOT_SUPPORTED:
+			  errorMsg = 'Video format not supported'
+			  break
+		  }
+		  console.error('Hero video error:', errorMsg, {
+			code: error.code,
+			message: error.message,
+			src: video?.src || video?.currentSrc
+		  })
+		} else {
+		  console.warn('Hero video error (no error details):', e)
+		}
 		// Video is decorative, so failure is not critical
 	  },
 	  handleVideoLoaded() {
