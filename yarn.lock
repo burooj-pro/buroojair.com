@@ -3487,10 +3487,10 @@ cosmiconfig@^7.0.0:
     path-type "^4.0.0"
     yaml "^1.10.0"
 
-countup.js@latest:
-  version "2.8.0"
-  resolved "https://registry.npmjs.org/countup.js/-/countup.js-2.8.0.tgz"
-  integrity sha512-f7xEhX0awl4NOElHulrl4XRfKoNH3rB+qfNSZZyjSZhaAoUk6elvhH+MNxMmlmuUJ2/QNTWPSA7U4mNtIAKljQ==
+countup.js@^2.9.0, countup.js@latest:
+  version "2.9.0"
+  resolved "https://registry.npmjs.org/countup.js/-/countup.js-2.9.0.tgz"
+  integrity sha512-llqrvyXztRFPp6+i8jx25phHWcVWhrHO4Nlt0uAOSKHB8778zzQswa4MU3qKBvkXfJKftRYFJuVHez67lyKdHg==
 
 crc@^4.3.2:
   version "4.3.2"
