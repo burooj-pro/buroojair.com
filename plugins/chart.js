@@ -1,31 +1,3 @@
-import Vue from 'vue'
-import { Bar } from 'vue-chartjs'
-
-Vue.component('BarChart', {
-	extends: Bar,
-	props: {
-		data: {
-			type: Object,
-			required: true,
-		},
-		options: {
-			type: Object,
-			required: false,
-			default: () => ({
-				responsive: true,
-				maintainAspectRatio: false,
-				legend: {
-					display: false,
-				},
-			}),
-		},
-	},
-	watch: {
-		data() {
-			this.renderChart(this.data, this.options)
-		},
-	},
-	mounted() {
-		this.renderChart(this.data, this.options)
-	},
-})
+// Chart.js is now lazy loaded in MyBarChart component
+// This plugin file is kept for backward compatibility but no longer registers globally
+// to reduce initial bundle size
