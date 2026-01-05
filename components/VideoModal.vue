@@ -68,6 +68,12 @@ export default {
 		normalizedVideoSrc() {
 			// Handle both string URLs and webpack require() results
 			if (typeof this.videoSrc === 'string') {
+				// If URL is already encoded (contains %), return as-is
+				// Otherwise, it's a local path that might need encoding
+				if (this.videoSrc.startsWith('http://') || this.videoSrc.startsWith('https://')) {
+					// External URL - return as-is (should already be properly encoded)
+					return this.videoSrc
+				}
 				return this.videoSrc
 			}
 			// If it's a webpack module object, get the default export or the src
@@ -75,6 +81,13 @@ export default {
 				return this.videoSrc.default || this.videoSrc.src || this.videoSrc
 			}
 			return this.videoSrc
+		},
+		isExternalUrl() {
+			// Check if the video source is an external URL
+			if (typeof this.videoSrc === 'string') {
+				return this.videoSrc.startsWith('http://') || this.videoSrc.startsWith('https://')
+			}
+			return false
 		},
 	},
 	watch: {

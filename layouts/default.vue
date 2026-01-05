@@ -100,7 +100,11 @@ export default {
 		async onAfterEnter() {
 			// Scroll to top after page transition
 			if (process.client) {
-				window.scrollTo({ top: 0, behavior: 'smooth' })
+				// Use instant scroll to prevent any delay or smooth scroll issues
+				window.scrollTo(0, 0)
+				// Also set scroll position directly as a fallback
+				document.documentElement.scrollTop = 0
+				document.body.scrollTop = 0
 				
 				// Refresh ScrollTrigger after page transition
 				// This ensures all scroll-triggered animations work correctly
@@ -109,6 +113,8 @@ export default {
 					// Wait a bit for DOM to settle
 					setTimeout(() => {
 						ScrollTrigger.refresh()
+						// Ensure we're still at top after ScrollTrigger refresh
+						window.scrollTo(0, 0)
 					}, 100)
 				} catch (error) {
 					console.warn('ScrollTrigger refresh failed:', error)

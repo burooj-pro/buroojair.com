@@ -28,7 +28,7 @@
 		  ref="mobileFormContainer"
 		  class="w-full bg-gray-900 bg-opacity-95 p-6 dark:bg-gray-800 dark:bg-opacity-95"
 		>
-		  <h3 ref="mobileTitle" class="mb-5 font-neo-sans text-2xl font-light uppercase text-white">
+		  <h3 ref="mobileTitle" class="mb-5 font-neo-sans text-2xl font-normal uppercase text-white">
 			{{ $t('NOW_REQUEST_A_QUOTE_FOR_DRONE_CLEANING') }}
 		  </h3>
   
@@ -70,7 +70,7 @@
 			  ref="desktopFormContainer"
 			  class="w-full bg-gray-900 bg-opacity-95 dark:bg-gray-800 dark:bg-opacity-95 max-w-md rounded-bl-[80px] rounded-br-2xl rounded-tl-2xl rounded-tr-[80px] p-8"
 			>
-			  <h3 ref="desktopTitle" class="mb-5 font-neo-sans text-3xl font-light uppercase text-white">
+			  <h3 ref="desktopTitle" class="mb-5 font-neo-sans text-3xl font-normal uppercase text-white">
 				{{ $t('NOW_REQUEST_A_QUOTE_FOR_DRONE_CLEANING') }}
 			  </h3>
   

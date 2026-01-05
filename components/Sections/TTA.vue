@@ -73,7 +73,7 @@
 							<!-- Contact Button -->
 							<a
 								:href="'mailto:contact@buroojair.com?subject=Interested in ' + product.name"
-								class="mt-auto block w-full rounded-lg bg-brand-second px-6 py-3 text-center text-sm font-semibold text-white no-underline transition-colors hover:bg-brand-first focus:outline-none focus:ring-2 focus:ring-brand-second focus:ring-offset-2 lg:py-4 lg:text-base"
+								class="mt-auto block w-full rounded-lg bg-brand-second px-6 py-3 text-center text-sm font-bold text-white no-underline transition-colors hover:bg-brand-first focus:outline-none focus:ring-2 focus:ring-brand-second focus:ring-offset-2 lg:py-4 lg:text-base"
 							>
 								{{ $t('CONTACT_US') }}
 							</a>
