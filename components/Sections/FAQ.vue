@@ -9,7 +9,7 @@
 				<h2 ref="title" class="mb-4 mt-8 text-3xl font-black uppercase tracking-tight text-gray-900 dark:text-white lg:text-5xl">
 					{{ $t('FAQ_TITLE') }}
 				</h2>
-				<p ref="description" class="mx-auto max-w-3xl text-base font-light text-gray-600 dark:text-gray-300 lg:text-xl">
+				<p ref="description" class="mx-auto max-w-3xl text-base font-normal text-gray-600 dark:text-gray-300 lg:text-xl">
 					{{ $t('FAQ_DESC') }}
 				</p>
 			</div>
@@ -40,7 +40,7 @@
 					</button>
 					<div
 						:ref="`faqAnswer${index}`"
-						class="faq-answer px-4 pb-6 pt-0 text-base font-light leading-relaxed text-gray-700 dark:text-gray-300 lg:px-6 lg:text-lg"
+						class="faq-answer px-4 pb-6 pt-0 text-base font-normal leading-relaxed text-gray-700 dark:text-gray-300 lg:px-6 lg:text-lg"
 						v-html="faq.answer"
 					></div>
 				</div>

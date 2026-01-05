@@ -32,7 +32,7 @@
 							<h3 class="text-base font-semibold leading-tight text-white lg:text-lg mb-1">
 								{{ $i18n.locale === 'ar' ? member.name_ar : member.name }}
 							</h3>
-							<p class="text-xs font-light text-white/90 lg:text-sm">
+							<p class="text-sm font-light text-white/90 lg:text-base">
 								{{ $i18n.locale === 'ar' ? member.position_ar : member.position }}
 							</p>
 						</div>

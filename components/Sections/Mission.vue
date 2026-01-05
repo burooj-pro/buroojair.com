@@ -16,11 +16,18 @@
 							loop
 							playsinline
 							preload="metadata"
+							aria-label="Burooj Air mission video showing precision drone cleaning in action"
 							@error="handleVideoError"
+							@loadedmetadata="handleVideoLoaded"
+							@loadstart="handleVideoLoadStart"
 						>
 							<source :src="missionVideo" type="video/mp4" />
 							Your browser does not support the video tag.
 						</video>
+						<!-- Loading indicator -->
+						<div v-if="videoLoading" class="absolute inset-0 z-10 flex items-center justify-center bg-gray-200 dark:bg-gray-800">
+							<div class="text-sm text-gray-600 dark:text-gray-400">Loading video...</div>
+						</div>
 						<!-- Linear Gradient Overlay for text visibility -->
 						<div class="absolute inset-0 z-10 bg-gradient-to-b from-black/60 via-black/20 to-transparent"></div>
 						<!-- Caption -->
@@ -135,8 +142,9 @@ export default {
 		data() {
 			return {
 				isVisible: false,
-				missionVideo: require('~/assets/videos/Story 6.mp4'),
+				missionVideo: 'https://hel1.your-objectstorage.com/burooj-prod/videos/Story%206.mp4',
 				backgroundImage: require('~/assets/images/bg.png'),
+				videoLoading: true,
 			}
 		},
 	mounted() {
@@ -167,8 +175,54 @@ export default {
 		}
 	},
 	methods: {
-		handleVideoError() {
-			// Silently handle video loading errors
+		handleVideoLoadStart() {
+			// Video started loading
+			this.videoLoading = true
+		},
+		handleVideoLoaded() {
+			// Video metadata loaded, try to play
+			this.videoLoading = false
+			if (this.$refs.missionVideo) {
+				this.$refs.missionVideo.play().catch((error) => {
+					console.warn('Mission video autoplay failed:', error)
+					// Autoplay might be prevented, that's okay
+				})
+			}
+		},
+		handleVideoError(e) {
+			// Log detailed error for debugging
+			const video = e.target
+			const error = video?.error
+			if (error) {
+				let errorMsg = 'Unknown error'
+				switch (error.code) {
+					case error.MEDIA_ERR_ABORTED:
+						errorMsg = 'Video loading aborted'
+						break
+					case error.MEDIA_ERR_NETWORK:
+						errorMsg = 'Network error (possibly CORS) - Check browser console for details'
+						break
+					case error.MEDIA_ERR_DECODE:
+						errorMsg = 'Video decoding error'
+						break
+					case error.MEDIA_ERR_SRC_NOT_SUPPORTED:
+						errorMsg = 'Video format not supported or URL invalid'
+						break
+				}
+				console.error('Mission video error:', errorMsg, {
+					code: error.code,
+					message: error.message,
+					src: video?.src || video?.currentSrc,
+					networkState: video?.networkState,
+					readyState: video?.readyState,
+				})
+			} else {
+				console.error('Mission video error (no error details):', {
+					src: video?.src || video?.currentSrc,
+					networkState: video?.networkState,
+					readyState: video?.readyState,
+				})
+			}
 			// Video is decorative, so failure is not critical
 		},
 		async initGSAP() {

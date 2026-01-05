@@ -10,7 +10,7 @@
 				<!-- Base Logo (Transparent) -->
 				<img
 					ref="baseLogo"
-					src="~assets/images/logo.png"
+					src="~assets/images/loading.png"
 					alt="Burooj Air Logo"
 					class="h-24 w-auto lg:h-32"
 					:style="{ opacity: baseOpacity }"
@@ -26,7 +26,7 @@
 					}"
 				>
 					<img
-						src="~assets/images/logo.png"
+						src="~assets/images/loading.png"
 						alt="Burooj Air Logo"
 						class="h-24 w-auto opacity-100 lg:h-32"
 					/>

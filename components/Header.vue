@@ -25,10 +25,10 @@
 						
 						<!-- Desktop Navigation Links -->
 						<div class="hidden lg:flex lg:items-center">
-							<ul class="flex gap-1 space-x-1 font-medium p-0">
+							<ul class="flex gap-1 space-x-1 p-0">
 							<li>
 								<NuxtLink 
-									class="block min-h-[44px] rounded-lg px-4 py-2 text-white no-underline focus:outline-none"
+									class="block min-h-[44px] rounded-lg px-4 py-2 text-base font-semibold text-white no-underline transition-all hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50"
 									to="/about-us"
 								>
 									{{ $t('ABOUT_US') }}
@@ -36,7 +36,7 @@
 							</li>
 							<li>
 								<NuxtLink 
-									class="block min-h-[44px] rounded-lg px-4 py-2 text-white no-underline focus:outline-none"
+									class="block min-h-[44px] rounded-lg px-4 py-2 text-base font-semibold text-white no-underline transition-all hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50"
 									to="/#servicesSection"
 									@click.native="smoothScroll('#servicesSection')"
 								>
@@ -45,7 +45,7 @@
 							</li>
 							<li>
 								<NuxtLink 
-									class="block min-h-[44px] rounded-lg px-4 py-2 text-white no-underline focus:outline-none"
+									class="block min-h-[44px] rounded-lg px-4 py-2 text-base font-semibold text-white no-underline transition-all hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50"
 									to="/projects"
 								>
 									{{ $t('OUR_PROJECTS') || 'Projects' }}
@@ -53,7 +53,7 @@
 							</li>
 							<li>
 								<NuxtLink 
-									class="block min-h-[44px] rounded-lg px-4 py-2 text-white no-underline focus:outline-none"
+									class="block min-h-[44px] rounded-lg px-4 py-2 text-base font-semibold text-white no-underline transition-all hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50"
 									to="/franchise"
 								>
 									{{ $t('FRANCHISE') }}
@@ -68,14 +68,14 @@
 						<!-- Language Switcher -->
 						<button
 							@click="onChangeLanguage"
-							class="min-h-[44px] rounded-lg px-4 py-2 text-sm font-medium text-white no-underline focus:outline-none"
+							class="min-h-[44px] rounded-lg px-4 py-2 text-base font-semibold text-white no-underline transition-all hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50"
 							:aria-label="$i18n.locale === 'en' ? 'Switch to Arabic' : 'Switch to English'"
 						>
 							{{ $i18n.locale === 'en' ? 'العربية' : 'English' }}
 						</button>
 						<ThemeToggle />
 						<NuxtLink 
-							class="whitespace-nowrap rounded-lg bg-blue-600 px-6 py-2.5 text-base font-medium text-white no-underline min-h-[44px] flex items-center justify-center focus:outline-none" 
+							class="whitespace-nowrap rounded-lg bg-blue-600 px-6 py-2.5 text-base font-bold text-white no-underline min-h-[44px] flex items-center justify-center transition-all hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400" 
 							to="/contact"
 						>
 							{{ $t('CONTACT') }} Us
@@ -88,7 +88,7 @@
 						<button 
 							@click="toggleMenu"
 							type="button" 
-							class="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-white focus:outline-none" 
+							class="inline-flex h-11 w-11 items-center justify-center rounded-lg p-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-white/50 transition-all hover:bg-white/10" 
 							aria-controls="navbar-default" 
 							:aria-expanded="isMenuOpen"
 						>
@@ -109,11 +109,11 @@
 					class="w-full lg:hidden border-t border-gray-700/50" 
 					id="navbar-default"
 				>
-					<ul class="flex flex-col gap-1 px-4 py-4 font-medium">
+					<ul class="flex flex-col gap-1 px-4 py-4">
 						<li>
 							<NuxtLink 
 								@click.native="closeMenu"
-								class="block min-h-[44px] rounded-lg px-4 py-3 text-white no-underline focus:outline-none"
+								class="block min-h-[44px] rounded-lg px-4 py-3 text-base font-semibold text-white no-underline transition-all hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50"
 								to="/about-us"
 							>
 								{{ $t('ABOUT_US') }}
@@ -122,7 +122,7 @@
 						<li>
 							<NuxtLink 
 								@click.native="handleServicesClick"
-								class="block min-h-[44px] rounded-lg px-4 py-3 text-white no-underline focus:outline-none"
+								class="block min-h-[44px] rounded-lg px-4 py-3 text-base font-semibold text-white no-underline transition-all hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50"
 								to="/#servicesSection"
 							>
 								{{ $t('SERVICES') }}
@@ -131,7 +131,7 @@
 						<li>
 							<NuxtLink 
 								@click.native="closeMenu"
-								class="block min-h-[44px] rounded-lg px-4 py-3 text-white no-underline focus:outline-none"
+								class="block min-h-[44px] rounded-lg px-4 py-3 text-base font-semibold text-white no-underline transition-all hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50"
 								to="/projects"
 							>
 								{{ $t('OUR_PROJECTS') || 'Projects' }}
@@ -140,7 +140,7 @@
 						<li>
 							<NuxtLink 
 								@click.native="closeMenu"
-								class="block min-h-[44px] rounded-lg px-4 py-3 text-white no-underline focus:outline-none"
+								class="block min-h-[44px] rounded-lg px-4 py-3 text-base font-semibold text-white no-underline transition-all hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50"
 								to="/franchise"
 							>
 								{{ $t('FRANCHISE') }}
@@ -150,7 +150,7 @@
 						<li class="mt-2">
 							<NuxtLink 
 								@click.native="closeMenu"
-								class="block w-full min-h-[44px] rounded-lg bg-blue-600 px-4 py-3 text-center text-sm font-semibold text-white no-underline focus:outline-none"
+								class="block w-full min-h-[44px] rounded-lg bg-blue-600 px-4 py-3 text-center text-base font-bold text-white no-underline transition-all hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
 								to="/contact"
 							>
 								{{ $t('CONTACT') }} Us
@@ -160,7 +160,7 @@
 						<li class="mt-2">
 							<button
 								@click="onChangeLanguage"
-								class="block w-full min-h-[44px] rounded-lg px-4 py-3 text-center text-sm font-medium text-white no-underline focus:outline-none"
+								class="block w-full min-h-[44px] rounded-lg px-4 py-3 text-center text-base font-semibold text-white no-underline transition-all hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50"
 								:aria-label="$i18n.locale === 'en' ? 'Switch to Arabic' : 'Switch to English'"
 							>
 								{{ $i18n.locale === 'en' ? 'العربية' : 'English' }}
@@ -275,10 +275,16 @@ export default {
 </script>
 
 <style scoped>
-/* Unify navigation link styling - ensure consistent capitalization */
-nav ul li a {
+/* Navigation link styling - improved for better UX and clarity */
+nav ul li a,
+header a,
+header button {
 	text-transform: none;
-	font-weight: 500;
-	letter-spacing: 0.025em;
+	letter-spacing: 0.02em;
+	line-height: 1.5;
+	font-weight: 600 !important; /* Ensure navbar links are bold and clear */
+	font-size: 1rem !important; /* Ensure base font size for clarity */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 </style>

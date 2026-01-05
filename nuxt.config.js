@@ -105,6 +105,17 @@ export default {
 	},
   
 	modules: ['@nuxtjs/style-resources', '@nuxtjs/i18n'],
+	
+	router: {
+		scrollBehavior(to, from, savedPosition) {
+			// Always scroll to top when navigating to a new page
+			if (savedPosition) {
+				return savedPosition
+			} else {
+				return { x: 0, y: 0 }
+			}
+		},
+	},
   
 	build: {
 	  extractCSS: true,

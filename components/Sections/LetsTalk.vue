@@ -19,7 +19,7 @@
 						</p>
 					<NuxtLink 
 						to="/franchise" 
-						class="inline-flex items-center justify-center min-h-[44px] gap-2 rounded-lg bg-blue-600 px-6 py-3 text-base font-semibold text-white no-underline transition-colors hover:bg-blue-700 lg:px-8 lg:py-4 lg:text-lg"
+						class="inline-flex items-center justify-center min-h-[44px] gap-2 rounded-lg bg-blue-600 px-6 py-3 text-base font-bold text-white no-underline transition-colors hover:bg-blue-700 lg:px-8 lg:py-4 lg:text-lg"
 					>
 						<svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />

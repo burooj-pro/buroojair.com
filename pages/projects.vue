@@ -26,20 +26,29 @@
 						class="flex flex-col transition-all hover:scale-[1.02]"
 					>
 						<!-- Project Visual - Top -->
-						<div class="relative mb-6 aspect-square overflow-hidden rounded-xl bg-gray-100 shadow-lg group">
+						<div ref="videoContainer" class="relative mb-6 aspect-square overflow-hidden rounded-xl bg-gray-100 shadow-lg group">
 							<video
-								:src="project.video"
+								:ref="`video-${index}`"
+								:data-src="getVideoSrc(project.video)"
 								class="h-full w-full object-cover"
-								autoplay
 								muted
 								loop
 								playsinline
-								preload="metadata"
+								preload="none"
 								:aria-label="project.title"
+								@error="(e) => handleVideoError(e, project.video)"
+								@loadstart="handleVideoLoadStart"
+								@loadedmetadata="handleVideoMetadataLoaded"
+								@mouseenter="handleVideoHover"
+								@mouseleave="handleVideoLeave"
 							>
-								<source :src="project.video" type="video/mp4" />
+								<source :data-src="getVideoSrc(project.video)" type="video/mp4" />
 								Your browser does not support the video tag.
 							</video>
+							<!-- Error fallback -->
+							<div v-if="videoErrors[project.video]" class="absolute inset-0 flex items-center justify-center bg-gray-200 dark:bg-gray-800">
+								<p class="text-sm text-gray-600 dark:text-gray-400">Video unavailable</p>
+							</div>
 							<!-- Glassy Video Icon Overlay -->
 							<button
 								@click="openVideoModal(project.video, project.title)"
@@ -98,9 +107,23 @@ export default {
 			isVideoModalOpen: false,
 			selectedVideoSrc: '',
 			selectedVideoTitle: '',
+			videoErrors: {},
 		}
 	},
 	methods: {
+		isExternalVideo(url) {
+			return url && (url.startsWith('http://') || url.startsWith('https://'))
+		},
+		getVideoSrc(url) {
+			// For external URLs, ensure proper encoding
+			if (this.isExternalVideo(url)) {
+				// If URL already contains encoded characters, use as-is
+				// Otherwise, ensure proper encoding
+				return url
+			}
+			// For local paths, return as-is (browser will handle encoding)
+			return url
+		},
 		encodeVideoUrl(url) {
 			// For static files, encode the entire path properly
 			// Split by /, encode each segment, then join
@@ -112,8 +135,13 @@ export default {
 			}).join('/')
 		},
 		openVideoModal(videoSrc, title) {
-			// Encode URL for modal (browser handles spaces in static paths)
-			this.selectedVideoSrc = encodeURI(videoSrc)
+			// For external URLs, use as-is (already encoded)
+			// For local paths, encode if needed
+			if (videoSrc.startsWith('http://') || videoSrc.startsWith('https://')) {
+				this.selectedVideoSrc = videoSrc
+			} else {
+				this.selectedVideoSrc = encodeURI(videoSrc)
+			}
 			this.selectedVideoTitle = title
 			this.isVideoModalOpen = true
 		},
@@ -122,6 +150,152 @@ export default {
 			this.selectedVideoSrc = ''
 			this.selectedVideoTitle = ''
 		},
+		handleVideoLoadStart(event) {
+			// Clear error state when video starts loading
+			if (event.target && event.target.src) {
+				this.$set(this.videoErrors, event.target.src, false)
+			}
+		},
+		handleVideoMetadataLoaded(event) {
+			// When metadata is loaded, seek to a good frame for thumbnail
+			const video = event.target
+			if (video && video.duration) {
+				// Seek to 1 second to get a good thumbnail frame
+				video.currentTime = Math.min(1, video.duration * 0.1)
+			}
+		},
+		handleVideoHover(event) {
+			// Start playing video on hover
+			const video = event.target
+			if (video && video.paused) {
+				video.play().catch(() => {
+					// Autoplay might be prevented, that's okay
+				})
+			}
+		},
+		handleVideoLeave(event) {
+			// Pause video when mouse leaves to save bandwidth
+			const video = event.target
+			if (video && !video.paused) {
+				video.pause()
+			}
+		},
+		handleVideoError(event, originalUrl) {
+			const video = event.target
+			const error = video?.error
+			const videoSrc = video?.src || originalUrl
+			
+			// Mark this video as having an error
+			this.$set(this.videoErrors, originalUrl || videoSrc, true)
+			
+			// Detailed error logging
+			if (error) {
+				let errorMsg = 'Unknown error'
+				switch (error.code) {
+					case error.MEDIA_ERR_ABORTED:
+						errorMsg = 'Video loading aborted'
+						break
+					case error.MEDIA_ERR_NETWORK:
+						errorMsg = 'Network error (possibly CORS)'
+						break
+					case error.MEDIA_ERR_DECODE:
+						errorMsg = 'Video decoding error'
+						break
+					case error.MEDIA_ERR_SRC_NOT_SUPPORTED:
+						errorMsg = 'Video format not supported or URL invalid'
+						break
+				}
+				console.error(`Video error for "${originalUrl}":`, errorMsg, {
+					code: error.code,
+					message: error.message,
+					src: videoSrc,
+					networkState: video?.networkState,
+					readyState: video?.readyState,
+				})
+			} else {
+				console.error('Video loading error (no error details):', {
+					src: videoSrc,
+					networkState: video?.networkState,
+					readyState: video?.readyState,
+				})
+			}
+		},
+		initLazyLoading() {
+			if (!process.client || typeof IntersectionObserver === 'undefined') {
+				// Fallback: load all videos immediately if IntersectionObserver not supported
+				this.$nextTick(() => {
+					const videos = document.querySelectorAll('video[data-src]')
+					videos.forEach((video) => {
+						if (video.dataset.src) {
+							video.src = video.dataset.src
+							video.preload = 'metadata'
+							const source = video.querySelector('source')
+							if (source && source.dataset.src) {
+								source.src = source.dataset.src
+							}
+						}
+					})
+				})
+				return
+			}
+
+			// Use Intersection Observer for lazy loading with debouncing
+			let loadingVideos = new Set()
+			const observer = new IntersectionObserver(
+				(entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting && !loadingVideos.has(entry.target)) {
+							const video = entry.target
+							if (video.dataset.src) {
+								loadingVideos.add(video)
+								// Only load metadata, not the full video
+								video.src = video.dataset.src
+								video.preload = 'metadata'
+								const source = video.querySelector('source')
+								if (source && source.dataset.src) {
+									source.src = source.dataset.src
+								}
+								// Load metadata asynchronously to not block
+								video.load()
+								observer.unobserve(video)
+							}
+						}
+					})
+				},
+				{
+					rootMargin: '150px', // Start loading 150px before video enters viewport
+					threshold: 0.01, // Trigger as soon as any part is visible
+				}
+			)
+
+			this.$nextTick(() => {
+				const videos = document.querySelectorAll('video[data-src]')
+				videos.forEach((video) => {
+					observer.observe(video)
+				})
+			})
+		},
+	},
+	mounted() {
+		if (process.client) {
+			// Ensure page starts at top
+			window.scrollTo(0, 0)
+			// Initialize lazy loading after a short delay to prevent scroll issues
+			this.$nextTick(() => {
+				setTimeout(() => {
+					this.initLazyLoading()
+					// Ensure we're still at top after initialization
+					window.scrollTo(0, 0)
+				}, 100)
+			})
+		}
+	},
+	beforeRouteEnter(to, from, next) {
+		// Scroll to top before entering the route
+		if (process.client) {
+			window.scrollTo(0, 0)
+		}
+		next()
 	},
 	computed: {
 		projects() {
@@ -129,37 +303,37 @@ export default {
 				{
 					title: this.$t('PROJECT_TAMIMI_TITLE'),
 					description: this.$t('PROJECT_TAMIMI_DESC'),
-					video: '/videos/Burooj Air 01 - Al-Tamimi Video.MP4',
+					video: 'https://hel1.your-objectstorage.com/burooj-prod/videos/Burooj%20Air%2001%20-%20Al-Tamimi%20Video.MP4',
 					category: this.$t('CATEGORY_BUILDING_MAINTENANCE'),
 				},
 				{
 					title: this.$t('PROJECT_ARAMCO_TITLE'),
 					description: this.$t('PROJECT_ARAMCO_DESC'),
-					video: '/videos/Burooj Air - Aramco Spark 2.mp4',
+					video: 'https://hel1.your-objectstorage.com/burooj-prod/videos/Burooj%20Air%20-%20Aramco%20Spark%202.mp4',
 					category: this.$t('CATEGORY_INDUSTRIAL_CLEANING'),
 				},
 				{
 					title: this.$t('PROJECT_JINAN_TITLE'),
 					description: this.$t('PROJECT_JINAN_DESC'),
-					video: '/videos/Burooj Air - Jinan Building D5.mp4',
+					video: 'https://hel1.your-objectstorage.com/burooj-prod/videos/Burooj%20Air%20-%20Jinan%20Building%20D5.mp4',
 					category: this.$t('CATEGORY_FACADE_CLEANING'),
 				},
 				{
 					title: this.$t('PROJECT_QOSSIBI_TITLE'),
 					description: this.$t('PROJECT_QOSSIBI_DESC'),
-					video: '/videos/Burooj Air - Al Qossibi HQ H.mp4',
+					video: 'https://hel1.your-objectstorage.com/burooj-prod/videos/Burooj%20Air%20-%20Al%20Qossibi%20HQ%20H.mp4',
 					category: this.$t('CATEGORY_FACADE_CLEANING'),
 				},
 				{
 					title: this.$t('PROJECT_FOZAN_TITLE'),
 					description: this.$t('PROJECT_FOZAN_DESC'),
-					video: '/videos/Burooj Air - Al Fozan H.mp4',
+					video: 'https://hel1.your-objectstorage.com/burooj-prod/videos/Burooj%20Air%20-%20Al%20Fozan%20H.mp4',
 					category: this.$t('CATEGORY_FACADE_CLEANING'),
 				},
 				{
 					title: this.$t('PROJECT_SAFA_TITLE'),
 					description: this.$t('PROJECT_SAFA_DESC'),
-					video: '/videos/Burooj Air - AL Safa Privet House H .mp4',
+					video: 'https://hel1.your-objectstorage.com/burooj-prod/videos/Burooj%20Air%20-%20AL%20Safa%20Privet%20House%20H.mp4',
 					category: this.$t('CATEGORY_BUILDING_MAINTENANCE'),
 				},
 				{
@@ -171,7 +345,7 @@ export default {
 				{
 					title: this.$t('PROJECT_ASSALAM_TITLE'),
 					description: this.$t('PROJECT_ASSALAM_DESC'),
-					video: '/videos/Burooj Air - AsSalam Privet Villa.mp4',
+					video: 'https://hel1.your-objectstorage.com/burooj-prod/videos/Burooj%20Air%20-%20AsSalam%20Privet%20Villa.mp4',
 					category: this.$t('CATEGORY_BUILDING_MAINTENANCE'),
 				},
 				{
@@ -183,7 +357,7 @@ export default {
 				{
 					title: this.$t('PROJECT_BASIC_DEMO_TITLE'),
 					description: this.$t('PROJECT_BASIC_DEMO_DESC'),
-					video: '/videos/Burooj Air - Basic Demo 03.mp4',
+					video: 'https://hel1.your-objectstorage.com/burooj-prod/videos/Burooj%20Air%20-%20Basic%20Demo%2003.mp4',
 					category: this.$t('CATEGORY_BUILDING_MAINTENANCE'),
 				},
 			]
