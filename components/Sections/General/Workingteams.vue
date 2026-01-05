@@ -19,12 +19,14 @@
 						:key="member.id"
 						class="relative aspect-[3/4] overflow-hidden rounded-xl bg-white dark:bg-gray-800 shadow-lg transition-transform duration-300 hover:scale-105"
 					>
-						<img
-							:src="member.image"
-							:alt="`${member.name} - ${$i18n.locale === 'ar' ? member.position_ar : member.position}`"
-							class="h-full w-full object-cover transition-transform duration-300 hover:scale-110"
-							loading="lazy"
-						/>
+					<img
+						:src="member.image"
+						:alt="`${member.name} - ${$i18n.locale === 'ar' ? member.position_ar : member.position}`"
+						width="300"
+						height="400"
+						class="h-full w-full object-cover transition-transform duration-300 hover:scale-110"
+						loading="lazy"
+					/>
 						<!-- Linear Gradient Overlay from Bottom -->
 						<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent pointer-events-none z-[1]"></div>
 						<!-- Name and Position at Bottom Left -->

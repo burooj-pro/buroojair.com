@@ -12,6 +12,8 @@
 					ref="baseLogo"
 					src="~assets/images/loading.png"
 					alt="Burooj Air Logo"
+					width="128"
+					height="128"
 					class="h-24 w-auto lg:h-32"
 					:style="{ opacity: baseOpacity }"
 				/>
@@ -28,6 +30,8 @@
 					<img
 						src="~assets/images/loading.png"
 						alt="Burooj Air Logo"
+						width="128"
+						height="128"
 						class="h-24 w-auto opacity-100 lg:h-32"
 					/>
 				</div>

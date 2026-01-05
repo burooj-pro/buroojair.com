@@ -55,6 +55,8 @@
 								class="h-full max-h-48 w-full object-contain transition-transform duration-300 lg:max-h-56"
 								:src="product.image"
 								:alt="`${product.name} - ${product.description}`"
+								width="400"
+								height="300"
 								loading="lazy"
 							/>
 						</div>

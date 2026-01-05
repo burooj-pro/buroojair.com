@@ -27,19 +27,26 @@ export default function () {
       window.ttq = []
     }
     
-    // Fire on DOMContentLoaded (earlier than window.load) for better campaign tracking
-    // This ensures pixels fire early enough for retargeting and conversion tracking
-    // while still not blocking the initial render
+    // Load all analytics on DOMContentLoaded for accurate campaign tracking
+    // Pixels load asynchronously but early enough to capture all events
+    // Pixel queues are initialized above, so events are captured even before scripts load
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initAnalytics, { once: true })
+      document.addEventListener('DOMContentLoaded', () => {
+        initCriticalAnalytics()
+        // Load pixels immediately but asynchronously (non-blocking)
+        // This ensures campaign tracking works while maintaining performance
+        initNonCriticalAnalytics()
+      }, { once: true })
     } else {
-      // DOM already ready, fire immediately
-      initAnalytics()
+      // DOM already ready
+      initCriticalAnalytics()
+      initNonCriticalAnalytics()
     }
   }
 }
 
-function initAnalytics() {
+// Load critical analytics (GA4, GTM) immediately for accurate tracking
+function initCriticalAnalytics() {
   // Ensure dataLayer exists (should already be initialized above)
   if (!window.dataLayer) {
     window.dataLayer = []
@@ -68,7 +75,10 @@ function initAnalytics() {
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-55SGMJF5');`
   document.head.appendChild(gtmScript)
+}
 
+// Load non-critical pixels (TikTok, Snap, Meta) when browser is idle
+function initNonCriticalAnalytics() {
   // TikTok Pixel
   const tiktokScript = document.createElement('script')
   tiktokScript.innerHTML = `!function (w, d, t) {

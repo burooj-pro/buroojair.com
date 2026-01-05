@@ -13,7 +13,7 @@
 				</p>
 				<a
 					href="#franchiseFormSection"
-					class="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-lg bg-blue-600 px-8 py-3 text-base font-semibold text-white no-underline transition-colors hover:bg-blue-700 lg:px-10 lg:py-4 lg:text-lg"
+					class="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-lg bg-blue-600 px-8 py-3 text-base font-bold text-white no-underline transition-colors hover:bg-blue-700 lg:px-10 lg:py-4 lg:text-lg"
 				>
 					{{ $t('APPLY_FOR_FRANCHISE') || 'Apply for Franchise' }}
 					<svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

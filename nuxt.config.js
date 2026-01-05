@@ -92,7 +92,7 @@ export default {
   
 	plugins: [
 	  { src: '@/plugins/light-gallery.client.js', ssr: false },
-	  { src: '~/plugins/chart.js', mode: 'client' },
+	  // Chart.js is now lazy loaded in MyBarChart component - removed from global plugins
 	  { src: '~/plugins/theme.client.js', mode: 'client' },
 	  { src: '~/plugins/gsap.client.js', mode: 'client' },
 	  { src: '~/plugins/page-transitions.client.js', mode: 'client' },

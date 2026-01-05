@@ -5,8 +5,8 @@
 				<!-- Company Info -->
 				<div class="sm:col-span-2 lg:col-span-1">
 					<NuxtLink to="/" class="mb-6 inline-block">
-						<img src="~assets/images/logo-dark.png" alt="Burooj Air Logo" class="h-10 lg:h-12 dark:hidden" />
-						<img src="~assets/images/logo.png" alt="Burooj Air Logo" class="hidden h-10 lg:h-12 dark:inline-block" />
+						<img src="~assets/images/logo-dark.png" alt="Burooj Air Logo" width="120" height="48" class="h-10 lg:h-12 dark:hidden" />
+						<img src="~assets/images/logo.png" alt="Burooj Air Logo" width="120" height="48" class="hidden h-10 lg:h-12 dark:inline-block" />
 					</NuxtLink>
 					<p class="mb-6 text-base font-normal leading-relaxed text-gray-600 dark:text-gray-400">
 						{{ $t('FOR_INQUIRIES_PLEASE_USE_OUR_LISTED_CONTACT_INFO') || 'The first Saudi company licensed for drone cleaning services.' }}

@@ -21,6 +21,8 @@
 					<img
 						:src="client.logo"
 						:alt="client.name"
+						width="160"
+						height="80"
 						class="mx-auto max-h-16 w-full max-w-full object-contain opacity-70 transition-all hover:opacity-100 lg:max-h-20"
 						loading="lazy"
 					/>

@@ -3,7 +3,10 @@
 		<label class="mb-2 block text-lg font-bold lg:text-xl"> Drone Market Size & Forecast 2020-2025 </label>
 
 		<div class="mb-4 font-thin overflow-hidden" style="height: 500px; position: relative;">
-			<BarChart :options="chartOptions" :data="chartData" />
+			<component v-if="BarChartComponent" :is="BarChartComponent" :options="chartOptions" :data="chartData" />
+			<div v-else class="flex h-full items-center justify-center">
+				<p class="text-sm text-gray-500 dark:text-gray-400">Loading chart...</p>
+			</div>
 		</div>
 		
 		<div class="mt-2 space-y-1 pt-2">
@@ -15,7 +18,51 @@
 
 <script>
 export default {
-	mounted() {},
+	data() {
+		return {
+			BarChartComponent: null,
+		}
+	},
+	async mounted() {
+		if (process.client) {
+			// Lazy load Chart.js only when component is mounted
+			await this.loadChart()
+		}
+	},
+	methods: {
+		async loadChart() {
+			try {
+				// Dynamically import vue-chartjs
+				const { Bar } = await import('vue-chartjs')
+				
+				// Create a local component that extends Bar
+				this.BarChartComponent = {
+					extends: Bar,
+					props: {
+						data: {
+							type: Object,
+							required: true,
+						},
+						options: {
+							type: Object,
+							required: false,
+							default: () => ({}),
+						},
+					},
+					watch: {
+						data() {
+							this.renderChart(this.data, this.options)
+						},
+					},
+					mounted() {
+						this.renderChart(this.data, this.options)
+					},
+				}
+			} catch (error) {
+				console.error('Failed to load chart:', error)
+			}
+		},
+	},
 	computed: {
 		chartOptions() {
 			return {
