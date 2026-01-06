@@ -12,12 +12,13 @@
 			playsinline
 			webkit-playsinline
 			preload="auto"
-			class="hero-video-mobile w-full h-full"
+			class="hero-video-mobile w-full h-full bg-gray-900"
 			@error="handleVideoError"
 			@loadeddata="handleVideoLoaded"
 			@canplay="handleVideoCanPlay"
+			@loadstart="handleVideoLoadStart"
 		  >
-			<source src="/videos/heronew.mp4?v=2" type="video/mp4" />
+			<source src="/videos/heronew.mp4" type="video/mp4" />
 			Your browser does not support the video tag.
 		  </video>
 		  
@@ -55,12 +56,13 @@
 		  playsinline
 		  webkit-playsinline
 		  preload="auto"
-		  class="hero-video absolute inset-0 z-0"
+		  class="hero-video absolute inset-0 z-0 bg-gray-900"
 		  @error="handleVideoError"
 		  @loadeddata="handleVideoLoaded"
 		  @canplay="handleVideoCanPlay"
+		  @loadstart="handleVideoLoadStart"
 		>
-		  <source src="/videos/heronew.mp4?v=2" type="video/mp4" />
+		  <source src="/videos/heronew.mp4" type="video/mp4" />
 		  Your browser does not support the video tag.
 		</video>
 		
@@ -104,38 +106,62 @@
 	  initVideos() {
 		// Ensure videos are properly initialized and playing
 		this.$nextTick(() => {
-		  // Try to play desktop video
+		  // Force load and play desktop video
 		  if (this.$refs.videoPlayerDesktop) {
 			const desktopVideo = this.$refs.videoPlayerDesktop
+			// Ensure video is muted for autoplay
+			desktopVideo.muted = true
+			// Force load the video
+			desktopVideo.load()
+			
+			// Try to play immediately if ready
 			if (desktopVideo.readyState >= 2) {
-			  // Video is already loaded
 			  this.playVideo(desktopVideo, 'Desktop')
-			} else {
-			  // Wait for video to load
-			  desktopVideo.addEventListener('loadeddata', () => {
-				this.playVideo(desktopVideo, 'Desktop')
-			  }, { once: true })
-			  desktopVideo.addEventListener('canplay', () => {
-				this.playVideo(desktopVideo, 'Desktop')
-			  }, { once: true })
 			}
+			
+			// Set up event listeners
+			const playWhenReady = () => {
+			  this.playVideo(desktopVideo, 'Desktop')
+			}
+			desktopVideo.addEventListener('loadeddata', playWhenReady, { once: true })
+			desktopVideo.addEventListener('canplay', playWhenReady, { once: true })
+			desktopVideo.addEventListener('loadedmetadata', playWhenReady, { once: true })
+			
+			// Fallback: try to play after a short delay
+			setTimeout(() => {
+			  if (desktopVideo.readyState >= 2) {
+				this.playVideo(desktopVideo, 'Desktop')
+			  }
+			}, 500)
 		  }
 
-		  // Try to play mobile video
+		  // Force load and play mobile video
 		  if (this.$refs.videoPlayerMobile) {
 			const mobileVideo = this.$refs.videoPlayerMobile
+			// Ensure video is muted for autoplay
+			mobileVideo.muted = true
+			// Force load the video
+			mobileVideo.load()
+			
+			// Try to play immediately if ready
 			if (mobileVideo.readyState >= 2) {
-			  // Video is already loaded
 			  this.playVideo(mobileVideo, 'Mobile')
-			} else {
-			  // Wait for video to load
-			  mobileVideo.addEventListener('loadeddata', () => {
-				this.playVideo(mobileVideo, 'Mobile')
-			  }, { once: true })
-			  mobileVideo.addEventListener('canplay', () => {
-				this.playVideo(mobileVideo, 'Mobile')
-			  }, { once: true })
 			}
+			
+			// Set up event listeners
+			const playWhenReadyMobile = () => {
+			  this.playVideo(mobileVideo, 'Mobile')
+			}
+			mobileVideo.addEventListener('loadeddata', playWhenReadyMobile, { once: true })
+			mobileVideo.addEventListener('canplay', playWhenReadyMobile, { once: true })
+			mobileVideo.addEventListener('loadedmetadata', playWhenReadyMobile, { once: true })
+			
+			// Fallback: try to play after a short delay
+			setTimeout(() => {
+			  if (mobileVideo.readyState >= 2) {
+				this.playVideo(mobileVideo, 'Mobile')
+			  }
+			}, 500)
 		  }
 		})
 	  },
@@ -179,11 +205,26 @@
 		const video = e.target
 		this.playVideo(video, video === this.$refs.videoPlayerMobile ? 'Mobile' : 'Desktop')
 	  },
+	  handleVideoLoadStart(e) {
+		// Video started loading
+		const video = e.target
+		console.log('Video load started:', video === this.$refs.videoPlayerMobile ? 'Mobile' : 'Desktop', video.src || video.currentSrc)
+	  },
 	  playVideo(video, label) {
 		if (!video) return
 		
 		// Ensure video is muted for autoplay
 		video.muted = true
+		video.volume = 0
+		
+		// Ensure video has a source
+		if (!video.src && !video.currentSrc) {
+		  const source = video.querySelector('source')
+		  if (source && source.src) {
+			video.src = source.src
+			video.load()
+		  }
+		}
 		
 		// Try to play
 		const playPromise = video.play()
@@ -192,24 +233,38 @@
 			.then(() => {
 			  // Video is playing
 			  console.log(`${label} video is playing`)
+			  // Ensure it stays playing
+			  if (video.paused) {
+				video.play().catch(() => {})
+			  }
 			})
 			.catch((err) => {
 			  console.warn(`${label} video autoplay prevented:`, err)
 			  // Try again after user interaction
 			  const tryPlayOnInteraction = () => {
+				video.muted = true
 				video.play()
 				  .then(() => {
 					console.log(`${label} video started playing after user interaction`)
 					document.removeEventListener('click', tryPlayOnInteraction)
 					document.removeEventListener('touchstart', tryPlayOnInteraction)
 					document.removeEventListener('scroll', tryPlayOnInteraction)
+					document.removeEventListener('mousemove', tryPlayOnInteraction)
 				  })
 				  .catch(() => {})
 			  }
 			  document.addEventListener('click', tryPlayOnInteraction, { once: true })
 			  document.addEventListener('touchstart', tryPlayOnInteraction, { once: true })
 			  document.addEventListener('scroll', tryPlayOnInteraction, { once: true })
+			  document.addEventListener('mousemove', tryPlayOnInteraction, { once: true })
 			})
+		} else {
+		  // Fallback for older browsers
+		  try {
+			video.play()
+		  } catch (err) {
+			console.warn(`${label} video play failed:`, err)
+		  }
 		}
 	  },
 	  async initGSAP() {
