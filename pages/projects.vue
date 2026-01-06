@@ -26,7 +26,7 @@
 						class="flex flex-col transition-all hover:scale-[1.02]"
 					>
 						<!-- Project Visual - Top -->
-						<div ref="videoContainer" class="relative mb-6 aspect-square overflow-hidden rounded-xl bg-gray-100 shadow-lg group">
+						<div ref="videoContainer" class="relative mb-6 aspect-square overflow-hidden rounded-xl bg-gray-900 dark:bg-gray-800 shadow-lg group">
 							<video
 								:ref="`video-${index}`"
 								:data-src="getVideoSrc(project.video)"
@@ -39,6 +39,7 @@
 								@error="(e) => handleVideoError(e, project.video)"
 								@loadstart="handleVideoLoadStart"
 								@loadedmetadata="handleVideoMetadataLoaded"
+								@seeked="handleVideoSeeked"
 								@mouseenter="handleVideoHover"
 								@mouseleave="handleVideoLeave"
 							>
@@ -160,8 +161,18 @@ export default {
 			// When metadata is loaded, seek to a good frame for thumbnail
 			const video = event.target
 			if (video && video.duration) {
-				// Seek to 1 second to get a good thumbnail frame
-				video.currentTime = Math.min(1, video.duration * 0.1)
+				// Seek to 1 second or 10% of duration, whichever is smaller, to get a good thumbnail frame
+				const seekTime = Math.min(1, video.duration * 0.1)
+				video.currentTime = seekTime
+				// Video will become visible in handleVideoSeeked when frame is ready
+			}
+		},
+		handleVideoSeeked(event) {
+			// When seek is complete, show the video thumbnail
+			const video = event.target
+			if (video) {
+				video.style.opacity = '1'
+				video.style.transition = 'opacity 0.3s ease-in'
 			}
 		},
 		handleVideoHover(event) {
@@ -248,16 +259,17 @@ export default {
 							const video = entry.target
 							if (video.dataset.src) {
 								loadingVideos.add(video)
-								// Only load metadata, not the full video
-								video.src = video.dataset.src
-								video.preload = 'metadata'
-								const source = video.querySelector('source')
-								if (source && source.dataset.src) {
-									source.src = source.dataset.src
-								}
-								// Load metadata asynchronously to not block
-								video.load()
-								observer.unobserve(video)
+							// Only load metadata, not the full video
+							video.src = video.dataset.src
+							video.preload = 'metadata'
+							video.style.opacity = '0' // Hide until thumbnail is ready
+							const source = video.querySelector('source')
+							if (source && source.dataset.src) {
+								source.src = source.dataset.src
+							}
+							// Load metadata asynchronously to not block
+							video.load()
+							observer.unobserve(video)
 							}
 						}
 					})
