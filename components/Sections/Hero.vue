@@ -195,23 +195,47 @@
 		}
 		// Video is decorative, so failure is not critical
 	  },
-	  handleVideoLoaded() {
+	  handleVideoLoaded(e) {
 		// Video loaded successfully - ensure it plays
-		this.playVideo(this.$refs.videoPlayerMobile, 'Mobile')
-		this.playVideo(this.$refs.videoPlayerDesktop, 'Desktop')
+		const video = e.target
+		const label = video === this.$refs.videoPlayerMobile ? 'Mobile' : 'Desktop'
+		console.log(`[Hero Video] ${label} - Data loaded:`, {
+			readyState: video.readyState,
+			duration: video.duration,
+			videoWidth: video.videoWidth,
+			videoHeight: video.videoHeight,
+			paused: video.paused
+		})
+		this.playVideo(video, label)
 	  },
 	  handleVideoCanPlay(e) {
 		// Video is ready to play - try playing it
 		const video = e.target
-		this.playVideo(video, video === this.$refs.videoPlayerMobile ? 'Mobile' : 'Desktop')
+		const label = video === this.$refs.videoPlayerMobile ? 'Mobile' : 'Desktop'
+		console.log(`[Hero Video] ${label} - Can play:`, {
+			readyState: video.readyState,
+			paused: video.paused,
+			ended: video.ended
+		})
+		this.playVideo(video, label)
 	  },
 	  handleVideoLoadStart(e) {
 		// Video started loading
 		const video = e.target
-		console.log('Video load started:', video === this.$refs.videoPlayerMobile ? 'Mobile' : 'Desktop', video.src || video.currentSrc)
+		const label = video === this.$refs.videoPlayerMobile ? 'Mobile' : 'Desktop'
+		console.log(`[Hero Video] ${label} - Load started:`, {
+			src: video.src || video.currentSrc,
+			readyState: video.readyState,
+			networkState: video.networkState,
+			paused: video.paused,
+			muted: video.muted
+		})
 	  },
 	  playVideo(video, label) {
-		if (!video) return
+		if (!video) {
+		  console.warn(`[Hero Video] ${label} - Video element not found`)
+		  return
+		}
 		
 		// Ensure video is muted for autoplay
 		video.muted = true
@@ -221,10 +245,22 @@
 		if (!video.src && !video.currentSrc) {
 		  const source = video.querySelector('source')
 		  if (source && source.src) {
+			console.log(`[Hero Video] ${label} - Setting video source:`, source.src)
 			video.src = source.src
 			video.load()
+			return // Will retry after load
+		  } else {
+			console.error(`[Hero Video] ${label} - No video source found`)
+			return
 		  }
 		}
+		
+		console.log(`[Hero Video] ${label} - Attempting to play:`, {
+			src: video.currentSrc || video.src,
+			readyState: video.readyState,
+			paused: video.paused,
+			muted: video.muted
+		})
 		
 		// Try to play
 		const playPromise = video.play()
@@ -232,26 +268,35 @@
 		  playPromise
 			.then(() => {
 			  // Video is playing
-			  console.log(`${label} video is playing`)
+			  console.log(`[Hero Video] ${label} - ✅ Playing successfully`, {
+				paused: video.paused,
+				ended: video.ended,
+				currentTime: video.currentTime
+			  })
 			  // Ensure it stays playing
 			  if (video.paused) {
-				video.play().catch(() => {})
+				console.warn(`[Hero Video] ${label} - Video paused after play, retrying...`)
+				setTimeout(() => {
+				  video.play().catch(() => {})
+				}, 100)
 			  }
 			})
 			.catch((err) => {
-			  console.warn(`${label} video autoplay prevented:`, err)
+			  console.warn(`[Hero Video] ${label} - ❌ Autoplay prevented:`, err.message)
 			  // Try again after user interaction
 			  const tryPlayOnInteraction = () => {
 				video.muted = true
 				video.play()
 				  .then(() => {
-					console.log(`${label} video started playing after user interaction`)
+					console.log(`[Hero Video] ${label} - ✅ Started playing after user interaction`)
 					document.removeEventListener('click', tryPlayOnInteraction)
 					document.removeEventListener('touchstart', tryPlayOnInteraction)
 					document.removeEventListener('scroll', tryPlayOnInteraction)
 					document.removeEventListener('mousemove', tryPlayOnInteraction)
 				  })
-				  .catch(() => {})
+				  .catch((playErr) => {
+					console.warn(`[Hero Video] ${label} - Failed to play after interaction:`, playErr)
+				  })
 			  }
 			  document.addEventListener('click', tryPlayOnInteraction, { once: true })
 			  document.addEventListener('touchstart', tryPlayOnInteraction, { once: true })
@@ -262,8 +307,9 @@
 		  // Fallback for older browsers
 		  try {
 			video.play()
+			console.log(`[Hero Video] ${label} - Play called (legacy browser)`)
 		  } catch (err) {
-			console.warn(`${label} video play failed:`, err)
+			console.warn(`[Hero Video] ${label} - Play failed:`, err)
 		  }
 		}
 	  },
@@ -375,6 +421,10 @@
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
   }
 
   /* =========
@@ -391,6 +441,10 @@
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
   }
   
   /* =========
