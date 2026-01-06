@@ -1,5 +1,6 @@
 # Exclude smaller videos from LFS (under 100MB - GitHub's limit)
 static/videos/hero.mp4 -filter -diff -merge
+static/videos/heronew.mp4 -filter -diff -merge
 # Track large videos with LFS (over 100MB)
 assets/videos/*.mp4 filter=lfs diff=lfs merge=lfs -text
 assets/videos/*.MP4 filter=lfs diff=lfs merge=lfs -text
