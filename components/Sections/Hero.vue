@@ -10,10 +10,12 @@
 			autoplay
 			loop
 			playsinline
+			webkit-playsinline
 			preload="auto"
 			class="hero-video-mobile w-full h-full"
 			@error="handleVideoError"
 			@loadeddata="handleVideoLoaded"
+			@canplay="handleVideoCanPlay"
 		  >
 			<source src="/videos/heronew.mp4?v=2" type="video/mp4" />
 			Your browser does not support the video tag.
@@ -51,10 +53,12 @@
 		  autoplay
 		  loop
 		  playsinline
+		  webkit-playsinline
 		  preload="auto"
 		  class="hero-video absolute inset-0 z-0"
 		  @error="handleVideoError"
 		  @loadeddata="handleVideoLoaded"
+		  @canplay="handleVideoCanPlay"
 		>
 		  <source src="/videos/heronew.mp4?v=2" type="video/mp4" />
 		  Your browser does not support the video tag.
@@ -93,9 +97,48 @@
 	mounted() {
 	  if (process.client) {
 		this.initGSAP()
+		this.initVideos()
 	  }
 	},
 	methods: {
+	  initVideos() {
+		// Ensure videos are properly initialized and playing
+		this.$nextTick(() => {
+		  // Try to play desktop video
+		  if (this.$refs.videoPlayerDesktop) {
+			const desktopVideo = this.$refs.videoPlayerDesktop
+			if (desktopVideo.readyState >= 2) {
+			  // Video is already loaded
+			  this.playVideo(desktopVideo, 'Desktop')
+			} else {
+			  // Wait for video to load
+			  desktopVideo.addEventListener('loadeddata', () => {
+				this.playVideo(desktopVideo, 'Desktop')
+			  }, { once: true })
+			  desktopVideo.addEventListener('canplay', () => {
+				this.playVideo(desktopVideo, 'Desktop')
+			  }, { once: true })
+			}
+		  }
+
+		  // Try to play mobile video
+		  if (this.$refs.videoPlayerMobile) {
+			const mobileVideo = this.$refs.videoPlayerMobile
+			if (mobileVideo.readyState >= 2) {
+			  // Video is already loaded
+			  this.playVideo(mobileVideo, 'Mobile')
+			} else {
+			  // Wait for video to load
+			  mobileVideo.addEventListener('loadeddata', () => {
+				this.playVideo(mobileVideo, 'Mobile')
+			  }, { once: true })
+			  mobileVideo.addEventListener('canplay', () => {
+				this.playVideo(mobileVideo, 'Mobile')
+			  }, { once: true })
+			}
+		  }
+		})
+	  },
 	  handleVideoError(e) {
 		// Log detailed error for debugging
 		const video = e.target
@@ -127,16 +170,46 @@
 		// Video is decorative, so failure is not critical
 	  },
 	  handleVideoLoaded() {
-		// Video loaded successfully
-		if (this.$refs.videoPlayerMobile) {
-		  this.$refs.videoPlayerMobile.play().catch(() => {
-			// Autoplay was prevented, which is fine
-		  })
-		}
-		if (this.$refs.videoPlayerDesktop) {
-		  this.$refs.videoPlayerDesktop.play().catch(() => {
-			// Autoplay was prevented, which is fine
-		  })
+		// Video loaded successfully - ensure it plays
+		this.playVideo(this.$refs.videoPlayerMobile, 'Mobile')
+		this.playVideo(this.$refs.videoPlayerDesktop, 'Desktop')
+	  },
+	  handleVideoCanPlay(e) {
+		// Video is ready to play - try playing it
+		const video = e.target
+		this.playVideo(video, video === this.$refs.videoPlayerMobile ? 'Mobile' : 'Desktop')
+	  },
+	  playVideo(video, label) {
+		if (!video) return
+		
+		// Ensure video is muted for autoplay
+		video.muted = true
+		
+		// Try to play
+		const playPromise = video.play()
+		if (playPromise !== undefined) {
+		  playPromise
+			.then(() => {
+			  // Video is playing
+			  console.log(`${label} video is playing`)
+			})
+			.catch((err) => {
+			  console.warn(`${label} video autoplay prevented:`, err)
+			  // Try again after user interaction
+			  const tryPlayOnInteraction = () => {
+				video.play()
+				  .then(() => {
+					console.log(`${label} video started playing after user interaction`)
+					document.removeEventListener('click', tryPlayOnInteraction)
+					document.removeEventListener('touchstart', tryPlayOnInteraction)
+					document.removeEventListener('scroll', tryPlayOnInteraction)
+				  })
+				  .catch(() => {})
+			  }
+			  document.addEventListener('click', tryPlayOnInteraction, { once: true })
+			  document.addEventListener('touchstart', tryPlayOnInteraction, { once: true })
+			  document.addEventListener('scroll', tryPlayOnInteraction, { once: true })
+			})
 		}
 	  },
 	  async initGSAP() {

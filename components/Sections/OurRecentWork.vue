@@ -33,7 +33,7 @@
 					class="flex flex-col"
 				>
 					<!-- Project Visual - Top -->
-					<div class="relative mb-6 aspect-square overflow-hidden rounded-lg bg-gray-100 group">
+					<div class="relative mb-6 aspect-square overflow-hidden rounded-lg bg-gray-900 dark:bg-gray-800 group">
 					<video
 						:ref="`video-${index}`"
 						:data-src="getVideoSrc(project.video)"
@@ -46,15 +46,24 @@
 						@error="(e) => handleVideoError(e, project.video)"
 						@loadstart="handleVideoLoadStart"
 						@loadedmetadata="handleVideoMetadataLoaded"
+						@loadeddata="handleVideoLoaded"
+						@canplay="handleVideoCanPlay"
 						@mouseenter="handleVideoHover"
 						@mouseleave="handleVideoLeave"
 					>
 							<source :data-src="getVideoSrc(project.video)" type="video/mp4" />
 							Your browser does not support the video tag.
 						</video>
+						<!-- Loading state -->
+						<div v-if="!videoErrors[project.video] && !videoLoaded[project.video]" class="absolute inset-0 z-0 flex items-center justify-center bg-gray-900 dark:bg-gray-800 transition-opacity duration-300">
+							<div class="flex flex-col items-center gap-2">
+								<div class="h-8 w-8 animate-spin rounded-full border-2 border-white/20 border-t-white"></div>
+								<p class="text-xs text-white/60">Loading video...</p>
+							</div>
+						</div>
 						<!-- Error fallback -->
-						<div v-if="videoErrors[project.video]" class="absolute inset-0 flex items-center justify-center bg-gray-200 dark:bg-gray-800">
-							<p class="text-sm text-gray-600 dark:text-gray-400">Video unavailable</p>
+						<div v-if="videoErrors[project.video]" class="absolute inset-0 z-0 flex items-center justify-center bg-gray-900 dark:bg-gray-800">
+							<p class="text-sm text-gray-400 dark:text-gray-500">Video unavailable</p>
 						</div>
 						<!-- Play Button Overlay -->
 						<button
@@ -102,6 +111,7 @@ export default {
 			selectedVideoSrc: '',
 			selectedVideoTitle: '',
 			videoErrors: {},
+			videoLoaded: {},
 		}
 	},
 	computed: {
@@ -176,8 +186,16 @@ export default {
 		},
 		handleVideoLoadStart(event) {
 			// Clear error state when video starts loading
-			if (event.target && event.target.src) {
-				this.$set(this.videoErrors, event.target.src, false)
+			const video = event.target
+			const videoSrc = video?.src || video?.currentSrc
+			const projectVideo = this.projects.find(p => {
+				const projectSrc = this.getVideoSrc(p.video)
+				return videoSrc && (videoSrc.includes(projectSrc) || projectSrc.includes(videoSrc))
+			})?.video
+			
+			if (projectVideo) {
+				this.$set(this.videoErrors, projectVideo, false)
+				this.$set(this.videoLoaded, projectVideo, false)
 			}
 		},
 		handleVideoMetadataLoaded(event) {
@@ -186,6 +204,32 @@ export default {
 			if (video && video.duration) {
 				// Seek to 1 second to get a good thumbnail frame
 				video.currentTime = Math.min(1, video.duration * 0.1)
+			}
+		},
+		handleVideoLoaded(event) {
+			// Video data loaded - mark as loaded
+			const video = event.target
+			const videoSrc = video?.src || video?.currentSrc
+			const projectVideo = this.projects.find(p => {
+				const projectSrc = this.getVideoSrc(p.video)
+				return videoSrc && (videoSrc.includes(projectSrc) || projectSrc.includes(videoSrc))
+			})?.video
+			
+			if (projectVideo) {
+				this.$set(this.videoLoaded, projectVideo, true)
+			}
+		},
+		handleVideoCanPlay(event) {
+			// Video can start playing - ensure it's marked as loaded
+			const video = event.target
+			const videoSrc = video?.src || video?.currentSrc
+			const projectVideo = this.projects.find(p => {
+				const projectSrc = this.getVideoSrc(p.video)
+				return videoSrc && (videoSrc.includes(projectSrc) || projectSrc.includes(videoSrc))
+			})?.video
+			
+			if (projectVideo) {
+				this.$set(this.videoLoaded, projectVideo, true)
 			}
 		},
 		handleVideoHover(event) {
