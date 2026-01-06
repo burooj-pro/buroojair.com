@@ -77,7 +77,7 @@ export default {
 				{
 					id: 4,
 					name: 'Omar A. Ahmed',
-					name_ar: 'بشرى',
+					name_ar: 'عمر أحمد',
 					position: 'UAV Operations Department Manager',
 					position_ar: 'مدير قسم عمليات الطائرات بدون طيار',
 					image: '/images/employees/Omar.webp',
