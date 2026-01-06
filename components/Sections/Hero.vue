@@ -111,8 +111,23 @@
 			const desktopVideo = this.$refs.videoPlayerDesktop
 			// Ensure video is muted for autoplay
 			desktopVideo.muted = true
+			desktopVideo.volume = 0
+			
+			// Ensure source is set
+			const source = desktopVideo.querySelector('source')
+			if (source && source.src && !desktopVideo.src) {
+			  console.log('[Hero Video] Desktop - Setting video src from source element:', source.src)
+			  desktopVideo.src = source.src
+			}
+			
 			// Force load the video
 			desktopVideo.load()
+			
+			console.log('[Hero Video] Desktop - After load():', {
+			  src: desktopVideo.src || desktopVideo.currentSrc,
+			  readyState: desktopVideo.readyState,
+			  networkState: desktopVideo.networkState
+			})
 			
 			// Try to play immediately if ready
 			if (desktopVideo.readyState >= 2) {
@@ -121,18 +136,23 @@
 			
 			// Set up event listeners
 			const playWhenReady = () => {
+			  console.log('[Hero Video] Desktop - Event fired, readyState:', desktopVideo.readyState)
 			  this.playVideo(desktopVideo, 'Desktop')
 			}
 			desktopVideo.addEventListener('loadeddata', playWhenReady, { once: true })
 			desktopVideo.addEventListener('canplay', playWhenReady, { once: true })
 			desktopVideo.addEventListener('loadedmetadata', playWhenReady, { once: true })
+			desktopVideo.addEventListener('canplaythrough', playWhenReady, { once: true })
 			
 			// Fallback: try to play after a short delay
 			setTimeout(() => {
+			  console.log('[Hero Video] Desktop - Timeout check, readyState:', desktopVideo.readyState)
 			  if (desktopVideo.readyState >= 2) {
 				this.playVideo(desktopVideo, 'Desktop')
+			  } else {
+				console.warn('[Hero Video] Desktop - Video not ready after timeout')
 			  }
-			}, 500)
+			}, 1000)
 		  }
 
 		  // Force load and play mobile video
@@ -140,8 +160,23 @@
 			const mobileVideo = this.$refs.videoPlayerMobile
 			// Ensure video is muted for autoplay
 			mobileVideo.muted = true
+			mobileVideo.volume = 0
+			
+			// Ensure source is set
+			const source = mobileVideo.querySelector('source')
+			if (source && source.src && !mobileVideo.src) {
+			  console.log('[Hero Video] Mobile - Setting video src from source element:', source.src)
+			  mobileVideo.src = source.src
+			}
+			
 			// Force load the video
 			mobileVideo.load()
+			
+			console.log('[Hero Video] Mobile - After load():', {
+			  src: mobileVideo.src || mobileVideo.currentSrc,
+			  readyState: mobileVideo.readyState,
+			  networkState: mobileVideo.networkState
+			})
 			
 			// Try to play immediately if ready
 			if (mobileVideo.readyState >= 2) {
@@ -150,18 +185,23 @@
 			
 			// Set up event listeners
 			const playWhenReadyMobile = () => {
+			  console.log('[Hero Video] Mobile - Event fired, readyState:', mobileVideo.readyState)
 			  this.playVideo(mobileVideo, 'Mobile')
 			}
 			mobileVideo.addEventListener('loadeddata', playWhenReadyMobile, { once: true })
 			mobileVideo.addEventListener('canplay', playWhenReadyMobile, { once: true })
 			mobileVideo.addEventListener('loadedmetadata', playWhenReadyMobile, { once: true })
+			mobileVideo.addEventListener('canplaythrough', playWhenReadyMobile, { once: true })
 			
 			// Fallback: try to play after a short delay
 			setTimeout(() => {
+			  console.log('[Hero Video] Mobile - Timeout check, readyState:', mobileVideo.readyState)
 			  if (mobileVideo.readyState >= 2) {
 				this.playVideo(mobileVideo, 'Mobile')
+			  } else {
+				console.warn('[Hero Video] Mobile - Video not ready after timeout')
 			  }
-			}, 500)
+			}, 1000)
 		  }
 		})
 	  },
