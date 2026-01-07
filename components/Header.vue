@@ -20,7 +20,7 @@
 					<!-- Logo and Navigation Links (Left Side) -->
 					<div class="flex items-center gap-6 lg:gap-8">
 						<NuxtLink class="flex items-center flex-shrink-0" to="/">
-							<img src="~assets/images/logo.png" alt="Burooj Air Logo" width="120" height="48" class="h-8 w-auto lg:h-12" />
+							<img src="~assets/images/logo.png" alt="Burooj Air Logo" width="120" height="48" class="h-7 w-auto lg:h-10" />
 						</NuxtLink>
 						
 						<!-- Desktop Navigation Links -->
