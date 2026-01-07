@@ -18,8 +18,8 @@
 				</button>
 
 				<!-- Video Container -->
-				<div class="relative w-full max-w-6xl will-change-transform">
-					<div class="aspect-video overflow-hidden rounded-xl bg-black shadow-2xl">
+				<div class="relative flex w-full max-w-6xl flex-col items-center justify-center will-change-transform">
+					<div class="relative w-full overflow-hidden rounded-xl bg-black shadow-2xl" style="max-height: calc(100vh - 12rem);">
 						<video
 							ref="videoPlayer"
 							:src="normalizedVideoSrc"
@@ -28,7 +28,8 @@
 							muted
 							playsinline
 							preload="auto"
-							class="h-full w-full"
+							class="mx-auto block h-auto w-full max-h-full object-contain"
+							style="max-height: calc(100vh - 12rem);"
 							@click.stop
 							@error="handleVideoError"
 							@loadeddata="handleVideoLoaded"
