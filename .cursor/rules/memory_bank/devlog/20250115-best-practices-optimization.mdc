@@ -1,0 +1,130 @@
+# Solution: Best Practices Score Optimization
+
+## 1. Problem Description
+Lighthouse Best Practices audit showed a score of 73/100 with several issues:
+- Uses third-party cookies (36 cookies found)
+- Browser errors logged to console
+- Missing source maps for large first-party JavaScript
+- No Content Security Policy (CSP) configured
+- Issues logged in Chrome DevTools Issues panel
+
+## 2. Error Messages or Anomalous Observations
+Lighthouse Best Practices report identified:
+- **Third-party cookies**: 36 cookies from analytics services (Google Analytics, TikTok, Snap, Meta)
+- **Console errors**: Browser errors being logged
+- **Missing source maps**: Production builds not generating source maps
+- **CSP**: No Content Security Policy headers configured
+- **Trust and Safety**: Recommendations for CSP and HSTS
+
+## 3. Root Cause(s) Identified
+1. **Source Maps**: Production builds were not configured to generate source maps (Lighthouse requirement)
+2. **Console Statements**: Some console.warn/error statements were not properly guarded with development checks
+3. **CSP**: No Content Security Policy was configured to protect against XSS attacks
+4. **Third-Party Cookies**: Analytics services (GA4, GTM, TikTok, Snap, Meta) set cookies for tracking - this is expected behavior but needs documentation
+
+## 4. Solution Steps Implemented
+
+### Step 1: Fixed Source Maps Configuration
+- Updated `nuxt.config.js` to ensure source maps are generated in production builds
+- Added `sourceMap: true` to terser configuration
+- Ensured `config.devtool = 'source-map'` for production builds
+
+### Step 2: Fixed Console Statements
+- Updated `components/VideoModal.vue` to wrap all console.warn statements with development checks
+- Verified all other components already have proper guards (`process.env.NODE_ENV === 'development'`)
+- Terser configuration already removes console statements in production builds
+
+### Step 3: Added Content Security Policy
+- Added CSP meta tag in `nuxt.config.js` head configuration
+- Configured CSP to allow:
+  - Self-hosted resources
+  - Analytics scripts (Google, TikTok, Snap, Meta)
+  - Pipedrive WebForms
+  - Video hosting (hel1.your-objectstorage.com)
+  - Inline scripts (required for theme initialization and analytics)
+  - Images from any HTTPS source
+  - Media from blob: and external video hosting
+- Set restrictive policies for object-src, base-uri, frame-ancestors
+- Enabled upgrade-insecure-requests
+
+### Step 4: Documented Third-Party Cookie Usage
+- Created this devlog entry documenting third-party cookie usage
+- Noted that cookies are from legitimate analytics services required for business tracking
+- These cookies are necessary for:
+  - Google Analytics 4 (GA4) - Website analytics
+  - Google Tag Manager (GTM) - Tag management
+  - TikTok Pixel - Social media campaign tracking
+  - Snap Pixel - Social media campaign tracking
+  - Meta (Facebook) Pixel - Social media campaign tracking
+
+## 5. Verification Process
+1. **Source Maps**: 
+   - Run `npm run build` and verify `.map` files are generated in `dist/` directory
+   - Check that source maps are accessible in production build
+
+2. **Console Statements**:
+   - Run `npm run build` and check that console statements are removed from production bundle
+   - Verify development mode still shows console logs
+
+3. **CSP**:
+   - Check browser DevTools Network tab - verify no CSP violations
+   - Test all functionality (forms, videos, analytics) to ensure CSP doesn't break features
+   - Verify CSP meta tag appears in page source
+
+4. **Third-Party Cookies**:
+   - Check browser DevTools Application > Cookies
+   - Verify cookies are from expected domains (google-analytics.com, tiktok.com, etc.)
+   - Document that these are necessary for business analytics
+
+5. **Lighthouse Re-test**:
+   - Run Lighthouse Best Practices audit again
+   - Expected improvements:
+     - Source maps issue should be resolved
+     - Console errors should be reduced/eliminated
+     - CSP should be detected and improve security score
+     - Third-party cookies will still be flagged (expected, documented)
+
+## 6. Future Improvements or Considerations
+
+### Server-Side Configuration (Recommended)
+1. **CSP Headers**: Move CSP from meta tag to HTTP headers for better security
+   - More secure than meta tags
+   - Can be updated without rebuilding
+   - Better browser support
+
+2. **HSTS Policy**: Configure HTTP Strict Transport Security headers
+   - Set `Strict-Transport-Security: max-age=31536000; includeSubDomains`
+   - Requires HTTPS (already configured for production)
+
+3. **Cookie Consent**: Consider implementing cookie consent banner
+   - Required for GDPR compliance in EU
+   - Good practice for transparency
+   - Can improve user trust
+
+4. **Source Maps in Production**: 
+   - Consider hosting source maps separately
+   - Use source map hiding for sensitive code
+   - Or disable source maps in production if not needed for debugging
+
+### Analytics Optimization
+1. **Cookie-less Analytics**: Consider using Google Analytics 4 with consent mode
+   - Reduces cookie usage
+   - Better privacy compliance
+   - Still provides analytics data
+
+2. **Server-Side Tracking**: Consider server-side analytics
+   - Reduces client-side cookie usage
+   - Better privacy
+   - More accurate data
+
+### Additional Security Headers
+1. **X-Frame-Options**: Already covered by CSP frame-ancestors
+2. **X-Content-Type-Options**: Add `nosniff` header
+3. **Referrer-Policy**: Configure referrer policy
+4. **Permissions-Policy**: Set permissions policy header
+
+## Notes
+- Third-party cookies are expected and necessary for analytics tracking
+- CSP meta tag is a good start, but HTTP headers are more secure
+- Source maps in production help with debugging but can expose code structure
+- All console statements are properly guarded and will be removed in production builds

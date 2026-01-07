@@ -22,12 +22,12 @@ export default {
 				{
 					hid: 'description',
 					name: 'description',
-					content: 'Partner with Burooj Air and contribute to a safer work day for people who work at great heights. We replace traditional methods like lifts, scaffolding, and facade climbers with advanced drone technology.',
+					content: 'Partner with Burooj Air and contribute to safer workplace practices. We replace dangerous traditional methods (lifts, scaffolding, facade climbers) with advanced, licensed drone technology. Join us in revolutionizing building maintenance.',
 				},
 				{
 					hid: 'keywords',
 					name: 'keywords',
-					content: 'Burooj Air partner, drone cleaning partner, business partnership, drone services partnership, industrial drone partner, commercial drone partner, partnership opportunity',
+					content: 'Burooj Air partnership, drone cleaning partner, business partnership opportunity, drone services partnership, industrial drone partner, commercial drone partner, strategic partnership, technology partnership, safety partnership, building maintenance partnership, drone technology partner',
 				},
 				{
 					name: 'robots',

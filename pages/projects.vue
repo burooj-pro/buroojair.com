@@ -448,12 +448,12 @@ export default {
 				{
 					hid: 'description',
 					name: 'description',
-					content: this.$t('OUR_PROJECTS_DESC') || 'Explore our portfolio of innovative drone cleaning projects. From high-rise facades to industrial facilities, see how we deliver safe, efficient, and cost-effective cleaning solutions.',
+					content: this.$t('OUR_PROJECTS_DESC') || 'Explore Burooj Air\'s portfolio of successful drone cleaning projects in Saudi Arabia. See our work on high-rise facades, industrial facilities, and commercial buildings. Licensed by GACA.',
 				},
 				{
 					hid: 'keywords',
 					name: 'keywords',
-					content: 'drone cleaning projects, facade cleaning, window cleaning, building maintenance, industrial cleaning, Burooj Air portfolio, drone cleaning case studies, commercial drone projects, high-rise cleaning projects',
+					content: 'drone cleaning projects Saudi Arabia, facade cleaning projects, window cleaning projects, Burooj Air portfolio, drone cleaning case studies, commercial drone projects, high-rise cleaning projects, industrial drone cleaning, building maintenance projects, Aramco drone cleaning, commercial building cleaning projects, drone cleaning examples, successful drone projects, licensed drone cleaning portfolio',
 				},
 				{
 					name: 'robots',
@@ -519,6 +519,18 @@ export default {
 					name: 'twitter:image',
 					content: 'https://buroojair.com/images/buroojair-og.png',
 				},
+			],
+			script: [
+				{
+					type: 'application/ld+json',
+					json: {
+						'@context': 'https://schema.org',
+						'@type': 'CollectionPage',
+						'name': 'Our Projects - Burooj Air',
+						'description': 'Portfolio of drone cleaning projects in Saudi Arabia',
+						'url': 'https://buroojair.com/projects'
+					}
+				}
 			],
 		}
 	},

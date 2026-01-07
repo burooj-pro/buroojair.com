@@ -23,12 +23,12 @@ export default {
 				{
 					hid: 'description',
 					name: 'description',
-					content: 'Contact Burooj Air for drone cleaning services, franchise opportunities, or general inquiries. Get in touch with the first licensed drone cleaning team in Saudi Arabia. Located in Khobar, Saudi Arabia.',
+					content: 'Contact Burooj Air for professional drone cleaning services in Saudi Arabia. Get a free quote for facade cleaning, window cleaning, or industrial maintenance. Located in Khobar. Licensed by GACA.',
 				},
 				{
 					hid: 'keywords',
 					name: 'keywords',
-					content: 'contact Burooj Air, drone cleaning contact, Saudi Arabia drone services, Burooj Air phone, Burooj Air email, drone cleaning inquiry, franchise inquiry, contact drone company',
+					content: 'contact Burooj Air, drone cleaning quote, Saudi Arabia drone services contact, Burooj Air Khobar, drone cleaning inquiry, free quote drone cleaning, contact licensed drone company, drone services phone number, franchise inquiry, partnership inquiry, drone cleaning consultation',
 				},
 				{
 					name: 'robots',
@@ -94,6 +94,18 @@ export default {
 					name: 'twitter:image',
 					content: 'https://buroojair.com/images/buroojair-og.png',
 				},
+			],
+			script: [
+				{
+					type: 'application/ld+json',
+					json: {
+						'@context': 'https://schema.org',
+						'@type': 'ContactPage',
+						'name': 'Contact Burooj Air',
+						'description': 'Contact Burooj Air for professional drone cleaning services in Saudi Arabia.',
+						'url': 'https://buroojair.com/contact'
+					}
+				}
 			],
 		}
 	},

@@ -1,4 +1,4 @@
-// Load analytics scripts after DOM is ready (not blocking render)
+// Load analytics scripts after page is interactive (not blocking render)
 // Optimized for social media campaign tracking - fires early enough for pixels to work
 // but late enough to not block initial page render
 export default function () {
@@ -27,20 +27,31 @@ export default function () {
       window.ttq = []
     }
     
-    // Load all analytics on DOMContentLoaded for accurate campaign tracking
-    // Pixels load asynchronously but early enough to capture all events
-    // Pixel queues are initialized above, so events are captured even before scripts load
+    // Use requestIdleCallback for non-critical analytics to avoid blocking main thread
+    // Fallback to setTimeout if requestIdleCallback is not available
+    const loadWhenIdle = (callback) => {
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(callback, { timeout: 2000 })
+      } else {
+        setTimeout(callback, 100)
+      }
+    }
+    
+    // Load critical analytics on DOMContentLoaded
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', () => {
         initCriticalAnalytics()
-        // Load pixels immediately but asynchronously (non-blocking)
-        // This ensures campaign tracking works while maintaining performance
-        initNonCriticalAnalytics()
+        // Load non-critical pixels when browser is idle to avoid blocking
+        loadWhenIdle(() => {
+          initNonCriticalAnalytics()
+        })
       }, { once: true })
     } else {
       // DOM already ready
       initCriticalAnalytics()
-      initNonCriticalAnalytics()
+      loadWhenIdle(() => {
+        initNonCriticalAnalytics()
+      })
     }
   }
 }

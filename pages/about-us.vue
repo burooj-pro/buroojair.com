@@ -55,12 +55,12 @@ export default {
 				{
 					hid: 'description',
 					name: 'description',
-					content: this.$t('Burooj Air is a pioneering drone company in Saudi Arabia, providing innovative drone solutions for cleaning, weightlifting, firefighting, and filming.') || 'Burooj Air is a pioneering drone company in Saudi Arabia, providing innovative drone solutions for cleaning, weightlifting, firefighting, and filming.',
+					content: 'Learn about Burooj Air, the first licensed drone cleaning company in Saudi Arabia. Discover our innovative UAV solutions for building maintenance, industrial cleaning, and commercial services. Licensed by GACA.',
 				},
 				{
 					hid: 'keywords',
 					name: 'keywords',
-					content: 'drone cleaning, drone services Saudi Arabia, industrial drone solutions, facade cleaning drones, weightlifting drones, firefighting drones, drone filming services, Burooj Air, about Burooj Air, drone company Saudi Arabia',
+					content: 'about Burooj Air, drone company Saudi Arabia, first licensed drone cleaning, GACA licensed drone services, UAV company Khobar, drone services history, Burooj Air team, drone cleaning pioneers, Saudi drone innovation, licensed drone operators, commercial drone services, industrial drone solutions, drone technology Saudi Arabia',
 				},
 				{
 					name: 'robots',
@@ -126,6 +126,27 @@ export default {
 					name: 'twitter:image',
 					content: 'https://buroojair.com/images/buroojair-og.png',
 				},
+			],
+			script: [
+				{
+					type: 'application/ld+json',
+					json: {
+						'@context': 'https://schema.org',
+						'@type': 'AboutPage',
+						'name': 'About Burooj Air',
+						'description': 'Learn about Burooj Air, the first licensed drone cleaning company in Saudi Arabia.',
+						'url': 'https://buroojair.com/about-us',
+						'mainEntity': {
+							'@type': 'Organization',
+							'name': 'Burooj Air',
+							'foundingDate': '2020',
+							'founder': {
+								'@type': 'Person',
+								'name': 'Burooj Air Team'
+							}
+						}
+					}
+				}
 			],
 		}
 	},

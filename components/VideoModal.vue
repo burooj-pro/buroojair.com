@@ -1,11 +1,10 @@
 <template>
-	<Teleport to="body">
-		<Transition name="modal">
-			<div
-				v-if="isOpen"
-				class="fixed inset-0 z-[200] flex min-h-screen items-center justify-center bg-black/80 backdrop-blur-sm p-4"
-				@click.self="closeModal"
-			>
+	<Transition name="modal">
+		<div
+			v-if="isOpen"
+			class="fixed inset-0 z-[200] flex min-h-screen items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+			@click.self="closeModal"
+		>
 				<!-- Close Button -->
 				<button
 					@click="closeModal"
@@ -45,7 +44,6 @@
 				</div>
 			</div>
 		</Transition>
-	</Teleport>
 </template>
 
 <script>
@@ -125,7 +123,9 @@ export default {
 				this.$nextTick(() => {
 					this.$refs.videoPlayer.load()
 					this.$refs.videoPlayer.play().catch((error) => {
-						console.warn('Video autoplay failed:', error)
+						if (process.env.NODE_ENV === 'development') {
+							console.warn('Video autoplay failed:', error)
+						}
 					})
 				})
 			}
@@ -145,7 +145,9 @@ export default {
 			// Video has loaded successfully
 			if (this.$refs.videoPlayer) {
 				this.$refs.videoPlayer.play().catch((error) => {
-					console.warn('Video autoplay failed:', error)
+					if (process.env.NODE_ENV === 'development') {
+						console.warn('Video autoplay failed:', error)
+					}
 				})
 			}
 		},

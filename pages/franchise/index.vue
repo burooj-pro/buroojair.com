@@ -69,12 +69,12 @@ export default {
 				{
 					hid: 'description',
 					name: 'description',
-					content: 'Become a Burooj Air franchise partner and bring licensed drone cleaning services to your market. Join the first licensed drone cleaning team in Saudi Arabia and GCC. Exclusive franchise opportunities available.',
+					content: 'Become a Burooj Air franchise partner and bring licensed drone cleaning services to your market. Join the first licensed drone cleaning team in Saudi Arabia and GCC. Exclusive franchise opportunities with full support and training.',
 				},
 				{
 					hid: 'keywords',
 					name: 'keywords',
-					content: 'Burooj Air franchise, drone cleaning franchise, franchise opportunity Saudi Arabia, drone services franchise, UAV franchise, business opportunity, franchise partner, drone cleaning business',
+					content: 'Burooj Air franchise opportunity, drone cleaning franchise Saudi Arabia, franchise partner program, drone services franchise, UAV business franchise, licensed drone franchise, franchise investment opportunity, drone cleaning business opportunity, franchise application, join Burooj Air franchise, drone services business opportunity, commercial drone franchise',
 				},
 				{
 					name: 'robots',

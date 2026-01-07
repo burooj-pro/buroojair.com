@@ -5,11 +5,28 @@ export default {
 	head: {
 	  title: 'Burooj Air - Industrial and Commercial Drone Solutions in Saudi Arabia',
 	  htmlAttrs: { lang: 'en' },
-	  link: [{ rel: 'canonical', href: 'https://buroojair.com/' }],
+	  link: [
+		{ rel: 'canonical', href: 'https://buroojair.com/' },
+		// Resource hints for external domains to improve connection speed
+		{ rel: 'dns-prefetch', href: 'https://hel1.your-objectstorage.com' },
+		{ rel: 'preconnect', href: 'https://hel1.your-objectstorage.com', crossorigin: 'anonymous' },
+		{ rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },
+		{ rel: 'preconnect', href: 'https://www.googletagmanager.com', crossorigin: 'anonymous' },
+		{ rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
+		{ rel: 'preconnect', href: 'https://www.google-analytics.com', crossorigin: 'anonymous' },
+		{ rel: 'dns-prefetch', href: 'https://webforms.pipedrive.com' },
+		{ rel: 'preconnect', href: 'https://webforms.pipedrive.com', crossorigin: 'anonymous' },
+		{ rel: 'dns-prefetch', href: 'https://analytics.tiktok.com' },
+		{ rel: 'dns-prefetch', href: 'https://sc-static.net' },
+		{ rel: 'dns-prefetch', href: 'https://connect.facebook.net' },
+	  ],
 	  meta: [
 		{ charset: 'utf-8' },
 		{ name: 'keywords', content: 'drone, industrial, commercial, Saudi Arabia' },
 		{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
+		// Note: CSP should be set via HTTP headers on the server for better security
+		// Meta tag CSP has limitations (no wildcards, frame-ancestors ignored, etc.)
+		// Temporarily removed to allow Pipedrive forms to load properly
 		{
 		  hid: 'description',
 		  name: 'description',
@@ -81,6 +98,11 @@ export default {
 		  `,
 		  type: 'text/javascript',
 		  charset: 'utf-8'
+		},
+		{
+		  src: 'https://webforms.pipedrive.com/f/loader',
+		  async: true,
+		  defer: true
 		}
 	  ],
 	  __dangerouslyDisableSanitizersByTagID: {
@@ -121,8 +143,19 @@ export default {
 	  extractCSS: true,
 	  // Generate source maps for better debugging (required by Lighthouse)
 	  devtools: process.env.NODE_ENV === 'development',
+	  // Optimize build performance
+	  terser: {
+		terserOptions: {
+		  compress: {
+			drop_console: process.env.NODE_ENV === 'production',
+		  },
+		},
+		sourceMap: process.env.NODE_ENV === 'production',
+	  },
 	  extend(config, { isDev, isClient }) {
 		if (isClient) {
+		  // Generate source maps in production for debugging (Lighthouse requirement)
+		  // Use 'source-map' for production to ensure proper source maps
 		  config.devtool = isDev ? 'eval-source-map' : 'source-map'
 		}
 	  },

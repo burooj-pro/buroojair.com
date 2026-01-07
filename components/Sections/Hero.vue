@@ -11,7 +11,7 @@
 			loop
 			playsinline
 			webkit-playsinline
-			preload="auto"
+			preload="metadata"
 			class="hero-video-mobile w-full h-full bg-gray-900"
 			@error="handleVideoError"
 			@loadeddata="handleVideoLoaded"
@@ -35,16 +35,15 @@
 		  ref="mobileFormContainer"
 		  class="w-full bg-gray-900 bg-opacity-95 p-6 dark:bg-gray-800 dark:bg-opacity-95"
 		>
-		  <h3 ref="mobileTitle" class="mb-5 font-neo-sans text-2xl font-normal uppercase text-white">
+		  <h1 ref="mobileTitle" class="mb-5 font-neo-sans text-2xl font-normal uppercase text-white">
 			{{ $t('NOW_REQUEST_A_QUOTE_FOR_DRONE_CLEANING') }}
-		  </h3>
+		  </h1>
   
 		  <div
 			ref="mobileForm"
 			class="pipedriveWebForms"
 			data-pd-webforms="https://webforms.pipedrive.com/f/6coemjWsjuoqlhJqDxw5vARg9RKtlXs9Rk7xeP0SZJLEXlmO9hyO7YDdWfq6IcrYLV"
 		  >
-			<script src="https://webforms.pipedrive.com/f/loader"></script>
 		  </div>
 		</div>
 	  </div>
@@ -59,7 +58,7 @@
 		  loop
 		  playsinline
 		  webkit-playsinline
-		  preload="auto"
+		  preload="metadata"
 		  class="hero-video absolute inset-0 z-0 bg-gray-900"
 		  @error="handleVideoError"
 		  @loadeddata="handleVideoLoaded"
@@ -84,16 +83,15 @@
 			  ref="desktopFormContainer"
 			  class="w-full bg-gray-900 bg-opacity-95 dark:bg-gray-800 dark:bg-opacity-95 max-w-md rounded-bl-[80px] rounded-br-2xl rounded-tl-2xl rounded-tr-[80px] p-8"
 			>
-			  <h3 ref="desktopTitle" class="mb-5 font-neo-sans text-3xl font-normal uppercase text-white">
+			  <h1 ref="desktopTitle" class="mb-5 font-neo-sans text-3xl font-normal uppercase text-white">
 				{{ $t('NOW_REQUEST_A_QUOTE_FOR_DRONE_CLEANING') }}
-			  </h3>
+			  </h1>
   
 			  <div
 				ref="desktopForm"
 				class="pipedriveWebForms"
 				data-pd-webforms="https://webforms.pipedrive.com/f/6coemjWsjuoqlhJqDxw5vARg9RKtlXs9Rk7xeP0SZJLEXlmO9hyO7YDdWfq6IcrYLV"
 			  >
-				<script src="https://webforms.pipedrive.com/f/loader"></script>
 			  </div>
 			</div>
 		  </div>
@@ -107,24 +105,119 @@
 	mounted() {
     if (!process.client) return
 
+    // Load Pipedrive first, then initialize other things
     this.loadPipedriveOnce()
+    
+    // Initialize forms after a short delay to ensure DOM is ready
+    this.$nextTick(() => {
+      setTimeout(() => {
+        this.initPipedriveForms()
+      }, 500)
+    })
+    
     this.initVideos()
     this.initGSAP()
   },
   methods: {
     loadPipedriveOnce() {
-      // Prevent loading it multiple times
-      if (document.querySelector('script[data-pipedrive-loader="true"]')) return
-
-      const s = document.createElement('script')
-      s.src = 'https://webforms.pipedrive.com/f/loader'
-      s.async = true
-      s.defer = true
-      s.setAttribute('data-pipedrive-loader', 'true')
-      document.body.appendChild(s)
+      // Script is now loaded in nuxt.config.js head
+      // Just ensure forms are initialized after component mounts
+      // Pipedrive should auto-detect forms, but we'll help it along
+      this.$nextTick(() => {
+        // Multiple attempts to ensure forms load
+        setTimeout(() => {
+          this.initPipedriveForms()
+        }, 500)
+        
+        setTimeout(() => {
+          this.initPipedriveForms()
+        }, 1500)
+        
+        setTimeout(() => {
+          this.initPipedriveForms()
+        }, 3000)
+      })
+    },
+    
+    initPipedriveForms() {
+      // Pipedrive WebForms auto-detects forms, but we need to ensure they're visible
+      // Check if forms are already loaded
+      const forms = document.querySelectorAll('.pipedriveWebForms[data-pd-webforms]')
+      
+      if (forms.length === 0) {
+        // Forms not in DOM yet, try again
+        setTimeout(() => {
+          this.initPipedriveForms()
+        }, 500)
+        return
+      }
+      
+      forms.forEach((formContainer) => {
+        // Check if form is already loaded
+        if (formContainer.querySelector('form') || formContainer.querySelector('iframe')) {
+          if (process.env.NODE_ENV === 'development') {
+            console.log('[Pipedrive] Form already loaded')
+          }
+          return // Form already loaded
+        }
+        
+        // Ensure container is visible and has proper attributes
+        formContainer.style.display = 'block'
+        formContainer.style.visibility = 'visible'
+        formContainer.style.opacity = '1'
+        formContainer.style.minHeight = '200px'
+        
+        if (process.env.NODE_ENV === 'development') {
+          console.log('[Pipedrive] Form container ready:', formContainer)
+        }
+      })
+      
+      // Check if Pipedrive is available
+      if (typeof window.Pipedrive !== 'undefined') {
+        if (process.env.NODE_ENV === 'development') {
+          console.log('[Pipedrive] Pipedrive object found, forms should auto-load')
+        }
+        // Pipedrive is available, forms should auto-load
+        // Try to manually trigger if available
+        if (window.Pipedrive.load) {
+          forms.forEach((formContainer) => {
+            if (!formContainer.querySelector('form') && !formContainer.querySelector('iframe')) {
+              try {
+                window.Pipedrive.load(formContainer)
+              } catch (e) {
+                if (process.env.NODE_ENV === 'development') {
+                  console.warn('[Pipedrive] Manual load failed:', e)
+                }
+              }
+            }
+          })
+        }
+      } else {
+        // Pipedrive not ready yet, wait a bit more
+        if (process.env.NODE_ENV === 'development') {
+          console.log('[Pipedrive] Waiting for Pipedrive to load...')
+        }
+        setTimeout(() => {
+          this.initPipedriveForms()
+        }, 1000)
+      }
     },
 
     initVideos() {
+      // Delay video loading slightly to allow initial render to complete
+      // This improves FCP and LCP scores
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(() => {
+          this.loadVideos()
+        }, { timeout: 500 })
+      } else {
+        setTimeout(() => {
+          this.loadVideos()
+        }, 100)
+      }
+    },
+    
+    loadVideos() {
       this.$nextTick(() => {
         const videos = [this.$refs.videoPlayerDesktop, this.$refs.videoPlayerMobile].filter(Boolean)
 
@@ -137,7 +230,7 @@
           v.playsInline = true
           v.autoplay = true
           v.loop = true
-          v.preload = 'auto'
+          v.preload = 'metadata'
           // Remove crossOrigin to avoid CORS issues
           v.removeAttribute('crossorigin')
 
@@ -279,7 +372,8 @@
 
         if (desktopContainer && window.innerWidth >= 1024) {
           gsap.set(desktopTitle, { opacity: 0, y: 30 })
-          gsap.set(desktopForm, { opacity: 0, y: 30 })
+          // Don't hide form initially - let it be visible so Pipedrive can load
+          gsap.set(desktopForm, { opacity: 1, y: 0 })
 
           const desktopTL = gsap.timeline({ delay: 0.3 })
           desktopTL
@@ -289,21 +383,13 @@
               duration: 0.8,
               ease: 'power3.out',
             })
-            .to(
-              desktopForm,
-              {
-                opacity: 1,
-                y: 0,
-                duration: 0.8,
-                ease: 'power3.out',
-              },
-              '-=0.4'
-            )
+          // Form stays visible, no animation needed
         }
 
         if (mobileContainer && window.innerWidth < 1024) {
           gsap.set(mobileTitle, { opacity: 0, y: 20 })
-          gsap.set(mobileForm, { opacity: 0, y: 20 })
+          // Don't hide form initially - let it be visible so Pipedrive can load
+          gsap.set(mobileForm, { opacity: 1, y: 0 })
 
           const mobileTL = gsap.timeline({ delay: 0.2 })
           mobileTL
@@ -313,16 +399,7 @@
               duration: 0.6,
               ease: 'power2.out',
             })
-            .to(
-              mobileForm,
-              {
-                opacity: 1,
-                y: 0,
-                duration: 0.6,
-                ease: 'power2.out',
-              },
-              '-=0.3'
-            )
+          // Form stays visible, no animation needed
         }
       })
     },
@@ -412,6 +489,29 @@
   */
   .hero-content-pad {
 	padding-top: 120px;
+  }
+  
+  /* Ensure Pipedrive form container is visible and has proper dimensions */
+  .pipedriveWebForms {
+	min-height: 200px;
+	width: 100%;
+	display: block !important;
+	visibility: visible !important;
+	opacity: 1 !important;
+  }
+  
+  /* Ensure form iframe is visible */
+  .pipedriveWebForms iframe {
+	width: 100% !important;
+	min-height: 400px;
+	display: block !important;
+  }
+  
+  /* Ensure form elements are visible */
+  .pipedriveWebForms form {
+	display: block !important;
+	visibility: visible !important;
+	opacity: 1 !important;
   }
   </style>
   
