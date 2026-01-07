@@ -122,8 +122,14 @@ export default {
 				// Otherwise, ensure proper encoding
 				return url
 			}
-			// For local paths, return as-is (browser will handle encoding)
-			return url
+			// For local paths, properly encode the path
+			// Split by /, encode each segment, then join
+			return url.split('/').map(segment => {
+				// Don't encode empty segments (leading/trailing slashes)
+				if (!segment) return segment
+				// Encode the segment (handles spaces and special chars)
+				return encodeURIComponent(segment)
+			}).join('/')
 		},
 		encodeVideoUrl(url) {
 			// For static files, encode the entire path properly
@@ -190,10 +196,24 @@ export default {
 		handleVideoError(event, originalUrl) {
 			const video = event.target
 			const error = video?.error
-			const videoSrc = video?.src || originalUrl
+			const videoSrc = video?.src || video?.currentSrc || originalUrl
 			
 			// Mark this video as having an error
 			this.$set(this.videoErrors, originalUrl || videoSrc, true)
+			
+			// Try to reload with properly encoded URL if it's a local file
+			if (!this.isExternalVideo(originalUrl) && videoSrc && videoSrc !== originalUrl) {
+				// If the encoded URL failed, try the original
+				setTimeout(() => {
+					if (video && video.error) {
+						const encodedUrl = this.encodeVideoUrl(originalUrl)
+						if (encodedUrl !== videoSrc) {
+							video.src = encodedUrl
+							video.load()
+						}
+					}
+				}, 1000)
+			}
 			
 			// Detailed error logging
 			if (error) {
@@ -203,7 +223,7 @@ export default {
 						errorMsg = 'Video loading aborted'
 						break
 					case error.MEDIA_ERR_NETWORK:
-						errorMsg = 'Network error (possibly CORS)'
+						errorMsg = 'Network error (possibly CORS or file too large)'
 						break
 					case error.MEDIA_ERR_DECODE:
 						errorMsg = 'Video decoding error'
