@@ -4,7 +4,7 @@
 
 		<!-- Hero Section -->
 		<section class="flex min-h-screen items-center bg-[#EBF5FF] font-neo-sans dark:bg-[#04061C]">
-			<div class="container mx-auto px-4 text-left lg:px-8">
+			<div class="container mx-auto px-4 text-left rtl:text-right lg:px-8">
 				<h1 class="mb-6 text-4xl font-black text-gray-900 dark:text-white lg:text-7xl">
 					{{ $t('BECOME_A_BUROOJ_AIR_FRANCHISE_PARTNER') || 'Become a Burooj Air Franchise Partner' }}
 				</h1>
@@ -13,10 +13,11 @@
 				</p>
 				<a
 					href="#franchiseFormSection"
-					class="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-lg bg-blue-600 px-8 py-3 text-base font-bold text-white no-underline transition-colors hover:bg-blue-700 lg:px-10 lg:py-4 lg:text-lg"
+					@click.prevent="scrollToForm"
+					class="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-lg bg-blue-600 px-8 py-3 text-base font-bold text-white no-underline transition-colors hover:bg-blue-700 lg:px-10 lg:py-4 lg:text-lg rtl:flex-row-reverse"
 				>
 					{{ $t('APPLY_FOR_FRANCHISE') || 'Apply for Franchise' }}
-					<svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<svg class="h-5 w-5 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
 					</svg>
 				</a>
@@ -37,6 +38,27 @@
 <script>
 export default {
 	name: 'Franchise',
+	methods: {
+		scrollToForm() {
+			if (process.client) {
+				const formSection = document.getElementById('franchiseFormSection')
+				if (formSection) {
+					// Get header height for offset (header is typically around 80-100px)
+					const header = document.querySelector('header')
+					const headerHeight = header ? header.offsetHeight : 100
+					
+					// Calculate position with offset
+					const elementPosition = formSection.getBoundingClientRect().top
+					const offsetPosition = elementPosition + window.pageYOffset - headerHeight - 20 // 20px extra padding
+					
+					window.scrollTo({
+						top: offsetPosition,
+						behavior: 'smooth'
+					})
+				}
+			}
+		},
+	},
 	head() {
 		return {
 			title: this.$t('FRANCHISE') + ' - Burooj Air | Become a Franchise Partner',
@@ -47,7 +69,7 @@ export default {
 				{
 					hid: 'description',
 					name: 'description',
-					content: 'Become a Burooj Air franchise partner and bring licensed drone cleaning services to your market. Join the first licensed drone cleaning company in Saudi Arabia and GCC. Exclusive franchise opportunities available.',
+					content: 'Become a Burooj Air franchise partner and bring licensed drone cleaning services to your market. Join the first licensed drone cleaning team in Saudi Arabia and GCC. Exclusive franchise opportunities available.',
 				},
 				{
 					hid: 'keywords',
@@ -66,7 +88,7 @@ export default {
 				{
 					hid: 'og:description',
 					property: 'og:description',
-					content: 'Become a Burooj Air franchise partner and bring licensed drone cleaning services to your market. Join the first licensed drone cleaning company in Saudi Arabia and GCC.',
+					content: 'Become a Burooj Air franchise partner and bring licensed drone cleaning services to your market. Join the first licensed drone cleaning team in Saudi Arabia and GCC.',
 				},
 				{
 					hid: 'og:image',
@@ -111,7 +133,7 @@ export default {
 				{
 					hid: 'twitter:description',
 					name: 'twitter:description',
-					content: 'Become a Burooj Air franchise partner and bring licensed drone cleaning services to your market. Join the first licensed drone cleaning company in Saudi Arabia and GCC.',
+					content: 'Become a Burooj Air franchise partner and bring licensed drone cleaning services to your market. Join the first licensed drone cleaning team in Saudi Arabia and GCC.',
 				},
 				{
 					hid: 'twitter:image',

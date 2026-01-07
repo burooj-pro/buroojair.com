@@ -45,7 +45,7 @@ export default {
 				{
 					hid: 'description',
 					name: 'description',
-					content: 'Burooj Air is the first Saudi company licensed for drone cleaning services. Experience 10x faster, 95% safer, and 60% more cost-effective building maintenance with our innovative drone technology. Licensed by GACA.',
+					content: 'Burooj Air is the first Saudi team licensed for drone cleaning services. Experience 10x faster, 95% safer, and 60% more cost-effective building maintenance with our innovative drone technology. Licensed by GACA.',
 				},
 				{
 					hid: 'keywords',
@@ -64,7 +64,7 @@ export default {
 				{
 					hid: 'og:description',
 					property: 'og:description',
-					content: 'Burooj Air is the first Saudi company licensed for drone cleaning services. Experience 10x faster, 95% safer, and 60% more cost-effective building maintenance with our innovative drone technology.',
+					content: 'Burooj Air is the first Saudi team licensed for drone cleaning services. Experience 10x faster, 95% safer, and 60% more cost-effective building maintenance with our innovative drone technology.',
 				},
 				{
 					hid: 'og:image',
@@ -114,7 +114,7 @@ export default {
 				{
 					hid: 'twitter:description',
 					name: 'twitter:description',
-					content: 'Burooj Air is the first Saudi company licensed for drone cleaning services. Experience 10x faster, 95% safer, and 60% more cost-effective building maintenance.',
+					content: 'Burooj Air is the first Saudi team licensed for drone cleaning services. Experience 10x faster, 95% safer, and 60% more cost-effective building maintenance.',
 				},
 				{
 					hid: 'twitter:image',

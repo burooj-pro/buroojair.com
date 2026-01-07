@@ -74,7 +74,7 @@ export default {
 				{
 					hid: 'og:description',
 					property: 'og:description',
-					content: this.$t('Discover Burooj Air, the first licensed drone company in Saudi Arabia offering cutting-edge solutions for industrial and commercial applications.') || 'Discover Burooj Air, the first licensed drone company in Saudi Arabia offering cutting-edge solutions for industrial and commercial applications.',
+					content: this.$t('Discover Burooj Air, the first licensed drone team in Saudi Arabia offering cutting-edge solutions for industrial and commercial applications.') || 'Discover Burooj Air, the first licensed drone team in Saudi Arabia offering cutting-edge solutions for industrial and commercial applications.',
 				},
 				{
 					hid: 'og:image',
@@ -119,7 +119,7 @@ export default {
 				{
 					hid: 'twitter:description',
 					name: 'twitter:description',
-					content: this.$t('Discover Burooj Air, the first licensed drone company in Saudi Arabia offering cutting-edge solutions for industrial and commercial applications.') || 'Discover Burooj Air, the first licensed drone company in Saudi Arabia offering cutting-edge solutions for industrial and commercial applications.',
+					content: this.$t('Discover Burooj Air, the first licensed drone team in Saudi Arabia offering cutting-edge solutions for industrial and commercial applications.') || 'Discover Burooj Air, the first licensed drone team in Saudi Arabia offering cutting-edge solutions for industrial and commercial applications.',
 				},
 				{
 					hid: 'twitter:image',

@@ -23,7 +23,7 @@ export default {
 				{
 					hid: 'description',
 					name: 'description',
-					content: 'Contact Burooj Air for drone cleaning services, franchise opportunities, or general inquiries. Get in touch with the first licensed drone cleaning company in Saudi Arabia. Located in Khobar, Saudi Arabia.',
+					content: 'Contact Burooj Air for drone cleaning services, franchise opportunities, or general inquiries. Get in touch with the first licensed drone cleaning team in Saudi Arabia. Located in Khobar, Saudi Arabia.',
 				},
 				{
 					hid: 'keywords',
@@ -42,7 +42,7 @@ export default {
 				{
 					hid: 'og:description',
 					property: 'og:description',
-					content: 'Contact Burooj Air for drone cleaning services, franchise opportunities, or general inquiries. Get in touch with the first licensed drone cleaning company in Saudi Arabia.',
+					content: 'Contact Burooj Air for drone cleaning services, franchise opportunities, or general inquiries. Get in touch with the first licensed drone cleaning team in Saudi Arabia.',
 				},
 				{
 					hid: 'og:image',
@@ -87,7 +87,7 @@ export default {
 				{
 					hid: 'twitter:description',
 					name: 'twitter:description',
-					content: 'Contact Burooj Air for drone cleaning services, franchise opportunities, or general inquiries. Get in touch with the first licensed drone cleaning company in Saudi Arabia.',
+					content: 'Contact Burooj Air for drone cleaning services, franchise opportunities, or general inquiries. Get in touch with the first licensed drone cleaning team in Saudi Arabia.',
 				},
 				{
 					hid: 'twitter:image',

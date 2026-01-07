@@ -5,11 +5,11 @@
 				<!-- Company Info -->
 				<div class="sm:col-span-2 lg:col-span-1">
 					<NuxtLink to="/" class="mb-6 inline-block">
-						<img src="~assets/images/logo-dark.png" alt="Burooj Air Logo" width="120" height="48" class="h-10 lg:h-12 dark:hidden" />
-						<img src="~assets/images/logo.png" alt="Burooj Air Logo" width="120" height="48" class="hidden h-10 lg:h-12 dark:inline-block" />
+						<img src="~assets/images/logo-dark.png" alt="Burooj Air Logo" width="120" height="48" class="h-10 w-auto lg:h-12 object-contain dark:hidden" />
+						<img src="~assets/images/logo.png" alt="Burooj Air Logo" width="120" height="48" class="hidden h-10 w-auto lg:h-12 object-contain dark:inline-block" />
 					</NuxtLink>
 					<p class="mb-6 text-base font-bold leading-relaxed text-gray-600 dark:text-gray-400">
-						{{ $t('FOR_INQUIRIES_PLEASE_USE_OUR_LISTED_CONTACT_INFO') || 'The first Saudi company licensed for drone cleaning services.' }}
+						{{ $t('FOR_INQUIRIES_PLEASE_USE_OUR_LISTED_CONTACT_INFO') || 'The first Saudi team licensed for drone cleaning services.' }}
 					</p>
 					<!-- Social Media Links -->
 					<div class="flex flex-wrap gap-3">
@@ -33,29 +33,29 @@
 					<h4 class="mb-6 text-lg font-bold text-gray-900 dark:text-white lg:text-xl">{{ $t('QUICK_LINKS') || 'Quick Links' }}</h4>
 					<ul class="space-y-3">
 						<li>
-							<NuxtLink to="/" class="block min-h-[44px] py-2 text-base font-bold text-gray-600 no-underline transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+							<a @click.prevent="navigateToLink('/')" href="/" class="block min-h-[44px] py-2 text-base font-bold text-gray-600 no-underline transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white cursor-pointer">
 								{{ $t('HOME') }}
-							</NuxtLink>
+							</a>
 						</li>
 						<li>
-							<NuxtLink to="/about-us" class="block min-h-[44px] py-2 text-base font-bold text-gray-600 no-underline transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+							<a @click.prevent="navigateToLink('/about-us')" href="/about-us" class="block min-h-[44px] py-2 text-base font-bold text-gray-600 no-underline transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white cursor-pointer">
 								{{ $t('ABOUT_US') }}
-							</NuxtLink>
+							</a>
 						</li>
 						<li>
-							<NuxtLink to="/#servicesSection" class="block min-h-[44px] py-2 text-base font-bold text-gray-600 no-underline transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+							<a @click.prevent="navigateToLink('/#servicesSection')" href="/#servicesSection" class="block min-h-[44px] py-2 text-base font-bold text-gray-600 no-underline transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white cursor-pointer">
 								{{ $t('SERVICES') }}
-							</NuxtLink>
+							</a>
 						</li>
 						<li>
-							<NuxtLink to="/projects" class="block min-h-[44px] py-2 text-base font-bold text-gray-600 no-underline transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+							<a @click.prevent="navigateToLink('/projects')" href="/projects" class="block min-h-[44px] py-2 text-base font-bold text-gray-600 no-underline transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white cursor-pointer">
 								{{ $t('OUR_PROJECTS') }}
-							</NuxtLink>
+							</a>
 						</li>
 						<li>
-							<NuxtLink to="/contact" class="block min-h-[44px] py-2 text-base font-bold text-gray-600 no-underline transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+							<a @click.prevent="navigateToLink('/contact')" href="/contact" class="block min-h-[44px] py-2 text-base font-bold text-gray-600 no-underline transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white cursor-pointer">
 								{{ $t('CONTACT') }}
-							</NuxtLink>
+							</a>
 						</li>
 					</ul>
 				</div>
@@ -107,6 +107,59 @@
 		</div>
 	</footer>
 </template>
+
+<script>
+export default {
+	methods: {
+		navigateToLink(path) {
+			if (!process.client) return
+			
+			// Check if path contains a hash (section anchor)
+			if (path.includes('#')) {
+				const [pagePath, sectionId] = path.split('#')
+				
+				// If we're not on the target page, navigate to it first
+				if (this.$route.path !== pagePath) {
+					this.$router.push(path).then(() => {
+						this.$nextTick(() => {
+							this.scrollToSection(sectionId)
+						})
+					})
+				} else {
+					// Already on the page, just scroll to section
+					this.scrollToSection(sectionId)
+				}
+			} else {
+				// Regular page navigation
+				if (this.$route.path !== path) {
+					this.$router.push(path)
+				} else {
+					// Already on the page, scroll to top
+					window.scrollTo({ top: 0, behavior: 'smooth' })
+				}
+			}
+		},
+		scrollToSection(sectionId) {
+			if (!process.client || !sectionId) return
+			
+			this.$nextTick(() => {
+				const element = document.getElementById(sectionId)
+				if (element) {
+					const header = document.querySelector('header')
+					const headerHeight = header ? header.offsetHeight : 100
+					const elementPosition = element.getBoundingClientRect().top
+					const offsetPosition = elementPosition + window.pageYOffset - headerHeight - 20
+					
+					window.scrollTo({
+						top: offsetPosition,
+						behavior: 'smooth'
+					})
+				}
+			})
+		},
+	},
+}
+</script>
 
 <style scoped>
 /* Footer link styling - improved for better clarity and readability */

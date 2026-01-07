@@ -14,7 +14,7 @@ export default {
 		  hid: 'description',
 		  name: 'description',
 		  content:
-			'Burooj Air is the first Saudi company licensed for drone cleaning services, offering innovative and eco-friendly solutions for high-rise facade cleaning and more.',
+			'Burooj Air is the first Saudi team licensed for drone cleaning services, offering innovative and eco-friendly solutions for high-rise facade cleaning and more.',
 		},
 		{
 		  hid: 'keywords',
@@ -27,7 +27,7 @@ export default {
 		  hid: 'og:description',
 		  property: 'og:description',
 		  content:
-			'Burooj Air is the first Saudi company licensed for drone cleaning services, offering innovative and eco-friendly solutions for high-rise facade cleaning and more.',
+			'Burooj Air is the first Saudi team licensed for drone cleaning services, offering innovative and eco-friendly solutions for high-rise facade cleaning and more.',
 		},
 		{
 		  hid: 'og:image',
@@ -56,7 +56,7 @@ export default {
 		  hid: 'twitter:description',
 		  name: 'twitter:description',
 		  content:
-			'Burooj Air is the first Saudi company licensed for drone cleaning services, offering innovative and eco-friendly solutions for high-rise facade cleaning and more.',
+			'Burooj Air is the first Saudi team licensed for drone cleaning services, offering innovative and eco-friendly solutions for high-rise facade cleaning and more.',
 		},
 		{
 		  hid: 'twitter:image',

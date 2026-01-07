@@ -24,8 +24,8 @@
 		  aria-hidden="true"
 		>
 		  <div
-			class="absolute top-0.5 left-0.5 rtl:right-0.5 h-4 w-4 rounded-full bg-white transition-transform duration-300"
-			:class="currentTheme === 'dark' ? 'translate-x-6' : 'translate-x-0'"
+			class="absolute top-0.5 h-4 w-4 rounded-full bg-white transition-transform duration-300"
+			:class="currentTheme === 'dark' ? 'left-[26px] rtl:right-[26px] rtl:left-auto' : 'left-0.5 rtl:right-0.5 rtl:left-auto'"
 		  />
 		</div>
   
@@ -53,8 +53,30 @@
 	  }
 	},
 	mounted() {
-	  if (process.client && this.$theme) {
-		this.currentTheme = this.$theme.getTheme()
+	  if (process.client) {
+		// Get initial theme immediately - check both localStorage and DOM
+		const savedTheme = localStorage.getItem('theme')
+		const hasDarkClass = document.documentElement.classList.contains('dark')
+		
+		if (this.$theme) {
+		  this.currentTheme = this.$theme.getTheme()
+		} else if (savedTheme) {
+		  this.currentTheme = savedTheme
+		} else {
+		  // Fallback: use DOM class to determine theme
+		  this.currentTheme = hasDarkClass ? 'dark' : 'light'
+		}
+		
+		// Ensure theme state is synced
+		this.$nextTick(() => {
+		  if (this.$theme) {
+			const actualTheme = this.$theme.getTheme()
+			if (actualTheme !== this.currentTheme) {
+			  this.currentTheme = actualTheme
+			}
+		  }
+		})
+		
 		this.watchTheme()
 	  }
 	},
@@ -84,7 +106,17 @@
 		this._themeInterval = setInterval(() => {
 		  if (this.$theme) {
 			const theme = this.$theme.getTheme()
-			if (theme !== this.currentTheme) this.currentTheme = theme
+			if (theme !== this.currentTheme) {
+			  this.currentTheme = theme
+			}
+		  } else {
+			// Fallback: check DOM and localStorage directly
+			const savedTheme = localStorage.getItem('theme')
+			const hasDarkClass = document.documentElement.classList.contains('dark')
+			const detectedTheme = savedTheme || (hasDarkClass ? 'dark' : 'light')
+			if (detectedTheme !== this.currentTheme) {
+			  this.currentTheme = detectedTheme
+			}
 		  }
 		}, 300)
 	  },
