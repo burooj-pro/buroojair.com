@@ -32,15 +32,16 @@
 								:data-src="getVideoSrc(project.video)"
 								class="h-full w-full object-cover"
 								muted
+								autoplay
 								loop
 								playsinline
-								preload="none"
+								preload="metadata"
 								:aria-label="project.title"
 								@error="(e) => handleVideoError(e, project.video)"
 								@loadstart="handleVideoLoadStart"
 								@loadedmetadata="handleVideoMetadataLoaded"
-								@mouseenter="handleVideoHover"
-								@mouseleave="handleVideoLeave"
+								@loadeddata="handleVideoLoaded"
+								@canplay="handleVideoCanPlay"
 							>
 								<source :data-src="getVideoSrc(project.video)" type="video/mp4" />
 								Your browser does not support the video tag.
@@ -49,16 +50,16 @@
 							<div v-if="videoErrors[project.video]" class="absolute inset-0 flex items-center justify-center bg-gray-200 dark:bg-gray-800">
 								<p class="text-sm text-gray-600 dark:text-gray-400">Video unavailable</p>
 							</div>
-							<!-- Glassy Video Icon Overlay -->
+							<!-- Fullscreen Icon Overlay - Bottom Left -->
 							<button
 								@click="openVideoModal(project.video, project.title)"
-								class="absolute inset-0 z-10 flex items-center justify-center transition-opacity focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 rounded-xl"
+								class="absolute bottom-4 left-4 z-10 transition-opacity focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 rounded-lg"
 								:class="isVideoModalOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'"
-								aria-label="Play full video"
+								aria-label="Open video in fullscreen"
 							>
-								<div class="video-play-button-circle">
-									<svg class="h-12 w-12 text-white lg:h-14 lg:w-14" fill="currentColor" viewBox="0 0 24 24">
-										<path d="M8 5v14l11-7z" />
+								<div class="video-fullscreen-button">
+									<svg class="h-6 w-6 text-white lg:h-7 lg:w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+										<path stroke-linecap="round" stroke-linejoin="round" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
 									</svg>
 								</div>
 							</button>
@@ -157,27 +158,33 @@ export default {
 			}
 		},
 		handleVideoMetadataLoaded(event) {
-			// When metadata is loaded, seek to a good frame for thumbnail
+			// When metadata is loaded, try to play
 			const video = event.target
-			if (video && video.duration) {
-				// Seek to 1 second to get a good thumbnail frame
-				video.currentTime = Math.min(1, video.duration * 0.1)
-			}
-		},
-		handleVideoHover(event) {
-			// Start playing video on hover
-			const video = event.target
-			if (video && video.paused) {
+			if (video && video.readyState >= 2) {
+				video.muted = true
 				video.play().catch(() => {
-					// Autoplay might be prevented, that's okay
+					// Autoplay might be prevented, which is okay
 				})
 			}
 		},
-		handleVideoLeave(event) {
-			// Pause video when mouse leaves to save bandwidth
+		handleVideoLoaded(event) {
+			// When video data is loaded, ensure it's playing
 			const video = event.target
-			if (video && !video.paused) {
-				video.pause()
+			if (video && video.paused) {
+				video.muted = true
+				video.play().catch(() => {
+					// Autoplay might be prevented, which is okay
+				})
+			}
+		},
+		handleVideoCanPlay(event) {
+			// When video can play, ensure it's playing
+			const video = event.target
+			if (video && video.paused) {
+				video.muted = true
+				video.play().catch(() => {
+					// Autoplay might be prevented, which is okay
+				})
 			}
 		},
 		handleVideoError(event, originalUrl) {
@@ -205,19 +212,23 @@ export default {
 						errorMsg = 'Video format not supported or URL invalid'
 						break
 				}
-				console.error(`Video error for "${originalUrl}":`, errorMsg, {
-					code: error.code,
-					message: error.message,
-					src: videoSrc,
-					networkState: video?.networkState,
-					readyState: video?.readyState,
-				})
+				if (process.env.NODE_ENV === 'development') {
+					console.error(`Video error for "${originalUrl}":`, errorMsg, {
+						code: error.code,
+						message: error.message,
+						src: videoSrc,
+						networkState: video?.networkState,
+						readyState: video?.readyState,
+					})
+				}
 			} else {
-				console.error('Video loading error (no error details):', {
-					src: videoSrc,
-					networkState: video?.networkState,
-					readyState: video?.readyState,
-				})
+				if (process.env.NODE_ENV === 'development') {
+					console.error('Video loading error (no error details):', {
+						src: videoSrc,
+						networkState: video?.networkState,
+						readyState: video?.readyState,
+					})
+				}
 			}
 		},
 		initLazyLoading() {
@@ -228,11 +239,26 @@ export default {
 					videos.forEach((video) => {
 						if (video.dataset.src) {
 							video.src = video.dataset.src
-							video.preload = 'metadata'
+							video.preload = 'metadata' // Start with metadata for faster initial load
+							video.muted = true
+							video.autoplay = true
+							video.loop = true
 							const source = video.querySelector('source')
 							if (source && source.dataset.src) {
 								source.src = source.dataset.src
 							}
+							video.load()
+							
+							// Upgrade to auto after metadata loads
+							const upgradeAndPlay = () => {
+								video.preload = 'auto'
+								video.load()
+								video.play().catch(() => {})
+							}
+							video.addEventListener('loadedmetadata', upgradeAndPlay, { once: true })
+							video.addEventListener('canplay', () => {
+								video.play().catch(() => {})
+							}, { once: true })
 						}
 					})
 				})
@@ -248,15 +274,34 @@ export default {
 							const video = entry.target
 							if (video.dataset.src) {
 								loadingVideos.add(video)
-								// Only load metadata, not the full video
+								// Load video for autoplay
 								video.src = video.dataset.src
-								video.preload = 'metadata'
+								video.preload = 'metadata' // Start with metadata, upgrade to auto after metadata loads
+								video.muted = true
+								video.autoplay = true
+								video.loop = true
 								const source = video.querySelector('source')
 								if (source && source.dataset.src) {
 									source.src = source.dataset.src
 								}
-								// Load metadata asynchronously to not block
+								// Load metadata first (faster)
 								video.load()
+								
+								// Once metadata is loaded, upgrade to auto and play
+								const upgradeAndPlay = () => {
+									video.preload = 'auto'
+									video.load()
+									video.play().catch(() => {
+										// Autoplay might be prevented, which is okay
+									})
+								}
+								video.addEventListener('loadedmetadata', upgradeAndPlay, { once: true })
+								
+								// Also try to play as soon as we can
+								video.addEventListener('canplay', () => {
+									video.play().catch(() => {})
+								}, { once: true })
+								
 								observer.unobserve(video)
 							}
 						}
@@ -327,7 +372,7 @@ export default {
 				{
 					title: this.$t('PROJECT_FOZAN_TITLE'),
 					description: this.$t('PROJECT_FOZAN_DESC'),
-					video: 'https://hel1.your-objectstorage.com/burooj-prod/videos/Burooj%20Air%20-%20Al%20Fozan%20H.mp4',
+					video: 'https://hel1.your-objectstorage.com/burooj-prod/videos/burooj_air_-_al_fozan_cleaning%20(1080p).mp4',
 					category: this.$t('CATEGORY_FACADE_CLEANING'),
 				},
 				{
@@ -339,7 +384,7 @@ export default {
 				{
 					title: this.$t('PROJECT_ZAMIL_TITLE'),
 					description: this.$t('PROJECT_ZAMIL_DESC'),
-					video: '/videos/Burooj Air - Al Zamil Edit 02.mp4',
+					video: 'https://hel1.your-objectstorage.com/burooj-prod/videos/Burooj%20Air%20-%20Al%20Zamil%20Edit%2002.mp4',
 					category: this.$t('CATEGORY_BUILDING_MAINTENANCE'),
 				},
 				{
@@ -468,16 +513,16 @@ export default {
 	transition-duration: 300ms;
 }
 
-/* Glassy Video Play Button - Circular Background */
-.video-play-button-circle {
-	width: 80px;
-	height: 80px;
-	background-color: rgba(31, 41, 55, 0.4);
+/* Fullscreen Button - Bottom Left Corner */
+.video-fullscreen-button {
+	width: 48px;
+	height: 48px;
+	background-color: rgba(31, 41, 55, 0.6);
 	border: 1px solid rgba(255, 255, 255, 0.3);
 	-webkit-backdrop-filter: blur(20px);
 	backdrop-filter: blur(20px);
-	border-radius: 50%;
-	box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+	border-radius: 8px;
+	box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.4);
 	transition: all 0.3s ease;
 	display: flex;
 	align-items: center;
@@ -485,26 +530,26 @@ export default {
 }
 
 @media (min-width: 1024px) {
-	.video-play-button-circle {
-		width: 100px;
-		height: 100px;
+	.video-fullscreen-button {
+		width: 56px;
+		height: 56px;
 	}
 }
 
-.video-play-button-circle:hover {
-	background-color: rgba(31, 41, 55, 0.6);
+.video-fullscreen-button:hover {
+	background-color: rgba(31, 41, 55, 0.8);
 	border-color: rgba(255, 255, 255, 0.5);
 	transform: scale(1.1);
-	box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5);
+	box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.5);
 }
 
-.dark .video-play-button-circle {
-	background-color: rgba(17, 24, 39, 0.5);
+.dark .video-fullscreen-button {
+	background-color: rgba(17, 24, 39, 0.7);
 	border-color: rgba(255, 255, 255, 0.2);
 }
 
-.dark .video-play-button-circle:hover {
-	background-color: rgba(17, 24, 39, 0.7);
+.dark .video-fullscreen-button:hover {
+	background-color: rgba(17, 24, 39, 0.9);
 	border-color: rgba(255, 255, 255, 0.4);
 }
 </style>

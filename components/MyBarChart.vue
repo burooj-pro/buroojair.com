@@ -59,7 +59,9 @@ export default {
 					},
 				}
 			} catch (error) {
-				console.error('Failed to load chart:', error)
+				if (process.env.NODE_ENV === 'development') {
+					console.error('Failed to load chart:', error)
+				}
 			}
 		},
 	},

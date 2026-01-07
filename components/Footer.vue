@@ -8,7 +8,7 @@
 						<img src="~assets/images/logo-dark.png" alt="Burooj Air Logo" width="120" height="48" class="h-10 lg:h-12 dark:hidden" />
 						<img src="~assets/images/logo.png" alt="Burooj Air Logo" width="120" height="48" class="hidden h-10 lg:h-12 dark:inline-block" />
 					</NuxtLink>
-					<p class="mb-6 text-base font-normal leading-relaxed text-gray-600 dark:text-gray-400">
+					<p class="mb-6 text-base font-bold leading-relaxed text-gray-600 dark:text-gray-400">
 						{{ $t('FOR_INQUIRIES_PLEASE_USE_OUR_LISTED_CONTACT_INFO') || 'The first Saudi company licensed for drone cleaning services.' }}
 					</p>
 					<!-- Social Media Links -->
@@ -33,27 +33,27 @@
 					<h4 class="mb-6 text-lg font-bold text-gray-900 dark:text-white lg:text-xl">{{ $t('QUICK_LINKS') || 'Quick Links' }}</h4>
 					<ul class="space-y-3">
 						<li>
-							<NuxtLink to="/" class="block min-h-[44px] py-2 text-base font-medium text-gray-600 no-underline transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+							<NuxtLink to="/" class="block min-h-[44px] py-2 text-base font-bold text-gray-600 no-underline transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
 								{{ $t('HOME') }}
 							</NuxtLink>
 						</li>
 						<li>
-							<NuxtLink to="/about-us" class="block min-h-[44px] py-2 text-base font-medium text-gray-600 no-underline transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+							<NuxtLink to="/about-us" class="block min-h-[44px] py-2 text-base font-bold text-gray-600 no-underline transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
 								{{ $t('ABOUT_US') }}
 							</NuxtLink>
 						</li>
 						<li>
-							<NuxtLink to="/#servicesSection" class="block min-h-[44px] py-2 text-base font-medium text-gray-600 no-underline transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+							<NuxtLink to="/#servicesSection" class="block min-h-[44px] py-2 text-base font-bold text-gray-600 no-underline transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
 								{{ $t('SERVICES') }}
 							</NuxtLink>
 						</li>
 						<li>
-							<NuxtLink to="/projects" class="block min-h-[44px] py-2 text-base font-medium text-gray-600 no-underline transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+							<NuxtLink to="/projects" class="block min-h-[44px] py-2 text-base font-bold text-gray-600 no-underline transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
 								{{ $t('OUR_PROJECTS') }}
 							</NuxtLink>
 						</li>
 						<li>
-							<NuxtLink to="/contact" class="block min-h-[44px] py-2 text-base font-medium text-gray-600 no-underline transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+							<NuxtLink to="/contact" class="block min-h-[44px] py-2 text-base font-bold text-gray-600 no-underline transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
 								{{ $t('CONTACT') }}
 							</NuxtLink>
 						</li>
@@ -65,12 +65,12 @@
 					<h4 class="mb-6 text-lg font-bold text-gray-900 dark:text-white lg:text-xl">{{ $t('LEGAL') }}</h4>
 					<ul class="space-y-3">
 						<li>
-							<NuxtLink to="/privacy-policy" class="block min-h-[44px] py-2 text-base font-medium text-gray-600 no-underline transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+							<NuxtLink to="/privacy-policy" class="block min-h-[44px] py-2 text-base font-bold text-gray-600 no-underline transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
 								{{ $t('PRIVACY_POLICY') }}
 							</NuxtLink>
 						</li>
 						<li>
-							<NuxtLink to="/franchise" class="block min-h-[44px] py-2 text-base font-medium text-gray-600 no-underline transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+							<NuxtLink to="/franchise" class="block min-h-[44px] py-2 text-base font-bold text-gray-600 no-underline transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
 								{{ $t('BECOME_A_PARTNER') }}
 							</NuxtLink>
 						</li>
@@ -80,18 +80,18 @@
 				<!-- Contact Info -->
 				<div>
 					<h4 class="mb-6 text-lg font-bold text-gray-900 dark:text-white lg:text-xl">{{ $t('CONTACT') }}</h4>
-					<ul class="space-y-3 text-base font-medium text-gray-600 dark:text-gray-400">
+					<ul class="space-y-3 text-base font-bold text-gray-600 dark:text-gray-400">
 						<li class="break-words">
-							<a href="mailto:contact@buroojair.com" class="hover:text-gray-900 dark:hover:text-white transition-colors font-medium">
+							<a href="mailto:contact@buroojair.com" class="hover:text-gray-900 dark:hover:text-white transition-colors font-bold">
 								contact@buroojair.com
 							</a>
 						</li>
 						<li>
-							<a href="tel:+966566639994" class="hover:text-gray-900 dark:hover:text-white transition-colors font-medium">
+							<a href="tel:+966566639994" class="hover:text-gray-900 dark:hover:text-white transition-colors font-bold">
 								+966 56 663 9994
 							</a>
 						</li>
-						<li class="font-medium">
+						<li class="font-bold">
 							{{ $t('KHOBAR_SAUDI_ARABIA') }}
 						</li>
 					</ul>
@@ -100,7 +100,7 @@
 
 			<!-- Copyright -->
 			<div class="mt-12 border-t border-gray-200 dark:border-gray-800 pt-8 text-center">
-				<p class="text-base font-normal text-gray-600 dark:text-gray-400">
+				<p class="text-base font-bold text-gray-600 dark:text-gray-400">
 					{{ $t('COPY_RIGHT') || '© 2025 Burooj Air. All rights reserved.' }}
 				</p>
 			</div>

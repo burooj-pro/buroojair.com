@@ -184,7 +184,9 @@ export default {
 			this.videoLoading = false
 			if (this.$refs.missionVideo) {
 				this.$refs.missionVideo.play().catch((error) => {
-					console.warn('Mission video autoplay failed:', error)
+					if (process.env.NODE_ENV === 'development') {
+						console.warn('Mission video autoplay failed:', error)
+					}
 					// Autoplay might be prevented, that's okay
 				})
 			}
@@ -209,19 +211,23 @@ export default {
 						errorMsg = 'Video format not supported or URL invalid'
 						break
 				}
-				console.error('Mission video error:', errorMsg, {
-					code: error.code,
-					message: error.message,
-					src: video?.src || video?.currentSrc,
-					networkState: video?.networkState,
-					readyState: video?.readyState,
-				})
+				if (process.env.NODE_ENV === 'development') {
+					console.error('Mission video error:', errorMsg, {
+						code: error.code,
+						message: error.message,
+						src: video?.src || video?.currentSrc,
+						networkState: video?.networkState,
+						readyState: video?.readyState,
+					})
+				}
 			} else {
-				console.error('Mission video error (no error details):', {
-					src: video?.src || video?.currentSrc,
-					networkState: video?.networkState,
-					readyState: video?.readyState,
-				})
+				if (process.env.NODE_ENV === 'development') {
+					console.error('Mission video error (no error details):', {
+						src: video?.src || video?.currentSrc,
+						networkState: video?.networkState,
+						readyState: video?.readyState,
+					})
+				}
 			}
 			// Video is decorative, so failure is not critical
 		},

@@ -20,7 +20,7 @@
 		<!-- Switch -->
 		<div
 		  class="relative h-5 w-11 shrink-0 rounded-full bg-white/20 transition-colors"
-		  :class="{ 'bg-[#27DF99]': currentTheme === 'dark' }"
+		  :class="{ 'bg-[#26DF9A]': currentTheme === 'dark' }"
 		  aria-hidden="true"
 		>
 		  <div

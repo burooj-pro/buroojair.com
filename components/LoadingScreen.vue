@@ -50,66 +50,128 @@ export default {
 			baseOpacity: 0.3,
 		}
 	},
-	mounted() {
+		mounted() {
 		if (process.client) {
-			// Start animation immediately, but ensure minimum display time
 			const startTime = Date.now()
-			const minDisplayTime = 1500 // Minimum 1.5 seconds
+			const minDisplayTime = 100 // Minimum 0.1 seconds (very fast)
+			const maxDisplayTime = 1500 // Maximum 1.5 seconds (fallback - critical!)
 			
-			this.initLoadingAnimation(() => {
-				const elapsed = Date.now() - startTime
-				const remaining = Math.max(0, minDisplayTime - elapsed)
+			// CRITICAL: Fallback timeout - always hide after max time
+			const fallbackTimeout = setTimeout(() => {
+				if (process.env.NODE_ENV === 'development') {
+					console.warn('[LoadingScreen] Fallback timeout - forcing hide')
+				}
+				this.isLoading = false // Force hide immediately - no animation
+			}, maxDisplayTime)
+			
+			// Function to hide loading screen
+			const hideAfterAnimation = () => {
+				clearTimeout(fallbackTimeout)
+				// Try GSAP animation, but with timeout
+				const animationTimeout = setTimeout(() => {
+					// If animation takes too long, force hide
+					this.isLoading = false
+				}, 1000)
 				
-				setTimeout(() => {
-					this.hideLoadingScreen()
-				}, remaining)
-			})
+				this.initLoadingAnimation(() => {
+					clearTimeout(animationTimeout)
+					const elapsed = Date.now() - startTime
+					const remaining = Math.max(0, minDisplayTime - elapsed)
+					setTimeout(() => {
+						this.hideLoadingScreen()
+					}, remaining)
+				}).catch(() => {
+					clearTimeout(animationTimeout)
+					// If animation fails, hide immediately
+					this.isLoading = false
+				})
+			}
+			
+			// Immediate check - if page is already ready, hide quickly
+			if (document.readyState === 'complete' || document.readyState === 'interactive') {
+				this.$nextTick(() => {
+					hideAfterAnimation()
+				})
+			} else {
+				// Wait for DOMContentLoaded (faster than load event)
+				document.addEventListener('DOMContentLoaded', () => {
+					this.$nextTick(() => {
+						hideAfterAnimation()
+					})
+				}, { once: true })
+				
+				// Also listen for load event as backup
+				window.addEventListener('load', () => {
+					this.$nextTick(() => {
+						hideAfterAnimation()
+					})
+				}, { once: true })
+			}
 		}
 	},
 	methods: {
 		async initLoadingAnimation(onComplete) {
-			const { gsap } = await import('gsap')
-			
-			// Animate fill from bottom to top (0% to 100%)
-			// Also gradually increase base logo opacity for smoother effect
-			const timeline = gsap.timeline({
-				onComplete,
-			})
-			
-			timeline.to(this, {
-				fillProgress: 100,
-				duration: 1.8,
-				ease: 'power2.out',
-			})
+			try {
+				const { gsap } = await import('gsap')
+				
+				// Animate fill from bottom to top (0% to 100%)
+				const timeline = gsap.timeline({
+					onComplete,
+				})
+				
+				timeline.to(this, {
+					fillProgress: 100,
+					duration: 0.8, // Faster animation
+					ease: 'power2.out',
+				})
+			} catch (error) {
+				// If GSAP fails to load, just complete immediately
+				if (process.env.NODE_ENV === 'development') {
+					console.warn('[LoadingScreen] GSAP failed to load, skipping animation:', error)
+				}
+				if (onComplete) {
+					onComplete()
+				}
+			}
+			// Return promise for error handling
+			return Promise.resolve()
 		},
 		async hideLoadingScreen() {
-			const { gsap } = await import('gsap')
-			
-			// Fade out base logo and then the entire screen
-			const timeline = gsap.timeline()
-			
-			timeline
-				.to(
-					this,
-					{
-						baseOpacity: 0,
-						duration: 0.3,
-						ease: 'power2.in',
-					},
-					0
-				)
-				.to(
-					this.$refs.loadingScreen,
-					{
-						opacity: 0,
-						duration: 0.5,
-						ease: 'power2.in',
-						onComplete: () => {
-							this.isLoading = false
+			try {
+				const { gsap } = await import('gsap')
+				
+				// Fade out base logo and then the entire screen
+				const timeline = gsap.timeline()
+				
+				timeline
+					.to(
+						this,
+						{
+							baseOpacity: 0,
+							duration: 0.3,
+							ease: 'power2.in',
 						},
-					},
-					'-=0.2'
-				)
+						0
+					)
+					.to(
+						this.$refs.loadingScreen,
+						{
+							opacity: 0,
+							duration: 0.4,
+							ease: 'power2.in',
+							onComplete: () => {
+								this.isLoading = false
+							},
+						},
+						'-=0.2'
+					)
+			} catch (error) {
+				// If GSAP fails, just hide immediately
+				if (process.env.NODE_ENV === 'development') {
+					console.warn('[LoadingScreen] GSAP failed during hide, hiding immediately:', error)
+				}
+				this.isLoading = false
+			}
 		},
 	},
 }

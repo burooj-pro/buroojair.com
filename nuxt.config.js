@@ -176,7 +176,7 @@ export default {
 	  lazy: true,
 	  langDir: 'i18n/',
 	  defaultLocale: 'en',
-	  baseUrl: 'https://buroojair.com' || 'http://localhost:3000',
+	  baseUrl: process.env.BASE_URL || 'https://buroojair.com',
   
 	  vueI18n: {
 		fallbackLocale: 'en',

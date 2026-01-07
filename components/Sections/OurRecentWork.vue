@@ -9,7 +9,7 @@
 						<h2 class="mb-4 text-3xl font-black leading-tight text-gray-900 dark:text-white lg:text-6xl xl:text-7xl">
 							{{ $t('OUR_RECENT_WORK') || 'Our Recent Work' }}
 						</h2>
-						<p class="max-w-2xl text-base font-normal leading-relaxed text-gray-700 dark:text-gray-300 lg:text-xl">
+						<p class="max-w-2xl text-base font-bold leading-relaxed text-gray-700 dark:text-gray-300 lg:text-xl">
 							{{ $t('OUR_RECENT_WORK_DESC') || 'We support impact-focused organisations through strategic creative work that amplifies their reach.' }}
 						</p>
 					</div>
@@ -39,17 +39,16 @@
 						:data-src="getVideoSrc(project.video)"
 						class="h-full w-full object-cover"
 						muted
+						autoplay
 						loop
 						playsinline
-						preload="none"
+						preload="metadata"
 						:aria-label="project.title"
 						@error="(e) => handleVideoError(e, project.video)"
 						@loadstart="handleVideoLoadStart"
 						@loadedmetadata="handleVideoMetadataLoaded"
 						@loadeddata="handleVideoLoaded"
 						@canplay="handleVideoCanPlay"
-						@mouseenter="handleVideoHover"
-						@mouseleave="handleVideoLeave"
 					>
 							<source :data-src="getVideoSrc(project.video)" type="video/mp4" />
 							Your browser does not support the video tag.
@@ -65,16 +64,16 @@
 						<div v-if="videoErrors[project.video]" class="absolute inset-0 z-0 flex items-center justify-center bg-gray-900 dark:bg-gray-800">
 							<p class="text-sm text-gray-400 dark:text-gray-500">Video unavailable</p>
 						</div>
-						<!-- Play Button Overlay -->
+						<!-- Fullscreen Icon Overlay - Bottom Left -->
 						<button
 							@click="openVideoModal(project.video, project.title)"
-							class="absolute inset-0 z-10 flex items-center justify-center transition-opacity focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 rounded-lg"
+							class="absolute bottom-4 left-4 z-10 transition-opacity focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 rounded-lg"
 							:class="isVideoModalOpen ? 'opacity-0 pointer-events-none' : 'opacity-100 group-hover:opacity-100'"
-							aria-label="Play full video"
+							aria-label="Open video in fullscreen"
 						>
-							<div class="video-play-button-circle">
-								<svg class="h-12 w-12 text-white lg:h-14 lg:w-14" fill="currentColor" viewBox="0 0 24 24">
-									<path d="M8 5v14l11-7z" />
+							<div class="video-fullscreen-button">
+								<svg class="h-6 w-6 text-white lg:h-7 lg:w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+									<path stroke-linecap="round" stroke-linejoin="round" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
 								</svg>
 							</div>
 						</button>
@@ -220,7 +219,7 @@ export default {
 			}
 		},
 		handleVideoCanPlay(event) {
-			// Video can start playing - ensure it's marked as loaded
+			// Video can start playing - ensure it's marked as loaded and playing
 			const video = event.target
 			const videoSrc = video?.src || video?.currentSrc
 			const projectVideo = this.projects.find(p => {
@@ -231,21 +230,43 @@ export default {
 			if (projectVideo) {
 				this.$set(this.videoLoaded, projectVideo, true)
 			}
-		},
-		handleVideoHover(event) {
-			// Start playing video on hover
-			const video = event.target
+			
+			// Ensure video is playing
 			if (video && video.paused) {
+				video.muted = true
 				video.play().catch(() => {
-					// Autoplay might be prevented, that's okay
+					// Autoplay might be prevented, which is okay
 				})
 			}
 		},
-		handleVideoLeave(event) {
-			// Pause video when mouse leaves to save bandwidth
+		handleVideoMetadataLoaded(event) {
+			// When metadata is loaded, try to play
 			const video = event.target
-			if (video && !video.paused) {
-				video.pause()
+			if (video && video.readyState >= 2) {
+				video.muted = true
+				video.play().catch(() => {
+					// Autoplay might be prevented, which is okay
+				})
+			}
+		},
+		handleVideoLoaded(event) {
+			// When video data is loaded, ensure it's playing
+			const video = event.target
+			const videoSrc = video?.src || video?.currentSrc
+			const projectVideo = this.projects.find(p => {
+				const projectSrc = this.getVideoSrc(p.video)
+				return videoSrc && (videoSrc.includes(projectSrc) || projectSrc.includes(videoSrc))
+			})?.video
+			
+			if (projectVideo) {
+				this.$set(this.videoLoaded, projectVideo, true)
+			}
+			
+			if (video && video.paused) {
+				video.muted = true
+				video.play().catch(() => {
+					// Autoplay might be prevented, which is okay
+				})
 			}
 		},
 		handleVideoError(event, originalUrl) {
@@ -273,19 +294,23 @@ export default {
 						errorMsg = 'Video format not supported or URL invalid'
 						break
 				}
-				console.error(`Video error for "${originalUrl}":`, errorMsg, {
-					code: error.code,
-					message: error.message,
-					src: videoSrc,
-					networkState: video?.networkState,
-					readyState: video?.readyState,
-				})
+				if (process.env.NODE_ENV === 'development') {
+					console.error(`Video error for "${originalUrl}":`, errorMsg, {
+						code: error.code,
+						message: error.message,
+						src: videoSrc,
+						networkState: video?.networkState,
+						readyState: video?.readyState,
+					})
+				}
 			} else {
-				console.error('Video loading error (no error details):', {
-					src: videoSrc,
-					networkState: video?.networkState,
-					readyState: video?.readyState,
-				})
+				if (process.env.NODE_ENV === 'development') {
+					console.error('Video loading error (no error details):', {
+						src: videoSrc,
+						networkState: video?.networkState,
+						readyState: video?.readyState,
+					})
+				}
 			}
 		},
 		initLazyLoading() {
@@ -353,16 +378,16 @@ export default {
 </script>
 
 <style scoped>
-/* Glassy Video Play Button - Circular Background */
-.video-play-button-circle {
-	width: 80px;
-	height: 80px;
-	background-color: rgba(31, 41, 55, 0.4);
+/* Fullscreen Button - Bottom Left Corner */
+.video-fullscreen-button {
+	width: 48px;
+	height: 48px;
+	background-color: rgba(31, 41, 55, 0.6);
 	border: 1px solid rgba(255, 255, 255, 0.3);
 	-webkit-backdrop-filter: blur(20px);
 	backdrop-filter: blur(20px);
-	border-radius: 50%;
-	box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+	border-radius: 8px;
+	box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.4);
 	transition: all 0.3s ease;
 	display: flex;
 	align-items: center;
@@ -370,26 +395,26 @@ export default {
 }
 
 @media (min-width: 1024px) {
-	.video-play-button-circle {
-		width: 100px;
-		height: 100px;
+	.video-fullscreen-button {
+		width: 56px;
+		height: 56px;
 	}
 }
 
-.video-play-button-circle:hover {
-	background-color: rgba(31, 41, 55, 0.6);
+.video-fullscreen-button:hover {
+	background-color: rgba(31, 41, 55, 0.8);
 	border-color: rgba(255, 255, 255, 0.5);
 	transform: scale(1.1);
-	box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5);
+	box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.5);
 }
 
-.dark .video-play-button-circle {
-	background-color: rgba(17, 24, 39, 0.5);
+.dark .video-fullscreen-button {
+	background-color: rgba(17, 24, 39, 0.7);
 	border-color: rgba(255, 255, 255, 0.2);
 }
 
-.dark .video-play-button-circle:hover {
-	background-color: rgba(17, 24, 39, 0.7);
+.dark .video-fullscreen-button:hover {
+	background-color: rgba(17, 24, 39, 0.9);
 	border-color: rgba(255, 255, 255, 0.4);
 }
 </style>

@@ -102,7 +102,9 @@ export default {
 						this.$refs.videoPlayer.focus()
 						// Try to play the video
 						this.$refs.videoPlayer.play().catch((error) => {
-							console.warn('Video autoplay failed:', error)
+							if (process.env.NODE_ENV === 'development') {
+								console.warn('Video autoplay failed:', error)
+							}
 						})
 					}
 				})
@@ -133,7 +135,9 @@ export default {
 			this.$emit('close')
 		},
 		handleVideoError(event) {
-			console.error('Video loading error:', event)
+			if (process.env.NODE_ENV === 'development') {
+				console.error('Video loading error:', event)
+			}
 			// You could show an error message to the user here
 		},
 		handleVideoLoaded() {

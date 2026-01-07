@@ -170,7 +170,9 @@ export default {
 				// Refresh to clear any remaining pin spacing
 				ScrollTrigger.refresh()
 			} catch (error) {
-				console.warn('ScrollTrigger cleanup failed:', error)
+				if (process.env.NODE_ENV === 'development') {
+					console.warn('ScrollTrigger cleanup failed:', error)
+				}
 			}
 		}
 	},
@@ -184,7 +186,9 @@ export default {
 						this.scrollTriggerInstance.kill()
 						this.scrollTriggerInstance = null
 					} catch (error) {
-						console.warn('Error killing ScrollTrigger:', error)
+						if (process.env.NODE_ENV === 'development') {
+							console.warn('Error killing ScrollTrigger:', error)
+						}
 					}
 				}
 				
