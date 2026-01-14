@@ -7,15 +7,19 @@ export default {
 	  htmlAttrs: { lang: 'en' },
 	  link: [
 		{ rel: 'canonical', href: 'https://buroojair.com/' },
-		// Resource hints for external domains to improve connection speed
+		// Preload hero poster images for faster LCP (critical for performance)
+		{ rel: 'preload', as: 'image', href: '/images/hero-poster-desktop.webp', media: '(min-width: 1024px)' },
+		{ rel: 'preload', as: 'image', href: '/images/hero-poster-mobile.webp', media: '(max-width: 1023px)' },
+		// Resource hints - only critical ones (Lighthouse recommends max 4 preconnect)
+		// Video hosting is critical for LCP
 		{ rel: 'dns-prefetch', href: 'https://hel1.your-objectstorage.com' },
 		{ rel: 'preconnect', href: 'https://hel1.your-objectstorage.com', crossorigin: 'anonymous' },
+		// Analytics - use dns-prefetch only (less critical)
 		{ rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },
-		{ rel: 'preconnect', href: 'https://www.googletagmanager.com', crossorigin: 'anonymous' },
 		{ rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
-		{ rel: 'preconnect', href: 'https://www.google-analytics.com', crossorigin: 'anonymous' },
+		// Pipedrive forms - use dns-prefetch only
 		{ rel: 'dns-prefetch', href: 'https://webforms.pipedrive.com' },
-		{ rel: 'preconnect', href: 'https://webforms.pipedrive.com', crossorigin: 'anonymous' },
+		// Other analytics - dns-prefetch only (non-critical)
 		{ rel: 'dns-prefetch', href: 'https://analytics.tiktok.com' },
 		{ rel: 'dns-prefetch', href: 'https://sc-static.net' },
 		{ rel: 'dns-prefetch', href: 'https://connect.facebook.net' },
@@ -99,11 +103,6 @@ export default {
 		  type: 'text/javascript',
 		  charset: 'utf-8'
 		},
-		{
-		  src: 'https://webforms.pipedrive.com/f/loader',
-		  async: true,
-		  defer: true
-		}
 	  ],
 	  __dangerouslyDisableSanitizersByTagID: {
 		'theme-init': ['innerHTML']
@@ -148,15 +147,51 @@ export default {
 		terserOptions: {
 		  compress: {
 			drop_console: process.env.NODE_ENV === 'production',
+			drop_debugger: process.env.NODE_ENV === 'production',
+			pure_funcs: process.env.NODE_ENV === 'production' ? ['console.log', 'console.info', 'console.debug'] : [],
 		  },
+		  mangle: true,
 		},
 		sourceMap: process.env.NODE_ENV === 'production',
+		extractComments: false,
 	  },
 	  extend(config, { isDev, isClient }) {
 		if (isClient) {
 		  // Generate source maps in production for debugging (Lighthouse requirement)
 		  // Use 'source-map' for production to ensure proper source maps
 		  config.devtool = isDev ? 'eval-source-map' : 'source-map'
+		}
+		
+		// Optimize chunk splitting to reduce unused JavaScript
+		if (!isDev && isClient) {
+		  config.optimization = config.optimization || {}
+		  config.optimization.splitChunks = {
+			chunks: 'all',
+			cacheGroups: {
+			  default: false,
+			  vendors: false,
+			  // Separate vendor chunks
+			  vendor: {
+				name: 'vendors',
+				test: /[\\/]node_modules[\\/]/,
+				priority: 20,
+				reuseExistingChunk: true,
+			  },
+			  // Separate GSAP (large library)
+			  gsap: {
+				name: 'gsap',
+				test: /[\\/]node_modules[\\/]gsap[\\/]/,
+				priority: 30,
+				reuseExistingChunk: true,
+			  },
+			  // Common chunks
+			  common: {
+				minChunks: 2,
+				priority: 10,
+				reuseExistingChunk: true,
+			  },
+			},
+		  }
 		}
 	  },
 	  postcss: {
@@ -172,19 +207,6 @@ export default {
 		layouts: true,
 		pages: true,
 		commons: true,
-	  },
-	  // Optimize bundle size
-	  optimization: {
-		splitChunks: {
-		  chunks: 'all',
-		  cacheGroups: {
-			vendor: {
-			  test: /[\\/]node_modules[\\/]/,
-			  name: 'vendors',
-			  priority: 10,
-			},
-		  },
-		},
 	  },
 	},
   

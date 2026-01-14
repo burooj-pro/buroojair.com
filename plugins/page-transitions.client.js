@@ -1,8 +1,6 @@
 export default async ({ app }) => {
 	if (process.client) {
-		const { gsap } = await import('gsap')
-
-		// Set up page transition
+		// Set up page transition (GSAP will be loaded lazily when needed)
 		app.router.beforeEach((to, from, next) => {
 			// Only animate if we're actually changing routes
 			if (to.path !== from.path) {
@@ -14,9 +12,6 @@ export default async ({ app }) => {
 			}
 			next()
 		})
-
-		// Inject GSAP for use in components
-		app.$gsap = gsap
 	}
 }
 

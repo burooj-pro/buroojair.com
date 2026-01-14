@@ -1,3 +1,5 @@
+// Load GSAP synchronously but register plugin properly
+// Components can use direct imports or injected instances
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -8,6 +10,8 @@ if (process.client) {
 
 export default ({ app }, inject) => {
 	if (process.client) {
+		// Inject GSAP and ScrollTrigger as direct objects (not functions)
+		// This allows components to use this.$gsap and this.$ScrollTrigger directly
 		inject('gsap', gsap)
 		inject('ScrollTrigger', ScrollTrigger)
 	}

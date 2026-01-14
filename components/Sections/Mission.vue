@@ -6,24 +6,24 @@
 				<!-- Card 1: Large Video (Left, spans 5 cols, tall, spans 2 rows) -->
 				<div ref="card1" class="lg:col-span-5 lg:row-span-2">
 					<div class="relative group h-full min-h-[300px] sm:min-h-[400px] lg:min-h-[600px] rounded-xl lg:rounded-2xl overflow-hidden bg-gray-200">
-						<!-- Video - Autoplay like project videos -->
-						<video
-							ref="missionVideo"
-							:src="missionVideo"
-							class="absolute inset-0 h-full w-full object-cover z-0"
-							autoplay
-							muted
-							loop
-							playsinline
-							preload="metadata"
-							aria-label="Burooj Air mission video showing precision drone cleaning in action"
-							@error="handleVideoError"
-							@loadedmetadata="handleVideoLoaded"
-							@loadstart="handleVideoLoadStart"
-						>
-							<source :src="missionVideo" type="video/mp4" />
-							Your browser does not support the video tag.
-						</video>
+					<!-- Video - Lazy loaded with IntersectionObserver -->
+					<video
+						ref="missionVideo"
+						:data-src="missionVideo"
+						class="absolute inset-0 h-full w-full object-cover z-0"
+						muted
+						loop
+						playsinline
+						preload="none"
+						poster=""
+						aria-label="Burooj Air mission video showing precision drone cleaning in action"
+						@error="handleVideoError"
+						@loadedmetadata="handleVideoLoaded"
+						@loadstart="handleVideoLoadStart"
+					>
+						<source :data-src="missionVideo" type="video/mp4" />
+						Your browser does not support the video tag.
+					</video>
 						<!-- Loading indicator -->
 						<div v-if="videoLoading" class="absolute inset-0 z-10 flex items-center justify-center bg-gray-200 dark:bg-gray-800">
 							<div class="text-sm text-gray-600 dark:text-gray-400">Loading video...</div>
@@ -151,6 +151,7 @@ export default {
 		if (process.client) {
 			this.initGSAP()
 			this.observeSection()
+			this.initLazyVideo()
 		}
 	},
 	watch: {
@@ -175,6 +176,109 @@ export default {
 		}
 	},
 	methods: {
+		initLazyVideo() {
+			if (!process.client) return
+			
+			// Cross-browser fallback: Load immediately if IntersectionObserver not supported
+			if (typeof IntersectionObserver === 'undefined') {
+				this.$nextTick(() => {
+					const video = this.$refs.missionVideo
+					if (video) {
+						// Try data-src first, then src attribute
+						const dataSrc = video.dataset.src || video.getAttribute('data-src')
+						const source = video.querySelector('source[data-src]') || video.querySelector('source')
+						
+						if (dataSrc || source) {
+							if (source && source.dataset.src) {
+								source.src = source.dataset.src
+								source.removeAttribute('data-src')
+							}
+							if (dataSrc) {
+								video.src = dataSrc
+								video.removeAttribute('data-src')
+							}
+							
+							// Set cross-browser video attributes
+							video.muted = true
+							video.setAttribute('muted', 'muted')
+							video.playsInline = true
+							video.setAttribute('playsinline', 'playsinline')
+							video.setAttribute('webkit-playsinline', 'webkit-playsinline')
+							video.autoplay = true
+							video.setAttribute('autoplay', 'autoplay')
+							video.loop = true
+							video.setAttribute('loop', 'loop')
+							
+							video.load()
+						}
+					}
+				})
+				return
+			}
+
+			// Use IntersectionObserver to load video only when visible
+			this.$nextTick(() => {
+				const video = this.$refs.missionVideo
+				if (!video) return
+
+				const observer = new IntersectionObserver(
+					(entries) => {
+						entries.forEach((entry) => {
+							if (entry.isIntersecting) {
+								// Video is visible, load it
+								const dataSrc = video.dataset.src || video.getAttribute('data-src')
+								const source = video.querySelector('source[data-src]') || video.querySelector('source')
+								
+								if (dataSrc || (source && source.dataset.src)) {
+									// Set source src
+									if (source && source.dataset.src) {
+										source.src = source.dataset.src
+										source.removeAttribute('data-src')
+									}
+									
+									// Set video src
+									if (dataSrc) {
+										video.src = dataSrc
+										video.removeAttribute('data-src')
+									}
+									
+									// Set cross-browser video attributes for autoplay
+									video.muted = true
+									video.setAttribute('muted', 'muted')
+									video.playsInline = true
+									video.setAttribute('playsinline', 'playsinline')
+									video.setAttribute('webkit-playsinline', 'webkit-playsinline')
+									video.autoplay = true
+									video.setAttribute('autoplay', 'autoplay')
+									video.loop = true
+									video.setAttribute('loop', 'loop')
+									
+									video.load()
+									
+									// Try to play after loading (cross-browser autoplay)
+									const tryPlay = () => {
+										if (video.paused) {
+											video.play().catch(() => {
+												// Autoplay blocked - normal in some browsers
+											})
+										}
+									}
+									video.addEventListener('loadeddata', tryPlay, { once: true })
+									video.addEventListener('canplay', tryPlay, { once: true })
+									
+									observer.unobserve(video)
+								}
+							}
+						})
+					},
+					{
+						rootMargin: '200px', // Start loading 200px before visible
+						threshold: 0.1,
+					}
+				)
+				observer.observe(video)
+			})
+		},
 		handleVideoLoadStart() {
 			// Video started loading
 			this.videoLoading = true

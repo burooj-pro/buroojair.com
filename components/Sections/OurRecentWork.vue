@@ -39,10 +39,9 @@
 						:data-src="getVideoSrc(project.video)"
 						class="h-full w-full object-cover"
 						muted
-						autoplay
 						loop
 						playsinline
-						preload="metadata"
+						preload="none"
 						:aria-label="project.title"
 						@error="(e) => handleVideoError(e, project.video)"
 						@loadstart="handleVideoLoadStart"
@@ -314,18 +313,109 @@ export default {
 			}
 		},
 		initLazyLoading() {
-			if (!process.client || typeof IntersectionObserver === 'undefined') {
-				// Fallback: load all videos immediately if IntersectionObserver not supported
+			if (!process.client) return
+			
+			// CRITICAL: Load videos immediately if loading screen is active
+			// This ensures project videos are ready when loading screen finishes
+			const checkLoadingScreen = () => {
+				const z100 = document.querySelector('[class*="z-[100]"]')
+				const fixedInset = Array.from(document.querySelectorAll('.fixed.inset-0')).find(el => 
+					window.getComputedStyle(el).zIndex === '100' || 
+					el.style.zIndex === '100' ||
+					el.getAttribute('class')?.includes('z-[100]')
+				)
+				return z100 || fixedInset
+			}
+			
+			const loadingScreenActive = checkLoadingScreen()
+			
+			// If loading screen is active, load all project videos immediately
+			if (loadingScreenActive) {
+				this.$nextTick(() => {
+					setTimeout(() => {
+						const videos = document.querySelectorAll('video[data-src]')
+						videos.forEach((video) => {
+							const dataSrc = video.dataset.src || video.getAttribute('data-src')
+							const source = video.querySelector('source[data-src]') || video.querySelector('source')
+							
+							if (dataSrc || (source && source.dataset.src)) {
+								// Set source src
+								if (source && source.dataset.src) {
+									source.src = source.dataset.src
+									source.removeAttribute('data-src')
+								}
+								
+								// Set video src
+								if (dataSrc) {
+									video.src = dataSrc
+									video.removeAttribute('data-src')
+								}
+								
+								// Set cross-browser video attributes
+								video.muted = true
+								video.setAttribute('muted', 'muted')
+								video.playsInline = true
+								video.setAttribute('playsinline', 'playsinline')
+								video.setAttribute('webkit-playsinline', 'webkit-playsinline')
+								video.autoplay = true
+								video.setAttribute('autoplay', 'autoplay')
+								video.loop = true
+								video.setAttribute('loop', 'loop')
+								video.preload = 'auto' // Preload when loading screen is active
+								
+								video.load()
+								
+								// Try to play after loading
+								const tryPlay = () => {
+									if (video.paused) {
+										video.play().catch(() => {
+											// Autoplay blocked - normal in some browsers
+										})
+									}
+								}
+								video.addEventListener('loadeddata', tryPlay, { once: true })
+								video.addEventListener('canplay', tryPlay, { once: true })
+							}
+						})
+					}, 400) // Slightly longer delay to let hero videos start first
+				})
+				return // Don't use lazy loading if loading screen is active
+			}
+			
+			// Cross-browser fallback: Load immediately if IntersectionObserver not supported
+			if (typeof IntersectionObserver === 'undefined') {
 				this.$nextTick(() => {
 					const videos = document.querySelectorAll('video[data-src]')
 					videos.forEach((video) => {
-						if (video.dataset.src) {
-							video.src = video.dataset.src
-							video.preload = 'metadata'
-							const source = video.querySelector('source')
+						const dataSrc = video.dataset.src || video.getAttribute('data-src')
+						const source = video.querySelector('source[data-src]') || video.querySelector('source')
+						
+						if (dataSrc || (source && source.dataset.src)) {
+							// Set source src
 							if (source && source.dataset.src) {
 								source.src = source.dataset.src
+								source.removeAttribute('data-src')
 							}
+							
+							// Set video src
+							if (dataSrc) {
+								video.src = dataSrc
+								video.removeAttribute('data-src')
+							}
+							
+							// Set cross-browser video attributes
+							video.muted = true
+							video.setAttribute('muted', 'muted')
+							video.playsInline = true
+							video.setAttribute('playsinline', 'playsinline')
+							video.setAttribute('webkit-playsinline', 'webkit-playsinline')
+							video.autoplay = true
+							video.setAttribute('autoplay', 'autoplay')
+							video.loop = true
+							video.setAttribute('loop', 'loop')
+							video.preload = 'metadata'
+							
+							video.load()
 						}
 					})
 				})
@@ -339,17 +429,50 @@ export default {
 					entries.forEach((entry) => {
 						if (entry.isIntersecting && !loadingVideos.has(entry.target)) {
 							const video = entry.target
-							if (video.dataset.src) {
+							const dataSrc = video.dataset.src || video.getAttribute('data-src')
+							const source = video.querySelector('source[data-src]') || video.querySelector('source')
+							
+							if (dataSrc || (source && source.dataset.src)) {
 								loadingVideos.add(video)
-								// Only load metadata, not the full video
-								video.src = video.dataset.src
-								video.preload = 'metadata'
-								const source = video.querySelector('source')
+								
+								// Set source src
 								if (source && source.dataset.src) {
 									source.src = source.dataset.src
+									source.removeAttribute('data-src')
 								}
+								
+								// Set video src
+								if (dataSrc) {
+									video.src = dataSrc
+									video.removeAttribute('data-src')
+								}
+								
+								// Set cross-browser video attributes
+								video.muted = true
+								video.setAttribute('muted', 'muted')
+								video.playsInline = true
+								video.setAttribute('playsinline', 'playsinline')
+								video.setAttribute('webkit-playsinline', 'webkit-playsinline')
+								video.autoplay = true
+								video.setAttribute('autoplay', 'autoplay')
+								video.loop = true
+								video.setAttribute('loop', 'loop')
+								video.preload = 'metadata'
+								
 								// Load metadata asynchronously to not block
 								video.load()
+								
+								// Try to play after loading (cross-browser autoplay)
+								const tryPlay = () => {
+									if (video.paused) {
+										video.play().catch(() => {
+											// Autoplay blocked - normal in some browsers
+										})
+									}
+								}
+								video.addEventListener('loadeddata', tryPlay, { once: true })
+								video.addEventListener('canplay', tryPlay, { once: true })
+								
 								observer.unobserve(video)
 							}
 						}
