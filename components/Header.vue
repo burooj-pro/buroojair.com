@@ -10,7 +10,7 @@
 
 		<header 
 			:class="[
-				'fixed top-0 left-0 rtl:right-0 w-full z-50 py-4 lg:py-6 transition-transform duration-300 ease-in-out',
+				'fixed top-0 left-0 rtl:right-0 w-full z-50 py-3 sm:py-4 lg:py-4 xl:py-6 transition-transform duration-300 ease-in-out',
 				isNavbarVisible ? 'translate-y-0' : '-translate-y-full'
 			]"
 		>

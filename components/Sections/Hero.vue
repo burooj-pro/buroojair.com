@@ -79,7 +79,7 @@
 		<SectionsTemplatesOverlay classColor="bg-indigo-800 dark:bg-gray-900" classOpacity="bg-opacity-10 dark:bg-opacity-30" />
   
 		<!-- Content -->
-		<div class="relative z-10 h-full w-full flex items-center hero-content-pad">
+		<div class="relative z-10 h-full w-full flex items-center hero-content-pad" style="margin-top: 0;">
 		  <div class="container mx-auto px-4 sm:px-6 flex items-center justify-start rtl:justify-end">
 			<div
 			  ref="desktopFormContainer"
@@ -662,9 +662,33 @@
 	 =========
 	 Instead of negative margins/tops, we pad the content to avoid hiding behind navbar.
 	 Adjust this value to match your actual navbar height.
+	 Increased padding for Windows and smaller desktop screens where navbar might be taller.
+	 
+	 Navbar structure:
+	 - Header padding: py-3 sm:py-4 lg:py-4 xl:py-6 (top + bottom)
+	 - Nav container padding: p-3 sm:p-4 lg:p-4
+	 - Total approximate height: ~80-100px on mobile, ~90-110px on desktop
   */
   .hero-content-pad {
-	padding-top: 120px;
+	padding-top: 100px; /* Base padding for mobile */
+  }
+  
+  @media (min-width: 640px) {
+	.hero-content-pad {
+	  padding-top: 110px; /* Slightly more on small tablets */
+	}
+  }
+  
+  @media (min-width: 1024px) {
+	.hero-content-pad {
+	  padding-top: 140px; /* Desktop - accounts for navbar + extra spacing */
+	}
+  }
+  
+  @media (min-width: 1280px) {
+	.hero-content-pad {
+	  padding-top: 150px; /* Larger desktop - navbar might be slightly taller */
+	}
   }
   
   /* Ensure Pipedrive form container is visible and has proper dimensions */
