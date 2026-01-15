@@ -80,12 +80,12 @@
   
 		<!-- Content -->
 		<div class="relative z-10 h-full w-full flex items-center hero-content-pad">
-		  <div class="container mx-auto px-6 flex items-center justify-start rtl:justify-end">
+		  <div class="container mx-auto px-4 sm:px-6 flex items-center justify-start rtl:justify-end">
 			<div
 			  ref="desktopFormContainer"
-			  class="w-full bg-gray-900 bg-opacity-95 dark:bg-gray-800 dark:bg-opacity-95 max-w-md rounded-bl-[80px] rounded-br-2xl rounded-tl-2xl rounded-tr-[80px] p-8"
+			  class="w-full bg-gray-900 bg-opacity-95 dark:bg-gray-800 dark:bg-opacity-95 max-w-md lg:max-w-lg xl:max-w-md rounded-bl-[80px] rounded-br-2xl rounded-tl-2xl rounded-tr-[80px] p-6 lg:p-8"
 			>
-			  <h1 ref="desktopTitle" class="mb-5 font-neo-sans text-3xl font-normal uppercase text-white">
+			  <h1 ref="desktopTitle" class="mb-5 font-neo-sans text-2xl lg:text-3xl font-normal uppercase text-white">
 				{{ $t('NOW_REQUEST_A_QUOTE_FOR_DRONE_CLEANING') }}
 			  </h1>
   

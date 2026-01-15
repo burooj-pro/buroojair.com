@@ -3,11 +3,11 @@
 		id="settingStandardSection"
 		class="scroll-mt-20 bg-[#EBF5FF] py-16 font-neo-sans dark:bg-[#04061C] lg:py-32 lg:scroll-mt-24"
 	>
-		<div class="container mx-auto px-4 lg:px-8">
+		<div class="container mx-auto px-4 lg:px-6 xl:px-8">
 			<div class="grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-16">
 				<!-- Left Side - Heading (Centered) -->
 				<div ref="leftSide" class="mb-8 lg:mb-0">
-					<h2 class="mb-4 text-3xl font-black leading-tight text-gray-900 dark:text-white lg:mb-6 lg:text-5xl xl:text-6xl">
+					<h2 class="mb-4 text-3xl font-black leading-tight text-gray-900 dark:text-white lg:mb-6 lg:text-4xl xl:text-5xl 2xl:text-6xl">
 						<template v-if="$t('SETTING_THE_STANDARD_FOR_WORKING_DRONES').includes('for')">
 							<span class="block">{{ $t('SETTING_THE_STANDARD_FOR_WORKING_DRONES').split(' for ')[0] }}</span>
 							<span class="block">for {{ $t('SETTING_THE_STANDARD_FOR_WORKING_DRONES').split(' for ')[1] }}</span>

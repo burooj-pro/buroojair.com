@@ -3,12 +3,12 @@
 		id="servicesSection"
 		class="scroll-mt-20 bg-[#EBF5FF] py-16 font-neo-sans text-gray-800 dark:bg-[#04061C] dark:text-gray-200 lg:py-32 lg:scroll-mt-24"
 	>
-		<div class="container mx-auto px-4 lg:px-8">
+		<div class="container mx-auto px-4 lg:px-6 xl:px-8">
 			<!-- Two Column Layout -->
 			<div class="grid gap-8 lg:grid-cols-2 lg:items-start lg:gap-16">
 				<!-- Left Side - Title and Subtitle (Sticky with GSAP) -->
 				<div ref="leftSide" class="mb-8 lg:mb-0 lg:h-fit lg:self-start">
-					<h2 class="mb-4 text-3xl font-black uppercase tracking-tight text-gray-900 dark:text-white lg:mb-6 lg:text-4xl lg:text-5xl">
+					<h2 class="mb-4 text-3xl font-black uppercase tracking-tight text-gray-900 dark:text-white lg:mb-6 lg:text-4xl xl:text-5xl">
 						{{ $t('OUR_SERVICES') }}
 					</h2>
 					<p class="text-base font-light text-gray-700 dark:text-gray-300 lg:text-lg lg:text-xl" style="font-weight: 100;">

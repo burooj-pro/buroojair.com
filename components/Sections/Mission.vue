@@ -1,6 +1,6 @@
 <template>
 	<section id="missionSection" class="relative scroll-mt-20 overflow-hidden bg-[#EBF5FF] py-12 font-neo-sans text-gray-900 dark:bg-[#04061C] dark:text-white lg:py-40 lg:scroll-mt-24">
-		<div class="container relative mx-auto px-4 lg:px-8">
+		<div class="container relative mx-auto px-4 lg:px-6 xl:px-8">
 			<!-- Main Content Grid - 6 Cards with Individual Sizes -->
 			<div class="grid gap-4 lg:gap-6 lg:grid-cols-12 lg:grid-rows-[auto_auto_auto]">
 				<!-- Card 1: Large Video (Left, spans 5 cols, tall, spans 2 rows) -->
@@ -87,7 +87,7 @@
 				<div ref="card4" class="lg:col-span-4 lg:col-start-6 lg:row-start-2">
 					<div class="card-wrapper is-glass is-climate-card h-full min-h-[250px] lg:min-h-[350px] flex flex-col">
 						<div class="mb-4">
-							<span class="text-4xl font-bold leading-none text-gray-900 dark:text-white lg:text-6xl">
+							<span class="text-4xl font-bold leading-none text-gray-900 dark:text-white lg:text-5xl xl:text-6xl">
 								<template v-if="isVisible">
 									<CountUp
 										:start-val="0"

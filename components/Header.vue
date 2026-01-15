@@ -14,21 +14,21 @@
 				isNavbarVisible ? 'translate-y-0' : '-translate-y-full'
 			]"
 		>
-			<div class="container mx-auto px-4 lg:px-6">
+			<div class="container mx-auto px-4 lg:px-4 xl:px-6">
 				<nav class="mx-auto max-w-7xl rounded-2xl bg-gray-800/80 backdrop-blur-md border border-gray-700/50 shadow-lg">
-					<div class="flex items-center justify-between p-4 font-neo-sans text-lg lg:p-4">
+					<div class="flex items-center justify-between p-3 sm:p-4 font-neo-sans text-lg lg:p-4">
 					<!-- Logo and Navigation Links (Left Side) -->
-					<div class="flex items-center gap-6 lg:gap-8">
+					<div class="flex items-center gap-3 sm:gap-4 lg:gap-6 xl:gap-8">
 						<NuxtLink class="flex items-center flex-shrink-0" to="/">
 							<img src="~assets/images/logo.png" alt="Burooj Air Logo" width="120" height="48" class="h-7 w-auto lg:h-10" />
 						</NuxtLink>
 						
 						<!-- Desktop Navigation Links -->
 						<div class="hidden lg:flex lg:items-center">
-							<ul class="flex gap-1 space-x-1 p-0">
+							<ul class="flex gap-0.5 lg:gap-1 space-x-0.5 lg:space-x-1 p-0 flex-wrap">
 							<li>
 								<NuxtLink 
-									class="block min-h-[44px] rounded-lg px-4 py-2 text-base font-semibold text-white no-underline transition-all hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50"
+									class="block min-h-[44px] rounded-lg px-2 lg:px-3 xl:px-4 py-2 text-sm lg:text-base font-semibold text-white no-underline transition-all hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50 whitespace-nowrap"
 									to="/about-us"
 								>
 									{{ $t('ABOUT_US') }}
@@ -36,7 +36,7 @@
 							</li>
 							<li>
 								<NuxtLink 
-									class="block min-h-[44px] rounded-lg px-4 py-2 text-base font-semibold text-white no-underline transition-all hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50"
+									class="block min-h-[44px] rounded-lg px-2 lg:px-3 xl:px-4 py-2 text-sm lg:text-base font-semibold text-white no-underline transition-all hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50 whitespace-nowrap"
 									to="/#servicesSection"
 									@click.native="smoothScroll('#servicesSection')"
 								>
@@ -45,7 +45,7 @@
 							</li>
 							<li>
 								<NuxtLink 
-									class="block min-h-[44px] rounded-lg px-4 py-2 text-base font-semibold text-white no-underline transition-all hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50"
+									class="block min-h-[44px] rounded-lg px-2 lg:px-3 xl:px-4 py-2 text-sm lg:text-base font-semibold text-white no-underline transition-all hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50 whitespace-nowrap"
 									to="/projects"
 								>
 									{{ $t('OUR_PROJECTS') || 'Projects' }}
@@ -53,7 +53,7 @@
 							</li>
 							<li>
 								<NuxtLink 
-									class="block min-h-[44px] rounded-lg px-4 py-2 text-base font-semibold text-white no-underline transition-all hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50"
+									class="block min-h-[44px] rounded-lg px-2 lg:px-3 xl:px-4 py-2 text-sm lg:text-base font-semibold text-white no-underline transition-all hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50 whitespace-nowrap"
 									to="/franchise"
 								>
 									{{ $t('FRANCHISE') }}
@@ -64,18 +64,18 @@
 					</div>
 					
 					<!-- Right Side - Desktop: Language Switcher, Theme Toggle and Contact Button -->
-					<div class="hidden lg:flex items-center gap-3">
+					<div class="hidden lg:flex items-center gap-2 xl:gap-3">
 						<!-- Language Switcher -->
 						<button
 							@click="onChangeLanguage"
-							class="min-h-[44px] rounded-lg px-4 py-2 text-base font-semibold text-white no-underline transition-all hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50"
+							class="min-h-[44px] rounded-lg px-2 lg:px-3 xl:px-4 py-2 text-sm lg:text-base font-semibold text-white no-underline transition-all hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50 whitespace-nowrap"
 							:aria-label="$i18n.locale === 'en' ? 'Switch to Arabic' : 'Switch to English'"
 						>
 							{{ $i18n.locale === 'en' ? 'العربية' : 'English' }}
 						</button>
 						<ThemeToggle />
 						<NuxtLink 
-							class="whitespace-nowrap rounded-lg bg-blue-600 px-6 py-2.5 text-base font-bold text-white no-underline min-h-[44px] flex items-center justify-center transition-all hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400" 
+							class="whitespace-nowrap rounded-lg bg-blue-600 px-4 lg:px-5 xl:px-6 py-2 lg:py-2.5 text-sm lg:text-base font-bold text-white no-underline min-h-[44px] flex items-center justify-center transition-all hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400" 
 							to="/contact"
 						>
 							{{ $t('CONTACT_US') }}

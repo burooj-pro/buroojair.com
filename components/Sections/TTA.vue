@@ -1,11 +1,11 @@
 <template>
 	<section class="bg-[#EBF5FF] py-16 font-neo-sans text-gray-900 dark:bg-[#04061C] dark:text-white lg:py-24">
-		<div class="container mx-auto px-4 lg:px-8">
+		<div class="container mx-auto px-4 lg:px-6 xl:px-8">
 			<!-- Section Header with Navigation -->
 			<div class="mb-12 flex flex-col justify-between gap-6 lg:mb-16 lg:flex-row lg:items-center">
 				<!-- Title and Subtitle - Left Aligned -->
 				<div class="flex-1">
-					<h2 class="mb-4 text-start rtl:text-end text-3xl font-black uppercase tracking-tight text-gray-900 dark:text-white lg:text-5xl">
+					<h2 class="mb-4 text-start rtl:text-end text-3xl font-black uppercase tracking-tight text-gray-900 dark:text-white lg:text-4xl xl:text-5xl">
 						{{ $t('EXCLUSIVE_PARTNERSHIP_WITH_TTA') }}
 					</h2>
 					<p class="text-start rtl:text-end text-base font-light text-gray-700 dark:text-gray-300 lg:text-xl">
@@ -45,7 +45,7 @@
 					:style="{ transform: `translateX(-${currentIndex * cardWidth}px)` }"
 				>
 					<div
-						class="card-wrapper is-glass is-climate-card flex w-[320px] flex-shrink-0 flex-col overflow-hidden transition-all duration-300 lg:w-[400px]"
+						class="card-wrapper is-glass is-climate-card flex w-[320px] flex-shrink-0 flex-col overflow-hidden transition-all duration-300 lg:w-[360px] xl:w-[400px]"
 						v-for="product in products"
 						:key="product.id"
 					>
@@ -159,28 +159,40 @@ export default {
 			}
 		},
 	},
-	mounted() {
-		// Adjust cards per view and card width based on screen size
-		if (process.client) {
-			const updateCardsPerView = () => {
-				if (window.innerWidth >= 1024) {
-					this.cardsPerView = 3;
-					this.cardWidth = 416; // 400px card + 16px gap
-				} else if (window.innerWidth >= 768) {
-					this.cardsPerView = 2;
-					this.cardWidth = 336; // 320px card + 16px gap
-				} else {
-					this.cardsPerView = 1;
-					this.cardWidth = 336; // 320px card + 16px gap
-				}
-			};
-			updateCardsPerView();
-			window.addEventListener('resize', updateCardsPerView);
-			this.$once('hook:beforeDestroy', () => {
-				window.removeEventListener('resize', updateCardsPerView);
-			});
-		}
-	},
+		mounted() {
+			// Adjust cards per view and card width based on screen size
+			if (process.client) {
+				const updateCardsPerView = () => {
+					const width = window.innerWidth;
+					if (width >= 1536) {
+						// 2xl screens - 3 cards
+						this.cardsPerView = 3;
+						this.cardWidth = 416; // 400px card + 16px gap
+					} else if (width >= 1280) {
+						// xl screens - 2 cards for better fit
+						this.cardsPerView = 2;
+						this.cardWidth = 416; // 400px card + 16px gap
+					} else if (width >= 1024) {
+						// lg screens - 2 cards
+						this.cardsPerView = 2;
+						this.cardWidth = 336; // 320px card + 16px gap
+					} else if (width >= 768) {
+						// md screens - 2 cards
+						this.cardsPerView = 2;
+						this.cardWidth = 336; // 320px card + 16px gap
+					} else {
+						// sm screens - 1 card
+						this.cardsPerView = 1;
+						this.cardWidth = 336; // 320px card + 16px gap
+					}
+				};
+				updateCardsPerView();
+				window.addEventListener('resize', updateCardsPerView);
+				this.$once('hook:beforeDestroy', () => {
+					window.removeEventListener('resize', updateCardsPerView);
+				});
+			}
+		},
 };
 </script>
 

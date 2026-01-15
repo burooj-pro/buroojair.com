@@ -1,6 +1,6 @@
 <template>
 	<section class="bg-[#EBF5FF] py-16 font-neo-sans dark:bg-[#04061C] lg:py-32">
-		<div class="container mx-auto px-4 lg:px-8">
+		<div class="container mx-auto px-4 lg:px-6 xl:px-8">
 			<div class="grid gap-12 grid-cols-1 lg:grid-cols-2 lg:items-center">
 				<div class="p-6 lg:p-8">
 					<h3 class="text-2xl font-black text-gray-900 dark:text-white lg:text-4xl">SETTING THE STANDARD FOR WORKING DRONE</h3>

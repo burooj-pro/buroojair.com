@@ -1,6 +1,6 @@
 <template>
 	<section class="bg-[#EBF5FF] py-16 font-neo-sans text-gray-900 dark:bg-[#04061C] dark:text-white lg:py-24">
-		<div class="container mx-auto px-4 lg:px-8">
+		<div class="container mx-auto px-4 lg:px-6 xl:px-8">
 			<!-- Section Header -->
 			<div class="mb-8 text-center lg:mb-16">
 				<h2 class="mb-4 text-3xl font-black uppercase tracking-tight text-gray-900 dark:text-white lg:text-5xl">

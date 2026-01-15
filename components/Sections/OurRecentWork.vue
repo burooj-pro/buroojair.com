@@ -1,12 +1,12 @@
 <template>
 	<section class="bg-[#EBF5FF] py-16 font-neo-sans dark:bg-[#04061C] lg:py-24">
-		<div class="container mx-auto px-4 lg:px-8">
+		<div class="container mx-auto px-4 lg:px-6 xl:px-8">
 			<!-- Header Section -->
 			<div class="mb-12 lg:mb-20">
 				<div class="grid gap-6 lg:grid-cols-2 lg:items-start lg:gap-8">
 					<!-- Left Side - Title and Description -->
 					<div>
-						<h2 class="mb-4 text-3xl font-black leading-tight text-gray-900 dark:text-white lg:text-6xl xl:text-7xl">
+						<h2 class="mb-4 text-3xl font-black leading-tight text-gray-900 dark:text-white lg:text-5xl xl:text-6xl 2xl:text-7xl">
 							{{ $t('OUR_RECENT_WORK') || 'Our Recent Work' }}
 						</h2>
 						<p class="max-w-2xl text-base font-bold leading-relaxed text-gray-700 dark:text-gray-300 lg:text-xl">
