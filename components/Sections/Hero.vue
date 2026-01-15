@@ -83,7 +83,7 @@
 		  <div class="container mx-auto px-4 sm:px-6 flex items-center justify-start rtl:justify-end">
 			<div
 			  ref="desktopFormContainer"
-			  class="w-full bg-gray-900 bg-opacity-95 dark:bg-gray-800 dark:bg-opacity-95 max-w-sm lg:max-w-md xl:max-w-lg hero-form-container rounded-bl-[60px] rounded-br-xl rounded-tl-xl rounded-tr-[60px] lg:rounded-bl-[80px] lg:rounded-br-2xl lg:rounded-tl-2xl lg:rounded-tr-[80px] p-4 lg:p-6 xl:p-8"
+			  class="w-full bg-gray-900 bg-opacity-95 dark:bg-gray-800 dark:bg-opacity-95 max-w-xs lg:max-w-sm xl:max-w-md hero-form-container rounded-bl-[60px] rounded-br-xl rounded-tl-xl rounded-tr-[60px] lg:rounded-bl-[80px] lg:rounded-br-2xl lg:rounded-tl-2xl lg:rounded-tr-[80px] p-3 lg:p-4 xl:p-6"
 			>
 			  <h1 ref="desktopTitle" class="mb-3 lg:mb-4 xl:mb-5 font-neo-sans text-xl lg:text-2xl xl:text-3xl font-normal uppercase text-white">
 				{{ $t('NOW_REQUEST_A_QUOTE_FOR_DRONE_CLEANING') }}
@@ -158,14 +158,18 @@
       const formElement = this.$refs.desktopForm
       
       if (formContainer) {
-        // Set max-width based on screen size
+        // Set max-width based on screen size - reduced for Windows
         const width = window.innerWidth
-        if (width >= 1920 && window.innerHeight <= 1200) {
-          formContainer.style.setProperty('max-width', '350px', 'important')
+        const height = window.innerHeight
+        if (width >= 1920 && height <= 1200) {
+          formContainer.style.setProperty('max-width', '300px', 'important')
+          formContainer.style.setProperty('padding', '0.75rem 1rem', 'important')
         } else if (width >= 1280) {
-          formContainer.style.setProperty('max-width', '360px', 'important')
+          formContainer.style.setProperty('max-width', '320px', 'important')
+          formContainer.style.setProperty('padding', '0.875rem 1.125rem', 'important')
         } else if (width >= 1024) {
-          formContainer.style.setProperty('max-width', '340px', 'important')
+          formContainer.style.setProperty('max-width', '300px', 'important')
+          formContainer.style.setProperty('padding', '0.75rem 1rem', 'important')
         }
         
         formContainer.style.setProperty('max-height', 'calc(100vh - 120px)', 'important')
@@ -1003,7 +1007,8 @@
   /* Windows form container width reduction */
   @media (min-width: 1024px) {
 	.is-windows .hero-form-container {
-	  max-width: 360px !important; /* Smaller width on Windows */
+	  max-width: 300px !important; /* Much smaller width on Windows */
+	  padding: 0.75rem 1rem !important; /* Reduced padding */
 	}
 	
 	.is-windows .pipedriveWebForms {
@@ -1021,7 +1026,8 @@
   
   @media (min-width: 1280px) {
 	.is-windows .hero-form-container {
-	  max-width: 380px !important; /* Slightly larger on bigger screens */
+	  max-width: 320px !important; /* Smaller on bigger screens for Windows */
+	  padding: 0.875rem 1.125rem !important; /* Reduced padding */
 	}
 	
 	.is-windows .pipedriveWebForms iframe {
@@ -1034,7 +1040,8 @@
   
   @media (min-width: 1920px) {
 	.is-windows .hero-form-container {
-	  max-width: 400px !important; /* Larger on very large screens */
+	  max-width: 340px !important; /* Smaller on very large screens for Windows */
+	  padding: 1rem 1.25rem !important; /* Reduced padding */
 	}
 	
 	.is-windows .pipedriveWebForms iframe {
@@ -1048,8 +1055,9 @@
   /* Windows-specific for 1920x1200 screens */
   @media (min-width: 1920px) and (max-height: 1200px) {
 	.is-windows .hero-form-container {
-	  max-width: 350px !important; /* Smaller width for 16:10 screens */
+	  max-width: 300px !important; /* Much smaller width for 16:10 screens on Windows */
 	  max-height: calc(100vh - 80px) !important; /* Maximum space on Windows */
+	  padding: 0.75rem 1rem !important; /* Minimal padding */
 	}
 	
 	.is-windows .pipedriveWebForms {
@@ -1070,7 +1078,8 @@
   /* Windows-specific for smaller desktop screens */
   @media (min-width: 1024px) and (max-width: 1279px) {
 	.is-windows .hero-form-container {
-	  max-width: 340px !important; /* Smaller width on smaller screens */
+	  max-width: 280px !important; /* Much smaller width on smaller screens for Windows */
+	  padding: 0.625rem 0.875rem !important; /* Minimal padding */
 	}
 	
 	.is-windows .pipedriveWebForms {
@@ -1090,7 +1099,8 @@
   
   @media (min-width: 1280px) and (max-width: 1919px) and (max-height: 1200px) {
 	.is-windows .hero-form-container {
-	  max-width: 360px !important; /* Medium width */
+	  max-width: 300px !important; /* Smaller width for Windows */
+	  padding: 0.75rem 1rem !important; /* Reduced padding */
 	}
 	
 	.is-windows .pipedriveWebForms {
