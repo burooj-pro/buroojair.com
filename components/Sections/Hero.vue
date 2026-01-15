@@ -83,7 +83,7 @@
 		  <div class="container mx-auto px-4 sm:px-6 flex items-center justify-start rtl:justify-end">
 			<div
 			  ref="desktopFormContainer"
-			  class="w-full bg-gray-900 bg-opacity-95 dark:bg-gray-800 dark:bg-opacity-95 max-w-sm lg:max-w-md xl:max-w-lg rounded-bl-[60px] rounded-br-xl rounded-tl-xl rounded-tr-[60px] lg:rounded-bl-[80px] lg:rounded-br-2xl lg:rounded-tl-2xl lg:rounded-tr-[80px] p-4 lg:p-6 xl:p-8"
+			  class="w-full bg-gray-900 bg-opacity-95 dark:bg-gray-800 dark:bg-opacity-95 max-w-sm lg:max-w-md xl:max-w-lg hero-form-container rounded-bl-[60px] rounded-br-xl rounded-tl-xl rounded-tr-[60px] lg:rounded-bl-[80px] lg:rounded-br-2xl lg:rounded-tl-2xl lg:rounded-tr-[80px] p-4 lg:p-6 xl:p-8"
 			>
 			  <h1 ref="desktopTitle" class="mb-3 lg:mb-4 xl:mb-5 font-neo-sans text-xl lg:text-2xl xl:text-3xl font-normal uppercase text-white">
 				{{ $t('NOW_REQUEST_A_QUOTE_FOR_DRONE_CLEANING') }}
@@ -691,6 +691,57 @@
 	}
   }
   
+  /* Form container constraints */
+  .hero-form-container {
+	max-height: calc(100vh - 200px); /* Ensure form doesn't exceed viewport */
+	overflow-y: auto; /* Allow scrolling if needed */
+	overflow-x: hidden;
+  }
+  
+  /* Specific adjustments for 1920x1200 and similar 16:10 aspect ratios */
+  /* Targets screens that are wide (1920px+) but have limited height (1200px or less) */
+  @media (min-width: 1920px) and (max-height: 1200px) {
+	.hero-content-pad {
+	  padding-top: 110px; /* Reduced padding for 16:10 screens */
+	}
+	
+	.hero-form-container {
+	  max-width: 400px !important; /* Smaller form on 16:10 screens */
+	  max-height: calc(100vh - 160px) !important; /* Constrain height with less padding */
+	  padding: 0.875rem 1rem !important; /* Reduced padding */
+	}
+	
+	.hero-form-container h1 {
+	  font-size: 1.125rem !important; /* Smaller title (18px) */
+	  margin-bottom: 0.625rem !important;
+	}
+  }
+  
+  /* For screens with height constraints (1200px or less) but not as wide */
+  @media (min-width: 1280px) and (max-width: 1919px) and (max-height: 1200px) {
+	.hero-content-pad {
+	  padding-top: 125px; /* Balanced padding */
+	}
+	
+	.hero-form-container {
+	  max-height: calc(100vh - 190px); /* Constrain height */
+	}
+  }
+  
+  /* For any screen with limited height (common for 16:10 or ultrawide) */
+  @media (min-width: 1024px) and (max-height: 1200px) {
+	.hero-form-container {
+	  max-height: calc(100vh - 200px); /* Ensure form fits in viewport */
+	}
+  }
+  
+  /* For screens with height between 1200px and 1080px (common desktop range) */
+  @media (min-width: 1280px) and (max-height: 1200px) {
+	.hero-content-pad {
+	  padding-top: 130px; /* Balanced padding */
+	}
+  }
+  
   /* Ensure Pipedrive form container is visible and has proper dimensions */
   .pipedriveWebForms {
 	min-height: 180px;
@@ -716,18 +767,40 @@
   .pipedriveWebForms iframe {
 	width: 100% !important;
 	min-height: 320px;
+	max-height: 500px;
 	display: block !important;
   }
   
   @media (min-width: 1024px) {
 	.pipedriveWebForms iframe {
 	  min-height: 360px;
+	  max-height: 550px;
 	}
   }
   
   @media (min-width: 1280px) {
 	.pipedriveWebForms iframe {
 	  min-height: 400px;
+	  max-height: 600px;
+	}
+  }
+  
+  /* Specific adjustments for 1920x1200 screens */
+  @media (min-width: 1920px) and (max-height: 1200px) {
+	.pipedriveWebForms {
+	  min-height: 160px !important;
+	}
+	
+	.pipedriveWebForms iframe {
+	  min-height: 300px !important;
+	  max-height: 400px !important; /* Constrain height on 16:10 screens */
+	}
+  }
+  
+  /* For screens with height constraints */
+  @media (min-width: 1280px) and (max-height: 1200px) {
+	.pipedriveWebForms iframe {
+	  max-height: 500px; /* Prevent form from being too tall */
 	}
   }
   
