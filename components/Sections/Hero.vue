@@ -694,8 +694,9 @@
   /* Form container constraints */
   .hero-form-container {
 	max-height: calc(100vh - 200px); /* Ensure form doesn't exceed viewport */
-	overflow-y: auto; /* Allow scrolling if needed */
-	overflow-x: hidden;
+	overflow: hidden; /* Prevent scrolling - form should fit without scroll */
+	display: flex;
+	flex-direction: column;
   }
   
   /* Specific adjustments for 1920x1200 and similar 16:10 aspect ratios */
@@ -709,6 +710,14 @@
 	  max-width: 400px !important; /* Smaller form on 16:10 screens */
 	  max-height: calc(100vh - 160px) !important; /* Constrain height with less padding */
 	  padding: 0.875rem 1rem !important; /* Reduced padding */
+	}
+	
+	.pipedriveWebForms {
+	  max-height: 320px !important; /* Smaller form container */
+	}
+	
+	.pipedriveWebForms iframe {
+	  max-height: 300px !important; /* Smaller iframe */
 	}
 	
 	.hero-form-container h1 {
@@ -725,6 +734,14 @@
 	
 	.hero-form-container {
 	  max-height: calc(100vh - 190px); /* Constrain height */
+	}
+	
+	.pipedriveWebForms {
+	  max-height: 380px !important;
+	}
+	
+	.pipedriveWebForms iframe {
+	  max-height: 360px !important;
 	}
   }
   
@@ -744,63 +761,81 @@
   
   /* Ensure Pipedrive form container is visible and has proper dimensions */
   .pipedriveWebForms {
-	min-height: 180px;
+	min-height: 0; /* Remove min-height to allow form to be smaller */
 	width: 100%;
 	display: block !important;
 	visibility: visible !important;
 	opacity: 1 !important;
+	flex: 1 1 auto; /* Allow form to grow but not exceed container */
+	overflow: hidden; /* Prevent scrolling */
+	max-height: 100%; /* Don't exceed parent container */
   }
   
   @media (min-width: 1024px) {
 	.pipedriveWebForms {
-	  min-height: 200px;
+	  max-height: 450px; /* Constrain form height on desktop */
 	}
   }
   
   @media (min-width: 1280px) {
 	.pipedriveWebForms {
-	  min-height: 220px;
+	  max-height: 500px; /* Slightly more on larger screens */
 	}
   }
   
-  /* Ensure form iframe is visible */
+  /* Ensure form iframe is visible and constrained */
   .pipedriveWebForms iframe {
 	width: 100% !important;
-	min-height: 320px;
-	max-height: 500px;
+	height: auto !important;
+	min-height: 0 !important; /* Remove min-height to allow smaller size */
+	max-height: 350px !important; /* Constrain height to prevent scrolling */
 	display: block !important;
+	overflow: hidden !important; /* Prevent iframe scrolling */
+	border: none !important;
   }
   
   @media (min-width: 1024px) {
 	.pipedriveWebForms iframe {
-	  min-height: 360px;
-	  max-height: 550px;
+	  max-height: 400px !important; /* Slightly larger on desktop */
 	}
   }
   
   @media (min-width: 1280px) {
 	.pipedriveWebForms iframe {
-	  min-height: 400px;
-	  max-height: 600px;
+	  max-height: 450px !important; /* More on larger screens */
 	}
   }
   
   /* Specific adjustments for 1920x1200 screens */
   @media (min-width: 1920px) and (max-height: 1200px) {
 	.pipedriveWebForms {
-	  min-height: 160px !important;
+	  max-height: 350px !important; /* Smaller form on 16:10 screens */
 	}
 	
 	.pipedriveWebForms iframe {
-	  min-height: 300px !important;
-	  max-height: 400px !important; /* Constrain height on 16:10 screens */
+	  max-height: 320px !important; /* Constrain height on 16:10 screens */
 	}
   }
   
   /* For screens with height constraints */
   @media (min-width: 1280px) and (max-height: 1200px) {
+	.pipedriveWebForms {
+	  max-height: 400px !important;
+	}
+	
 	.pipedriveWebForms iframe {
-	  max-height: 500px; /* Prevent form from being too tall */
+	  max-height: 380px !important; /* Prevent form from being too tall */
+	}
+  }
+  
+  /* For smaller desktop screens */
+  @media (min-width: 1024px) and (max-width: 1279px) {
+	.pipedriveWebForms {
+	  max-height: 380px !important;
+	}
+	
+	.pipedriveWebForms iframe {
+	  max-height: 360px !important;
 	}
   }
   
@@ -809,6 +844,19 @@
 	display: block !important;
 	visibility: visible !important;
 	opacity: 1 !important;
+	max-height: 100% !important;
+	overflow: hidden !important; /* Prevent form scrolling */
+  }
+  
+  /* Prevent scrolling in Pipedrive form content */
+  .pipedriveWebForms * {
+	max-height: 100% !important;
+  }
+  
+  /* Target Pipedrive form wrapper if it exists */
+  .pipedriveWebForms > div {
+	max-height: 100% !important;
+	overflow: hidden !important;
   }
   </style>
   
