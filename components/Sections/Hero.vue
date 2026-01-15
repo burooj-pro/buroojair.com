@@ -107,6 +107,9 @@
 	mounted() {
     if (!process.client) return
 
+    // Detect Windows OS and add class for Windows-specific styling
+    this.detectWindows()
+    
     // Initialize videos first (critical content)
     this.initVideos()
     
@@ -128,6 +131,17 @@
     })
   },
   methods: {
+    detectWindows() {
+      // Detect Windows OS
+      const isWindows = navigator.platform.toLowerCase().includes('win') || 
+                       navigator.userAgent.toLowerCase().includes('windows')
+      
+      if (isWindows) {
+        document.documentElement.classList.add('is-windows')
+        // Also add to body for more specific targeting
+        document.body.classList.add('is-windows')
+      }
+    },
     loadPipedriveOnce() {
       // Check if script is already loaded
       if (document.querySelector('script[src*="pipedrive.com"]')) {
@@ -897,6 +911,58 @@
   @media (min-width: 1920px) and (max-height: 1200px) {
 	.hero-form-container {
 	  max-height: calc(100vh - 120px) !important; /* Even more space on 16:10 */
+	}
+  }
+  
+  /* Windows-specific adjustments - more aggressive scaling */
+  .is-windows .pipedriveWebForms iframe {
+	transform-origin: top center !important;
+  }
+  
+  @media (min-width: 1024px) {
+	.is-windows .pipedriveWebForms iframe {
+	  transform: scale(0.65) !important; /* More aggressive scaling on Windows */
+	}
+  }
+  
+  @media (min-width: 1280px) {
+	.is-windows .pipedriveWebForms iframe {
+	  transform: scale(0.7) !important; /* More aggressive scaling on Windows */
+	}
+  }
+  
+  @media (min-width: 1920px) {
+	.is-windows .pipedriveWebForms iframe {
+	  transform: scale(0.75) !important; /* More aggressive scaling on Windows */
+	}
+  }
+  
+  /* Windows-specific for 1920x1200 screens */
+  @media (min-width: 1920px) and (max-height: 1200px) {
+	.is-windows .pipedriveWebForms {
+	  max-height: 900px !important;
+	}
+	
+	.is-windows .pipedriveWebForms iframe {
+	  max-height: 850px !important;
+	  transform: scale(0.55) !important; /* Very aggressive scaling for Windows 16:10 */
+	}
+	
+	.is-windows .hero-form-container {
+	  max-height: calc(100vh - 100px) !important; /* More space on Windows */
+	}
+  }
+  
+  /* Windows-specific for smaller desktop screens */
+  @media (min-width: 1024px) and (max-width: 1279px) {
+	.is-windows .pipedriveWebForms iframe {
+	  transform: scale(0.6) !important; /* Very aggressive scaling for Windows */
+	}
+  }
+  
+  @media (min-width: 1280px) and (max-width: 1919px) and (max-height: 1200px) {
+	.is-windows .pipedriveWebForms iframe {
+	  transform: scale(0.6) !important; /* Very aggressive scaling for Windows */
 	}
   }
   </style>
