@@ -83,9 +83,9 @@
 		  <div class="container mx-auto px-4 sm:px-6 flex items-center justify-start rtl:justify-end">
 			<div
 			  ref="desktopFormContainer"
-			  class="w-full bg-gray-900 bg-opacity-95 dark:bg-gray-800 dark:bg-opacity-95 max-w-md lg:max-w-lg xl:max-w-md rounded-bl-[80px] rounded-br-2xl rounded-tl-2xl rounded-tr-[80px] p-6 lg:p-8"
+			  class="w-full bg-gray-900 bg-opacity-95 dark:bg-gray-800 dark:bg-opacity-95 max-w-sm lg:max-w-md xl:max-w-lg rounded-bl-[60px] rounded-br-xl rounded-tl-xl rounded-tr-[60px] lg:rounded-bl-[80px] lg:rounded-br-2xl lg:rounded-tl-2xl lg:rounded-tr-[80px] p-4 lg:p-6 xl:p-8"
 			>
-			  <h1 ref="desktopTitle" class="mb-5 font-neo-sans text-2xl lg:text-3xl font-normal uppercase text-white">
+			  <h1 ref="desktopTitle" class="mb-3 lg:mb-4 xl:mb-5 font-neo-sans text-xl lg:text-2xl xl:text-3xl font-normal uppercase text-white">
 				{{ $t('NOW_REQUEST_A_QUOTE_FOR_DRONE_CLEANING') }}
 			  </h1>
   
@@ -693,18 +693,42 @@
   
   /* Ensure Pipedrive form container is visible and has proper dimensions */
   .pipedriveWebForms {
-	min-height: 200px;
+	min-height: 180px;
 	width: 100%;
 	display: block !important;
 	visibility: visible !important;
 	opacity: 1 !important;
   }
   
+  @media (min-width: 1024px) {
+	.pipedriveWebForms {
+	  min-height: 200px;
+	}
+  }
+  
+  @media (min-width: 1280px) {
+	.pipedriveWebForms {
+	  min-height: 220px;
+	}
+  }
+  
   /* Ensure form iframe is visible */
   .pipedriveWebForms iframe {
 	width: 100% !important;
-	min-height: 400px;
+	min-height: 320px;
 	display: block !important;
+  }
+  
+  @media (min-width: 1024px) {
+	.pipedriveWebForms iframe {
+	  min-height: 360px;
+	}
+  }
+  
+  @media (min-width: 1280px) {
+	.pipedriveWebForms iframe {
+	  min-height: 400px;
+	}
   }
   
   /* Ensure form elements are visible */
