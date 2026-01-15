@@ -693,8 +693,8 @@
   
   /* Form container constraints */
   .hero-form-container {
-	max-height: calc(100vh - 200px); /* Ensure form doesn't exceed viewport */
-	overflow: hidden; /* Prevent scrolling - form should fit without scroll */
+	max-height: calc(100vh - 180px); /* More space for form */
+	overflow: visible !important; /* Allow full form to be visible */
 	display: flex;
 	flex-direction: column;
   }
@@ -768,19 +768,19 @@
 	opacity: 1 !important;
 	flex: 1 1 auto; /* Allow form to grow but not exceed container */
 	overflow: visible !important; /* Allow full form to be visible */
-	max-height: 100%; /* Don't exceed parent container */
+	max-height: none !important; /* Remove height restriction to show full form */
 	position: relative;
   }
   
   @media (min-width: 1024px) {
 	.pipedriveWebForms {
-	  max-height: 600px; /* Allow more height for full form */
+	  max-height: 800px !important; /* Much larger to accommodate full form */
 	}
   }
   
   @media (min-width: 1280px) {
 	.pipedriveWebForms {
-	  max-height: 650px; /* More on larger screens */
+	  max-height: 900px !important; /* Even larger on bigger screens */
 	}
   }
   
@@ -789,7 +789,7 @@
 	width: 100% !important;
 	height: auto !important;
 	min-height: 0 !important;
-	max-height: 500px !important; /* Allow full form height */
+	max-height: 700px !important; /* Much larger to show full form */
 	display: block !important;
 	overflow: visible !important; /* Show full form */
 	border: none !important;
@@ -798,57 +798,58 @@
   
   @media (min-width: 1024px) {
 	.pipedriveWebForms iframe {
-	  max-height: 550px !important;
-	  transform: scale(0.85); /* Scale down to 85% to fit better */
+	  max-height: 800px !important; /* Large enough for full form */
+	  transform: scale(0.75); /* Scale down to 75% to fit in viewport */
 	}
   }
   
   @media (min-width: 1280px) {
 	.pipedriveWebForms iframe {
-	  max-height: 600px !important;
-	  transform: scale(0.9); /* Scale down to 90% on larger screens */
+	  max-height: 850px !important; /* Even larger for full form */
+	  transform: scale(0.8); /* Scale down to 80% on larger screens */
 	}
   }
   
   @media (min-width: 1920px) {
 	.pipedriveWebForms iframe {
-	  transform: scale(0.95); /* Less scaling on very large screens */
+	  max-height: 900px !important;
+	  transform: scale(0.85); /* Scale down to 85% on very large screens */
 	}
   }
   
   /* Specific adjustments for 1920x1200 screens */
   @media (min-width: 1920px) and (max-height: 1200px) {
 	.pipedriveWebForms {
-	  max-height: 500px !important; /* Allow full form */
+	  max-height: 900px !important; /* Large enough for full form */
 	}
 	
 	.pipedriveWebForms iframe {
-	  max-height: 480px !important; /* Full form height */
-	  transform: scale(0.75) !important; /* Scale down to 75% to fit 16:10 screens */
+	  max-height: 850px !important; /* Full form height - much larger */
+	  transform: scale(0.65) !important; /* Scale down to 65% to fit 16:10 screens */
 	}
   }
   
   /* For screens with height constraints */
   @media (min-width: 1280px) and (max-width: 1919px) and (max-height: 1200px) {
 	.pipedriveWebForms {
-	  max-height: 500px !important;
+	  max-height: 850px !important;
 	}
 	
 	.pipedriveWebForms iframe {
-	  max-height: 480px !important;
-	  transform: scale(0.8) !important; /* Scale down to 80% */
+	  max-height: 800px !important;
+	  transform: scale(0.7) !important; /* Scale down to 70% */
 	}
   }
   
   /* For smaller desktop screens */
   @media (min-width: 1024px) and (max-width: 1279px) {
 	.pipedriveWebForms {
-	  max-height: 500px !important;
+	  max-height: 800px !important;
 	}
 	
 	.pipedriveWebForms iframe {
-	  max-height: 480px !important;
-	  transform: scale(0.8) !important; /* Scale down to 80% */
+	  max-height: 750px !important;
+	  transform: scale(0.7) !important; /* Scale down to 70% */
 	}
   }
   
@@ -870,25 +871,32 @@
 	overflow: visible !important; /* Show full form */
   }
   
-  /* Adjust container to account for scaled iframe - use wrapper approach */
+  /* Adjust container to account for scaled iframe */
   @media (min-width: 1024px) {
 	.pipedriveWebForms {
 	  display: flex !important;
 	  justify-content: center;
 	  align-items: flex-start;
+	  height: auto !important; /* Allow container to grow */
 	}
 	
-	/* Create a wrapper effect for the scaled iframe */
-	.pipedriveWebForms::after {
-	  content: '';
-	  display: none;
+	/* Compensate for transform scale - the iframe takes original space but appears smaller */
+	.pipedriveWebForms iframe {
+	  margin: 0 auto; /* Center the scaled iframe */
+	  /* The transform scale makes it visually smaller but layout space remains */
 	}
   }
   
-  /* Ensure scaled iframe doesn't create extra space */
+  /* Ensure form container can accommodate the full scaled form */
   @media (min-width: 1024px) {
-	.pipedriveWebForms iframe {
-	  margin: 0 auto; /* Center the scaled iframe */
+	.hero-form-container {
+	  max-height: calc(100vh - 150px) !important; /* More space for full form */
+	}
+  }
+  
+  @media (min-width: 1920px) and (max-height: 1200px) {
+	.hero-form-container {
+	  max-height: calc(100vh - 120px) !important; /* Even more space on 16:10 */
 	}
   }
   </style>
