@@ -140,6 +140,67 @@
         document.documentElement.classList.add('is-windows')
         // Also add to body for more specific targeting
         document.body.classList.add('is-windows')
+        
+        // Apply Windows-specific styles directly via JavaScript if CSS isn't working
+        this.$nextTick(() => {
+          this.applyWindowsFormStyles()
+        })
+        
+        // Also apply after Pipedrive loads
+        setTimeout(() => {
+          this.applyWindowsFormStyles()
+        }, 2000)
+      }
+    },
+    applyWindowsFormStyles() {
+      // Apply Windows-specific form styles directly
+      const formContainer = this.$refs.desktopFormContainer
+      const formElement = this.$refs.desktopForm
+      
+      if (formContainer) {
+        // Set max-width based on screen size
+        const width = window.innerWidth
+        if (width >= 1920 && window.innerHeight <= 1200) {
+          formContainer.style.setProperty('max-width', '350px', 'important')
+        } else if (width >= 1280) {
+          formContainer.style.setProperty('max-width', '360px', 'important')
+        } else if (width >= 1024) {
+          formContainer.style.setProperty('max-width', '340px', 'important')
+        }
+        
+        formContainer.style.setProperty('max-height', 'calc(100vh - 120px)', 'important')
+      }
+      
+      // Wait for Pipedrive iframe to load, then apply styles
+      if (formElement) {
+        const checkIframe = setInterval(() => {
+          const iframe = formElement.querySelector('iframe')
+          if (iframe) {
+            // Apply transform scale and dimensions
+            let scale = 0.5
+            
+            if (window.innerWidth >= 1920 && window.innerHeight <= 1200) {
+              scale = 0.5
+            } else if (window.innerWidth >= 1280) {
+              scale = 0.6
+            } else if (window.innerWidth >= 1024) {
+              scale = 0.55
+            }
+            
+            iframe.style.setProperty('max-height', '1200px', 'important')
+            iframe.style.setProperty('max-width', '100%', 'important')
+            iframe.style.setProperty('width', '100%', 'important')
+            iframe.style.setProperty('transform', `scale(${scale})`, 'important')
+            iframe.style.setProperty('transform-origin', 'top center', 'important')
+            
+            clearInterval(checkIframe)
+          }
+        }, 500)
+        
+        // Stop checking after 10 seconds
+        setTimeout(() => {
+          clearInterval(checkIframe)
+        }, 10000)
       }
     },
     loadPipedriveOnce() {
@@ -707,10 +768,29 @@
   
   /* Form container constraints */
   .hero-form-container {
-	max-height: calc(100vh - 180px); /* More space for form */
+	max-height: calc(100vh - 150px); /* More space for form */
 	overflow: visible !important; /* Allow full form to be visible */
 	display: flex;
 	flex-direction: column;
+  }
+  
+  /* Ensure form container allows full form on Windows */
+  .is-windows .hero-form-container {
+	max-height: calc(100vh - 120px) !important; /* Even more space on Windows */
+	width: 100% !important;
+  }
+  
+  /* Force Windows form container and iframe dimensions */
+  .is-windows .pipedriveWebForms {
+	width: 100% !important;
+	max-width: 100% !important;
+	box-sizing: border-box !important;
+  }
+  
+  .is-windows .pipedriveWebForms iframe {
+	width: 100% !important;
+	max-width: 100% !important;
+	box-sizing: border-box !important;
   }
   
   /* Specific adjustments for 1920x1200 and similar 16:10 aspect ratios */
@@ -788,13 +868,13 @@
   
   @media (min-width: 1024px) {
 	.pipedriveWebForms {
-	  max-height: 800px !important; /* Much larger to accommodate full form */
+	  max-height: 1200px !important; /* Very large to accommodate full form with submit */
 	}
   }
   
   @media (min-width: 1280px) {
 	.pipedriveWebForms {
-	  max-height: 900px !important; /* Even larger on bigger screens */
+	  max-height: 1200px !important; /* Full form height including submit button */
 	}
   }
   
@@ -803,7 +883,7 @@
 	width: 100% !important;
 	height: auto !important;
 	min-height: 0 !important;
-	max-height: 700px !important; /* Much larger to show full form */
+	max-height: 1200px !important; /* Very large to show full form including submit button */
 	display: block !important;
 	overflow: visible !important; /* Show full form */
 	border: none !important;
@@ -812,58 +892,58 @@
   
   @media (min-width: 1024px) {
 	.pipedriveWebForms iframe {
-	  max-height: 800px !important; /* Large enough for full form */
-	  transform: scale(0.75); /* Scale down to 75% to fit in viewport */
+	  max-height: 1200px !important; /* Large enough for full form with submit button */
+	  transform: scale(0.7); /* Scale down to 70% to fit in viewport */
 	}
   }
   
   @media (min-width: 1280px) {
 	.pipedriveWebForms iframe {
-	  max-height: 850px !important; /* Even larger for full form */
-	  transform: scale(0.8); /* Scale down to 80% on larger screens */
+	  max-height: 1200px !important; /* Full form height including submit */
+	  transform: scale(0.75); /* Scale down to 75% on larger screens */
 	}
   }
   
   @media (min-width: 1920px) {
 	.pipedriveWebForms iframe {
-	  max-height: 900px !important;
-	  transform: scale(0.85); /* Scale down to 85% on very large screens */
+	  max-height: 1200px !important;
+	  transform: scale(0.8); /* Scale down to 80% on very large screens */
 	}
   }
   
   /* Specific adjustments for 1920x1200 screens */
   @media (min-width: 1920px) and (max-height: 1200px) {
 	.pipedriveWebForms {
-	  max-height: 900px !important; /* Large enough for full form */
+	  max-height: 1200px !important; /* Large enough for full form with submit */
 	}
 	
 	.pipedriveWebForms iframe {
-	  max-height: 850px !important; /* Full form height - much larger */
-	  transform: scale(0.65) !important; /* Scale down to 65% to fit 16:10 screens */
+	  max-height: 1200px !important; /* Full form height including submit button */
+	  transform: scale(0.6) !important; /* Scale down to 60% to fit 16:10 screens */
 	}
   }
   
   /* For screens with height constraints */
   @media (min-width: 1280px) and (max-width: 1919px) and (max-height: 1200px) {
 	.pipedriveWebForms {
-	  max-height: 850px !important;
+	  max-height: 1200px !important;
 	}
 	
 	.pipedriveWebForms iframe {
-	  max-height: 800px !important;
-	  transform: scale(0.7) !important; /* Scale down to 70% */
+	  max-height: 1200px !important;
+	  transform: scale(0.65) !important; /* Scale down to 65% */
 	}
   }
   
   /* For smaller desktop screens */
   @media (min-width: 1024px) and (max-width: 1279px) {
 	.pipedriveWebForms {
-	  max-height: 800px !important;
+	  max-height: 1200px !important;
 	}
 	
 	.pipedriveWebForms iframe {
-	  max-height: 750px !important;
-	  transform: scale(0.7) !important; /* Scale down to 70% */
+	  max-height: 1200px !important;
+	  transform: scale(0.65) !important; /* Scale down to 65% */
 	}
   }
   
@@ -917,52 +997,114 @@
   /* Windows-specific adjustments - more aggressive scaling */
   .is-windows .pipedriveWebForms iframe {
 	transform-origin: top center !important;
+	width: 100% !important;
   }
   
+  /* Windows form container width reduction */
   @media (min-width: 1024px) {
+	.is-windows .hero-form-container {
+	  max-width: 360px !important; /* Smaller width on Windows */
+	}
+	
+	.is-windows .pipedriveWebForms {
+	  width: 100% !important;
+	  max-width: 100% !important;
+	}
+	
 	.is-windows .pipedriveWebForms iframe {
-	  transform: scale(0.65) !important; /* More aggressive scaling on Windows */
+	  max-height: 1200px !important; /* Full form height */
+	  max-width: 100% !important;
+	  width: 100% !important;
+	  transform: scale(0.55) !important; /* Very aggressive scaling on Windows */
 	}
   }
   
   @media (min-width: 1280px) {
+	.is-windows .hero-form-container {
+	  max-width: 380px !important; /* Slightly larger on bigger screens */
+	}
+	
 	.is-windows .pipedriveWebForms iframe {
-	  transform: scale(0.7) !important; /* More aggressive scaling on Windows */
+	  max-height: 1200px !important;
+	  max-width: 100% !important;
+	  width: 100% !important;
+	  transform: scale(0.6) !important; /* Very aggressive scaling on Windows */
 	}
   }
   
   @media (min-width: 1920px) {
+	.is-windows .hero-form-container {
+	  max-width: 400px !important; /* Larger on very large screens */
+	}
+	
 	.is-windows .pipedriveWebForms iframe {
-	  transform: scale(0.75) !important; /* More aggressive scaling on Windows */
+	  max-height: 1200px !important;
+	  max-width: 100% !important;
+	  width: 100% !important;
+	  transform: scale(0.65) !important; /* Aggressive scaling on Windows */
 	}
   }
   
   /* Windows-specific for 1920x1200 screens */
   @media (min-width: 1920px) and (max-height: 1200px) {
+	.is-windows .hero-form-container {
+	  max-width: 350px !important; /* Smaller width for 16:10 screens */
+	  max-height: calc(100vh - 80px) !important; /* Maximum space on Windows */
+	}
+	
 	.is-windows .pipedriveWebForms {
-	  max-height: 900px !important;
+	  max-height: 1200px !important; /* Full form including submit */
+	  width: 100% !important;
+	  max-width: 100% !important;
 	}
 	
 	.is-windows .pipedriveWebForms iframe {
-	  max-height: 850px !important;
-	  transform: scale(0.55) !important; /* Very aggressive scaling for Windows 16:10 */
-	}
-	
-	.is-windows .hero-form-container {
-	  max-height: calc(100vh - 100px) !important; /* More space on Windows */
+	  max-height: 1200px !important; /* Full form height including submit button */
+	  max-width: 100% !important;
+	  width: 100% !important;
+	  height: auto !important;
+	  transform: scale(0.5) !important; /* Very aggressive scaling for Windows 16:10 - 50% */
 	}
   }
   
   /* Windows-specific for smaller desktop screens */
   @media (min-width: 1024px) and (max-width: 1279px) {
+	.is-windows .hero-form-container {
+	  max-width: 340px !important; /* Smaller width on smaller screens */
+	}
+	
+	.is-windows .pipedriveWebForms {
+	  max-height: 1200px !important;
+	  width: 100% !important;
+	  max-width: 100% !important;
+	}
+	
 	.is-windows .pipedriveWebForms iframe {
-	  transform: scale(0.6) !important; /* Very aggressive scaling for Windows */
+	  max-height: 1200px !important;
+	  max-width: 100% !important;
+	  width: 100% !important;
+	  height: auto !important;
+	  transform: scale(0.5) !important; /* Very aggressive scaling for Windows - 50% */
 	}
   }
   
   @media (min-width: 1280px) and (max-width: 1919px) and (max-height: 1200px) {
+	.is-windows .hero-form-container {
+	  max-width: 360px !important; /* Medium width */
+	}
+	
+	.is-windows .pipedriveWebForms {
+	  max-height: 1200px !important;
+	  width: 100% !important;
+	  max-width: 100% !important;
+	}
+	
 	.is-windows .pipedriveWebForms iframe {
-	  transform: scale(0.6) !important; /* Very aggressive scaling for Windows */
+	  max-height: 1200px !important;
+	  max-width: 100% !important;
+	  width: 100% !important;
+	  height: auto !important;
+	  transform: scale(0.5) !important; /* Very aggressive scaling for Windows - 50% */
 	}
   }
   </style>
