@@ -30,11 +30,13 @@
 							<video
 								:ref="`video-${index}`"
 								:data-src="getVideoSrc(project.video)"
+								:src="isMobile ? getVideoSrc(project.video) : undefined"
 								class="h-full w-full object-cover"
 								muted
 								autoplay
 								loop
 								playsinline
+								webkit-playsinline
 								preload="metadata"
 								:aria-label="project.title"
 								@error="(e) => handleVideoError(e, project.video)"
@@ -43,9 +45,20 @@
 								@loadeddata="handleVideoLoaded"
 								@canplay="handleVideoCanPlay"
 							>
-								<source :data-src="getVideoSrc(project.video)" type="video/mp4" />
+								<source 
+									:data-src="getVideoSrc(project.video)" 
+									:src="isMobile ? getVideoSrc(project.video) : undefined"
+									type="video/mp4" 
+								/>
 								Your browser does not support the video tag.
 							</video>
+							<!-- Loading state -->
+							<div v-if="!videoErrors[project.video] && !videoLoaded[project.video]" class="absolute inset-0 z-0 flex items-center justify-center bg-gray-200 dark:bg-gray-800 transition-opacity duration-300">
+								<div class="flex flex-col items-center gap-2">
+									<div class="h-8 w-8 animate-spin rounded-full border-2 border-gray-400/20 border-t-gray-600 dark:border-gray-500/20 dark:border-t-gray-400"></div>
+									<p class="text-xs text-gray-600 dark:text-gray-400">Loading video...</p>
+								</div>
+							</div>
 							<!-- Error fallback -->
 							<div v-if="videoErrors[project.video]" class="absolute inset-0 flex items-center justify-center bg-gray-200 dark:bg-gray-800">
 								<p class="text-sm text-gray-600 dark:text-gray-400">Video unavailable</p>
@@ -109,6 +122,8 @@ export default {
 			selectedVideoSrc: '',
 			selectedVideoTitle: '',
 			videoErrors: {},
+			videoLoaded: {},
+			isMobile: false,
 		}
 	},
 	methods: {
@@ -176,6 +191,10 @@ export default {
 		handleVideoLoaded(event) {
 			// When video data is loaded, ensure it's playing
 			const video = event.target
+			const videoSrc = video?.src || video?.currentSrc
+			if (videoSrc) {
+				this.$set(this.videoLoaded, videoSrc, true)
+			}
 			if (video && video.paused) {
 				video.muted = true
 				video.play().catch(() => {
@@ -287,35 +306,50 @@ export default {
 
 			// Use Intersection Observer for lazy loading with debouncing
 			let loadingVideos = new Set()
+			const isMobileDevice = this.isMobile || window.innerWidth < 1024
 			const observer = new IntersectionObserver(
 				(entries) => {
 					entries.forEach((entry) => {
 						if (entry.isIntersecting && !loadingVideos.has(entry.target)) {
 							const video = entry.target
+							// Skip if video already has src set (mobile immediate load)
+							if (video.src && video.src !== '') {
+								observer.unobserve(video)
+								return
+							}
 							if (video.dataset.src) {
 								loadingVideos.add(video)
 								// Load video for autoplay
 								video.src = video.dataset.src
-								video.preload = 'metadata' // Start with metadata, upgrade to auto after metadata loads
+								video.preload = isMobileDevice ? 'auto' : 'metadata' // On mobile, load more aggressively
 								video.muted = true
 								video.autoplay = true
 								video.loop = true
+								video.setAttribute('playsinline', '')
+								video.setAttribute('webkit-playsinline', '')
 								const source = video.querySelector('source')
 								if (source && source.dataset.src) {
 									source.src = source.dataset.src
 								}
-								// Load metadata first (faster)
+								// Load video
 								video.load()
 								
-								// Once metadata is loaded, upgrade to auto and play
-								const upgradeAndPlay = () => {
-									video.preload = 'auto'
-									video.load()
+								// On mobile, try to play immediately
+								if (isMobileDevice) {
 									video.play().catch(() => {
 										// Autoplay might be prevented, which is okay
 									})
+								} else {
+									// Desktop: upgrade to auto after metadata loads
+									const upgradeAndPlay = () => {
+										video.preload = 'auto'
+										video.load()
+										video.play().catch(() => {
+											// Autoplay might be prevented, which is okay
+										})
+									}
+									video.addEventListener('loadedmetadata', upgradeAndPlay, { once: true })
 								}
-								video.addEventListener('loadedmetadata', upgradeAndPlay, { once: true })
 								
 								// Also try to play as soon as we can
 								video.addEventListener('canplay', () => {
@@ -328,7 +362,7 @@ export default {
 					})
 				},
 				{
-					rootMargin: '150px', // Start loading 150px before video enters viewport
+					rootMargin: isMobileDevice ? '300px' : '150px', // More aggressive on mobile
 					threshold: 0.01, // Trigger as soon as any part is visible
 				}
 			)
@@ -343,16 +377,46 @@ export default {
 	},
 	mounted() {
 		if (process.client) {
+			// Detect mobile device
+			this.isMobile = window.innerWidth < 1024 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+			
 			// Ensure page starts at top
 			window.scrollTo(0, 0)
-			// Initialize lazy loading after a short delay to prevent scroll issues
-			this.$nextTick(() => {
-				setTimeout(() => {
-					this.initLazyLoading()
-					// Ensure we're still at top after initialization
-					window.scrollTo(0, 0)
-				}, 100)
-			})
+			
+			// On mobile, load videos immediately; on desktop, use lazy loading
+			if (this.isMobile) {
+				// Load videos immediately on mobile for better preview experience
+				this.$nextTick(() => {
+					const videos = document.querySelectorAll('video[data-src]')
+					videos.forEach((video, index) => {
+						// Load first 3 videos immediately, rest can lazy load
+						if (index < 3 && video.dataset.src) {
+							video.src = video.dataset.src
+							const source = video.querySelector('source')
+							if (source && source.dataset.src) {
+								source.src = source.dataset.src
+							}
+							video.load()
+							video.play().catch(() => {
+								// Autoplay might be prevented
+							})
+						}
+					})
+					// Still initialize lazy loading for remaining videos
+					setTimeout(() => {
+						this.initLazyLoading()
+					}, 100)
+				})
+			} else {
+				// Desktop: use lazy loading
+				this.$nextTick(() => {
+					setTimeout(() => {
+						this.initLazyLoading()
+						// Ensure we're still at top after initialization
+						window.scrollTo(0, 0)
+					}, 100)
+				})
+			}
 		}
 	},
 	beforeRouteEnter(to, from, next) {

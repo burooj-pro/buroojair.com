@@ -53,8 +53,38 @@ export default {
 		mounted() {
 		if (process.client) {
 			const startTime = Date.now()
-			const minDisplayTime = 800 // Minimum time to show loading animation
-			const maxDisplayTime = 15000 // Maximum 15 seconds - then force hide
+			const minDisplayTime = 600 // Minimum time to show loading animation (reduced)
+			const maxDisplayTime = 5000 // Maximum 5 seconds - then force hide (reduced from 15s)
+			
+			// Check if we're on projects page - hide much faster
+			const isProjectsPage = window.location.pathname.includes('/projects')
+			
+			if (isProjectsPage) {
+				// Projects page: Hide quickly after DOM is ready (videos are lazy-loaded)
+				const hideProjectsPage = () => {
+					const elapsed = Date.now() - startTime
+					const remaining = Math.max(0, minDisplayTime - elapsed)
+					setTimeout(() => {
+						this.initLoadingAnimation(() => {
+							this.hideLoadingScreen()
+						}).catch(() => {
+							this.isLoading = false
+						})
+					}, remaining)
+				}
+				
+				// Wait for DOM to be ready, then hide
+				if (document.readyState === 'complete' || document.readyState === 'interactive') {
+					// DOM already ready, hide after short delay
+					setTimeout(hideProjectsPage, 100)
+				} else {
+					// Wait for DOM, then hide
+					document.addEventListener('DOMContentLoaded', hideProjectsPage, { once: true })
+					// Fallback: hide after 1 second max
+					setTimeout(hideProjectsPage, 1000)
+				}
+				return // Exit early for projects page
+			}
 			
 			// CRITICAL: Fallback timeout - always hide after max time
 			const fallbackTimeout = setTimeout(() => {
@@ -75,7 +105,7 @@ export default {
 						v.closest('#heroSection')
 					)
 					
-					// Find project section videos (OurRecentWork section)
+					// Find project section videos (OurRecentWork section on homepage)
 					const projectVideos = Array.from(allVideos).filter(v => {
 						// Check if video is in OurRecentWork section
 						const section = v.closest('section')
@@ -83,13 +113,20 @@ export default {
 							section.id === 'ourRecentWork' ||
 							section.querySelector('h2')?.textContent?.includes('Recent Work') ||
 							section.querySelector('[class*="recent"]') ||
-							// Check if video has data-src and is in a project-like container
-							(v.hasAttribute('data-src') && v.closest('.grid'))
+							// Check if video has data-src and is in a project-like container (but not projects page)
+							(v.hasAttribute('data-src') && v.closest('.grid') && !window.location.pathname.includes('/projects'))
 						)
 					})
 					
-					// If no videos found yet, wait a bit more
-					if (heroVideos.length === 0) {
+					// If no videos found at all, consider ready (page might not have videos)
+					// But wait a bit to ensure DOM is fully loaded
+					if (heroVideos.length === 0 && projectVideos.length === 0) {
+						// Check if DOM is ready - if yes, resolve true (no videos to wait for)
+						if (document.readyState === 'complete') {
+							// Give it a small delay to ensure components are mounted
+							setTimeout(() => resolve(true), 300)
+							return
+						}
 						resolve(false)
 						return
 					}
@@ -98,8 +135,16 @@ export default {
 					const isVideoReady = (video) => {
 						if (!video) return true // If video doesn't exist, consider it ready
 						
-						// For videos with data-src (lazy loaded), check if src is set and ready
+						// For videos with data-src (lazy loaded), be more lenient
+						// On projects page, videos might not have src set immediately
+						// If video has data-src but no src, check if it's on projects page
 						if (video.hasAttribute('data-src') && !video.src) {
+							const isProjectsPage = window.location.pathname.includes('/projects')
+							// On projects page, if video has data-src, consider it ready enough
+							// (it will load via IntersectionObserver)
+							if (isProjectsPage) {
+								return true // Projects page videos load lazily, don't wait for them
+							}
 							return false // Video hasn't started loading yet
 						}
 						
@@ -126,8 +171,8 @@ export default {
 						})
 					}
 					
-					// Check all hero videos (critical - must be ready)
-					const heroVideosReady = heroVideos.every(video => isVideoReady(video))
+					// Check all hero videos (critical - must be ready if they exist)
+					const heroVideosReady = heroVideos.length === 0 || heroVideos.every(video => isVideoReady(video))
 					
 					if (!heroVideosReady) {
 						resolve(false)
@@ -144,7 +189,10 @@ export default {
 						return
 					}
 					
-					// Get poster images from all videos
+					// Projects page videos are lazy-loaded, so we don't wait for them
+					// (handled above in the isProjectsPage check)
+					
+					// Get poster images from all videos (excluding projects page videos)
 					const allCriticalVideos = [...heroVideos, ...projectVideos]
 					const posters = allCriticalVideos
 						.map(v => v.getAttribute('poster') || '')
@@ -210,7 +258,7 @@ export default {
 						v.closest('#heroSection')
 					)
 					
-					// Find project section videos
+					// Find project section videos (homepage)
 					const projectVideos = Array.from(allVideos).filter(v => {
 						const section = v.closest('section')
 						return section && (
@@ -221,8 +269,18 @@ export default {
 						)
 					})
 					
-					// Combine all critical videos
-					const criticalVideos = [...heroVideos, ...projectVideos]
+					// Find projects page videos
+					const projectsPageVideos = Array.from(allVideos).filter(v => {
+						const isProjectsPage = window.location.pathname.includes('/projects')
+						return isProjectsPage && v.hasAttribute('data-src') && v.closest('.grid')
+					})
+					
+					// Combine all critical videos (for projects page, only first 3)
+					const criticalVideos = [
+						...heroVideos, 
+						...projectVideos, 
+						...projectsPageVideos.slice(0, 3)
+					]
 					
 					criticalVideos.forEach(video => {
 						const onVideoReady = () => {
