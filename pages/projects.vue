@@ -40,10 +40,10 @@
 								preload="metadata"
 								:aria-label="project.title"
 								@error="(e) => handleVideoError(e, project.video)"
-								@loadstart="handleVideoLoadStart"
-								@loadedmetadata="handleVideoMetadataLoaded"
-								@loadeddata="handleVideoLoaded"
-								@canplay="handleVideoCanPlay"
+								@loadstart="(e) => handleVideoLoadStart(e, project.video)"
+								@loadedmetadata="(e) => handleVideoMetadataLoaded(e, project.video)"
+								@loadeddata="(e) => handleVideoLoaded(e, project.video)"
+								@canplay="(e) => handleVideoCanPlay(e, project.video)"
 							>
 								<source 
 									:data-src="getVideoSrc(project.video)" 
@@ -172,15 +172,19 @@ export default {
 			this.selectedVideoSrc = ''
 			this.selectedVideoTitle = ''
 		},
-		handleVideoLoadStart(event) {
+		handleVideoLoadStart(event, projectVideoKey) {
 			// Clear error state when video starts loading
-			if (event.target && event.target.src) {
-				this.$set(this.videoErrors, event.target.src, false)
+			const key = projectVideoKey || (event.target && (event.target.src || event.target.currentSrc))
+			if (key) {
+				this.$set(this.videoErrors, key, false)
 			}
 		},
-		handleVideoMetadataLoaded(event) {
-			// When metadata is loaded, try to play
+		handleVideoMetadataLoaded(event, projectVideoKey) {
+			// When metadata is loaded, mark as loaded and try to play
 			const video = event.target
+			if (projectVideoKey) {
+				this.$set(this.videoLoaded, projectVideoKey, true)
+			}
 			if (video && video.readyState >= 2) {
 				video.muted = true
 				video.play().catch(() => {
@@ -188,12 +192,11 @@ export default {
 				})
 			}
 		},
-		handleVideoLoaded(event) {
-			// When video data is loaded, ensure it's playing
+		handleVideoLoaded(event, projectVideoKey) {
+			// When video data is loaded, mark as loaded (use project key so template matches)
 			const video = event.target
-			const videoSrc = video?.src || video?.currentSrc
-			if (videoSrc) {
-				this.$set(this.videoLoaded, videoSrc, true)
+			if (projectVideoKey) {
+				this.$set(this.videoLoaded, projectVideoKey, true)
 			}
 			if (video && video.paused) {
 				video.muted = true
@@ -202,9 +205,12 @@ export default {
 				})
 			}
 		},
-		handleVideoCanPlay(event) {
-			// When video can play, ensure it's playing
+		handleVideoCanPlay(event, projectVideoKey) {
+			// When video can play, ensure loaded state is set and try to play
 			const video = event.target
+			if (projectVideoKey) {
+				this.$set(this.videoLoaded, projectVideoKey, true)
+			}
 			if (video && video.paused) {
 				video.muted = true
 				video.play().catch(() => {
@@ -383,40 +389,28 @@ export default {
 			// Ensure page starts at top
 			window.scrollTo(0, 0)
 			
-			// On mobile, load videos immediately; on desktop, use lazy loading
-			if (this.isMobile) {
-				// Load videos immediately on mobile for better preview experience
-				this.$nextTick(() => {
-					const videos = document.querySelectorAll('video[data-src]')
-					videos.forEach((video, index) => {
-						// Load first 3 videos immediately, rest can lazy load
-						if (index < 3 && video.dataset.src) {
-							video.src = video.dataset.src
-							const source = video.querySelector('source')
-							if (source && source.dataset.src) {
-								source.src = source.dataset.src
-							}
-							video.load()
-							video.play().catch(() => {
-								// Autoplay might be prevented
-							})
+			// Load first 3 videos immediately (both mobile and desktop) so previews work above the fold
+			this.$nextTick(() => {
+				const videos = document.querySelectorAll('video[data-src]')
+				videos.forEach((video, index) => {
+					if (index < 3 && video.dataset.src) {
+						video.src = video.dataset.src
+						const source = video.querySelector('source')
+						if (source && source.dataset.src) {
+							source.src = source.dataset.src
 						}
-					})
-					// Still initialize lazy loading for remaining videos
-					setTimeout(() => {
-						this.initLazyLoading()
-					}, 100)
+						video.load()
+						video.play().catch(() => {
+							// Autoplay might be prevented
+						})
+					}
 				})
-			} else {
-				// Desktop: use lazy loading
-				this.$nextTick(() => {
-					setTimeout(() => {
-						this.initLazyLoading()
-						// Ensure we're still at top after initialization
-						window.scrollTo(0, 0)
-					}, 100)
-				})
-			}
+				// Lazy load remaining videos when they scroll into view
+				setTimeout(() => {
+					this.initLazyLoading()
+					window.scrollTo(0, 0)
+				}, 100)
+			})
 		}
 	},
 	beforeRouteEnter(to, from, next) {
